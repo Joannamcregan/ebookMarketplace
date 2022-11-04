@@ -1,0 +1,41 @@
+body{
+    background: #fff9f1;
+}
+.header--main{
+    background: #411919;
+    color: #F5EADE;
+    margin: 0 0 0.5rem 0;
+    padding: 0.15rem 0.15rem 0.15rem 0.15rem;
+}
+.header--main a{
+    color: #F5EADE;
+}
+.footer--main{
+    background: #411919;
+    color: #F5EADE;
+    text-align: center;
+    padding: 1em 0.25em 1em 0.25em;
+}
+.page-section{
+    margin: 2em 0 0 0;
+    padding: 0.5em 0 0 0;
+    background: #F5EADE;
+}
+/*text-------------------------------------------------------------------------*/
+.centered-text{
+    text-align: center;
+}
+.left-text{
+    text-align: left;
+    margin-left: 2em;
+}
+/*text beside image-------------------------------------------------------------*/
+.image-text--container{
+    margin: 0 15vw 0 15vw;
+}
+.image-text--image {
+    max-width: 300px;
+    border-radius: 5px;
+    float: left;
+    margin: 0 2em 2em 0;
+}
