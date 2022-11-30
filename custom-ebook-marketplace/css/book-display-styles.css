@@ -1,0 +1,84 @@
+.book-sections-container{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x:scroll;
+    padding: 1em 1em 0em 1em;
+    width: auto;
+    align-content: center;
+    background: #fdfdfd;
+    /* box-shadow: inset 0px 5px 6px rgba(84, 84, 84, 0.5); */
+}
+.book-section--small{
+    max-width: 170px;
+    display: inline-block;
+    margin: 0 1em 1em 1em;
+    align-content: center;
+}
+.book-cover--small {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto 0 auto;
+}
+.book-title--small{
+    margin: 0 auto 0 auto;
+    text-align: left;
+}
+/*product pages--------------------------------------------------------------------------------------------*/
+.product-collection{    
+    padding: 5%;
+}
+.product-collection-container{
+    width: 90vw;
+    background: #f3eae1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 1rem 0.25rem;
+    margin: 2rem 0 0 0;
+}
+.product-section{
+    background: #fdfdfd;
+    border: solid 10px #fdfdfd;
+    border-radius: 15px;
+    max-width: 300px;
+    min-width: 200px;
+    margin: 0.25rem 0.25rem 0 0.25rem;
+}
+.product-section span{
+    color: black;
+}
+.product-section p{
+    color: black;
+}
+.product-section img{
+    max-width: 300px;
+    min-width: 100%;
+    height: auto;
+}
+.page-numbers{
+    border: none;
+}
+
+.gray-box{
+    border: solid rgb(212, 212, 212) 2px;
+    background-image: linear-gradient(rgb(212, 212, 212),rgb(242, 242, 242),rgb(212, 212, 212));
+    max-height: 224px;
+    min-height: 224px;
+    max-width: 150px;
+    min-width: 150px;
+    margin: 0 1rem 0 1rem;
+}
+.gray-box p{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.own-voices span{
+    background: rgb(255, 246, 198);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 5px;
+}
+
+.woocommerce-pagination{
+    margin-top: 1rem;
+}

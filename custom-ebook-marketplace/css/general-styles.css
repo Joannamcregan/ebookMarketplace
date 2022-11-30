@@ -1,0 +1,203 @@
+body{
+    background: #fffaf4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*screen-sizing--------------------------------------------------------------*/
+.full-screen{
+    min-height: 80vh;
+}
+.two-thirds-screen{
+    min-height: 66vh;
+}
+.half-screen{
+    min-height: 50vh;
+}
+.third-screen{
+    min-height: 33vh;
+}
+.fifth-screen{
+    min-height: 20vh;
+}
+.tenth-screen{
+    min-height: 10vh;
+}
+/*header-----------------------------------------------------------------------*/
+.header--main{
+    background: #411919;
+    color: #f7ede3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 0 0.5rem 0;
+    padding: 0.15rem 0.15rem 0.15rem 0.15rem;
+}
+.header--main a{
+    color: #F5EADE;
+}
+.logo-text{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 2vw;
+}
+/*nav bar----------------------------------------------------------------------*/
+/* .current-menu-item a{
+    color: rgb(255, 245, 204);
+} */
+.main-nav li{
+    list-style: none;
+    display: inline;
+    margin-left: 2vw;
+}
+.main-navigation a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+/*footer--------------------------------------------------------------------------*/
+.footer--main{
+    background: #411919;
+    color: #F5EADE;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 1em 0.25em 1em 0.25em;
+    margin: 3em 0 0 0;
+}
+/*special sections-----------------------------------------------------------------------*/
+.banner{
+    max-width: 100vw;
+    background: linear-gradient(to right,#006459, #9f886d);
+    padding: 3rem;
+    color: #F5EADE;
+}
+.page-accent{
+    margin: 2em 0 0 0;
+    padding: 0.5em 0 0 0;
+    background: linear-gradient(to right, #e8f5f2, #f1f1f1);
+}
+.page-accent-alt{
+    margin: 2em 0 0 0;
+    padding: 0.5em 0 0 0;
+    background: linear-gradient(to right, #f6f0e9, #fffaf4);
+}
+.centered-section{
+    text-align: center;
+    margin: 2rem auto 0 auto;
+    width: auto;
+}
+/*text-------------------------------------------------------------------------*/
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a {
+    color: #007054;
+}
+.georgia-text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.sans-text{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.gray-link{
+    color: #333;
+}
+.extra-large-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+}
+.small-text{
+    font-size: 0.75rem;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.centered-text{
+    text-align: center;
+}
+.left-text{
+    text-align: left;
+    margin-left: 2em;
+}
+.center-left-text{
+    text-align: left;
+    margin-left: 5vw;
+}
+.right-text{
+    text-align: right;
+    margin-right: 5vw;
+}
+.right-text-no-margin{
+    text-align: right;
+}
+.center-right-text{
+    text-align: right;
+    margin-right: 5vw;
+}
+/*text beside image-------------------------------------------------------------*/
+.image-text--container{
+    margin: 0 15vw 0 15vw;
+}
+.image-text--image {
+    max-width: 300px;
+    border-radius: 5px;
+    float: left;
+    margin: 0 2em 2em 0;
+}
+/*additional containers-----------------------------------------------------------------*/
+.centered-container {
+    margin: 0 15vw 0 15vw;
+}
+.centered-container-bordered{
+    margin: 3rem 15vw 2rem 15vw;
+    padding: 2rem;
+    border: solid #ebe3da 2px;
+    border-radius: 15px;
+}
+.left-container-bordered{
+    margin: 3rem 15vw 2rem 5vw;
+    padding: 2rem;
+    border: solid #ebe3da 2px;
+    border-radius: 15px;
+}
+/*widget content--------------------------------------------------------------------*/
+.widget-content {
+    margin: 0 1rem 0 2rem;
+}
+/*blog and page content-----------------------------------------------------------------------*/
+.by-line{
+    margin-top: 1rem;
+}
+.blog-title{
+    margin: 1rem;
+}
+.blog-title h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.generic-content{
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.archive-item{
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-bottom: 1rem;
+}
+/*form---------------------------------------------------------------------------------------------------*/
+.form-container{
+    padding: 2rem;
+    align-content: center;
+}
+.form-group textarea{
+    min-width: 70vw;
+}
+.form-group input{
+    min-width: 40vw;
+    min-height: 2rem;
+}
