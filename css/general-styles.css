@@ -2,6 +2,9 @@ body{
     background: #fffaf4;
     font-family: Arial, Helvetica, sans-serif;
     /* padding-top: 0.5rem; */
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow-x: hidden;
 }
 /*screen-sizing--------------------------------------------------------------*/
 .full-screen{
@@ -30,6 +33,8 @@ body{
     position: sticky;
     top: 0;
     z-index: 1000;
+    margin: -10px -5px 0 -10px;
+    padding: 5px;
 }
 header a{
     color: #f7ede3;
@@ -74,12 +79,15 @@ header a{
     background: #511d1d;
     color: #f7ede3;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* margin: 0 0 0.5rem 0; */
+    margin: 0 -5px 0 -10px;
     padding: 0.15rem 0.15rem 0.15rem 0.15rem;
 }
 /*nav bar----------------------------------------------------------------------*/
 .top-nav-container{
     display: flex;
+}
+.nav-container{
+    visibility: visible;
 }
 .main-nav{
     padding: 10px 5px 15px 5px;
@@ -90,23 +98,35 @@ header a{
     text-decoration: none;
     font-weight: 300;
 }
-@media screen and (max-width: 1000px) {
+.site-header__menu--active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+@media screen and (max-width: 960px) {
     .fa-bars{
         visibility: visible;
     }
     .logo-text{
         visibility: hidden;
     }
-    .nav-container{
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        padding-bottom: 20px;
-    }
     .nav-container a{
-        width: auto;
-        white-space: nowrap;
+        visibility: hidden;
     }
+    .header--main{
+        height: 0;
+    }
+    .site-header__menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        position: static;
+        background-color: transparent;
+        float: right;
+        padding-top: 0;
+        padding-bottom: 0;
+        top: 0;
+      }
 }
 /*footer--------------------------------------------------------------------------*/
 .footer--main{
@@ -115,7 +135,7 @@ header a{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 1em 0.25em 1em 0.25em;
-    margin: 3em 0 0 0;
+    margin: 3em 0 -10px 0;
 }
 .footer-top{
     display: flex;
@@ -323,4 +343,92 @@ a {
 .form-group input{
     min-width: 40vw;
     min-height: 2rem;
+}
+/*Search--------------------------------------------------------------------------------------------*/
+.search-overlay {
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1110;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.96);
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.09);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+    box-sizing: border-box;
+}
+  
+.search-overlay--active{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.search-overlay__top{
+    background-color: rgba(0, 0, 0, 0.12);
+    /* margin-top: 50px; */
+}
+
+.overlay-main-container {
+    max-width: 1300px;
+    margin: 0;
+    padding-left: 15px;
+    position: relative;
+    background: transparent;
+    border: solid transparent 2px;
+  }
+
+.search-overlay__close{
+    position: absolute;
+    top: 13px;
+    right: 16px;
+    font-size: 2.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #fff;
+    color: #b41414;
+    line-height: 0.7;
+}
+
+.overlay-input-container{
+    max-width: 1300px;
+    margin: 80px auto 40px auto;
+    padding: 0 auto 0 auto;
+    position: relative;
+}
+
+.search-overlay__icon{
+    margin: 0 5px 0 10px;
+    font-size: 1.8rem;
+    color: #411919;
+}
+
+.search-term{
+    width: 75%;
+    box-sizing: border-box;
+    border: none;
+    padding: 15px 10px;
+    margin: 0;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    /* outline: solid #411919 2px; */
+    color: #411919;
+}
+
+.body-no-scroll{
+    overflow: hidden;
+}
+
+.event-summary p {
+    padding-top: 0;
+}
+
+.event-summary {
+    margin-bottom: 0;
+    margin-top: 20px;
 }
