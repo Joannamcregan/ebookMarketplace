@@ -1,5 +1,5 @@
 import Search from './modules/Search'
-import MobileMenu from "./modules/MobileMenu"
+import MobileMenu from './modules/MobileMenu'
 
-const marketplaceSearch = new Search()
 const mobileMenu = new MobileMenu()
+const marketplaceSearch = new Search()

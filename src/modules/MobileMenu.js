@@ -1,20 +1,31 @@
+import $ from 'jquery';
+
 class MobileMenu {
+// 1. describe and create/initiate object
     constructor() {
-      this.menu = document.querySelector(".site-header__menu")
-      this.openButton = document.querySelector(".site-header__menu-trigger")
-      this.events()
+        this.openButton = $(".site-header__menu-trigger");
+        this.closeButton = $(".menu-overlay__close");
+        this.searchOverlay = $(".menu-overlay");
+        this.events();
+        this.isOverlayOpen = false;
     }
-  
-    events() {
-      this.openButton.addEventListener("click", () => this.openMenu())
+// 2. events
+    events(){
+        this.openButton.on("click", this.openOverlay.bind(this));
+        this.closeButton.on("click", this.closeOverlay.bind(this));
     }
-  
-    openMenu() {
-      this.openButton.classList.toggle("fa-bars")
-      this.openButton.classList.toggle("fa-window-close")
-      this.menu.classList.toggle("site-header__menu--active")
+
+// 3. methods (functions, actions...)
+    openOverlay(){
+        this.searchOverlay.addClass("search-overlay--active");
+        $("body").addClass("body-no-scroll");
+        this.isOverlayOpen = true;
     }
-  }
-  
-  export default MobileMenu
-  
+    closeOverlay(){
+        this.searchOverlay.removeClass("search-overlay--active");
+        $("body").removeClass("body-no-scroll");
+        this.isOverlayOpen = false;
+    }
+}
+
+export default MobileMenu;

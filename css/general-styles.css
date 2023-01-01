@@ -72,6 +72,7 @@ header a{
 }
 .fa-bars{
     padding-left: 20px;
+    padding-top: 10px;
     font-size: 20px;
     visibility: hidden;
 }
@@ -106,6 +107,9 @@ header a{
 @media screen and (max-width: 960px) {
     .fa-bars{
         visibility: visible;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1000;
     }
     .logo-text{
         visibility: hidden;
@@ -117,6 +121,17 @@ header a{
         height: 0;
     }
     .site-header__menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        position: static;
+        background-color: transparent;
+        float: right;
+        padding-top: 0;
+        padding-bottom: 0;
+        top: 0;
+      }
+      .header--main{
         visibility: visible;
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -344,6 +359,51 @@ a {
     min-width: 40vw;
     min-height: 2rem;
 }
+/*Mobile Menu----------------------------------------------------------------------------------------*/
+.menu-overlay {
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1110;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #511d1d;
+    border: solid #511d1d 2px;
+    border-radius: 5px;
+    color: #f7ede3;
+    width: 70vw;
+    height: fit-content;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.09);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+    box-sizing: border-box;
+}
+.menu-overlay-list{
+    margin: 10px auto 10px auto;
+}
+.menu-overlay-list li{
+    list-style: none;
+    margin: 5px 0 5px 0;
+    padding: 5px 5px 5px 0;
+}
+.menu-overlay-list a{
+    color: #f7ede3;
+}
+.menu-overlay__close{
+    /* position: absolute;
+    top: 13px;
+    right: 16px; */
+    font-size: 2.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: transparent;
+    color: #f7ede3;
+    line-height: 0.7;
+}
 /*Search--------------------------------------------------------------------------------------------*/
 .search-overlay {
     overflow-y: auto;
@@ -389,7 +449,7 @@ a {
     font-size: 2.1rem;
     cursor: pointer;
     transition: all 0.3s;
-    background-color: #fff;
+    background-color: transparent;
     color: #b41414;
     line-height: 0.7;
 }

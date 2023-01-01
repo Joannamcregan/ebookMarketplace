@@ -8,10 +8,7 @@
     <body <?php body_class(); ?>>
     <header class="header--top">
       <div class="top-nav-container">
-        <div class="top-nav-section" id="top-nav-left">          
-          <a><i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i></a>
-          <!-- <a><i class="fa-solid fa-house"></i></a> -->
-        </div>
+            <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
         <h3 class="logo-text">
           <a href="<?php echo site_url() ?>">A <strong>Cooperative</strong> E-Book Marketplace</a>
         </h3> 

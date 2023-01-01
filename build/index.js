@@ -12,19 +12,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
 class MobileMenu {
+  // 1. describe and create/initiate object
   constructor() {
-    this.menu = document.querySelector(".site-header__menu");
-    this.openButton = document.querySelector(".site-header__menu-trigger");
+    this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".site-header__menu-trigger");
+    this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".menu-overlay__close");
+    this.searchOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".menu-overlay");
     this.events();
+    this.isOverlayOpen = false;
   }
+  // 2. events
   events() {
-    this.openButton.addEventListener("click", () => this.openMenu());
+    this.openButton.on("click", this.openOverlay.bind(this));
+    this.closeButton.on("click", this.closeOverlay.bind(this));
   }
-  openMenu() {
-    this.openButton.classList.toggle("fa-bars");
-    this.openButton.classList.toggle("fa-window-close");
-    this.menu.classList.toggle("site-header__menu--active");
+
+  // 3. methods (functions, actions...)
+  openOverlay() {
+    this.searchOverlay.addClass("search-overlay--active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").addClass("body-no-scroll");
+    this.isOverlayOpen = true;
+  }
+  closeOverlay() {
+    this.searchOverlay.removeClass("search-overlay--active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("body-no-scroll");
+    this.isOverlayOpen = false;
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MobileMenu);
@@ -51,30 +66,35 @@ class Search {
     this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-search-trigger");
     this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay__close");
     this.searchOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay");
+    this.searchField = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-term");
     this.events();
     this.isOverlayOpen = false;
-    this.searchField = jquery__WEBPACK_IMPORTED_MODULE_0___default()("search-term");
+    this.typingTimer;
   }
   // 2. events
   events() {
     this.openButton.on("click", this.openOverlay.bind(this));
     this.closeButton.on("click", this.closeOverlay.bind(this));
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("keydown", this.keyPressDispatcher.bind(this));
-    this.searchField.on("keydown", this.typingLogic);
+    this.searchField.on("keydown", this.typingLogic.bind(this));
   }
 
   // 3. methods (functions, actions...)
   openOverlay() {
-    console.log("overlay opened.");
     this.searchOverlay.addClass("search-overlay--active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").addClass("body-no-scroll");
     this.isOverlayOpen = true;
   }
   closeOverlay() {
-    console.log("overlay closed.");
     this.searchOverlay.removeClass("search-overlay--active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("body-no-scroll");
     this.isOverlayOpen = false;
+  }
+  typingLogic() {
+    clearTimeout(this.typingTimer);
+    this.typingTimer = setTimeout(function () {
+      alert("hello from typing logic");
+    }, 1800);
   }
   keyPressDispatcher(e) {
     if (e.keyCode == 83 && !this.isOverlayOpen) {
@@ -83,10 +103,6 @@ class Search {
     if (e.keyCode == 27 && this.isOverlayOpen) {
       this.closeOverlay();
     }
-  }
-  typingLogic() {
-    clearTimeout(this.typingTimer);
-    alert("hello from typing logic");
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Search);
@@ -182,8 +198,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
 
 
-const marketplaceSearch = new _modules_Search__WEBPACK_IMPORTED_MODULE_0__["default"]();
 const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const marketplaceSearch = new _modules_Search__WEBPACK_IMPORTED_MODULE_0__["default"]();
 })();
 
 /******/ })()
