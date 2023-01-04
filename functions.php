@@ -2,12 +2,25 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-//styles
+//require files
+require get_theme_file_path('/inc/search-route.php');
+
+function marketplace_custom_rest() {
+    register_rest_field('post', 'authorName', array(
+        'get_callback' => function () {return get_the_author();}
+    ));
+}
+
+add_action('rest_api_init', 'marketplace_custom_rest');
 
 function marketplace_files(){
     wp_enqueue_script('main-ebook-marketplace-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     wp_enqueue_style('book-display-styles', get_stylesheet_directory_uri() . '/css/book-display-styles.css', false, '', 'all');
     wp_enqueue_style('general-styles', get_stylesheet_directory_uri() . '/css/general-styles.css', false, '', 'all');
+
+    wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
+        'root_url' => get_site_url()
+    ));
 }
 
 add_action('wp_enqueue_scripts','marketplace_files');
@@ -36,6 +49,7 @@ add_action('after_setup_theme', 'marketplace_features');
 /*add member_authors post type-------------------------------------------------------------------*/
 function member_authors_custom_post_types() {
     register_post_type('member-author', array(
+        'show_in_rest' => true,
         'supports' => array('title', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'member-authors'),
         'has_archive' => true,
@@ -56,6 +70,7 @@ add_action('init', 'member_authors_custom_post_types');
 /*add curations post type----------------------------------------------------------*/
 function curations_custom_post_types() {
     register_post_type('curations', array(
+        'show_in_rest' => true,
         'supports' => array('title', 'editor'),
         'rewrite' => array('slug' => 'bookshelves'),
         'has_archive' => true,

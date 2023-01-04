@@ -3,6 +3,7 @@ import $ from 'jquery';
 class Search {
 // 1. describe and create/initiate object
     constructor() {
+        this.addSearchHTML();
         this.resultsDiv = $("#search-overlay__results");
         this.openButton = $(".js-search-trigger");
         this.closeButton = $(".search-overlay__close");
@@ -10,6 +11,8 @@ class Search {
         this.searchField = $("#search-term");
         this.events();
         this.isOverlayOpen = false;
+        this.isSpinnerVisible = false;
+        this.previousValue;
         this.typingTimer;
     }
 // 2. events
@@ -17,31 +20,77 @@ class Search {
         this.openButton.on("click", this.openOverlay.bind(this));
         this.closeButton.on("click", this.closeOverlay.bind(this));
         $(document).on("keydown", this.keyPressDispatcher.bind(this));
-        this.searchField.on("keydown", this.typingLogic.bind(this))
+        this.searchField.on("keyup", this.typingLogic.bind(this))
     }
 
 // 3. methods (functions, actions...)
     openOverlay(){
         this.searchOverlay.addClass("search-overlay--active");
         $("body").addClass("body-no-scroll");
+        this.searchField.val('');
+        setTimeout(() => this.searchField.focus(), 301);
         this.isOverlayOpen = true;
     }
     closeOverlay(){
         this.searchOverlay.removeClass("search-overlay--active");
+        this.resultsDiv.html('');
         $("body").removeClass("body-no-scroll");
         this.isOverlayOpen = false;
     }
     typingLogic() {
-        clearTimeout(this.typingTimer);
-        this.typingTimer = setTimeout(function () {alert("hello from typing logic");}, 1800);
+        if (this.searchField.val() != this.previousValue) {
+            clearTimeout(this.typingTimer);
+            if (this.searchField .val()) {
+                if (!this.isSpinnerVisible) {
+                    this.resultsDiv.html('<div class="generic-content"><div class="spinner-loader"></div></div>');
+                    this.isSpinnerVisible = true;
+                }
+                this.typingTimer = setTimeout(this.getResults.bind(this), 800);
+            } else {
+                this.resultsDiv.html('');
+                this.isSpinnerVisible = false;
+            }            
+        }
+        this.previousValue = this.searchField.val();
+    }
+    getResults() {
+        $.getJSON(marketplaceData.root_url + "/wp-json/ebookMarketplace/v1/search?term=" + this.searchField.val(), (results) => {
+            this.resultsDiv.html(`
+            <div class="search-result">
+            ${results.length ? '<ul>' : "<p>Sorry! We weren't able to find anything that matches that search.</p>"}
+                ${results.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.posttype == "product" && item.title != "gift car" ? ` by ${item.author}` : ""} ${item.posttype == "curations" ? ` a bookshelf curated by ${item.curator}` : ""} </li>`).join("")}
+            ${results.length ? "</ul></div>" : '</div>'}
+            `);
+            this.isSpinnerVisible = false;
+        });
     }
     keyPressDispatcher(e) {
-        if(e.keyCode == 83 && !this.isOverlayOpen) {
+        if(e.keyCode == 83 && !this.isOverlayOpen && !$("input, textarea").is(':focus')) {
             this.openOverlay()
         }
         if(e.keyCode == 27 && this.isOverlayOpen) {
             this.closeOverlay()
         }
+    }
+    addSearchHTML() {
+        $('body').append(`
+            <div class="search-overlay">
+                <div class="search-overlay__top">
+                    <div class="overlay-main-container"> 
+                    <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
+                    <div class="overlay-input-container">
+                        <i class="fa fa-search search-overlay__icon" aria-hidden = "true"></i>
+                        <input type="text" class="search-term" placeholder = "What are you looking for?" id = "search-term">
+                    </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div id="search-overlay__results">
+                    </div>
+                </div>
+            </div>
+        `);
     }
 }
 
