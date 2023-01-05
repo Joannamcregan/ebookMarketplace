@@ -5,13 +5,13 @@ if ( !defined( 'ABSPATH' ) ) exit;
 //require files
 require get_theme_file_path('/inc/search-route.php');
 
-function marketplace_custom_rest() {
-    register_rest_field('post', 'authorName', array(
-        'get_callback' => function () {return get_the_author();}
-    ));
-}
+// function marketplace_custom_rest() {
+//     register_rest_field('post', 'authorName', array(
+//         'get_callback' => function () {return get_the_author();}
+//     ));
+// }
 
-add_action('rest_api_init', 'marketplace_custom_rest');
+// add_action('rest_api_init', 'marketplace_custom_rest');
 
 function marketplace_files(){
     wp_enqueue_script('main-ebook-marketplace-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);

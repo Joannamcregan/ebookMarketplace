@@ -19,11 +19,27 @@ function marketplaceSearchResults($data) {
 
     if ($bookQuery->posts) {
         foreach($bookQuery->posts as $key => $queryItem) {
+            $authors = '';
+            $authorsField = get_field('book_author', url_to_postid( get_the_permalink($queryItem)));
+            if ($authorsField) {
+                $fieldCounter = 0;
+                while ($fieldCounter <= count($authorsField)) {
+                    $authors .= $authorsField[$fieldCounter]->post_title;
+                    if (count($authorsField) > 1 && $fieldCounter < count($authorsField) -1) {
+                        $authors .= ', ';
+                    }
+                    $fieldCounter = $fieldCounter + 1;
+                }
+            } else {
+                $authors = 'Unknown or Anonymous Author';
+            }
+            
             array_push($results, array(
-                'posttype' => get_post_type($queryItem),
+                'posttype' => 'product',
                 'title' => get_the_title($queryItem),
                 'permalink' => get_the_permalink($queryItem),
-                'thumbnail' => get_the_post_thumbnail_url($queryItem)
+                'thumbnail' => get_the_post_thumbnail_url($queryItem),
+                'productauthor' => $authors
             ));
         }
     }
@@ -36,7 +52,7 @@ function marketplaceSearchResults($data) {
     if ($authorQuery->posts) {
         foreach($authorQuery->posts as $key => $queryItem) {
             array_push($results, array(
-                'posttype' => get_post_type($queryItem),
+                'posttype' => 'member_author',
                 'title' => get_the_title($queryItem),
                 'permalink' => get_the_permalink($queryItem),
                 'thumbnail' => get_the_post_thumbnail_url($queryItem)
@@ -52,7 +68,7 @@ function marketplaceSearchResults($data) {
     if ($shelfQuery->posts) {
         foreach($shelfQuery->posts as $key => $queryItem) {
             array_push($results, array(
-                'posttype' => get_post_type($queryItem),
+                'posttype' => 'curations',
                 'title' => get_the_title($queryItem),
                 'permalink' => get_the_permalink($queryItem),
                 'curator' => get_the_author($queryItem),

@@ -117,7 +117,7 @@ class Search {
       this.resultsDiv.html(`
             <div class="search-result">
             ${results.length ? '<ul>' : "<p>Sorry! We weren't able to find anything that matches that search.</p>"}
-                ${results.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.posttype == "product" && item.title != "gift car" ? ` by ${item.author}` : ""} ${item.posttype == "curations" ? ` a bookshelf curated by ${item.curator}` : ""} </li>`).join("")}
+                ${results.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.posttype == "product" && item.title != "Gift Card" ? ` by ${item.productauthor}` : ""} ${item.posttype == "curations" ? ` a bookshelf curated by ${item.curator}` : ""} </li>`).join("")}
             ${results.length ? "</ul></div>" : '</div>'}
             `);
       this.isSpinnerVisible = false;
