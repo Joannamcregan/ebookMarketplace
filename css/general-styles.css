@@ -481,19 +481,30 @@ a {
 }
 
 .search-result{
-    background-color: #fffaf4;
-    width: fit-content;
+    background: transparent;
+    width: 90vw;
     height: fit-content;
     padding: 30px;
-    margin: 30px;
+    margin: 30px auto 0 auto;
 }
 
-.search-result ul{
+.search-result li{
     list-style: none;
+    margin: 30px;
+    padding: 15px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.search-result img{
+    max-width: 150px;
+    max-height: auto;
+    float: left;
+    margin: 0 10px 10px 0;
 }
 
 .spinner-loader {
-    margin-top: 45px;
+    margin: 45px auto 0 auto;
     border-radius: 50%;
     width: 24px;
     height: 24px;

@@ -20,7 +20,8 @@ function marketplaceSearchResults($data) {
     if ($bookQuery->posts) {
         foreach($bookQuery->posts as $key => $queryItem) {
             $authors = '';
-            $authorsField = get_field('book_author', url_to_postid( get_the_permalink($queryItem)));
+            $postId = url_to_postid( get_the_permalink($queryItem));
+            $authorsField = get_field('book_author', $postId);
             if ($authorsField) {
                 $fieldCounter = 0;
                 while ($fieldCounter <= count($authorsField)) {
@@ -39,7 +40,8 @@ function marketplaceSearchResults($data) {
                 'title' => get_the_title($queryItem),
                 'permalink' => get_the_permalink($queryItem),
                 'thumbnail' => get_the_post_thumbnail_url($queryItem),
-                'productauthor' => $authors
+                'productauthor' => $authors,
+                'excerpt' => get_the_excerpt($postId)
             ));
         }
     }
@@ -52,10 +54,10 @@ function marketplaceSearchResults($data) {
     if ($authorQuery->posts) {
         foreach($authorQuery->posts as $key => $queryItem) {
             array_push($results, array(
-                'posttype' => 'member_author',
+                'posttype' => 'member-author',
                 'title' => get_the_title($queryItem),
-                'permalink' => get_the_permalink($queryItem),
-                'thumbnail' => get_the_post_thumbnail_url($queryItem)
+                'permalink' => get_the_permalink($queryItem)//,
+                // 'thumbnail' => get_the_post_thumbnail_url($queryItem)
             ));
         }
     }
@@ -72,7 +74,8 @@ function marketplaceSearchResults($data) {
                 'title' => get_the_title($queryItem),
                 'permalink' => get_the_permalink($queryItem),
                 'curator' => get_the_author($queryItem),
-                'thumbnail' => get_the_post_thumbnail_url($queryItem)
+                'thumbnail' => get_the_post_thumbnail_url($queryItem)//,
+                // 'excerpt' => the_content($queryItem)
             ));
         }
     }

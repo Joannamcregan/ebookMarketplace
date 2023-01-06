@@ -31,6 +31,7 @@ add_filter( 'show_admin_bar', '__return_false' );
 /*add theme support-------------------------------------------------------------*/
 function marketplace_features(){
     add_image_size('bookCover', 300, 450, true);
+    add_image_size('bookThumbnail', 150, 225, true);
     add_image_size('authorImage', 300, 450, true);
     add_theme_support('woocommerce', array(
         'product_grid' => array(
