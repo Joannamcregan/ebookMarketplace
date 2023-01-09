@@ -89,6 +89,7 @@ class Search {
     this.searchField.val('');
     setTimeout(() => this.searchField.focus(), 301);
     this.isOverlayOpen = true;
+    return false;
   }
   closeOverlay() {
     this.searchOverlay.removeClass("search-overlay--active");
@@ -116,9 +117,19 @@ class Search {
     jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON(marketplaceData.root_url + "/wp-json/ebookMarketplace/v1/search?term=" + this.searchField.val(), results => {
       this.resultsDiv.html(`
             <div class="search-result">
-            ${results.length ? '<ul>' : "<p>Sorry! We weren't able to find anything that matches that search.</p>"}
-                ${results.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.posttype == "product" && item.title != "Gift Card" ? ` by ${item.productauthor}` : ""} ${item.posttype == "curations" ? ` a bookshelf curated by ${item.curator}` : ""} </li>`).join("")}
-            ${results.length ? "</ul></div>" : '</div>'}
+            ${results.length ? '' : "<p>Sorry! We weren't able to find anything that matches that search.</p>"}
+                ${results.map(item => `
+                    <li>
+                    ${item.posttype == "member-author" ? "See books by author " : ''} 
+                        <a href="${item.permalink}">
+                            ${item.thumbnail ? `<img src="${item.thumbnail}" />` : ''} 
+                            ${item.title}
+                        </a>
+                        ${item.posttype == "product" && item.title != "Gift Card" ? `<br> by ${item.productauthor}` : ""} 
+                        ${item.posttype == "curations" ? ` a bookshelf curated by ${item.curator}` : ""} 
+                        ${item.excerpt ? '<br><br>' + item.excerpt : ''}
+                    </li>`).join("")}
+            ${results.length ? "</li></div>" : '</div>'}
             `);
       this.isSpinnerVisible = false;
     });
