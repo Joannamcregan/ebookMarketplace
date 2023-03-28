@@ -4,7 +4,7 @@
         <h2 class="centered-text">Reading lists curated by our community of book lovers</h2>
     </div>
     <div class="centered-section">
-        <a class="gray-link" href="<?php echo site_url('/add-new-bookshelf') ?>">Want to create curated bookshelves?</a></li>
+        <a class="gray-link" href="<?php echo site_url('/add-new-bookshelf') ?>">Want to curate bookshelves?</a></li>
     </div>
     <div class="full-screen">
         <?php while(have_posts()){

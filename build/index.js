@@ -2,6 +2,43 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/modules/CategoryDisplay.js":
+/*!****************************************!*\
+  !*** ./src/modules/CategoryDisplay.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class CategoryDisplay {
+  constructor() {
+    this.arrows = document.querySelectorAll('.arrow');
+    this.events();
+  }
+  events() {
+    this.arrows.forEach(arrow => {
+      arrow.addEventListener('click', e => {
+        e.preventDefault();
+        let parentSection = arrow.parentElement.querySelector('.category-children');
+        if (parentSection.classList.contains('not-displayed')) {
+          parentSection.classList.remove('not-displayed');
+          arrow.classList.add('fa-caret-up');
+          arrow.classList.remove('fa-caret-down');
+        } else {
+          parentSection.classList.add('not-displayed');
+          arrow.classList.add('fa-caret-down');
+          arrow.classList.remove('fa-caret-up');
+        }
+      });
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CategoryDisplay);
+
+/***/ }),
+
 /***/ "./src/modules/MobileMenu.js":
 /*!***********************************!*\
   !*** ./src/modules/MobileMenu.js ***!
@@ -254,10 +291,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/Search */ "./src/modules/Search.js");
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
+/* harmony import */ var _modules_CategoryDisplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/CategoryDisplay */ "./src/modules/CategoryDisplay.js");
+
 
 
 const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const marketplaceSearch = new _modules_Search__WEBPACK_IMPORTED_MODULE_0__["default"]();
+const categoryDisplay = new _modules_CategoryDisplay__WEBPACK_IMPORTED_MODULE_2__["default"]();
 })();
 
 /******/ })()

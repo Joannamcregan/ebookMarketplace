@@ -17,6 +17,7 @@ function marketplace_files(){
     wp_enqueue_script('main-ebook-marketplace-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     wp_enqueue_style('book-display-styles', get_stylesheet_directory_uri() . '/css/book-display-styles.css', false, '', 'all');
     wp_enqueue_style('general-styles', get_stylesheet_directory_uri() . '/css/general-styles.css', false, '', 'all');
+    wp_enqueue_style('category-styles', get_stylesheet_directory_uri() . '/css/category-styles.css', false, '', 'all');
 
     wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
         'root_url' => get_site_url()
@@ -53,7 +54,7 @@ function member_authors_custom_post_types() {
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'member-authors'),
-        'has_archive' => true,
+        'has_archive' => false,
         'public' => true,
         'labels' => array(
             'name' => 'Member-Authors',
@@ -396,3 +397,8 @@ function ww_load_dashicons(){
 }
 add_action('wp_enqueue_scripts', 'ww_load_dashicons');
 
+/*infinite scroll*/
+add_theme_support( 'infinite-scroll', array(
+ 'container' => 'content',
+ 'footer' => 'page',
+) );
