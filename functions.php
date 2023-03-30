@@ -399,6 +399,25 @@ add_action('wp_enqueue_scripts', 'ww_load_dashicons');
 
 /*infinite scroll*/
 add_theme_support( 'infinite-scroll', array(
- 'container' => 'content',
- 'footer' => 'page',
-) );
+    'type' => 'scroll',
+    'footer_widgets' => false,
+    'footer' => false,
+    'container' => 'content',
+    'wrapper' => true,
+    'render' => false,
+    'posts_per_page' => false,
+   ) );
+
+/*remove proudly powered by wordpress */
+function remove_storefront_credit() {
+    remove_action( 'storefront_footer', 'storefront_credit' );
+}
+add_action('wp_head', 'remove_storefront_credit', 5);
+
+// change author url base to contributor
+function new_author_base() {
+    global $wp_rewrite;
+    $myauthor_base = 'contributor';
+    $wp_rewrite->author_base = $myauthor_base;
+}
+add_action('init', 'new_author_base');
