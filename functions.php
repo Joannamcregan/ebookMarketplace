@@ -18,6 +18,7 @@ function marketplace_files(){
     wp_enqueue_style('book-display-styles', get_stylesheet_directory_uri() . '/css/book-display-styles.css', false, '', 'all');
     wp_enqueue_style('general-styles', get_stylesheet_directory_uri() . '/css/general-styles.css', false, '', 'all');
     wp_enqueue_style('category-styles', get_stylesheet_directory_uri() . '/css/category-styles.css', false, '', 'all');
+    wp_enqueue_style('community-members-styles', get_stylesheet_directory_uri() . '/css/community-members-styles.css', false, '', 'all');
 
     wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
         'root_url' => get_site_url()
@@ -417,7 +418,7 @@ add_action('wp_head', 'remove_storefront_credit', 5);
 // change author url base to contributor
 function new_author_base() {
     global $wp_rewrite;
-    $myauthor_base = 'contributor';
+    $myauthor_base = 'people';
     $wp_rewrite->author_base = $myauthor_base;
 }
 add_action('init', 'new_author_base');
