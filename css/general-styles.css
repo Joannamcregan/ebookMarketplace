@@ -253,18 +253,6 @@ a {
 .nowrap{
     white-space: nowrap;
 }
-/*text beside image-------------------------------------------------------------*/
-.image-text--container{
-    margin: 0 15vw 0 15vw;
-    min-height: 300px;
-}
-.image-text--image {
-    max-width: 300px;
-    max-height: auto;
-    border-radius: 5px;
-    float: left;
-    margin: 0 2em 2em 0;
-}
 /*simple search-------------------------------------------------------------------------------*/
 #basic-search-form{
     max-width: 95vw;

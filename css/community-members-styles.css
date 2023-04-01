@@ -17,3 +17,7 @@
     display: block;
     border-radius: 50%;
 }
+
+.contributor-curation{
+    padding: 0 40px 20px 40px;
+}

@@ -1,0 +1,29 @@
+.image-text--container{
+    margin: 0 15vw 0 15vw;
+    min-height: 300px;
+}
+.image-text--image {
+    max-width: 300px;
+    max-height: auto;
+    border-radius: 5px;
+    float: left;
+    margin: 0 2em 2em 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .image-text--container{
+        margin: 0 5vw 0 5vw;
+        min-height: 300px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .image-text--image {
+        max-width: 300px;
+        max-height: auto;
+        border-radius: 5px;
+        display: block;
+        margin: 0 auto 2em auto;
+        float: none;
+    }
+}

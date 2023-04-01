@@ -16,18 +16,26 @@
         </div>
     </div>
 
-    <?php $args = array(
+    <?php wp_reset_postdata();
+    $args = array(
+        'post_type' => 'curations',
         'author'        =>  get_the_author_id(),
         'orderby'       =>  'post_date',
         'order'         =>  'ASC',
-        'posts_per_page' => 1
+        'posts_per_page' => -1
     );
 
-    $curations_query = get_posts($args);
+    $contributorCurations = get_posts($args);
 
-    if ($curations_query) {
+    if ($contributorCurations) {
         ?><div class="page-accent">
             <h3 class="centered-text">Bookshelves Curated by <?php echo get_author_name() ?></h3>
+            <?php foreach ($contributorCurations as $curation) {
+                ?><div class="contributor-curation">
+                    <a href="<?php echo get_the_permalink($curation); ?>"> <?php echo get_the_title($curation); ?></a>
+                    <p><?php echo get_the_excerpt($curation); ?></p>
+                </div>
+            <?php } ?>
         </div>
     <?php }
     
