@@ -7,7 +7,7 @@ $historicalIds = array(500, 595, 448, 439, 398, 395, 436);
     get_header();
 
     ?><h3 class="generic-content">Hello!</h3>
-    <p class="generic-content">Thank you for browsing our cooperatively run e-book marketplace! When you shop here, you're empowering authors and workers. <a><span class="nowrap">Learn how.</span></a></p>
+    <p class="generic-content">Thank you for browsing our cooperatively run e-book marketplace! When you shop here, you're empowering authors and workers. <a href="<?php echo esc_url(site_url('/about'));?>"><span class="nowrap">Learn how.</span></a></p>
 
         <?php $newestReleases = new WP_Query(array(
                 'posts_per_page' => 30,

@@ -21,7 +21,8 @@
         ?></div>
         <?php if ( !empty( get_the_content() ) ) {
             ?><div class="generic-content">
-                <h4>About this bookshelf</h4>            
+                <!-- <h4>About this bookshelf</h4>             -->
+                <br>
                 <?php the_content(); ?>
             </div>
         <?php }        

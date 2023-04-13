@@ -4,13 +4,13 @@
                   <li><a href="<?php echo esc_url(site_url()) ?>">Home</a></li>
                   <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse by Genre</a></li>       
                   <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')) ?>">Curated Bookshelves</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/wishlist'));?>">Wishlist</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/own-voices'));?>">Browse Own Voices</a></li>
             </ul>
             <ul>
-                  <li>About Us</li>
-                  <li>Privacy Policy</li>
-                  <li><a>For Authors</a></li> 
-                  <li><a>Get Involved</a></li>   
+                  <li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/about'));?>">About Us</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/privacy-policy'));?>">Privacy Policy</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/get-involved'));?>">Get Involved</a></li>   
             </ul>
       </div>
       <p>Copyright 2022</p>
@@ -22,10 +22,10 @@
     <li><a href="<?php echo esc_url(site_url()) ?>">Home</a></li>
     <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse by Genre</a></li>       
     <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')) ?>">Curated Bookshelves</a></li>
-    <li><a href="<?php echo esc_url(site_url('/wishlist'));?>">Wishlist</a></li>
-    <li><a>About Us</a></li>
-    <li><a>For Authors</a></li>
-    <li><a>Get Involved</a></li> 
+    <li><a href="<?php echo esc_url(site_url('/own-voices'));?>">Browse Own Voices</a></li>
+    <li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
+    <li><a href="<?php echo esc_url(site_url('/about'));?>">About Us</a></li>
+    <li><a href="<?php echo esc_url(site_url('/get-involved'));?>">Get Involved</a></li> 
   </ul>
 </div>
 

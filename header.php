@@ -23,10 +23,10 @@
         <div class="nav-container site-header__menu group">    
           <a href="<?php echo esc_url(site_url('/genres'));?>">Browse by Genre</a>       
           <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a>
-          <a href="<?php echo esc_url(site_url('/wishlist'));?>">Wishlist</a>
-          <a>About the Co-op</a>
-          <a>For Authors</a>
-          <a>Get Involved</a>
+          <a href="<?php echo esc_url(site_url('/own-voices'));?>">Browse Own Voices</a>
+          <a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a>
+          <a href="<?php echo esc_url(site_url('/about'));?>">About the Co-op</a>
+          <a href="<?php echo esc_url(site_url('/get-involved'));?>">Get Involved</a>
         </div>
       </nav>
     </header>

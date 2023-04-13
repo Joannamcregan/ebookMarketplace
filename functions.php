@@ -192,7 +192,7 @@ function ebook_marketplace_include_book_author() {
                 }
             }
         } else {
-            $authorName = 'Unknown or Anonymous';
+            $authorName = 'by Unknown or Anonymous';
         }
         $authorName .= '</p>';
     }     
@@ -305,7 +305,7 @@ function ebook_marketplace_single_include_book_author() {
                 }
             }
         } else {
-            $authorName = 'Unknown or Anonymous';
+            $authorName = 'by Unknown or Anonymous';
         }
         $authorName .= '</h3>';
     }     
@@ -423,3 +423,16 @@ function new_author_base() {
     $wp_rewrite->author_base = $myauthor_base;
 }
 add_action('init', 'new_author_base');
+
+// Make book covers not clickable on individual product pages-------------------------------------------
+function remove_product_image_link( $html, $post_id ) {
+    return preg_replace( "!<(a|/a).*?>!", '', $html );
+}
+add_filter( 'woocommerce_single_product_image_thumbnail_html', 'remove_product_image_link', 10, 2 );
+
+// Customize My Account nav-----------------------------------------------------------------------------
+add_filter( 'woocommerce_account_menu_items', function($items) {
+    unset($items['subscriptions']);
+    unset($items['edit-address']);
+    return $items;
+}, 99, 1 );

@@ -1,10 +1,10 @@
 <?php 
     get_header();
     ?><div class="banner">
-        <h2 class="centered-text">Reading lists curated by our community of book lovers</h2>
+        <h1 class="centered-text">Curated Reading Lists</h2>
     </div>
     <div class="centered-section">
-        <a class="gray-link" href="<?php echo site_url('/add-new-bookshelf') ?>">Want to curate bookshelves?</a></li>
+        <a class="gray-link" href="<?php echo esc_url(site_url('/get-involved'));?>">Want to curate lists?</a></li>
     </div>
     <div class="full-screen">
         <?php while(have_posts()){

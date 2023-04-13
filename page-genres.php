@@ -1,7 +1,9 @@
 <?php get_header();
 
-    ?><div class="two-thirds-screen generic-content">
-        <h2 class="centered-text">Browse by Genre</h2>
+    ?><div class="banner"><h1 class="centered-text">Browse by Genre</h1></div>
+    <br>
+    <br>
+    <div class="two-thirds-screen generic-content">
         <div class="genre-category categories--top-level"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks'));?>">Fiction</a>
             <i class="fa-solid fa-caret-down arrow"></i>
             <div class="not-displayed category-children">
