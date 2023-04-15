@@ -8,7 +8,7 @@
             </ul>
             <ul>
                   <li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/about'));?>">About Us</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/about'));?>">About the Marketplace</a></li>
                   <li><a href="<?php echo esc_url(site_url('/privacy-policy'));?>">Privacy Policy</a></li>
                   <li><a href="<?php echo esc_url(site_url('/get-involved'));?>">Get Involved</a></li>   
             </ul>
@@ -23,8 +23,7 @@
     <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse by Genre</a></li>       
     <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')) ?>">Curated Bookshelves</a></li>
     <li><a href="<?php echo esc_url(site_url('/own-voices'));?>">Browse Own Voices</a></li>
-    <li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
-    <li><a href="<?php echo esc_url(site_url('/about'));?>">About Us</a></li>
+    <li><a href="<?php echo esc_url(site_url('/about'));?>">About the Marketplace</a></li>
     <li><a href="<?php echo esc_url(site_url('/get-involved'));?>">Get Involved</a></li> 
   </ul>
 </div>

@@ -92,3 +92,16 @@
     margin: 5px 5px auto 5px;
     border-radius: 5px;
 }
+/* front page featured book------------------------------------------------------------------------------- */
+.featured-book-section{
+    width: fit-content;
+    margin: 30px auto 0 auto;
+}
+.featured-book-section img{
+    display: inline;
+}
+.featured-book-text{
+    /* display: inline; */
+    border: solid red 2px;
+    width: 500px;
+}
