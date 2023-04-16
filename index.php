@@ -49,13 +49,37 @@ wp_reset_postdata();
 $singleFeature0 = new WP_Query( array( 'post_type' => 'product', 'post' => $singleFeatureId0 ) );
 
 if ($singleFeature0->have_posts()){
-    ?><a href="<?php the_permalink(); ?>"><div class="featured-book-section"> 
+    ?><div class="featured-book-section"> 
         <?php $singleFeature0->the_post();
-        ?><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/>
+        ?><a href="<?php the_permalink($singleFeatureId0); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a>
         <div class="featured-book-text">
-            <h4 class="gray-link"><?php echo get_the_title(); ?></h4>
+        <a href="<?php the_permalink($singleFeatureId0); ?>" class="gray-link"><h4><?php echo get_the_title(); ?></h4></a>
+            <?php $authorName = '<p class="featured-book-author-name">';
+            $authorName .= 'by ';
+            $bookAuthors = get_field('book_author');        
+            if ($bookAuthors) {
+                foreach($bookAuthors as $author) {
+                    if (($author == $bookAuthors[count($bookAuthors)-2]) && count($bookAuthors) > 2) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ', and ';
+                    } else if (($author == $bookAuthors[count($bookAuthors)-2]) && count($bookAuthors) == 2) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ' and ';
+                    } else if ($author != $bookAuthors[count($bookAuthors)-1]){
+                        $authorName .= get_the_title($author);
+                        $authorName .= ', ';
+                    } else {
+                        $authorName .= get_the_title($author);
+                    }
+                }
+            } else {
+                $authorName = 'by Unknown or Anonymous';
+            }
+            $authorName .= '</p>';
+            ?><p><?php echo $authorName; ?></p>
+            <p><?php the_excerpt(); ?></p>
         </div>
-    </div></a>
+    </div>
 <?php }
 
 wp_reset_postdata();
