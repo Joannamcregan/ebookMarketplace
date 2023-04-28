@@ -1,6 +1,6 @@
 <?php
 //single book features
-$singleFeatureId0 = 488;
+$fictionFeatureId0 = 488;
 
 //featured curation ids
 $curationId0 = 459;
@@ -46,14 +46,15 @@ if ($newestReleases->have_posts()){
 
 wp_reset_postdata();
 
-$singleFeature0 = new WP_Query( array( 'post_type' => 'product', 'post' => $singleFeatureId0 ) );
+$fictionFeature0 = new WP_Query( array( 'post_type' => 'product', 'post' => $fictionFeatureId0 ) );
 
-if ($singleFeature0->have_posts()){
+if ($fictionFeature0->have_posts()){
     ?><div class="featured-book-section"> 
-        <?php $singleFeature0->the_post();
-        ?><a href="<?php the_permalink($singleFeatureId0); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a>
+        <?php $fictionFeature0->the_post();
+        ?><h3 class="centered-text sans-text">Featured Fiction</h3>
+        <a href="<?php the_permalink($fictionFeatureId0); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a>
         <div class="featured-book-text">
-        <a href="<?php the_permalink($singleFeatureId0); ?>" class="gray-link"><h4><?php echo get_the_title(); ?></h4></a>
+        <a href="<?php the_permalink($fictionFeatureId0); ?>" class="gray-link"><h4><?php echo get_the_title(); ?></h4></a>
             <?php $authorName = '<p class="featured-book-author-name">';
             $authorName .= 'by ';
             $bookAuthors = get_field('book_author');        
@@ -107,7 +108,7 @@ $historicals = new WP_Query( array( 'post_type' => 'product', 'post__in' => $his
 
 if ($historicals->have_posts()){
     echo '<div class="page-accent-front">';
-        echo '<a class="gray-link" href="/product-category/fiction-ebooks/historical-fiction"><h3 class="left-text sans-text">Historical</h3></a>';
+        echo '<a class="gray-link" href="/product-category/fiction-ebooks/historical-fiction"><h3 class="left-text sans-text">Historical Fiction</h3></a>';
         ?> <div class="book-sections-container"> 
             <?php while ($historicals -> have_posts()){
                 $historicals->the_post();

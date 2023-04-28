@@ -347,7 +347,7 @@ function ebook_marketplace_author_product_tab_content() {
                 </div>
                 <div class="author-bio">
                     <img src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
-                    <?php the_excerpt($author);
+                    <?php echo get_the_excerpt($author);
                 ?></div>
             </div>        
         <?php }
