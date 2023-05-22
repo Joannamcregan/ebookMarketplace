@@ -50,26 +50,26 @@ function marketplace_features(){
 
 add_action('after_setup_theme', 'marketplace_features');
 
-/*add member_authors post type-------------------------------------------------------------------*/
-function member_authors_custom_post_types() {
-    register_post_type('member-author', array(
+/*add classic_authors post type-------------------------------------------------------------------*/
+function classic_authors_custom_post_types() {
+    register_post_type('classic-author', array(
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'thumbnail'),
-        'rewrite' => array('slug' => 'member-authors'),
+        'rewrite' => array('slug' => 'classic-authors'),
         'has_archive' => false,
         'public' => true,
         'labels' => array(
-            'name' => 'Member-Authors',
-            'add_new_item' => 'Add New Member-Author',
-            'edit_item' => 'Edit Member-Author',
-            'all_items' => 'All Member-Authors',
-            'singular_name' => 'Member-Author'
+            'name' => 'Classic-Authors',
+            'add_new_item' => 'Add New Classic-Author',
+            'edit_item' => 'Edit Classic-Author',
+            'all_items' => 'All Classic-Authors',
+            'singular_name' => 'Classic-Author'
         ),
         'menu_icon' => 'dashicons-edit'
     ));
 }
 
-add_action('init', 'member_authors_custom_post_types');
+add_action('init', 'classic_authors_custom_post_types');
 
 /*add curations post type----------------------------------------------------------*/
 function curations_custom_post_types() {
@@ -168,7 +168,7 @@ function ebook_marketplace_include_book_author() {
     $isBook = true;
     $productCategories = get_the_terms( $post->ID, 'product_cat' );
     foreach($productCategories as $category){
-        if ($category->term_id == 109/*gift card*/){
+        if ($category->term_id == 109/*gift card*/ OR $category->term_id == 103/*merch*/){
             $isBook = false;
         }
     }
@@ -198,7 +198,7 @@ function ebook_marketplace_include_book_author() {
     }     
     echo $authorName;
 
-    $ownVoicesCats = get_the_terms( $post->ID, 'pa_own-voices' );
+    $ownVoicesCats = get_the_terms( $post->ID, 'pa_diverse-books' );
     if ($ownVoicesCats) {
         foreach($ownVoicesCats as $cat) {
             echo '<div class="own-voices right-text-no-margin">';
@@ -212,7 +212,11 @@ function ebook_marketplace_include_book_author() {
 add_action( 'woocommerce_before_shop_loop_item_title', 'ebook_marketplace_include_book_author', 13 );
 
 function ebook_marketplace_include_product_description() {      
-    the_excerpt();      
+    if (str_word_count( strip_tags( strip_shortcodes(get_the_excerpt()))) > 60){
+        echo wp_trim_words(get_the_excerpt(), 60, '   ...see more');   
+    } else {
+        the_excerpt();
+    }
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'ebook_marketplace_include_product_description', 14 );
 
@@ -261,28 +265,12 @@ add_action('woocommerce_after_single_product_summary', 'ebook_marketplace_single
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
-function ebook_marketplace_rename_description_tab( $tabs ) {
-
-	$tabs[ 'description' ][ 'title' ] = 'Read an Excerpt';
-
-	return $tabs;
-
-}
-add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_rename_description_tab' );
-
-function ebook_marketplace_description_heading( $heading ){
-
-	return 'Read an Excerpt';
-	
-}
-add_filter( 'woocommerce_product_description_heading', 'ebook_marketplace_description_heading' );
-
 function ebook_marketplace_single_include_book_author() {  
     $authorName = '';
     $isBook = true;
     $productCategories = get_the_terms( $post->ID, 'product_cat' );
     foreach($productCategories as $category){
-        if ($category->term_id == 109/*gift card*/){
+        if ($category->term_id == 109/*gift card*/ OR $category->term_id == 103/*merch*/){
             $isBook = false;
         }
     }
@@ -311,7 +299,7 @@ function ebook_marketplace_single_include_book_author() {
     }     
     echo $authorName;
 
-    $ownVoicesCats = get_the_terms( $post->ID, 'pa_own-voices' );
+    $ownVoicesCats = get_the_terms( $post->ID, 'pa_diverse-books' );
     if ($ownVoicesCats) {
         foreach($ownVoicesCats as $cat) {
             echo '<div class="own-voices">';
@@ -326,9 +314,30 @@ add_action( 'woocommerce_single_product_summary', 'ebook_marketplace_single_incl
 
 function ebook_marketplace_remove_product_tabs( $tabs ) {
     unset( $tabs['additional_information'] ); 
+    unset($tabs['description']);
     return $tabs;
 }
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_remove_product_tabs', 98 );
+
+function ebook_marketplace_rename_vendor_tab( $tabs ) {
+    // if ( isset( $tabs['vendor'] ) ) {
+        $isBook = true;
+        $productCategories = get_the_terms( $post->ID, 'product_cat' );
+        foreach($productCategories as $category){
+            if ($category->term_id == 109/*gift card*/ OR $category->term_id == 103/*merch*/){
+                $isBook = false;
+            }
+        }
+        if ($isBook){
+            $tabs['vendor']['title'] = __( 'About the Publisher', 'woocommerce' );
+            return $tabs;
+        } else {
+            $tabs['vendor']['title'] = __( 'About the Vendor', 'woocommerce' );
+            return $tabs;
+        }
+    // }
+}
+add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_rename_vendor_tab' );
 
 function ebook_marketplace_author_product_tab_content() {
     $bookAuthors = get_field('book_author');	
@@ -355,6 +364,7 @@ function ebook_marketplace_author_product_tab_content() {
         echo '<h2>About the Author<h2><p>The author of this book is unknown or anonymous.</p>';
     }
 }
+
 function ebook_marketplace_triggers_product_tab_content(){
     $triggers = get_field('book_trigger');	
     echo '<h2>Triggers</h2>';
@@ -369,11 +379,20 @@ function ebook_marketplace_triggers_product_tab_content(){
         echo '<p>No potential triggers have been listed for this book.</p>';
     }
 }
+function ebook_marketplace_excerpt_product_tab_content(){
+    $excerpt = get_field('excerpt');	
+    echo '<h2>Excerpt</h2>';
+    if ($excerpt) {
+        echo $excerpt;
+    } else {
+        echo '<p>No excerpt has been added for this book.</p>';
+    }
+}
 function ebook_marketplace_add_product_tabs( $tabs ) {
     $isBook = true;
     $productCategories = get_the_terms( $post->ID, 'product_cat' );
     foreach($productCategories as $category){
-        if ($category->term_id == 109/*gift card*/){
+        if ($category->term_id == 109/*gift card*/ OR $category->term_id == 103/*merch*/){
             $isBook = false;
         }
     }
@@ -387,6 +406,11 @@ function ebook_marketplace_add_product_tabs( $tabs ) {
             'title' => __('Possible Triggers'),
             'priority' => 60,
             'callback' => 'ebook_marketplace_triggers_product_tab_content'
+        );
+        $tabs['excerpt'] = array(
+            'title' => __( 'Read an Excerpt' ),
+            'priority' => 70,
+            'callback' => 'ebook_marketplace_excerpt_product_tab_content'
         );
     }
 	return $tabs;

@@ -39,6 +39,22 @@ body{
 header a{
     color: #f7ede3;
 }
+header a:hover{
+    color: #f7ede3;
+    text-decoration: none;
+}
+.woocommerce-products-header{
+    width: 100vw;
+    background: linear-gradient(to right, #f6f0e9, #fffaf4);
+    border-right: solid #9f886d 5px;
+    padding: 1rem 0;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+.woocommerce-products-header a:hover{
+    color: #007bff;
+}
 .logo-text{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -81,7 +97,7 @@ header a{
     color: #f7ede3;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0 -5px 0 -10px;
-    padding: 0.15rem 0.15rem 0.15rem 0.15rem;
+    padding: 0.5rem 0.15rem 0.15rem 0.15rem;
 }
 /*nav bar----------------------------------------------------------------------*/
 .top-nav-container{
@@ -223,6 +239,9 @@ a {
     font-size: 0.75rem;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+}
+.text-16{
+    font-size: 16px;
 }
 .centered-text{
     text-align: center;
@@ -595,6 +614,15 @@ a {
     min-width: 200px;
     margin: 0.5rem 0.5rem 0 0.5rem;
     padding: 0.25rem;
+    color: black;
+}
+.product-section a{
+    color: black;
+    text-decoration: none;
+}
+.product-section a:hover{
+    color: black;
+    text-decoration: none;
 }
 .product-section span{
     color: black;
@@ -660,6 +688,20 @@ a {
     color: #333;
     font-size: 16px;
 }
+/* #tab-title-vendor{
+    background:  rgba(213, 236, 230, 0.1);
+    border: solid #d5ece6 2px;
+    border-radius: 10px;
+    margin: 3px 0 0 5px; 
+    padding: 0 5px 0 5px;
+}
+#tab-title-excerpt{
+    background:  rgba(213, 236, 230, 0.1);
+    border: solid #d5ece6 2px;
+    border-radius: 10px;
+    margin: 3px 0 0 5px; 
+    padding: 0 5px 0 5px;
+}
 #tab-title-description{
     background:  rgba(213, 236, 230, 0.1);
     border: solid #d5ece6 2px;
@@ -687,11 +729,11 @@ a {
     border-radius: 10px;
     margin: 2px 0 0 2px; 
     padding: 0 5px 0 5px;
-}
+} */
 #tab-title-mvx_customer_qna{
     display: none;
 }
-#tab-title-vendor{
+#mvx_customer_qna{
     display: none;
 }
 .about-author-card{
@@ -703,6 +745,7 @@ a {
     width: auto;
     float: left;
     margin: 0 1rem 1rem 0;
+    box-shadow: none;
 }
 
 @media screen and (max-width: 630px) {

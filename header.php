@@ -10,7 +10,7 @@
       <div class="top-nav-container">
         <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
         <h3 class="logo-text">
-          <a href="<?php echo esc_url(site_url()) ?>">A <strong>Cooperative</strong> E-Book Marketplace</a>
+          <a href="<?php echo esc_url(site_url()) ?>">The <strong>Book</strong> Marketplace</a>
         </h3> 
         <div class="top-nav-section" id="top-nav-right">
           <a href="<?php echo esc_url(site_url('/search'));?>" class="js-search-trigger "><i class="fa fa-search" aria-hidden="true"></i></a>          
@@ -23,7 +23,7 @@
         <div class="nav-container site-header__menu group">    
           <a href="<?php echo esc_url(site_url('/genres'));?>">Browse by Genre</a>       
           <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a>
-          <a href="<?php echo esc_url(site_url('/own-voices'));?>">Browse Own Voices</a>
+          <a href="<?php echo esc_url(site_url('/diverse-books'));?>">Browse Diverse Books</a>
           <a href="<?php echo esc_url(site_url('/about'));?>">About the Marketplace</a>
           <a href="<?php echo esc_url(site_url('/get-involved'));?>">Get Involved</a>
         </div>
