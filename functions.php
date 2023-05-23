@@ -51,25 +51,25 @@ function marketplace_features(){
 add_action('after_setup_theme', 'marketplace_features');
 
 /*add classic_authors post type-------------------------------------------------------------------*/
-function classic_authors_custom_post_types() {
-    register_post_type('classic-author', array(
+function author_profile_custom_post_types() {
+    register_post_type('author-profile', array(
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'thumbnail'),
-        'rewrite' => array('slug' => 'classic-authors'),
+        'rewrite' => array('slug' => 'author-profile'),
         'has_archive' => false,
         'public' => true,
         'labels' => array(
-            'name' => 'Classic-Authors',
-            'add_new_item' => 'Add New Classic-Author',
-            'edit_item' => 'Edit Classic-Author',
-            'all_items' => 'All Classic-Authors',
-            'singular_name' => 'Classic-Author'
+            'name' => 'Author-Profiles',
+            'add_new_item' => 'Add New Author-Profile',
+            'edit_item' => 'Edit Author-Profile',
+            'all_items' => 'All Author-Profiles',
+            'singular_name' => 'Author-Profile'
         ),
         'menu_icon' => 'dashicons-edit'
     ));
 }
 
-add_action('init', 'classic_authors_custom_post_types');
+add_action('init', 'author_profile_custom_post_types');
 
 /*add curations post type----------------------------------------------------------*/
 function curations_custom_post_types() {

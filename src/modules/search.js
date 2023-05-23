@@ -61,7 +61,7 @@ class Search {
             ${results.length ? '' : "<p>Sorry! We weren't able to find anything that matches that search.</p>"}
                 ${results.map(item => `
                     <li>
-                    ${item.posttype == "member-author" ? "See books by author " : ''} 
+                    ${item.posttype == "author-profile" ? "See books by author " : ''} 
                         <a href="${item.permalink}">
                             ${item.thumbnail ? `<img src="${item.thumbnail}" />` : ''} 
                             ${item.title}
