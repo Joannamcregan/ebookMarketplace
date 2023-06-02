@@ -78,7 +78,11 @@ if ($fictionFeature0->have_posts()){
             }
             $authorName .= '</p>';
             ?><p><?php echo $authorName; ?></p>
-            <p><?php the_excerpt(); ?></p>
+            <p><?php if (str_word_count( strip_tags( strip_shortcodes(get_the_excerpt()))) > 60){
+        echo wp_trim_words(get_the_excerpt(), 60, ' ...<a href="<?php the_permalink($fictionFeatureId0); ?>" class="gray-link">see more</a>');   
+    } else {
+        the_excerpt();
+    } ?></p>
         </div>
     </div>
 <?php }
