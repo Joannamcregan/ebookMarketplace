@@ -202,7 +202,7 @@ function ebook_marketplace_include_book_author() {
     if ($ownVoicesCats) {
         foreach($ownVoicesCats as $cat) {
             echo '<div class="own-voices right-text-no-margin">';
-            echo '<span>Own Voices: </span>';
+            echo '<span>Diverse Voices: </span>';
             echo '<span class="own-voices-cat"><i>';
             echo $cat->name; 
             echo '</i></span></div>';
@@ -352,17 +352,16 @@ function ebook_marketplace_author_product_tab_content() {
             echo '<h2>About the Author</h2>';
         }
         foreach($bookAuthors as $author) {
-            ?><div class="about-author-card">
-                <div>
-                    <a href="<?php echo get_the_permalink($author); ?>">
-                        <h3><?php echo get_the_title($author); ?></h3>
-                    </a>
-                </div>
+            ?><div class="about-author-card product-tab-content">
+                <a href="<?php echo get_the_permalink($author); ?>">
+                    <h3><?php echo get_the_title($author); ?></h3>
+                </a>
                 <div class="author-bio">
                     <img src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
                     <?php echo get_the_excerpt($author);
                 ?></div>
             </div>        
+            <br/>
         <?php }
     } else {
         echo '<h2>About the Author<h2><p>The author of this book is unknown or anonymous.</p>';
@@ -370,7 +369,9 @@ function ebook_marketplace_author_product_tab_content() {
 }
 
 function ebook_marketplace_triggers_product_tab_content(){
+    global $MVX, $product;
     $triggers = get_field('book_trigger');	
+    $vendor = get_mvx_product_vendors($product->get_id());
     echo '<h2>Triggers</h2>';
     if ($triggers) {
         echo '<p>Content warning: this book may contain the following triggers:</p>';
@@ -382,12 +383,15 @@ function ebook_marketplace_triggers_product_tab_content(){
     } else {
         echo '<p>No potential triggers have been listed for this book.</p>';
     }
+    if ($vendor) {
+        echo '<p>To suggest a trigger warning be added, please <a href="' . $vendor->permalink . '">contact the publisher</a></p>';
+    }
 }
 function ebook_marketplace_excerpt_product_tab_content(){
     $excerpt = get_field('excerpt');	
     echo '<h2>Excerpt</h2>';
     if ($excerpt) {
-        echo $excerpt;
+        echo "<div class='product-tab-content'>" . $excerpt . "</div>";
     } else {
         echo '<p>No excerpt has been added for this book.</p>';
     }

@@ -736,9 +736,12 @@ a {
 #mvx_customer_qna{
     display: none;
 }
+.product-tab-content{
+    max-width: 800px;
+}
 .about-author-card{
-    min-height: fit-content;
-    padding-bottom: 2rem;
+    height: 300px;
+    padding-bottom: 10px;
 }
 .about-author-card img{
     max-width: 150px;

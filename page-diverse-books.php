@@ -12,6 +12,7 @@
         <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/diverse-books/lgbtqia2s-voices'));?>">by LGBTQIA+ Authors</a></div>
         <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/diverse-books/middle-eastern-voices'));?>">by Middle Eastern Authors</a></div>
         <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/diverse-books/neurodivergent-voices'));?>">by Neurodivergent Authors</a></div>
+        <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/diverse-books/oceanic-and-pacific-islander-voices'));?>">by Oceanic and Pacific Islander Authors</a></div>
     </div>
 
 <?php get_footer();
