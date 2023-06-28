@@ -3,16 +3,19 @@
     ?><div class="half-screen">
         <p class="extra-large-text center-left-text"><strong>404</strong></p>
         <h1 class="center-left-text">Sorry, we can't seem to find the page you were looking for.</h1>
-        <!-- <div class="centered-section">
-            <?php get_search_form(); ?>
-        </div> -->
     </div>
-    <div class="page-accent-front">
+    <?php // featured e-books
+    $featuredBookIds = array(889, 859, 856, 460, 853, 862, 977);
+    $featuredBooks = new WP_Query( array( 'post_type' => 'product', 'post__in' => $featuredBookIds ) );
+    ?><div class="page-accent-front">
         <p class="center-left-text">Sometimes getting lost is just the beginning of a great adventure! Here are some books that prove it.</p>
-        <div class="book-sections-container">
-            <div class="book-section--small">
-                <a href="http://ebook-marketplace.local/product/alices-adventures-in-wonderland/"><img class="book-cover--small" alt="Alice's Adventures in Wonderland by Lewis Carol" src="http://ebook-marketplace.local/wp-content/uploads/2022/11/Alices-Adventures-in-Wonderland-cover-200x300.jpg"/></a> 
+        <div class="book-sections-container">           -->
+            <?php while ($featuredBooks -> have_posts()){
+            $featuredBooks->the_post();
+            ?><div class="book-section--small">
+                <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
             </div>                
-        </div>
+        <?php }
+        ?></div>
     </div>
 <?php get_footer();

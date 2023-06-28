@@ -202,6 +202,11 @@ header a:hover{
     padding: 0.5em 0 0 0;
     background: linear-gradient(to right, #f6f0e9, #fffaf4);
 }
+.page-accent-alt-1{
+    margin: 2em 0 0 0;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #f6f0e9, #fffaf4);
+}
 .page-accent-front{
     margin: 2em 0 0 0;
     padding: 0.5em 0 0 0;
@@ -654,14 +659,16 @@ a {
 }
 
 .own-voices{
-    border: solid 2px rgb(221, 211, 155);
-    width: fit-content;
-    padding-left: 1rem;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-.own-voices-cat{
+.own-voices span{
     background: rgb(255, 246, 198);
     border-radius: 5px;
-    margin-right: 1rem;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .woocommerce-pagination{

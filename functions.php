@@ -173,7 +173,7 @@ function ebook_marketplace_include_book_author() {
         }
     }
     if ($isBook) {
-        $authorName .= '<p class=" right-text-no-margin">';
+        $authorName .= '<p class="right-text-no-margin">';
         $authorName .= 'by ';
         $bookAuthors = get_field('book_author');        
         if ($bookAuthors) {
@@ -200,13 +200,13 @@ function ebook_marketplace_include_book_author() {
 
     $ownVoicesCats = get_the_terms( $post->ID, 'pa_diverse-books' );
     if ($ownVoicesCats) {
+        echo '<div class="own-voices">';
         foreach($ownVoicesCats as $cat) {
-            echo '<div class="own-voices right-text-no-margin">';
-            echo '<span>Diverse Voices: </span>';
-            echo '<span class="own-voices-cat"><i>';
+            echo '<span><i>';
             echo $cat->name; 
-            echo '</i></span></div>';
+            echo '</i></span>';
         }
+        echo '</div>';
     }
 }
 add_action( 'woocommerce_before_shop_loop_item_title', 'ebook_marketplace_include_book_author', 13 );
@@ -303,7 +303,7 @@ function ebook_marketplace_single_include_book_author() {
     if ($ownVoicesCats) {
         foreach($ownVoicesCats as $cat) {
             echo '<div class="own-voices">';
-            echo '<span>Diverse Voices: </span>';
+            // echo '<span>Diverse Voices: </span>';
             echo '<span class="own-voices-cat"><i>';
             echo $cat->name; 
             echo '</i></span></div>';
@@ -336,12 +336,6 @@ function ebook_marketplace_rename_vendor_tab( $tabs ) {
     return $tabs;
 }
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_rename_vendor_tab', 97 );
-
-// add_filter('woocommerce_product_tabs', 'remove_product_vendor_tab', 100);
-// function remove_product_vendor_tab($tabs){
-//    unset($tabs['vendor']);
-//    return $tabs;
-// }
 
 function ebook_marketplace_author_product_tab_content() {
     $bookAuthors = get_field('book_author');	
@@ -432,15 +426,15 @@ function ww_load_dashicons(){
 add_action('wp_enqueue_scripts', 'ww_load_dashicons');
 
 /*infinite scroll*/
-add_theme_support( 'infinite-scroll', array(
-    'type' => 'scroll',
-    'footer_widgets' => false,
-    'footer' => false,
-    'container' => 'content',
-    'wrapper' => true,
-    'render' => false,
-    'posts_per_page' => false,
-   ) );
+// add_theme_support( 'infinite-scroll', array(
+//     'type' => 'scroll',
+//     'footer_widgets' => false,
+//     'footer' => false,
+//     'container' => 'content',
+//     'wrapper' => true,
+//     'render' => false,
+//     'posts_per_page' => false,
+//    ) );
 
 /*remove proudly powered by wordpress */
 function remove_storefront_credit() {

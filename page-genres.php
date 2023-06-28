@@ -4,7 +4,7 @@
     <br>
     <br>
     <div class="two-thirds-screen generic-content">
-        <div class="genre-category categories--top-level"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks'));?>">Fiction</a>
+        <div class="genre-category categories--top-level page-accent-alt-1"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks'));?>">Fiction</a>
             <i class="fa-solid fa-caret-down arrow"></i>
             <div class="not-displayed category-children">
                 <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/adventure-fiction'));?>">Action/Adventure</a>
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="genre-category categories--top-level"><a href="<?php echo esc_url(site_url('/product-category/nonfiction'));?>">Nonfiction</a>
+        <div class="genre-category categories--top-level page-accent-alt-1"><a href="<?php echo esc_url(site_url('/product-category/nonfiction'));?>">Nonfiction</a>
             <i class="fa-solid fa-caret-down arrow"></i>
             <div class="not-displayed category-children">
                 <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/nonfiction/economics'));?>">Economics</a></div>
@@ -62,7 +62,7 @@
         </div>
 
         
-        <div class="genre-category categories--top-level"><a href="<?php echo esc_url(site_url('/product-category/poetry'));?>">Poetry</a></div>
+        <div class="genre-category categories--top-level page-accent-alt-1"><a href="<?php echo esc_url(site_url('/product-category/poetry'));?>">Poetry</a></div>
     </div>
 
 <?php get_footer();

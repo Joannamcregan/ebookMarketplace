@@ -57,7 +57,7 @@ while(have_posts()){
         <a class="gray-link" href="<?php echo get_the_permalink($curationId0); ?>"><h3 class="centered-text sans-text"><?php echo get_the_title($curationId0); ?></h3></a>
         <?php $books = get_field('curated_books', $curationId0);
         if ($books) {
-            ?><a href="<?php the_permalink(); ?>"><div class="book-pile">
+            ?><div class="book-pile">
                 <div class="bookshelf-tablet-0">
                     <img class="bookshelf-book-0" src="<?php echo get_the_post_thumbnail_url($books[0]); ?>"/>
                 </div>   
@@ -71,7 +71,7 @@ while(have_posts()){
                         </div>
                 <?php }
                 }
-            ?></div></a>                     
+            ?></div>        
         <?php }  
     ?></div>
 <?php }
@@ -124,7 +124,7 @@ while(have_posts()){
         <a class="gray-link" href="<?php echo get_the_permalink($curationId1); ?>"><h3 class="centered-text sans-text"><?php echo get_the_title($curationId1); ?></h3></a>
         <?php $books = get_field('curated_books', $curationId1);
         if ($books) {
-            ?><a href="<?php the_permalink(); ?>"><div class="book-pile">
+            ?><div class="book-pile">
                 <div class="bookshelf-tablet-0">
                     <img class="bookshelf-book-0" src="<?php echo get_the_post_thumbnail_url($books[0]); ?>"/>
                 </div>   
@@ -138,7 +138,7 @@ while(have_posts()){
                         </div>
                 <?php }
                 }
-            ?></div></a>                     
+            ?></div>                 
         <?php }  
     ?></div>
 <?php }
@@ -191,7 +191,7 @@ while(have_posts()){
         <a class="gray-link" href="<?php echo get_the_permalink($curationId2); ?>"><h3 class="centered-text sans-text"><?php echo get_the_title($curationId2); ?></h3></a>
         <?php $books = get_field('curated_books', $curationId2);
         if ($books) {
-            ?><a href="<?php the_permalink(); ?>"><div class="book-pile">
+            ?><div class="book-pile">
                 <div class="bookshelf-tablet-0">
                     <img class="bookshelf-book-0" src="<?php echo get_the_post_thumbnail_url($books[0]); ?>"/>
                 </div>   
@@ -205,7 +205,7 @@ while(have_posts()){
                         </div>
                 <?php }
                 }
-            ?></div></a>                     
+            ?></div>            
         <?php }  
     ?></div>
 <?php }
@@ -230,5 +230,7 @@ if ($nonfiction->have_posts()){
 <?php }
 
 wp_reset_postdata();
+
+?><div class="generic-content"><p>Looking for something else? <a href="<?php echo esc_url(site_url('/genres'));?>"><span class="nowrap">Find your favorite genre</span></a> or <a href="<?php echo esc_url(site_url('/bookshelves'));?>"><span class="nowrap">check out our curated bookshelves!</span></a> If you want to read the work of people from certain marginalized backgrounds, we can help you find <a href="<?php echo esc_url(site_url('/diverse-books'));?>"><span class="nowrap">books with diverse authors</span></a>. And if you're looking for a particular book or author, you can perform a <a href="<?php echo esc_url(site_url('/search'));?>" class="js-search-trigger "><span>search</span></a>.</p></div>
             
-get_footer();
+<?php get_footer();
