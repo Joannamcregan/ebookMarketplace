@@ -2,7 +2,7 @@
       <div class="footer-top">
             <ul>
                   <li><a href="<?php echo esc_url(site_url()) ?>">Home</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse by Genre</a></li>       
+                  <li><a href="<?php echo esc_url(site_url('/genres'));?>">E-books by Genre</a></li>       
                   <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')) ?>">Curated Bookshelves</a></li>
                   <li><a href="<?php echo esc_url(site_url('/diverse-books'));?>">By Diverse Authors</a></li>
             </ul>
@@ -20,7 +20,7 @@
   <i class="fa fa-window-close menu-overlay__close" aria-hidden="true"></i>
   <ul class="menu-overlay-list">
     <li><a href="<?php echo esc_url(site_url()) ?>">Home</a></li>
-    <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse by Genre</a></li>       
+    <li><a href="<?php echo esc_url(site_url('/genres'));?>">E-books by Genre</a></li>       
     <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')) ?>">Curated Bookshelves</a></li>
     <li><a href="<?php echo esc_url(site_url('/diverse-books'));?>">By Diverse Authors</a></li>
     <li><a href="<?php echo esc_url(site_url('/about'));?>">About the Marketplace</a></li>

@@ -49,7 +49,7 @@ if ($newestReleases->have_posts()){
 
 wp_reset_postdata();
 
-$curation0 = new WP_Query( array( 'post_type' => 'product', 'post' => $curationId0 ) );
+$curation0 = new WP_Query( array( 'post_type' => 'curations', 'post' => $curationId0 ) );
 
 while(have_posts()){
     the_post(); ?>
@@ -116,7 +116,7 @@ if ($historicals->have_posts()){
 
 wp_reset_postdata();
 
-$curation1 = new WP_Query( array( 'post_type' => 'product', 'post' => $curationId1 ) );
+$curation1 = new WP_Query( array( 'post_type' => 'curations', 'post' => $curationId1 ) );
 
 while(have_posts()){
     the_post(); ?>
@@ -183,7 +183,7 @@ if ($scifi->have_posts()){
 
 wp_reset_postdata();
 
-$curation2 = new WP_Query( array( 'post_type' => 'product', 'post' => $curationId2 ) );
+$curation2 = new WP_Query( array( 'post_type' => 'curations', 'post' => $curationId2 ) );
 
 while(have_posts()){
     the_post(); ?>

@@ -21,11 +21,11 @@
     <header class="header--main">      
       <nav class="main-nav">  
         <div class="nav-container site-header__menu group">    
-          <a href="<?php echo esc_url(site_url('/genres'));?>">Browse by Genre</a>       
+          <a href="<?php echo esc_url(site_url('/genres'));?>">E-books by Genre</a>       
           <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a>
           <a href="<?php echo esc_url(site_url('/diverse-books'));?>">By Diverse Authors</a>
+          <a href="<?php echo esc_url(site_url('/shop-merch'));?>">Shop Merch</a>
           <a href="<?php echo esc_url(site_url('/about'));?>">About the Marketplace</a>
-          <a href="<?php echo esc_url(site_url('/get-involved'));?>">Get Involved</a>
         </div>
       </nav>
     </header>
