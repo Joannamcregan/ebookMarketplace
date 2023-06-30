@@ -112,7 +112,14 @@
                 <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/poetry/narrative-poetry'));?>">Narrative Poetry</a></div>
             </div>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <p class="centered-text">Looking for paperbacks or hardcover books? Check out the <a href="">merchandise section</a>.</p>
     </div>
+    <!-- <div class="generic-content">
+        <p>Looking for paperbacks or hardcover books? Check out the <a href="">merchandise section</a>.</p>
+    </div> -->
 
 <?php get_footer();
 ?>

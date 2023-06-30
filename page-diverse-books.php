@@ -9,7 +9,7 @@
     $featuredMiddleEasternId = 942;
     $featuredNeurodivergentId = 881;
     $featuredOceanicId = 921;
-    $featuredPoorId = 963;
+    $featuredPoorId = 903;
 
     ?><div class="banner"><h1 class="centered-text">Discover Books by Diverse Authors</h1></div>
     <br>
@@ -81,8 +81,14 @@
                 $featuredIndigenousBook->the_post();
                 ?><div class="book-section--small">
                     <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
-                </div>                
-            <?php } ?>
+                </div>
+                <?php $authors = get_field('book_author', $featuredIndigenousId);
+                    if ($authors) {
+                        foreach($authors as $author) {
+                           ?><img class="small-author-feature" src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
+                        <?php }
+                    }                   
+            } ?>
             </div>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
@@ -94,8 +100,14 @@
                 $featuredLatinxBook->the_post();
                 ?><div class="book-section--small">
                     <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
-                </div>                
-            <?php } ?>
+                </div>    
+                <?php $authors = get_field('book_author', $featuredLatinxId);
+                    if ($authors) {
+                        foreach($authors as $author) {
+                           ?><img class="small-author-feature" src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
+                        <?php }
+                    }               
+            } ?>
             </div>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
@@ -107,8 +119,14 @@
                 $featuredLgbtqiaBook->the_post();
                 ?><div class="book-section--small">
                     <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
-                </div>                
-            <?php } ?>
+                </div>       
+                <?php $authors = get_field('book_author', $featuredLgtbqiaId);
+                    if ($authors) {
+                        foreach($authors as $author) {
+                           ?><img class="small-author-feature" src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
+                        <?php }
+                    }            
+            } ?>
             </div>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
@@ -120,8 +138,14 @@
                 $featuredMiddleEasternBook->the_post();
                 ?><div class="book-section--small">
                     <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
-                </div>                
-            <?php } ?>
+                </div>        
+                <?php $authors = get_field('book_author', $featuredMiddleEasternId);
+                    if ($authors) {
+                        foreach($authors as $author) {
+                           ?><img class="small-author-feature" src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
+                        <?php }
+                    }           
+            } ?>
             </div>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
@@ -133,8 +157,14 @@
                 $featuredNeurodivergentBook->the_post();
                 ?><div class="book-section--small">
                     <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
-                </div>                
-            <?php } ?>
+                </div>   
+                <?php $authors = get_field('book_author', $featuredNeurodivergentId);
+                    if ($authors) {
+                        foreach($authors as $author) {
+                           ?><img class="small-author-feature" src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
+                        <?php }
+                    }                
+            } ?>
             </div>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
@@ -146,8 +176,14 @@
                 $featuredOceanicBook->the_post();
                 ?><div class="book-section--small">
                     <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
-                </div>                
-            <?php } ?>
+                </div>    
+                <?php $authors = get_field('book_author', $featuredOceanicId);
+                    if ($authors) {
+                        foreach($authors as $author) {
+                           ?><img class="small-author-feature" src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
+                        <?php }
+                    }               
+            } ?>
             </div>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
@@ -159,8 +195,14 @@
                 $featuredPoorBook->the_post();
                 ?><div class="book-section--small">
                     <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
-                </div>                
-            <?php } ?>
+                </div>             
+                <?php $authors = get_field('book_author', $featuredPoorId);
+                    if ($authors) {
+                        foreach($authors as $author) {
+                           ?><img class="small-author-feature" src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
+                        <?php }
+                    }      
+            } ?>
             </div>
         </div>
     </div>

@@ -56,7 +56,7 @@ function author_profile_custom_post_types() {
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'author-profile'),
-        'has_archive' => false,
+        'has_archive' => true,
         'public' => true,
         'labels' => array(
             'name' => 'Author-Profiles',
@@ -77,7 +77,7 @@ function curations_custom_post_types() {
         'show_in_rest' => true,
         'supports' => array('title', 'editor'),
         'rewrite' => array('slug' => 'bookshelves'),
-        'has_archive' => true,
+        'has_archive' => false,
         'public' => true,
         'public' => true,
         'labels' => array(
@@ -98,7 +98,7 @@ function trigger_custom_post_types() {
     register_post_type('trigger', array(
         'supports' => array('title', 'editor'),
         'rewrite' => array('slug' => 'triggers'),
-        'has_archive' => true,
+        'has_archive' => false,
         'public' => true,
         'public' => true,
         'labels' => array(

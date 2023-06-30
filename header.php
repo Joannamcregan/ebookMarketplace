@@ -24,7 +24,7 @@
           <a href="<?php echo esc_url(site_url('/genres'));?>">E-books by Genre</a>       
           <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a>
           <a href="<?php echo esc_url(site_url('/diverse-books'));?>">By Diverse Authors</a>
-          <a href="<?php echo esc_url(site_url('/shop-merch'));?>">Shop Merch</a>
+          <a href="<?php echo esc_url(site_url('/product-category/merch/'));?>">Merchandise and More</a>
           <a href="<?php echo esc_url(site_url('/about'));?>">About the Marketplace</a>
         </div>
       </nav>
