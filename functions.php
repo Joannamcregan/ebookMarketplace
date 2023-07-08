@@ -56,7 +56,7 @@ function author_profile_custom_post_types() {
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'author-profile'),
-        'has_archive' => true,
+        'has_archive' => false,
         'public' => true,
         'labels' => array(
             'name' => 'Author-Profiles',
@@ -77,7 +77,7 @@ function curations_custom_post_types() {
         'show_in_rest' => true,
         'supports' => array('title', 'editor'),
         'rewrite' => array('slug' => 'bookshelves'),
-        'has_archive' => false,
+        'has_archive' => true,
         'public' => true,
         'public' => true,
         'labels' => array(
@@ -451,11 +451,11 @@ function new_author_base() {
 add_action('init', 'new_author_base');
 
 // Make book covers not clickable on individual product pages-------------------------------------------
-function remove_product_image_link( $html, $post_id ) {
+/*function remove_product_image_link( $html, $post_id ) {
     return preg_replace( "!<(a|/a).*?>!", '', $html );
 }
 add_filter( 'woocommerce_single_product_image_thumbnail_html', 'remove_product_image_link', 10, 2 );
-
+*/
 // Customize My Account nav-----------------------------------------------------------------------------
 add_filter( 'woocommerce_account_menu_items', function($items) {
     unset($items['subscriptions']);

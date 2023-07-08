@@ -52,6 +52,12 @@ header a:hover{
     color: black;
     text-align: center;
 }
+.woocommerce-result-count{
+    padding: 10px 0 0 20px;
+}
+.woocommerce-ordering{
+    padding: 10px 20px 0 0;
+}
 .woocommerce-products-header a:hover{
     color: #007bff;
 }
