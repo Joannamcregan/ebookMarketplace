@@ -179,8 +179,14 @@ header a:hover{
 }
 .footer-top ul{
     width: 50vw;
-    text-align: center;
-    padding: 0 20px 0 20px;
+}
+.footer-top-left{
+    text-align: left;
+    padding: 0 20px 0 5px;
+}
+.footer-top-right{
+    text-align: right;
+    padding: 0 5px 0 20px;
 }
 .footer-top li {
     list-style: none;
@@ -189,6 +195,11 @@ header a:hover{
 .footer-top a {
     color: #f7ede3;
     text-decoration: none;
+}
+@media screen and (max-width: 480px){
+    .footer--main{
+        padding: 5px;
+    }
 }
 /*special sections-----------------------------------------------------------------------*/
 .banner{
@@ -626,6 +637,7 @@ a {
     margin: 0.5rem 0.5rem 0 0.5rem;
     padding: 0.25rem;
     color: black;
+    font-size: 12pt;
 }
 .product-section a{
     color: black;
@@ -642,7 +654,7 @@ a {
     color: black;
 }
 .product-section img{
-    max-width: 300px;
+    /* max-width: 300px; */
     min-width: 100%;
     height: auto;
 }

@@ -462,3 +462,4 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
     unset($items['edit-address']);
     return $items;
 }, 99, 1 );
+// Fix image size source sets------------------------------------------------------------------------------
