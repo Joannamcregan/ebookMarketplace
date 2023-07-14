@@ -181,16 +181,16 @@ header a:hover{
     width: 50vw;
 }
 .footer-top-left{
-    text-align: left;
-    padding: 0 20px 0 5px;
+    text-align: center;
+    padding: 0 20px;
 }
 .footer-top-right{
-    text-align: right;
-    padding: 0 5px 0 20px;
+    text-align: center;
+    padding: 0 20px;
 }
 .footer-top li {
     list-style: none;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 .footer-top a {
     color: #f7ede3;
@@ -199,6 +199,12 @@ header a:hover{
 @media screen and (max-width: 480px){
     .footer--main{
         padding: 5px;
+    }
+    .footer-top-left{
+        text-align: left;
+    }
+    .footer-top-right{
+        text-align: right;
     }
 }
 /*special sections-----------------------------------------------------------------------*/
@@ -434,8 +440,8 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #511d1d;
-    border: solid #511d1d 2px;
+    background: linear-gradient(to right, #00473f, #4e4338);
+    /* border: solid #00473f 2px; */
     border-radius: 5px;
     color: #f7ede3;
     width: 70vw;

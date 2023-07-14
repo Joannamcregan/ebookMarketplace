@@ -7,7 +7,7 @@
                   <li><a href="<?php echo esc_url(site_url('/diverse-books'));?>">By Diverse Authors</a></li>
                   <li><a href="<?php echo esc_url(site_url('/merch'));?>">Merch and More</a></li>
             </ul>
-            <ul class="foter-top-right">
+            <ul class="footer-top-right">
                   <li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
                   <li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My E-Book Downloads</a></li>
                   <li><a href="<?php echo esc_url(site_url('/about'));?>">About the Marketplace</a></li>
