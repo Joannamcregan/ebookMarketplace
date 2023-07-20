@@ -17,7 +17,7 @@ $nonfictionIds = array(946, 930, 884, 949, 921, 926);
 
 get_header();
 
-?><div class="generic-content"><h4>Thank you for browsing our cooperatively run e-book marketplace! When you shop here, you're empowering authors and workers. <a href="<?php echo esc_url(site_url('/about'));?>"><span class="nowrap">Learn how.</span></a></h4></div>
+?><div class="generic-content"><h4>Thank you for browsing our cooperatively run ebook marketplace! When you shop here, you're empowering authors and workers. <a href="<?php echo esc_url(site_url('/about'));?>"><span class="nowrap">Learn how.</span></a></h4></div>
 
 <?php 
 // $curation1 = new WP_Query( array( 'post_type' => 'product', 'post' => $curationId1 ) );

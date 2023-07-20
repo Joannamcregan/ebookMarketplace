@@ -121,7 +121,7 @@
             </div>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
-            <a href="<?php echo esc_url(site_url('/diverse-books/lgbtqia2s-voices'));?>"><h3>by LGBTQIA+ Authors</h3></a>
+            <a href="<?php echo esc_url(site_url('/diverse-books/lgbtqia-voices'));?>"><h3>by LGBTQIA+ Authors</h3></a>
             <?php wp_reset_postdata();
             $featuredLgbtqiaBook = new WP_Query( array( 'post_type' => 'product', 'p' => $featuredLgtbqiaId ) );
             ?><div class="book-sections-container-1"> 
