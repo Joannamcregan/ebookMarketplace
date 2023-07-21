@@ -152,21 +152,31 @@ function ebook_marketplace_include_book_author() {
         $bookAuthors = get_field('book_author');        
         if ($bookAuthors) {
             foreach($bookAuthors as $author) {
-                if (($author == $bookAuthors[count($bookAuthors)-2]) && count($bookAuthors) > 2) {
-                    $authorName .= get_the_title($author);
-                    $authorName .= ', and ';
-                } else if (($author == $bookAuthors[count($bookAuthors)-2]) && count($bookAuthors) == 2) {
-                    $authorName .= get_the_title($author);
-                    $authorName .= ' and ';
-                } else if ($author != $bookAuthors[count($bookAuthors)-1]){
-                    $authorName .= get_the_title($author);
-                    $authorName .= ', ';
-                } else {
+                if (count($bookAuthors) > 2) {
+                    if ($author == $bookAuthors[count($bookAuthors)-2]) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ', and ';
+                    } else if ($author != $bookAuthors[count($bookAuthors)-1]) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ', ';
+                    } else {
+                        $authorName .= get_the_title($author);
+                    }
+                } 
+                if (count($bookAuthors) == 2) {
+                    if ($author == $bookAuthors[count($bookAuthors)-2]) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ' and ';
+                    } else {
+                        $authorName .= get_the_title($author);
+                    }
+                } 
+                if (count($bookAuthors) == 1) {
                     $authorName .= get_the_title($author);
                 }
             }
         } else {
-            $authorName = 'by Unknown or Anonymous';
+            $authorName .= 'by Unknown or Anonymous';
         }
         $authorName .= '</p>';
     }     
