@@ -25,7 +25,10 @@
             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/historical-fiction'));?>">Historical Fiction</a>
                 <i class="fa-solid fa-caret-down arrow"></i>
                 <div class="not-displayed category-children">
-                    <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/historical-fiction/adventure-historical'));?>">Adventure Historical Fiction</a></div>
+                    <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/historical-fiction/alternative-historical-fiction'));?>">Alternative Historical Fiction</a></div>
+                    <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/historical-fiction/historical-coming-of-age-fiction'));?>">Historical Coming of Age Fiction</a></div>
+                    <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/historical-fiction/historical-adventure-fiction'));?>">Historical Adventure Fiction</a></div>
+                    <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/historical-fiction/historical-womens-fiction'));?>">Historical Women's Fiction</a></div>
                 </div>
             </div>
             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/horror'));?>">Horror</a></div>
@@ -52,6 +55,7 @@
                 <i class="fa-solid fa-caret-down arrow"></i>    
                 <div class="not-displayed category-children">
                     <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/science-fiction/alien-invasion'));?>">Alien Invasion</a></div>
+                    <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/science-fiction/gothic-science-fiction'));?>">Gothic Science Fiction</a></div>
                     <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/science-fiction/time-travel'));?>">Time Travel</a></div>
                 </div>
             </div>
@@ -91,7 +95,7 @@
                             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/history/american-history/native-american-history'));?>">Native American History</a></div>
                         </div>
                     </div>
-                    <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/history/polynesian-and-oceanic-history'));?>">Polynesian and Oceanic History</a>
+                    <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/history/oceanic-and-pacific-islander-history'));?>">Oceanic and Pacific Islander History</a>
                         <i class="fa-solid fa-caret-down arrow"></i>    
                         <div class="not-displayed category-children">
                             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/history/polynesian-and-oceanic-history/polynesian-history'));?>">Polynesian History</a></div>
