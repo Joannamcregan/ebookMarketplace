@@ -3,7 +3,6 @@
     <head>
         <meta charset='<?php bloginfo('charset'); ?>'>
         <meta name = "viewport" content = "width=device-width", initial-scale=1>
-        <script src="https://kit.fontawesome.com/9d40013081.js" crossorigin="anonymous"></script>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
@@ -22,7 +21,7 @@
     <header class="header--main">      
       <nav class="main-nav">  
         <div class="nav-container site-header__menu group">    
-          <a href="<?php echo esc_url(site_url('/genres'));?>">Ebooks by Genre</a>       
+          <a href="<?php echo esc_url(site_url('/genres'));?>">E-books by Genre</a>       
           <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a>
           <a href="<?php echo esc_url(site_url('/diverse-books'));?>">By Diverse Authors</a>
           <a href="<?php echo esc_url(site_url('/merch'));?>">Merchandise and More</a>
