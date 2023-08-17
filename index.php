@@ -1,80 +1,27 @@
 <?php
 
 //featured curation ids
-$curationId0 = 967;
-$curationId1 = 961;
-$curationId2 = 966;
+$curationId0 = 281;
+$curationId1 = 282;
 // featured romance e-books
-$romanceIds = array(560, 392, 595, 380, 377, 177);
+$romanceIds = array(274, 268, 265, 230, 262, 259);
 //featured historical fiction e-books
-$historicalIds = array(500, 595, 448, 439, 398, 395, 436);
+$historicalIds = array(236, 115, 256, 118, 242, 227);
 //featured sci fi e-books
-$scifiIds = array(301, 892, 862, 889, 444, 859);
+$scifiIds = array(271, 215, 189, 218, 186, 212);
 //featured mystery e-books
-$mysteryIds = array(881, 903, 875, 900, 872, 895);
+$mysteryIds = array(195, 183, 203, 180, 200, 177);
+//featured poetry
+$poetryIds = array(140, 253, 170, 161, 164, 167, 173, 167);
 //featured autobiographies
-$nonfictionIds = array(946, 930, 884, 949, 921, 926);
+$autobiographyIds = array(297, 291, 122, 192, 152, 301, 294, 137);
+
 
 get_header();
 
-?><div class="generic-content"><h4>Thank you for browsing our cooperatively run e-book marketplace! When you shop here, you're empowering authors and workers. <a href="<?php echo esc_url(site_url('/about'));?>"><span class="nowrap">Learn how.</span></a></h4></div>
+?><div class="generic-content"><h4>Thank you for browsing our cooperatively run ebook marketplace! When you shop here, you're empowering authors and workers. <a href="<?php echo esc_url(site_url('/about'));?>"><span class="nowrap">Learn how.</span></a></h4></div>
 
 <?php 
-// $curation1 = new WP_Query( array( 'post_type' => 'product', 'post' => $curationId1 ) );
-// $curation2 = new WP_Query( array( 'post_type' => 'product', 'post' => $curationId2 ) );
-// $curation3 = new WP_Query( array( 'post_type' => 'product', 'post' => $curationId3 ) );
-
-wp_reset_postdata();
-
-$newestReleases = new WP_Query(array(
-        'posts_per_page' => 30,
-        'post_type' => 'product',
-        'orderby' => 'date',
-        'order' => 'DESC'
-    ));
-
-if ($newestReleases->have_posts()){
-    echo '<div class="page-accent-front">';
-        echo '<h3 class="left-text sans-text"> Newest Additions</h3>';
-        ?> <div class="book-sections-container"> 
-        <?php while ($newestReleases -> have_posts()){
-            $newestReleases->the_post();
-            ?><div class="book-section--small">
-                <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
-            </div>                
-        <?php }
-        ?></div>
-    </div>
-<?php }
-
-wp_reset_postdata();
-
-$curation0 = new WP_Query( array( 'post_type' => 'curations', 'post' => $curationId0 ) );
-
-while(have_posts()){
-    the_post(); ?>
-    <div>
-        <a class="gray-link" href="<?php echo get_the_permalink($curationId0); ?>"><h3 class="centered-text sans-text"><?php echo get_the_title($curationId0); ?></h3></a>
-        <?php $books = get_field('curated_books', $curationId0);
-        if ($books) {
-            ?><div class="book-pile">
-                <div class="bookshelf-tablet-0">
-                    <img class="bookshelf-book-0" src="<?php echo get_the_post_thumbnail_url($books[0]); ?>"/>
-                </div>   
-                <?php if (count($books) > 1) { 
-                    ?><div class="bookshelf-tablet-1">
-                        <img class="bookshelf-book-1" src="<?php echo get_the_post_thumbnail_url($books[1]); ?>"/>
-                    </div>
-                    <?php if (count($books) >2) {
-                        ?><div class="bookshelf-tablet-2">
-                            <img class="bookshelf-book-2" src="<?php echo get_the_post_thumbnail_url($books[2]); ?>"/>
-                        </div>
-                <?php }
-                }
-            ?></div>        
-        <?php }  
-    ?></div>
-<?php }
 
 wp_reset_postdata();
 
@@ -116,13 +63,12 @@ if ($historicals->have_posts()){
 
 wp_reset_postdata();
 
-$curation1 = new WP_Query( array( 'post_type' => 'curations', 'post' => $curationId1 ) );
+$curation0 = new WP_Query( array( 'post_type' => 'curations', 'post' => $curationId0 ) );
 
-while(have_posts()){
-    the_post(); ?>
-    <div>
-        <a class="gray-link" href="<?php echo get_the_permalink($curationId1); ?>"><h3 class="centered-text sans-text"><?php echo get_the_title($curationId1); ?></h3></a>
-        <?php $books = get_field('curated_books', $curationId1);
+if ($curation0->have_posts()){
+    ?><div>
+        <a class="gray-link" href="<?php echo get_the_permalink($curationId0); ?>"><h3 class="centered-text sans-text"><?php echo get_the_title($curationId0); ?></h3></a>
+        <?php $books = get_field('curated_books', $curationId0);
         if ($books) {
             ?><div class="book-pile">
                 <div class="bookshelf-tablet-0">
@@ -138,7 +84,7 @@ while(have_posts()){
                         </div>
                 <?php }
                 }
-            ?></div>                 
+            ?></div>        
         <?php }  
     ?></div>
 <?php }
@@ -149,7 +95,7 @@ $mysteries = new WP_Query( array( 'post_type' => 'product', 'post__in' => $myste
 
 if ($mysteries->have_posts()){
     echo '<div class="page-accent-front">';
-        echo '<a class="gray-link" href="/product-category/fiction-ebooks/mystery-fiction"><h3 class="left-text sans-text">Mystery</h3></a>';
+        echo '<a class="gray-link" href="/product-category/fiction-ebooks/mystery"><h3 class="left-text sans-text">Mystery</h3></a>';
         ?> <div class="book-sections-container"> 
             <?php while ($mysteries -> have_posts()){
                 $mysteries->the_post();
@@ -183,13 +129,12 @@ if ($scifi->have_posts()){
 
 wp_reset_postdata();
 
-$curation2 = new WP_Query( array( 'post_type' => 'curations', 'post' => $curationId2 ) );
+$curation1 = new WP_Query( array( 'post_type' => 'curations', 'post' => $curationId1 ) );
 
-while(have_posts()){
-    the_post(); ?>
-    <div>
-        <a class="gray-link" href="<?php echo get_the_permalink($curationId2); ?>"><h3 class="centered-text sans-text"><?php echo get_the_title($curationId2); ?></h3></a>
-        <?php $books = get_field('curated_books', $curationId2);
+if ($curation1->have_posts()){
+    ?><div>
+        <a class="gray-link" href="<?php echo get_the_permalink($curationId1); ?>"><h3 class="centered-text sans-text"><?php echo get_the_title($curationId1); ?></h3></a>
+        <?php $books = get_field('curated_books', $curationId1);
         if ($books) {
             ?><div class="book-pile">
                 <div class="bookshelf-tablet-0">
@@ -205,26 +150,45 @@ while(have_posts()){
                         </div>
                 <?php }
                 }
-            ?></div>            
+            ?></div>        
         <?php }  
     ?></div>
 <?php }
 
 wp_reset_postdata();
 
-$nonfiction = new WP_Query( array( 'post_type' => 'product', 'post__in' => $nonfictionIds ) );
+$poetry = new WP_Query( array( 'post_type' => 'product', 'post__in' => $poetryIds ) );
 
-if ($nonfiction->have_posts()){
+if ($poetry->have_posts()){
     echo '<div class="page-accent-front">';
-        echo '<a class="gray-link" href="/product-category/nonfiction"><h3 class="left-text sans-text">Nonfiction</h3></a>';
+        echo '<a class="gray-link" href="/product-category/poetry"><h3 class="left-text sans-text">Poetry</h3></a>';
         ?> <div class="book-sections-container"> 
-            <?php while ($nonfiction -> have_posts()){
-                $nonfiction->the_post();
+            <?php while ($poetry -> have_posts()){
+                $poetry->the_post();
                 ?><div class="book-section--small">
                     <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
                 </div>                
             <?php }
-            ?><a class="gray-link" href="/product-category/nonfiction"><div class="gray-box"><p>see all</p></div></a>
+            ?><a class="gray-link" href="/product-category/poetry"><div class="gray-box"><p>see all</p></div></a>
+        </div>
+    </div>
+<?php }
+
+wp_reset_postdata();
+
+$autobiographies = new WP_Query( array( 'post_type' => 'product', 'post__in' => $autobiographyIds ) );
+
+if ($autobiographies->have_posts()){
+    echo '<div class="page-accent-front">';
+        echo '<a class="gray-link" href="/product-category/nonfiction/autobiography"><h3 class="left-text sans-text">Autobiographies</h3></a>';
+        ?> <div class="book-sections-container"> 
+            <?php while ($autobiographies -> have_posts()){
+                $autobiographies->the_post();
+                ?><div class="book-section--small">
+                    <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
+                </div>                
+            <?php }
+            ?><a class="gray-link" href="/product-category/poetry"><div class="gray-box"><p>see all</p></div></a>
         </div>
     </div>
 <?php }
