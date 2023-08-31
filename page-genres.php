@@ -20,6 +20,7 @@
             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/coming-of-age-fiction'));?>">Coming of Age Fiction</a></div>
             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/disaster-fiction'));?>">Disaster Fiction</a></div>
             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/dystopian-fiction'));?>">Dystopian Fiction</a></div>
+            <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/family-sagas'));?>">Family Sagas</a></div>
             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/fantasy'));?>">Fantasy</a></div>
             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/french-literature'));?>">French Literature</a></div>
             <div class="genre-category subcategory"><a href="<?php echo esc_url(site_url('/product-category/fiction-ebooks/historical-fiction'));?>">Historical Fiction</a>

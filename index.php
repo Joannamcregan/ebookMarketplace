@@ -12,7 +12,7 @@ $scifiIds = array(271, 215, 189, 218, 186, 212);
 //featured mystery e-books
 $mysteryIds = array(195, 183, 203, 180, 200, 177);
 //featured poetry
-$poetryIds = array(140, 253, 170, 161, 164, 167, 173, 167);
+$poetryIds = array(140, 253, 170, 161, 164, 167, 173, 110);
 //featured autobiographies
 $autobiographyIds = array(297, 291, 122, 192, 152, 301, 294, 137);
 
