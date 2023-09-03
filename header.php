@@ -3,16 +3,15 @@
     <head>
         <meta charset='<?php bloginfo('charset'); ?>'>
         <meta name = "viewport" content = "width=device-width", initial-scale=1>
-        <script src="https://kit.fontawesome.com/9d40013081.js" crossorigin="anonymous"></script>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
     <header class="header--top">
       <div class="top-nav-container">
         <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
-        <h3>
-          <a href="<?php echo esc_url(site_url()) ?>"><span class="logo-text">The <strong>Book</strong> Marketplace</span></a> <a href="" class="detail-text">Beta</a>
-        </h3>
+        <h3 class="logo-text">
+          <a href="<?php echo esc_url(site_url()) ?>">The <strong>Book</strong> Marketplace</a>
+        </h3> 
         <div class="top-nav-section" id="top-nav-right">
           <a href="<?php echo esc_url(site_url('/search'));?>" class="js-search-trigger "><i class="fa fa-search" aria-hidden="true"></i></a>          
           <a class="glowing-text" href="<?php echo wc_get_cart_url(); ?>"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -22,7 +21,7 @@
     <header class="header--main">      
       <nav class="main-nav">  
         <div class="nav-container site-header__menu group">    
-          <a href="<?php echo esc_url(site_url('/genres'));?>">Ebooks by Genre</a>       
+          <a href="<?php echo esc_url(site_url('/genres'));?>">E-books by Genre</a>       
           <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a>
           <a href="<?php echo esc_url(site_url('/diverse-books'));?>">By Diverse Authors</a>
           <a href="<?php echo esc_url(site_url('/merch'));?>">Merchandise and More</a>
