@@ -1,11 +1,15 @@
 <?php 
     get_header();
+
+    global $post;
+    $authorId=$post->post_author;
+
     ?><div class="full-screen">
         <h2 class="centered-text tenth-screen"><?php the_title(); ?></h2>
         <div class="page-accent">       
             <div class="center-right-text">     
                 <span>curated by </span>
-                <a href="<?php echo get_author_posts_url(get_the_author_id()); ?>"><?php the_author(); ?></a>
+                <a href="<?php echo get_author_posts_url($authorId); ?>"><?php echo get_the_author_meta('display_name', $authorId); ?></a>
             </div>
             <?php $curatedBooks = get_field('curated_books');
             if ($curatedBooks) {

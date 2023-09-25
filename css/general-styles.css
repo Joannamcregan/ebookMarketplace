@@ -38,6 +38,7 @@ body{
 }
 header a{
     color: #f7ede3;
+    text-decoration: none;
 }
 header a:hover{
     color: #f7ede3;
@@ -62,13 +63,18 @@ header a:hover{
     color: #007bff;
 }
 .logo-text{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
+}
+.mini-logo-section{
+    line-height: 30%;
+    margin: 10 auto;
     text-align: center;
-    width: fit-content;
-    padding: 0;
-    margin: 10px 0 10px 0;
-    visibility: visible;
+    padding-top: 5px;
+}
+.detail-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16;
+    color: #ecd0b1 ;
 }
 .top-nav-section{
     width: fit-content;
@@ -132,9 +138,6 @@ header a:hover{
         cursor: pointer;
         position: absolute;
         z-index: 1000;
-    }
-    .logo-text{
-        visibility: hidden;
     }
     .nav-container a{
         visibility: hidden;
@@ -230,6 +233,12 @@ header a:hover{
     padding: 10px 20px;
     background: linear-gradient(to right, #f6f0e9, #fffaf4);
 }
+.page-accent-alt-2{
+    margin: 2em 0 0 0;
+    padding: 20px 30px;
+    align-items: center;
+    background: linear-gradient(#f6f0e9, #fffaf4);
+}
 .page-accent-front{
     margin: 2em 0 0 0;
     padding: 0.5em 0 0 0;
@@ -259,6 +268,10 @@ a {
 .gray-link{
     color: #333;
 }
+.paginate-links{
+    margin: 10px auto;
+    width: fit-content;
+}
 .extra-large-text{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 4rem;
@@ -281,6 +294,7 @@ a {
 .center-left-text{
     text-align: left;
     margin-left: 5vw;
+    margin-right: 5vw;
 }
 .right-text{
     text-align: right;
@@ -625,11 +639,12 @@ a {
     float: left;
 }
 .product-collection-container{
-    width: 90vw;
+    width: 95vw;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 1rem 0.25rem;
-    margin: 2rem 0 0 0;
+    padding: 0 0 1rem 0;
+    margin: 0 auto 0 auto;
+    justify-content: center;
 }
 .product-collection-container li{
     list-style: none;
@@ -638,7 +653,7 @@ a {
     background: #fdfdfd;
     border: solid 10px #f3eae1;;
     border-radius: 15px;
-    max-width: 300px;
+    max-width: 250px;
     min-width: 200px;
     margin: 0.5rem 0.5rem 0 0.5rem;
     padding: 0.25rem;
@@ -807,5 +822,22 @@ a {
         background: linear-gradient(to right, #e8f5f2, #fffaf4);
         padding: 10px;
         margin: 0;
+    }
+}
+
+/* Coming Soon Info styles-------------------------------------------------------------------------------*/
+.coming-soon-info {
+    opacity: 0;
+    width: 80vw;
+    margin: 10 auto;
+    background: white;
+    border: 2px solid #411919;
+    border-radius: 20px;
+    padding: 20px;
+    animation: fade-in 1s ease-in forwards;
+}
+@keyframes fade-in {
+    100% {
+        opacity: 1;
     }
 }

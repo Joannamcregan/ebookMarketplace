@@ -23,5 +23,7 @@
         <?php endif; wp_reset_postdata(); ?>
     </div>
 
-<?php get_footer();
+<?php echo paginate_links();
+
+get_footer();
 ?>

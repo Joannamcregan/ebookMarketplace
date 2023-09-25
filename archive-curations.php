@@ -11,8 +11,8 @@
             the_post(); ?>
             <div class="page-accent-alt">
                 <div class="center-left-text">
-                    <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-                    <?php echo '<span>' . ' curated by ';
+                    <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                    <?php echo '<span class="right-text">' . ' curated by ';
                     ?><a class="gray-link" href="<?php echo get_author_posts_url(get_the_author_id()); ?>"><?php echo get_the_author() . '</span>'; ?></a>
                     <?php $books = get_field('curated_books');
                     if ($books) {

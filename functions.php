@@ -13,6 +13,8 @@ require get_theme_file_path('/inc/search-route.php');
 
 // add_action('rest_api_init', 'marketplace_custom_rest');
 
+$ebookCategoryID = 32; /*ebooks*/
+
 function marketplace_files(){
     wp_enqueue_script('main-ebook-marketplace-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     wp_enqueue_style('book-display-styles', get_stylesheet_directory_uri() . '/css/book-display-styles.css', false, '', 'all');
@@ -20,6 +22,8 @@ function marketplace_files(){
     wp_enqueue_style('category-styles', get_stylesheet_directory_uri() . '/css/category-styles.css', false, '', 'all');
     wp_enqueue_style('community-members-styles', get_stylesheet_directory_uri() . '/css/community-members-styles.css', false, '', 'all');
     wp_enqueue_style('image-text-container-styles', get_stylesheet_directory_uri() . '/css/image-text-container-styles.css', false, '', 'all');
+    wp_enqueue_style('comment-styles', get_stylesheet_directory_uri() . '/css/comment-styles.css', false, '', 'all');
+    wp_enqueue_style('shorts-styles', get_stylesheet_directory_uri() . '/css/shorts-styles.css', false, '', 'all');
 
     wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
         'root_url' => get_site_url()
@@ -71,14 +75,80 @@ function author_profile_custom_post_types() {
 
 add_action('init', 'author_profile_custom_post_types');
 
+/*add shorts post type----------------------------------------------------------*/
+function short_custom_post_types() {
+    register_post_type('short', array(
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions'),
+        'rewrite' => array('slug' => 'shorts'),
+        'has_archive' => false,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Shorts',
+            'add_new_item' => 'Add New Short',
+            'edit_item' => 'Edit Short',
+            'all_items' => 'All Shorts',
+            'singular_name' => 'Short'
+        ),
+        'taxonomies' => array( 'category' ),
+        'menu_icon' => 'dashicons-media-document'
+    ));
+}
+
+add_action('init', 'short_custom_post_types');
+
+/*add Ads post type----------------------------------------------------------*/
+function ad1_custom_post_types() {
+    register_post_type('ad', array(
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions'),
+        'rewrite' => array('slug' => 'ad1s'),
+        'has_archive' => false,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Ad 1',
+            'add_new_item' => 'Add New Slot 1 Ad',
+            'edit_item' => 'Edit Slot 1 Ad',
+            'all_items' => 'All Slot 1 Ads',
+            'singular_name' => 'Ad 1'
+        ),
+        'taxonomies' => array( 'category' ),
+        'menu_icon' => 'dashicons-media-document'
+    ));
+}
+
+add_action('init', 'ad1_custom_post_types');
+
+function ad2_custom_post_types() {
+    register_post_type('ad2', array(
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions'),
+        'rewrite' => array('slug' => 'ad2s'),
+        'has_archive' => false,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Ad 2',
+            'add_new_item' => 'Add New Slot 2 Ad',
+            'edit_item' => 'Edit Slot 2 Ad',
+            'all_items' => 'All Slot 2 Ads',
+            'singular_name' => 'Ad 2'
+        ),
+        'taxonomies' => array( 'category' ),
+        'menu_icon' => 'dashicons-media-document'
+    ));
+}
+
+add_action('init', 'ad2_custom_post_types');
+
+
+
 /*add curations post type----------------------------------------------------------*/
 function curations_custom_post_types() {
     register_post_type('curations', array(
         'show_in_rest' => true,
-        'supports' => array('title', 'editor'),
+        'supports' => array('title', 'editor', 'author'),
         'rewrite' => array('slug' => 'bookshelves'),
         'has_archive' => true,
-        'public' => true,
         'public' => true,
         'labels' => array(
             'name' => 'Bookshelves',
@@ -96,7 +166,7 @@ add_action('init', 'curations_custom_post_types');
 /*add trigger post type----------------------------------------------------------*/
 function trigger_custom_post_types() {
     register_post_type('trigger', array(
-        'supports' => array('title', 'editor'),
+        'supports' => array('title'),
         'rewrite' => array('slug' => 'triggers'),
         'has_archive' => false,
         'public' => true,
@@ -113,36 +183,6 @@ function trigger_custom_post_types() {
 }
 
 add_action('init', 'trigger_custom_post_types');
-
-/*Shortcode-----------------------------------------------------------------------*/
-add_shortcode( 'user-bookshelves', 'user_bookshelves' );
-function user_bookshelves(){
-    $relatedBookshelves = new WP_Query(array(
-        'posts_per_page' => -1,
-        'post_type' => 'curations',
-        'author' => get_the_author_id(),
-        'orderby' => 'date',
-        'order' => 'DESC'
-    ));
-    if ($relatedBookshelves->have_posts()){
-        $output = '';
-        while ($relatedBookshelves -> have_posts()){
-            $relatedBookshelves->the_post();     
-            $output .= '<p><a href="';
-            $output .= get_the_permalink(); 
-            $output .= '">';       
-            $output .= get_the_title();
-            $output .= '</a></p>';
-        }
-        return $output;
-    }
-    else {
-        return 'No bookshelves found.';
-    }
-
-    wp_reset_postdata();
-}
-add_action('init', 'user_bookshelves');
 
 /*remove sidebar-------------------------------------------------------------------*/
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
@@ -164,35 +204,55 @@ function ebook_marketplace_product_details_opening_div(){
 add_action( 'woocommerce_before_shop_loop_item', 'ebook_marketplace_product_details_opening_div', 12 );
 
 function ebook_marketplace_include_book_author() {  
+    global $post;
+    global $ebookCategoryID;
+    $quoteText = '';
     $authorName = '';
-    $isBook = true;
+    $isBook = false;
     $productCategories = get_the_terms( $post->ID, 'product_cat' );
     foreach($productCategories as $category){
-        if ($category->term_id == 109/*gift card*/ OR $category->term_id == 103/*merch*/){
-            $isBook = false;
+        if ($category->term_id == $ebookCategoryID){
+            $isBook = true;
         }
     }
     if ($isBook) {
+        $bookQuote = get_field('featured_quote');
+        if ($bookQuote) {
+            $quoteText .= '<em><p>';
+            $quoteText .= $bookQuote;
+            $quoteText .= '</p></em>';
+            echo $quoteText;
+        }
         $authorName .= '<p class="right-text-no-margin">';
-        $authorName .= 'by ';
+        $authorName .= '-';
         $bookAuthors = get_field('book_author');        
         if ($bookAuthors) {
             foreach($bookAuthors as $author) {
-                if (($author == $bookAuthors[count($bookAuthors)-2]) && count($bookAuthors) > 2) {
-                    $authorName .= get_the_title($author);
-                    $authorName .= ', and ';
-                } else if (($author == $bookAuthors[count($bookAuthors)-2]) && count($bookAuthors) == 2) {
-                    $authorName .= get_the_title($author);
-                    $authorName .= ' and ';
-                } else if ($author != $bookAuthors[count($bookAuthors)-1]){
-                    $authorName .= get_the_title($author);
-                    $authorName .= ', ';
-                } else {
+                if (count($bookAuthors) > 2) {
+                    if ($author == $bookAuthors[count($bookAuthors)-2]) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ', and ';
+                    } else if ($author != $bookAuthors[count($bookAuthors)-1]) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ', ';
+                    } else {
+                        $authorName .= get_the_title($author);
+                    }
+                } 
+                if (count($bookAuthors) == 2) {
+                    if ($author == $bookAuthors[count($bookAuthors)-2]) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ' and ';
+                    } else {
+                        $authorName .= get_the_title($author);
+                    }
+                } 
+                if (count($bookAuthors) == 1) {
                     $authorName .= get_the_title($author);
                 }
             }
         } else {
-            $authorName = 'by Unknown or Anonymous';
+            $authorName .= 'Unknown or Anonymous';
         }
         $authorName .= '</p>';
     }     
@@ -266,12 +326,14 @@ add_action('woocommerce_after_single_product_summary', 'ebook_marketplace_single
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 function ebook_marketplace_single_include_book_author() {  
+    global $post;
+    global $ebookCategoryID;
     $authorName = '';
-    $isBook = true;
+    $isBook = false;
     $productCategories = get_the_terms( $post->ID, 'product_cat' );
     foreach($productCategories as $category){
-        if ($category->term_id == 109/*gift card*/ OR $category->term_id == 103/*merch*/){
-            $isBook = false;
+        if ($category->term_id == $ebookCategoryID){
+            $isBook = true;
         }
     }
     if ($isBook) {
@@ -279,16 +341,26 @@ function ebook_marketplace_single_include_book_author() {
         $bookAuthors = get_field('book_author');        
         if ($bookAuthors) {
             foreach($bookAuthors as $author) {
-                if (($author == $bookAuthors[count($bookAuthors)-2]) && count($bookAuthors) > 2) {
-                    $authorName .= get_the_title($author);
-                    $authorName .= ', and ';
-                } else if (($author == $bookAuthors[count($bookAuthors)-2]) && count($bookAuthors) == 2) {
-                    $authorName .= get_the_title($author);
-                    $authorName .= ' and ';
-                } else if ($author != $bookAuthors[count($bookAuthors)-1]){
-                    $authorName .= get_the_title($author);
-                    $authorName .= ', ';
-                } else {
+                if (count($bookAuthors) > 2) {
+                    if ($author == $bookAuthors[count($bookAuthors)-2]) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ', and ';
+                    } else if ($author != $bookAuthors[count($bookAuthors)-1]) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ', ';
+                    } else {
+                        $authorName .= get_the_title($author);
+                    }
+                } 
+                if (count($bookAuthors) == 2) {
+                    if ($author == $bookAuthors[count($bookAuthors)-2]) {
+                        $authorName .= get_the_title($author);
+                        $authorName .= ' and ';
+                    } else {
+                        $authorName .= get_the_title($author);
+                    }
+                } 
+                if (count($bookAuthors) == 1) {
                     $authorName .= get_the_title($author);
                 }
             }
@@ -320,11 +392,13 @@ function ebook_marketplace_remove_product_tabs( $tabs ) {
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_remove_product_tabs', 98 );
 
 function ebook_marketplace_rename_vendor_tab( $tabs ) {
-    $isBook = true;
+    global $post;
+    global $ebookCategoryID;
+    $isBook = false;
     $productCategories = get_the_terms( $post->ID, 'product_cat' );
     foreach($productCategories as $category){
-        if ($category->term_id == 109/*gift card*/ OR $category->term_id == 103/*merch*/){
-            $isBook = false;
+        if ($category->term_id == $ebookCategoryID){
+            $isBook = true;
         }
     }
     if ($isBook){
@@ -371,7 +445,7 @@ function ebook_marketplace_triggers_product_tab_content(){
         echo '<p>Content warning: this book may contain the following triggers:</p>';
         echo '<ul>';
         foreach($triggers as $trigger) {
-            echo '<li>' . get_the_title($trigger) . '</li>';       
+            echo '<li>' . strtolower(get_the_title($trigger)) . '</li>';       
         }
         echo '</ul>';
     } else {
@@ -391,11 +465,13 @@ function ebook_marketplace_excerpt_product_tab_content(){
     }
 }
 function ebook_marketplace_add_product_tabs( $tabs ) {
-    $isBook = true;
+    global $post;
+    global $ebookCategoryID;
+    $isBook = false;
     $productCategories = get_the_terms( $post->ID, 'product_cat' );
     foreach($productCategories as $category){
-        if ($category->term_id == 109/*gift card*/ OR $category->term_id == 103/*merch*/){
-            $isBook = false;
+        if ($category->term_id == $ebookCategoryID){
+            $isBook = true;
         }
     }
     if ($isBook){
@@ -420,10 +496,10 @@ function ebook_marketplace_add_product_tabs( $tabs ) {
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_add_product_tabs' );
 
 /*allow dashicons to display----------------------------------------------------------------------*/
-function ww_load_dashicons(){
+function ebook_marketplace_load_dashicons(){
     wp_enqueue_style('dashicons');
 }
-add_action('wp_enqueue_scripts', 'ww_load_dashicons');
+add_action('wp_enqueue_scripts', 'ebook_marketplace_load_dashicons');
 
 /*infinite scroll*/
 // add_theme_support( 'infinite-scroll', array(
@@ -437,18 +513,18 @@ add_action('wp_enqueue_scripts', 'ww_load_dashicons');
 //    ) );
 
 /*remove proudly powered by wordpress */
-function remove_storefront_credit() {
+function ebook_marketplace_remove_storefront_credit() {
     remove_action( 'storefront_footer', 'storefront_credit' );
 }
-add_action('wp_head', 'remove_storefront_credit', 5);
+add_action('wp_head', 'ebook_marketplace_remove_storefront_credit', 5);
 
 // change author url base to contributor
-function new_author_base() {
+function ebook_marketplace_new_author_base() {
     global $wp_rewrite;
     $myauthor_base = 'people';
     $wp_rewrite->author_base = $myauthor_base;
 }
-add_action('init', 'new_author_base');
+add_action('init', 'ebook_marketplace_new_author_base');
 
 // Make book covers not clickable on individual product pages-------------------------------------------
 /*function remove_product_image_link( $html, $post_id ) {
@@ -462,4 +538,15 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
     unset($items['edit-address']);
     return $items;
 }, 99, 1 );
-// Fix image size source sets------------------------------------------------------------------------------
+// Customize Leave a Comment text and fields------------------------------------------------------------------------------
+function ebook_marketplace_remove_comment_form_url( $fields ) {
+	unset( $fields['url'] );
+	return $fields;
+}
+add_filter( 'comment_form_default_fields', 'ebook_marketplace_remove_comment_form_url' );
+
+function ebook_marketplace_change_comment_cta( $fields ) {
+	$defaults['title_reply'] = __( 'Add a Comment' );  
+    return $defaults;
+}
+add_filter( 'comment_form_defaults', 'ebook_marketplace_change_comment_cta' );

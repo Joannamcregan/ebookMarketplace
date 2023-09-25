@@ -1,12 +1,11 @@
 <?php
-
     get_header();
 
     ?><div class="two-thirds-screen">
     <?php while(have_posts()){
         the_post(); 
         ?><div class="right-text by-line">
-            <span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?> in <?php echo get_the_category_list(', '); ?></span>
+            <span>Posted by <?php echo get_the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?></span>
         </div>
         <div class="blog-title">
             <h1><?php the_title(); ?></h1>
@@ -16,7 +15,12 @@
         </div>
     <?php }
     ?></div>
-
+    <div class="right-text by-line">
+        <a href="<?php echo esc_url(site_url('/blog'));?>">See all blog posts</a>
+    </div>
+    <div class="page-accent-alt-2">
+        <h2 class="centered-text">Comments</h2>
+        <?php get_template_part('template-parts/comments'); ?>
+    </div>
     <?php get_footer();
-
 ?>

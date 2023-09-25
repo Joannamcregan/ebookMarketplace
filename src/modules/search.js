@@ -61,13 +61,14 @@ class Search {
             ${results.length ? '' : "<p>Sorry! We weren't able to find anything that matches that search.</p>"}
                 ${results.map(item => `
                     <li>
-                    ${item.posttype == "author-profile" ? "See books by author " : ''} 
+                    ${item.posttype == "author-profile" ? "See books by author " : ''}
+                    ${item.posttype == "curations" ? "Check out the curated bookshelf " : ""} 
                         <a href="${item.permalink}">
                             ${item.thumbnail ? `<img src="${item.thumbnail}" />` : ''} 
                             ${item.title}
                         </a>
                         ${item.posttype == "product" && item.title != "Gift Card" ? `<br> by ${item.productauthor}` : ""} 
-                        ${item.posttype == "curations" ? ` a bookshelf curated by ${item.curator}` : ""} 
+                        ${item.posttype == "short" ? `<br> by ${item.shortauthor}` : ""}
                         ${item.excerpt ? '<br><br>' + item.excerpt : ''}
                     </li>`).join("")}
             ${results.length ? "</li></div>" : '</div>'}
