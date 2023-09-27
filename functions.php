@@ -79,7 +79,7 @@ add_action('init', 'author_profile_custom_post_types');
 function short_custom_post_types() {
     register_post_type('short', array(
         'show_in_rest' => true,
-        'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions'),
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions', 'excerpt'),
         'rewrite' => array('slug' => 'shorts'),
         'has_archive' => false,
         'public' => true,
@@ -106,11 +106,11 @@ function ad1_custom_post_types() {
         'has_archive' => false,
         'public' => true,
         'labels' => array(
-            'name' => 'Ad 1',
-            'add_new_item' => 'Add New Slot 1 Ad',
-            'edit_item' => 'Edit Slot 1 Ad',
-            'all_items' => 'All Slot 1 Ads',
-            'singular_name' => 'Ad 1'
+            'name' => 'Ad',
+            'add_new_item' => 'Add New Ad',
+            'edit_item' => 'Edit Ad',
+            'all_items' => 'All Ads',
+            'singular_name' => 'Ad'
         ),
         'taxonomies' => array( 'category' ),
         'menu_icon' => 'dashicons-media-document'
@@ -118,28 +118,6 @@ function ad1_custom_post_types() {
 }
 
 add_action('init', 'ad1_custom_post_types');
-
-function ad2_custom_post_types() {
-    register_post_type('ad2', array(
-        'show_in_rest' => true,
-        'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions'),
-        'rewrite' => array('slug' => 'ad2s'),
-        'has_archive' => false,
-        'public' => true,
-        'labels' => array(
-            'name' => 'Ad 2',
-            'add_new_item' => 'Add New Slot 2 Ad',
-            'edit_item' => 'Edit Slot 2 Ad',
-            'all_items' => 'All Slot 2 Ads',
-            'singular_name' => 'Ad 2'
-        ),
-        'taxonomies' => array( 'category' ),
-        'menu_icon' => 'dashicons-media-document'
-    ));
-}
-
-add_action('init', 'ad2_custom_post_types');
-
 
 
 /*add curations post type----------------------------------------------------------*/

@@ -4,81 +4,78 @@
 <br>
 <br>
 
-<?php $shortsCounter = 0;
+<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$shortsCounter = 0;
 
-$ad1 = new WP_Query( array( 
+$ads = new WP_Query( array( 
     'post_type' => 'ad', 
-    'posts_per_page' => 1,
-    'orderby' => 'title', 
-    'order' => 'DESC',
-    'meta_query' => array(
-        array(
-            'key' => 'ad_start_date',
-            'compare' => '<=',
-            'value' => date("Y-m-d"),
-            'type' => 'DATE'
-        ),
-        array(
-            'key' => 'ad_end_date',
-            'value' => date("Y-m-d"), 
-            'compare' => '>=', 
-            'type' => 'DATE'
-        )
-        ),
+    'orderby' => 'date', 
+    'post_status' => 'publish',
+    // 'meta_query' => array(
+    //     array(
+    //         'key' => 'ad_start_date',
+    //         'compare' => '<=',
+    //         'value' => date("Y-m-d"),
+    //         'type' => 'DATE'
+    //     ),
+    //     array(
+    //         'key' => 'ad_end_date',
+    //         'value' => date("Y-m-d"), 
+    //         'compare' => '>=', 
+    //         'type' => 'DATE'
+    //     )
+    //     ),
         'order' => 'ASC'
 ) );
 
-wp_reset_postdata();
+$adArray = array();
 
-$ad2 = new WP_Query( array( 
-    'post_type' => 'ad2', 
-    'posts_per_page' => 1,
-    'orderby' => 'title', 
-    'order' => 'DESC',
-    'meta_query' => array(
-        array(
-            'key' => 'ad_start_date',
-            'compare' => '<=',
-            'value' => date("Y-m-d"),
-            'type' => 'DATE'
-        ),
-        array(
-            'key' => 'ad_end_date',
-            'value' => date("Y-m-d"), 
-            'compare' => '>=', 
-            'type' => 'DATE'
-        )
-        ),
-        'order' => 'ASC'
-) );
+if ($ads->have_posts()){
+    while($ads->have_posts()){
+        $ads->the_post();
+        array_push($adArray, $ads);
+    }
+}
 
 wp_reset_postdata();
 
 $shorts = new WP_Query( array( 
     'post_type' => 'short', 
-    'posts_per_page' => 10,
+    // 'posts_per_page' => 10,
+    'post_status' => 'publish',
+    'paged' => $paged,
     'orderby' => 'date', 
     'order' => 'DESC' 
 ) );
 
 while ( $shorts->have_posts() ){
     ?><div class="short-piece">
-        <?php if ($shortsCounter == 3 && $ad1->have_posts()){
-            while($ad1->have_posts()){
-                $ad1->the_post();
+        <?php if (fmod($shortsCounter, 3) == 0 && $shortsCounter > 0){
+            if (count($adArray) > 0){
+                array_shift($adArray)->the_post();
                 ?><div class="shorts-front-ad-wrapper">
-                    <h3 class="shorts-wrapper-heading"><?php the_title(); ?></h3>
-                    <div class="shorts-front-ad">
+                    <h3 class="centered-text"><a class="gray-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <em><p class="centered-text"><span>a short </span>
+                    <?php $shortCategory = get_the_category();
+                    if ($shortCategory){
+                        foreach($shortCategory as $cat){
+                            if ($cat != $shortCategory[count($shortCategory)-1]){
+                                ?><span><?php echo $cat->cat_name ?></span><span> / </span>
+                            <?php } else {
+                                ?><span><?php echo $cat->cat_name ?> </span>
+                            <?php }
+                        }
+                    }   
+                    ?><span>piece written to promote </span>
+                    <?php $shortAuthor = get_field('short_author');
+                    ?><div class="shorts-front-ad">
                         <?php the_content(); ?>
                     </div>
-                    <p class="shorts-wrapper-p"><a href="#">Learn more</a> about how we use ads and affiliate links to help fund our platform.</p>
+                    <p class="right-text"><a href="<?php the_permalink(); ?>">Visit site </a></p>
+                    <br>
+                    <p class="centered-text"><a class="gray-link" href="#">Learn how ads and affiliate links help us support authors.</a></p>
                 </div>
             <?php }
-        } else if ($shortsCounter == 6 && $ad2->have_posts()){
-            while($ad2->have_posts()){
-                $ad2->the_post();
-                the_content();
-            }
         }
         $shorts->the_post();
         ?><div class="shorts-excerpt-wrapper">
@@ -105,27 +102,44 @@ while ( $shorts->have_posts() ){
                             <?php }
                         }
                 } else {
-                    ?><span>Unknown or Anonymous Author(s) </span>
+                    ?><span>unknown or anonymous author(s) </span>
                 <?php }
             ?></p></em>
             <div class="shorts-excerpt">
-                <?php $shortExcerpt = get_field('excerpt');
-                if ($shortExcerpt){
-                    echo wp_trim_words($shortExcerpt, 100, ' [...]');
+                <?php if (str_word_count(get_the_excerpt()) > 100){
+                    echo wp_trim_words(get_the_excerpt(), 100, ' [...]');
                 } else {
                     the_excerpt();
-                }
+                }                
             ?></div>
-            <p class="right-text"><a href="<?php the_permalink(); ?>">See more &raquo;</a></p>
-        <?php $shortsCounter++; ?>
+            <p class="right-text"><a href="<?php the_permalink(); ?>">Read more</a></p>
+        <!-- <?php $shortsCounter++; ?> -->
         </div>
     </div>
 <?php }
 
 ?><div class="paginate-links">
-    <?php echo paginate_links(array(
+    <!-- <?php echo paginate_links(array(
         'total'=> $shorts->max_num_pages
     ));
-?></div>
+?> -->
+<?php 
+echo paginate_links( array(
+            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+            'total'        => $shorts->max_num_pages,
+            'current'      => $paged,
+            'format'       => '?page=%#%',
+            'show_all'     => false,
+            'type'         => 'plain',
+            'end_size'     => 5,
+            'mid_size'     => 1,
+            'prev_next'    => true,
+            'prev_text'    =>__( '<i class="fa fa-angle-double-left"></i> Prev', 'twentyfifteen' ),
+            'next_text'    => __( 'Next <i class="fa fa-angle-double-right"></i>', 'twentyfifteen' ),
+            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( '', 'twentyfifteen' ) . ' </span>',
+            'add_args'     => false,
+            'add_fragment' => '',
+        ) ); ?>
+</div>
 
 <?php get_footer(); ?>
