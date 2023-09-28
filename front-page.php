@@ -1,5 +1,7 @@
 <?php
 
+//featured shorts
+$shortId = 481;
 //featured curation ids
 $curationId0 = 281;
 $curationId1 = 282;
@@ -191,6 +193,56 @@ if ($autobiographies->have_posts()){
             ?><a class="gray-link" href="/product-category/poetry"><div class="gray-box"><p>see all</p></div></a>
         </div>
     </div>
+<?php }
+
+wp_reset_postdata();
+
+$featuredShort = new WP_Query( array( 'post_type' => 'short', 'p' => $shortId ) );
+
+if ($featuredShort->have_posts()){
+    ?><div class="short-piece">
+        <h3 class="centered-text sans-text">Featured Free Short</h3>
+    <?php while ($featuredShort->have_posts()){
+        $featuredShort->the_post();
+        ?><div class="shorts-excerpt-wrapper">
+            <h3 class="centered-text"><a class="gray-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <em><p class="centered-text"><span>a short </span>
+            <?php $shortCategory = get_the_category();
+            if ($shortCategory){
+                foreach($shortCategory as $cat){
+                    if ($cat != $shortCategory[count($shortCategory)-1]){
+                        ?><span><?php echo $cat->cat_name ?></span><span> / </span>
+                    <?php } else {
+                        ?><span><?php echo $cat->cat_name ?> </span>
+                    <?php }
+                }
+            }
+            ?><span>piece by </span>
+            <?php $shortAuthor = get_field('short_author');
+            if ($shortAuthor) {
+                foreach($shortAuthor as $author) {
+                    if ($author != $shortAuthor[count($shortAuthor)-1]){
+                        ?><span><?php echo get_the_title($author) ?></span><span>, </span>
+                            <?php } else {
+                                ?><span><?php echo get_the_title($author) ?></span>
+                            <?php }
+                        }
+                } else {
+                    ?><span>unknown or anonymous author(s) </span>
+                <?php }
+            ?></p></em>
+            <div class="shorts-excerpt">
+                <?php if (str_word_count(get_the_excerpt()) > 200){
+                    echo wp_trim_words(get_the_excerpt(), 200, ' [...]');
+                } else {
+                    the_excerpt();
+                }                
+            ?></div>
+            <p class="right-text"><a href="<?php the_permalink(); ?>">Read more</a></p>
+        </div>
+    <?php }
+    ?></div>
+    <p class="centered-text"><a href="<?php echo esc_url(site_url('/free-shorts'));?>" class="gray-link">See more free shorts</a></p>
 <?php }
 
 wp_reset_postdata();

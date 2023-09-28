@@ -84,7 +84,7 @@
     <?php }
 
     if ($shortAuthor) {
-        ?><div class="about-author-container">
+        ?><br><br><br><br><div class="about-author-container">
         <?php foreach($shortAuthor as $author) {
             echo '<div class="about-author-card">';
                 echo '<div class="author-name">';

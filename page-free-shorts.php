@@ -11,21 +11,7 @@ $ads = new WP_Query( array(
     'post_type' => 'ad', 
     'orderby' => 'date', 
     'post_status' => 'publish',
-    // 'meta_query' => array(
-    //     array(
-    //         'key' => 'ad_start_date',
-    //         'compare' => '<=',
-    //         'value' => date("Y-m-d"),
-    //         'type' => 'DATE'
-    //     ),
-    //     array(
-    //         'key' => 'ad_end_date',
-    //         'value' => date("Y-m-d"), 
-    //         'compare' => '>=', 
-    //         'type' => 'DATE'
-    //     )
-    //     ),
-        'order' => 'ASC'
+    'order' => 'ASC'
 ) );
 
 $adArray = array();
@@ -41,7 +27,7 @@ wp_reset_postdata();
 
 $shorts = new WP_Query( array( 
     'post_type' => 'short', 
-    // 'posts_per_page' => 10,
+    'posts_per_page' => 30,
     'post_status' => 'publish',
     'paged' => $paged,
     'orderby' => 'date', 
@@ -66,14 +52,22 @@ while ( $shorts->have_posts() ){
                             <?php }
                         }
                     }   
-                    ?><span>piece written to promote </span>
-                    <?php $shortAuthor = get_field('short_author');
+                    $companyName = get_field('company_name');
+                    $adLink = get_field('ad_link');
+                    if ($companyName){
+                        ?><span>piece written to promote </span></em>
+                        <a class="gray-link" href="<?php echo esc_url( $adLink ); ?>" target="_blank" rel="noopener noreferrer">
+                            <span><?php echo $companyName; ?></span>
+                        </a>
+                    <?php } else {
+                        ?><span>piece written to promote a product or service</span></em>
+                    <?php }
                     ?><div class="shorts-front-ad">
                         <?php the_content(); ?>
                     </div>
-                    <p class="right-text"><a href="<?php the_permalink(); ?>">Visit site </a></p>
+                    <p class="right-text"><a class="gray-link" href="<?php echo esc_url( $adLink ); ?>" target="_blank" rel="noopener noreferrer">Visit site </a></p>
                     <br>
-                    <p class="centered-text"><a class="gray-link" href="#">Learn how ads and affiliate links help us support authors.</a></p>
+                    <p class="centered-text"><a class="gray-link">Learn how ads and affiliate links help us support authors.</a></p>
                 </div>
             <?php }
         }
@@ -106,14 +100,14 @@ while ( $shorts->have_posts() ){
                 <?php }
             ?></p></em>
             <div class="shorts-excerpt">
-                <?php if (str_word_count(get_the_excerpt()) > 100){
-                    echo wp_trim_words(get_the_excerpt(), 100, ' [...]');
+                <?php if (str_word_count(get_the_excerpt()) > 200){
+                    echo wp_trim_words(get_the_excerpt(), 200, ' [...]');
                 } else {
                     the_excerpt();
                 }                
             ?></div>
             <p class="right-text"><a href="<?php the_permalink(); ?>">Read more</a></p>
-        <!-- <?php $shortsCounter++; ?> -->
+        <?php $shortsCounter++; ?>
         </div>
     </div>
 <?php }
