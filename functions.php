@@ -102,7 +102,7 @@ function ad1_custom_post_types() {
     register_post_type('ad', array(
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions'),
-        'rewrite' => array('slug' => 'ad1s'),
+        'rewrite' => array('slug' => 'ads'),
         'has_archive' => false,
         'public' => true,
         'labels' => array(

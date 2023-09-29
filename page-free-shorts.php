@@ -54,6 +54,7 @@ while ( $shorts->have_posts() ){
                     }   
                     $companyName = get_field('company_name');
                     $adLink = get_field('ad_link');
+                    $callToAction = get_field('call_to_action');
                     if ($companyName){
                         ?><span>piece written to promote </span></em>
                         <a class="gray-link" href="<?php echo esc_url( $adLink ); ?>" target="_blank" rel="noopener noreferrer">
@@ -65,8 +66,16 @@ while ( $shorts->have_posts() ){
                     ?><div class="shorts-front-ad">
                         <?php the_content(); ?>
                     </div>
-                    <p class="right-text"><a class="gray-link" href="<?php echo esc_url( $adLink ); ?>" target="_blank" rel="noopener noreferrer">Visit site </a></p>
-                    <br>
+                    <?php if ($adLink){
+                        if ($callToAction){
+                            ?><p class="right-text"><a href="<?php echo esc_url( $adLink ); ?>" target="_blank" rel="noopener noreferrer"><?php echo $callToAction; ?></a></p>
+                        <?php } else if ($companyName){
+                            ?><p class="right-text">Check out <a href="<?php echo esc_url( $adLink ); ?>" target="_blank" rel="noopener noreferrer"><?php echo $companyName; ?></a></p>
+                        <?php } else {
+                            ?><p class="right-text"><a href="<?php echo esc_url( $adLink ); ?>" target="_blank" rel="noopener noreferrer">Visit site</a></p>
+                        <?php }
+                    }
+                    ?><br>
                     <p class="centered-text"><a class="gray-link">Learn how ads and affiliate links help us support authors.</a></p>
                 </div>
             <?php }

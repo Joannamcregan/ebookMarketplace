@@ -35,6 +35,11 @@
     margin: 20px auto;
     padding: 20px;
 }
+.short-piece img{
+    max-width: 80%;
+    margin: auto;
+    display: block;
+}
 .short-piece h1, h3{
     text-align: right;
 }
