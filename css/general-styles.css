@@ -44,6 +44,10 @@ header a:hover{
     color: #f7ede3;
     text-decoration: none;
 }
+.header--main a{
+    color: #f7ede3;
+    text-decoration: none;
+}
 .woocommerce-products-header{
     width: 100vw;
     background: linear-gradient(to right, #f6f0e9, #fffaf4);

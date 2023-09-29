@@ -21,7 +21,7 @@ $autobiographyIds = array(297, 291, 122, 192, 152, 301, 294, 137);
 
 get_header();
 
-?><div class="generic-content"><h4>Thank you for browsing our cooperatively run ebook marketplace! When you shop here, you're empowering authors and workers. <a href="<?php echo esc_url(site_url('/about'));?>"><span class="nowrap">Learn how.</span></a></h4></div>
+?><div class="generic-content"><h4>Thank you for browsing our cooperatively run ebook marketplace! When you shop here, you're empowering authors. <a href="<?php echo esc_url(site_url('/about'));?>"><span class="nowrap">Learn how.</span></a></h4></div>
 
 <?php 
 
@@ -36,7 +36,7 @@ if ($romances->have_posts()){
             <?php while ($romances -> have_posts()){
                 $romances->the_post();
                 ?><div class="book-section--small">
-                    <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
+                    <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>" alt="<?php get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE) ?>" /></a> 
                 </div>                
             <?php }
             ?><a class="gray-link" href="/product-category/fiction-ebooks/romance/"><div class="gray-box"><p>see all</p></div></a>
@@ -55,7 +55,7 @@ if ($historicals->have_posts()){
             <?php while ($historicals -> have_posts()){
                 $historicals->the_post();
                 ?><div class="book-section--small">
-                    <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
+                    <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>" alt="<?php get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE) ?>" /></a> 
                 </div>                
             <?php }
             ?><a class="gray-link" href="/product-category/fiction-ebooks/historical-fiction"><div class="gray-box"><p>see all</p></div></a>
@@ -74,15 +74,15 @@ if ($curation0->have_posts()){
         if ($books) {
             ?><div class="book-pile">
                 <div class="bookshelf-tablet-0">
-                    <img class="bookshelf-book-0" src="<?php echo get_the_post_thumbnail_url($books[0]); ?>"/>
+                    <img class="bookshelf-book-0" src="<?php echo get_the_post_thumbnail_url($books[0]); ?>" alt="<?php get_post_meta(get_post_thumbnail_id($books[0]), '_wp_attachment_image_alt', TRUE) ?>" />
                 </div>   
                 <?php if (count($books) > 1) { 
                     ?><div class="bookshelf-tablet-1">
-                        <img class="bookshelf-book-1" src="<?php echo get_the_post_thumbnail_url($books[1]); ?>"/>
+                        <img class="bookshelf-book-1" src="<?php echo get_the_post_thumbnail_url($books[1]); ?>" alt="<?php get_post_meta(get_post_thumbnail_id($books[1]), '_wp_attachment_image_alt', TRUE) ?>" />
                     </div>
                     <?php if (count($books) >2) {
                         ?><div class="bookshelf-tablet-2">
-                            <img class="bookshelf-book-2" src="<?php echo get_the_post_thumbnail_url($books[2]); ?>"/>
+                            <img class="bookshelf-book-2" src="<?php echo get_the_post_thumbnail_url($books[2]); ?>" alt="<?php get_post_meta(get_post_thumbnail_id($books[2]), '_wp_attachment_image_alt', TRUE) ?>" />
                         </div>
                 <?php }
                 }
@@ -102,7 +102,7 @@ if ($mysteries->have_posts()){
             <?php while ($mysteries -> have_posts()){
                 $mysteries->the_post();
                 ?><div class="book-section--small">
-                    <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
+                    <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>" alt="<?php get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE) ?>" /></a> 
                 </div>                
             <?php }
             ?><a class="gray-link" href="/product-category/fiction-ebooks/mystery-fiction"><div class="gray-box"><p>see all</p></div></a>
@@ -121,7 +121,7 @@ if ($scifi->have_posts()){
             <?php while ($scifi -> have_posts()){
                 $scifi->the_post();
                 ?><div class="book-section--small">
-                    <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
+                    <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>" alt="<?php get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE) ?>" /></a> 
                 </div>                
             <?php }
             ?><a class="gray-link" href="/product-category/fiction-ebooks/science-fiction"><div class="gray-box"><p>see all</p></div></a>
@@ -140,15 +140,15 @@ if ($curation1->have_posts()){
         if ($books) {
             ?><div class="book-pile">
                 <div class="bookshelf-tablet-0">
-                    <img class="bookshelf-book-0" src="<?php echo get_the_post_thumbnail_url($books[0]); ?>"/>
+                    <img class="bookshelf-book-0" src="<?php echo get_the_post_thumbnail_url($books[0]); ?>" alt="<?php get_post_meta(get_post_thumbnail_id($books[0]), '_wp_attachment_image_alt', TRUE) ?>" />
                 </div>   
                 <?php if (count($books) > 1) { 
                     ?><div class="bookshelf-tablet-1">
-                        <img class="bookshelf-book-1" src="<?php echo get_the_post_thumbnail_url($books[1]); ?>"/>
+                        <img class="bookshelf-book-1" src="<?php echo get_the_post_thumbnail_url($books[1]); ?>" alt="<?php get_post_meta(get_post_thumbnail_id($books[1]), '_wp_attachment_image_alt', TRUE) ?>" />
                     </div>
                     <?php if (count($books) >2) {
                         ?><div class="bookshelf-tablet-2">
-                            <img class="bookshelf-book-2" src="<?php echo get_the_post_thumbnail_url($books[2]); ?>"/>
+                            <img class="bookshelf-book-2" src="<?php echo get_the_post_thumbnail_url($books[2]); ?>" alt="<?php get_post_meta(get_post_thumbnail_id($books[2]), '_wp_attachment_image_alt', TRUE) ?>" />
                         </div>
                 <?php }
                 }
@@ -168,7 +168,7 @@ if ($poetry->have_posts()){
             <?php while ($poetry -> have_posts()){
                 $poetry->the_post();
                 ?><div class="book-section--small">
-                    <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
+                    <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>" alt="<?php get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE) ?>" /></a> 
                 </div>                
             <?php }
             ?><a class="gray-link" href="/product-category/poetry"><div class="gray-box"><p>see all</p></div></a>
@@ -187,7 +187,7 @@ if ($autobiographies->have_posts()){
             <?php while ($autobiographies -> have_posts()){
                 $autobiographies->the_post();
                 ?><div class="book-section--small">
-                    <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
+                    <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>" alt="<?php get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE) ?>" /></a> 
                 </div>                
             <?php }
             ?><a class="gray-link" href="/product-category/poetry"><div class="gray-box"><p>see all</p></div></a>
