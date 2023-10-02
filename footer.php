@@ -10,14 +10,25 @@
                   <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')) ?>">Curated Bookshelves</a></li>
             </ul>
             <ul class="footer-top-right">
-                  <li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Ebook Downloads</a></li>
                   <li><a href="<?php echo esc_url(site_url('/about'));?>">About the Marketplace</a></li>
                   <li><a href="<?php echo esc_url(site_url('/get-involved'));?>">Get Involved</a></li>  
                   <li><a href="<?php echo esc_url(site_url('/blog'));?>">Blog</a></li>
                   <li><a href="<?php echo esc_url(site_url('/forum'));?>">Forum</a></li>
                   <li><a href="<?php echo esc_url(site_url('/governance'));?>">Governance</a></li>  
                   <li><a href="<?php echo esc_url(site_url('/privacy-policy'));?>">Privacy Policy</a></li> 
+                  <li><a href="<?php echo esc_url(site_url('/ad-policy'));?>">Ad Policy</a></li> 
             </ul>
+      </div>
+      <div class="footer-bottom">
+            <ul>
+                  <?php if (is_user_logged_in()){
+                        ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
+                        <li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a></li>
+                        <li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
+                  <?php } else {
+                        ?><li><a href="<?php echo esc_url( wp_login_url() ); ?>">Login</a></li>
+                  <?php }
+            ?></ul>
       </div>
 </footer>
 

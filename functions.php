@@ -276,6 +276,25 @@ add_action('woocommerce_after_shop_loop', 'ebook_marketplace_product_collection_
 remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10);
 add_action('woocommerce_after_shop_loop', 'woocommerce_pagination', 30);
 
+/*accessibility for product archive------------------------------------------------------------------------*/
+add_filter('wp_get_attachment_image_attributes', 'ebook_marketplace_attachement_image_attributes', 20, 2);
+
+function ebook_marketplace_attachement_image_attributes($attr, $attachment) {
+    global $post;
+    if ($post->post_type == 'product') {
+        $title = $post->post_title;
+        $attr['alt'] = $title;
+        $attr['title'] = $title;
+    }
+    return $attr;
+}
+
+function woocommerce_template_loop_product_link_open() {
+	global $product;
+	$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+	?><a href="<?php esc_url( $link ); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link" aria-label=" <?php the_title(); ?>">
+<?php }
+
 /*style single product page ------------------------------------------------------------------*/
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );

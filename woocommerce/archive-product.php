@@ -55,9 +55,10 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
 	do_action( 'woocommerce_before_shop_loop' );
-
+	
 	woocommerce_product_loop_start();
 
+	?><ul ><?php
 	if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
 			the_post();
@@ -78,6 +79,7 @@ if ( woocommerce_product_loop() ) {
 	 *
 	 * @hooked woocommerce_pagination - 10
 	 */
+	?></ul><?php
 	do_action( 'woocommerce_after_shop_loop' );
 } else {
 	/**
