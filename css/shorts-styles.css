@@ -1,35 +1,3 @@
-/* .shorts-filter{
-    background: #e8f5f2;
-    padding: 10px 0;
-    margin-top: -40px;
-}
-.shorts-filter h4{
-    margin-bottom: 5px;
-}
-.shorts-filter h4{
-    text-align: center;
-}
-.checkbox-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.checkbox-option{
-    margin: 0 10px 10px 10px;
-    display: inline;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-}
-.checkbox-option input{
-    margin-right: 5px;
-    min-width: 20px;
-    min-height: 20px;
-} 
-#shorts-submit-button{
-    margin: 20px auto;
-    padding: 5px 10px;
-} */
 .short-piece{
     max-width: 600px;
     margin: 20px auto;
@@ -97,6 +65,11 @@
     padding: 10px 0;
     box-shadow: 0px 8px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.shorts-excerpt-wrapper h2{
+    max-width: 80%;
+    text-align: center;
+    margin: 10px auto 0 auto;
+}
 .shorts-excerpt{
     background: #fffaf4;
     border: solid #e0e7e3 5px;
@@ -113,6 +86,18 @@
     background: #fffaf4;
     border: solid #e0e6e7 5px;
     padding: 10px 10px 5px 10px;
+}
+.short-author-bio{
+    margin-bottom: 30px;
+    min-height: fit-content;
+}
+.short-author-bio h3{
+    text-align: center;
+}
+.short-piece img{
+    max-height: 175px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 650px) {

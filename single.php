@@ -1,7 +1,7 @@
-<?php
-    get_header();
+<?php get_header();
 
-    ?><div class="two-thirds-screen">
+?><main>
+    <div class="two-thirds-screen">
     <?php while(have_posts()){
         the_post(); 
         ?><div class="right-text by-line">
@@ -22,5 +22,6 @@
         <h2 class="centered-text">Comments</h2>
         <?php get_template_part('template-parts/comments'); ?>
     </div>
-    <?php get_footer();
-?>
+</main>
+
+<?php get_footer(); ?>

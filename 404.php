@@ -1,6 +1,7 @@
-<?php 
-    get_header();
-    ?><div class="half-screen">
+<?php get_header();
+?><main>
+
+    <div class="half-screen">
         <p class="extra-large-text center-left-text"><strong>404</strong></p>
         <h1 class="center-left-text">Sorry, we can't seem to find the page you were looking for.</h1>
     </div>
@@ -13,9 +14,11 @@
             <?php while ($featuredBooks -> have_posts()){
             $featuredBooks->the_post();
             ?><div class="book-section--small">
-                <a href="<?php the_permalink(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>"/></a> 
+                <a href="<?php the_permalink(); ?>" aria-label="<?php echo get_the_title(); ?>"><img class="book-cover--small" src="<?php the_post_thumbnail_url(); ?>" alt="<?php get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE) ?>"/></a> 
             </div>                
         <?php }
         ?></div>
     </div>
-<?php get_footer();
+</main>
+
+<?php get_footer(); ?>

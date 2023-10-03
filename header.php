@@ -22,7 +22,7 @@
   </div>
 </header>
 <div class="header--main">      
-  <nav class="main-nav">  
+  <nav class="main-nav" aria-label="main navigation bar">  
     <div class="nav-container site-header__menu group">    
       <a href="<?php echo esc_url(site_url('/genres'));?>">Ebook Genres</a>
       <a href="<?php echo esc_url(site_url('/audiobook-genres'));?>">Audiobook Genres</a>   

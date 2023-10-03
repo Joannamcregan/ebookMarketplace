@@ -1,6 +1,7 @@
 <?php get_header();
 
-    ?><div class="banner"><h1 class="centered-text">Blog Posts</h1></div>
+?><main>
+    <div class="banner"><h1 class="centered-text">Blog Posts</h1></div>
     <br>
     <br>
     <div class="two-thirds-screen generic-content">
@@ -23,7 +24,7 @@
         <?php endif; wp_reset_postdata(); ?>
     </div>
 
-<?php echo paginate_links();
+    <?php echo paginate_links();
+?></main>
 
-get_footer();
-?>
+<?php get_footer(); ?>

@@ -1,10 +1,11 @@
 <?php get_header();
 
-    ?><div class="banner"><h1 class="centered-text">Merch and Signed Books</h1></div>
+?><main>
+    <div class="banner"><h1 class="centered-text">Merch and Signed Books</h1></div>
     <br>
     <br>
     <div class="coming-soon-info">
-        <h3 class="centered-text">Coming Soon!</h3>
+        <h2 class="centered-text">Coming Soon!</h2>
         <p>We want to make it easy for authors to sell their book-related merchandise and signed books right where they sell their ebooks!</p>
     </div>
     <div class="two-thirds-screen generic-content">        
@@ -51,8 +52,6 @@
         <br/>
         <br/>
     </div>
+</main>    
 
-    
-
-<?php get_footer();
-?>
+<?php get_footer(); ?>
