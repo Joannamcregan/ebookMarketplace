@@ -1,4 +1,4 @@
-<h2 class="centered-text">My Orders</h1>
+<h1 class="centered-text">My Orders</h1>
 <br>
 <br>
 <!-- <div class="two-thirds-screen generic-content"> -->

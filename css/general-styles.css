@@ -436,6 +436,9 @@ a {
     margin-left: 10vw;
     margin-right: 10vw;
 }
+.generic-content h3{
+    text-align: left;
+}
 .archive-item{
     text-align: left;
     margin-top: 1rem;

@@ -26,7 +26,7 @@
                         <li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a></li>
                         <li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
-                        ?><li><a href="<?php echo esc_url( wp_login_url() ); ?>">Login</a></li>
+                        ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
                   <?php }
             ?></ul>
       </div>

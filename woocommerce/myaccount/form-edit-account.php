@@ -1,4 +1,4 @@
-<h2 class="centered-text">My Account Details</h1>
+<h1 class="centered-text">My Account Details</h1>
 <br>
 <!-- <div class="two-thirds-screen generic-content"> -->
 

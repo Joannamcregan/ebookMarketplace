@@ -289,11 +289,18 @@ function ebook_marketplace_attachement_image_attributes($attr, $attachment) {
     return $attr;
 }
 
-function woocommerce_template_loop_product_link_open() {
-	global $product;
-	$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
-	?><a href="<?php esc_url( $link ); ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link" aria-label=" <?php the_title(); ?>">
-<?php }
+if ( ! function_exists( 'woocommerce_template_loop_product_link_open' ) ) {
+	/**
+	 * Insert the opening anchor tag for products in the loop.
+	 */
+	function woocommerce_template_loop_product_link_open() {
+		global $product;
+
+		$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+
+		echo '<a href="' . esc_url( $link ) . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link" aria-label="' . get_the_title() . '">';
+	}
+}
 
 /*style single product page ------------------------------------------------------------------*/
 
@@ -524,11 +531,11 @@ function ebook_marketplace_new_author_base() {
 add_action('init', 'ebook_marketplace_new_author_base');
 
 // Make book covers not clickable on individual product pages-------------------------------------------
-/*function remove_product_image_link( $html, $post_id ) {
+function remove_product_image_link( $html, $post_id ) {
     return preg_replace( "!<(a|/a).*?>!", '', $html );
 }
 add_filter( 'woocommerce_single_product_image_thumbnail_html', 'remove_product_image_link', 10, 2 );
-*/
+
 // Customize My Account nav-----------------------------------------------------------------------------
 add_filter( 'woocommerce_account_menu_items', function($items) {
     unset($items['subscriptions']);

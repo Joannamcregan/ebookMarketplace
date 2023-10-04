@@ -1,7 +1,7 @@
 <?php get_header();
 
 ?><main>
-    <div class="banner"><h1 class="centered-text">Cooperative Governance</h1></div>
+    <div class="banner"><h1 class="centered-text">Our Ad Policy</h1></div>
     <br>
     <div class="generic-content full-screen">
         <?php wp_reset_postdata();

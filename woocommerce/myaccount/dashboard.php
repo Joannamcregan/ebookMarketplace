@@ -28,6 +28,7 @@ $allowed_html = array(
 );
 ?>
 
+<h1>Welcome</h1>
 <p>
 	<?php
 	printf(
