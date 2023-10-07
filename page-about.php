@@ -19,27 +19,27 @@
         </div>
 	</div>
 
-    <?php wp_reset_postdata();
+    <!-- <?php wp_reset_postdata();
     $args = array(
         'role__in' => array('contributor', 'editor', 'administrator'),
         'orderby' => 'user_nicename',
         'order'   => 'DESC'
     );
     
-    $user_query = new WP_User_Query( $args );
+    $user_query = new WP_User_Query( $args ); ?> -->
     
-    ?><br><h2 class="centered-text">Meet our team</h2>
-    <div class="contributors">
-        <?php if ( ! empty( $user_query->get_results() ) ) {
-            foreach ( $user_query->get_results() as $user ) {
-                ?><a href="<?php echo get_author_posts_url($user->id); ?>">
+    <!-- <br><h2 class="centered-text">Meet our team</h2>
+    <div class="contributors"> -->
+        <!-- <?php if ( ! empty( $user_query->get_results() ) ) { ?>
+            <?php foreach ( $user_query->get_results() as $user ) { ?> -->
+                <!-- <a href="<?php echo get_author_posts_url($user->id); ?>">
                 <div class="contributor"> 
                     <img src="<?php echo get_avatar_url($user->id, ['size' => '80']); ?>" alt="<?php get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE) ?>" />
-                    <p><?php echo $user->display_name;?></p>
-                </div></a>
-            <?php }
-        }
-    ?></div>
+                    <p><?php echo $user->display_name;?></p> -->
+                <!-- </div></a> -->
+            <!-- <?php }
+        } ?> -->
+    <!-- </div> -->
 </main>
 
 <?php get_footer(); ?>

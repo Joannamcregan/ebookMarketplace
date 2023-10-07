@@ -314,6 +314,7 @@ add_action('woocommerce_before_single_product', 'ebook_marketplace_single_produc
 
 function ebook_marketplace_bottom_section_start(){
     add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 25);
+    // echo '</div>';
 }
 add_action('woocommerce_single_product_summary', 'ebook_marketplace_bottom_section_start', 20);
 
@@ -329,9 +330,10 @@ add_action('woocommerce_after_single_product_summary', 'ebook_marketplace_single
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
-function ebook_marketplace_single_include_book_author() {  
+function ebook_marketplace_single_product_additional_info() {  
     global $post;
     global $ebookCategoryID;
+    global $MVX, $product;
     $authorName = '';
     $isBook = false;
     $productCategories = get_the_terms( $post->ID, 'product_cat' );
@@ -385,8 +387,10 @@ function ebook_marketplace_single_include_book_author() {
             echo '</i></span></div>';
         }
     }
+
+    
 }
-add_action( 'woocommerce_single_product_summary', 'ebook_marketplace_single_include_book_author', 13 );
+add_action( 'woocommerce_single_product_summary', 'ebook_marketplace_single_product_additional_info', 13 );
 
 function ebook_marketplace_remove_product_tabs( $tabs ) {
     unset( $tabs['additional_information'] ); 
@@ -395,22 +399,23 @@ function ebook_marketplace_remove_product_tabs( $tabs ) {
 }
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_remove_product_tabs', 98 );
 
+/** Uncomment to restore Publisher tab once styling is decent on vendor pages------------------- */
 function ebook_marketplace_rename_vendor_tab( $tabs ) {
-    global $post;
-    global $ebookCategoryID;
-    $isBook = false;
-    $productCategories = get_the_terms( $post->ID, 'product_cat' );
-    foreach($productCategories as $category){
-        if ($category->term_id == $ebookCategoryID){
-            $isBook = true;
-        }
-    }
-    if ($isBook){
-        $tabs['vendor']['title'] = __('About the Publisher', 'multivendorx');
-        $tabs['vendor']['priority'] = 90;
-    } else {
+    // global $post;
+    // global $ebookCategoryID;
+    // $isBook = false;
+    // $productCategories = get_the_terms( $post->ID, 'product_cat' );
+    // foreach($productCategories as $category){
+    //     if ($category->term_id == $ebookCategoryID){
+    //         $isBook = true;
+    //     }
+    // }
+    // if ($isBook){
+    //     $tabs['vendor']['title'] = __('About the Publisher', 'multivendorx');
+    //     $tabs['vendor']['priority'] = 90;
+    // } else {
         unset($tabs['vendor']);
-    }
+    // }
     return $tabs;
 }
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_rename_vendor_tab', 97 );
@@ -419,58 +424,44 @@ function ebook_marketplace_author_product_tab_content() {
     $bookAuthors = get_field('book_author');	
     if ($bookAuthors) {
         foreach($bookAuthors as $author) {
-            ?><div class="about-author-card product-tab-content">
-                <h2>About <a href="<?php echo get_the_permalink($author); ?>"><?php echo get_the_title($author); ?></a></h2>
-                <div class="author-bio">
-                    <img src="<?php echo get_the_post_thumbnail_url($author); ?>"/>
-                    <?php echo get_the_excerpt($author);
-                ?></div>
-            </div>        
+            ?><div class="about-author-card">
+                <h2>About <a href="<?php echo get_the_permalink($author); ?>"><?php echo get_the_title($author); ?></a></h2>                
+                <?php echo get_the_excerpt($author);
+            ?></div>        
             <br/>
         <?php }
     } else {
         echo '<h2>About the Author<h2><p>The author of this book is unknown or anonymous.</p>';
     }
 }
-
-function ebook_marketplace_triggers_product_tab_content(){
-    global $MVX, $product;
-    $triggers = get_field('book_trigger');	
-    $vendor = get_mvx_product_vendors($product->get_id());
-    echo '<h2>Triggers</h2>';
-    if ($triggers) {
-        // echo '<p>Content warning: this book may contain the following triggers:</p>';
-        // echo '<ul>';
-        // foreach($triggers as $trigger) {
-        //     echo '<li>' . strtolower(get_the_title($trigger)) . '</li>';       
-        // }
-        // echo '</ul>';
-        ?><div class="shorts-trigger-warning shorts-wrapper">
-                <p>This piece may be triggering for some readers.</p>
-                <span>Click the arrow to see trigger warning(s)</span>
-                <i class="fa-solid fa-caret-down arrow"></i>
-                <div class="not-displayed category-children">
-                <?php foreach($triggers as $trigger){ ?>
-                    <p><?php echo get_the_title($trigger); ?></p>
-                <?php } ?>
-                </div>
-            </div>
-    <?php } else {
-        echo '<p>No potential triggers have been listed for this book.</p>';
-    }
-    if ($vendor) {
-        echo '<p>To suggest a trigger warning be added, please <a href="' . $vendor->permalink . '">contact the publisher</a></p>';
-    }
-}
 function ebook_marketplace_excerpt_product_tab_content(){
     $excerpt = get_field('excerpt');	
-    echo '<h2>Excerpt</h2>';
     if ($excerpt) {
-        echo "<div class='product-tab-content'>" . $excerpt . "</div>";
-    } else {
-        echo '<p>No excerpt has been added for this book.</p>';
-    }
+        ?><div>
+            <?php echo $excerpt ?>
+        </div>
+    <?php }
 }
+function ebook_marketplace_triggers_product_tab_content(){
+    $triggers = get_field('book_trigger');	
+    // $vendor = get_mvx_product_vendors($product->get_id());
+    ?><div>
+        <?php if ($triggers) {
+            ?><p>This piece may contain the following triggers:</p>
+            <ul>
+            <?php foreach($triggers as $trigger){ ?>
+                <li class="single-product-trigger"><?php echo get_the_title($trigger); ?></li>
+            <?php } ?>
+            </ul>
+        <?php } else {
+            ?><p>No potential triggers have been listed for this book.</p>
+        <?php }
+        // if ($vendor) {
+        //     echo '<p>To suggest a trigger warning be added, please <a href="' . $vendor->permalink . '">contact the publisher</a></p>';
+        // }
+        echo '<p>Please <a href="' . esc_url(site_url('/get-involved')) . '">contact us</a> if you believe an additional trigger warning be added for this book.</p>'
+    ?></div>
+<?php }
 function ebook_marketplace_add_product_tabs( $tabs ) {
     global $post;
     global $ebookCategoryID;
@@ -487,15 +478,15 @@ function ebook_marketplace_add_product_tabs( $tabs ) {
             'priority' 	=> 80,
             'callback' 	=> 'ebook_marketplace_author_product_tab_content'
         );
-        $tabs['triggers'] = array(
-            'title' => __('Possible Triggers'),
-            'priority' => 5,
-            'callback' => 'ebook_marketplace_triggers_product_tab_content'
-        );
         $tabs['excerpt'] = array(
             'title' => __( 'Read an Excerpt' ),
             'priority' => 60,
             'callback' => 'ebook_marketplace_excerpt_product_tab_content'
+        );
+        $tabs['triggers'] = array(
+            'title' => __( 'Potential Triggers' ),
+            'priority' => 70,
+            'callback' => 'ebook_marketplace_triggers_product_tab_content'
         );
     }
 	return $tabs;

@@ -4,7 +4,8 @@ while(have_posts()){
     the_post();
     ?>
     <div class="full-screen">
-        <h2 class="centered-text"> <?php the_title(); ?> </h2>
+        <br><br>
+        <h1 class="centered-text"> <?php the_title(); ?> </h1>
         <div class="image-text--container">
             <img class="image-text--image" src="<?php the_post_thumbnail_url('authorImage'); ?>"/>
             <div>
@@ -12,6 +13,7 @@ while(have_posts()){
             </div>
         </div>
     </div>
+    <br>
     <br>
 
     <?php $relatedBooks = new WP_Query(array(
