@@ -140,10 +140,6 @@
             </div>
         </div>
     </div>
-
-    <div class="generic-content">
-        <p class="centered-text">Looking for paperbacks or hardcover books? Check out the <a href="<?php echo esc_url(site_url('/merch'));?>">merchandise section</a>. We also have a section for <a href="<?php echo esc_url(site_url('/audiobook-genres'));?>">audiobooks.</a></p>
-    </div>
 </main>
 
 <?php get_footer();

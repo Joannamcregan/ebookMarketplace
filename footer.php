@@ -13,7 +13,7 @@
                   <li><a href="<?php echo esc_url(site_url('/about'));?>">About the Marketplace</a></li>
                   <li><a href="<?php echo esc_url(site_url('/get-involved'));?>">Get Involved</a></li>  
                   <li><a href="<?php echo esc_url(site_url('/blog'));?>">Blog</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/forum'));?>">Forum</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/forums'));?>">Forum</a></li>
                   <li><a href="<?php echo esc_url(site_url('/governance'));?>">Governance</a></li>  
                   <li><a href="<?php echo esc_url(site_url('/privacy-policy'));?>">Privacy Policy</a></li> 
                   <li><a href="<?php echo esc_url(site_url('/ad-policy'));?>">Ad Policy</a></li> 

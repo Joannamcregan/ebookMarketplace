@@ -1,0 +1,111 @@
+.oval-section{
+    min-height: fit-content;
+}
+.oval-wrapper{
+    width: 52vw;
+    height: 205px;
+    border-radius: 50% 0;
+    margin: 50px auto 10px auto;
+    border: solid #f6ece1 10px;
+    background: #f6ece1;
+}
+.oval{
+    width: 50vw;
+    height: 200px;
+    border-radius: 50% 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 32;
+}
+.orange-oval{
+    background: #e44e2d;
+    border: solid 10px #f7c340;
+    text-shadow: 0 0 6px #0c6980;
+}
+.yellow-oval{
+    background: #f7c340;
+    border: solid 10px #0c6980;
+    text-shadow: 0 0 6px #e44e2d;
+    /* margin-left: 2vw; */
+}
+.blue-oval{
+    background: #0c6980;
+    border: solid 10px #e44e2d;
+    text-shadow: 0 0 6px #f7c340;
+}
+.sub-oval-section{
+    display: flex;
+}
+.sub-oval-wrapper{
+    width: 31vw;
+    height: 155px;
+    border-radius: 10px 50%;
+    margin: 10px auto;
+    border: solid #f6ece1 10px;
+    background: #f6ece1;
+    padding: 0 40px 0 0;
+}
+.sub-oval{
+    width: 30vw;
+    height: 150px;
+    border-radius: 10px 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 26;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 1000px){
+    .oval-wrapper{
+        width: 65vw;
+        height: 155px;
+    }
+    .oval{
+        width: 60vw;
+        height: 150px;
+    }
+    .sub-oval{
+        font-size: 24;
+    }
+}
+@media screen and (max-width: 750px){
+    .oval-wrapper{
+        width: 80vw;
+    }
+    .oval{
+        width: 75vw;
+    }
+    .sub-oval{
+        font-size: 22;
+    }
+}
+@media screen and (max-width: 560px){
+    .sub-oval-wrapper{
+        width: 26vw;
+    }
+    .sub-oval{
+        width: 25vw;
+    }
+    .sub-oval{
+        font-size: 20;
+    }
+}
+@media screen and (max-width: 450px){
+    .sub-oval-wrapper{
+        width: 21vw;
+    }
+    .sub-oval{
+        width: 21vw;
+    }
+}
+@media screen and (max-width: 300px){
+    .sub-oval{
+        font-size: 18;
+    }
+}

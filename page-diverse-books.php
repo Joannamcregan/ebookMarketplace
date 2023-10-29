@@ -15,10 +15,10 @@
             <a href="<?php echo esc_url(site_url('/diverse-books/disabled-voices'));?>"><h2 class="centered-text">by Chronically Ill and Disabled Authors</h3></a>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
-            <a href="<?php echo esc_url(site_url('/diverse-books/indigenous-voices'));?>"><h2 class="centered-text">by Indigenous/Native American Authors</h3></a>
+            <a href="<?php echo esc_url(site_url('/diverse-books/indigenous-voices'));?>"><h2 class="centered-text">by Indigenous/ Native American Authors</h3></a>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
-            <a href="<?php echo esc_url(site_url('/diverse-books/latinx-voices'));?>"><h2 class="centered-text">by Latine/Latinx Authors</h3></a>
+            <a href="<?php echo esc_url(site_url('/diverse-books/latinx-voices'));?>"><h2 class="centered-text">by Latine/ Latinx Authors</h3></a>
         </div>
         <div class="genre-category subcategory page-accent-alt-1">
             <a href="<?php echo esc_url(site_url('/diverse-books/lgbtqia-voices'));?>"><h2 class="centered-text">by LGBTQIA+ Authors</h3></a>
