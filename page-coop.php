@@ -2,26 +2,26 @@
 
 ?><main class="leaves">
     <h1 class='caprasimo-text special-display-text'>Trunk of My Car</h1>
-    <p class="leaves-p centered-text">An online marketplace <strong>owned by people who love and create books.</strong></p>
+    <p class="leaves-p centered-text"><strong>Our Cooperatively Owned</strong> Book Marketplace</p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf">
                 <!-- <p>Theirs</p> -->
-                <p>Read</p>
+                <p>Learn</p>
             </div>
         </div>
         <div class="sub-leaf-section not-displayed">
             <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/genres'));?>">
+                <a href="<?php echo esc_url(site_url('/about'));?>">
                 <div class="sub-leaf blue-leaf">
-                    <p>Browse New Books</p>
+                    <p>About Us</p>
                 </div>
                 </a>
             </div>
             <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/my-account/orders/')); ?>">
+                <a href="<?php echo esc_url(site_url('#')); ?>">
                 <div class="sub-leaf blue-leaf">
-                    <p>Books I've Purchased</p>
+                    <p>Learning Resource List</p>
                 </div>
                 </a>
             </div>
@@ -31,20 +31,34 @@
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf">
                 <!-- <p>Mine</p> -->
-                <p>Create</p>
+                <p>Join</p>
             </div>
         </div>
         <div class="sub-leaf-section not-displayed">
             <div class="sub-leaf-wrapper">
                 <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">
                 <div class="sub-leaf blue-leaf">
-                    <p>Creator Dashboard</p>
+                    <p>For Authors and Creators</p>
+                </div>
+                </a>
+            </div>
+            <div class="sub-leaf-wrapper">
+                <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">
+                <div class="sub-leaf blue-leaf">
+                    <p>For Readers</p>
+                </div>
+                </a>
+            </div>
+            <div class="sub-leaf-wrapper">
+                <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">
+                <div class="sub-leaf blue-leaf">
+                    <p>For Ethical Investors</p>
                 </div>
                 </a>
             </div>
             <div class="sub-leaf-wrapper">
                 <div class="sub-leaf blue-leaf">
-                    <p>Creator Services</p>
+                    <p>For Workers</p>
                 </div>
             </div>
         </div>
@@ -53,20 +67,18 @@
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf">
                 <!-- <p>Ours</p> -->
-                <p>Own This Together</p>
+                <p>Govern</p>
             </div>
         </div>
         <div class="sub-leaf-section not-displayed">
             <div class="sub-leaf-wrapper">
-            <a href="<?php echo esc_url(site_url('/coop')); ?>">
                 <div class="sub-leaf blue-leaf">
-                    <p>About the Co-op</p>
+                    <p>Next Election</p>
                 </div>
-            </a>
             </div>
             <div class="sub-leaf-wrapper">
                 <div class="sub-leaf blue-leaf">
-                    <p>For Members</p>
+                    <p>Past Elections</p>
                 </div>
             </div>
         </div>

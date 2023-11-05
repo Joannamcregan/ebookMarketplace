@@ -29,7 +29,7 @@ body{
 .header--top{
     background: #602f32;
     color: #eee2d4;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -66,15 +66,9 @@ header a:hover{
 .woocommerce-products-header a:hover{
     color: #007bff;
 }
-.logo-text{
-    font-size: 18px;
-    text-align: left;
-}
-.mini-logo-section{
-    line-height: 30%;
-    margin: 10 auto;
-    text-align: left;
-    padding-top: 5px;
+.logo-image{
+    max-width: 75px;
+    margin-left: 75px;
 }
 .detail-text{
     font-family: Arial, Helvetica, sans-serif;
@@ -112,7 +106,7 @@ header a:hover{
 .header--main{
     background: #893e43;
     color: #eee2d4;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
     margin: 0 -5px 0 -10px;
     padding: 0.5rem 0.15rem 0.15rem 0.15rem;
 }
@@ -232,11 +226,15 @@ header a:hover{
     border-right: solid #f7c340 5px;
     border-bottom: solid #f7c340 15px;
     border-radius: 0 0 55px 25px;
-    padding: 3rem 0;
+    padding: 20px 15px;
     color: #eee2d4;
 }
-.banner h1, h2, h3{
+.banner h1{
     margin: 10px;
+    font-family: 'caprasimo', serif;
+    font-size: 54;
+    font-weight: 300;
+    text-shadow: 3px 3px #0c6980;
 }
 .page-accent{
     margin: 2em 0 0 0;
@@ -274,14 +272,36 @@ header a:hover{
     width: auto;
 }
 /*text-------------------------------------------------------------------------*/
-h2{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-h3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+h1, h2, h3{
+    font-family: 'georgia', serif;
 }
 a {
     color: #0c6980;
+}
+.special-display-text{
+    font-size: 94;
+    color: #0c698e;
+    text-shadow: 1px 1px white, 5px 7px #f4b10e;
+    font-weight: 300;
+    font-family: 'caprasimo', Georgia, serif;
+}
+@media screen and (max-width: 360px) {
+    .special-display-text{
+        font-size: 84;
+    }
+}
+@media screen and (max-width: 330px) {
+    .special-display-text{
+        font-size: 74;
+    }
+}
+@media screen and (max-width: 300px) {
+    .special-display-text{
+        font-size: 64;
+    }
+}
+.caprasimo-text{
+    font-family: 'caprasimo', Georgia, serif;
 }
 .georgia-text{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -289,8 +309,14 @@ a {
 .sans-text{
     font-family: Arial, Helvetica, sans-serif;
 }
+.light-text{
+    color: #eee2d4;
+}
 .gray-link{
     color: #145566;
+}
+.light-link{
+    color: #afe8f6;
 }
 .paginate-links{
     margin: 10px auto;
@@ -740,13 +766,17 @@ a {
     margin-bottom: 0;
 }
 .own-voices span{
-    background: rgb(255, 246, 198);
+    background: rgba(244, 179, 14, .5);
     border-radius: 5px;
     margin-right: 10px;
     margin-top: 0;
     margin-bottom: 0;
 }
-
+.woocommerce-loop-product__title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-shadow: none;
+}
 .woocommerce-pagination{
     margin-top: 1rem;
 }
@@ -846,7 +876,11 @@ a {
 /* Woocommerce my account styles---------------------------------------------------------------------------- */
 
 .woocommerce-MyAccount-navigation{
-    background: linear-gradient(to right, #e8f5f2, #fffaf4);
+    border: solid 5px #f7c340;
+    border-radius: 20% 0 20% 0;
+    background: #f5d890;
+    max-width: fit-content;
+    padding-right: 20px;
 }
 
 .woocommerce-MyAccount-navigation li{
@@ -855,9 +889,9 @@ a {
 
 @media screen and (max-width: 768px) {
     .woocommerce-MyAccount-navigation{
-        background: linear-gradient(to right, #e8f5f2, #fffaf4);
         padding: 10px;
         margin: 0;
+        max-width: 70%;
     }
 }
 

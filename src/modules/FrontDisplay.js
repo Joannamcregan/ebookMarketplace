@@ -1,15 +1,15 @@
 class FrontDisplay {
 
     constructor() {
-        this.ovals = document.querySelectorAll('.oval');
+        this.leaves = document.querySelectorAll('.leaf');
         this.events();
     }
 
     events(){
-        this.ovals.forEach(oval => {
-            oval.addEventListener('click', e => {
+        this.leaves.forEach(leaf => {
+            leaf.addEventListener('click', e => {
                 e.preventDefault();
-                let parentSection = oval.parentElement.parentElement.querySelector('.sub-oval-section');
+                let parentSection = leaf.parentElement.parentElement.querySelector('.sub-leaf-section');
                 if (parentSection.classList.contains('not-displayed')) {
                     parentSection.classList.remove('not-displayed');
                 } else {

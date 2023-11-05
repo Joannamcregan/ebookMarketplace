@@ -162,6 +162,20 @@ function trigger_custom_post_types() {
 }
 
 add_action('init', 'trigger_custom_post_types');
+/*customize login logo----------------------------------------------------------------------*/
+function ebook_marketplace_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+        background-image: url(<?php echo get_theme_file_uri('/images/TOMC logo.jpg'); ?>);
+        height:100px;
+        width:300px;
+        background-size: 300px 100px;
+        background-repeat: no-repeat;
+        padding-bottom: 10px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'ebook_marketplace_login_logo' );
 
 /*remove sidebar-------------------------------------------------------------------*/
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );

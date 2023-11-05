@@ -1,15 +1,35 @@
-.oval-section{
-    min-height: fit-content;
+.leaves{
+    padding-bottom: 60px;
 }
-.oval-wrapper{
+.leaves h1{
+    padding: 15px 30px 0 30px;
+    text-align: center;
+}
+.leaves-p{
+    padding: 0 30px 15px 30px;
+    color: #602f32;
+    font-size: 22;
+    margin-top: -60px;
+}
+@media screen and (max-width: 330px) {
+    .leaves-p{
+        margin-top: -40px;
+    }
+}
+.leaf-section{
+    min-height: fit-content;    
+    color: #f6ece1;
+    text-decoration: underline;
+}
+.leaf-wrapper{
     width: 52vw;
     height: 205px;
     border-radius: 50% 0;
-    margin: 50px auto 10px auto;
+    margin: 50px auto 20px auto;
     border: solid #f6ece1 10px;
     background: #f6ece1;
 }
-.oval{
+.leaf{
     width: 50vw;
     height: 200px;
     border-radius: 50% 0;
@@ -19,27 +39,24 @@
     align-items: center;
     color: white;
     font-size: 32;
+    padding: 10px;
+    cursor: pointer;
 }
-.orange-oval{
+.orange-leaf{
     background: #e44e2d;
     border: solid 10px #f7c340;
-    text-shadow: 0 0 6px #0c6980;
 }
-.yellow-oval{
-    background: #f7c340;
-    border: solid 10px #0c6980;
-    text-shadow: 0 0 6px #e44e2d;
-    /* margin-left: 2vw; */
-}
-.blue-oval{
+.blue-leaf{
     background: #0c6980;
     border: solid 10px #e44e2d;
-    text-shadow: 0 0 6px #f7c340;
 }
-.sub-oval-section{
+.sub-leaf-section{
     display: flex;
+    width: 95%;
+    margin: auto;
+    flex-wrap: wrap;
 }
-.sub-oval-wrapper{
+.sub-leaf-wrapper{
     width: 31vw;
     height: 155px;
     border-radius: 10px 50%;
@@ -48,7 +65,7 @@
     background: #f6ece1;
     padding: 0 40px 0 0;
 }
-.sub-oval{
+.sub-leaf{
     width: 30vw;
     height: 150px;
     border-radius: 10px 50%;
@@ -59,53 +76,55 @@
     color: white;
     font-size: 26;
     padding: 0 20px;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1000px){
-    .oval-wrapper{
+    .leaf-wrapper{
         width: 65vw;
         height: 155px;
     }
-    .oval{
+    .leaf{
         width: 60vw;
         height: 150px;
     }
-    .sub-oval{
+    .sub-leaf{
         font-size: 24;
     }
 }
 @media screen and (max-width: 750px){
-    .oval-wrapper{
+    .leaf-wrapper{
         width: 80vw;
     }
-    .oval{
+    .leaf{
         width: 75vw;
     }
-    .sub-oval{
+    .sub-leaf{
         font-size: 22;
     }
 }
 @media screen and (max-width: 560px){
-    .sub-oval-wrapper{
+    .sub-leaf-wrapper{
         width: 26vw;
     }
-    .sub-oval{
+    .sub-leaf{
         width: 25vw;
     }
-    .sub-oval{
+    .sub-leaf{
         font-size: 20;
     }
 }
 @media screen and (max-width: 450px){
-    .sub-oval-wrapper{
+    .sub-leaf-wrapper{
         width: 21vw;
     }
-    .sub-oval{
+    .sub-leaf{
         width: 21vw;
     }
 }
 @media screen and (max-width: 300px){
-    .sub-oval{
+    .sub-leaf{
         font-size: 18;
     }
 }

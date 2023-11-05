@@ -17,14 +17,14 @@
 
     $adArray = array();
 
-    if ($ads->have_posts()){
-        while($ads->have_posts()){
-            $ads->the_post();
-            array_push($adArray, $ads);
-        }
-    }
+    // if ($ads->have_posts()){
+    //     while($ads->have_posts()){
+    //         $ads->the_post();
+    //         array_push($adArray, $ads);
+    //     }
+    // }
 
-    wp_reset_postdata();
+    // wp_reset_postdata();
 
     $shorts = new WP_Query( array( 
         'post_type' => 'short', 
@@ -83,8 +83,8 @@
             }
             $shorts->the_post();
             ?><div class="shorts-excerpt-wrapper">
-                <h2 class="centered-text"><a class="gray-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <em><p class="centered-text"><span>a short </span>
+                <h2 class="centered-text"><a class="light-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <em><p class="centered-text light-text"><span>a short </span>
                 <?php $shortCategory = get_the_category();
                 if ($shortCategory){
                     foreach($shortCategory as $cat){
@@ -116,7 +116,7 @@
                         the_excerpt();
                     }                
                 ?></div>
-                <p class="right-text"><a href="<?php the_permalink(); ?>">Read more</a></p>
+                <p class="right-text"><a href="<?php the_permalink(); ?>" class="light-link">Read more</a></p>
             <?php $shortsCounter++; ?>
             </div>
         </div>
