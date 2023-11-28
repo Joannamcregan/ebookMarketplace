@@ -4,9 +4,6 @@ get_header();
     <div class="banner">
         <h1 class="centered-text">Curated Reading Lists</h1>
     </div>
-    <div class="centered-section">
-        <a class="gray-link" href="<?php echo esc_url(site_url('/get-involved'));?>">Want to help us curate lists?</a></li>
-    </div>
     <div class="full-screen">
         <?php while(have_posts()){
             the_post(); ?>

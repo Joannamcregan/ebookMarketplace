@@ -13,6 +13,52 @@ require get_theme_file_path('/inc/search-route.php');
 
 // add_action('rest_api_init', 'marketplace_custom_rest');
 
+
+
+
+
+if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
+	/**
+	 * Register custom block styles
+	 *
+	 * @since Twenty Twenty-Four 1.0
+	 * @return void
+	 */
+	function twentytwentyfour_block_styles() {
+
+		register_block_style(
+			'core/navigation-link',
+			array(
+				'name'         => 'arrow-link',
+				'label'        => __( 'With arrow', 'twentytwentyfour' ),
+				/*
+				 * Styles for the custom arrow nav link block style
+				 */
+				'inline_style' => '
+				.is-style-arrow-link .wp-block-navigation-item__label:after {
+					content: "\2197";
+					padding-inline-start: 0.25rem;
+					vertical-align: middle;
+					text-decoration: none;
+					display: inline-block;
+				}',
+			)
+		);
+		register_block_style(
+			'core/heading',
+			array(
+				'name'         => 'asterisk',
+				'label'        => __( 'With asterisk', 'twentytwentyfour' ),
+			)
+		);
+	}
+endif;
+
+add_action( 'init', 'twentytwentyfour_block_styles' );
+
+
+
+
 $ebookCategoryID = 32; /*ebooks*/
 
 function marketplace_files(){
@@ -98,27 +144,27 @@ function short_custom_post_types() {
 
 add_action('init', 'short_custom_post_types');
 
-/*add Ads post type----------------------------------------------------------*/
-function ad1_custom_post_types() {
-    register_post_type('ad', array(
-        'show_in_rest' => true,
-        'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions'),
-        'rewrite' => array('slug' => 'ads'),
-        'has_archive' => false,
-        'public' => true,
-        'labels' => array(
-            'name' => 'Ad',
-            'add_new_item' => 'Add New Ad',
-            'edit_item' => 'Edit Ad',
-            'all_items' => 'All Ads',
-            'singular_name' => 'Ad'
-        ),
-        'taxonomies' => array( 'category' ),
-        'menu_icon' => 'dashicons-media-document'
-    ));
-}
+// /*add Ads post type----------------------------------------------------------*/
+// function ad1_custom_post_types() {
+//     register_post_type('ad', array(
+//         'show_in_rest' => true,
+//         'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions'),
+//         'rewrite' => array('slug' => 'ads'),
+//         'has_archive' => false,
+//         'public' => true,
+//         'labels' => array(
+//             'name' => 'Ad',
+//             'add_new_item' => 'Add New Ad',
+//             'edit_item' => 'Edit Ad',
+//             'all_items' => 'All Ads',
+//             'singular_name' => 'Ad'
+//         ),
+//         'taxonomies' => array( 'category' ),
+//         'menu_icon' => 'dashicons-media-document'
+//     ));
+// }
 
-add_action('init', 'ad1_custom_post_types');
+// add_action('init', 'ad1_custom_post_types');
 
 
 /*add curations post type----------------------------------------------------------*/
@@ -162,6 +208,29 @@ function trigger_custom_post_types() {
 }
 
 add_action('init', 'trigger_custom_post_types');
+
+//Event Post Type------------------------------------------------------------------------------------
+function event_custom_post_types() {
+    register_post_type('event', array(
+        'supports' => array('title', 'editor', 'excerpt'),
+        'has_archive' => true,
+        'rewrite' => array(
+            'slug' => 'events'
+        ),
+        'public' => true,
+        'labels' => array(
+            'name' => 'Events',
+            'add_new_item' => 'Add New Event',
+            'edit_item' => 'Edit Event',
+            'all_items' => 'All Events',
+            'singular_item' > 'Event'
+        ),
+        'menu_icon' => 'dashicons-calendar'
+    ));
+}
+
+add_action('init', 'event_custom_post_types');
+
 /*customize login logo----------------------------------------------------------------------*/
 function ebook_marketplace_login_logo() { ?>
     <style type="text/css">

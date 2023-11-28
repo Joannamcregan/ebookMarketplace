@@ -2,7 +2,7 @@
 
     get_header(); 
 
-    ?><div class="two-thirds-page">
+    ?><div class="two-thirds-screen">
         <?php while(have_posts()){
             the_post(); ?>
                 <div class="page-accent-alt">                    
@@ -16,6 +16,4 @@
         ?>
     </div>
 
-<?php get_footer(); 
-
-?>
+<?php get_footer(); ?>
