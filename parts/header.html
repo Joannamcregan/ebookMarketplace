@@ -1,0 +1,32 @@
+<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"20px","bottom":"20px"}}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+<div style="
+background: #602f32;
+color: #eee2d4;
+position: sticky;
+top: 0;
+z-index: 1000;
+margin: -10px -5px 0 -10px;
+padding: 5px;
+">
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+	<div style="padding-top:20px;padding-bottom:20px">
+	<!-- wp:group {"align":"wide","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+	<div>
+		<!-- wp:site-logo /-->
+
+		<!-- wp:navigation-link {"label":"New Books","type":"page","id":584,"url":"http://the-book-marketplace.local/new-books/","kind":"post-type"} /-->
+	</div>
+	<!-- /wp:group -->
+	</div>
+<!-- /wp:group -->
+
+	
+    
+    <div class="top-nav-section" id="top-nav-right">
+		<a href="#" class="site-header__menu-trigger fa fa-bars" aria-label="menu" tabindex="-1"><i aria-hidden="true"></i></a>
+		<a href="<?php echo esc_url(site_url()) ?>"><img class="logo-image" src="<?php echo get_theme_file_uri('/images/logo.jpg'); ?>" alt="Trunk of My Car Cooperative" /></a>
+		<a href="<?php echo esc_url(site_url('/search'));?>" class="js-search-trigger " aria-label="search"><i class="fa fa-search" aria-hidden="true"></i></a>          
+		<a class="glowing-text" href="<?php echo wc_get_cart_url(); ?>" aria-label="shopping cart"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a>
+	</div>
+</div>
+<!-- /wp:group -->
