@@ -13,56 +13,12 @@ require get_theme_file_path('/inc/search-route.php');
 
 // add_action('rest_api_init', 'marketplace_custom_rest');
 
-
-
-
-
-if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
-	/**
-	 * Register custom block styles
-	 *
-	 * @since Twenty Twenty-Four 1.0
-	 * @return void
-	 */
-	function twentytwentyfour_block_styles() {
-
-		register_block_style(
-			'core/navigation-link',
-			array(
-				'name'         => 'arrow-link',
-				'label'        => __( 'With arrow', 'twentytwentyfour' ),
-				/*
-				 * Styles for the custom arrow nav link block style
-				 */
-				'inline_style' => '
-				.is-style-arrow-link .wp-block-navigation-item__label:after {
-					content: "\2197";
-					padding-inline-start: 0.25rem;
-					vertical-align: middle;
-					text-decoration: none;
-					display: inline-block;
-				}',
-			)
-		);
-		register_block_style(
-			'core/heading',
-			array(
-				'name'         => 'asterisk',
-				'label'        => __( 'With asterisk', 'twentytwentyfour' ),
-			)
-		);
-	}
-endif;
-
-add_action( 'init', 'twentytwentyfour_block_styles' );
-
-
-
-
 $ebookCategoryID = 32; /*ebooks*/
 
 function marketplace_files(){
     wp_enqueue_script('main-ebook-marketplace-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
+    wp_enqueue_style('buddypress', get_stylesheet_directory_uri() . '/css/buddypress.css', false, '', 'all');
+    wp_enqueue_style('bbpress', get_stylesheet_directory_uri() . '/css/bbpress.css', false, '', 'all');
     wp_enqueue_style('book-display-styles', get_stylesheet_directory_uri() . '/css/book-display-styles.css', false, '', 'all');
     wp_enqueue_style('general-styles', get_stylesheet_directory_uri() . '/css/general-styles.css', false, '', 'all');
     wp_enqueue_style('front-styles', get_stylesheet_directory_uri() . '/css/front-styles.css', false, '', 'all');
@@ -143,29 +99,6 @@ function short_custom_post_types() {
 }
 
 add_action('init', 'short_custom_post_types');
-
-// /*add Ads post type----------------------------------------------------------*/
-// function ad1_custom_post_types() {
-//     register_post_type('ad', array(
-//         'show_in_rest' => true,
-//         'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions'),
-//         'rewrite' => array('slug' => 'ads'),
-//         'has_archive' => false,
-//         'public' => true,
-//         'labels' => array(
-//             'name' => 'Ad',
-//             'add_new_item' => 'Add New Ad',
-//             'edit_item' => 'Edit Ad',
-//             'all_items' => 'All Ads',
-//             'singular_name' => 'Ad'
-//         ),
-//         'taxonomies' => array( 'category' ),
-//         'menu_icon' => 'dashicons-media-document'
-//     ));
-// }
-
-// add_action('init', 'ad1_custom_post_types');
-
 
 /*add curations post type----------------------------------------------------------*/
 function curations_custom_post_types() {
