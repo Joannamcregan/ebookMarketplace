@@ -1,7 +1,7 @@
 <?php get_header();
 
 ?><main>
-    <div class="banner"><h1 class="centered-text">Browse Ebooks by Genre</h1></div>
+    <div class="banner"><h1 class="centered-text">Browse Books by Genre</h1></div>
     <br>
     <br>
     <div class="two-thirds-screen generic-content">

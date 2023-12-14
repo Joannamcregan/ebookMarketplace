@@ -37,6 +37,7 @@
 	margin-bottom: 20px;
 	overflow: hidden;
 	line-height: 18px;
+    font-size: 16;
 }
 
 #bbpress-forums a,
@@ -54,6 +55,7 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+    font-size: 16;
 }
 
 #bbpress-forums hr {
@@ -115,6 +117,7 @@ body.reply-edit .reply {
 	background: none;
 	margin: 0;
 	list-style: none;
+    font-size: 16;
 }
 
 #bbpress-forums ul.bbp-lead-topic,
@@ -465,11 +468,6 @@ div.bbp-breadcrumb {
 	float: left;
 }
 
-div.bbp-breadcrumb,
-div.bbp-topic-tags {
-	font-size: 14px;
-}
-
 #bbpress-forums div.bbp-breadcrumb p,
 #bbpress-forums div.bbp-topic-tags p {
 	margin: 0 0 10px 0;
@@ -607,6 +605,7 @@ td.bbp-topic-counts {
 	margin: 5px 0;
 	padding: 0;
 	word-wrap: break-word;
+    font-size: 16;
 }
 
 #bbpress-forums p.bbp-topic-meta span {
@@ -809,6 +808,7 @@ p.form-allowed-tags {
 #bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content {
 	width: 100%;
 	margin: 0;
+    font-size: 16;
 }
 
 #bbpress-forums div.bbp-the-content-wrapper table,
@@ -1493,12 +1493,6 @@ body.my-account #bbpress-forums {
 		margin-left: 0;
 		word-wrap: break-word;
 	}
-
-	#bbpress-forums div.bbp-forum-title h3,
-	#bbpress-forums div.bbp-topic-title h3,
-	#bbpress-forums div.bbp-reply-title h3 {
-		font-size: 14px;
-	}
 }
 
 /* =Standard Mobile Portrait
@@ -1549,11 +1543,6 @@ body.my-account #bbpress-forums {
 		margin-top: 7px;
 	}
 
-	#bbpress-forums li.bbp-header,
-	#bbpress-forums li.bbp-footer {
-		font-size: 14px;
-	}
-
 	#bbpress-forums li.bbp-header div.bbp-search-author,
 	#bbpress-forums li.bbp-header div.bbp-topic-author,
 	#bbpress-forums li.bbp-header div.bbp-reply-author {
@@ -1592,12 +1581,6 @@ body.my-account #bbpress-forums {
 	#bbpress-forums input#bbp_topic_title,
 	#bbpress-forums input#bbp_topic_tags {
 		width: 95%;
-	}
-
-	#bbpress-forums div.bbp-forum-title h3,
-	#bbpress-forums div.bbp-topic-title h3,
-	#bbpress-forums div.bbp-reply-title h3 {
-		font-size: 14px;
 	}
 }
 
@@ -1668,11 +1651,5 @@ body.my-account #bbpress-forums {
 	#bbpress-forums div.bbp-reply-author img.avatar {
 		width: 40px;
 		height: auto;
-	}
-
-	#bbpress-forums div.bbp-forum-title h3,
-	#bbpress-forums div.bbp-topic-title h3,
-	#bbpress-forums div.bbp-reply-title h3 {
-		font-size: 14px;
 	}
 }

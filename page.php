@@ -1,11 +1,14 @@
 <?php get_header();
 
 ?><main>
-    <div class="generic-content full-screen">
+<?php while ( have_posts() ) :
+the_post();
+    ?><div class="generic-content full-screen">
         <?php wp_reset_postdata();
         the_content(); 
         wp_link_pages();?>
     </div>
-</main>
+<?php endwhile;
+?></main>
 
 <?php get_footer(); ?>

@@ -24,15 +24,11 @@
   <nav class="main-nav" aria-label="main navigation bar">  
     <div class="nav-container site-header__menu group">    
       <a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a>
-      <a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a>
-      <!-- <a href="<?php echo esc_url(site_url('/audiobook-genres'));?>">Audiobook Genres</a>   
-      <a href="<?php echo esc_url(site_url('/diverse-books'));?>">Diverse Books</a>
-      <a href="<?php echo esc_url(site_url('/free-shorts'));?>">Free Short Reads</a>
-      <a href="<?php echo esc_url(site_url('/merch'));?>">Signed Books and Merch</a>    
-      <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a> -->
-      <a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Ebooks</a>
-      <a href="#">Events</a>
-      <a href="#">Services</a>
+      <a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a> 
+      <!-- <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a>  -->
+      <a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a>
+      <a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a>
+      <a href="<?php echo esc_url(site_url('/services'));?>">Services</a>
       <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Creator Dashboard</a>
       <a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a>
     </div>
