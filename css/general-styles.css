@@ -69,7 +69,7 @@ header a:hover{
     padding: 10px 20px 0 0;
 }
 .woocommerce-products-header a:hover{
-    color: #007bff;
+    color: #0c698e;
 }
 .logo-image{
     max-width: 120px;
@@ -283,6 +283,52 @@ header a:hover{
     padding: 0.5em 0 0 0;
     background: #e3caab;
 }
+.page-accent-profile{
+    margin: 2em 0 2em 0;
+    padding: 0.5em 0 0 0;
+    background: #e3caab;
+    border-left: solid 10px #e3caab;
+    border-right: solid 10px #e3caab;
+    border-radius: 10px;
+}
+.page-accent-blue{
+    margin: 2em auto 0 auto;
+    padding: 0.5em 0 0 0;
+    background: #c1d6dc;
+    border-left: solid 10px #c1d6dc;
+    border-right: solid 10px #c1d6dc;
+    border-radius: 10px;
+    max-width: 70%;
+}
+.page-accent-blue-container{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x:scroll;
+    padding: 1em 1em 0em 1em;
+    width: auto;
+    align-content: center;
+    background: #edf6f9;
+    border-bottom: solid 10px #c1d6dc;
+}
+.page-accent-orange{
+    margin: 2em auto 0 auto;
+    padding: 0.5em 0 0 0;
+    background: #e3b3a9;
+    border-left: solid 10px #e3b3a9;
+    border-right: solid 10px #e3b3a9;
+    border-radius: 10px;
+    max-width: 70%;
+}
+.page-accent-orange-container{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x:scroll;
+    padding: 1em 1em 0em 1em;
+    width: auto;
+    align-content: center;
+    background: #f7e5e1;
+    border-bottom: solid 10px #e3b3a9;
+}
 .centered-section{
     text-align: center;
     margin: 2rem auto 0 auto;
@@ -446,9 +492,9 @@ a {
     width: 80%;
 }
 #basic-search-submit{
-    background: #006459;
+    background: #0c698e;
     color: white;
-    border: #006459;
+    border: #0c698e;
     border-radius: 10px;
     padding: 3px 10px;
     margin-left: 5px;

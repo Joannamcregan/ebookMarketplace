@@ -108,7 +108,7 @@
     if ($autobiographies->have_posts()){
         echo '<div class="page-accent-front">';
             echo '<a class="gray-link" href="/product-category/nonfiction/autobiography"><h2 class="left-text sans-text">Autobiographies</h2></a>';
-            ?> <div class="book-sections-container"> 
+            ?><div class="book-sections-container"> 
                 <?php while ($autobiographies -> have_posts()){
                     $autobiographies->the_post();
                     ?><div class="book-section--small">

@@ -33,7 +33,7 @@ while(have_posts()){
 
         if ($relatedBooks->have_posts()){
             echo '<div class="page-accent">';
-                echo '<h3 class="left-text"> E-Books by ' . get_the_title() . "</h3>";
+                echo '<h3 class="left-text"> Books by ' . get_the_title() . "</h3>";
                 ?> <div class="book-sections-container"> 
                 <?php while ($relatedBooks -> have_posts()){
                     $relatedBooks->the_post();

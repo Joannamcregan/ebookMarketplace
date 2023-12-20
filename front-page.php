@@ -6,23 +6,22 @@
     <!-- <h1 class='special-display-text'>the self-publishing<br/>(r)evolution</h1> -->
     <!-- <p class="leaves-p centered-text">A <s>self</s> community-publishing platform <strong>owned by people who love and create books.</strong></p> -->
     <div class='logo-image-large-container'>
-        <img class="logo-image-large" src="<?php echo get_theme_file_uri('/images/logo-large-alt-2.png'); ?>" alt="Trunk of My Car Cooperative" />
+        <img class="logo-image-large" src="<?php echo get_theme_file_uri('/images/logo-large-alt.png'); ?>" alt="Trunk of My Car Cooperative" />
     </div>
     <h1 class="larger-heading blue-text">self-publishing (r)evolution</h1>
     <!-- <p class="leaves-p centered-text">A self-publishing platform <strong>owned by a community of people who love and create books.</strong> -->
     <!-- <br/>Trunk of My Car Cooperative is on a mission to <strong>collectively redistribute resources from those who take to those who create.</strong></p> -->
     <!-- <br/>We're on a mission to <strong>collectively redistribute resources from those who take to those who create.</strong></p> -->
-    <p class="leaves-p centered-text">We're on a mission to collectively redistribute resources from those who take to those who create with self-publishing platform <strong>owned by a community of people who love and create books.</strong></p>
+    <p class="leaves-p centered-text">We're on a mission to collectively redistribute resources from those who take to those who create with a self-publishing platform <strong>owned by a community of people who love and create books.</strong></p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf">
-                <!-- <p>Theirs</p> -->
                 <p>Read</p>
             </div>
         </div>
         <div class="sub-leaf-section not-displayed">
             <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/genres'));?>">
+                <a href="<?php echo esc_url(site_url('/new-books'));?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Browse New Books</p>
                 </div>
@@ -40,7 +39,6 @@
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf">
-                <!-- <p>Mine</p> -->
                 <p>Create</p>
             </div>
         </div>
@@ -53,17 +51,18 @@
                 </a>
             </div>
             <div class="sub-leaf-wrapper">
+                <a href="<?php echo esc_url(site_url('/services'));?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Creator Services</p>
                 </div>
+                </a>
             </div>
         </div>
     </div>
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf">
-                <!-- <p>Ours</p> -->
-                <p>Cooperate</p>
+                <p>Own</p>
             </div>
         </div>
         <div class="sub-leaf-section not-displayed">
@@ -75,9 +74,11 @@
             </a>
             </div>
             <div class="sub-leaf-wrapper">
+                <a href="<?php echo esc_url(site_url('/events'));?>">
                 <div class="sub-leaf blue-leaf">
-                    <p>For Members</p>
+                    <p>Events</p>
                 </div>
+                </a>
             </div>
         </div>
     </div>

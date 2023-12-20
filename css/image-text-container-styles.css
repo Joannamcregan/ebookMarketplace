@@ -9,6 +9,22 @@
     margin: 0 2em 2em 0;
 }
 
+.image-text--container-alt{
+    min-height: 220px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+}
+.image-text--image-alt {
+    max-height: 200px;
+    border-radius: 5px;
+    float: left;
+    margin: 0 2em 2em 0;
+}
+.image-text--description{
+    padding: 10px;
+}
+
 @media screen and (max-width: 1024px) {
     .image-text--container{
         margin: 0 5vw 0 5vw;
@@ -24,5 +40,15 @@
         display: block;
         margin: 0 auto 2em auto;
         float: none;
+    }
+    .image-text--image-alt {
+        max-height: auto;
+        border-radius: 5px;
+        display: block;
+        margin: 0 auto 2em auto;
+        float: none;
+    }
+    .image-text--description{
+        display: block;
     }
 }

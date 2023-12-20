@@ -60,18 +60,11 @@ $allowed_html = array(
 <!-- take users with certain role assignments to the backend -->
 <?php $user = wp_get_current_user();
 if (in_array( 'administrator', (array) $user->roles )) {
-    ?><p>Manage the site <a href="<?php echo esc_url(site_url('/wp-admin'));?>">in the backend.</a></p><?php
-} else if (( 
-    in_array( 'contributor', (array) $user->roles ) 
-    or in_array( 'editor', (array) $user->roles ) 
-    ) and in_array( 'vendor', (array) $user->roles ) ) {
-    ?><p>Manage products or curate bookshelves <a href="<?php echo esc_url(site_url('/wp-admin'));?>">in the backend.</a></p><?php
-} else if (
-    in_array( 'contributor', (array) $user->roles ) 
-    or in_array( 'editor', (array) $user->roles )) {
-    ?><p>Curate bookshelves <a href="<?php echo esc_url(site_url('/wp-admin'));?>">in the backend.</a></p><?php
+    ?><p>Manage the site, curate bookshelves, or post/update offers and needs <a href="<?php echo esc_url(site_url('/wp-admin'));?>">in the backend.</a></p><?php
 } else if (in_array( 'vendor', (array) $user->roles ) ) {
-    ?><p>Manage products <a href="<?php echo esc_url(site_url('/wp-admin'));?>">in the backend.</a></p><?php
+    ?><p>Manage products, curate bookshelves, or post/update offers and needs <a href="<?php echo esc_url(site_url('/wp-admin'));?>">in the backend.</a></p><?php
+} else if (is_user_logged_in()) {
+	?><p>Curate bookshelves or post/update offers and needs <a href="<?php echo esc_url(site_url('/wp-admin'));?>">in the backend.</a></p><?php
 }
 ?>
 <!-- ------------------------------------------------------ -->

@@ -602,7 +602,7 @@ body.activity-permalink #buddypress div.activity-comments > ul {
 --------------------------------------------------------------*/
 #buddypress div.dir-search {
 	float: right;
-	margin: -39px 0 0 0;
+	margin: 0 0 0 0;
 }
 
 #buddypress div.dir-search input[type="text"],

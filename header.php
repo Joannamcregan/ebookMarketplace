@@ -26,10 +26,10 @@
       <a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a>
       <a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a> 
       <!-- <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a>  -->
-      <a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a>
+      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a><?php } ?>
       <a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a>
       <a href="<?php echo esc_url(site_url('/services'));?>">Services</a>
-      <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Creator Dashboard</a>
+      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Creator Dashboard</a><?php } ?>
       <a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a>
     </div>
   </nav>

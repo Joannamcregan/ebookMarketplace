@@ -26,7 +26,6 @@ function marketplace_files(){
     wp_enqueue_style('community-members-styles', get_stylesheet_directory_uri() . '/css/community-members-styles.css', false, '', 'all');
     wp_enqueue_style('image-text-container-styles', get_stylesheet_directory_uri() . '/css/image-text-container-styles.css', false, '', 'all');
     wp_enqueue_style('comment-styles', get_stylesheet_directory_uri() . '/css/comment-styles.css', false, '', 'all');
-    wp_enqueue_style('shorts-styles', get_stylesheet_directory_uri() . '/css/shorts-styles.css', false, '', 'all');
 
     wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
         'root_url' => get_site_url()
@@ -77,28 +76,6 @@ function author_profile_custom_post_types() {
 }
 
 add_action('init', 'author_profile_custom_post_types');
-
-/*add shorts post type----------------------------------------------------------*/
-function short_custom_post_types() {
-    register_post_type('short', array(
-        'show_in_rest' => true,
-        'supports' => array('title', 'editor', 'author', 'thumbnail', 'revisions', 'excerpt'),
-        'rewrite' => array('slug' => 'shorts'),
-        'has_archive' => false,
-        'public' => true,
-        'labels' => array(
-            'name' => 'Shorts',
-            'add_new_item' => 'Add New Short',
-            'edit_item' => 'Edit Short',
-            'all_items' => 'All Shorts',
-            'singular_name' => 'Short'
-        ),
-        'taxonomies' => array( 'category' ),
-        'menu_icon' => 'dashicons-media-document'
-    ));
-}
-
-add_action('init', 'short_custom_post_types');
 
 /*add curations post type----------------------------------------------------------*/
 function curations_custom_post_types() {
@@ -163,6 +140,72 @@ function event_custom_post_types() {
 }
 
 add_action('init', 'event_custom_post_types');
+
+//Outside Offer Post Type------------------------------------------------------------------------------------
+function outside_offer_custom_post_types() {
+    register_post_type('outside offer', array(
+        'supports' => array('title', 'editor', 'excerpt'),
+        'has_archive' => true,
+        'rewrite' => array(
+            'slug' => 'outside-offers'
+        ),
+        'public' => true,
+        'labels' => array(
+            'name' => 'Outside Offers',
+            'add_new_item' => 'Add New Outside Offer',
+            'edit_item' => 'Edit Outside Offer',
+            'all_items' => 'All Outside Offers',
+            'singular_item' > 'Outside Offer'
+        ),
+        'menu_icon' => 'dashicons-external'
+    ));
+}
+
+add_action('init', 'outside_offer_custom_post_types');
+
+//Free Offer Post Type------------------------------------------------------------------------------------
+function free_offer_custom_post_types() {
+    register_post_type('free offer', array(
+        'supports' => array('title', 'editor', 'excerpt'),
+        'has_archive' => true,
+        'rewrite' => array(
+            'slug' => 'free-offers'
+        ),
+        'public' => true,
+        'labels' => array(
+            'name' => 'Free Offers',
+            'add_new_item' => 'Add New Free Offer',
+            'edit_item' => 'Edit Free Offer',
+            'all_items' => 'All Free Offers',
+            'singular_item' > 'Free Offer'
+        ),
+        'menu_icon' => 'dashicons-smiley'
+    ));
+}
+
+add_action('init', 'free_offer_custom_post_types');
+
+//Need Post Type------------------------------------------------------------------------------------
+function need_custom_post_types() {
+    register_post_type('need', array(
+        'supports' => array('title', 'editor', 'excerpt'),
+        'has_archive' => true,
+        'rewrite' => array(
+            'slug' => 'needs'
+        ),
+        'public' => true,
+        'labels' => array(
+            'name' => 'Needs',
+            'add_new_item' => 'Add New Need',
+            'edit_item' => 'Edit Needs',
+            'all_items' => 'All Needs',
+            'singular_item' > 'Need'
+        ),
+        'menu_icon' => 'dashicons-heart'
+    ));
+}
+
+add_action('init', 'need_custom_post_types');
 
 /*customize login logo----------------------------------------------------------------------*/
 function ebook_marketplace_login_logo() { ?>
