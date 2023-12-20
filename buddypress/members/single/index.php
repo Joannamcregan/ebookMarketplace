@@ -37,87 +37,83 @@
 
 	</div><!-- #item-header -->
 
-    <div class="generic-content">
+    <div id="item-nav">
+        <div class="item-list-tabs no-ajax" id="object-nav" aria-label="<?php esc_attr_e( 'Member primary navigation', 'buddypress' ); ?>" role="navigation">
+            <ul>
 
-        <div id="item-nav">
-            <div class="item-list-tabs no-ajax" id="object-nav" aria-label="<?php esc_attr_e( 'Member primary navigation', 'buddypress' ); ?>" role="navigation">
-                <ul>
+                <?php bp_get_displayed_user_nav(); ?>
 
-                    <?php bp_get_displayed_user_nav(); ?>
+                <?php
 
-                    <?php
+                /**
+                 * Fires after the display of member options navigation.
+                 *
+                 * @since 1.2.4
+                 */
+                do_action( 'bp_member_options_nav' );?>
 
-                    /**
-                     * Fires after the display of member options navigation.
-                     *
-                     * @since 1.2.4
-                     */
-                    do_action( 'bp_member_options_nav' ); ?>
+            </ul>
+        </div>
+    </div><!-- #item-nav -->
 
-                </ul>
-            </div>
-        </div><!-- #item-nav -->
+    <div id="item-body">
 
-        <div id="item-body">
+        <?php
 
-            <?php
+        /**
+         * Fires before the display of member body content.
+         *
+         * @since 1.2.0
+         */
+        do_action( 'bp_before_member_body' );
 
-            /**
-             * Fires before the display of member body content.
-             *
-             * @since 1.2.0
-             */
-            do_action( 'bp_before_member_body' );
+        if ( bp_is_user_front() ) :
+            bp_displayed_user_front_template_part();
 
-            // if ( bp_is_user_front() ) :
-            // 	bp_displayed_user_front_template_part();
-
-            // elseif ( bp_is_user_activity() ) :
-            // 	bp_get_template_part( 'members/single/activity' );
-
-            if ( bp_is_user_activity() ) :
+        elseif ( bp_is_user_activity() ) :
             bp_get_template_part( 'members/single/activity' );
 
-            elseif ( bp_is_user_blogs() ) :
-                bp_get_template_part( 'members/single/blogs'    );
+        elseif ( bp_is_user_activity() ) :
+        bp_get_template_part( 'members/single/activity' );
 
-            elseif ( bp_is_user_friends() ) :
-                bp_get_template_part( 'members/single/friends'  );
+        elseif ( bp_is_user_blogs() ) :
+            bp_get_template_part( 'members/single/blogs'    );
 
-            elseif ( bp_is_user_groups() ) :
-                bp_get_template_part( 'members/single/groups'   );
+        elseif ( bp_is_user_friends() ) :
+            bp_get_template_part( 'members/single/friends'  );
 
-            elseif ( bp_is_user_messages() ) :
-                bp_get_template_part( 'members/single/messages' );
+        elseif ( bp_is_user_groups() ) :
+            bp_get_template_part( 'members/single/groups'   );
 
-            elseif ( bp_is_user_profile() ) :
-                bp_get_template_part( 'members/single/profile'  );
+        elseif ( bp_is_user_messages() ) :
+            bp_get_template_part( 'members/single/messages' );
 
-            elseif ( bp_is_user_notifications() ) :
-                bp_get_template_part( 'members/single/notifications' );
+        elseif ( bp_is_user_profile() ) :
+            bp_get_template_part( 'members/single/profile'  );
 
-            elseif ( bp_is_user_members_invitations() ) :
-                bp_get_template_part( 'members/single/invitations' );
+        elseif ( bp_is_user_notifications() ) :
+            bp_get_template_part( 'members/single/notifications' );
 
-            elseif ( bp_is_user_settings() ) :
-                bp_get_template_part( 'members/single/settings' );
+        elseif ( bp_is_user_members_invitations() ) :
+            bp_get_template_part( 'members/single/invitations' );
 
-            //If nothing sticks, load a generic template
-            else :
-                bp_get_template_part( 'members/single/plugins'  );
+        elseif ( bp_is_user_settings() ) :
+            bp_get_template_part( 'members/single/settings' );
 
-            endif;
+        //If nothing sticks, load a generic template
+        else :
+            bp_get_template_part( 'members/single/plugins'  );
 
-            /**
-             * Fires after the display of member body content.
-             *
-             * @since 1.2.0
-             */
-            do_action( 'bp_after_member_body' ); ?>
+        endif;
 
-        </div><!-- #item-body -->
+        /**
+         * Fires after the display of member body content.
+         *
+         * @since 1.2.0
+         */
+        do_action( 'bp_after_member_body' ); ?>
 
-    </div>
+    </div><!-- #item-body -->
 
 	<?php
 

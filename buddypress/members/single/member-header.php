@@ -17,7 +17,6 @@
  * @since 1.2.0
  */
 do_action( 'bp_before_member_header' ); ?>
-
 <div id="item-header-avatar">
 	<a href="<?php bp_displayed_user_link(); ?>">
 
@@ -27,6 +26,8 @@ do_action( 'bp_before_member_header' ); ?>
 </div><!-- #item-header-avatar -->
 
 <div id="item-header-content">
+
+	<h1><?php echo bp_core_get_username(bp_displayed_user_id()); ?></h1>
 
 	<?php if ( bp_is_active( 'activity' ) && bp_activity_do_mentions() ) : ?>
 		<h2 class="user-nicename">@<?php bp_displayed_user_mentionname(); ?></h2>

@@ -153,3 +153,5 @@
 	<?php endwhile; endif; ?>
 
 </div><!-- #buddypress -->
+
+<?php get_footer(); ?>
