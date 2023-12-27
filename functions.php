@@ -66,7 +66,7 @@ function author_profile_custom_post_types() {
         'public' => true,
         'labels' => array(
             'name' => 'Author-Profiles',
-            'add_new_item' => 'Add New Author-Profile',
+            'add_new' => 'Add New Author-Profile',
             'edit_item' => 'Edit Author-Profile',
             'all_items' => 'All Author-Profiles',
             'singular_name' => 'Author-Profile'
@@ -81,12 +81,14 @@ add_action('init', 'author_profile_custom_post_types');
 function curations_custom_post_types() {
     register_post_type('curations', array(
         'show_in_rest' => true,
-        'supports' => array('title', 'editor', 'author'),
+        'supports' => array('title', 'editor', 'author', 'custom fields'),
         'rewrite' => array('slug' => 'bookshelves'),
-        'has_archive' => true,
+        'has_archive' => false,
         'public' => true,
+        'menu_position' => 1,
         'labels' => array(
             'name' => 'Bookshelves',
+            'add_new' => 'Add New Bookshelf',
             'add_new_item' => 'Add New Bookshelf',
             'edit_item' => 'Edit Bookshelf',
             'all_items' => 'All Bookshelves',
@@ -105,10 +107,10 @@ function trigger_custom_post_types() {
         'rewrite' => array('slug' => 'triggers'),
         'has_archive' => false,
         'public' => true,
-        'public' => true,
+        'menu_position' => 0,
         'labels' => array(
             'name' => 'Triggers',
-            'add_new_item' => 'Add New Trigger',
+            'add_new' => 'Add New Trigger',
             'edit_item' => 'Edit Trigger',
             'all_items' => 'All Triggers',
             'singular_name' => 'Trigger'
@@ -128,9 +130,10 @@ function event_custom_post_types() {
             'slug' => 'events'
         ),
         'public' => true,
+        'menu_position' => 0,
         'labels' => array(
             'name' => 'Events',
-            'add_new_item' => 'Add New Event',
+            'add_new' => 'Add New Event',
             'edit_item' => 'Edit Event',
             'all_items' => 'All Events',
             'singular_item' > 'Event'
@@ -150,9 +153,10 @@ function outside_offer_custom_post_types() {
             'slug' => 'outside-offers'
         ),
         'public' => true,
+        'menu_position' => 0,
         'labels' => array(
             'name' => 'Outside Offers',
-            'add_new_item' => 'Add New Outside Offer',
+            'add_new' => 'Add New Outside Offer',
             'edit_item' => 'Edit Outside Offer',
             'all_items' => 'All Outside Offers',
             'singular_item' > 'Outside Offer'
@@ -172,9 +176,10 @@ function free_offer_custom_post_types() {
             'slug' => 'free-offers'
         ),
         'public' => true,
+        'menu_position' => 0,
         'labels' => array(
             'name' => 'Free Offers',
-            'add_new_item' => 'Add New Free Offer',
+            'add_new' => 'Add New Free Offer',
             'edit_item' => 'Edit Free Offer',
             'all_items' => 'All Free Offers',
             'singular_item' > 'Free Offer'
@@ -194,9 +199,10 @@ function need_custom_post_types() {
             'slug' => 'needs'
         ),
         'public' => true,
+        'menu_position' => 0,
         'labels' => array(
             'name' => 'Needs',
-            'add_new_item' => 'Add New Need',
+            'add_new' => 'Add New Need',
             'edit_item' => 'Edit Needs',
             'all_items' => 'All Needs',
             'singular_item' > 'Need'
