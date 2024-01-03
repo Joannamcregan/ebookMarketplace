@@ -4,7 +4,16 @@
 }
 .logo-image-large{
     margin: 50px auto 0 auto;
-    max-width: 700px;;
+    max-width: 700px;
+}
+.sub-logo{
+    max-width: 700px;
+    margin: 10px auto;
+}
+.sub-logo-2{
+    max-width: 700px;
+    margin: 10px auto;
+    display: none;
 }
 .leaves{
     padding-bottom: 60px;
@@ -107,6 +116,12 @@
     .sub-leaf{
         font-size: 22;
     }
+    .logo-image-large{
+        max-width: 500px;
+    }
+    .sub-logo{
+        max-width: 500px;
+    }
 }
 @media screen and (max-width: 560px){
     .sub-leaf-wrapper{
@@ -118,6 +133,12 @@
     .sub-leaf{
         font-size: 20;
     }
+    .logo-image-large{
+        max-width: 400px;
+    }
+    .sub-logo{
+        max-width: 400px;
+    }
 }
 @media screen and (max-width: 450px){
     .sub-leaf-wrapper{
@@ -126,9 +147,29 @@
     .sub-leaf{
         width: 21vw;
     }
+    .logo-image-large{
+        max-width: 300px;
+    }
+    .sub-logo{
+        display: none;
+    }
+    .sub-logo-2{
+        max-width: 280px;
+        display: block;
+    }
 }
 @media screen and (max-width: 300px){
     .sub-leaf{
         font-size: 18;
+    }
+    .logo-image-large{
+        max-width: 200px;
+    }
+    .sub-logo{
+        display: none;
+    }
+    .sub-logo-2{
+        max-width: 200px;
+        display: block;
     }
 }

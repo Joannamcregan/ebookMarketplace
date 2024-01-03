@@ -6,7 +6,8 @@
 /*body---------------------------------------------------------------------------------*/
 body{
     background: #eee2d4;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-family: Nunito Sans, sans-serif;
     /* padding-top: 0.5rem; */
     margin-left: 0px;
     margin-right: 0px;
@@ -50,6 +51,10 @@ header a:hover{
     text-decoration: none;
 }
 .header--main a{
+    color: #eee2d4;
+    text-decoration: none;
+}
+.header--sub a{
     color: #eee2d4;
     text-decoration: none;
 }
@@ -115,6 +120,13 @@ header a:hover{
     margin: 0 -5px 0 -10px;
     padding: 0.5rem 0.15rem 0.15rem 0.15rem;
 }
+.header--sub{
+    background: #295864;
+    color: #eee2d4;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    margin: 0 -5px 0 -10px;
+    padding: 0.5rem 0.15rem 0.15rem 0.15rem;
+}
 /*nav bar----------------------------------------------------------------------*/
 .top-nav-container{
     display: flex;
@@ -152,7 +164,7 @@ header a:hover{
         max-width: 120px;
         margin-left: 50px;
     }
-    .header--main{
+    .header--main, .header--sub{
         height: 0;
     }
     .site-header__menu {
@@ -166,7 +178,7 @@ header a:hover{
         padding-bottom: 0;
         top: 0;
       }
-      .header--main{
+      .header--main, .header--sub{
         visibility: visible;
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -244,6 +256,31 @@ header a:hover{
     font-size: 54;
     font-weight: 300;
     text-shadow: 3px 3px #0c6980;
+}
+@media screen and (max-width: 480px){
+    .banner h1{
+        font-size: 50;
+    }
+}
+@media screen and (max-width: 400px){
+    .banner h1{
+        font-size: 46;
+    }
+}
+@media screen and (max-width: 360px){
+    .banner h1{
+        font-size: 42;
+    }
+}
+@media screen and (max-width: 320px){
+    .banner h1{
+        font-size: 36;
+    }
+}
+@media screen and (max-width: 280px){
+    .banner h1{
+        font-size: 32;
+    }
 }
 .page-accent{
     margin: 2em 0 0 0;
@@ -328,6 +365,13 @@ header a:hover{
     align-content: center;
     background: #f7e5e1;
     border-bottom: solid 10px #e3b3a9;
+}
+.paragraph-accent{
+    padding: 10px 20px;
+    border: solid #e3caab 5px;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 30px auto;
 }
 .centered-section{
     text-align: center;
@@ -622,9 +666,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    /* background: linear-gradient(to right, #00473f, #4e4338); */
-    background: #df3c16;
-    /* border: solid #00473f 2px; */
+    background: #893e43;
     border-right: solid #893e43 10px;
     border-bottom: solid #893e43 10px;
     border-top: solid #893e43 5px;
@@ -642,13 +684,22 @@ a {
 }
 .menu-overlay-list{
     margin: 10px auto 10px auto;
+    background: #df3c16;
+    padding: 5px 5px 5px 20px;
+    border-radius: 5px 15px;
 }
-.menu-overlay-list li{
+.menu-overlay-list-1{
+    margin: 10px auto 10px auto;
+    background: #295864;
+    padding: 5px 5px 5px 20px;
+    border-radius: 5px 15px;
+}
+.menu-overlay-list li, .menu-overlay-list-1 li{
     list-style: none;
     margin: 5px 0 5px 0;
     padding: 5px 5px 5px 0;
 }
-.menu-overlay-list a{
+.menu-overlay-list a, .menu-overlay-list-1 a{
     color: #eee2d4;
 }
 .menu-overlay__close{
