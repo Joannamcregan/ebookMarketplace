@@ -6,7 +6,8 @@
     <script src="https://kit.fontawesome.com/9d40013081.js" crossorigin="anonymous"></script>
     <title>Trunk of My Car</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -25,12 +26,22 @@
     <div class="nav-container site-header__menu group">    
       <a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a>
       <a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a> 
-      <!-- <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a>  -->
-      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a><?php } ?>
-      <a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a>
-      <a href="<?php echo esc_url(site_url('/services'));?>">Services</a>
-      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Creator Dashboard</a><?php } ?>
-      <a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a>
+      <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a> 
+      <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">My Bookshelves</a> 
+      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Book Downloads</a><?php } ?>
+      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Vendor Portal</a><?php } ?>
+    </div>
+  </nav>
+</div>
+<div class="header--sub">      
+  <nav class="main-nav" aria-label="main navigation bar">  
+    <div class="nav-container site-header__menu group">    
+      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Profile</a><?php } ?>
+      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Groups</a><?php } ?>
+      <a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a>
+      <a href="<?php echo esc_url(site_url('/services'));?>">Our Services</a>
+      <a href="<?php echo esc_url(site_url('/members'));?>">Our Members</a>
+      <a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Our Events</a>
     </div>
   </nav>
 </div>

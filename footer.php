@@ -29,14 +29,20 @@
   <i class="fa fa-window-close menu-overlay__close" aria-hidden="true"></i>
   <nav aria-label="mobile navigation bar">
       <ul class="menu-overlay-list">
-      <li><a href="<?php echo esc_url(site_url()) ?>">Home</a></li>
-      <li><a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a></li>
-      <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a></li>  
-      <li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a></li>
-      <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a></li>
-      <li><a href="<?php echo esc_url(site_url('/services'));?>">Services</a></li>
-      <li><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Creator Dashboard</a></li>
-      <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
+            <li><a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a></li>
+            <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a></li>
+            <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a></li> 
+            <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">My Bookshelves</a></li>
+            <li><?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Book Downloads</a><?php } ?></li>
+            <li><?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Vendor Portal</a><?php } ?></li>
+      </ul>
+      <ul class="menu-overlay-list-1">
+            <li><?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Profile</a><?php } ?></li>
+            <li><?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Groups</a><?php } ?></li>
+            <li><a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a></li>
+            <li><a href="<?php echo esc_url(site_url('/services'));?>">Our Services</a></li>
+            <li><a href="<?php echo esc_url(site_url('/members'));?>">Our Members</a></li>
+            <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Our Events</a></li>
       </ul>
   </nav>
 </div>

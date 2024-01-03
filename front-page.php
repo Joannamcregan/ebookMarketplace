@@ -8,7 +8,11 @@
     <div class='logo-image-large-container'>
         <img class="logo-image-large" src="<?php echo get_theme_file_uri('/images/logo-large-alt.png'); ?>" alt="Trunk of My Car Cooperative" />
     </div>
-    <h1 class="larger-heading blue-text">self-publishing (r)evolution</h1>
+    <div class="logo-image-large-container">
+        <img class="sub-logo" src="<?php echo get_theme_file_uri('/images/sub-logo.png'); ?>" alt="self-publishing revolution" />
+        <img class="sub-logo-2" src="<?php echo get_theme_file_uri('/images/sub-logo-2-alt.png'); ?>" alt="self-publishing revolution" />
+    </div>
+    <!-- <h1 class="larger-heading blue-text">self-publishing (r)evolution</h1> -->
     <!-- <p class="leaves-p centered-text">A self-publishing platform <strong>owned by a community of people who love and create books.</strong> -->
     <!-- <br/>Trunk of My Car Cooperative is on a mission to <strong>collectively redistribute resources from those who take to those who create.</strong></p> -->
     <!-- <br/>We're on a mission to <strong>collectively redistribute resources from those who take to those who create.</strong></p> -->
