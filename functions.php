@@ -28,7 +28,8 @@ function marketplace_files(){
     wp_enqueue_style('comment-styles', get_stylesheet_directory_uri() . '/css/comment-styles.css', false, '', 'all');
 
     wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
-        'root_url' => get_site_url()
+        'root_url' => get_site_url(),        
+        'nonce' => wp_create_nonce('wp_rest')
     ));
 }
 

@@ -282,6 +282,15 @@ header a:hover{
         font-size: 32;
     }
 }
+.sub-banner{
+    width: 100%;
+    background: #f6ece1;
+    border-radius: 50px 0 0 50px;
+    padding: 20px 15px;
+    margin-top: 30px;
+    color: black;
+    text-align: right;
+}
 .page-accent{
     margin: 2em 0 0 0;
     padding: 0.5em 0 0 0;
@@ -368,7 +377,7 @@ header a:hover{
 }
 .paragraph-accent{
     padding: 10px 20px;
-    border: solid #e3caab 5px;
+    border: solid #e3caab 10px;
     border-radius: 15px;
     width: fit-content;
     margin: 30px auto;

@@ -151,12 +151,13 @@
         max-width: 300px;
     }
     .sub-logo{
-        display: none;
+        /* display: none; */
+        max-width: 280px;
     }
-    .sub-logo-2{
+    /* .sub-logo-2{
         max-width: 280px;
         display: block;
-    }
+    } */
 }
 @media screen and (max-width: 300px){
     .sub-leaf{
@@ -166,10 +167,11 @@
         max-width: 200px;
     }
     .sub-logo{
-        display: none;
+        /* display: none; */
+        max-width: 200px;
     }
-    .sub-logo-2{
+    /* .sub-logo-2{
         max-width: 200px;
         display: block;
-    }
+    } */
 }

@@ -26,8 +26,7 @@
     <div class="nav-container site-header__menu group">    
       <a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a>
       <a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a> 
-      <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a> 
-      <a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">My Bookshelves</a> 
+      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a><?php } ?>
       <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Book Downloads</a><?php } ?>
       <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Vendor Portal</a><?php } ?>
     </div>
@@ -36,11 +35,17 @@
 <div class="header--sub">      
   <nav class="main-nav" aria-label="main navigation bar">  
     <div class="nav-container site-header__menu group">    
-      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Profile</a><?php } ?>
-      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Groups</a><?php } ?>
+      <?php if (is_user_logged_in()){
+        $tomc_user = get_userdata(get_current_user_id());
+        $tomc_username = $tomc_user->user_login;
+        ?><a href="<?php echo esc_url(site_url('/members')) . '/' . $tomc_username; ?>">
+          My Profile
+        </a><?php 
+      } ?>
       <a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a>
       <a href="<?php echo esc_url(site_url('/services'));?>">Our Services</a>
       <a href="<?php echo esc_url(site_url('/members'));?>">Our Members</a>
+      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/groups')); ?>">Our Groups</a><?php } ?>
       <a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Our Events</a>
     </div>
   </nav>

@@ -2,20 +2,28 @@
       <div class="footer-top">
             <ul class="footer-top-left">
                   <li><a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a></li>  
+                  <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a></li> 
+                  <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li> 
             </ul>
             <ul class="footer-top-right">
                   <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/services'));?>">Services</a></li>                  
+                  <li><a href="<?php echo esc_url(site_url('/services'));?>">Services</a></li>   
+                  <li><a href="<?php echo esc_url(site_url('/groups'));?>">Groups</a></li>               
             </ul>
       </div>
       <div class="footer-bottom">
-            <ul>
-                  <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
+            <ul>                  
                   <?php if (is_user_logged_in()){
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
+                        <?php if (is_user_logged_in()){
+                              $tomc_user = get_userdata(get_current_user_id());
+                              $tomc_username = $tomc_user->user_login;
+                              ?><li><a href="<?php echo esc_url(site_url('/members')) . '/' . $tomc_username; ?>">
+                              My Profile
+                              </a></li>
+                        <?php } ?>
+                        <li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a> </li>
                         <li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a></li>
-                        <li><a href="<?php echo esc_url(site_url('/groups'));?>">My Group Discussions</a></li>
                         <li><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Creator Dashboard</a></li>
                         <li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
@@ -31,17 +39,22 @@
       <ul class="menu-overlay-list">
             <li><a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a></li>
             <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a></li>
-            <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">Curated Bookshelves</a></li> 
-            <li><a href="<?php echo esc_url(get_post_type_archive_link('curations')); ?>">My Bookshelves</a></li>
-            <li><?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Book Downloads</a><?php } ?></li>
-            <li><?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Vendor Portal</a><?php } ?></li>
+            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a></li><?php } ?>
+            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Book Downloads</a></li><?php } ?>
+            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Vendor Portal</a></li><?php } ?>
       </ul>
       <ul class="menu-overlay-list-1">
-            <li><?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Profile</a><?php } ?></li>
-            <li><?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Groups</a><?php } ?></li>
+            <?php if (is_user_logged_in()){
+                  $tomc_user = get_userdata(get_current_user_id());
+                  $tomc_username = $tomc_user->user_login;
+                  ?><li><a href="<?php echo esc_url(site_url('/members')) . '/' . $tomc_username; ?>">
+                  My Profile
+                  </a></li>
+            <?php } ?>          
             <li><a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a></li>
             <li><a href="<?php echo esc_url(site_url('/services'));?>">Our Services</a></li>
             <li><a href="<?php echo esc_url(site_url('/members'));?>">Our Members</a></li>
+            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/groups')); ?>">Our Groups</a></li><?php } ?>
             <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Our Events</a></li>
       </ul>
   </nav>
