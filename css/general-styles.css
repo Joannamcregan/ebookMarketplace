@@ -523,7 +523,13 @@ a {
 }
 .center-right-text{
     text-align: right;
-    margin-right: 5vw;
+    /* margin-right: 5vw; */
+    margin-right: 10vw;
+}
+.center-right-center-text{
+    text-align: right;
+    /* margin-right: 5vw; */
+    margin-right: 20vw;
 }
 .text-margin{
     margin: 0.25rem;

@@ -61,7 +61,7 @@ $allowed_html = array(
 <?php $user = wp_get_current_user();
 if (in_array( 'administrator', (array) $user->roles )) {
     ?><p>In the <a href="<?php echo esc_url(site_url('/wp-admin'));?>">backend</a> you can manage the site, curate bookshelves, post or update events, offers, or needs.</p><?php
-} else if (in_array( 'vendor', (array) $user->roles ) ) {
+} else if (in_array( 'dc_vendor', (array) $user->roles ) ) {
     ?><p>In the <a href="<?php echo esc_url(site_url('/wp-admin'));?>">backend</a> you can manage products, curate bookshelves, post or update events, offers, or needs.</p><?php
 } else if (is_user_logged_in()) {
 	?><p>In the <a href="<?php echo esc_url(site_url('/wp-admin'));?>">backend</a> you can curate bookshelves, post or update events, offers, or needs.</p><?php
