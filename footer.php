@@ -21,10 +21,15 @@
                               ?><li><a href="<?php echo esc_url(site_url('/members')) . '/' . $tomc_username; ?>">
                               My Profile
                               </a></li>
+                              <li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a> </li>
+                              <li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a></li>
+                              <?php $user = wp_get_current_user();
+                              if (in_array( 'dc_vendor', (array) $user->roles )){
+                                    ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">My Vendor Portal</a></li>
+                                    <li><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add a Book</a></li>
+                                    <li><a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a></li>
+                              <?php } ?>
                         <?php } ?>
-                        <li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a> </li>
-                        <li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a></li>
-                        <li><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Creator Dashboard</a></li>
                         <li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
@@ -39,14 +44,25 @@
       <ul class="menu-overlay-list">
             <li><a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a></li>
             <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a></li>
-            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a></li><?php } ?>
-            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Book Downloads</a></li><?php } ?>
-            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/wp-admin')); ?>">My Vendor Portal</a></li><?php } ?>
-      </ul>
+            <?php if (is_user_logged_in()){
+                  ?><li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a></li>
+                  <?php $user = wp_get_current_user();
+                  if (in_array( 'dc_vendor', (array) $user->roles )){
+                  ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">Vendor Portal</a></li>
+                  <?php }
+                  $tomc_user = get_userdata(get_current_user_id());
+                  $tomc_username = $tomc_user->user_login;
+                  ?><li><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">My Profile</a></li>
+            <?php }
+      ?></ul>
       <ul class="menu-overlay-list-1">
             <?php if (is_user_logged_in()){
                   $tomc_user = get_userdata(get_current_user_id());
                   $tomc_username = $tomc_user->user_login;
+                  if (in_array( 'dc_vendor', (array) $user->roles )){
+                        ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add a Book</a>
+                        <a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a>
+                  <?php }
                   ?><li><a href="<?php echo esc_url(site_url('/members')) . '/' . $tomc_username; ?>">
                   My Profile
                   </a></li>

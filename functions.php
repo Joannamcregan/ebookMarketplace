@@ -60,17 +60,19 @@ add_action('after_setup_theme', 'marketplace_features');
 /*add classic_authors post type-------------------------------------------------------------------*/
 function author_profile_custom_post_types() {
     register_post_type('author-profile', array(
+        'capability_type' => 'author-profile',
+        'map_meta_cap' => true,
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'thumbnail'),
-        'rewrite' => array('slug' => 'author-profile'),
+        'rewrite' => array('slug' => 'pen-name'),
         'has_archive' => false,
         'public' => true,
         'labels' => array(
             'name' => 'Author-Profiles',
-            'add_new' => 'Add New Author-Profile',
-            'edit_item' => 'Edit Author-Profile',
-            'all_items' => 'All Author-Profiles',
-            'singular_name' => 'Author-Profile'
+            'add_new' => 'Add New Pen Name',
+            'edit_item' => 'Edit Pen Name',
+            'all_items' => 'All Pen Names',
+            'singular_name' => 'Pen Name'
         ),
         'menu_icon' => 'dashicons-edit'
     ));
