@@ -22,7 +22,7 @@
   </div>
 </header>
 <div class="header--main">      
-  <nav class="main-nav" aria-label="main navigation bar">  
+  <nav class="main-nav" aria-label="main navigation bar top row">  
     <div class="nav-container site-header__menu group">    
       <a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a>
       <a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a> 
@@ -39,7 +39,7 @@
   </nav>
 </div>
 <div class="header--sub">      
-  <nav class="main-nav" aria-label="main navigation bar">  
+  <nav class="main-nav" aria-label="main navigation bar bottom row">  
     <div class="nav-container site-header__menu group">   
       <?php if (is_user_logged_in()){
         $user = wp_get_current_user();

@@ -26,6 +26,7 @@ function marketplace_files(){
     wp_enqueue_style('community-members-styles', get_stylesheet_directory_uri() . '/css/community-members-styles.css', false, '', 'all');
     wp_enqueue_style('image-text-container-styles', get_stylesheet_directory_uri() . '/css/image-text-container-styles.css', false, '', 'all');
     wp_enqueue_style('comment-styles', get_stylesheet_directory_uri() . '/css/comment-styles.css', false, '', 'all');
+    wp_enqueue_style('seventies-style', get_stylesheet_directory_uri() . '/css/seventies-style.css', false, '', 'all');
 
     wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
         'root_url' => get_site_url(),        
@@ -37,6 +38,9 @@ add_action('wp_enqueue_scripts','marketplace_files');
 
 /* Disable WordPress Admin Bar for all users */
 add_filter( 'show_admin_bar', '__return_false' );
+
+// Disable default WooCommerce styling
+add_filter('woocommerce_enqueue_styles', '__return_false');
 
 /*add theme support-------------------------------------------------------------*/
 function marketplace_features(){
