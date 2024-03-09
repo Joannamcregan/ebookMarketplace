@@ -1073,6 +1073,11 @@ a {
     }
 }
 
+/* hidden */
+.tomc-hidden-content {
+    border: solid red 2px !important;
+}
+
 /* Coming Soon Info styles-------------------------------------------------------------------------------*/
 .coming-soon-info {
     opacity: 0;

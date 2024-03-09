@@ -51,49 +51,8 @@ if ($default_types && !empty($default_types)) {
         <div class="product-primary-info custom-panel"> 
             <div class="right-primary-info"> 
                 <div class="form-group-wrapper">
-                    <div class="form-group product-short-description">
-                        <label class="control-label col-md-12 pt-0" for="product_short_description"><?php esc_html_e( 'Product short description', 'multivendorx' ); ?></label>
-                        <div class="col-md-12">
-                            <?php
-                            $settings = array(
-                                'textarea_name' => 'product_excerpt',
-                                'textarea_rows' => get_option('default_post_edit_rows', 10),
-                                'quicktags'     => array( 'buttons' => 'em,strong,link' ),
-                                'tinymce'       => array(
-                                    'theme_advanced_buttons1' => 'bold,italic,strikethrough,separator,bullist,numlist,separator,blockquote,separator,justifyleft,justifycenter,justifyright,separator,link,unlink,separator,undo,redo,separator',
-                                    'theme_advanced_buttons2' => '',
-                                ),
-                                'editor_css'    => '<style>#wp-product_excerpt-editor-container .wp-editor-area{height:100px; width:100%;}</style>',
-                            );
-                            if( !apply_filters( 'mvx_vendor_product_excerpt_richedit', true ) ) {
-                                $settings['tinymce'] = $settings['quicktags'] = $settings['media_buttons'] = false;
-                            }
-                            wp_editor( htmlspecialchars_decode( isset($_POST['product_excerpt']) ? wc_clean($_POST['product_excerpt']) : $product_object->get_short_description( 'edit' ) ), 'product_excerpt', $settings );
-                            ?>  
-                        </div>
-                    </div>
-                    
-                    <div class="form-group product-description">
-                        <label class="control-label col-md-12" for="product_description"><?php esc_attr_e( 'Product description', 'multivendorx' ); ?></label>
-                        <div class="col-md-12">
-                            <?php
-                            $settings = array(
-                                'textarea_name' => 'product_description',
-                                'textarea_rows' => get_option('default_post_edit_rows', 10),
-                                'quicktags'     => array( 'buttons' => 'em,strong,link' ),
-                                'tinymce'       => array(
-                                    'theme_advanced_buttons1' => 'bold,italic,strikethrough,separator,bullist,numlist,separator,blockquote,separator,justifyleft,justifycenter,justifyright,separator,link,unlink,separator,undo,redo,separator',
-                                    'theme_advanced_buttons2' => '',
-                                ),
-                                'editor_css'    => '<style>#wp-product_description-editor-container .wp-editor-area{height:175px; width:100%;}</style>',
-                            );
-                            if( !apply_filters( 'mvx_vendor_product_description_richedit', true ) ) {
-                                $settings['tinymce'] = $settings['quicktags'] = $settings['media_buttons'] = false;
-                            }
-                            wp_editor( $product_object->get_description( 'edit' ), 'product_description', $settings );
-                            ?>
-                        </div>
-                    </div>
+                    <p>How to add information about your book, such as an excerpt, description, genre information, and more.</p>
+                    <!-- removed form groups because we have similarly named fields at the book level -->
                 </div> 
             </div>
             
@@ -300,65 +259,7 @@ if ($default_types && !empty($default_types)) {
                 <?php do_action( 'mvx_after_product_note_metabox_panel', $post->ID ); ?>
                 <?php } ?>
             </div>
-            <div class="col-md-4">
-                <?php if( get_mvx_vendor_settings('category_pyramid_guide', 'settings_general') == false ) :
-                $product_categories = mvx_get_product_terms_HTML( 'product_cat', $post->ID, apply_filters( 'mvx_vendor_can_add_product_category', false, get_current_user_id() ) ); ?>
-                <?php if ( $product_categories ) : ?>
-                    <div class="panel panel-default pannel-outer-heading">
-                        <div class="panel-heading d-flex">
-                            <h3 class="pull-left"><?php esc_html_e( 'Product categories', 'multivendorx' ); ?></h3>
-                        </div>
-                        <div class="panel-body panel-content-padding form-group-wrapper"> 
-                            <?php
-                            echo $product_categories;
-                            ?>
-                        </div>
-                    </div>
-                <?php endif;
-                endif; ?>
-                <?php $product_tags = mvx_get_product_terms_HTML( 'product_tag', $post->ID, apply_filters( 'mvx_vendor_can_add_product_tag', true, get_current_user_id() ), false ); ?>
-                <?php if ( $product_tags && !empty($product_fileds) && in_array('product_tag', $product_fileds) ) : ?>
-                    <div class="panel panel-default pannel-outer-heading">
-                        <div class="panel-heading d-flex">
-                            <h3 class="pull-left"><?php esc_html_e( 'Product tags', 'multivendorx' ); ?></h3>
-                        </div>
-                        <div class="panel-body panel-content-padding form-group-wrapper">
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <?php
-                                    echo $product_tags;
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                <?php 
-                $custom_taxonomies = get_object_taxonomies( 'product', 'objects' );
-                if( $custom_taxonomies ){
-                    foreach ( $custom_taxonomies as $taxonomy ) {
-                        if ( in_array( $taxonomy->name, array( 'product_cat', 'product_tag' ) ) ) continue;
-                        if ( $taxonomy->public && $taxonomy->show_ui && $taxonomy->meta_box_cb ) { ?>
-                            <div class="panel panel-default pannel-outer-heading">
-                                <div class="panel-heading d-flex">
-                                    <h3 class="pull-left"><?php echo $taxonomy->label; ?></h3>
-                                </div>
-                                <div class="panel-body panel-content-padding form-group-wrapper">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <?php
-                                            echo mvx_get_product_terms_HTML( $taxonomy->name, $post->ID, apply_filters( 'mvx_vendor_can_add_'.$taxonomy->name, false, get_current_user_id() ) );
-                                            ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php }
-                    }
-                }
-                ?>
-                <?php do_action( 'mvx_after_product_tags_metabox_panel', $post->ID ); ?>
-            </div>
+            
         </div>
         <?php if ( ! empty( mvx_get_product_types() ) ) : ?>
             <div class="mvx-action-container">

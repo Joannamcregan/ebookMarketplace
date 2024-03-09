@@ -54,7 +54,6 @@ global $MVX;
                         <a href="#" class="pull-right sale_schedule form-text"><?php esc_html_e( 'Schedule', 'multivendorx' ); ?></a>
                     </div>
                 </div> 
-                <p>Want to let readers name their own price for this product?</p>
                 <?php
                 $sale_price_dates_from = $product_object->get_date_on_sale_from( 'edit' ) && ( $date = $product_object->get_date_on_sale_from( 'edit' )->getOffsetTimestamp() ) ? date_i18n( 'Y-m-d', $date ) : '';
                 $sale_price_dates_to = $product_object->get_date_on_sale_to( 'edit' ) && ( $date = $product_object->get_date_on_sale_to( 'edit' )->getOffsetTimestamp() ) ? date_i18n( 'Y-m-d', $date ) : '';
