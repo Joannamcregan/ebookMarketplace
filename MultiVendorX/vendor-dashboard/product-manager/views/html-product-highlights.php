@@ -118,13 +118,13 @@ global $MVX;
         <div class="product-title-wrap <?php echo ( $self->is_spmv() || $is_update ) ? 'product-edit-mode' : 'product-add-mode'; ?>"> <!-- product-add-mode / product-edit-mode according to flow -->
             <div class="pull-left product-title-inner full-1080"> 
                 <p class="pro-title">
-                    <label><?php esc_html_e('Product Title', 'multivendorx'); ?>: </label>
                     <strong class="editable-content"><?php echo isset($_POST['post_title']) ? wc_clean($_POST['post_title']) : htmlspecialchars($product_object->get_title( 'edit' )); ?></strong>
                     <?php if( (!$self->is_spmv() && $is_update) || !apply_filters('mvx_singleproductmultiseller_edit_product_title_disabled', true) ) : ?>
                     <button type="button" class="editable-content-button"><i class="mvx-font ico-edit-pencil-icon" title="<?php esc_attr_e('Edit', 'multivendorx'); ?>"></i> <!--span>edit</span--></button>
                     <?php endif; ?>
                     <span class="editing-content">
-                        <input type="text" class="form-control" name="post_title" id="post_title" value="<?php echo htmlspecialchars($product_object->get_title( 'edit' )); ?>"<?php if ( $self->is_spmv() && apply_filters('mvx_singleproductmultiseller_edit_product_title_disabled', true) ) echo ' readonly="readonly"'; ?>>
+                        <label for="tomc--mvx--edit-product-post_title"><?php esc_html_e('Product Title', 'multivendorx'); ?>: </label>
+                        <input type="text" class="form-control" name="post_title" id="tomc--mvx--edit-product-post_title" value="<?php echo htmlspecialchars($product_object->get_title( 'edit' )); ?>"<?php if ( $self->is_spmv() && apply_filters('mvx_singleproductmultiseller_edit_product_title_disabled', true) ) echo ' readonly="readonly"'; ?>>
                         <input type="hidden" name="original_post_title" value="<?php echo htmlspecialchars($product_object->get_title( 'edit' )); ?>">
                         <input type="hidden" name="post_ID" value="<?php echo $self->get_the_id(); ?>">
                         <input type="hidden" name="is_update" value="<?php esc_attr( $is_update ); ?>">
@@ -146,8 +146,8 @@ global $MVX;
                     <button type="button" class="editable-content-button"><i class="mvx-font ico-edit-pencil-icon" title="<?php esc_attr_e('Edit', 'multivendorx'); ?>"></i> <!--span>edit</span--></button>
                     <?php endif; ?>
                     <span class="editing-content">
-                        <label><?php esc_html_e('GTIN', 'multivendorx'); ?>:</label>
-                        <select class="form-control inline-input" name="_mvx_gtin_type">
+                        <label for="tomc--mvx--gtin-select"><?php esc_html_e('GTIN', 'multivendorx'); ?>:</label>
+                        <select id="tomc--mvx--gtin-select" class="form-control inline-input" name="_mvx_gtin_type">
                         <option value=""><?php esc_html_e( 'Select type', 'multivendorx' ); ?></option>  
                         <?php 
                         $gtin_types = apply_filters('mvx_add_product_default_gtin_types', $MVX->taxonomy->get_mvx_gtin_terms(array('fields' => 'id=>name', 'orderby' => 'id')), $post, $self);
@@ -161,44 +161,7 @@ global $MVX;
                 </p>
                 <?php endif; ?>
             </div>
-            <div class="pull-right full-1080">
-                <?php
-                $current_visibility = $product_object->get_catalog_visibility();
-                $current_featured   = wc_bool_to_string( $product_object->get_featured() );
-                $visibility_options = wc_get_product_visibility_options();
-                ?>
-                <p class="cat-visiblity"><?php esc_html_e( 'Catalog visibility:', 'multivendorx' ); ?> 
-                    <strong id="catalog-visibility-display" class="primary-color">
-                        <?php
-
-                        echo isset( $visibility_options[ $current_visibility ] ) ? esc_html( $visibility_options[ $current_visibility ] ) : esc_html( $current_visibility );
-
-                        if ( 'yes' === $current_featured ) {
-                                echo ', ' . esc_html__( 'Featured', 'multivendorx' );
-                        }
-                        ?>
-                    </strong>
-                    <button type="button" class="editabble-button" data-toggle="collapse" data-target="#product_visiblity"><i class="mvx-font ico-downarrow-2-icon" title="<?php _e('Edit', 'multivendorx'); ?>"></i> <!--span>edit</span--></button>
-                </p> 
-                <div id="product_visiblity" class="mvx-clps collapse dropdown-panel">
-                    <input type="hidden" name="current_visibility" id="current_visibility" value="<?php echo esc_attr( $current_visibility ); ?>" />
-                    <input type="hidden" name="current_featured" id="current_featured" value="<?php echo esc_attr( $current_featured ); ?>" />
-                    <div class="product-visibility-toggle-inner">
-                        <?php 
-                        foreach ( $visibility_options as $name => $label ) {
-                            echo '<div class="form-group"><label><input type="radio" name="_visibility" id="_visibility_' . esc_attr( $name ) . '" value="' . esc_attr( $name ) . '" ' . checked( $current_visibility, $name, false ) . ' data-label="' . esc_attr( $label ) . '" /> <span for="_visibility_' . esc_attr( $name ) . '" class="selectit">' . esc_html( $label ) . '</span></label></div>';
-                        }
-                        if( apply_filters( 'mvx_feature_product_is_enable', true ) ) {
-                            echo '<hr><div class="form-group"><label><input type="checkbox" name="_featured" class="mt-0" id="_featured" ' . checked( $current_featured, 'yes', false ) . ' data-label="' . __( 'Featured', 'multivendorx' ) . '" /> <span for="_featured">' . esc_html__( 'This is a featured product', 'multivendorx' ) . '</label></label></div>';
-                        }
-                        ?>
-                        <div class="form-group mt-15">
-                            <button type="button" class="btn btn-default btn-sm catalog-visiblity-btn"><?php esc_html_e('Ok', 'multivendorx'); ?></button>
-                            <a href="javascript:void(0)" class="btn btn-default btn-sm" data-toggle="collapse" data-target="#product_visiblity"><?php esc_html_e('Cancel', 'multivendorx'); ?></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <?php do_action( 'mvx_frontend_dashboard_after_product_highlights_title_wrap', $post->ID, $product_object, $post ); ?> 
         </div>
     </div>
