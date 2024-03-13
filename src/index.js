@@ -1,9 +1,5 @@
-import Search from './modules/search'
-import MobileMenu from './modules/MobileMenu'
-import CategoryDisplay from './modules/CategoryDisplay'
-import FrontDisplay from './modules/FrontDisplay'
+import BookInfo from './modules/book-form';
+import BrowseStuff from './modules/browse';
 
-const mobileMenu = new MobileMenu()
-const marketplaceSearch = new Search()
-const categoryDisplay = new CategoryDisplay()
-const frontDisplay = new FrontDisplay()
+const tomcBookForm = new BookInfo();
+const tomcBrowseStuff = new BrowseStuff();
