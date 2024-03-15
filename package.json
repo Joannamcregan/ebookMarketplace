@@ -1,12 +1,12 @@
 {
-  "name": "tomc-book-organization",
+  "name": "custom-ebook-marketplace",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "watch-bs": "npm-run --parallel sync start",
     "build": "wp-scripts build",
-    "start": "wp-scripts start",
+    "start": "wp-scripts start src/index.js",
     "dev": "wp-scripts start",
     "devFast": "wp-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"

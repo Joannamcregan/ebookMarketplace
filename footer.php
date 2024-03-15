@@ -2,7 +2,7 @@
       <div class="footer-top">
             <ul class="footer-top-left">
                   <li><a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a></li> 
+                  <li><a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Browse Genres</a></li> 
                   <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li> 
             </ul>
             <ul class="footer-top-right">
@@ -43,7 +43,7 @@
   <nav aria-label="mobile navigation bar">
       <ul class="menu-overlay-list">
             <li><a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a></li>
-            <li><a href="<?php echo esc_url(site_url('/genres'));?>">Browse Genres</a></li>
+            <li><a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Browse Genres</a></li>
             <?php if (is_user_logged_in()){
                   ?><li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a></li>
                   <?php $user = wp_get_current_user();
@@ -53,6 +53,8 @@
                   $tomc_user = get_userdata(get_current_user_id());
                   $tomc_username = $tomc_user->user_login;
                   ?><li><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">My Profile</a></li>
+            <?php } else {
+                  ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
             <?php }
       ?></ul>
       <ul class="menu-overlay-list-1">
