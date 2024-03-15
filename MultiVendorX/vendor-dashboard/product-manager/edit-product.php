@@ -43,18 +43,23 @@ if ($default_types && !empty($default_types)) {
     <form id="mvx-edit-product-form" class="woocommerce form-horizontal" method="post">
         <?php do_action( 'mvx_add_product_form_start' ); ?>
         <!-- Top product highlight -->
+        <div class="tomc--special-instructions col-md-12">
+            <p><strong>First time rolling out a book with us? Here's a mini roadmap...</strong></p>
+            <p><strong>Want to add your ISBN?</strong> Select ISBN from the GTIN dropdown menu, then paste your number into the textbox to the left of it.</p>
+            <p><strong>Want to add a description or excerpt for your product?</strong> Once you've uploaded your ebook and/or audiobook product files, you can link them to a searchable book and add an excerpt, description, character identities, trigger warnings, and more details that will help the right readers discover your book! From the main menu, just choose "add a book" to create a new searchable book, or go to "books by me" to add details to an existing searchable book. <em>Note: if you offer the same book in multiple formats, we suggest putting the word "ebook" or "audiobook" in the product title to differentiate them.</em></p>
+            <p><strong>Want to offer a preview for your audiobook?</strong> Add your file to the product gallery.</p>
+            <p><strong>Wondering how to add your book cover?</strong> Use the "click to upload image" option.</p>
+            <p><strong>Wondering where to add your ebook or audiobook file?</strong> Check the box next to the word "downloadable" in the Product Type section of this page. An "add file" button will appear below the pricing fields.</p>
+            <!-- product-level descriptions removed form groups because we have similarly named fields at the book level -->
+        </div>
+        <br><br>
         <?php
         $MVX->template->get_template( 'vendor-dashboard/product-manager/views/html-product-highlights.php', array( 'self' => $self, 'product_object' => $product_object, 'post' => $post, 'is_update' => $is_update ) );
         $image_size = apply_filters('mvx_product_uploaded_image_size', 'medium');
         ?>
         <!-- End of Top product highlight -->
         <div class="product-primary-info custom-panel"> 
-            <div class="right-primary-info"> 
-                <div class="form-group-wrapper">
-                    <p>How to add information about your book, such as an excerpt, description, genre information, and more.</p>
-                    <!-- removed form groups because we have similarly named fields at the book level -->
-                </div> 
-            </div>
+            
             
             <div class="left-primary-info">
                 <div class="product-gallery-wrapper">

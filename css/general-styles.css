@@ -104,7 +104,11 @@ header a:hover{
     font-size: 24px;
 }
 .fa-search{
-    padding-right: 15px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+.fa-gear{
+    padding-right: 10px;
     font-size: 20px;
 }
 .fa-bars{
@@ -291,6 +295,19 @@ header a:hover{
     color: black;
     text-align: right;
 }
+.sub-banner--slim{
+    width: 100%;
+    background: #f6ece1;
+    border-radius: 50px 0 0 50px;
+    padding: 5px;
+    margin-top: 30px;
+    color: black;
+    text-align: right;
+}
+.tomc--special-instructions{
+    border: solid #e44e2d 2px;
+    padding: 10px;
+}
 .page-accent{
     margin: 2em 0 0 0;
     padding: 0.5em 0 0 0;
@@ -395,8 +412,17 @@ header a:hover{
     width: auto;
 }
 /*text-------------------------------------------------------------------------*/
+.green-shadow-text{
+    text-shadow: 1px 1px #969200;
+}
+.yellow-shadow-text{
+    text-shadow: 1px 1px #d38124;
+}
 h1, h2, h3{
     font-family: 'tahoma', sans-serif;
+}
+.large-heading{
+    font-size: 36;
 }
 .larger-heading{
     font-size: 46;
@@ -578,8 +604,8 @@ a {
 .simple-search-result img{
     max-width: 150px;
     max-height: auto;
-    float: left;
     margin: 0 10px 10px 0;
+    float: left;
 }
 /* .centered-input{
     width: fit-content;
@@ -821,17 +847,21 @@ a {
 
 .search-result li{
     list-style: none;
-    margin: 30px;
+    margin: 30px auto;
     padding: 15px;
     background-color: white;
     overflow: hidden;
+    text-align: center;
+}
+
+.search-result p{
+    text-align: center;
 }
 
 .search-result img{
     max-width: 150px;
-    max-height: auto;
-    float: left;
-    margin: 0 10px 10px 0;
+    margin: 0 auto;
+    display: block;
 }
 
 .spinner-loader {
