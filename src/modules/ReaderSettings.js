@@ -9,10 +9,13 @@ class Settings {
         this.closeButton = $(".search-overlay__close");
         this.events();
         this.isOverlayOpen = false;
+        this.chosenWarnings = [];
+        this.chosenLanguages = [];
     }
 // 2. events
     events(){
         this.openButton.on("click", this.openSettingsOverlay.bind(this));
+        this.closeButton.on("click", this.closeOverlay.bind(this));
     }
 
 // 3. methods (functions, actions...)
@@ -21,7 +24,7 @@ class Settings {
             <div class="tomc-settings-overlay">
                 <div class="orange-translucent-background">
                     <div class="overlay-main-container"> 
-                        <i class="fa fa-window-close search-overlay__close" aria-hidden = "true" onclick="this.closeOverlay.bind(this)"></i>
+                        <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
                         <br>
                         <h1 class="centered-text">My Settings</h1>
                     </div>
@@ -49,12 +52,41 @@ class Settings {
         $("body").removeClass("body-no-scroll");
         this.isOverlayOpen = false;
     }
-    toggleWarningSelection(){
-    console.log('toggle warning');
+
+    toggleWarningSelection(e){
+        let labelName = $(e.target).text();
+        if ($(e.target).hasClass('tomc-book-organization--option-selected')){
+            $(e.target).removeClass('tomc-book-organization--option-selected');
+            $(e.target).attr('aria-label', labelName + ' is not selected');
+            for (let i = 0; i < this.chosenWarnings.length; i++){
+                if (this.chosenWarnings[i] == $(e.target).data('warning-id')){
+                    this.chosenWarnings.splice(i, 1);
+                }
+            }
+        } else {
+            this.chosenWarnings.push($(e.target).data('warning-id'));
+            $(e.target).addClass('tomc-book-organization--option-selected');
+            $(e.target).attr('aria-label', labelName + ' is selected');
+        }
     }
-    toggleLanguageSelection(){
-        console.log('toggle language');
+
+    toggleLanguageSelection(e){
+        let labelName = $(e.target).text();
+        if ($(e.target).hasClass('tomc-book-organization--option-selected')){
+            $(e.target).removeClass('tomc-book-organization--option-selected');
+            $(e.target).attr('aria-label', labelName + ' is not selected');
+            for (let i = 0; i < this.chosenLanguages.length; i++){
+                if (this.chosenLanguages[i] == $(e.target).data('language-id')){
+                    this.chosenLanguages.splice(i, 1);
+                }
+            }
+        } else {
+            this.chosenLanguages.push($(e.target).data('language-id'));
+            $(e.target).addClass('tomc-book-organization--option-selected');  
+            $(e.target).attr('aria-label', labelName + ' is selected');
+        }
     }
+
     //potentially add below to the html when suggestions functionality added-----------------------
     // <div class="settings-overlay--section">
     //     <h2 class="centered-text">My Favorite Genres</h2>

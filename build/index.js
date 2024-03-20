@@ -138,10 +138,13 @@ class Settings {
     this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay__close");
     this.events();
     this.isOverlayOpen = false;
+    this.chosenWarnings = [];
+    this.chosenLanguages = [];
   }
   // 2. events
   events() {
     this.openButton.on("click", this.openSettingsOverlay.bind(this));
+    this.closeButton.on("click", this.closeOverlay.bind(this));
   }
 
   // 3. methods (functions, actions...)
@@ -150,7 +153,7 @@ class Settings {
             <div class="tomc-settings-overlay">
                 <div class="orange-translucent-background">
                     <div class="overlay-main-container"> 
-                        <i class="fa fa-window-close search-overlay__close" aria-hidden = "true" onclick="this.closeOverlay.bind(this)"></i>
+                        <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
                         <br>
                         <h1 class="centered-text">My Settings</h1>
                     </div>
@@ -177,12 +180,39 @@ class Settings {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("body-no-scroll");
     this.isOverlayOpen = false;
   }
-  toggleWarningSelection() {
-    console.log('toggle warning');
+  toggleWarningSelection(e) {
+    let labelName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).text();
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).hasClass('tomc-book-organization--option-selected')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('tomc-book-organization--option-selected');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).attr('aria-label', labelName + ' is not selected');
+      for (let i = 0; i < this.chosenWarnings.length; i++) {
+        if (this.chosenWarnings[i] == jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).data('warning-id')) {
+          this.chosenWarnings.splice(i, 1);
+        }
+      }
+    } else {
+      this.chosenWarnings.push(jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).data('warning-id'));
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('tomc-book-organization--option-selected');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).attr('aria-label', labelName + ' is selected');
+    }
   }
-  toggleLanguageSelection() {
-    console.log('toggle language');
+  toggleLanguageSelection(e) {
+    let labelName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).text();
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).hasClass('tomc-book-organization--option-selected')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('tomc-book-organization--option-selected');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).attr('aria-label', labelName + ' is not selected');
+      for (let i = 0; i < this.chosenLanguages.length; i++) {
+        if (this.chosenLanguages[i] == jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).data('language-id')) {
+          this.chosenLanguages.splice(i, 1);
+        }
+      }
+    } else {
+      this.chosenLanguages.push(jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).data('language-id'));
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('tomc-book-organization--option-selected');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).attr('aria-label', labelName + ' is selected');
+    }
   }
+
   //potentially add below to the html when suggestions functionality added-----------------------
   // <div class="settings-overlay--section">
   //     <h2 class="centered-text">My Favorite Genres</h2>
