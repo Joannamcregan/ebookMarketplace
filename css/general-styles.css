@@ -308,6 +308,10 @@ header a:hover{
     border: solid #e44e2d 2px;
     padding: 10px;
 }
+.orange-translucent-background{
+    background: rgba(228, 78, 45, 0.3);
+    padding-bottom: 20px;
+}
 .page-accent{
     margin: 2em 0 0 0;
     padding: 0.5em 0 0 0;
@@ -732,7 +736,7 @@ a {
 }
 .menu-overlay-list{
     margin: 10px auto 10px auto;
-    background: #df3c16;
+    background: #b63e32;
     padding: 5px 5px 5px 20px;
     border-radius: 5px 15px;
 }
@@ -761,8 +765,18 @@ a {
     color: #eee2d4;
     line-height: 0.7;
 }
+.purple-button{
+    background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+}
 /*Search--------------------------------------------------------------------------------------------*/
-.search-overlay {
+.search-overlay, .tomc-settings-overlay{
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 1110;
@@ -821,7 +835,7 @@ a {
 .search-overlay__icon{
     margin: 0 5px 0 10px;
     font-size: 1.8rem;
-    color: #df3c16;
+    color: #b63e32;
 }
 
 .search-term{
@@ -833,8 +847,8 @@ a {
     background-color: white;
     font-size: 1rem;
     font-weight: 300;
-    /* outline: solid #df3c16 2px; */
-    color: #df3c16;
+    /* outline: solid #b63e32 2px; */
+    color: #b63e32;
 }
 
 .search-result{
@@ -886,6 +900,10 @@ a {
 .event-summary {
     margin-bottom: 0;
     margin-top: 20px;
+}
+
+.settings-overlay--section{
+    padding: 20px;
 }
 
 
@@ -1114,7 +1132,7 @@ a {
     width: 80vw;
     margin: 10 auto;
     background: white;
-    border: 2px solid #df3c16;
+    border: 2px solid #b63e32;
     border-radius: 20px;
     padding: 20px;
     animation: fade-in 1s ease-in forwards;

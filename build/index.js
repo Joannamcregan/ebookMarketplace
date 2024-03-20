@@ -116,6 +116,127 @@ class MobileMenu {
 
 /***/ }),
 
+/***/ "./src/modules/ReaderSettings.js":
+/*!***************************************!*\
+  !*** ./src/modules/ReaderSettings.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class Settings {
+  // 1. describe and create/initiate object
+  constructor() {
+    this.addSettingsHTML();
+    this.settingsOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".tomc-settings-overlay");
+    this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-settings-trigger");
+    this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay__close");
+    this.events();
+    this.isOverlayOpen = false;
+  }
+  // 2. events
+  events() {
+    this.openButton.on("click", this.openSettingsOverlay.bind(this));
+  }
+
+  // 3. methods (functions, actions...)
+  addSettingsHTML() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').append(`
+            <div class="tomc-settings-overlay">
+                <div class="orange-translucent-background">
+                    <div class="overlay-main-container"> 
+                        <i class="fa fa-window-close search-overlay__close" aria-hidden = "true" onclick="this.closeOverlay.bind(this)"></i>
+                        <br>
+                        <h1 class="centered-text">My Settings</h1>
+                    </div>
+                </div>
+                <div class="settings-overlay--section">
+                    <h2 class="centered-text">My Triggers</h2>
+                    <p class="centered-text">Select triggers you want to avoid and we won't include books that have been tagged with them in your search results.</p>
+                    <div id="settings-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
+                    <a href="#"><p class="centered-text">suggest a new trigger warning</p></a>
+                </div>
+                <div class="settings-overlay--section">
+                    <h2 class="centered-text">Languages I Read</h2>
+                    <p class="centered-text">Select languages you read and we'll include books tagged with them in your search results.</p>
+                    <div id="settings-overlay--languages-container" class="tomc-book-organization--options-container"></div>
+                </div>
+                <button class="purple-button">save settings</button>
+            </div>
+        `);
+  }
+  closeOverlay() {
+    this.settingsOverlay.removeClass("search-overlay--active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#settings-overlay--triggers-container").html('');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#settings-overlay--languages-container").html('');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("body-no-scroll");
+    this.isOverlayOpen = false;
+  }
+  toggleWarningSelection() {
+    console.log('toggle warning');
+  }
+  toggleLanguageSelection() {
+    console.log('toggle language');
+  }
+  //potentially add below to the html when suggestions functionality added-----------------------
+  // <div class="settings-overlay--section">
+  //     <h2 class="centered-text">My Favorite Genres</h2>
+  //     <div id="settings-overlay--genres-2-container"></div>
+  //     <h2 class="centered-text">My Favorite Topics</h2>
+  //     <div id="settings-overlay--genres-3-container"></div>
+  // </div>
+  openSettingsOverlay() {
+    if (!this.isOverlayOpen) {
+      this.isOverlayOpen = true;
+      jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
+        beforeSend: xhr => {
+          xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
+        },
+        url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getContentWarnings',
+        type: 'GET',
+        success: response => {
+          for (let i = 0; i < response.length; i++) {
+            this.newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').addClass('tomc-book-organization--option-span').attr('data-warning-id', response[i]['id']).attr('aria-label', response[i]['warning_name'] + ' is not selected').html(response[i]['warning_name']).on('click', this.toggleWarningSelection.bind(this));
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()("#settings-overlay--triggers-container").append(this.newSpan);
+          }
+          jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
+            beforeSend: xhr => {
+              xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
+            },
+            url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getLanguages',
+            type: 'GET',
+            success: response => {
+              console.log(response);
+              for (let i = 0; i < response.length; i++) {
+                this.newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').addClass('tomc-book-organization--option-span').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is not selected').html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
+                jquery__WEBPACK_IMPORTED_MODULE_0___default()("#settings-overlay--languages-container").append(this.newSpan);
+              }
+              this.settingsOverlay.addClass("search-overlay--active");
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").addClass("body-no-scroll");
+            },
+            error: response => {
+              console.log('error getting languages.');
+              console.log(response);
+            }
+          });
+        },
+        error: response => {
+          console.log('error getting triggers');
+          console.log(response);
+        }
+      });
+    }
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Settings);
+
+/***/ }),
+
 /***/ "./src/modules/search.js":
 /*!*******************************!*\
   !*** ./src/modules/search.js ***!
@@ -327,6 +448,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
 /* harmony import */ var _modules_CategoryDisplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/CategoryDisplay */ "./src/modules/CategoryDisplay.js");
 /* harmony import */ var _modules_FrontDisplay__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/FrontDisplay */ "./src/modules/FrontDisplay.js");
+/* harmony import */ var _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ReaderSettings */ "./src/modules/ReaderSettings.js");
+
 
 
 
@@ -335,6 +458,7 @@ const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default
 const marketplaceSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_0__["default"]();
 const categoryDisplay = new _modules_CategoryDisplay__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const frontDisplay = new _modules_FrontDisplay__WEBPACK_IMPORTED_MODULE_3__["default"]();
+const readerSettings = new _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__["default"]();
 })();
 
 /******/ })()
