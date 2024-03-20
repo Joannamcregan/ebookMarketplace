@@ -16,8 +16,8 @@
     <a href="#" class="site-header__menu-trigger fa fa-bars" aria-label="menu" tabindex="-1"><i aria-hidden="true"></i></a>
     <a href="<?php echo esc_url(site_url()) ?>"><img class="logo-image" src="<?php echo get_theme_file_uri('/images/logo.jpg'); ?>" alt="Trunk of My Car Cooperative" /></a>
     <div class="top-nav-section" id="top-nav-right">
-      <a href="<?php echo esc_url(site_url('/search'));?>" class="js-search-trigger " aria-label="search"><i class="fa fa-search" aria-hidden="true"></i></a>
-      <i class="fa-solid fa-gear" aria-label="settings" aria-hidden="true"></i>          
+      <a href="<?php echo esc_url(site_url('/search'));?>" class="js-search-trigger" aria-label="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+      <a href="#" class="js-settings-trigger" aria-label="settings"><i class="fa-solid fa-gear" aria-hidden="true"></i></a>          
       <a class="glowing-text" href="<?php echo wc_get_cart_url(); ?>" aria-label="shopping cart"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a>
     </div>
   </div>

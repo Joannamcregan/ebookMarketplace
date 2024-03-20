@@ -4,6 +4,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 //require files
 require get_theme_file_path('/inc/search-route.php');
+require get_theme_file_path('/inc/settings-route.php');
 
 // function marketplace_custom_rest() {
 //     register_rest_field('post', 'authorName', array(
@@ -350,30 +351,30 @@ remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10);
 add_action('woocommerce_after_shop_loop', 'woocommerce_pagination', 30);
 
 /*accessibility for product archive------------------------------------------------------------------------*/
-add_filter('wp_get_attachment_image_attributes', 'ebook_marketplace_attachement_image_attributes', 20, 2);
+// add_filter('wp_get_attachment_image_attributes', 'ebook_marketplace_attachement_image_attributes', 20, 2);
 
-function ebook_marketplace_attachement_image_attributes($attr, $attachment) {
-    global $post;
-    if ($post->post_type == 'product') {
-        $title = $post->post_title;
-        $attr['alt'] = $title;
-        $attr['title'] = $title;
-    }
-    return $attr;
-}
+// function ebook_marketplace_attachement_image_attributes($attr, $attachment) {
+//     global $post;
+//     if ($post->post_type == 'product') {
+//         $title = $post->post_title;
+//         $attr['alt'] = $title;
+//         $attr['title'] = $title;
+//     }
+//     return $attr;
+// }
 
-if ( ! function_exists( 'woocommerce_template_loop_product_link_open' ) ) {
-	/**
-	 * Insert the opening anchor tag for products in the loop.
-	 */
-	function woocommerce_template_loop_product_link_open() {
-		global $product;
+// if ( ! function_exists( 'woocommerce_template_loop_product_link_open' ) ) {
+// 	/**
+// 	 * Insert the opening anchor tag for products in the loop.
+// 	 */
+// 	function woocommerce_template_loop_product_link_open() {
+// 		global $product;
 
-		$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+// 		$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
 
-		echo '<a href="' . esc_url( $link ) . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link" aria-label="' . get_the_title() . '">';
-	}
-}
+// 		echo '<a href="' . esc_url( $link ) . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link" aria-label="' . get_the_title() . '">';
+// 	}
+// }
 
 /*style single product page ------------------------------------------------------------------*/
 
