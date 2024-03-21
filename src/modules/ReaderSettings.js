@@ -7,6 +7,7 @@ class Settings {
         this.settingsOverlay = $(".tomc-settings-overlay");
         this.openButton = $(".js-settings-trigger");
         this.closeButton = $(".search-overlay__close");
+        this.saveSettingsButton = $("#tomc-reader-settings--save-settings");
         this.events();
         this.isOverlayOpen = false;
         this.chosenWarnings = [];
@@ -16,6 +17,7 @@ class Settings {
     events(){
         this.openButton.on("click", this.openSettingsOverlay.bind(this));
         this.closeButton.on("click", this.closeOverlay.bind(this));
+        this.saveSettingsButton.on("click", this.saveSettings.bind(this));
     }
 
 // 3. methods (functions, actions...)
@@ -40,7 +42,7 @@ class Settings {
                     <p class="centered-text">Select languages you read and we'll include books tagged with them in your search results.</p>
                     <div id="settings-overlay--languages-container" class="tomc-book-organization--options-container"></div>
                 </div>
-                <button class="purple-button">save settings</button>
+                <button class="purple-button" id="tomc-reader-settings--save-settings">save settings</button>
             </div>
         `);
     }
@@ -136,6 +138,27 @@ class Settings {
             })
         }
     }
+
+    saveSettings(){
+        $.ajax({
+            beforeSend: (xhr) => {
+                xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
+            },
+            url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/saveReaderSettings',
+            type: 'POST',
+            data: {
+                'triggers': JSON.stringify(this.chosenWarnings),
+                'languages': JSON.stringify(this.chosenLanguages)
+            },
+            success: (response) => {
+                this.closeOverlay();
+            },
+            error: (response) => {
+                console.log(response);
+            }
+        })
+    }
+
 }
 
 export default Settings;
