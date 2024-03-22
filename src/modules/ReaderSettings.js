@@ -7,7 +7,8 @@ class Settings {
         this.settingsOverlay = $(".tomc-settings-overlay");
         this.openButton = $(".js-settings-trigger");
         this.closeButton = $(".search-overlay__close");
-        this.saveSettingsButton = $("#tomc-reader-settings--save-settings");
+        this.saveLanguageSettingsButton = $("#tomc-reader-settings--save-language-settings");
+        this.saveTriggerSettingsButton = $("#tomc-reader-settings--save-trigger-settings");
         this.events();
         this.isOverlayOpen = false;
         this.chosenWarnings = [];
@@ -17,7 +18,8 @@ class Settings {
     events(){
         this.openButton.on("click", this.openSettingsOverlay.bind(this));
         this.closeButton.on("click", this.closeOverlay.bind(this));
-        this.saveSettingsButton.on("click", this.saveSettings.bind(this));
+        this.saveLanguageSettingsButton.on("click", this.saveLanguageSettings.bind(this));
+        this.saveTriggerSettingsButton.on("click", this.saveTriggerSettings.bind(this));
     }
 
 // 3. methods (functions, actions...)
@@ -36,13 +38,16 @@ class Settings {
                     <p class="centered-text">Select triggers you want to avoid and we won't include books that have been tagged with them in your search results.</p>
                     <div id="settings-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
                     <a href="#"><p class="centered-text">suggest a new trigger warning</p></a>
+                    <p class="centered-text" style="display:none;" id="tomc-reader-settings-trigger-settings-saved-message">settings saved</p>
+                    <button class="purple-button" id="tomc-reader-settings--save-trigger-settings">save trigger settings</button>
                 </div>
                 <div class="settings-overlay--section">
                     <h2 class="centered-text">Languages I Read</h2>
                     <p class="centered-text">Select languages you read and we'll include books tagged with them in your search results.</p>
                     <div id="settings-overlay--languages-container" class="tomc-book-organization--options-container"></div>
+                    <p class="centered-text" style="display:none;" id="tomc-reader-settings-language-settings-saved-message">settings saved</p>
+                    <button class="purple-button" id="tomc-reader-settings--save-language-settings">save language settings</button>
                 </div>
-                <button class="purple-button" id="tomc-reader-settings--save-settings">save settings</button>
             </div>
         `);
     }
@@ -51,6 +56,8 @@ class Settings {
         this.settingsOverlay.removeClass("search-overlay--active");
         $("#settings-overlay--triggers-container").html('');
         $("#settings-overlay--languages-container").html('');
+        this.chosenLanguages = [];
+        this.chosenWarnings = [];
         $("body").removeClass("body-no-scroll");
         this.isOverlayOpen = false;
     }
@@ -103,33 +110,31 @@ class Settings {
                 beforeSend: (xhr) => {
                     xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
                 },
-                url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getContentWarnings',
+                url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getReaderSettings',
                 type: 'GET',
                 success: (response) => {
+                    console.log(response);
                     for(let i = 0; i < response.length; i++){
-                        this.newSpan = $('<span />').addClass('tomc-book-organization--option-span').attr('data-warning-id', response[i]['id']).attr('aria-label', response[i]['warning_name'] + ' is not selected').html(response[i]['warning_name']).on('click', this.toggleWarningSelection.bind(this));
-                        $("#settings-overlay--triggers-container").append(this.newSpan);                        
-                    }    
-                    $.ajax({
-                        beforeSend: (xhr) => {
-                            xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
-                        },
-                        url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getLanguages',
-                        type: 'GET',
-                        success: (response) => {
-                            console.log(response);
-                            for(let i = 0; i < response.length; i++){
-                                this.newSpan = $('<span />').addClass('tomc-book-organization--option-span').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is not selected').html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
-                                $("#settings-overlay--languages-container").append(this.newSpan);                        
+                        if (response[i]['settingtype']=='trigger'){
+                            if (response[i]['triggerid']){
+                                this.newSpan = $('<span />').addClass('tomc-book-organization--option-span tomc-book-organization--option-selected').attr('data-warning-id', response[i]['id']).attr('aria-label', response[i]['warning_name'] + ' is selected').html(response[i]['warning_name']).on('click', this.toggleWarningSelection.bind(this));
+                                this.chosenWarnings.push(Number(response[i]['id']));
+                            } else {
+                                this.newSpan = $('<span />').addClass('tomc-book-organization--option-span').attr('data-warning-id', response[i]['id']).attr('aria-label', response[i]['warning_name'] + ' is not selected').html(response[i]['warning_name']).on('click', this.toggleWarningSelection.bind(this));
                             }
-                            this.settingsOverlay.addClass("search-overlay--active");
-                            $("body").addClass("body-no-scroll");
-                        },
-                        error: (response) => {
-                            console.log('error getting languages.');
-                            console.log(response);
+                            $("#settings-overlay--triggers-container").append(this.newSpan);
+                        } else if (response[i]['settingtype']=='language'){
+                            if (response[i]['languageid']){
+                                this.newSpan = $('<span />').addClass('tomc-book-organization--option-span tomc-book-organization--option-selected').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is selected').html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
+                                this.chosenLanguages.push(Number(response[i]['id']));
+                            } else {
+                                this.newSpan = $('<span />').addClass('tomc-book-organization--option-span').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is not selected').html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
+                            }
+                            $("#settings-overlay--languages-container").append(this.newSpan);
                         }
-                    })                
+                    }
+                    this.settingsOverlay.addClass("search-overlay--active");
+                    $("body").addClass("body-no-scroll");
                 },
                 error: (response) => {
                     console.log('error getting triggers');
@@ -139,19 +144,38 @@ class Settings {
         }
     }
 
-    saveSettings(){
+    saveLanguageSettings(){
         $.ajax({
             beforeSend: (xhr) => {
                 xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
             },
-            url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/saveReaderSettings',
+            url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/saveLanguageSettings',
             type: 'POST',
             data: {
-                'triggers': JSON.stringify(this.chosenWarnings),
                 'languages': JSON.stringify(this.chosenLanguages)
             },
             success: (response) => {
-                this.closeOverlay();
+                console.log(response);
+                $("#tomc-reader-settings-language-settings-saved-message").fadeIn().delay(3000).fadeOut();
+            },
+            error: (response) => {
+                console.log(response);
+            }
+        })
+    }
+
+    saveTriggerSettings(){
+        $.ajax({
+            beforeSend: (xhr) => {
+                xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
+            },
+            url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/saveTriggerSettings',
+            type: 'POST',
+            data: {
+                'triggers': JSON.stringify(this.chosenWarnings)
+            },
+            success: (response) => {
+                $("#tomc-reader-settings-trigger-settings-saved-message").fadeIn().delay(3000).fadeOut();
             },
             error: (response) => {
                 console.log(response);
