@@ -118,33 +118,38 @@ class Search {
     }
     closeOverlay(){
         this.searchOverlay.removeClass("search-overlay--active");
-        this.resultsDiv.html('');
+        $('#search-overlay--languages-container').html('');
+        $('#search-overlay--triggers-container').html('');
         $("body").removeClass("body-no-scroll");
         this.isOverlayOpen = false;
     }
     getResults() {
         if (this.chosenLanguages > 0){
-            console.log('made it here');
-            $.ajax({
-                beforeSend: (xhr) => {
-                    xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
-                },
-                url: tomcBookorgData.root_url + '/wp-json/ebookMarketplace/v1/search',
-                type: 'POST',
-                data: {
-                    'searchterm' : this.searchField.val().substring(0, 300),
-                    'triggers' : JSON.stringify(this.chosenWarnings),
-                    'languages' : JSON.stringify(this.chosenLanguages)
-                },
-                success: (response) => {
-                    console.log('success');
-                    console.log(response);
-                },
-                error: (response) => {
-                    console.log('fail');
-                    console.log(response);
-                }
-            });
+            if (this.searchField.val()){
+                $('#tomc-search--no-search-term').addClass('hidden');
+                $.ajax({
+                    beforeSend: (xhr) => {
+                        xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
+                    },
+                    url: tomcBookorgData.root_url + '/wp-json/ebookMarketplace/v1/search',
+                    type: 'GET',
+                    data: {
+                        'searchterm' : this.searchField.val().substring(0, 300),
+                        'triggers' : JSON.stringify(this.chosenWarnings),
+                        'languages' : JSON.stringify(this.chosenLanguages)
+                    },
+                    success: (response) => {
+                        console.log('success');
+                        console.log(response);
+                    },
+                    error: (response) => {
+                        console.log('fail');
+                        console.log(response);
+                    }
+                });
+            } else {
+                $('#tomc-search--no-search-term').removeClass('hidden');
+            }            
         }
         
         // $.getJSON(marketplaceData.root_url + "/wp-json/ebookMarketplace/v1/search?term=" + this.searchField.val(), (results) => {
@@ -178,32 +183,37 @@ class Search {
     }
     addSearchHTML() {
         $('body').append(`
-            <div class="search-overlay">
-                <div class="search-overlay__top">
-                    <div class="overlay-main-container"> 
-                    <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
-                    <div class="overlay-input-container">
-                        <i class="fa fa-search search-overlay__icon" aria-hidden = "true"></i>
-                        <input type="text" class="search-term" placeholder = "Search for books by title, author, genre, or character identity" id = "search-term">
-                    </div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div id="search-overlay__results">
-                        <h1 class="centered-text">Content Warnings</h1>
-                        <p class="centered-text">Select any triggers you want to avoid. We'll exclude books that have been tagged with corresponding content warnings from your search results.</p>
-                        <div id="search-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
-                        <h1 class="centered-text">Languages</h1>
-                        <p class="centered-text">Select any languages you read</p>
-                        <div id="search-overlay--languages-container" class="tomc-book-organization--options-container"></div>
-                        <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-languages-selected">
-                            <p>Please choose as least one language to ensure your book shows up in search results.</p>
+            <main>
+                <div class="search-overlay">
+                    <div class="search-overlay__top">
+                        <div class="overlay-main-container"> 
+                        <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
+                        <div class="overlay-input-container">
+                            <i class="fa fa-search search-overlay__icon" aria-hidden = "true"></i>
+                            <input type="text" class="search-term" placeholder = "Search for books by title, author, genre, or character identity" id = "search-term">
                         </div>
-                        <button class="purple-button" id="tomc-search--roll-results">let's roll!</button>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div id="search-overlay__results">
+                            <h1 class="centered-text">Content Warnings</h1>
+                            <p class="centered-text">Select any triggers you want to avoid. We'll exclude books that have been tagged with corresponding content warnings from your search results.</p>
+                            <div id="search-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
+                            <h1 class="centered-text">Languages</h1>
+                            <p class="centered-text">Select any languages you read</p>
+                            <div id="search-overlay--languages-container" class="tomc-book-organization--options-container"></div>
+                            <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-languages-selected">
+                                <p>Choose as least one language to ensure your book shows up in search results.</p>
+                            </div>
+                            <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-search-term">
+                                <p>Enter a search term.</p>
+                            </div>
+                            <button class="purple-button" id="tomc-search--roll-results">let's roll!</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </main>
         `);
     }
 }
