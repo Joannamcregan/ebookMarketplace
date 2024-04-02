@@ -8,7 +8,9 @@ body{
     background: #eee2d4;
     /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     font-family: Nunito Sans, sans-serif;
+    /* font-family: Urbanist, sans-serif; */
     /* padding-top: 0.5rem; */
+    font-size: 16;
     margin-left: 0px;
     margin-right: 0px;
     overflow-x: hidden;
@@ -51,12 +53,14 @@ header a:hover{
     text-decoration: none;
 }
 .header--main a{
-    color: #eee2d4;
+    color: #eee2d4 !important;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .header--sub a{
-    color: #eee2d4;
+    color: #eee2d4 !important;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .woocommerce-products-header{
     width: 100vw;
@@ -252,13 +256,13 @@ header a:hover{
     border-bottom: solid #f7c340 15px;
     border-radius: 0 0 55px 25px;
     padding: 20px 15px;
-    color: #eee2d4;
 }
 .banner h1{
     margin: 10px;
     font-family: tankindred, serif;
     font-size: 54;
     font-weight: 300;
+    color: #eee2d4;
     text-shadow: 3px 3px #0c6980;
 }
 @media screen and (max-width: 480px){
@@ -311,6 +315,15 @@ header a:hover{
 .orange-translucent-background{
     background: rgba(228, 78, 45, 0.3);
     padding-bottom: 20px;
+}
+.padded-arrow-accent{
+    padding: 10px 20px;
+    background: #f6ece1;
+    border-radius: 25px;
+    cursor: pointer;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
 }
 .page-accent{
     margin: 2em 0 0 0;
@@ -422,9 +435,15 @@ header a:hover{
 .yellow-shadow-text{
     text-shadow: 1px 1px #d38124;
 }
-h1, h2, h3{
+/* h1, h2, h3{
     font-family: 'tahoma', sans-serif;
+} */
+h1, h2, h3{
+    font-family: Nunito Sans, sans-serif;
 }
+/* h1, h2, h3{
+    font-family: Urbanist, sans-serif;
+} */
 .large-heading{
     font-size: 36;
 }
@@ -441,7 +460,7 @@ a {
 .special-display-text{
     font-size: 54;
     color: #0c698e;
-    text-shadow: 1px 1px white, 3px 5px #f4b10e;
+    text-shadow: 1px 1px rgb(255, 255, 255), 3px 5px #f4b10e;
     font-weight: 700;
     font-family: tankindred, Georgia, serif;
     line-height: 180%;
@@ -800,7 +819,7 @@ a {
 }
 
 .search-overlay__top{
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgba(228, 78, 45, 0.32);
     /* margin-top: 50px; */
 }
 
@@ -842,6 +861,7 @@ a {
     width: 75%;
     box-sizing: border-box;
     border: none;
+    border-radius: 25px;
     padding: 15px 10px;
     margin: 0;
     background-color: white;
@@ -877,17 +897,6 @@ a {
     margin: 0 auto;
     display: block;
 }
-
-.spinner-loader {
-    margin: 45px auto 0 auto;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    border: 0.25rem solid rgba(0, 0, 0, 0.2);
-    border-top-color: black;
-    -webkit-animation: spin 1s infinite linear;
-    animation: spin 1s infinite linear;
-  }
 
 .body-no-scroll{
     overflow: hidden;
