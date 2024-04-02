@@ -7,7 +7,7 @@
     <title>Trunk of My Car</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -17,7 +17,9 @@
     <a href="<?php echo esc_url(site_url()) ?>"><img class="logo-image" src="<?php echo get_theme_file_uri('/images/logo.jpg'); ?>" alt="Trunk of My Car Cooperative" /></a>
     <div class="top-nav-section" id="top-nav-right">
       <a href="<?php echo esc_url(site_url('/search'));?>" class="js-search-trigger" aria-label="search"><i class="fa fa-search" aria-hidden="true"></i></a>
-      <a href="#" class="js-settings-trigger" aria-label="settings"><i class="fa-solid fa-gear" aria-hidden="true"></i></a>          
+      <?php if (is_user_logged_in()){
+        ?><a href="#" class="js-settings-trigger" aria-label="settings"><i class="fa-solid fa-gear" aria-hidden="true"></i></a>
+      <?php } ?>
       <a class="glowing-text" href="<?php echo wc_get_cart_url(); ?>" aria-label="shopping cart"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a>
     </div>
   </div>
@@ -56,10 +58,10 @@
         </a>
       <?php }
       ?><a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a>
-      <a href="<?php echo esc_url(site_url('/services'));?>">Our Services</a>
-      <a href="<?php echo esc_url(site_url('/members'));?>">Our Members</a>
-      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/groups')); ?>">Our Groups</a><?php } ?>
-      <a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Our Events</a>
+      <a href="<?php echo esc_url(site_url('/services'));?>">Services</a>
+      <a href="<?php echo esc_url(site_url('/members'));?>">Members</a>
+      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/groups')); ?>">Groups</a><?php } ?>
+      <a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a>
     </div>
   </nav>
 </div>

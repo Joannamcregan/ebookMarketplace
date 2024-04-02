@@ -70,10 +70,10 @@
                   </a></li>
             <?php } ?>          
             <li><a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a></li>
-            <li><a href="<?php echo esc_url(site_url('/services'));?>">Our Services</a></li>
-            <li><a href="<?php echo esc_url(site_url('/members'));?>">Our Members</a></li>
-            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/groups')); ?>">Our Groups</a></li><?php } ?>
-            <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Our Events</a></li>
+            <li><a href="<?php echo esc_url(site_url('/services'));?>">Services</a></li>
+            <li><a href="<?php echo esc_url(site_url('/members'));?>">Members</a></li>
+            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/groups')); ?>">Groups</a></li><?php } ?>
+            <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a></li>
       </ul>
   </nav>
 </div>
