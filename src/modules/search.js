@@ -80,7 +80,6 @@ class Search {
                 url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getReaderSettings',
                 type: 'GET',
                 success: (response) => {
-                    console.log(response);
                     for(let i = 0; i < response.length; i++){
                         if (response[i]['settingtype']=='trigger'){
                             if (response[i]['triggerid']){
@@ -124,8 +123,10 @@ class Search {
         this.isOverlayOpen = false;
     }
     getResults() {
-        if (this.chosenLanguages > 0){
+        if (this.chosenLanguages.length > 0){
+            console.log('passed first');
             if (this.searchField.val()){
+                console.log('passed second');
                 $('#tomc-search--no-search-term').addClass('hidden');
                 $.ajax({
                     beforeSend: (xhr) => {
