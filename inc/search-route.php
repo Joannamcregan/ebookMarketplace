@@ -43,6 +43,9 @@ function marketplaceSearchResults($data) {
     and b.islive = 1
     order by b.createdate desc';
     $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, '%' . $wpdb->esc_like($searchTerm) . '%', $book_warnings_table), ARRAY_A);
+    for($index = 0; $index < count($booksResults); $index++){
+        $booksResults[$index]['product_url'] = get_permalink($booksResults[$index]['product_url']);
+    }
     array_push($resultsArr, ...$booksResults);
 
     $query = 'select distinct post.id, post.post_title as pen_name, post.id as author_url, "author" as "resulttype"
@@ -51,6 +54,9 @@ function marketplaceSearchResults($data) {
     and post.post_status = "publish"
     and post.post_type = "author-profile"';
     $authorResults = $wpdb->get_results($wpdb->prepare($query, $posts_table, '%' . $wpdb->esc_like($searchTerm) . '%'), ARRAY_A);
+    for($index = 0; $index < count($authorResults); $index++){
+        $authorResults[$index]['author_url'] = get_permalink($authorResults[$index]['author_url']);
+    }
     array_push($resultsArr, ...$authorResults);
 
     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "genrebooks" as "resulttype"
@@ -70,6 +76,9 @@ function marketplaceSearchResults($data) {
     order by b.createdate desc
     limit 20';
     $genreResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_genres_table, $genres_table, $searchTerm, $book_warnings_table), ARRAY_A);
+    for($index = 0; $index < count($genreResults); $index++){
+        $genreResults[$index]['product_url'] = get_permalink($genreResults[$index]['product_url']);
+    }
     array_push($resultsArr, ...$genreResults);
 
     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "identitybooks" as "resulttype"
@@ -89,6 +98,9 @@ function marketplaceSearchResults($data) {
     order by b.createdate desc
     limit 20';
     $identityResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_identities_table, $identities_table, $searchTerm, $book_warnings_table), ARRAY_A);
+    for($index = 0; $index < count($identityResults); $index++){
+        $identityResults[$index]['product_url'] = get_permalink($identityResults[$index]['product_url']);
+    }
     array_push($resultsArr, ...$identityResults);
 
     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "readalikebooks" as "resulttype", k.readalike_author
@@ -107,6 +119,9 @@ function marketplaceSearchResults($data) {
     order by b.createdate desc
     limit 10';
     $readalikeResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $readalikes_table, $searchTerm, $book_warnings_table), ARRAY_A);
+    for($index = 0; $index < count($readalikeResults); $index++){
+        $readalikeResults[$index]['product_url'] = get_permalink($readalikeResults[$index]['product_url']);
+    }
     array_push($resultsArr, ...$readalikeResults);
 
     return $resultsArr;
