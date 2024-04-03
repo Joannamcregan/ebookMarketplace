@@ -85,13 +85,15 @@ class Search {
                                 this.newSpan = $('<span />').addClass('tomc-book-organization--option-span tomc-book-organization--option-selected').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is selected').attr('id', 'search-overlay-language-option-' + response[i]['language_name']).html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
                                 this.chosenLanguages.push(Number(response[i]['id']));
                             } else {
-                                this.newSpan = $('<span />').addClass('tomc-book-organization--option-span').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is not selected').html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
+                                this.newSpan = $('<span />').addClass('tomc-book-organization--option-span').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is not selected').attr('id', 'search-overlay-language-option-' + response[i]['language_name']).html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
                             }
                             $("#search-overlay--languages-container").append(this.newSpan);
                         }
                     }
                     if (this.chosenLanguages < 1){
-                        $('#tomc-search-overlay-language-option-english').addClass('tomc-book-organization--option-span tomc-book-organization--option-selected').attr('aria-label', response[i]['language_name'] + ' is selected')
+                        console.log('no language settings');
+                        $('#search-overlay-language-option-English').addClass('tomc-book-organization--option-span tomc-book-organization--option-selected').attr('aria-label', 'English is selected');
+                        this.chosenLanguages.push($('#search-overlay-language-option-English').data('language-id'));
                     }
                     this.searchOverlay.addClass("search-overlay--active");
                     $("body").addClass("body-no-scroll");
@@ -104,11 +106,10 @@ class Search {
                 }
             })
             return false;
-        } 
+        }
     }
     closeOverlay(){
         console.log('close it');
-        this.searchOverlay.removeClass("search-overlay--active");
         this.resultsDiv.html(`<h1 class="centered-text small-heading">Content Warnings</h1>
         <p class="centered-text">Select any triggers you want to avoid. We'll exclude books that have been tagged with corresponding content warnings from your search results.</p>
         <div id="search-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
@@ -123,6 +124,9 @@ class Search {
         </div>`);
         $("body").removeClass("body-no-scroll");
         this.isOverlayOpen = false;
+        this.chosenLanguages = [];
+        this.chosenWarnings = [];
+        this.searchOverlay.removeClass("search-overlay--active");
     }
     getResults() {
         if (this.chosenLanguages.length > 0){

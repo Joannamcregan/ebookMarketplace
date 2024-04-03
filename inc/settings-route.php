@@ -25,22 +25,17 @@ function getReaderSettings(){
     $reader_languages_table = $wpdb->prefix . "tomc_reader_languages";
     $user = wp_get_current_user();
     $userid = get_current_user_id();
-    if (is_user_logged_in()){
-        $triggerQuery = 'WITH cte AS (SELECT triggerid FROM %i WHERE readerid = %d)
-        SELECT a.id, a.warning_name, b.triggerid, "trigger" as "settingtype"
-        FROM %i a
-        LEFT JOIN cte b ON a.id = b.triggerid';
-        $triggerResults = $wpdb->get_results($wpdb->prepare($triggerQuery, $reader_triggers_table, $userid, $cw_table), ARRAY_A);
-        $languageQuery = 'WITH cte AS (SELECT languageid FROM %i WHERE readerid = %d)
-        SELECT a.id, a.language_name, b.languageid, "language" as "settingtype"
-        FROM %i a
-        LEFT JOIN cte b ON a.id = b.languageid';
-        $languageResults = $wpdb->get_results($wpdb->prepare($languageQuery, $reader_languages_table, $userid, $languages_table), ARRAY_A);
-        return array_merge($triggerResults, $languageResults);
-    } else {
-        wp_safe_redirect(site_url('/my-account'));
-        return 'fail';
-    }
+    $triggerQuery = 'WITH cte AS (SELECT triggerid FROM %i WHERE readerid = %d)
+    SELECT a.id, a.warning_name, b.triggerid, "trigger" as "settingtype"
+    FROM %i a
+    LEFT JOIN cte b ON a.id = b.triggerid';
+    $triggerResults = $wpdb->get_results($wpdb->prepare($triggerQuery, $reader_triggers_table, $userid, $cw_table), ARRAY_A);
+    $languageQuery = 'WITH cte AS (SELECT languageid FROM %i WHERE readerid = %d)
+    SELECT a.id, a.language_name, b.languageid, "language" as "settingtype"
+    FROM %i a
+    LEFT JOIN cte b ON a.id = b.languageid';
+    $languageResults = $wpdb->get_results($wpdb->prepare($languageQuery, $reader_languages_table, $userid, $languages_table), ARRAY_A);
+    return array_merge($triggerResults, $languageResults);
 }
 
 function saveReaderTriggers($data){
