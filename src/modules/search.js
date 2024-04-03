@@ -141,6 +141,7 @@ class Search {
                     data: {
                         'searchterm' : this.searchField.val().substring(0, 300),
                         'triggers' : JSON.stringify(this.chosenWarnings),
+                        'hasTriggers' : this.chosenWarnings > 0 ? 'yes' : 'no',
                         'languages' : JSON.stringify(this.chosenLanguages)
                     },
                     success: (response) => {
