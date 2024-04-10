@@ -243,6 +243,15 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 
 /*genre category archive page-----------------------------------------------------------------------*/
+
+function woocommerce_template_loop_product_link_open() {
+    global $product;
+ 
+    $link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+ 
+    echo '<a href="' . esc_url( $link ) . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link" aria-label="' . $product->get_title() . ' product page">';
+}
+
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 
 function ebook_marketplace_product_collection_container(){
@@ -255,82 +264,82 @@ function ebook_marketplace_product_details_opening_div(){
 }
 add_action( 'woocommerce_before_shop_loop_item', 'ebook_marketplace_product_details_opening_div', 12 );
 
-function ebook_marketplace_include_book_author() {  
-    global $post;
-    global $ebookCategoryID;
-    $quoteText = '';
-    $authorName = '';
-    $isBook = false;
-    $productCategories = get_the_terms( $post->ID, 'product_cat' );
-    foreach($productCategories as $category){
-        if ($category->term_id == $ebookCategoryID){
-            $isBook = true;
-        }
-    }
-    if ($isBook) {
-        $bookQuote = get_field('featured_quote');
-        if ($bookQuote) {
-            $quoteText .= '<em><p>';
-            $quoteText .= $bookQuote;
-            $quoteText .= '</p></em>';
-            echo $quoteText;
-        }
-        $authorName .= '<p class="right-text-no-margin">';
-        $authorName .= '-';
-        $bookAuthors = get_field('book_author');        
-        if ($bookAuthors) {
-            foreach($bookAuthors as $author) {
-                if (count($bookAuthors) > 2) {
-                    if ($author == $bookAuthors[count($bookAuthors)-2]) {
-                        $authorName .= get_the_title($author);
-                        $authorName .= ', and ';
-                    } else if ($author != $bookAuthors[count($bookAuthors)-1]) {
-                        $authorName .= get_the_title($author);
-                        $authorName .= ', ';
-                    } else {
-                        $authorName .= get_the_title($author);
-                    }
-                } 
-                if (count($bookAuthors) == 2) {
-                    if ($author == $bookAuthors[count($bookAuthors)-2]) {
-                        $authorName .= get_the_title($author);
-                        $authorName .= ' and ';
-                    } else {
-                        $authorName .= get_the_title($author);
-                    }
-                } 
-                if (count($bookAuthors) == 1) {
-                    $authorName .= get_the_title($author);
-                }
-            }
-        } else {
-            $authorName .= 'Unknown or Anonymous';
-        }
-        $authorName .= '</p>';
-    }     
-    echo $authorName;
+// function ebook_marketplace_include_book_author() {  
+//     global $post;
+//     global $ebookCategoryID;
+//     $quoteText = '';
+//     $authorName = '';
+//     $isBook = false;
+//     $productCategories = get_the_terms( $post->ID, 'product_cat' );
+//     foreach($productCategories as $category){
+//         if ($category->term_id == $ebookCategoryID){
+//             $isBook = true;
+//         }
+//     }
+//     if ($isBook) {
+//         $bookQuote = get_field('featured_quote');
+//         if ($bookQuote) {
+//             $quoteText .= '<em><p>';
+//             $quoteText .= $bookQuote;
+//             $quoteText .= '</p></em>';
+//             echo $quoteText;
+//         }
+//         $authorName .= '<p class="right-text-no-margin">';
+//         $authorName .= '-';
+//         $bookAuthors = get_field('book_author');        
+//         if ($bookAuthors) {
+//             foreach($bookAuthors as $author) {
+//                 if (count($bookAuthors) > 2) {
+//                     if ($author == $bookAuthors[count($bookAuthors)-2]) {
+//                         $authorName .= get_the_title($author);
+//                         $authorName .= ', and ';
+//                     } else if ($author != $bookAuthors[count($bookAuthors)-1]) {
+//                         $authorName .= get_the_title($author);
+//                         $authorName .= ', ';
+//                     } else {
+//                         $authorName .= get_the_title($author);
+//                     }
+//                 } 
+//                 if (count($bookAuthors) == 2) {
+//                     if ($author == $bookAuthors[count($bookAuthors)-2]) {
+//                         $authorName .= get_the_title($author);
+//                         $authorName .= ' and ';
+//                     } else {
+//                         $authorName .= get_the_title($author);
+//                     }
+//                 } 
+//                 if (count($bookAuthors) == 1) {
+//                     $authorName .= get_the_title($author);
+//                 }
+//             }
+//         } else {
+//             $authorName .= 'Unknown or Anonymous';
+//         }
+//         $authorName .= '</p>';
+//     }     
+//     echo $authorName;
 
-    $ownVoicesCats = get_the_terms( $post->ID, 'pa_diverse-books' );
-    if ($ownVoicesCats) {
-        echo '<div class="own-voices">';
-        foreach($ownVoicesCats as $cat) {
-            echo '<span><i>';
-            echo $cat->name; 
-            echo '</i></span>';
-        }
-        echo '</div>';
-    }
-}
-add_action( 'woocommerce_before_shop_loop_item_title', 'ebook_marketplace_include_book_author', 13 );
+//     $ownVoicesCats = get_the_terms( $post->ID, 'pa_diverse-books' );
+//     if ($ownVoicesCats) {
+//         echo '<div class="own-voices">';
+//         foreach($ownVoicesCats as $cat) {
+//             echo '<span><i>';
+//             echo $cat->name; 
+//             echo '</i></span>';
+//         }
+//         echo '</div>';
+//     }
+// }
+// add_action( 'woocommerce_before_shop_loop_item_title', 'ebook_marketplace_include_book_author', 13 );
 
-function ebook_marketplace_include_product_description() {      
-    if (str_word_count( strip_tags( strip_shortcodes(get_the_excerpt()))) > 60){
-        echo wp_trim_words(get_the_excerpt(), 60, '   ...see more');   
-    } else {
-        the_excerpt();
-    }
-}
-add_action( 'woocommerce_after_shop_loop_item_title', 'ebook_marketplace_include_product_description', 14 );
+// function ebook_marketplace_include_product_description() {      
+//     if (str_word_count( strip_tags( strip_shortcodes(get_the_excerpt()))) > 60){
+//         echo wp_trim_words(get_the_excerpt(), 60, '   ...see more');   
+//     } else {
+//         the_excerpt();
+//     }
+// }
+// add_action( 'woocommerce_after_shop_loop_item_title', 'ebook_marketplace_include_product_description', 14 );
 
 function ebook_marketplace_genre_archive_include_price(){
     add_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_single_price', 25);

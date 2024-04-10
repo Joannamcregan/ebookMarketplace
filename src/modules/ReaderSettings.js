@@ -25,32 +25,30 @@ class Settings {
 // 3. methods (functions, actions...)
     addSettingsHTML(){
         $('body').append(`
-            <main>
-                <div class="tomc-settings-overlay">
-                    <div class="orange-translucent-background">
-                        <div class="overlay-main-container"> 
-                            <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
-                            <br>
-                            <h1 class="centered-text">My Settings</h1>
-                        </div>
-                    </div>
-                    <div class="settings-overlay--section">
-                        <h2 class="centered-text">My Triggers</h2>
-                        <p class="centered-text">Select triggers you want to avoid and we won't include books that have been tagged with them in your search results.</p>
-                        <div id="settings-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
-                        <a href="#"><p class="centered-text">suggest a new trigger warning</p></a>
-                        <p class="centered-text" style="display:none;" id="tomc-reader-settings-trigger-settings-saved-message">settings saved</p>
-                        <button class="purple-button" id="tomc-reader-settings--save-trigger-settings">save trigger settings</button>
-                    </div>
-                    <div class="settings-overlay--section">
-                        <h2 class="centered-text">Languages I Read</h2>
-                        <p class="centered-text">Select languages you read and we'll include books tagged with them in your search results.</p>
-                        <div id="settings-overlay--languages-container" class="tomc-book-organization--options-container"></div>
-                        <p class="centered-text" style="display:none;" id="tomc-reader-settings-language-settings-saved-message">settings saved</p>
-                        <button class="purple-button" id="tomc-reader-settings--save-language-settings">save language settings</button>
+            <div class="tomc-settings-overlay">
+                <div class="orange-translucent-background">
+                    <div class="overlay-main-container"> 
+                        <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
+                        <br>
+                        <h1 class="centered-text">My Settings</h1>
                     </div>
                 </div>
-            </main>
+                <div class="settings-overlay--section">
+                    <h2 class="centered-text">My Triggers</h2>
+                    <p class="centered-text">Select triggers you want to avoid and we won't include books that have been tagged with them in your search results.</p>
+                    <div id="settings-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
+                    <a href="#"><p class="centered-text">suggest a new trigger warning</p></a>
+                    <p class="centered-text" style="display:none;" id="tomc-reader-settings-trigger-settings-saved-message">settings saved</p>
+                    <button class="purple-button" id="tomc-reader-settings--save-trigger-settings">save trigger settings</button>
+                </div>
+                <div class="settings-overlay--section">
+                    <h2 class="centered-text">Languages I Read</h2>
+                    <p class="centered-text">Select languages you read and we'll include books tagged with them in your search results.</p>
+                    <div id="settings-overlay--languages-container" class="tomc-book-organization--options-container"></div>
+                    <p class="centered-text" style="display:none;" id="tomc-reader-settings-language-settings-saved-message">settings saved</p>
+                    <button class="purple-button" id="tomc-reader-settings--save-language-settings">save language settings</button>
+                </div>
+            </div>
         `);
     }
 
