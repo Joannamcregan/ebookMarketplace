@@ -62,14 +62,19 @@ header a:hover{
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
-.woocommerce-products-header{
-    width: 100vw;
-    background: linear-gradient(to right, #f6f0e9, #fffaf4);
-    border-right: solid #9f886d 5px;
-    padding: 1rem 0;
-    font-size: 24px;
-    color: black;
+.product-section .button{
+    margin: 10px auto;
+    border-radius: 15px;
+    background: #e44e2d;
+    color: white !important;
+    padding: 10px;
+    display: block;
+    width: fit-content;
     text-align: center;
+    cursor: pointer;
+}
+.orderby{
+    margin: 0px 20px;
 }
 .woocommerce-result-count{
     padding: 10px 0 0 20px;
@@ -267,27 +272,27 @@ header a:hover{
 }
 @media screen and (max-width: 480px){
     .banner h1{
-        font-size: 50;
+        font-size: 46;
     }
 }
 @media screen and (max-width: 400px){
     .banner h1{
-        font-size: 46;
+        font-size: 42;
     }
 }
 @media screen and (max-width: 360px){
     .banner h1{
-        font-size: 42;
+        font-size: 38;
     }
 }
 @media screen and (max-width: 320px){
     .banner h1{
-        font-size: 36;
+        font-size: 32;
     }
 }
 @media screen and (max-width: 280px){
     .banner h1{
-        font-size: 32;
+        font-size: 28;
     }
 }
 .sub-banner{
@@ -444,6 +449,9 @@ h1, h2, h3{
 /* h1, h2, h3{
     font-family: Urbanist, sans-serif;
 } */
+.small-heading{
+    font-size: 20;
+}
 .large-heading{
     font-size: 36;
 }
@@ -595,6 +603,9 @@ a {
 }
 .nowrap{
     white-space: nowrap;
+}
+.block{
+    display: block;
 }
 /*simple search-------------------------------------------------------------------------------*/
 #basic-search-form{
@@ -804,7 +815,8 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 1);
+    /* background-color: rgba(255, 255, 255, 1); */
+    background-color: rgb(252, 232, 228);
     visibility: hidden;
     opacity: 0;
     transform: scale(1.09);
@@ -868,7 +880,7 @@ a {
     font-size: 1rem;
     font-weight: 300;
     /* outline: solid #b63e32 2px; */
-    color: #b63e32;
+    color: #0c698e;
 }
 
 .search-result{
@@ -984,7 +996,7 @@ a {
 }
 .product-section img{
     /* max-width: 300px; */
-    min-width: 100%;
+    max-width: 100%;
     height: auto;
 }
 .page-numbers{
@@ -1013,7 +1025,17 @@ a {
     text-shadow: none;
 }
 .woocommerce-pagination{
-    margin-top: 1rem;
+    margin-top: 20px;
+}
+.woocommerce-pagination ul{
+    list-style-type: none;
+    margin: 0px auto;
+    display: block;
+    width: fit-content;
+}
+.woocommerce-pagination li{
+    display: inline;
+    margin-left: 10px;
 }
 
 /*single e-book page--------------------------------------------------------------------------------------------*/
@@ -1026,11 +1048,10 @@ a {
     padding: 20px;
 }
 .product-page-content img{
-    max-width: 300px;
-    float: left;
+    width: 300px;
+    height: auto;
     margin: auto;
     padding: 0 40px 40px 0;
-    box-shadow: 10px 10px 8px #888888;
 }
 .suggested-text{
     color: #333;

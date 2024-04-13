@@ -3,7 +3,7 @@ import $ from 'jquery';
 class Settings {
 // 1. describe and create/initiate object
     constructor() {    
-        this.addSettingsHTML();    
+        // this.addSettingsHTML();    
         this.settingsOverlay = $(".tomc-settings-overlay");
         this.openButton = $(".js-settings-trigger");
         this.closeButton = $(".search-overlay__close");
