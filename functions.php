@@ -389,6 +389,7 @@ add_action('woocommerce_after_shop_loop', 'woocommerce_pagination', 30);
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
 
 function ebook_marketplace_single_product_main_div(){
     echo '<div class="product-page-content">';
@@ -414,15 +415,20 @@ add_action('woocommerce_after_single_product_summary', 'ebook_marketplace_single
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 function ebook_marketplace_single_product_additional_info() {  
-    global $post;
-    global $ebookCategoryID;
     global $MVX, $product, $wpdb;
+    $productid = $product->get_id();
     $books_pennames_table = $wpdb->prefix . "tomc_pen_names_books";
     $posts_table = $wpdb->prefix . "posts";
-    $query = 'select p.title from %i pnb join %i p on pnb.pennameid = p.id where pnb.bookid = %d';
-    $results = $wpdb->get_results($wpdb->prepare($query, $books_pennames_table, $posts_table, $post->id), ARRAY_A);
+    $book_products_table = $wpdb->prefix . "tomc_book_products";
+    $query = 'select p.post_title 
+    from %i bp
+    join %i bpn on bp.bookid = bpn.bookid
+    and bp.productid = %d 
+    join %i p on bpn.pennameid = p.id
+    limit 1';
+    $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_pennames_table, $productid, $posts_table), ARRAY_A);
     if ($results){
-        echo '<h2>by ' . $results[0]['title'];
+        echo '<h2>by ' . $results[0]['post_title'] . '</h2>';
     }
 }
 add_action( 'woocommerce_single_product_summary', 'ebook_marketplace_single_product_additional_info', 13 );
@@ -436,26 +442,51 @@ function ebook_marketplace_remove_product_tabs( $tabs ) {
 }
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_remove_product_tabs', 98 );
 
-function woocommerce_template_product_reviews() {
-    woocommerce_get_template( 'single-product-reviews.php' );
-}
-add_action( 'woocommerce_after_single_product_summary', 'woocommerce_template_product_reviews', 50 );
-
-function ebook_marketplace_author_product_tab_content() {
-    $bookAuthors = get_field('book_author');	
-    if ($bookAuthors) {
-        foreach($bookAuthors as $author) {
-            ?><div class="about-author-card">
-                <h2>About <a href="<?php echo get_the_permalink($author); ?>"><?php echo get_the_title($author); ?></a></h2>                
-                <?php echo get_the_excerpt($author);
-            ?></div>        
-            <br/>
-        <?php }
+function tomc_get_book_info() {
+    global $MVX, $product, $wpdb;
+    $productid = $product->get_id();
+    $books_table = $wpdb->prefix . "tomc_books";
+    $book_products_table = $wpdb->prefix . "tomc_book_products";
+    $query = 'select books.book_description, books.book_excerpt
+    from %i bp
+    join %i books on bp.bookid = books.id
+    and bp.productid = %d 
+    limit 1';
+    $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_table, $productid), ARRAY_A);
+    if ($results){
+        echo '<h2>Description</h2><div class="tomc-single-book-description">' . $results[0]['book_description'] . '</div>';
+        echo '<h2>Excerpt</h2><div class="tomc-single-book-excerpt">' . $results[0]['book_excerpt'] . '</div>';
     } else {
-        echo '<h2>About the Author<h2><p>The author of this book is unknown or anonymous.</p>';
+        echo $wpdb->prepare($query, $book_products_table, $books_table, $productid);
     }
 }
+add_action( 'woocommerce_after_single_product_summary', 'tomc_get_book_info', 30 );
 
+function tomc_get_book_author_info() {
+    global $MVX, $product, $wpdb;
+    $productid = $product->get_id();
+    $books_pennames_table = $wpdb->prefix . "tomc_pen_names_books";
+    $posts_table = $wpdb->prefix . "posts";
+    $book_products_table = $wpdb->prefix . "tomc_book_products";
+    $query = 'select p.post_content 
+    from %i bp
+    join %i bpn on bp.bookid = bpn.bookid
+    and bp.productid = %d 
+    join %i p on bpn.pennameid = p.id
+    limit 1';
+    $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_pennames_table, $productid, $posts_table), ARRAY_A);
+    if ($results){
+        if (strlen($results[0]['post_content']) > 0){
+            echo '<h2>About the Author</h2><div class="tomc-single-book-about-author">' . $results[0]['post_content'] . '</div>';
+        }
+    }
+}
+add_action( 'woocommerce_after_single_product_summary', 'tomc_get_book_author_info', 40 );
+
+function tomc_template_product_reviews() {
+    woocommerce_get_template( 'single-product-reviews.php' );
+}
+add_action( 'woocommerce_after_single_product_summary', 'tomc_template_product_reviews', 50 );
 
 /*allow dashicons to display----------------------------------------------------------------------*/
 function ebook_marketplace_load_dashicons(){
