@@ -27,7 +27,8 @@ function marketplace_files(){
     wp_enqueue_style('community-members-styles', get_stylesheet_directory_uri() . '/css/community-members-styles.css', false, '', 'all');
     wp_enqueue_style('image-text-container-styles', get_stylesheet_directory_uri() . '/css/image-text-container-styles.css', false, '', 'all');
     wp_enqueue_style('comment-styles', get_stylesheet_directory_uri() . '/css/comment-styles.css', false, '', 'all');
-    wp_enqueue_style('seventies-style', get_stylesheet_directory_uri() . '/css/seventies-style.css', false, '', 'all');
+    wp_enqueue_style('seventies-styles', get_stylesheet_directory_uri() . '/css/seventies-style.css', false, '', 'all');
+    wp_enqueue_style('woo-styles', get_stylesheet_directory_uri() . '/css/woo-page-styles.css', false, '', 'all');
 
     wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
         'root_url' => get_site_url(),        
@@ -264,83 +265,6 @@ function ebook_marketplace_product_details_opening_div(){
 }
 add_action( 'woocommerce_before_shop_loop_item', 'ebook_marketplace_product_details_opening_div', 12 );
 
-// function ebook_marketplace_include_book_author() {  
-//     global $post;
-//     global $ebookCategoryID;
-//     $quoteText = '';
-//     $authorName = '';
-//     $isBook = false;
-//     $productCategories = get_the_terms( $post->ID, 'product_cat' );
-//     foreach($productCategories as $category){
-//         if ($category->term_id == $ebookCategoryID){
-//             $isBook = true;
-//         }
-//     }
-//     if ($isBook) {
-//         $bookQuote = get_field('featured_quote');
-//         if ($bookQuote) {
-//             $quoteText .= '<em><p>';
-//             $quoteText .= $bookQuote;
-//             $quoteText .= '</p></em>';
-//             echo $quoteText;
-//         }
-//         $authorName .= '<p class="right-text-no-margin">';
-//         $authorName .= '-';
-//         $bookAuthors = get_field('book_author');        
-//         if ($bookAuthors) {
-//             foreach($bookAuthors as $author) {
-//                 if (count($bookAuthors) > 2) {
-//                     if ($author == $bookAuthors[count($bookAuthors)-2]) {
-//                         $authorName .= get_the_title($author);
-//                         $authorName .= ', and ';
-//                     } else if ($author != $bookAuthors[count($bookAuthors)-1]) {
-//                         $authorName .= get_the_title($author);
-//                         $authorName .= ', ';
-//                     } else {
-//                         $authorName .= get_the_title($author);
-//                     }
-//                 } 
-//                 if (count($bookAuthors) == 2) {
-//                     if ($author == $bookAuthors[count($bookAuthors)-2]) {
-//                         $authorName .= get_the_title($author);
-//                         $authorName .= ' and ';
-//                     } else {
-//                         $authorName .= get_the_title($author);
-//                     }
-//                 } 
-//                 if (count($bookAuthors) == 1) {
-//                     $authorName .= get_the_title($author);
-//                 }
-//             }
-//         } else {
-//             $authorName .= 'Unknown or Anonymous';
-//         }
-//         $authorName .= '</p>';
-//     }     
-//     echo $authorName;
-
-//     $ownVoicesCats = get_the_terms( $post->ID, 'pa_diverse-books' );
-//     if ($ownVoicesCats) {
-//         echo '<div class="own-voices">';
-//         foreach($ownVoicesCats as $cat) {
-//             echo '<span><i>';
-//             echo $cat->name; 
-//             echo '</i></span>';
-//         }
-//         echo '</div>';
-//     }
-// }
-// add_action( 'woocommerce_before_shop_loop_item_title', 'ebook_marketplace_include_book_author', 13 );
-
-// function ebook_marketplace_include_product_description() {      
-//     if (str_word_count( strip_tags( strip_shortcodes(get_the_excerpt()))) > 60){
-//         echo wp_trim_words(get_the_excerpt(), 60, '   ...see more');   
-//     } else {
-//         the_excerpt();
-//     }
-// }
-// add_action( 'woocommerce_after_shop_loop_item_title', 'ebook_marketplace_include_product_description', 14 );
-
 function ebook_marketplace_genre_archive_include_price(){
     add_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_single_price', 25);
 }
@@ -454,8 +378,8 @@ function tomc_get_book_info() {
     limit 1';
     $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_table, $productid), ARRAY_A);
     if ($results){
-        echo '<h2>Description</h2><div class="tomc-single-book-description">' . $results[0]['book_description'] . '</div>';
-        echo '<h2>Excerpt</h2><div class="tomc-single-book-excerpt">' . $results[0]['book_excerpt'] . '</div>';
+        echo '<div class="tomc-single-book-description-wrapper"><div class="tomc-single-book-description"><h2>Description</h2><p style="white-space: pre-line">' . $results[0]['book_description'] . '</p></div></div>';
+        echo '<div class="tomc-single-book-excerpt-wrapper"><div class="tomc-single-book-excerpt"><h2>Excerpt</h2><p style="white-space: pre-line">' . $results[0]['book_excerpt'] . '</p></div></div>';
     } else {
         echo $wpdb->prepare($query, $book_products_table, $books_table, $productid);
     }
@@ -477,14 +401,16 @@ function tomc_get_book_author_info() {
     $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_pennames_table, $productid, $posts_table), ARRAY_A);
     if ($results){
         if (strlen($results[0]['post_content']) > 0){
-            echo '<h2>About the Author</h2><div class="tomc-single-book-about-author">' . $results[0]['post_content'] . '</div>';
+            echo '<div class="tomc-single-product-author-wrapper"><div class="tomc-single-product-author"><h2>About the Author</h2><p style="white-space: pre-line">' . $results[0]['post_content'] . '</div></div>';
         }
     }
 }
 add_action( 'woocommerce_after_single_product_summary', 'tomc_get_book_author_info', 40 );
 
 function tomc_template_product_reviews() {
+    echo '<div class="tomc-review-section-wrapper">';
     woocommerce_get_template( 'single-product-reviews.php' );
+    echo '</div>';
 }
 add_action( 'woocommerce_after_single_product_summary', 'tomc_template_product_reviews', 50 );
 
