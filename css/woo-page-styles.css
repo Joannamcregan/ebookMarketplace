@@ -1,0 +1,270 @@
+/*single e-book page--------------------------------------------------------------------------------------------*/
+/* .product-page-content{
+    text-align: left;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 20px;
+} */
+.product-page-content img{
+    width: 300px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+.entry-summary{
+    width: fit-content;
+    margin: 10px auto 30px auto;
+    text-align: center;
+}
+.single_add_to_cart_button{
+    background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+}
+.nyp-disabled{
+    opacity: 0.8 !important;
+}
+.suggested-text{
+    color: #333;
+    font-size: 16px;
+}
+.quantity .input-text{
+    border-radius: 5px;
+}
+.tomc-single-book-description{
+    border-top: solid #f7c340 5px;
+    border-left: solid #f7c340 5px;
+    border-bottom: solid #f7c340 5px;
+    border-radius: 55px 0 0 55px;
+    padding-right: 20%;
+    padding-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    background: #f6ece1;
+}
+.tomc-single-book-description-wrapper{
+    border-top: solid #e44e2d 5px;
+    border-left: solid #e44e2d 5px;
+    border-bottom: solid #e44e2d 5px;
+    border-radius: 65px 0 0 65px;
+    margin-left: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: fit-content;
+    margin-bottom: 5px;
+}
+.tomc-single-book-excerpt{
+    border-top: solid #4c0548 5px;
+    border-right: solid #4c0548 5px;
+    border-bottom: solid #4c0548 5px;
+    border-radius: 0 55px 55px 0;
+    padding-left: 20%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+    background: #f6ece1;
+}
+.tomc-single-book-excerpt-wrapper{
+    border-top: solid #0c6980 5px;
+    border-right: solid #0c6980 5px;
+    border-bottom: solid #0c6980 5px;
+    border-radius: 0 65px 65px 0;
+    margin-right: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: fit-content;
+    margin-bottom: 5px;
+}
+.tomc-single-product-author{
+    border-top: solid #f7c340 5px;
+    border-left: solid #f7c340 5px;
+    border-bottom: solid #f7c340 5px;
+    border-radius: 55px 0 0 55px;
+    padding-right: 20%;
+    padding-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    background: #f6ece1;
+}
+.tomc-single-product-author-wrapper{
+    border-top: solid #e44e2d 5px;
+    border-left: solid #e44e2d 5px;
+    border-bottom: solid #e44e2d 5px;
+    border-radius: 65px 0 0 65px;
+    margin-left: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: fit-content;
+    margin-bottom: 5px;
+}
+.single-product-review-section{
+    border: solid #4c0548 5px;
+    border-radius: 0 55px 55px 55px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+    background: #f6ece1;
+}
+.tomc-review-section-wrapper{
+    border: solid #0c6980 5px;
+    border-radius: 0 65px 65px 65px;
+    margin-right: 10%;
+    margin-left: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    width: fit-content;
+    margin-bottom: 5px;
+}
+#reviews{
+    unicode-bidi: normal !important;
+}
+#reviews div, form{
+    unicode-bidi: normal;
+}
+#email-notes{
+    text-wrap: wrap;
+    line-break: auto;
+}
+.comment-form-comment textarea{
+    max-width: 70%;
+}
+#tab-title-mvx_customer_qna{
+    display: none;
+}
+#mvx_customer_qna{
+    display: none;
+}
+
+@media screen and (max-width: 780px) {
+    .tomc-single-book-description{
+        padding-right: 10%;
+        margin-left: 5px;
+    }
+    .tomc-single-book-description-wrapper{
+        margin-left: 10%;
+    }
+    .tomc-single-book-excerpt{
+        padding-left: 10%;
+        margin-right: 5px;
+    }
+    .tomc-single-book-excerpt-wrapper{
+        margin-right: 10%;
+    }
+    .tomc-single-product-author{
+        padding-right: 10%;
+        margin-left: 5px;
+    }
+    .tomc-single-product-author-wrapper{
+        margin-left: 10%;
+    }
+    .single-product-review-section{
+        margin-right: 5px;
+    }
+    .tomc-review-section-wrapper{
+        margin-right: 5%;
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width: 580px) {
+    .tomc-single-book-description{
+        padding-right: 5%;
+        margin-left: 5px;
+    }
+    .tomc-single-book-description-wrapper{
+        margin-left: 5%;
+    }
+    .tomc-single-book-excerpt{
+        padding-left: 5%;
+        margin-right: 5px;
+    }
+    .tomc-single-book-excerpt-wrapper{
+        margin-right: 5%;
+    }
+    .tomc-single-product-author{
+        padding-right: 5%;
+        margin-left: 5px;
+    }
+    .tomc-single-product-author-wrapper{
+        margin-left: 5%;
+    }
+    .single-product-review-section{
+        margin-right: 5px;
+    }
+    .tomc-review-section-wrapper{
+        margin-right: 2%;
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .tomc-single-book-description{
+        padding-right: 5px;
+        margin-left: 5px;
+    }
+    .tomc-single-book-description-wrapper{
+        margin-left: 5px;
+        /* margin-right: 5px; */
+    }
+    .tomc-single-book-excerpt{
+        margin-right: 5px;
+    }
+    .tomc-single-book-excerpt-wrapper{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .tomc-single-product-author{
+        padding-right: 5px;
+        margin-left: 5px;
+    }
+    .tomc-single-product-author-wrapper{
+        margin-left: 5px;
+        /* margin-right: 5px; */
+    }
+    .single-product-review-section{
+        margin-right: 5px;
+    }
+    .tomc-review-section-wrapper{
+        margin-right: 5px;
+        margin-left: 5px;
+        max-width: 90% !important;
+    }
+}
+
+/* Woocommerce my account styles---------------------------------------------------------------------------- */
+
+.woocommerce-MyAccount-navigation{
+    border: solid 5px #f7c340;
+    border-radius: 20% 0 20% 0;
+    background: #f5d890;
+    max-width: fit-content;
+    padding-right: 20px;
+}
+
+.woocommerce-MyAccount-navigation li{
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .woocommerce-MyAccount-navigation{
+        padding: 10px;
+        margin: 0;
+        max-width: 70%;
+    }
+}
+
+/* hidden */
+.tomc-hidden-content {
+    border: solid red 2px !important;
+}

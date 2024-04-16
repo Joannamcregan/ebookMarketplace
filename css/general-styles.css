@@ -929,7 +929,7 @@ a {
 
 
 /* TINV Wishlist ------------------------------------------------------------------------------------------*/
-.tinv-wishlist h2{
+/* .tinv-wishlist h2{
     text-align: center;
 }
 
@@ -937,7 +937,7 @@ a {
     .tinvwl-mobile {
         visibility: hidden;
     }
-}
+} */
 
 
 /*product pages--------------------------------------------------------------------------------------------*/
@@ -1036,124 +1036,6 @@ a {
 .woocommerce-pagination li{
     display: inline;
     margin-left: 10px;
-}
-
-/*single e-book page--------------------------------------------------------------------------------------------*/
-.product-page-content{
-    text-align: left;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    padding: 20px;
-}
-.product-page-content img{
-    width: 300px;
-    height: auto;
-    margin: auto;
-    padding: 0 40px 40px 0;
-}
-.suggested-text{
-    color: #333;
-    font-size: 16px;
-}
-/* #tab-title-vendor{
-    background:  rgba(213, 236, 230, 0.1);
-    border: solid #d5ece6 2px;
-    border-radius: 10px;
-    margin: 3px 0 0 5px; 
-    padding: 0 5px 0 5px;
-}
-#tab-title-excerpt{
-    background:  rgba(213, 236, 230, 0.1);
-    border: solid #d5ece6 2px;
-    border-radius: 10px;
-    margin: 3px 0 0 5px; 
-    padding: 0 5px 0 5px;
-}
-#tab-title-description{
-    background:  rgba(213, 236, 230, 0.1);
-    border: solid #d5ece6 2px;
-    border-radius: 10px;
-    margin: 3px 0 0 5px; 
-    padding: 0 5px 0 5px;
-}
-#tab-title-reviews{
-    background:  rgba(213, 236, 230, 0.1);
-    border: solid #d5ece6 2px;
-    border-radius: 10px;
-    margin: 2px 0 0 2px; 
-    padding: 0 5px 0 5px;
-}
-#tab-title-about_author{
-    background:  rgba(213, 236, 230, 0.1);
-    border: solid #d5ece6 2px;
-    border-radius: 10px;
-    margin: 2px 0 0 2px; 
-    padding: 0 5px 0 5px;
-}
-#tab-title-triggers{
-    background:  rgba(213, 236, 230, 0.1);
-    border: solid #d5ece6 2px;
-    border-radius: 10px;
-    margin: 2px 0 0 2px; 
-    padding: 0 5px 0 5px;
-} */
-#tab-title-mvx_customer_qna{
-    display: none;
-}
-#mvx_customer_qna{
-    display: none;
-}
-.product-tab-content{
-    max-width: 800px;
-}
-.about-author-card{
-    height: 300px;
-    padding-bottom: 10px;
-}
-.about-author-card img{
-    max-width: 150px;
-    border-radius: 50%;
-    margin: auto;
-    box-shadow: none;
-}
-
-@media screen and (max-width: 630px) {
-    .product-page-content img {
-        max-width: 300px;
-        max-height: auto;
-        display: block;
-        margin: auto;
-        float: none;
-    }
-}
-
-/* Woocommerce my account styles---------------------------------------------------------------------------- */
-
-.woocommerce-MyAccount-navigation{
-    border: solid 5px #f7c340;
-    border-radius: 20% 0 20% 0;
-    background: #f5d890;
-    max-width: fit-content;
-    padding-right: 20px;
-}
-
-.woocommerce-MyAccount-navigation li{
-    list-style: none;
-}
-
-@media screen and (max-width: 768px) {
-    .woocommerce-MyAccount-navigation{
-        padding: 10px;
-        margin: 0;
-        max-width: 70%;
-    }
-}
-
-/* hidden */
-.tomc-hidden-content {
-    border: solid red 2px !important;
 }
 
 /* Coming Soon Info styles-------------------------------------------------------------------------------*/
