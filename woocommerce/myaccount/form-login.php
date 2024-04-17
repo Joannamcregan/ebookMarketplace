@@ -23,9 +23,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
-<div class="u-columns col2-set" id="customer_login">
+<div id="customer_login">
 
-	<div class="u-column1 col-1">
+	<div id="tomc-login-section">
 
 <?php endif; ?>
 
@@ -53,9 +53,10 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 				<button type="submit" class="woocommerce-button button woocommerce-form-login__submit<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
 			</p>
-			<p class="woocommerce-LostPassword lost_password">
-				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
+			<p class="woocommerce-LostPassword lost_password centered-text">
+				<a class="blue-text" href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
 			</p>
+			<p id="tomc-show-registration" class="blue-text underlined-text centered-text">New around here? Register and roll with us!</p>
 
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 
@@ -65,9 +66,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	</div>
 
-	<div class="u-column2 col-2">
+	<div id="tomc-register-section" class="hidden">
 
-		<h1 class="centered-text"><?php esc_html_e( 'Register', 'woocommerce' ); ?></h1>
+		<h1 class="centered-text registration-header"><?php esc_html_e( 'Register', 'woocommerce' ); ?></h1>
 
 		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
@@ -106,6 +107,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
 				<button type="submit" class="woocommerce-Button woocommerce-button button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?> woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
 			</p>
+
+			<p id="tomc-show-login" class="blue-text underlined-text centered-text">Already have an account? Login and let's roll!</p>
 
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 

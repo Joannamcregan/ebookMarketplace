@@ -72,6 +72,42 @@ class FrontDisplay {
 
 /***/ }),
 
+/***/ "./src/modules/LoginPage.js":
+/*!**********************************!*\
+  !*** ./src/modules/LoginPage.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class LoginPage {
+  constructor() {
+    this.showLogin = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-show-login');
+    this.showRegister = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-show-registration');
+    this.loginSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-login-section');
+    this.registrationSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-register-section');
+    this.events();
+  }
+  events() {
+    this.showLogin.on('click', () => {
+      this.loginSection.removeClass('hidden');
+      this.registrationSection.addClass('hidden');
+    });
+    this.showRegister.on('click', () => {
+      this.registrationSection.removeClass('hidden');
+      this.loginSection.addClass('hidden');
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LoginPage);
+
+/***/ }),
+
 /***/ "./src/modules/MobileMenu.js":
 /*!***********************************!*\
   !*** ./src/modules/MobileMenu.js ***!
@@ -689,6 +725,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_CategoryDisplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/CategoryDisplay */ "./src/modules/CategoryDisplay.js");
 /* harmony import */ var _modules_FrontDisplay__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/FrontDisplay */ "./src/modules/FrontDisplay.js");
 /* harmony import */ var _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ReaderSettings */ "./src/modules/ReaderSettings.js");
+/* harmony import */ var _modules_LoginPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/LoginPage */ "./src/modules/LoginPage.js");
+
 
 
 
@@ -699,6 +737,7 @@ const marketplaceSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_0__["defa
 const categoryDisplay = new _modules_CategoryDisplay__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const frontDisplay = new _modules_FrontDisplay__WEBPACK_IMPORTED_MODULE_3__["default"]();
 const readerSettings = new _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__["default"]();
+const loginPage = new _modules_LoginPage__WEBPACK_IMPORTED_MODULE_5__["default"]();
 })();
 
 /******/ })()

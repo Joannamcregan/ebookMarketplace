@@ -1,3 +1,86 @@
+/* shop page-------------------------------------------------------------------------------------------- */
+.woocommerce-loop-product__title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-shadow: none;
+}
+.woocommerce-pagination{
+    margin-top: 20px;
+}
+.woocommerce-pagination ul{
+    list-style-type: none;
+    margin: 0px auto;
+    display: block;
+    width: fit-content;
+}
+.woocommerce-pagination li{
+    display: inline;
+    margin-left: 10px;
+}
+
+/* login page-------------------------------------------------------------------------------------------- */
+.woocommerce-form-login, .woocommerce-form-register{
+    width: fit-content;
+    margin: 10px auto;
+}
+#tomc-login-section h1{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: tankindred, serif;
+    font-size: 54;
+    font-weight: 300;
+    color: #4c0548;
+    /* text-shadow: 3px 3px #4c0548; */
+}
+.registration-header{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: tankindred, serif;
+    font-size: 54;
+    font-weight: 300;
+    color: #4c0548;
+}
+.woocommerce-privacy-policy-text{
+    max-width: 500px;
+    margin-top: 30px;
+}
+.woocommerce-form-login__submit{
+    margin: 10px auto;
+    display: block;
+    border-radius: 15px;
+    background: #e44e2d;
+    color: white !important;
+    text-shadow: 0 0 2px #333;
+    padding: 10px 20px;
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+}
+.woocommerce-form-register__submit{
+    margin: 10px auto;
+    display: block;
+    border-radius: 15px;
+    background: #e44e2d;
+    color: white !important;
+    text-shadow: 0 0 2px #333;
+    padding: 10px 20px;
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+}
+#rememberme{
+    font-size: 120%;
+}
+#username{
+    border-radius: 5px;
+}
+#password{
+    border-radius: 5px;
+}
+#reg_email{
+    border-radius: 5px;
+}
+
 /*single e-book page--------------------------------------------------------------------------------------------*/
 /* .product-page-content{
     text-align: left;
@@ -37,6 +120,7 @@
 }
 .quantity .input-text{
     border-radius: 5px;
+    text-align: center;
 }
 .tomc-single-book-description{
     border-top: solid #f7c340 5px;
