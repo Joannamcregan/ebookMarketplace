@@ -17,7 +17,10 @@
 
 defined( 'ABSPATH' ) || exit;
 
-global $product;
+global $product, $wpdb;
+$comments_table = $wpdb->prefix .  "comments";
+$meta_table = $wpdb->prefix . "commentmeta";
+$post = get_the_ID();
 
 ?><div class="single-product-review-section">
     <br>
@@ -40,27 +43,19 @@ global $product;
                 ?>
             </h2>
 
-            <?php if ( have_comments() ) : ?>
-                <ol class="commentlist">
-                    <?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
-                </ol>
-
-                <?php
-                if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
-                    echo '<nav class="woocommerce-pagination">';
-                    paginate_comments_links(
-                        apply_filters(
-                            'woocommerce_comment_pagination_args',
-                            array(
-                                'prev_text' => is_rtl() ? '&rarr;' : '&larr;',
-                                'next_text' => is_rtl() ? '&larr;' : '&rarr;',
-                                'type'      => 'list',
-                            )
-                        )
-                    );
-                    echo '</nav>';
-                endif;
-                ?>
+            <?php $comments = $wpdb->get_results("SELECT c.comment_author, c.comment_content, m.meta_value as rating, month(c.comment_date) as comment_month, day(c.comment_date) as comment_day, year(c.comment_date) as comment_year from $comments_table c JOIN $meta_table m ON c.comment_id = m.comment_id AND m.meta_key = 'rating' WHERE comment_post_ID = $post AND comment_type = 'review';"); ?>
+            <?php if ($comments) : ?>
+                <?php foreach($comments as $comment): ?>
+                    <div class="tomc-product-single-review">
+                        <p class="<?php echo 'tomc-product-single-review-stars-' . $comment->rating; ?>"><?php echo '(' . $comment->rating . '/5)'; ?></p>
+                        <p style="white-space: pre-line">
+                            <?php echo '"' . $comment->comment_content . '"'; ?>
+                        </p>
+                        <p class="right-text">
+                            <?php echo '-' . $comment->comment_author . ' (' . $comment->comment_month . '/' . $comment->comment_day . '/' . $comment->comment_year . ')'; ?>
+                        </p>
+                    </div>
+                <?php endforeach; ?>
             <?php else : ?>
                 <p class="woocommerce-noreviews"><?php esc_html_e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
             <?php endif; ?>
@@ -121,15 +116,15 @@ global $product;
                     }
 
                     if ( wc_review_ratings_enabled() ) {
-                        $comment_form['comment_field'] = '<div class="comment-form-rating"><label for="rating">' . esc_html__( 'Your rating', 'woocommerce' ) . ( wc_review_ratings_required() ? '&nbsp;<span class="required">*</span>' : '' ) . '</label><select name="rating" id="rating" required>
+                        $comment_form['comment_field'] = '<div class="comment-form-rating"><label for="rating">' . esc_html__( 'Your rating', 'woocommerce' ) . ( wc_review_ratings_required() ? '&nbsp;<span class="required">*</span>' : '' ) . '</label><select name="rating" id="tomcstarrating" required>
                             <option value="">' . esc_html__( 'Rate&hellip;', 'woocommerce' ) . '</option>
-                            <option value="5">' . esc_html__( 'Perfect', 'woocommerce' ) . '</option>
-                            <option value="4">' . esc_html__( 'Good', 'woocommerce' ) . '</option>
-                            <option value="3">' . esc_html__( 'Average', 'woocommerce' ) . '</option>
-                            <option value="2">' . esc_html__( 'Not that bad', 'woocommerce' ) . '</option>
-                            <option value="1">' . esc_html__( 'Very poor', 'woocommerce' ) . '</option>
+                            <option value="5" class="tomc-star-option-5">' . esc_html__( '5 stars', 'woocommerce' ) . '</option>
+                            <option value="4" class="tomc-star-option-4">' . esc_html__( '4 stars', 'woocommerce' ) . '</option>
+                            <option value="3" class="tomc-star-option-3">' . esc_html__( '3 stars', 'woocommerce' ) . '</option>
+                            <option value="2" class="tomc-star-option-2">' . esc_html__( '2 stars', 'woocommerce' ) . '</option>
+                            <option value="1" class="tomc-star-option-1">' . esc_html__( '1 star', 'woocommerce' ) . '</option>
                         </select></div>';
-                    }
+                    } 
 
                     $comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Your review', 'woocommerce' ) . '&nbsp;<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" required></textarea></p>';
 

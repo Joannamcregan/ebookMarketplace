@@ -367,8 +367,32 @@ function ebook_marketplace_remove_product_tabs( $tabs ) {
 }
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_remove_product_tabs', 98 );
 
+function tomc_get_gallery_files() {
+    global $product, $wpdb;
+    $productid = $product->get_id();
+    $posts_table = $wpdb->prefix . "posts";
+    $query = 'select id, guid, post_name, post_mime_type from %i where post_type = "attachment" and post_mime_type in ("audio/ogg", "audio/mpeg") and post_parent = %d';
+    $results = $wpdb->get_results($wpdb->prepare($query, $posts_table, $productid));
+    if ($results){
+        echo '<div class="tomc-product-preview-section-wrapper"><div class="tomc-product-preview-section"><h2 class="centered-text">Preview</h2>';
+        foreach($results as $result){
+            // echo '<p class="centered-text">' . $result->post_name . '</p>';
+            if ($result->post_mime_type = "audio/ogg"){
+                echo '<audio controls><source src="' . $result->guid . '" type="audio/ogg">Sorry! Your browser does not support the audio element.</audio>';
+            } else {
+                echo '<audio controls><source src="' . $result->guid . '" type="audio/mpeg">Sorry! Your browser does not support the audio element.</audio>';
+            }
+        }
+        echo '</div></div>';
+    } else {
+        echo 'nothing!';
+    }
+}
+add_action( 'woocommerce_after_single_product_summary', 'tomc_get_gallery_files', 20 );
+
 function tomc_get_book_info() {
-    global $MVX, $product, $wpdb;
+    // global $MVX, $product, $wpdb;
+    global $product, $wpdb;
     $productid = $product->get_id();
     $books_table = $wpdb->prefix . "tomc_books";
     $book_products_table = $wpdb->prefix . "tomc_book_products";
@@ -459,14 +483,15 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
     return $items;
 }, 99, 1 );
 // Customize Leave a Comment text and fields------------------------------------------------------------------------------
-function ebook_marketplace_remove_comment_form_url( $fields ) {
-	unset( $fields['url'] );
-	return $fields;
-}
-add_filter( 'comment_form_default_fields', 'ebook_marketplace_remove_comment_form_url' );
+// function ebook_marketplace_remove_comment_form_url( $fields ) {
+// 	unset( $fields['url'] );
+// 	return $fields;
+// }
+// add_filter( 'comment_form_default_fields', 'ebook_marketplace_remove_comment_form_url' );
 
-function ebook_marketplace_change_comment_cta( $fields ) {
-	$defaults['title_reply'] = __( 'Add a Comment' );  
-    return $defaults;
-}
-add_filter( 'comment_form_defaults', 'ebook_marketplace_change_comment_cta' );
+// function ebook_marketplace_change_comment_cta( $fields ) {
+// 	$defaults['title_reply'] = __( 'Add a Comment' );  
+//     return $defaults;
+// }
+// add_filter( 'comment_form_defaults', 'ebook_marketplace_change_comment_cta' );
+

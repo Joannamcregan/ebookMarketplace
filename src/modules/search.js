@@ -168,11 +168,17 @@ class Search {
                                     $('#tomc-browse-genres--results--book-' + response[i]['id']).children('.tomc-browse--search-result-bottom-section').append(newLink);
                                 } else if (response[i]['resulttype'] === 'book') {
                                     let newDiv = $('<div />').addClass('tomc-book-organization--new-book-2').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
-                                    let newTopSection = $('<div />').addClass('tomc-browse--search-result-top-section');
+                                    let newTopSection = $('<div />'); //.addClass('tomc-browse--search-result-top-section');
+                                    let newBorder0 = $('<div />').addClass('tomc-result-top-border-0');
+                                    let newBorder1 = $('<div />').addClass('tomc-result-top-border-1');
+                                    newBorder1.append(newBorder0);
+                                    let newBorder2 = $('<div />').addClass('tomc-result-top-border-2');
+                                    newBorder2.append(newBorder1);
+                                    newTopSection.append(newBorder2);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
-                                    newTopSection.append(newTitle);
+                                    newBorder0.append(newTitle);
                                     let newAuthor = $('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
-                                    newTopSection.append(newAuthor);
+                                    newBorder0.append(newAuthor);
                                     newDiv.append(newTopSection);
                                     let newBottomSection = $('<div />').addClass('tomc-browse--search-result-bottom-section');
                                     let newDescription = $('<p />').html(response[i]['book_description'].substring(0, 500) + '...');
@@ -188,12 +194,18 @@ class Search {
                                 } else if (response[i]['resulttype'] === 'genrebooks') {
                                     let newDiv = $('<div />').addClass('tomc-book-organization--new-book-3').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newTopSection = $('<div />').addClass('tomc-browse--search-result-top-section');
+                                    let newBorder0 = $('<div />').addClass('tomc-result-top-border-0');
+                                    let newBorder1 = $('<div />').addClass('tomc-result-top-border-1');
+                                    newBorder1.append(newBorder0);
+                                    let newBorder2 = $('<div />').addClass('tomc-result-top-border-2');
+                                    newBorder2.append(newBorder1);
+                                    newTopSection.append(newBorder2);
                                     let newEm = $('<em />').html('new in ' + this.searchField.val());
-                                    newTopSection.append(newEm);
+                                    newBorder0.append(newEm);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
-                                    newTopSection.append(newTitle);
+                                    newBorder0.append(newTitle);
                                     let newAuthor = $('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
-                                    newTopSection.append(newAuthor);
+                                    newBorder0.append(newAuthor);
                                     newDiv.append(newTopSection);
                                     let newBottomSection = $('<div />').addClass('tomc-browse--search-result-bottom-section');
                                     let newDescription = $('<p />').html(response[i]['book_description'].substring(0, 500) + '...');
@@ -209,12 +221,18 @@ class Search {
                                 } else if (response[i]['resulttype'] === 'identitybooks') {
                                     let newDiv = $('<div />').addClass('tomc-book-organization--new-book-3').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newTopSection = $('<div />').addClass('tomc-browse--search-result-top-section');
+                                    let newBorder0 = $('<div />').addClass('tomc-result-top-border-0');
+                                    let newBorder1 = $('<div />').addClass('tomc-result-top-border-1');
+                                    newBorder1.append(newBorder0);
+                                    let newBorder2 = $('<div />').addClass('tomc-result-top-border-2');
+                                    newBorder2.append(newBorder1);
+                                    newTopSection.append(newBorder2);
                                     let newEm = $('<em />').html('new with main characters who are ' + this.searchField.val());
-                                    newTopSection.append(newEm);
+                                    newBorder0.append(newEm);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
-                                    newTopSection.append(newTitle);
+                                    newBorder0.append(newTitle);
                                     let newAuthor = $('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
-                                    newTopSection.append(newAuthor);
+                                    newBorder0.append(newAuthor);
                                     newDiv.append(newTopSection);
                                     let newBottomSection = $('<div />').addClass('tomc-browse--search-result-bottom-section');
                                     let newDescription = $('<p />').html(response[i]['book_description'].substring(0, 500) + '...');
@@ -230,12 +248,18 @@ class Search {
                                 } else if (response[i]['resulttype'] === 'readalikebooks') {
                                     let newDiv = $('<div />').addClass('tomc-book-organization--new-book-1').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newTopSection = $('<div />').addClass('tomc-browse--search-result-top-section');
+                                    let newBorder0 = $('<div />').addClass('tomc-result-top-border-0');
+                                    let newBorder1 = $('<div />').addClass('tomc-result-top-border-1');
+                                    newBorder1.append(newBorder0);
+                                    let newBorder2 = $('<div />').addClass('tomc-result-top-border-2');
+                                    newBorder2.append(newBorder1);
+                                    newTopSection.append(newBorder2);
                                     let newEm = $('<em />').html('If you loved ' + this.searchField.val() + ' by ' + response[i]['readalike_author'] + ', you might love this book, too.');
-                                    newTopSection.append(newEm);
+                                    newBorder0.append(newEm);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
-                                    newTopSection.append(newTitle);
+                                    newBorder0.append(newTitle);
                                     let newAuthor = $('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
-                                    newTopSection.append(newAuthor);
+                                    newBorder0.append(newAuthor);
                                     newDiv.append(newTopSection);
                                     let newBottomSection = $('<div />').addClass('tomc-browse--search-result-bottom-section');
                                     let newDescription = $('<p />').html(response[i]['book_description'].substring(0, 500) + '...');
