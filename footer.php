@@ -1,7 +1,7 @@
 <footer class="footer--main">
       <div class="footer-top">
             <ul class="footer-top-left">
-                  <li><a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/newly-added-books'));?>">New Books</a></li>
                   <li><a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Browse Genres</a></li> 
                   <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li> 
             </ul>
@@ -28,6 +28,7 @@
                                     ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">My Vendor Portal</a></li>
                                     <li><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add a Book</a></li>
                                     <li><a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a></li>
+                                    <li><a href="<?php echo esc_url(site_url('/my-pen-names')); ?>">My Author Names</a> </li>
                               <?php } ?>
                         <?php } ?>
                         <li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
@@ -42,7 +43,7 @@
   <i class="fa fa-window-close menu-overlay__close" aria-hidden="true"></i>
   <nav aria-label="mobile navigation bar">
       <ul class="menu-overlay-list">
-            <li><a href="<?php echo esc_url(site_url('/new-books'));?>">New Books</a></li>
+            <li><a href="<?php echo esc_url(site_url('/newly-added-books'));?>">New Books</a></li>
             <li><a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Browse Genres</a></li>
             <?php if (is_user_logged_in()){
                   ?><li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a></li>
