@@ -23,6 +23,7 @@ $dashboard_scheme = 'mvx-color-scheme-'.get_mvx_vendor_settings('vendor_color_sc
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
+        <title>Vendor Dashboard</title>
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
         <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -30,7 +31,7 @@ $dashboard_scheme = 'mvx-color-scheme-'.get_mvx_vendor_settings('vendor_color_sc
         <?php wp_head(); ?>
     </head>
     <body <?php body_class($dashboard_scheme); ?>>
-        
+        <main>
         <?php while (have_posts()) : the_post(); ?>
             <div id="wrapper" class="mvx-wrapper">
                 <?php the_content(); ?>
@@ -40,6 +41,6 @@ $dashboard_scheme = 'mvx-color-scheme-'.get_mvx_vendor_settings('vendor_color_sc
         wp_reset_query();
         
         wp_footer();
-        ?>
+        ?></main>
     </body>
 </html>

@@ -369,6 +369,7 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
     unset($items['edit-address']);
     return $items;
 }, 99, 1 );
+
 // Customize Leave a Comment text and fields------------------------------------------------------------------------------
 // function ebook_marketplace_remove_comment_form_url( $fields ) {
 // 	unset( $fields['url'] );

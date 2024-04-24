@@ -74,7 +74,7 @@ if ($default_types && !empty($default_types)) {
                         </a>
                     </div>
                     <div id="product_images_container" class="custom-panel">
-                        <h3><?php _e( 'Product gallery', 'multivendorx' );?></h3>
+                        <h2><?php _e( 'Product gallery', 'multivendorx' );?></h2>
                         <ul class="product_images">
                             <?php
                             if ( metadata_exists( 'post', $post->ID, '_product_image_gallery' ) ) {
