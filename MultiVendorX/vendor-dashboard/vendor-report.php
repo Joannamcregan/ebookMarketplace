@@ -37,43 +37,43 @@ global $MVX;
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mvx_displaybox2 text-center">
-                                    <span><?php esc_html_e('Total Sales', 'multivendorx'); ?></span>
+                                    <p><?php esc_html_e('Total Sales', 'multivendorx'); ?></p>
                                     <h3><?php echo wc_price($total_vendor_sales); ?></h3>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mvx_displaybox2 text-center">
-                                    <h4><?php esc_html_e('My Earnings', 'multivendorx'); ?></h4>
+                                    <p><?php esc_html_e('My Earnings', 'multivendorx'); ?></p>
                                     <h3><?php echo wc_price($total_vendor_earning); ?></h3>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mvx_displaybox2 text-center">
-                                    <h4><?php esc_html_e('Total number of Orders placed', 'multivendorx'); ?></h4>
+                                    <p><?php esc_html_e('Total number of Orders placed', 'multivendorx'); ?></p>
                                     <h3><?php echo $total_order_count; ?></h3>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mvx_displaybox2 text-center">
-                                    <h4><?php esc_html_e('Purchased Products', 'multivendorx'); ?></h4>
+                                    <p><?php esc_html_e('Purchased Products', 'multivendorx'); ?></p>
                                     <h3><?php echo $total_purchased_products; ?></h3>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mvx_displaybox2 text-center">
-                                    <h4><?php esc_html_e('Number of Coupons used', 'multivendorx'); ?></h4>
+                                    <p><?php esc_html_e('Number of Coupons used', 'multivendorx'); ?></p>
                                     <h3><?php echo $total_coupon_used; ?></h3>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mvx_displaybox2 text-center">
-                                    <h4><?php esc_html_e('Total Coupon Discount', 'multivendorx'); ?></h4>
+                                    <p><?php esc_html_e('Total Coupon Discount', 'multivendorx'); ?></p>
                                     <h3><?php echo wc_price($total_coupon_discount_value); ?></h3>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mvx_displaybox2 text-center">
-                                    <h4><?php esc_html_e('Number of Unique Customers', 'multivendorx'); ?></h4>
+                                    <p><?php esc_html_e('Number of Unique Customers', 'multivendorx'); ?></p>
                                     <h3><?php echo count($total_customers); ?></h3>
                                 </div>
                             </div>
