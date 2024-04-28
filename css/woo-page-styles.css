@@ -122,6 +122,20 @@
     border-radius: 5px;
     text-align: center;
 }
+.tomc-product-preview-section-wrapper{
+    border: solid #0c6980 5px;
+    border-radius: 65px 65px 0px 0px;
+    padding: 5px;
+    width: fit-content;
+    margin: 5px auto;
+}
+.tomc-product-preview-section{
+    border: solid #4c0548 5px;
+    border-radius: 55px 55px 0px 0px;
+    padding: 20px 30px;
+    background: #f6ece1;
+    width: fit-content;
+}
 .tomc-single-book-description{
     border-top: solid #f7c340 5px;
     border-left: solid #f7c340 5px;
@@ -133,6 +147,7 @@
     padding-bottom: 20px;
     margin-left: 10px;
     background: #f6ece1;
+    min-width: 70%;
 }
 .tomc-single-book-description-wrapper{
     border-top: solid #e44e2d 5px;
@@ -142,7 +157,8 @@
     margin-left: 20%;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: fit-content;
+    padding-left: 2px;
+    min-width: fit-content;
     margin-bottom: 5px;
 }
 .tomc-single-book-excerpt{
@@ -156,6 +172,7 @@
     padding-bottom: 20px;
     margin-right: 10px;
     background: #f6ece1;
+    min-width: 70%;
 }
 .tomc-single-book-excerpt-wrapper{
     border-top: solid #0c6980 5px;
@@ -165,7 +182,7 @@
     margin-right: 20%;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: fit-content;
+    min-width: 85%;
     margin-bottom: 5px;
 }
 .tomc-single-product-author{
@@ -179,6 +196,7 @@
     padding-bottom: 20px;
     margin-left: 10px;
     background: #f6ece1;
+    min-width: 70%;
 }
 .tomc-single-product-author-wrapper{
     border-top: solid #e44e2d 5px;
@@ -225,7 +243,7 @@
     padding-bottom: 15px;
 }
 .comment-form-rating{
-    border-top: solid #f7c340 5px;
+    /* border-top: solid #f7c340 5px; */
     /* border-bottom: solid #f7c340 5px; */
     border-radius: 25px 0 25px 0;
 }
@@ -233,44 +251,37 @@
     margin-top: 20px;
 }
 .comment-form-rating a{
-    display: block;
+    display: block !important;
 }
-.comment-form-rating .required:after{
-    content: '';
-    display: inline-block;
-    background: url('../images/three_orange_stars.svg');
-    width: 100px;
-    height: 20px;
-}
-.star-1:after {
+.selected-star-1:after{
     content: '';
     display: inline-block;
     background: url('../images/one_orange_star.svg');
     width: 100px;
     height: 20px;
 }
-.star-2:after {
+.selected-star-2:after{
     content: '';
     display: inline-block;
     background: url('../images/two_orange_stars.svg');
     width: 100px;
     height: 20px;
 }
-.star-3:after {
+.selected-star-3:after{
     content: '';
     display: inline-block;
     background: url('../images/three_orange_stars.svg');
     width: 100px;
     height: 20px;
 }
-.star-4:after {
+.selected-star-4:after{
     content: '';
     display: inline-block;
     background: url('../images/four_orange_stars.svg');
     width: 100px;
     height: 20px;
 }
-.star-5:after {
+.selected-star-5:after{
     content: '';
     display: inline-block;
     background: url('../images/five_orange_stars.svg');
@@ -278,12 +289,58 @@
     height: 20px;
 }
 .comment-form-comment{
-    border-top: solid #f7c340 5px;
+    /* border-top: solid #f7c340 5px; */
     border-radius: 25px 0 25px 0;
+}
+.tomc-product-single-review{
+    border-bottom: solid #0c6980 5px;
+    border-radius: 25px 0 25px 0;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+#tomcstarrating{
+    width: 150px;
+    border-radius: 10px;
+}
+.tomc-product-single-review-stars-1:before {
+    content: '';
+    display: inline-block;
+    background: url('../images/one_orange_star.svg');
+    width: 30px;
+    height: 20px;
+}
+.tomc-product-single-review-stars-2:before {
+    content: '';
+    display: inline-block;
+    background: url('../images/two_orange_stars.svg');
+    width: 50px;
+    height: 20px;
+}
+.tomc-product-single-review-stars-3:before {
+    content: '';
+    display: inline-block;
+    background: url('../images/three_orange_stars.svg');
+    width: 70px;
+    height: 20px;
+}
+.tomc-product-single-review-stars-4:before {
+    content: '';
+    display: inline-block;
+    background: url('../images/four_orange_stars.svg');
+    width: 90px;
+    height: 20px;
+}
+.tomc-product-single-review-stars-5:before {
+    content: '';
+    display: inline-block;
+    background: url('../images/five_orange_stars.svg');
+    width: 110px;
+    height: 20px;
 }
 .comment-form-comment textarea{
     width: 80%;
     border-radius: 15px;
+    padding: 20px;
 }
 .comment-form-author input[type='text']{
     width: 80%;

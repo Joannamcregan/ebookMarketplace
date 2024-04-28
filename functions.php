@@ -383,3 +383,19 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
 // }
 // add_filter( 'comment_form_defaults', 'ebook_marketplace_change_comment_cta' );
 
+//Redirect to previous page after logging in-----------------------------------------------------------------
+
+add_filter('login_redirect', 'tomc_redirect_previous_page', 10, 1);
+
+function tomc_redirect_previous_page( $redirect_to ){
+    global $user;
+
+    $request = $_SERVER["HTTP_REFERER"];
+
+    if ( is_user_logged_in() ) {
+
+        return $request;
+    } 
+
+    return $redirect_to;
+}

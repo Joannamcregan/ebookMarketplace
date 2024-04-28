@@ -232,12 +232,13 @@ header a:hover{
 }
 /*special sections-----------------------------------------------------------------------*/
 .banner{
-    width: 90%;
+    /* width: 90%; */
+    margin-right: 5px;
     background: #e44e2d;
     border-right: solid #f7c340 5px;
     border-bottom: solid #f7c340 15px;
     border-radius: 0 0 55px 25px;
-    padding: 20px 15px;
+    padding: 20px 15px 20px 20px;
 }
 .banner h1{
     margin: 10px;
@@ -297,6 +298,107 @@ header a:hover{
 .orange-translucent-background{
     background: rgba(228, 78, 45, 0.3);
     padding-bottom: 20px;
+}
+.orange-line-break{
+    border-bottom: solid #e44e2d 3px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 25px 0px 25px 0px;
+    height: 3px;
+}
+.red-orange-line-break{
+    border-top: solid #893e43 5px;
+    border-bottom: solid #e44e2d 5px;
+    border-radius: 25px;
+    height: 5px;
+}
+.orange-yellow-line-break{
+    border-top: solid #e44e2d 5px;
+    border-bottom: solid #f7c340 5px;
+    border-radius: 25px;
+    height: 5px;
+}
+.tomc-about-text-graphic{
+    width: 98%;
+    padding-top: 10px;
+    background: white;
+    border-radius: 35px;
+    border-bottom: solid #e44e2d 15px;
+    border-right: solid #e44e2d 10px;
+    box-shadow: 5px 5px 0px inset #f7c340;
+    /* position: relative; */
+}
+.tomc-about-text-graphic-wrapper{
+    position: relative;
+}
+#tomc-about-text-graphic-0{
+    width: auto;
+    height: 280px;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+}
+#tomc-about-text-graphic-4{
+    width: auto;
+    height: 250px;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+}
+#tomc-about-text-graphic-320{
+    display: none;
+    height: 310px;
+}
+#tomc-about-text-graphic-360{
+    display: none;
+}
+#tomc-about-text-graphic-460{
+    display: none;
+}
+#tomc-about-text-graphic-540{
+    display: none;
+}
+#tomc-about-text-graphic-630{
+    display: block;
+    height: 260;
+}
+@media screen and (max-width: 830px) {
+    .tomc-about-text-graphic{
+        width: 80%
+    }
+}
+@media screen and (max-width: 680px) {
+    #tomc-about-text-graphic-630{
+        display: none;
+    }
+    #tomc-about-text-graphic-540{
+        display: block;
+    }
+}
+@media screen and (max-width: 580px) {
+    #tomc-about-text-graphic-540{
+        display: none;
+    }
+    #tomc-about-text-graphic-460{
+        display: block;
+    }
+}
+@media screen and (max-width: 480px) {
+    #tomc-about-text-graphic-460{
+        display: none;
+    }
+    #tomc-about-text-graphic-360{
+        display: block;
+    }
+}
+@media screen and (max-width: 380px) {
+    #tomc-about-text-graphic-360{
+        display: none;
+    }
+    #tomc-about-text-graphic-320{
+        display: block;
+    }
 }
 .padded-arrow-accent{
     padding: 10px 20px;
@@ -417,6 +519,9 @@ header a:hover{
 .yellow-shadow-text{
     text-shadow: 1px 1px #d38124;
 }
+.yellow-shadow-heading{
+    text-shadow: 2px 2px #d38124;
+}
 /* h1, h2, h3{
     font-family: 'tahoma', sans-serif;
 } */
@@ -428,6 +533,9 @@ h1, h2, h3{
 } */
 .small-heading{
     font-size: 20;
+}
+.semi-large-heading{
+    font-size: 26;
 }
 .large-heading{
     font-size: 36;
@@ -441,6 +549,12 @@ h1, h2, h3{
 }
 .blue-text{
     color: #0c6980;
+}
+.red-brown-text{
+    color: #602f32;
+}
+.red-text{
+    color: #893e43;
 }
 a {
     color: #0c6980;
@@ -586,6 +700,12 @@ a {
 }
 .block{
     display: block;
+}
+.flex{
+    display: flex;
+}
+.justify-content-center{
+    justify-content: center;
 }
 /*simple search-------------------------------------------------------------------------------*/
 #basic-search-form{
@@ -892,15 +1012,6 @@ a {
 
 .body-no-scroll{
     overflow: hidden;
-}
-
-.event-summary p {
-    padding-top: 0;
-}
-
-.event-summary {
-    margin-bottom: 0;
-    margin-top: 20px;
 }
 
 .settings-overlay--section{

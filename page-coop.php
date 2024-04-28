@@ -49,7 +49,7 @@
                 </div>
                 </a>
             </div>
-            <div class="sub-leaf-wrapper">
+            <!-- <div class="sub-leaf-wrapper">
                 <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">
                 <div class="sub-leaf blue-leaf">
                     <p>For Ethical Investors</p>
@@ -61,12 +61,11 @@
                     <p>For Workers</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
-    <div class="leaf-section">
+    <!-- <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf">
-                <!-- <p>Ours</p> -->
                 <p>Govern</p>
             </div>
         </div>
@@ -82,7 +81,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </main>
 
 <?php get_footer(); ?>
