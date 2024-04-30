@@ -4,26 +4,6 @@
     <div class="banner"><h1 class="centered-text"><?php echo get_the_title(); ?></div>
     <br>
     <div class="generic-content two-thirds-screen">
-        <!-- <div  id="tomc-about-text-graphic-320" class="tomc-about-text-graphic-wrapper">
-            <img src="<?php echo get_theme_file_uri('/images/text-graphic-beige-0.jpg'); ?>" id="tomc-about-text-graphic-0" alt="Self-Publishing is a $1.25B industry. Authors take home less than half of that amount. And are subjected to unfair terms & conditions.
-We exist to change that." />
-        </div>
-        <div  id="tomc-about-text-graphic-360" class="tomc-about-text-graphic">
-            <img src="<?php echo get_theme_file_uri('/images/self-publishing text graphic 360.jpg'); ?>"  alt="Self-Publishing is a $1.25B industry. Authors take home less than half of that amount. And are subjected to unfair terms & conditions.
-We exist to change that." />
-        </div>
-        <div  id="tomc-about-text-graphic-460" class="tomc-about-text-graphic">
-            <img src="<?php echo get_theme_file_uri('/images/self-publishing text graphic 460.jpg'); ?>"  alt="Self-Publishing is a $1.25B industry. Authors take home less than half of that amount. And are subjected to unfair terms & conditions.
-We exist to change that." />
-        </div>
-        <div  id="tomc-about-text-graphic-540" class="tomc-about-text-graphic">
-            <img src="<?php echo get_theme_file_uri('/images/self-publishing text graphic 540.jpg'); ?>"  alt="Self-Publishing is a $1.25B industry. Authors take home less than half of that amount. And are subjected to unfair terms & conditions.
-We exist to change that." />
-        </div>
-        <div  id="tomc-about-text-graphic-630" class="tomc-about-text-graphic-wrapper">
-            <img src="<?php echo get_theme_file_uri('/images/text-graphic-beige-4.jpg'); ?>" id="tomc-about-text-graphic-4" alt="Self-Publishing is a $1.25B industry. Authors take home less than half of that amount. And are subjected to unfair terms & conditions.
-We exist to change that." />
-        </div> -->
         <h2 class="right-text-no-margin red-brown-text tankindred-text yellow-shadow-heading larger-header">Self-Publishing is a $1.25B industry. Authors take home less than half of that amount. And are subjected to unfair terms & conditions.</h2>
         <h2 class="right-text-no-margin red-brown-text tankindred-text yellow-shadow-heading larger-header">We exist to change that.</h2>
         <div class="orange-line-break"></div>
@@ -37,39 +17,8 @@ We exist to change that." />
             <div class="red-orange-line-break"></div>
         <h2 class="large-heading red-brown-text yellow-shadow-heading">What's In It for We?</h2>
         <p>Shared ownership. Democratic decision making. Collective support. When we move cooperatively, we exchange ‘me’ for ‘we.’ Trunk of My Car Cooperative is a Hawai`i registered multi-stakeholder platform cooperative owned by creators, consumers, and workers. We are not just a marketplace to sell books. We are building sustainable community. We are working together to share knowledge, tools, craft, and space to make all of us better writers, readers, and humans. We will share workshops, craft talks, knowledge based offerings, book clubs, and book swaps - whatever you, our member-owners want to share in community. </p>
-        <!-- <div class="page-accent-alt-1">
-            <h2 class="centered-text">How to read our ebooks</h2>
-            <p>Our ebooks can be read on many free e-reading apps.</p>
-            <p><strong>For Android Phones and Tablets with the Google Play Store</p></strong>
-            <p><a href= "https://play.google.com/store/apps/details?id=org.readera&hl=en" target="_blank">Readera</a> is a great, ad-free e-reading app for Android devices. <a href="https://play.google.com/store/apps/details?id=com.lenntt.evoicereader" target="_blank">Evie</a> is a speech-to-text app for Android that can read our ebooks aloud to you.</p>
-            <p><strong>For iPhones and iPads</p></strong>
-            <p><a href="https://apps.apple.com/us/app/epub-reader-read-epub-chm-txt/id1296870631" target="_blank">Epub Reader</a> is a great option for reading our ebooks on iPhones and iPads. <a href="https://apps.apple.com/app/voice-aloud-reader/id1446876360" target="_blank">Voice Aloud Reader</a> can read our books out loud from an iPhone or iPad.</p>
-            <p><strong>For Kindle Tablets</p></strong>
-            <p>Reading epub format ebooks, such as ours, on Kindle tablets requires a few extra steps. Luckily, Joe Fedewa at How-To Geek has written <a href="https://www.howtogeek.com/798894/how-to-transfer-epub-to-kindle/" target="_blank">this helpful guide</a>, which makes the process easy.</p>
-        </div> -->
+        <p>Sounds like something you want to be a part of? <a href="<?php echo esc_url(site_url('/own'));?>">Join us!</a><p>
 	</div>
-
-    <!-- <?php wp_reset_postdata();
-    $args = array(
-        'role__in' => array('contributor', 'editor', 'administrator'),
-        'orderby' => 'user_nicename',
-        'order'   => 'DESC'
-    );
-    
-    $user_query = new WP_User_Query( $args ); ?> -->
-    
-    <!-- <br><h2 class="centered-text">Meet our team</h2>
-    <div class="contributors"> -->
-        <!-- <?php if ( ! empty( $user_query->get_results() ) ) { ?>
-            <?php foreach ( $user_query->get_results() as $user ) { ?> -->
-                <!-- <a href="<?php echo get_author_posts_url($user->id); ?>">
-                <div class="contributor"> 
-                    <img src="<?php echo get_avatar_url($user->id, ['size' => '80']); ?>" alt="<?php get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE) ?>" />
-                    <p><?php echo $user->display_name;?></p> -->
-                <!-- </div></a> -->
-            <!-- <?php }
-        } ?> -->
-    <!-- </div> -->
 </main>
 
 <?php get_footer(); ?>

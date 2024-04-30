@@ -65,50 +65,50 @@ function marketplace_features(){
 add_action('after_setup_theme', 'marketplace_features');
 
 //Free Offer Post Type------------------------------------------------------------------------------------
-function free_offer_custom_post_types() {
-    register_post_type('free offer', array(
-        'supports' => array('title', 'editor', 'excerpt'),
-        'has_archive' => true,
-        'rewrite' => array(
-            'slug' => 'free-offers'
-        ),
-        'public' => true,
-        'menu_position' => 0,
-        'labels' => array(
-            'name' => 'Free Offers',
-            'add_new' => 'Add New Free Offer',
-            'edit_item' => 'Edit Free Offer',
-            'all_items' => 'All Free Offers',
-            'singular_item' > 'Free Offer'
-        ),
-        'menu_icon' => 'dashicons-smiley'
-    ));
-}
+// function free_offer_custom_post_types() {
+//     register_post_type('free offer', array(
+//         'supports' => array('title', 'editor', 'excerpt'),
+//         'has_archive' => true,
+//         'rewrite' => array(
+//             'slug' => 'free-offers'
+//         ),
+//         'public' => true,
+//         'menu_position' => 0,
+//         'labels' => array(
+//             'name' => 'Free Offers',
+//             'add_new' => 'Add New Free Offer',
+//             'edit_item' => 'Edit Free Offer',
+//             'all_items' => 'All Free Offers',
+//             'singular_item' > 'Free Offer'
+//         ),
+//         'menu_icon' => 'dashicons-smiley'
+//     ));
+// }
 
-add_action('init', 'free_offer_custom_post_types');
+// add_action('init', 'free_offer_custom_post_types');
 
 //Need Post Type------------------------------------------------------------------------------------
-function need_custom_post_types() {
-    register_post_type('need', array(
-        'supports' => array('title', 'editor', 'excerpt'),
-        'has_archive' => true,
-        'rewrite' => array(
-            'slug' => 'needs'
-        ),
-        'public' => true,
-        'menu_position' => 0,
-        'labels' => array(
-            'name' => 'Needs',
-            'add_new' => 'Add New Need',
-            'edit_item' => 'Edit Needs',
-            'all_items' => 'All Needs',
-            'singular_item' > 'Need'
-        ),
-        'menu_icon' => 'dashicons-heart'
-    ));
-}
+// function need_custom_post_types() {
+//     register_post_type('need', array(
+//         'supports' => array('title', 'editor', 'excerpt'),
+//         'has_archive' => true,
+//         'rewrite' => array(
+//             'slug' => 'needs'
+//         ),
+//         'public' => true,
+//         'menu_position' => 0,
+//         'labels' => array(
+//             'name' => 'Needs',
+//             'add_new' => 'Add New Need',
+//             'edit_item' => 'Edit Needs',
+//             'all_items' => 'All Needs',
+//             'singular_item' > 'Need'
+//         ),
+//         'menu_icon' => 'dashicons-heart'
+//     ));
+// }
 
-add_action('init', 'need_custom_post_types');
+// add_action('init', 'need_custom_post_types');
 
 /*customize login logo----------------------------------------------------------------------*/
 function ebook_marketplace_login_logo() { ?>

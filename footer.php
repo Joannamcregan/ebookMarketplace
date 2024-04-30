@@ -14,7 +14,8 @@
       <div class="footer-bottom">
             <ul>                  
                   <?php if (is_user_logged_in()){
-                        ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
+                        ?><li><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li> 
+                        <li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
                         <?php if (is_user_logged_in()){
                               $tomc_user = get_userdata(get_current_user_id());
                               $tomc_username = $tomc_user->user_login;

@@ -4,9 +4,9 @@
         <div class="banner"><h1 class="centered-text">Become a Member</h1></div>
         <div class="tomc-circle-container">
             <img src="<?php echo get_theme_file_uri('/images/circle-background-0.jpg'); ?>" role="presentation" />
-            <p class="tomc-circle-p-0">This circle will include authors and people who help create books, such as cover artists and editors. </p>
+            <p class="tomc-circle-p-0">This circle is for all our creatives out there. Those who write, design cover art, edit all the words, and/or are indie presses.</p>
             <p class="orange-shadow-heading tankindred-text tomc-circle-p-1"><a href="#"><strong>Creator</strong></a></p>
-            <p class="tomc-circle-p-2">We are currently open to indie authors and look forward to welcoming other creators in the future.</p>
+            <p class="tomc-circle-p-2">Those who want to upload their work, collaborate with other members, and be in community, while reaping the benefits of ownership.</p>
         </div>
         <div class="red-orange-line-break-60"></div>
         <div class="tomc-circle-container">
@@ -18,9 +18,9 @@
         <div class="red-orange-line-break-60"></div>
         <div class="tomc-circle-container">
             <img src="<?php echo get_theme_file_uri('/images/circle-background-2.jpg'); ?>" role="presentation" />
-            <p class="tomc-circle-p-0">This circle will include worker-owners.</p>
+            <p class="tomc-circle-p-0">This circle is for those who run all the things behind the scenes, keeping Trunk of My Car on the road.</p>
             <p class="orange-shadow-heading tankindred-text tomc-circle-p-1-padded-x"><strong>Worker</strong></p>
-            <p class="tomc-circle-p-2">We don't have any job listings at the moment, but check back as we grow!</p>
+            <p class="tomc-circle-p-2">Those who fill the tank, clean the windshield, and change the occasional tire. We don't have any job listings at the moment, but check back as we grow!</p>
         </div>
     </div>
 </main>
