@@ -19,7 +19,7 @@
     <p class="leaves-p centered-text">We're on a mission to collectively redistribute resources from those who take to those who create with a self-publishing platform <strong>owned by a community of people who love and create books.</strong></p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
-            <div class="leaf orange-leaf">
+            <div class="leaf orange-leaf expandable-leaf">
                 <p>Read</p>
             </div>
         </div>
@@ -42,7 +42,7 @@
     </div>
     <div class="leaf-section">
         <div class="leaf-wrapper">
-            <div class="leaf orange-leaf">
+            <div class="leaf orange-leaf expandable-leaf">
                 <p>Create</p>
             </div>
         </div>
@@ -65,25 +65,11 @@
     </div>
     <div class="leaf-section">
         <div class="leaf-wrapper">
+            <a class="no-decoration" href="<?php echo esc_url(site_url('/own'));?>">
             <div class="leaf orange-leaf">
                 <p>Own</p>
             </div>
-        </div>
-        <div class="sub-leaf-section not-displayed">
-            <div class="sub-leaf-wrapper">
-            <a href="<?php echo esc_url(site_url('/coop')); ?>">
-                <div class="sub-leaf blue-leaf">
-                    <p>About the Co-op</p>
-                </div>
             </a>
-            </div>
-            <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/events'));?>">
-                <div class="sub-leaf blue-leaf">
-                    <p>Events</p>
-                </div>
-                </a>
-            </div>
         </div>
     </div>
 </main>

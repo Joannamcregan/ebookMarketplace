@@ -1,7 +1,7 @@
 class FrontDisplay {
 
     constructor() {
-        this.leaves = document.querySelectorAll('.leaf');
+        this.leaves = document.querySelectorAll('.expandable-leaf');
         this.events();
     }
 

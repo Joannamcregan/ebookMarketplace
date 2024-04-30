@@ -5,8 +5,7 @@
     <p class="leaves-p centered-text"><strong>Our Cooperatively Owned</strong> Book Marketplace</p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
-            <div class="leaf orange-leaf">
-                <!-- <p>Theirs</p> -->
+            <div class="leaf orange-leaf expandable-leaf">
                 <p>Learn</p>
             </div>
         </div>
@@ -29,40 +28,12 @@
     </div>
     <div class="leaf-section">
         <div class="leaf-wrapper">
+            <a class="no-decoration" href="<?php echo esc_url(site_url('/own'));?>">
             <div class="leaf orange-leaf">
-                <!-- <p>Mine</p> -->
                 <p>Join</p>
             </div>
+            </a>
         </div>
-        <div class="sub-leaf-section not-displayed">
-            <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">
-                <div class="sub-leaf blue-leaf">
-                    <p>For Authors and Creators</p>
-                </div>
-                </a>
-            </div>
-            <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">
-                <div class="sub-leaf blue-leaf">
-                    <p>For Readers</p>
-                </div>
-                </a>
-            </div>
-            <!-- <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">
-                <div class="sub-leaf blue-leaf">
-                    <p>For Ethical Investors</p>
-                </div>
-                </a>
-            </div>
-            <div class="sub-leaf-wrapper">
-                <div class="sub-leaf blue-leaf">
-                    <p>For Workers</p>
-                </div>
-            </div>
-        </div> -->
-    </div>
     <!-- <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf">

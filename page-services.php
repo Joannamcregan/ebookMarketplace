@@ -1,7 +1,7 @@
 <?php get_header();
 
 ?><main>
-    <div class="banner"><h1 class="centered-text">Browse Services</h1></div>
+    <div class="banner"><h1 class="centered-text">Creative Offerings</h1></div>
     <br>
     <br>
     <div class="generic-wrapper-2">
