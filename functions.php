@@ -292,8 +292,6 @@ function tomc_get_book_info() {
     if ($results){
         echo '<div class="tomc-single-book-description-wrapper"><div class="tomc-single-book-description"><h2>Description</h2><p style="white-space: pre-line">' . $results[0]['book_description'] . '</p></div></div>';
         echo '<div class="tomc-single-book-excerpt-wrapper"><div class="tomc-single-book-excerpt"><h2>Excerpt</h2><p style="white-space: pre-line">' . $results[0]['book_excerpt'] . '</p></div></div>';
-    } else {
-        echo $wpdb->prepare($query, $book_products_table, $books_table, $productid);
     }
 }
 add_action( 'woocommerce_after_single_product_summary', 'tomc_get_book_info', 30 );

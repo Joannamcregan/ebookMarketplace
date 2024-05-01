@@ -14,6 +14,7 @@
       <div class="footer-bottom">
             <ul>                  
                   <li><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/terms-and-conditions'));?>">Terms and Conditions</a></li>
                   <li><a href="<?php echo esc_url(site_url('/contact'));?>">Contact Us</a></li> 
                   <?php if (is_user_logged_in()){                        
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
