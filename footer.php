@@ -13,9 +13,10 @@
       </div>
       <div class="footer-bottom">
             <ul>                  
-                  <?php if (is_user_logged_in()){
-                        ?><li><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li> 
-                        <li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/contact'));?>">Contact Us</a></li> 
+                  <?php if (is_user_logged_in()){                        
+                        ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
                         <?php if (is_user_logged_in()){
                               $tomc_user = get_userdata(get_current_user_id());
                               $tomc_username = $tomc_user->user_login;
@@ -120,7 +121,7 @@
             <h2 class="centered-text">My Triggers</h2>
             <p class="centered-text">Select triggers you want to avoid and we won't include books that have been tagged with them in your search results.</p>
             <div id="settings-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
-            <a href="#"><p class="centered-text">suggest a new trigger warning</p></a>
+            <!-- L<a href="#"><p class="centered-text">suggest a new trigger warning</p></a> -->
             <p class="centered-text" style="display:none;" id="tomc-reader-settings-trigger-settings-saved-message">settings saved</p>
             <button class="purple-button" id="tomc-reader-settings--save-trigger-settings">save trigger settings</button>
       </div>
