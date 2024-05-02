@@ -19,11 +19,15 @@
         <p>Shared ownership. Democratic decision making. Collective support. When we move cooperatively, we exchange ‘me’ for ‘we.’ Trunk of My Car Cooperative is a Hawai`i registered multi-stakeholder platform cooperative owned by creators, consumers, and workers. We are not just a marketplace to sell books. We are building sustainable community. We are working together to share knowledge, tools, craft, and space to make all of us better writers, readers, and humans. We will share workshops, craft talks, knowledge based offerings, book clubs, and book swaps - whatever you, our member-owners want to share in community. </p>
         <p>Sounds like something you want to be a part of? <a href="<?php echo esc_url(site_url('/own'));?>">Join us!</a><p>
         <div class="red-orange-line-break"></div>
-        <h2 class="large-heading red-brown-text yellow-shadow-heading">About Our Founder</h2>
-        <img class="circle-bio-pic" alt="a photo of Zia" src="<?php echo get_theme_file_uri('/images/zia.jpg'); ?>" />
+        <h2 class="large-heading red-brown-text yellow-shadow-heading">Our Team</h2>
+        <img class="circle-bio-pic" alt="Black woman expressing joy" src="<?php echo get_theme_file_uri('/images/zia.jpg'); ?>" />
         <h3 class="centered-text red-brown-text">Zia M Dione</h3>
         <p class="centered-text">Founder. Operations Lead.</p>
         <p>Trunk of My Car Cooperative is inspired by a conversation Zia had with a famous author who shared how he started selling books from the trunk of his car. An emerging writer, she is focused on healing intergenerational trauma & building/supporting solidarity & sustainable economies. Zia is certified in permaculture design, has a law degree from the University of Baltimore & is currently pursuing an MFA in Creative Nonfiction at Pacific University. Yes, she changed her name.</p>
+        <img class="circle-bio-pic" alt="White woman with glasses stands in an art museum" src="<?php echo get_theme_file_uri('/images/joanna.jpg'); ?>" />
+        <h3 class="centered-text red-brown-text">Joanna Cregan</h3>
+        <p class="centered-text">Founding Member. Developer.</p>
+        <p>Joanna is a reader, writer, and web developer from Northeast Ohio who believes cooperative ownership can help bring about a healthier world.</p>
 	</div>
 </main>
 

@@ -59,7 +59,7 @@
                     <a href="https://www.psupress.org/books/titles/978-0-271-06216-7.html" target="_blank">Collective Courage (Link to Buy)</a>
                 </p>
                 <p class="centered-text">
-                    <a href="https://drive.google.com/file/d/1Duv_8GA41N1zcnlaI29LsktkPn_Grfbo/view" target="_blank">In It Together (Full Copy)</a>
+                    <a href="https://redemmas.org/titles/26051-ours-to-hack-and-to-own/" target="_blank">Ours to Hack and to Own (Link to Buy)</a>
                 </p>
                 <p class="centered-text">
                     <a href="https://beyonddevelopment.net/wp-content/uploads/2020/11/Cities-of-Dignity.pdf" target="_blank">Cities of Dignity (Full Copy)</a>

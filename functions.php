@@ -368,17 +368,15 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
     return $items;
 }, 99, 1 );
 
-// Customize Leave a Comment text and fields------------------------------------------------------------------------------
-// function ebook_marketplace_remove_comment_form_url( $fields ) {
-// 	unset( $fields['url'] );
-// 	return $fields;
-// }
-// add_filter( 'comment_form_default_fields', 'ebook_marketplace_remove_comment_form_url' );
+// Assign roles on submission of certain Forminator forms------------------------------------------------------------------------------
+add_action( 'forminator_form_after_handle_submit', 'assignReaderMemberRole', 10, 2 );
+add_action( 'forminator_form_after_save_entry', 'assignReaderMemberRole', 10, 2 );
 
-// function ebook_marketplace_change_comment_cta( $fields ) {
-// 	$defaults['title_reply'] = __( 'Add a Comment' );  
-//     return $defaults;
-// }
-// add_filter( 'comment_form_defaults', 'ebook_marketplace_change_comment_cta' );
+function assignReaderMemberRole($form_id, $response) {
+    if( $response['success']  && $form_id ==79 /* Reader-Member Signup */){
+        $user = wp_get_current_user();
+        $user->add_role( 'reader-member' );
+    }
+}
 
 
