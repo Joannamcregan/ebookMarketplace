@@ -18,7 +18,7 @@
                 </a>
             </div>
             <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('#')); ?>">
+                <a href="<?php echo esc_url(site_url('/resources')); ?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Learning Resource List</p>
                 </div>

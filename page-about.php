@@ -14,10 +14,16 @@
         <div class="red-orange-line-break"></div>
         <h2 class="large-heading red-brown-text yellow-shadow-heading">Why a Cooperative?</h2>
         <p>The cooperative business model is one that is rooted in community. It’s where we, the people, come together for a common cause and work together to be a solution. Cooperatives exist in every industry. Retail stores, utilities, even restaurants and other services are applying this model that gives the people who use or operate it a say in how they do what they do. We believe that cooperatives are a step away from a capitalistic system that exploits and oppresses individuals, communities, and ultimately, the planet. Want to learn more about cooperatives? Check out <a href="https://ncbaclusa.coop/resources/what-is-a-co-op/" target="_blank">this page</a> the good folks at NCBA put together that breaks this business model down.</p>
-            <div class="red-orange-line-break"></div>
+        <div class="red-orange-line-break"></div>
         <h2 class="large-heading red-brown-text yellow-shadow-heading">What's In It for We?</h2>
         <p>Shared ownership. Democratic decision making. Collective support. When we move cooperatively, we exchange ‘me’ for ‘we.’ Trunk of My Car Cooperative is a Hawai`i registered multi-stakeholder platform cooperative owned by creators, consumers, and workers. We are not just a marketplace to sell books. We are building sustainable community. We are working together to share knowledge, tools, craft, and space to make all of us better writers, readers, and humans. We will share workshops, craft talks, knowledge based offerings, book clubs, and book swaps - whatever you, our member-owners want to share in community. </p>
         <p>Sounds like something you want to be a part of? <a href="<?php echo esc_url(site_url('/own'));?>">Join us!</a><p>
+        <div class="red-orange-line-break"></div>
+        <h2 class="large-heading red-brown-text yellow-shadow-heading">About Our Founder</h2>
+        <img class="circle-bio-pic" alt="a photo of Zia" src="<?php echo get_theme_file_uri('/images/zia.jpg'); ?>" />
+        <h3 class="centered-text red-brown-text">Zia M Dione</h3>
+        <p class="centered-text">Founder. Operations Lead.</p>
+        <p>Trunk of My Car Cooperative is inspired by a conversation Zia had with a famous author who shared how he started selling books from the trunk of his car. An emerging writer, she is focused on healing intergenerational trauma & building/supporting solidarity & sustainable economies. Zia is certified in permaculture design, has a law degree from the University of Baltimore & is currently pursuing an MFA in Creative Nonfiction at Pacific University. Yes, she changed her name.</p>
 	</div>
 </main>
 

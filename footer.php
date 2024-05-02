@@ -73,7 +73,7 @@
                   My Profile
                   </a></li>
             <?php } ?>          
-            <li><a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a></li>
+            <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
             <li><a href="<?php echo esc_url(site_url('/services'));?>">Creative Offerings</a></li>
             <li><a href="<?php echo esc_url(site_url('/members'));?>">Members</a></li>
             <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/groups')); ?>">Groups</a></li><?php } ?>

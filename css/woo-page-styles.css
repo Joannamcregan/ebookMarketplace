@@ -611,7 +611,7 @@ span.selection{
 span.select2{
     width: fit-content;
 }
-.woocommerce-billing-fields__field-wrapper h3, p{
+.woocommerce-billing-fields__field-wrapper h3, .woocommerce-billing-fields__field-wrapper p{
     text-align: center;
 }
 #order_review_heading{
