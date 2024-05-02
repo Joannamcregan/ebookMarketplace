@@ -90,11 +90,23 @@
     margin-right: 10vw;
     padding: 20px;
 } */
+.woocommerce-message{
+    background: #e44e2d;
+    padding: 20px;
+    color: white;
+    text-shadow: 0px 0px 2px #333;
+    text-align: center;
+    border-radius: 0px 0px 25px 0px;
+}
+.woocommerce-message a{
+    color: white;
+}
 .product-page-content img{
     width: 300px;
     height: auto;
     margin: 20px auto;
     display: block;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .entry-summary{
     width: fit-content;
@@ -525,6 +537,134 @@
 }
 
 /* hidden */
-.tomc-hidden-content {
+/* .tomc-hidden-content {
     border: solid red 2px !important;
+} */
+/* cart styles------------------------------------------------------------------------------------ */
+.cart_totals{
+    margin: 30px auto;
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+    border-top: solid #e44e2d 5px;
+    border-left: solid #e44e2d 5px;
+    border-radius: 45px;
+    width: fit-content;
+}
+.woocommerce-cart-form{
+    margin: 0px auto;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: solid #f7c340 5px;
+    border-right: solid #f7c340 5px;
+    border-radius: 45px;
+    width: fit-content;
+}
+.cart_totals table{
+    margin: 0px auto 20px auto;
+}
+.product-remove{
+    display: flex;
+    align-items: start;
+    padding: 10px;
+    border-radius: 25px;
+}
+.product-remove a{    
+    text-decoration: none;    
+    font-size: 20px;
+    font-weight: bolder;
+    color: #893e43;
+}
+.product-thumbnail, .product-subtotal{
+    display: none;
+}
+.product-price{
+    width: fit-content;
+    text-align: center;
+    padding: 0px 10px;
+}
+.quantity{    
+    margin: 0px auto;
+    width: fit-content;
+}
+.quantity .input-text{
+    max-width: 30px;
+}
+/* checkout page------------------------------------------------------------------------------------- */
+.checkout input{
+    width: fit-content;
+    border-radius: 25px;
+    text-align: center;
+    padding: 2px 10px;
+    margin: 10px auto;
+    display: block;
+}
+.select2-selection--single{
+    width: fit-content;
+    border-radius: 25px !important;
+    text-align: center;
+}
+span.selection{
+    width: fit-content;
+    margin: 10px auto;
+    display: block !important;
+}
+span.select2{
+    width: fit-content;
+}
+.woocommerce-billing-fields__field-wrapper h3, p{
+    text-align: center;
+}
+#order_review_heading{
+    text-align: center;
+}
+.woocommerce-billing-fields h3{
+    text-align: center;
+}
+.woocommerce-additional-fields h3{
+    text-align: center;
+}
+.small-heading{
+    text-align: center;
+}
+.woocommerce-input-wrapper .select{
+    width: fit-content;
+    border-radius: 25px;
+    text-align: center;
+    padding: 2px 10px;
+    margin: 10px auto;
+    display: block;
+}
+#order_comments, #tomc_isbn_description, #tomc_isbn_biography1, #tomc_isbn_biography2, #tomc_isbn_biography3{
+    width: 300px;
+    height: 150px;
+    padding: 10px 20px;
+    overflow-y: scroll;
+    border-radius: 35px;
+    display: block;
+    margin: 10px auto;
+}
+.woocommerce-checkout-review-order-table{
+    margin: 0px auto;
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+    border-bottom: solid #e44e2d 5px;
+    border-left: solid #e44e2d 5px;
+    border-radius: 45px;
+    width: fit-content;
+}
+.woocommerce-info{
+    text-align: center;
+    color: #893e43;
+    margin-top: 30px;
+}
+.woocommerce-privacy-policy-text{
+    margin: 20px auto;
+}
+#place_order{
+    background: #0c6980;
+    padding: 10px 20px;
+    border-radius: 35px;
+    color: white;
+    margin: 20px auto;
+    display: block;
 }

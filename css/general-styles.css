@@ -186,7 +186,7 @@ header a:hover{
     color: #eee2d4;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding: 1em 0.25em 1em 0.25em;
+    padding: 10px;
     margin: 3em -5px -100px -5px;
 }
 .footer-top{
@@ -248,24 +248,29 @@ header a:hover{
     color: #eee2d4;
     text-shadow: 3px 3px #0c6980;
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 540px){
     .banner h1{
         font-size: 46;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 480px){
     .banner h1{
         font-size: 42;
     }
 }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 420px){
     .banner h1{
         font-size: 38;
     }
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 380px){
     .banner h1{
         font-size: 32;
+    }
+}
+@media screen and (max-width: 340px){
+    .banner h1{
+        font-size: 28;
     }
 }
 @media screen and (max-width: 280px){
@@ -298,6 +303,14 @@ header a:hover{
 .orange-translucent-background{
     background: rgba(228, 78, 45, 0.3);
     padding-bottom: 20px;
+}
+.red-orange-line-break-60{
+    border-top: solid #893e43 5px;
+    border-bottom: solid #e44e2d 5px;
+    border-radius: 25px;
+    height: 3px;
+    width: 60%;
+    margin: 0 auto;
 }
 .orange-line-break{
     border-bottom: solid #e44e2d 3px;
@@ -398,6 +411,108 @@ header a:hover{
     }
     #tomc-about-text-graphic-320{
         display: block;
+    }
+}
+.tomc-circle-container{
+    width: 80%;
+    min-height: 350px;
+    padding: 10px 0px;
+    margin: 50px auto;
+    position: relative;
+}
+.tomc-circle-container img{
+    max-width: 300px;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    left: 35%;
+}
+.tomc-circle-p-0{
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+}
+.tomc-circle-p-1{
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    font-size: 50;
+}
+.tomc-circle-p-1-padded-x{
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    font-size: 50;
+    padding-left: 40px;
+}
+.tomc-circle-p-1-padded-2x{
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    font-size: 50;
+    padding-left: 60px;
+}
+.tomc-circle-p-2{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+}
+@media screen and (max-width: 720px) {
+    .tomc-circle-container img{
+        left: 25%;
+    }
+    .tomc-circle-p-1, .tomc-circle-p-1-padded-x, .tomc-circle-p-1-padded-2x{
+        left: 25%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .tomc-circle-container img{
+        left: 15%;
+    }
+    .tomc-circle-p-1, .tomc-circle-p-1-padded-x, .tomc-circle-p-1-padded-2x{
+        left: 15%;
+    }
+}
+@media screen and (max-width: 460px) {
+    .tomc-circle-container{
+        min-height: 390px;
+    }
+    .tomc-circle-container img{
+        left: 5%;
+        top: 60px;
+    }
+    .tomc-circle-p-1, .tomc-circle-p-1-padded-x, .tomc-circle-p-1-padded-2x{
+        left: 5%;
+        top: 120px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .tomc-circle-container{
+        min-height: 430px;
+    }
+    .tomc-circle-container img{
+        right: 20px;
+        top: 80px;
+        max-width: 250px;
+    }
+    .tomc-circle-p-1{
+        right: 20px;
+        top: 110px;
+        font-size: 46;
+    }
+    .tomc-circle-p-1-padded-x{
+        right: 20px;
+        top: 110px;
+        font-size: 46;
+        padding-left: 10px;
+    }
+    .tomc-circle-p-1-padded-2x{
+        right: 20px;
+        top: 110px;
+        font-size: 46;
+        padding-left: 20px;
     }
 }
 .padded-arrow-accent{
@@ -522,6 +637,9 @@ header a:hover{
 .yellow-shadow-heading{
     text-shadow: 2px 2px #d38124;
 }
+.orange-shadow-heading{
+    text-shadow: 2px 2px #e34e2f;
+}
 /* h1, h2, h3{
     font-family: 'tahoma', sans-serif;
 } */
@@ -546,6 +664,9 @@ h1, h2, h3{
 }
 .underlined-text{
     text-decoration: underline;
+}
+.no-decoration{
+    text-decoration: none;
 }
 .blue-text{
     color: #0c6980;
@@ -651,6 +772,10 @@ a {
 .extra-large-text{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 4rem;
+}
+.large-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24;
 }
 .small-text{
     font-size: 0.75rem;
@@ -814,9 +939,6 @@ a {
     margin-bottom: 1rem;
     margin-left: 10vw;
     margin-right: 10vw;
-}
-.generic-content h3{
-    text-align: left;
 }
 .archive-item{
     text-align: left;
