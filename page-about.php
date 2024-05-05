@@ -29,6 +29,15 @@
         <p class="centered-text">Founding Member. Developer.</p>
         <p>Joanna is a reader, writer, and web developer from Northeast Ohio who believes cooperative ownership can help bring about a healthier world.</p>
 	</div>
+    <div class="generic-content">
+        <div class="generic-wrapper-2">
+            <div class="generic-wrapper-1">
+                <div class="generic-wrapper-0">
+                    <p>In solidarity with our Palestinian family, we’ve applied <a href="https://bdsmovement.net/" target="_blank">Boycott Divestment & Sanctions</a> principles in the building of our platform, meaning: we’ve done our best to ensure that we are not using technology or other services owned and/or operated by individuals and/or organizations that are located in or that publicly support the apartheid state of Israel. Additionally, our cooperative supports human and natural rights for all living creatures of the planet and is committed to sustainable practices that honor such rights and seek to end oppression and exploitation of the same. This means we encourage use of refurbished e-readers and other electronics to reduce/eliminate exploitative mining of precious resources from the African continent and all of its nations and we also encourage barter and trade among our members to reduce waste. We invite you to join us where you are and with what you can.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <?php get_footer(); ?>
