@@ -614,9 +614,7 @@ td.bbp-topic-counts {
 
 /* =Pagination
 -------------------------------------------------------------- */
-.pag-count{
-	color: black !important;
-}
+
 .bbp-pagination-count {
 	float: left;
 	border: 1px solid transparent;
@@ -770,10 +768,6 @@ body.single-reply .bbp-reply-form div.avatar img {
 	border: 1px solid #ddd;
 	line-height: 0;
 	background-color: #efefef;
-}
-
-img.avatar{
-	border-radius: 25px !important;
 }
 
 body.page .bbp-reply-form code,

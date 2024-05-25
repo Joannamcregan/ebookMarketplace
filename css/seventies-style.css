@@ -152,12 +152,3 @@
     border-right: solid #0c6980 5px;
     border-radius: 0 75px 75px 75px;
 }
-.circle-bio-pic{
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    border-left: solid #0c6980 10px;
-    border-bottom: solid #0c6980 5px;
-    display: block;
-    margin: 30px auto 10px auto;
-}

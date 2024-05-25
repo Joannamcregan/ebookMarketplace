@@ -1,21 +1,13 @@
 <footer class="footer--main">
-      <div class="footer-top">
-            <ul class="footer-top-left">
+      <img src="<?php echo get_theme_file_uri('/images/blue-logo.jpg'); ?>" alt="threads logo" id="footer-logo" />
+      <div class="footer-list">
+            <ul>                 
                   <li><a href="<?php echo esc_url(site_url('/newly-added-books'));?>">New Books</a></li>
                   <li><a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Genres</a></li> 
-                  <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li> 
-            </ul>
-            <ul class="footer-top-right">
+                  <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
                   <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a></li>
                   <li><a href="<?php echo esc_url(site_url('/services'));?>">Creative Offerings</a></li>   
-                  <li><a href="<?php echo esc_url(site_url('/groups'));?>">Groups</a></li>               
-            </ul>
-      </div>
-      <div class="footer-bottom">
-            <ul>                  
-                  <li><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/terms-and-conditions'));?>">Terms and Conditions</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/contact'));?>">Contact Us</a></li> 
+                  <li><a href="<?php echo esc_url(site_url('/groups'));?>">Groups</a></li> 
                   <?php if (is_user_logged_in()){                        
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
                         <?php if (is_user_logged_in()){
@@ -37,8 +29,15 @@
                         <li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
-                  <?php }
-            ?></ul>
+                  <?php }                  
+                  ?><li><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/contact'));?>">Contact Us</a></li> 
+            </ul>
+      </div>
+      <div id="social-links">
+            <a href="https://www.threads.net/@trunkofcarcoop" target="_blank"><img src="<?php echo get_theme_file_uri('/images/threads-icon.svg'); ?>" alt="threads logo" /></a>
+            <a href="https://www.facebook.com/trunkofmycarcoop" target="_blank"><img src="<?php echo get_theme_file_uri('/images/fb-icon.svg'); ?>" alt="facebook logo" /></a>
+            <a href="https://www.instagram.com/trunkofcarcoop/" target="_blank"><img src="<?php echo get_theme_file_uri('/images/ig-icon.svg'); ?>" alt="instagram logo" /></a>
       </div>
 </footer>
 
@@ -73,7 +72,7 @@
                   My Profile
                   </a></li>
             <?php } ?>          
-            <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
+            <li><a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a></li>
             <li><a href="<?php echo esc_url(site_url('/services'));?>">Creative Offerings</a></li>
             <li><a href="<?php echo esc_url(site_url('/members'));?>">Members</a></li>
             <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/groups')); ?>">Groups</a></li><?php } ?>

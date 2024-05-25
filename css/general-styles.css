@@ -184,50 +184,48 @@ header a:hover{
 .footer--main{
     background: #893e43;
     color: #eee2d4;
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 10px;
+    padding: 1em 0.25em 1em 0.25em;
     margin: 3em -5px -100px -5px;
+    position: relative;
 }
-.footer-top{
-    display: flex;
+#footer-logo{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 100px;
 }
-.footer-top ul{
-    width: 50vw;
-}
-.footer-top-left{
-    text-align: center;
-    padding: 0 20px;
-}
-.footer-top-right{
-    text-align: center;
-    padding: 0 20px;
-}
-.footer-top li {
+.footer--main ul{    
     list-style: none;
-    padding-bottom: 20px;
+    width: fit-content;
 }
-.footer-top a {
+.footer--main li{
+    padding: 0 0 10px 20px;
+}
+.footer--main a{
     color: #eee2d4;
     text-decoration: none;
+    border-bottom: 30px;
 }
-.footer-bottom li{
-    list-style: none;
-    padding-bottom: 20px;
+#social-links{
+    display: inline-flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    bottom: 120px;
+    right: 20px;
 }
-.footer-bottom a{
-    color: #eee2d4;
-    text-decoration: none;
+#social-links img{
+    display: block;
+    margin: 10px;
 }
 @media screen and (max-width: 480px){
     .footer--main{
         padding: 5px;
     }
-    .footer-top-left{
-        text-align: left;
-    }
-    .footer-top-right{
-        text-align: right;
+    .footer-list{
+        width: 100%;
+        display: block;
     }
 }
 /*special sections-----------------------------------------------------------------------*/
@@ -248,29 +246,24 @@ header a:hover{
     color: #eee2d4;
     text-shadow: 3px 3px #0c6980;
 }
-@media screen and (max-width: 540px){
+@media screen and (max-width: 480px){
     .banner h1{
         font-size: 46;
     }
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 400px){
     .banner h1{
         font-size: 42;
     }
 }
-@media screen and (max-width: 420px){
+@media screen and (max-width: 360px){
     .banner h1{
         font-size: 38;
     }
 }
-@media screen and (max-width: 380px){
+@media screen and (max-width: 320px){
     .banner h1{
         font-size: 32;
-    }
-}
-@media screen and (max-width: 340px){
-    .banner h1{
-        font-size: 28;
     }
 }
 @media screen and (max-width: 280px){
@@ -940,6 +933,9 @@ a {
     margin-left: 10vw;
     margin-right: 10vw;
 }
+.generic-content h3{
+    text-align: left;
+}
 .archive-item{
     text-align: left;
     margin-top: 1rem;
@@ -1230,3 +1226,19 @@ a {
     text-align: center;
 }
 
+/* Coming Soon Info styles-------------------------------------------------------------------------------*/
+.coming-soon-info {
+    opacity: 0;
+    width: 80vw;
+    margin: 10 auto;
+    background: white;
+    border: 2px solid #b63e32;
+    border-radius: 20px;
+    padding: 20px;
+    animation: fade-in 1s ease-in forwards;
+}
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+    }
+}
