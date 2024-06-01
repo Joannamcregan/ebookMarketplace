@@ -389,7 +389,7 @@ function assignCreatorMemberRole($form_id, $response) {
 
 // maintenance mode-----------------------------------------------------------------------
 function tomc_maintenance_mode() {
-    if (!current_user_can('edit_themes') || !is_user_logged_in()) {    
+    if (!is_user_logged_in()) {    
         wp_die("<h1 style='color: #0c6980; text-align: center'>Coming Soon!</h1><p style='text-align: center'>The Trunk of My Car Cooperative Marketplace is launching June 2024. Our current member-owners are uploading works and conducting final tests before making the platform widely available in the coming days. You can learn more about the cooperative community we're building <a href='https://www.trunkofmycar.org/'>here</a>. </p>");    
     }    
 }
