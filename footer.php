@@ -1,5 +1,5 @@
 <footer class="footer--main">
-      <img src="<?php echo get_theme_file_uri('/images/blue-logo.jpg'); ?>" alt="threads logo" id="footer-logo" />
+      <img src="<?php echo get_theme_file_uri('/images/yellow-logo.jpg'); ?>" alt="Funky letters spell out Trunk of My Car over a yellow background" id="footer-logo" />
       <div class="footer-list">
             <ul>                 
                   <li><a href="<?php echo esc_url(site_url('/newly-added-books'));?>">New Books</a></li>
