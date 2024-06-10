@@ -22,6 +22,13 @@
             <p class="orange-shadow-heading tankindred-text tomc-circle-p-1-padded-x"><strong>Worker</strong></p>
             <p class="tomc-circle-p-2">Those who fill the tank, clean the windshield, and change the occasional tire. We don't have any job listings at the moment, but check back as we grow!</p>
         </div>
+        <div class="red-orange-line-break-60"></div>
+        <div class="tomc-circle-container">
+            <img src="<?php echo get_theme_file_uri('/images/circle-background-2.jpg'); ?>" role="presentation" />
+            <p class="tomc-circle-p-0">This circle is for testing purposes only.</p>
+            <p class="orange-shadow-heading tankindred-text tomc-circle-p-1-padded-x"><a href="<?php echo esc_url(site_url('/testers-circle-membership'));?>"><strong>Tester</strong></a></p>
+            <p class="tomc-circle-p-2">Those who fill the tank, clean the windshield, and change the occasional tire. We don't have any job listings at the moment, but check back as we grow!</p>
+        </div>
     </div>
 </main>
 
