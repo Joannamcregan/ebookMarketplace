@@ -2,35 +2,19 @@
       <img src="<?php echo get_theme_file_uri('/images/yellow-logo.jpg'); ?>" alt="Funky letters spell out Trunk of My Car over a yellow background" id="footer-logo" />
       <div class="footer-list">
             <ul>                 
-                  <li><a href="<?php echo esc_url(site_url('/newly-added-books'));?>">New Books</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Genres</a></li> 
                   <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
-                  <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a></li>
-                  <li><a href="<?php echo esc_url(site_url('/services'));?>">Creative Offerings</a></li>   
-                  <li><a href="<?php echo esc_url(site_url('/groups'));?>">Groups</a></li> 
                   <?php if (is_user_logged_in()){                        
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
-                        <?php if (is_user_logged_in()){
-                              $tomc_user = get_userdata(get_current_user_id());
-                              $tomc_username = $tomc_user->user_login;
-                              ?><li><a href="<?php echo esc_url(site_url('/members')) . '/' . $tomc_username; ?>">
-                              My Profile
-                              </a></li>
-                              <li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a> </li>
-                              <li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Downloads</a></li>
-                              <?php $user = wp_get_current_user();
-                              if (in_array( 'dc_vendor', (array) $user->roles )){
-                                    ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">My Vendor Portal</a></li>
-                                    <li><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add a Book</a></li>
-                                    <li><a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a></li>
-                                    <li><a href="<?php echo esc_url(site_url('/my-pen-names')); ?>">My Author Names</a> </li>
-                              <?php } ?>
-                        <?php } ?>
-                        <li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
+                        <?php $user = wp_get_current_user();
+                        if (in_array( 'administrator', (array) $user->roles )){
+                              ?><li><a href="<?php echo esc_url(site_url('/wp-admin'));?>">Admin Dashboard</a></li>
+                        <?php }
+                        ?><li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
                   <?php }                  
-                  ?><li><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li>
+                  ?><br>
+                  <li><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li>
                   <li><a href="<?php echo esc_url(site_url('/contact'));?>">Contact Us</a></li> 
             </ul>
       </div>

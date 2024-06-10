@@ -192,9 +192,10 @@ header a:hover{
 }
 #footer-logo{
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     right: 20px;
     width: 100px;
+    border-radius: 20px;
 }
 .footer--main ul{    
     list-style: none;
@@ -210,14 +211,14 @@ header a:hover{
 }
 #social-links{
     display: inline-flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     position: absolute;
-    bottom: 120px;
-    right: 20px;
+    bottom: 140px;
+    right: 25px;
 }
 #social-links img{
     display: block;
-    margin: 10px;
+    /* margin: 10px; */
 }
 @media screen and (max-width: 480px){
     .footer--main{
