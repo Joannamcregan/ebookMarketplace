@@ -65,7 +65,7 @@
     </div>
     <div class="leaf-section">
         <div class="leaf-wrapper">
-            <a class="no-decoration" href="<?php echo esc_url(site_url('/own'));?>">
+            <a href="<?php echo esc_url(site_url('/own'));?>">
             <div class="leaf orange-leaf">
                 <p>Own</p>
             </div>
