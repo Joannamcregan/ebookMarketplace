@@ -24,6 +24,8 @@
 }
 .leaves-p{
     padding: 0 30px 15px 30px;
+    max-width: 750px;
+    margin: auto;
     color: #602f32;
     font-size: 22;
 }
