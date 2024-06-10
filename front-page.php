@@ -16,7 +16,7 @@
     <!-- <p class="leaves-p centered-text">A self-publishing platform <strong>owned by a community of people who love and create books.</strong> -->
     <!-- <br/>Trunk of My Car Cooperative is on a mission to <strong>collectively redistribute resources from those who take to those who create.</strong></p> -->
     <!-- <br/>We're on a mission to <strong>collectively redistribute resources from those who take to those who create.</strong></p> -->
-    <p class="leaves-p centered-text">We're on a mission to collectively redistribute resources from those who take to those who create with a self-publishing platform<br> <strong>owned by a community of people who love and create books.</strong></p>
+    <p class="leaves-p centered-text">We're on a mission to collectively redistribute resources from those who take to those who create with a self-publishing platform <strong>owned by a community of people who love and create books.</strong></p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf expandable-leaf">
