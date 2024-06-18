@@ -372,6 +372,8 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
 // Assign roles on submission of certain Forminator forms------------------------------------------------------------------------------
 add_action( 'forminator_form_after_handle_submit', 'assignReaderMemberRole', 10, 2 );
 add_action( 'forminator_form_after_save_entry', 'assignReaderMemberRole', 10, 2 );
+add_action( 'forminator_form_after_handle_submit', 'assignCreatorMemberRole', 10, 2 );
+add_action( 'forminator_form_after_save_entry', 'assignCreatorMemberRole', 10, 2 );
 
 function assignReaderMemberRole($form_id, $response) {
     if( $response['success']  && $form_id ==79 /* Reader-Member Signup */){
