@@ -376,7 +376,7 @@ add_action( 'forminator_form_after_handle_submit', 'assignCreatorMemberRole', 10
 add_action( 'forminator_form_after_save_entry', 'assignCreatorMemberRole', 10, 2 );
 
 function assignReaderMemberRole($form_id, $response) {
-    if( $response['success']  && $form_id ==79 /* Reader-Member Signup */){
+    if( $response['success']  && $form_id ==2372 /* Reader-Member Signup */){
         $user = wp_get_current_user();
         $user->add_role( 'reader-member' );
     }
