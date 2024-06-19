@@ -51,7 +51,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class FrontDisplay {
   constructor() {
-    this.leaves = document.querySelectorAll('.leaf');
+    this.leaves = document.querySelectorAll('.expandable-leaf');
     this.events();
   }
   events() {
@@ -168,7 +168,6 @@ __webpack_require__.r(__webpack_exports__);
 class Settings {
   // 1. describe and create/initiate object
   constructor() {
-    // this.addSettingsHTML();    
     this.settingsOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".tomc-settings-overlay");
     this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-settings-trigger");
     this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay__close");
@@ -188,34 +187,7 @@ class Settings {
   }
 
   // 3. methods (functions, actions...)
-  addSettingsHTML() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').append(`
-            <div class="tomc-settings-overlay">
-                <div class="orange-translucent-background">
-                    <div class="overlay-main-container"> 
-                        <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
-                        <br>
-                        <h1 class="centered-text">My Settings</h1>
-                    </div>
-                </div>
-                <div class="settings-overlay--section">
-                    <h2 class="centered-text">My Triggers</h2>
-                    <p class="centered-text">Select triggers you want to avoid and we won't include books that have been tagged with them in your search results.</p>
-                    <div id="settings-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
-                    <a href="#"><p class="centered-text">suggest a new trigger warning</p></a>
-                    <p class="centered-text" style="display:none;" id="tomc-reader-settings-trigger-settings-saved-message">settings saved</p>
-                    <button class="purple-button" id="tomc-reader-settings--save-trigger-settings">save trigger settings</button>
-                </div>
-                <div class="settings-overlay--section">
-                    <h2 class="centered-text">Languages I Read</h2>
-                    <p class="centered-text">Select languages you read and we'll include books tagged with them in your search results.</p>
-                    <div id="settings-overlay--languages-container" class="tomc-book-organization--options-container"></div>
-                    <p class="centered-text" style="display:none;" id="tomc-reader-settings-language-settings-saved-message">settings saved</p>
-                    <button class="purple-button" id="tomc-reader-settings--save-language-settings">save language settings</button>
-                </div>
-            </div>
-        `);
-  }
+
   closeOverlay() {
     this.settingsOverlay.removeClass("search-overlay--active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#settings-overlay--triggers-container").html('');
@@ -528,11 +500,17 @@ class Search {
                   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-browse-genres--results--book-' + response[i]['id']).children('.tomc-browse--search-result-bottom-section').append(newLink);
                 } else if (response[i]['resulttype'] === 'book') {
                   let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-book-organization--new-book-2').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
-                  let newTopSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-browse--search-result-top-section');
+                  let newTopSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />'); //.addClass('tomc-browse--search-result-top-section');
+                  let newBorder0 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-0');
+                  let newBorder1 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-1');
+                  newBorder1.append(newBorder0);
+                  let newBorder2 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-2');
+                  newBorder2.append(newBorder1);
+                  newTopSection.append(newBorder2);
                   let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
-                  newTopSection.append(newTitle);
+                  newBorder0.append(newTitle);
                   let newAuthor = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
-                  newTopSection.append(newAuthor);
+                  newBorder0.append(newAuthor);
                   newDiv.append(newTopSection);
                   let newBottomSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-browse--search-result-bottom-section');
                   let newDescription = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['book_description'].substring(0, 500) + '...');
@@ -548,12 +526,18 @@ class Search {
                 } else if (response[i]['resulttype'] === 'genrebooks') {
                   let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-book-organization--new-book-3').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                   let newTopSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-browse--search-result-top-section');
+                  let newBorder0 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-0');
+                  let newBorder1 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-1');
+                  newBorder1.append(newBorder0);
+                  let newBorder2 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-2');
+                  newBorder2.append(newBorder1);
+                  newTopSection.append(newBorder2);
                   let newEm = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<em />').html('new in ' + this.searchField.val());
-                  newTopSection.append(newEm);
+                  newBorder0.append(newEm);
                   let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
-                  newTopSection.append(newTitle);
+                  newBorder0.append(newTitle);
                   let newAuthor = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
-                  newTopSection.append(newAuthor);
+                  newBorder0.append(newAuthor);
                   newDiv.append(newTopSection);
                   let newBottomSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-browse--search-result-bottom-section');
                   let newDescription = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['book_description'].substring(0, 500) + '...');
@@ -569,12 +553,18 @@ class Search {
                 } else if (response[i]['resulttype'] === 'identitybooks') {
                   let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-book-organization--new-book-3').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                   let newTopSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-browse--search-result-top-section');
+                  let newBorder0 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-0');
+                  let newBorder1 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-1');
+                  newBorder1.append(newBorder0);
+                  let newBorder2 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-2');
+                  newBorder2.append(newBorder1);
+                  newTopSection.append(newBorder2);
                   let newEm = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<em />').html('new with main characters who are ' + this.searchField.val());
-                  newTopSection.append(newEm);
+                  newBorder0.append(newEm);
                   let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
-                  newTopSection.append(newTitle);
+                  newBorder0.append(newTitle);
                   let newAuthor = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
-                  newTopSection.append(newAuthor);
+                  newBorder0.append(newAuthor);
                   newDiv.append(newTopSection);
                   let newBottomSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-browse--search-result-bottom-section');
                   let newDescription = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['book_description'].substring(0, 500) + '...');
@@ -590,12 +580,18 @@ class Search {
                 } else if (response[i]['resulttype'] === 'readalikebooks') {
                   let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-book-organization--new-book-1').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                   let newTopSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-browse--search-result-top-section');
+                  let newBorder0 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-0');
+                  let newBorder1 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-1');
+                  newBorder1.append(newBorder0);
+                  let newBorder2 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-result-top-border-2');
+                  newBorder2.append(newBorder1);
+                  newTopSection.append(newBorder2);
                   let newEm = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<em />').html('If you loved ' + this.searchField.val() + ' by ' + response[i]['readalike_author'] + ', you might love this book, too.');
-                  newTopSection.append(newEm);
+                  newBorder0.append(newEm);
                   let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
-                  newTopSection.append(newTitle);
+                  newBorder0.append(newTitle);
                   let newAuthor = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
-                  newTopSection.append(newAuthor);
+                  newBorder0.append(newAuthor);
                   newDiv.append(newTopSection);
                   let newBottomSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-browse--search-result-bottom-section');
                   let newDescription = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['book_description'].substring(0, 500) + '...');
