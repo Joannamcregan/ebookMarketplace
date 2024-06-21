@@ -386,6 +386,7 @@ function assignCreatorMemberRole($form_id, $response) {
     if( $response['success']  && $form_id ==4212 /* Creator-Member Signup */){
         $user = wp_get_current_user();
         $user->add_role( 'creator-member' );
+        $user->add_role( 'dc-vendor' );
     }
 } 
 
