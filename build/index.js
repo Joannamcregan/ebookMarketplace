@@ -240,6 +240,8 @@ class Settings {
   openSettingsOverlay() {
     if (!this.isOverlayOpen) {
       this.isOverlayOpen = true;
+      this.openButton.addClass('spinningIcon');
+      setTimeout(() => this.openButton.removeClass('spinningIcon'), 3000);
       jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
         beforeSend: xhr => {
           xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
@@ -396,6 +398,8 @@ class Search {
     if (!this.isOverlayOpen) {
       // this.addSearchHTML();      
       this.isOverlayOpen = true;
+      this.openButton.addClass('spinningIcon');
+      setTimeout(() => this.openButton.removeClass('spinningIcon'), 3000);
       jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
         beforeSend: xhr => {
           xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);

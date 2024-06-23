@@ -44,7 +44,7 @@
     border: solid #f6ece1 10px;
     background: #f6ece1;
 }
-.leaf{
+.leaf, .alt-leaf{
     width: 50vw;
     height: 200px;
     border-radius: 50% 0;
@@ -57,7 +57,7 @@
     padding: 10px;
     cursor: pointer;
 }
-.orange-leaf{
+.orange-leaf, .alt-orange-leaf{
     background: #e44e2d;
     border: solid 10px #f7c340;
 }

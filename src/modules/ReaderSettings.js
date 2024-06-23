@@ -77,6 +77,8 @@ class Settings {
     openSettingsOverlay(){
         if (! this.isOverlayOpen){            
             this.isOverlayOpen = true;
+            this.openButton.addClass('spinningIcon');
+            setTimeout(()=> this.openButton.removeClass('spinningIcon'), 3000);
             $.ajax({
                 beforeSend: (xhr) => {
                     xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);

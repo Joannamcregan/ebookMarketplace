@@ -1245,3 +1245,11 @@ a {
         opacity: 1;
     }
 }
+/* Bumper Sticker Styles----------------------------------------------------------------------------------*/
+.bumper-stickers {
+    display: flex;
+    margin: 20px 40px;
+}
+.rectangle-sticker {
+    width: 200px;
+}
