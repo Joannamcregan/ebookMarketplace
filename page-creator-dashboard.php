@@ -1,1 +1,1 @@
-[mvx_vendor]
+<?php echo do_shortcode('[mvx_vendor]'); ?>
