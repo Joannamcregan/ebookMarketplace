@@ -80,7 +80,10 @@
 #reg_email{
     border-radius: 5px;
 }
-
+/*single e-book page for the product's creator-----------------------------------------------------------*/
+.mvx_fpm_buttons{
+    border: solid red 2px !important;
+}
 /*single e-book page--------------------------------------------------------------------------------------------*/
 /* .product-page-content{
     text-align: left;
