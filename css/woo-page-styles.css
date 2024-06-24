@@ -80,13 +80,6 @@
 #reg_email{
     border-radius: 5px;
 }
-/*single e-book page for the product's creator-----------------------------------------------------------*/
-.mvx_fpm_buttons{
-    width: fit-content !important;
-}
-.mvx_fpm_button{
-    max-width: 30px !important;
-}
 /*single e-book page--------------------------------------------------------------------------------------------*/
 /* .product-page-content{
     text-align: left;
@@ -96,7 +89,7 @@
     margin-right: 10vw;
     padding: 20px;
 } */
-.product-page-content img{
+.product-page-content .woocommerce-product-gallery__wrapper img{
     width: 300px;
     height: auto;
     margin: 20px auto;
@@ -532,5 +525,13 @@
 
 /* hidden */
 .tomc-hidden-content {
+    display: none !important;
+}
+/*single e-book page for the product's creator-----------------------------------------------------------*/
+.mvx_fpm_buttons{
+    width: 90px !important;
+}
+.mvx_fpm_button img{
+    width: 20px !important;
     border: solid red 2px !important;
 }
