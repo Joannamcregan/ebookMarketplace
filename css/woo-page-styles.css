@@ -529,10 +529,14 @@
 }
 /*single e-book page for the product's creator-----------------------------------------------------------*/
 .mvx_fpm_buttons{
-    width: 90px !important;
+    width: fit-content !important;
+    height: fit-content !important;
     top: 80px !important;
     margin-right: 0px !important;
 }
 .mvx_fpm_button img{
-    width: 20px !important;
+    width: 30px !important;
+}
+.mvx_fpm_button_seperator{
+    display: none !important;
 }
