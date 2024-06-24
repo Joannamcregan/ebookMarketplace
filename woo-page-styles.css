@@ -531,10 +531,7 @@
 .mvx_fpm_buttons{
     width: 90px !important;
 }
-.mvx_fpm_button{
-    max-width: 30px !important;
-}
 .mvx_fpm_button img{
     width: 20px !important;
-    border: solid red 2px;
+    border: solid red 2px !important;
 }
