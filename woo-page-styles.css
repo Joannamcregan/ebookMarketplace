@@ -82,7 +82,10 @@
 }
 /*single e-book page for the product's creator-----------------------------------------------------------*/
 .mvx_fpm_buttons{
-    border: solid red 2px;
+    width: 90px !important;
+}
+.mvx_fpm_button{
+    max-width: 30px !important;
 }
 /*single e-book page--------------------------------------------------------------------------------------------*/
 /* .product-page-content{
