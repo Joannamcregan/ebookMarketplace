@@ -87,6 +87,9 @@
 .mvx_fpm_button{
     max-width: 30px !important;
 }
+.mvx_fpm_button img{
+    max-width: 20px !important;
+}
 /*single e-book page--------------------------------------------------------------------------------------------*/
 /* .product-page-content{
     text-align: left;
