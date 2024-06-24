@@ -89,7 +89,7 @@
     margin-right: 10vw;
     padding: 20px;
 } */
-.product-page-content img{
+.product-page-content .woocommerce-product-gallery__wrapper img{
     width: 300px;
     height: auto;
     margin: 20px auto;
