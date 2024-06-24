@@ -34,7 +34,7 @@
         <a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Book Downloads</a>
         <?php $user = wp_get_current_user();
         if (in_array( 'dc_vendor', (array) $user->roles )){
-          ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add a Book</a>
+          ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add Book Info</a>
           <a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a>
         <?php }
       } else {
@@ -57,7 +57,7 @@
           My Profile
         </a>
       <?php }
-      ?><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a>
+      ?><a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a>
       <a href="<?php echo esc_url(site_url('/services'));?>">Creative Offerings</a>
       <a href="<?php echo esc_url(site_url('/members'));?>">Members</a>
       <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/groups')); ?>">Groups</a><?php } ?>

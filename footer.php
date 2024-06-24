@@ -49,7 +49,7 @@
                   $tomc_user = get_userdata(get_current_user_id());
                   $tomc_username = $tomc_user->user_login;
                   if (in_array( 'dc_vendor', (array) $user->roles )){
-                        ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add a Book</a>
+                        ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add Book Info</a>
                         <li><a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a></li>
                   <?php }
                   ?><li><a href="<?php echo esc_url(site_url('/members')) . '/' . $tomc_username; ?>">
