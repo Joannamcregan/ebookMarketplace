@@ -272,9 +272,7 @@ function tomc_get_gallery_files() {
             }
         }
         echo '</div></div>';
-    } else {
-        echo 'nothing!';
-    }
+    } 
 }
 add_action( 'woocommerce_after_single_product_summary', 'tomc_get_gallery_files', 20 );
 
