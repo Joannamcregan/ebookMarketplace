@@ -541,3 +541,81 @@
 .mvx_fpm_button_separator{
     display: none !important;
 }
+/*woocommerce messages--------------------------------------------------------------------------------------*/
+.woocommerce-message{
+    width: fit-content;
+    padding: 10px;
+    background: white;
+    border: solid #0c698e 5px;
+    border-radius: 20px;
+    margin: 10px auto;
+}
+.woocommerce-error{
+    background: white;
+    border: solid #893e43 5px;
+    border-radius: 20px;
+    margin: 10px auto;
+    padding: 10px;
+}
+.woocommerce-error li{
+    list-style: none;
+}
+/*checkout---------------------------------------------------------------------------------------------------*/
+.woocommerce-checkout input[type="text"]{
+    min-width: 150px;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+.woocommerce-checkout input[type="tel"]{
+    min-width: 100px;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+.woocommerce-checkout input[type="email"]{
+    min-width: 150px;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+.woocommerce-checkout textarea{
+    min-width: 300px;
+    min-height: 100px;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+    border: solid black 2px;
+    display: block;
+}
+.woocommerce-checkout select{
+    min-width: 100px;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+.select2{
+    width: 250px !important;
+    height: fit-content !important;
+    padding: 5px !important;
+    margin-left: 5px !important;
+    background-color: white;
+    border: solid black 2px !important;
+    border-radius: 10px !important;
+}
+.select2-container--default .select2-selection--single{
+    border: none !important;
+}
+#tomc_isbn_title, #tomc_isbn_subtitle{
+    width: 250px !important;
+}
+.woocommerce-checkout button[type="submit"]{
+    background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 40px 0px;
+}
