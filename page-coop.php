@@ -34,6 +34,17 @@
             </div>
             </a>
         </div>
+    </div>
+    <div class="leaf-section">
+        <div class="leaf-wrapper">
+            <a class="no-decoration" href="<?php echo esc_url(site_url('/members'));?>">
+            <div class="leaf orange-leaf">
+                <p>Connect</p>
+            </div>
+            </a>
+        </div>
+    </div>
+    
     <!-- <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf">

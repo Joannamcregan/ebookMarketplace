@@ -52,13 +52,13 @@
                         ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add Book Info</a>
                         <li><a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a></li>
                   <?php }
-                  ?><li><a href="<?php echo esc_url(site_url('/members')) . '/' . $tomc_username; ?>">
+                  ?><li><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">
                   My Profile
                   </a></li>
             <?php } ?>          
             <li><a href="<?php echo esc_url(site_url('/coop'));?>">About the Co-op</a></li>
             <li><a href="<?php echo esc_url(site_url('/services'));?>">Creative Offerings</a></li>
-            <li><a href="<?php echo esc_url(site_url('/members'));?>">Members</a></li>
+            <li><a href="<?php echo esc_url(site_url('/my-isbns'));?>">ISBNs</a></li>
             <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/groups')); ?>">Groups</a></li><?php } ?>
             <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a></li>
       </ul>

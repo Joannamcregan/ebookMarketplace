@@ -550,6 +550,14 @@
     border-radius: 20px;
     margin: 10px auto;
 }
+.woocommerce-info{
+    width: fit-content;
+    padding: 10px;
+    background: white;
+    border: solid #e44e2d 5px;
+    border-radius: 20px;
+    margin: 10px auto;
+}
 .woocommerce-error{
     background: white;
     border: solid #893e43 5px;
