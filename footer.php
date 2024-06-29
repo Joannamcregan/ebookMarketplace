@@ -18,6 +18,9 @@
                   <li><a href="<?php echo esc_url(site_url('/contact'));?>">Contact Us</a></li> 
             </ul>
       </div>
+      <div id="kofi-link">
+            <a href="https://ko-fi.com/trunkofcarcoop" target="_blank">Buy Us a Coffee!</a>
+      </div>
       <div id="social-links">
             <a href="https://www.threads.net/@trunkofcarcoop" target="_blank"><img src="<?php echo get_theme_file_uri('/images/threads-icon.svg'); ?>" alt="threads logo" /></a>
             <a href="https://www.facebook.com/trunkofmycarcoop" target="_blank"><img src="<?php echo get_theme_file_uri('/images/fb-icon.svg'); ?>" alt="facebook logo" /></a>
