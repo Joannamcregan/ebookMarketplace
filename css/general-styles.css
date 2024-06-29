@@ -189,7 +189,7 @@ header a:hover{
     padding: 20px;
     margin: 3em -5px -100px -5px;
     position: relative;
-    min-height: 180px;
+    min-height: 200px;
 }
 #footer-logo{
     position: absolute;
@@ -210,12 +210,25 @@ header a:hover{
     text-decoration: none;
     border-bottom: 30px;
 }
+#kofi-link{
+    text-align: center;
+    border: solid #ecd0b1 2px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 130px;
+    right: 25px;
+    width: fit-content;
+    padding: 5px;
+}
+#kofi-link a{
+    color: #ecd0b1;
+}
 #social-links{
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
     position: absolute;
-    bottom: 140px;
+    bottom: 170px;
     right: 25px;
 }
 #social-links img{
