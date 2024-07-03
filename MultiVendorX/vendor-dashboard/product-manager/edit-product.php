@@ -264,7 +264,65 @@ if ($default_types && !empty($default_types)) {
                 <?php do_action( 'mvx_after_product_note_metabox_panel', $post->ID ); ?>
                 <?php } ?>
             </div>
-            
+            <div class="col-md-4">
+                <?php if( get_mvx_vendor_settings('category_pyramid_guide', 'settings_general') == false ) :
+                $product_categories = mvx_get_product_terms_HTML( 'product_cat', $post->ID, apply_filters( 'mvx_vendor_can_add_product_category', false, get_current_user_id() ) ); ?>
+                <?php if ( $product_categories ) : ?>
+                    <div class="panel panel-default pannel-outer-heading">
+                        <div class="panel-heading d-flex">
+                            <h3 class="pull-left"><?php esc_html_e( 'Product Types', 'multivendorx' ); ?></h3>
+                        </div>
+                        <div class="panel-body panel-content-padding form-group-wrapper"> 
+                            <?php
+                            echo $product_categories;
+                            ?>
+                        </div>
+                    </div>
+                <?php endif;
+                endif; ?>
+                <?php $product_tags = mvx_get_product_terms_HTML( 'product_tag', $post->ID, apply_filters( 'mvx_vendor_can_add_product_tag', true, get_current_user_id() ), false ); ?>
+                <?php if ( $product_tags && !empty($product_fileds) && in_array('product_tag', $product_fileds) ) : ?>
+                    <div class="panel panel-default pannel-outer-heading">
+                        <div class="panel-heading d-flex">
+                            <h3 class="pull-left"><?php esc_html_e( 'Product tags', 'multivendorx' ); ?></h3>
+                        </div>
+                        <div class="panel-body panel-content-padding form-group-wrapper">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <?php
+                                    echo $product_tags;
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php 
+                $custom_taxonomies = get_object_taxonomies( 'product', 'objects' );
+                if( $custom_taxonomies ){
+                    foreach ( $custom_taxonomies as $taxonomy ) {
+                        if ( in_array( $taxonomy->name, array( 'product_cat', 'product_tag' ) ) ) continue;
+                        if ( $taxonomy->public && $taxonomy->show_ui && $taxonomy->meta_box_cb ) { ?>
+                            <div class="panel panel-default pannel-outer-heading">
+                                <div class="panel-heading d-flex">
+                                    <h3 class="pull-left"><?php echo $taxonomy->label; ?></h3>
+                                </div>
+                                <div class="panel-body panel-content-padding form-group-wrapper">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <?php
+                                            echo mvx_get_product_terms_HTML( $taxonomy->name, $post->ID, apply_filters( 'mvx_vendor_can_add_'.$taxonomy->name, false, get_current_user_id() ) );
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php }
+                    }
+                }
+                ?>
+                <?php do_action( 'mvx_after_product_tags_metabox_panel', $post->ID ); ?>
+            </div>
         </div>
         <?php if ( ! empty( mvx_get_product_types() ) ) : ?>
             <div class="mvx-action-container">
