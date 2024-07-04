@@ -50,7 +50,7 @@ if ($default_types && !empty($default_types)) {
             <p><strong>Want to offer a preview for your audiobook?</strong> Add your file to the product gallery.</p>
             <p><strong>Wondering how to add your book cover?</strong> Use the "click to upload image" option.</p>
             <p><strong>Wondering where to add your ebook or audiobook file?</strong> Check the box next to the word "downloadable" in the Product Type section of this page. An "add file" button will appear below the pricing fields.</p>
-            <!-- product-level descriptions removed form groups because we have similarly named fields at the book level -->
+            <!-- product-level short descriptions removed from groups because we have similarly named fields at the book level -->
         </div>
         <br><br>
         <?php
@@ -59,8 +59,31 @@ if ($default_types && !empty($default_types)) {
         ?>
         <!-- End of Top product highlight -->
         <div class="product-primary-info custom-panel"> 
-            
-            
+        <div class="right-primary-info"> 
+                <div class="form-group-wrapper">                    
+                    <div class="form-group product-description">
+                        <label class="control-label col-md-12" for="product_description"><?php esc_attr_e( "If you're adding a service, please include a description. If you're adding a book (any format) you may skip including a description here, since you will do so in the 'add book info' step.", 'multivendorx' ); ?></label>
+                        <div class="col-md-12">
+                            <?php
+                            $settings = array(
+                                'textarea_name' => 'product_description',
+                                'textarea_rows' => get_option('default_post_edit_rows', 10),
+                                'quicktags'     => array( 'buttons' => 'em,strong,link' ),
+                                'tinymce'       => array(
+                                    'theme_advanced_buttons1' => 'bold,italic,strikethrough,separator,bullist,numlist,separator,blockquote,separator,justifyleft,justifycenter,justifyright,separator,link,unlink,separator,undo,redo,separator',
+                                    'theme_advanced_buttons2' => '',
+                                ),
+                                'editor_css'    => '<style>#wp-product_description-editor-container .wp-editor-area{height:175px; width:100%;}</style>',
+                            );
+                            if( !apply_filters( 'mvx_vendor_product_description_richedit', true ) ) {
+                                $settings['tinymce'] = $settings['quicktags'] = $settings['media_buttons'] = false;
+                            }
+                            wp_editor( $product_object->get_description( 'edit' ), 'product_description', $settings );
+                            ?>
+                        </div>
+                    </div>
+                </div> 
+            </div>            
             <div class="left-primary-info">
                 <div class="product-gallery-wrapper">
                     <div class="featured-img upload_image"><?php $featured_img = isset($_POST['featured_img']) ? wc_clean($_POST['featured_img']) : ($product_object->get_image_id( 'edit' ) ? $product_object->get_image_id( 'edit' ) : ''); ?>
@@ -270,7 +293,7 @@ if ($default_types && !empty($default_types)) {
                 <?php if ( $product_categories ) : ?>
                     <div class="panel panel-default pannel-outer-heading">
                         <div class="panel-heading d-flex">
-                            <h3 class="pull-left"><?php esc_html_e( 'Product Types', 'multivendorx' ); ?></h3>
+                            <h3 class="pull-left"><?php esc_html_e( 'Product Types (please select only one per product)', 'multivendorx' ); ?></h3>
                         </div>
                         <div class="panel-body panel-content-padding form-group-wrapper"> 
                             <?php
