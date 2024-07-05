@@ -262,6 +262,10 @@ header a:hover{
     color: #eee2d4;
     text-shadow: 3px 3px #0c6980;
 }
+.banner h2{
+    color: #eee2d4;
+    text-shadow: 2px 2px #0c6980;
+}
 @media screen and (max-width: 480px){
     .banner h1{
         font-size: 46;
@@ -340,6 +344,13 @@ header a:hover{
     border-bottom: solid #f7c340 5px;
     border-radius: 25px;
     height: 5px;
+}
+.orange-yellow-line-break-30{
+    border-top: solid #e44e2d 5px;
+    border-bottom: solid #f7c340 5px;
+    border-radius: 25px;
+    height: 5px;
+    margin: 30px 0;
 }
 .tomc-about-text-graphic{
     width: 98%;
@@ -637,6 +648,9 @@ header a:hover{
     width: auto;
 }
 /*text-------------------------------------------------------------------------*/
+.prewrap{
+    white-space: pre-wrap;
+}
 .green-shadow-text{
     text-shadow: 1px 1px #969200;
 }
@@ -1116,6 +1130,48 @@ a {
     /* outline: solid #b63e32 2px; */
     color: #0c698e;
 }
+
+.service-search-term-div{
+    width: fit-content;
+    margin: 30px auto;
+}
+
+#service-search-term{
+    width: 75vw;
+    box-sizing: border-box;
+    border: solid #0c698e 3px;
+    border-radius: 25px;
+    padding: 15px 10px;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    color: #0c698e;
+    margin: 0 10px 0 0;
+    display: inline;
+}
+
+#service-search-button{
+    background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: inline;
+}
+
+@media screen and (max-width: 510px) {
+    #service-search-term{
+        width: 85vw;
+        margin: 0 auto;
+        display: block;
+    }
+    #service-search-button{
+        margin: 10px auto;
+        display: block;
+    }
+} 
 
 .search-result{
     background: transparent;

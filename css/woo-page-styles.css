@@ -627,3 +627,11 @@
     display: block;
     margin: 40px 0px;
 }
+.woocommerce-order-overview{
+    list-style: none !important;
+}
+/*proceed to checkout page---------------------------------------------------------------------------------------------------*/
+.wc-block-cart__submit-container{
+    border: solid #0c6980 5px;
+    border-radius: 10px;
+}
