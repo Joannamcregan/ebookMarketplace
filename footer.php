@@ -8,7 +8,10 @@
                         <?php $user = wp_get_current_user();
                         if (in_array( 'administrator', (array) $user->roles )){
                               ?><li><a href="<?php echo esc_url(site_url('/wp-admin'));?>">Admin Dashboard</a></li>
+                        <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
+                              ?><li><a href="<?php echo esc_url(site_url('/my-isbns'));?>">My ISBNs</a></li>
                         <?php }
+                        //<p><em>Only $5 for members and $15 for non-members</em></p>
                         ?><li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
@@ -61,7 +64,6 @@
             <?php } ?>          
             <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
             <li><a href="<?php echo esc_url(site_url('/services'));?>">Creative Services</a></li>
-            <li><a href="<?php echo esc_url(site_url('/my-isbns'));?>">ISBNs</a></li>
             <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/groups')); ?>">Groups</a></li><?php } ?>
             <!-- <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a></li> -->
       </ul>

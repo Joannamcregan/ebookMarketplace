@@ -152,3 +152,18 @@
     border-right: solid #0c6980 5px;
     border-radius: 0 75px 75px 75px;
 }
+.left-accent-wrapper-yellow{
+    padding: 5px 10px;
+    border-top: solid #f7c340 5px;
+    border-bottom: solid #f7c340 5px;
+    border-left: solid #f7c340 5px;
+    border-radius: 5px 25px 25px 25px;
+    width: fit-content;
+}
+.left-accent-wrapper-orange{
+    padding: 5px 10px;
+    border-bottom: solid #e44e2d 5px;
+    border-left: solid #e44e2d 5px;
+    border-radius: 5px 30px 30px 30px;
+    width: fit-content;
+}

@@ -59,7 +59,6 @@
       <?php }
       ?><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a>
       <a href="<?php echo esc_url(site_url('/services'));?>">Creative Services</a>
-      <a href="<?php echo esc_url(site_url('/my-isbns'));?>">ISBNs</a>
       <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/groups')); ?>">Groups</a><?php } ?>
       <!-- <a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a> -->
     </div>
