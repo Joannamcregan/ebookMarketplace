@@ -282,15 +282,28 @@ function tomc_get_book_info() {
     $productid = $product->get_id();
     $books_table = $wpdb->prefix . "tomc_books";
     $book_products_table = $wpdb->prefix . "tomc_book_products";
-    $query = 'select books.book_description, books.book_excerpt
-    from %i bp
-    join %i books on bp.bookid = books.id
-    and bp.productid = %d 
+    $term_relationships_table = $wpdb->prefix . "term_relationships";
+    $term_taxonomy_table = $wpdb->prefix . "term_taxonomy";
+    $terms_table = $wpdb->prefix . "terms";
+    $products_table = $wpdb->prefix . "posts";
+    $query = 'select books.book_description, books.book_excerpt, products.post_content, terms.name, products.post_title
+    from %i products
+    left join %i bp on products.id = bp.productid
+    left join %i books on bp.bookid = books.id
+    left join %i tr on bp.productid = tr.object_id
+    left join %i tt on tr.term_taxonomy_id = tt.term_taxonomy_id
+    and tt.taxonomy = "product_cat"
+    left join %i terms on tt.term_id = terms.term_id
+    where products.id = %d 
     limit 1';
-    $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_table, $productid), ARRAY_A);
+    $results = $wpdb->get_results($wpdb->prepare($query, $products_table, $book_products_table, $books_table, $term_relationships_table, $term_taxonomy_table, $terms_table, $productid), ARRAY_A);
     if ($results){
-        echo '<div class="tomc-single-book-description-wrapper"><div class="tomc-single-book-description"><h2>Description</h2><p style="white-space: pre-line">' . $results[0]['book_description'] . '</p></div></div>';
-        echo '<div class="tomc-single-book-excerpt-wrapper"><div class="tomc-single-book-excerpt"><h2>Excerpt</h2><p style="white-space: pre-line">' . $results[0]['book_excerpt'] . '</p></div></div>';
+        if (($results[0]['name'] == 'Services') || ($results[0]['post_title'] == 'ISBN')){
+            echo '<div class="tomc-single-book-description-wrapper"><div class="tomc-single-book-description"><h2>Description</h2><p style="white-space: pre-line">' . $results[0]['post_content'] . '</p></div></div>';
+        } else {
+            echo '<div class="tomc-single-book-description-wrapper"><div class="tomc-single-book-description"><h2>Description</h2><p style="white-space: pre-line">' . $results[0]['book_description'] . '</p></div></div>';
+            echo '<div class="tomc-single-book-excerpt-wrapper"><div class="tomc-single-book-excerpt"><h2>Excerpt</h2><p style="white-space: pre-line">' . $results[0]['book_excerpt'] . '</p></div></div>';
+        }
     }
 }
 add_action( 'woocommerce_after_single_product_summary', 'tomc_get_book_info', 30 );
@@ -396,3 +409,4 @@ function tomc_maintenance_mode() {
 }
     
 add_action('get_header', 'tomc_maintenance_mode');
+
