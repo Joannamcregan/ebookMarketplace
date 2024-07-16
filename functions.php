@@ -290,15 +290,16 @@ function tomc_get_book_info() {
     from %i products
     left join %i bp on products.id = bp.productid
     left join %i books on bp.bookid = books.id
-    left join %i tr on bp.productid = tr.object_id
+    left join %i tr on products.id = tr.object_id
     left join %i tt on tr.term_taxonomy_id = tt.term_taxonomy_id
     and tt.taxonomy = "product_cat"
     left join %i terms on tt.term_id = terms.term_id
-    where products.id = %d 
+    where products.id = %d
+    order by tt.term_id desc
     limit 1';
     $results = $wpdb->get_results($wpdb->prepare($query, $products_table, $book_products_table, $books_table, $term_relationships_table, $term_taxonomy_table, $terms_table, $productid), ARRAY_A);
     if ($results){
-        if (($results[0]['name'] == 'Services') || ($results[0]['post_title'] == 'ISBN')){
+        if (($results[0]['name'] == 'Services') || ($results[0]['post_title'] == 'ISBN') || $results[0]['name'] == 'Event Tickets'){
             echo '<div class="tomc-single-book-description-wrapper"><div class="tomc-single-book-description"><h2>Description</h2><p style="white-space: pre-line">' . $results[0]['post_content'] . '</p></div></div>';
         } else {
             echo '<div class="tomc-single-book-description-wrapper"><div class="tomc-single-book-description"><h2>Description</h2><p style="white-space: pre-line">' . $results[0]['book_description'] . '</p></div></div>';
@@ -404,7 +405,7 @@ function assignCreatorMemberRole($form_id, $response) {
 // maintenance mode-----------------------------------------------------------------------
 function tomc_maintenance_mode() {
     if (!is_user_logged_in()) {    
-        wp_die("<h1 style='color: #0c6980; text-align: center'>Coming Soon!</h1><p style='text-align: center'>The Trunk of My Car Cooperative Marketplace is launching May 2024. Our current member-owners are uploading works and conducting final tests before making the platform widely available in the coming days. You can learn more about the cooperative community we're building <a href='https://www.trunkofmycar.org/'>here</a>. </p>");    
+        wp_die("<h1 style='color: #0c6980; text-align: center'>Coming Soon!</h1><p style='text-align: center'>The Trunk of My Car Cooperative Marketplace is launching Summer 2024. Our current member-owners are uploading works and conducting final tests before making the platform widely available in the coming days. You can learn more about the cooperative community we're building <a href='https://www.trunkofmycar.org/'>here</a>. </p>");    
     }    
 }
     

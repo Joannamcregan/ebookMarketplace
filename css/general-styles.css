@@ -210,6 +210,9 @@ header a:hover{
     text-decoration: none;
     border-bottom: 30px;
 }
+.privacy-policy-li{
+    margin-top: 20px;
+}
 #kofi-link{
     text-align: center;
     border: solid #ecd0b1 2px;
@@ -266,29 +269,24 @@ header a:hover{
     color: #eee2d4;
     text-shadow: 2px 2px #0c6980;
 }
+@media screen and (max-width: 600px){
+    .banner h1{
+        font-size: 36;
+    }
+}
 @media screen and (max-width: 480px){
-    .banner h1{
-        font-size: 46;
-    }
-}
-@media screen and (max-width: 400px){
-    .banner h1{
-        font-size: 42;
-    }
-}
-@media screen and (max-width: 360px){
-    .banner h1{
-        font-size: 38;
-    }
-}
-@media screen and (max-width: 320px){
     .banner h1{
         font-size: 32;
     }
 }
-@media screen and (max-width: 280px){
+@media screen and (max-width: 400px){
     .banner h1{
         font-size: 28;
+    }
+}
+@media screen and (max-width: 360px){
+    .banner h1{
+        font-size: 22;
     }
 }
 .sub-banner{
@@ -1049,9 +1047,46 @@ a {
     font-size: 16;
     border-radius: 45px;
     padding: 15px 30px;
+    margin: 30px auto;
+    cursor: pointer;
+    display: block;
+}
+.purple-span{
+    background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 10px;
     cursor: pointer;
     display: block;
     margin: 40px auto;
+    width: 90vw;
+    text-align: center;
+}
+.blue-span{
+    background-color: #0c698e;
+    text-shadow: 0px 0px 1px black;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    width: 90vw;
+    text-align: center;
+}
+.orange-span{
+    background-color: #e44e2d;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    width: 90vw;
+    text-align: center;
 }
 /*Search--------------------------------------------------------------------------------------------*/
 .search-overlay, .tomc-settings-overlay{
