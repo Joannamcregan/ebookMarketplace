@@ -65,7 +65,7 @@
             <?php } ?>          
             <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
             <li><a href="<?php echo esc_url(site_url('/services'));?>">Creative Services</a></li>
-            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/groups')); ?>">Groups</a></li><?php } ?>
+            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/discussions')); ?>">Discussions</a></li><?php } ?>
             <!-- <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a></li> -->
       </ul>
   </nav>
