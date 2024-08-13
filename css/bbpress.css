@@ -7,17 +7,6 @@
 
 /* =bbPress Style
 -------------------------------------------------------------- */
-/* Custom Styling */
-#bbp_custom_submit{
-	background-color: #4c0548 !important;
-    color: white !important;
-    font-size: 16 !important;
-    border-radius: 45px !important;
-    padding: 15px 30px !important;
-    margin: 30px auto !important;
-    cursor: pointer !important;
-    display: block !important;
-}
 
 .hidden,
 .no-js .hide-if-no-js,

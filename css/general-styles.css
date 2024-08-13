@@ -248,6 +248,83 @@ header a:hover{
     }
 }
 /*special sections-----------------------------------------------------------------------*/
+div.bbp-breadcrumb{
+    display: none !important;
+}
+span#subscribe-462{
+    display: none !important;
+}
+span#subscription-toggle{
+    display: none !important;
+}
+span#favorite-toggle{
+    display: none !important;
+}
+span.bbp-admin-links{
+    display: block !important;
+}
+#bbpress-forums fieldset.bbp-form{
+    border: none !important;
+    width: 100%;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.bbp-pagination{
+    width: 95% !important;
+}
+#bbpress-forums ul.bbp-replies{
+    border: solid red 2px !important;
+}
+#bbpress-forums li.bbp-header, #bbpress-forums li.bbp-footer{
+    display: none !important;
+}
+#bbpress-forums div.bbp-reply-header{
+    background-color: #faefe3 !important;
+    font-size: 14px !important;
+}
+span.bbp-admin-links a{
+    color: #893e43;
+    font-size: 12px !important;
+}
+#bbpress-forums div.bbp-reply-author{
+    border: solid orange 2px;
+}
+button#bbp_topic_submit, button#bbp_reply_submit{
+    background-color: #4c0548 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 15px 30px !important;
+    cursor: pointer !important;
+    display: block !important;
+}
+#bbpress-forums{
+    overflow: visible !important;
+    width: 100%;
+}
+#bbpress-forums fieldset.bbp-form input[type="text"]{
+    border-radius: 15px !important;
+}
+#bbpress-forums fieldset.bbp-form label{
+    width: 90% !important;
+}
+#bbpress-forums fieldset.bbp-form input[type="checkbox"]{
+    width: 20px !important;
+    height: 20px !important;
+}
+div.bbp-template-notice.info{
+    background-color: #faefe3 !important;
+    border: solid #0c6980 5px !important;
+    border-radius: 0 15px 15px 15px;
+}
+div.bbp-template-notice{
+    background-color: #faefe3 !important;
+    border: solid #f7c340 5px !important;
+    border-radius: 0 15px 15px 15px;
+}
+textarea.bbp-the-content{
+    border-radius: 15px;
+}
 .banner{
     /* width: 90%; */
     margin-right: 5px;
@@ -645,6 +722,12 @@ header a:hover{
     margin: 2rem auto 0 auto;
     width: auto;
 }
+/*images-----------------------------------------------------------------------*/
+.circle-bio-pic{
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
 /*text-------------------------------------------------------------------------*/
 .prewrap{
     white-space: pre-wrap;
@@ -953,6 +1036,9 @@ a {
 .blog-title h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+}
+.margin-20{
+    padding: 20px;
 }
 .generic-content{
     text-align: left;
