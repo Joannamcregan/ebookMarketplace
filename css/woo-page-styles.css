@@ -553,10 +553,13 @@
 .woocommerce-info{
     width: fit-content;
     padding: 10px;
-    background: white;
+    background: #faefe3;
     border: solid #e44e2d 5px;
-    border-radius: 20px;
-    margin: 10px auto;
+    border-radius: 20px 0px;
+}
+.wc_payment_methods{
+    padding-inline-start: 20px !important;
+    padding-inline-end: 20px !important;
 }
 .woocommerce-error{
     background: white;
@@ -582,7 +585,7 @@
     border-radius: 10px;
 }
 .woocommerce-checkout input[type="email"]{
-    min-width: 150px;
+    min-width: 200px;
     padding: 5px;
     margin-left: 5px;
     border-radius: 10px;
@@ -617,6 +620,14 @@
 #tomc_isbn_title, #tomc_isbn_subtitle{
     width: 250px !important;
 }
+#ship-to-different-address-checkbox{
+    width: 20px !important;
+    height: 20px !important;
+    vertical-align: bottom;
+}
+.woocommerce-privacy-policy-text{
+    margin-left: 20px;
+}
 .woocommerce-checkout button[type="submit"]{
     background-color: #4c0548;
     color: white;
@@ -625,10 +636,34 @@
     padding: 15px 30px;
     cursor: pointer;
     display: block;
-    margin: 40px 0px;
+    margin: 20px;
+}
+#order_review_heading{
+    margin-top: 30px;
+    padding: 10px 20px 0px 20px;
 }
 .woocommerce-order-overview{
     list-style: none !important;
+}
+.wc_payment_methods li{
+    list-style: none !important;
+}
+.woocommerce-checkout-review-order-table{
+    text-align: left !important;
+    border-spacing: 30px 10px !important;
+    background: #faefe3;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.woocommerce-checkout-review-order-table tbody{
+    vertical-align: top !important;
+}
+#shipping_method li{
+    list-style: none !important;
+}
+.woocommerce-shipping-totals td ul{
+    padding-inline-start: 0px !important;
+    padding-inline-end: 40px !important;
 }
 /*proceed to checkout page---------------------------------------------------------------------------------------------------*/
 .wc-block-cart__submit-container{
