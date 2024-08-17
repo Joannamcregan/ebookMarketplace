@@ -1759,6 +1759,9 @@ body.activity-permalink #buddypress ul.item-list li.activity-item {
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: #0c6980;
+	height: 50px !important;
+	width: 200px;
     color: #eee2d4;
 	display: block;
 	left: 0;
@@ -2287,13 +2290,13 @@ body.register #buddypress div.page ul {
 .bp-member-preview-cover,
 .bp-group-preview-cover {
 	position: relative;
-	min-height: 150px;
-	background: #c5c5c5;
+	min-height: 50px;
+	background: #0c6980;
 }
 
 .bp-member-preview-cover img,
 .bp-group-preview-cover img {
-	background: #c5c5c5;
+	background: #0c6980;
 	-o-object-fit: cover;
 	object-fit: cover;
 	border: 0;
@@ -2379,4 +2382,15 @@ body.register #buddypress div.page ul {
 	.bp-profile-button {
 		text-align: right;
 	}
+}
+
+/* overrides */
+#buddypress #item-header-cover-image #item-header-avatar{
+	margin-top: 20px !important;
+}
+body.single-item.groups #buddypress div#item-header #item-header-cover-image #item-header-content{
+	margin-top: 50px !important;
+}
+body.single-item.groups #buddypress div#item-header #item-header-cover-image #item-actions{
+	margin-top: 20px !important
 }
