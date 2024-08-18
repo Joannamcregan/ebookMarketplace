@@ -191,3 +191,20 @@ textarea.bbp-the-content{
     padding: 10px 20px !important;
     cursor: pointer !important;
 }
+#invite-groups-li{
+	display: none !important; 
+}
+#buddypress div.item-list-tabs ul li.selected a, #buddypress div.item-list-tabs ul li.current a{
+	color: black !important;
+}
+#buddypress li.groups-members-search input[type="text"]{
+	margin: 10px 0px !important;
+	padding: 10px !important;
+	border-radius: 10px !important;
+}
+#buddypress div#message p{
+	background: none !important;
+	width: fit-content !important;
+	border: solid #f7c340 5px;
+	border-radius: 0px 15px 0px 15px !important;
+}
