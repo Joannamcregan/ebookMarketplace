@@ -97,3 +97,49 @@ textarea.bbp-the-content{
 	border: solid black 2px !important;
 	border-radius: 15px !important;
 }
+.avatar{
+	border-radius: 50% !important;
+	border: solid #f7c340 5px !important;
+}
+#buddypress .activity-list li.mini .activity-avatar img.avatar{
+	width: 50px !important;
+	height: 50px !important;
+	margin-left: 0px !important;
+}
+#buddypress .activity-list .activity-avatar{
+	width: fit-content !important;
+}
+.activity-list .activity-item.mini .activity-avatar img.avatar{
+	max-width: 50px !important;
+	max-height: 50px !important;
+}
+#buddypress ul.item-list{
+	border-top: 1px solid #f7c340 !important;
+}
+#buddypress ul.item-list li{
+	border-bottom: 1px solid #f7c340 !important;
+}
+#buddypress input[type="submit"]{
+	background-color: #4c0548 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+    display: block !important;
+}
+#buddypress .activity-list .activity-content .activity-inner{
+	border: solid #e44e2d 5px !important;
+}
+#buddypress .activity-list .activity-content{
+	margin: 0 !important;
+}
+#buddypress a.button-primary{
+	border: none !important;
+	background-color: #0c6980 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
