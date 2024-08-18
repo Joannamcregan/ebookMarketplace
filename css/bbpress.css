@@ -97,6 +97,9 @@ textarea.bbp-the-content{
 	border: solid black 2px !important;
 	border-radius: 15px !important;
 }
+#buddypress span.activity{
+	padding: 10px 20px !important;
+}
 .avatar{
 	border-radius: 50% !important;
 	border: solid #f7c340 5px !important;
@@ -131,12 +134,57 @@ textarea.bbp-the-content{
 #buddypress .activity-list .activity-content .activity-inner{
 	border: solid #e44e2d 5px !important;
 }
+#buddypress .activity-list .activity-content .activity-header{
+	font-size: 16px !important;
+	color: black !important;
+}
+.activity-list .activity-item.mini{
+	font-size: 16px !important;
+}
+.activity-list .activity-item .activity-header .time-since{
+	font-size: 16px !important;
+	color: black !important;
+}
 #buddypress .activity-list .activity-content{
 	margin: 0 !important;
 }
 #buddypress a.button-primary{
 	border: none !important;
 	background-color: #0c6980 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
+#buddypress div.activity-meta{
+	width: fit-content !important;
+	margin: 20px 0px 20px 90px !important;
+}
+#buddypress a.bp-primary-action{
+	border: none !important;
+	background-color: #4c0548 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
+#buddypress a.bp-primary-action span{
+	background: #4c0548 !important;
+}
+#buddypress a.fav{
+	border: none !important;
+	background-color: #0c6980 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
+#buddypress a.delete-activity{
+	border: none !important;
+	background-color: #893e43 !important;
     color: white !important;
     font-size: 16 !important;
     border-radius: 45px !important;
