@@ -391,7 +391,7 @@ function assignReaderMemberRole($form_id, $response) {
     if( $response['success']  && $form_id ==2372 /* Reader-Member Signup */){
         $user = wp_get_current_user();
         $user->add_role( 'reader-member' );
-        tomcAddUserToGroup(1 /*reader-members group*/, get_current_user_id());
+        tomcAddUserToGroup(3 /*reader-members group*/, get_current_user_id());
     }
 }
 
@@ -400,6 +400,7 @@ function assignCreatorMemberRole($form_id, $response) {
         $user = wp_get_current_user();
         $user->add_role( 'creator-member' );
         $user->add_role( 'dc_vendor' );
+        tomcAddUserToGroup(2 /*creator-members group*/, get_current_user_id());
     }
 } 
 
