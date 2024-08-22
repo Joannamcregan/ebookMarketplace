@@ -381,7 +381,7 @@ add_filter( 'woocommerce_account_menu_items', function($items) {
     return $items;
 }, 99, 1 );
 
-// Assign roles on submission of certain Forminator forms------------------------------------------------------------------------------
+// Assign roles and groups on submission of certain Forminator forms------------------------------------------------------------------------------
 add_action( 'forminator_form_after_handle_submit', 'assignReaderMemberRole', 10, 2 );
 add_action( 'forminator_form_after_save_entry', 'assignReaderMemberRole', 10, 2 );
 add_action( 'forminator_form_after_handle_submit', 'assignCreatorMemberRole', 10, 2 );
@@ -391,6 +391,7 @@ function assignReaderMemberRole($form_id, $response) {
     if( $response['success']  && $form_id ==2372 /* Reader-Member Signup */){
         $user = wp_get_current_user();
         $user->add_role( 'reader-member' );
+        tomcAddUserToGroup(1 /*reader-members group*/, get_current_user_id());
     }
 }
 
@@ -401,6 +402,14 @@ function assignCreatorMemberRole($form_id, $response) {
         $user->add_role( 'dc_vendor' );
     }
 } 
+
+function tomcAddUserToGroup( $group_id, $user_id ) { 
+    if ( ! function_exists( 'groups_join_group' ) ) {
+        return ;
+    } 
+    groups_join_group( $group_id, $user_id );
+}
+
 
 // maintenance mode-----------------------------------------------------------------------
 function tomc_maintenance_mode() {
