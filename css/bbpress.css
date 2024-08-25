@@ -208,3 +208,8 @@ textarea.bbp-the-content{
 	border: solid #f7c340 5px;
 	border-radius: 0px 15px 0px 15px !important;
 }
+#buddypress div.dir-search input[type="text"]{
+    margin-bottom: 10px !important;
+    padding: 5px 10px !important;
+    border-radius: 10px !important;
+}

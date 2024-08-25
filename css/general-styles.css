@@ -1119,6 +1119,19 @@ a {
     width: 90vw;
     text-align: center;
 }
+.hollow-purple-span{
+    background: white;
+    border: solid #4c0548 5px;
+    color: #4c0548;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    width: 90vw;
+    text-align: center;
+}
 .blue-span{
     background-color: #0c698e;
     text-shadow: 0px 0px 1px black;
@@ -1132,9 +1145,35 @@ a {
     width: 90vw;
     text-align: center;
 }
+.hollow-blue-span{
+    background: white;
+    border: solid #0c698e 5px;
+    color: #0c698e;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    width: 90vw;
+    text-align: center;
+}
 .orange-span{
     background-color: #e44e2d;
     color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto;
+    width: 90vw;
+    text-align: center;
+}
+.hollow-orange-span{
+    background: white;
+    border: solid #e44e2d 5px;
+    color: #e44e2d;
     font-size: 16;
     border-radius: 45px;
     padding: 15px 10px;
