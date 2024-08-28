@@ -23,8 +23,10 @@ function getReaderSettings(){
     $reader_triggers_table = $wpdb->prefix . "tomc_reader_triggers";
     $languages_table = $wpdb->prefix .  "tomc_publication_languages";
     $reader_languages_table = $wpdb->prefix . "tomc_reader_languages";
+    // $user = wp_get_current_user();
+    // $userid = get_current_user_id();
     $user = wp_get_current_user();
-    $userid = get_current_user_id();
+    $userId = $user->ID;
     $triggerQuery = 'WITH cte AS (SELECT triggerid FROM %i WHERE readerid = %d)
     SELECT a.id, a.warning_name, b.triggerid, "trigger" as "settingtype"
     FROM %i a
@@ -41,8 +43,10 @@ function getReaderSettings(){
 function saveReaderTriggers($data){
     $triggers = explode(',', trim(sanitize_text_field($data['triggers']), '[]'));
     $now = date('Y-m-d H:i:s');
+    // $user = wp_get_current_user();
+    // $userid = get_current_user_id();
     $user = wp_get_current_user();
-    $userid = get_current_user_id();
+    $userId = $user->ID;
     global $wpdb;
     $reader_triggers_table = $wpdb->prefix . "tomc_reader_triggers";
     if (is_user_logged_in()){
@@ -70,8 +74,10 @@ function saveReaderTriggers($data){
 function saveReaderLanguages($data){
     $languages = explode(',', trim(sanitize_text_field($data['languages']), '[]'));
     $now = date('Y-m-d H:i:s');
+    // $user = wp_get_current_user();
+    // $userid = get_current_user_id();
     $user = wp_get_current_user();
-    $userid = get_current_user_id();
+    $userId = $user->ID;
     global $wpdb;
     $reader_languages_table = $wpdb->prefix . "tomc_reader_languages";
     if (is_user_logged_in()){
