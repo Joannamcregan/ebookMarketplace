@@ -8,7 +8,7 @@
                         <li><a href="<?php echo esc_url(site_url('/my-events'));?>">My Events</a></li>
                         <?php $user = wp_get_current_user();
                         if (in_array( 'administrator', (array) $user->roles )){
-                              ?><li><a href="<?php echo esc_url(site_url('/wp-admin'));?>">Admin Dashboard</a></li>
+                              ?><li><a href="<?php echo esc_url(site_url('/wp-admin'));?>">Admin Board</a></li>
                         <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
                               ?><li><a href="<?php echo esc_url(site_url('/my-isbns'));?>">My ISBNs</a></li>
                         <?php }
@@ -44,7 +44,9 @@
                   if (in_array( 'dc_vendor', (array) $user->roles )){
                   ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">Vendor Portal</a></li>
                   <?php }
-                  $tomc_user = get_userdata(get_current_user_id());
+                  // $tomc_user = get_userdata(get_current_user_id());
+                  $user = wp_get_current_user();
+                  $tomc_user = $user->ID;
                   $tomc_username = $tomc_user->user_login;
                   ?><li><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">My Profile</a></li>
             <?php } else {
@@ -53,7 +55,9 @@
       ?></ul>
       <ul class="menu-overlay-list-1">
             <?php if (is_user_logged_in()){
-                  $tomc_user = get_userdata(get_current_user_id());
+                  // $tomc_user = get_userdata(get_current_user_id());
+                  $user = wp_get_current_user();
+                  $tomc_user = $user->ID;
                   $tomc_username = $tomc_user->user_login;
                   if (in_array( 'dc_vendor', (array) $user->roles )){
                         ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add Book Info</a>
