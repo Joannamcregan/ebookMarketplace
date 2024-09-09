@@ -671,8 +671,8 @@
     border-radius: 10px;
 }
 /*WooPay-----------------------------------------------------------------------------*/
-.woopay-express-button{
-    background-color: #4c0548 !important;
+#wcpay-woopay-button button{
+    background: #4c0548 !important;
     border-radius: 15px !important;
     margin-top: 20px !important;
 }
