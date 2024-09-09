@@ -33,7 +33,7 @@
 </footer>
 
 <div class="menu-overlay">
-  <i class="fa fa-window-close menu-overlay__close" aria-hidden="true"></i>
+  <i class="fa fa-window-close menu-overlay__close" aria-label="close overlay"></i>
   <nav aria-label="mobile navigation bar">
       <ul class="menu-overlay-list">
             <li><a href="<?php echo esc_url(site_url('/newly-added-books'));?>">New Books</a></li>
@@ -46,7 +46,7 @@
                   <?php }
                   // $tomc_user = get_userdata(get_current_user_id());
                   $user = wp_get_current_user();
-                  $tomc_user = $user->ID;
+                  $tomc_user = get_userdata($user->ID);
                   $tomc_username = $tomc_user->user_login;
                   ?><li><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">My Profile</a></li>
             <?php } else {
@@ -57,7 +57,7 @@
             <?php if (is_user_logged_in()){
                   // $tomc_user = get_userdata(get_current_user_id());
                   $user = wp_get_current_user();
-                  $tomc_user = $user->ID;
+                  $tomc_user = get_userdata($user->ID);
                   $tomc_username = $tomc_user->user_login;
                   if (in_array( 'dc_vendor', (array) $user->roles )){
                         ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add Book Info</a>
@@ -78,9 +78,9 @@
 <div class="search-overlay" id="tomc-search-overlay">
       <div class="search-overlay__top">
             <div class="overlay-main-container"> 
-            <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
+            <i class="fa fa-window-close search-overlay__close" aria-label="close overlay"></i>
             <div class="overlay-input-container">
-            <i class="fa fa-search search-overlay__icon" aria-hidden = "true"></i>
+            <i class="fa fa-search search-overlay__icon" aria-label="close overlay"></i>
             <input type="text" class="search-term" id = "search-term">
             </div>
             </div>
@@ -106,7 +106,7 @@
 <div class="tomc-settings-overlay">
       <div class="orange-translucent-background">
             <div class="overlay-main-container"> 
-            <i class="fa fa-window-close search-overlay__close" aria-hidden = "true"></i>
+            <i class="fa fa-window-close search-overlay__close" aria-label="close overlay"></i>
             <br>
             <h1 class="centered-text">My Settings</h1>
             </div>

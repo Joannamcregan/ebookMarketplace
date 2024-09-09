@@ -670,3 +670,7 @@
     border: solid #0c6980 5px;
     border-radius: 10px;
 }
+/*WooPay-----------------------------------------------------------------------------*/
+.woopay-express-button{
+    background-color: #4c0548 !important;
+}

@@ -940,6 +940,27 @@ a {
     margin: 0 10px 10px 0;
     float: left;
 }
+.rounded-centered-date-input{
+    width: 200px;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    text-align: center;
+}
+.rounded-centered-text-input{
+    width: 280px;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    text-align: center;
+}
+.rounded-centered-textarea{
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 10px;
+}
 /* .centered-input{
     width: fit-content;
     margin: 0 auto 0 auto;
@@ -1119,8 +1140,28 @@ a {
     cursor: pointer;
     display: block;
 }
+.blue-button{
+    background-color: #0c6980;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    margin: 30px auto;
+    cursor: pointer;
+    display: block;
+}
 .purple-button{
     background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    margin: 30px auto;
+    cursor: pointer;
+    display: block;
+}
+.orange-button{
+    background-color: #e44e2d;
     color: white;
     font-size: 16;
     border-radius: 45px;
@@ -1450,22 +1491,6 @@ a {
     text-align: center;
 }
 
-/* Coming Soon Info styles-------------------------------------------------------------------------------*/
-.coming-soon-info {
-    opacity: 0;
-    width: 80vw;
-    margin: 10 auto;
-    background: white;
-    border: 2px solid #b63e32;
-    border-radius: 20px;
-    padding: 20px;
-    animation: fade-in 1s ease-in forwards;
-}
-@keyframes fade-in {
-    100% {
-        opacity: 1;
-    }
-}
 /* Bumper Sticker Styles----------------------------------------------------------------------------------*/
 .bumper-stickers {
     display: flex;

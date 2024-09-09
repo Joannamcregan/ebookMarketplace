@@ -167,3 +167,11 @@
     border-radius: 5px 30px 30px 30px;
     width: fit-content;
 }
+.center-accent-wrapper-purple{
+    padding: 5px 10px;
+    border-top: solid #4c0548 5px;
+    border-left: solid #4c0548 5px;
+    border-radius: 5px 30px 30px 5px;
+    width: fit-content;
+    margin: 0px auto;
+}

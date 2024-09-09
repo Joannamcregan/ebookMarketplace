@@ -13,14 +13,14 @@
 <body <?php body_class(); ?>>
 <header class="header--top">
   <div class="top-nav-container">
-    <a href="#" class="site-header__menu-trigger fa fa-bars" aria-label="menu" tabindex="-1"><i aria-hidden="true"></i></a>
+    <a href="#" class="site-header__menu-trigger fa fa-bars" aria-label="menu" tabindex="-1"><i aria-label="close overlay"></i></a>
     <a href="<?php echo esc_url(site_url()) ?>"><img class="logo-image" src="<?php echo get_theme_file_uri('/images/logo.jpg'); ?>" alt="Trunk of My Car Cooperative" /></a>
     <div class="top-nav-section" id="top-nav-right">
-      <a href="<?php echo esc_url(site_url('/search'));?>" class="js-search-trigger" aria-label="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+      <a href="<?php echo esc_url(site_url('/search'));?>" class="js-search-trigger" aria-label="search"><i class="fa fa-search" aria-label="search"></i></a>
       <?php if (is_user_logged_in()){
-        ?><a href="#" class="js-settings-trigger" aria-label="settings"><i class="fa-solid fa-gear" aria-hidden="true"></i></a>
+        ?><a href="#" class="js-settings-trigger" aria-label="settings"><i class="fa-solid fa-gear" aria-label="settings"></i></a>
       <?php } ?>
-      <a class="glowing-text" href="<?php echo wc_get_cart_url(); ?>" aria-label="shopping cart"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a>
+      <a class="glowing-text" href="<?php echo wc_get_cart_url(); ?>" aria-label="shopping cart"><i class="fa-solid fa-cart-shopping" aria-label="cart"></i></a>
     </div>
   </div>
 </header>
@@ -53,7 +53,7 @@
         <?php }
         // $tomc_user = get_userdata(get_current_user_id());
         $user = wp_get_current_user();
-        $tomc_user = $user->ID;
+        $tomc_user = get_userdata($user->ID);
         $tomc_username = $tomc_user->user_login;
         ?><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">
           My Profile
