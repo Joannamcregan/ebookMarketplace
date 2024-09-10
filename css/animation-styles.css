@@ -23,3 +23,22 @@
         opacity: 1;
     }
 }
+
+/* block overlay animation----------------------------------------------------------------- */
+@keyframes shift-background {
+    0% {
+        background-color: #4c0548;
+    }
+    50% {
+        background-color: #0c698e;
+    }
+    100% {
+        background-color: #4c0548;
+    }
+}
+.blockOverlay{
+    /* background: radial-gradient(#4c0548, #0c698e, #4c0548) !important; */
+    animation-name: shift-background !important;
+    animation-duration: 3s !important;
+    animation-iteration-count: infinite !important;
+}
