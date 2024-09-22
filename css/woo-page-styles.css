@@ -672,3 +672,36 @@
     border: solid #0c6980 5px;
     border-radius: 10px;
 }
+/* registration page---------------------------------------------------------------------- */
+#register-page{
+    min-height: 140vh !important;
+}
+#buddypress .standard-form #basic-details-section{
+    float: none !important;
+    width: 90% !important;
+    min-width: 280px !important;
+    border-radius: 10px !important;
+}
+#buddypress .standard-form #profile-details-section{
+    float: none !important;
+}
+#signup_username{
+    width: 90% !important;
+    min-width: 280px !important;
+    border-radius: 10px !important;
+}
+#buddypress .standard-form input[type="email"]{
+    width: 90% !important;
+    min-width: 280px !important;
+    border-radius: 10px !important;
+}
+#buddypress .standard-form #basic-details-section input[type="password"]{
+    width: 90% !important;
+    min-width: 280px !important;
+    border-radius: 10px !important;
+}
+#field_1{
+    width: 100% !important;
+    min-width: 280px !important;
+    border-radius: 10px !important;
+}
