@@ -307,34 +307,38 @@ span.bbp-admin-links a{
 .banner h1{
     margin: 10px;
     font-family: tankindred, serif;
-    font-size: 54;
+    /* font-size: 54; */
     font-weight: 300;
     color: #eee2d4;
     text-shadow: 3px 3px #0c6980;
 }
+.banner-heading-54{
+    font-size: 54;
+}
+.banner-heading-50{
+    font-size: 50;
+}
+.banner-heading-44{
+    font-size: 44;
+}
+.banner-heading-40{
+    font-size: 40;
+}
+.banner-heading-36{
+    font-size: 36;
+}
+.banner-heading-32{
+    font-size: 32;
+}
+.banner-heading-28{
+    font-size: 28;
+}
+.banner-heading-22{
+    font-size: 22;
+}
 .banner h2{
     color: #eee2d4;
     text-shadow: 2px 2px #0c6980;
-}
-@media screen and (max-width: 600px){
-    .banner h1{
-        font-size: 36;
-    }
-}
-@media screen and (max-width: 480px){
-    .banner h1{
-        font-size: 32;
-    }
-}
-@media screen and (max-width: 400px){
-    .banner h1{
-        font-size: 28;
-    }
-}
-@media screen and (max-width: 360px){
-    .banner h1{
-        font-size: 22;
-    }
 }
 .sub-banner{
     width: 100%;
