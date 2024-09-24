@@ -39,7 +39,7 @@
         </div>
         <div class="sub-leaf-section not-displayed">
             <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/wp-admin')); ?>">
+                <a href="<?php echo esc_url(site_url('/dashboard')); ?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Creator Dashboard</p>
                 </div>

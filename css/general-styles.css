@@ -480,7 +480,7 @@ span.bbp-admin-links a{
 }
 .tomc-circle-container{
     width: 80%;
-    min-height: 350px;
+    min-height: 360px;
     padding: 10px 0px;
     margin: 50px auto;
     position: relative;
@@ -532,9 +532,13 @@ span.bbp-admin-links a{
         left: 25%;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
+    .tomc-circle-container{
+        min-height: 400px;
+    }
     .tomc-circle-container img{
         left: 15%;
+        padding-top: 10px;
     }
     .tomc-circle-p-1, .tomc-circle-p-1-padded-x, .tomc-circle-p-1-padded-2x{
         left: 15%;
@@ -542,7 +546,7 @@ span.bbp-admin-links a{
 }
 @media screen and (max-width: 460px) {
     .tomc-circle-container{
-        min-height: 390px;
+        min-height: 400px;
     }
     .tomc-circle-container img{
         left: 5%;
@@ -555,7 +559,7 @@ span.bbp-admin-links a{
 }
 @media screen and (max-width: 400px) {
     .tomc-circle-container{
-        min-height: 430px;
+        min-height: 440px;
     }
     .tomc-circle-container img{
         right: 20px;

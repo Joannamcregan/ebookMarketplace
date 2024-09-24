@@ -680,6 +680,7 @@
     float: none !important;
     width: 90% !important;
     min-width: 280px !important;
+    max-width: 500px !important;
     border-radius: 10px !important;
 }
 #buddypress .standard-form #profile-details-section{
@@ -688,20 +689,39 @@
 #signup_username{
     width: 90% !important;
     min-width: 280px !important;
+    max-width: 500px !important;
     border-radius: 10px !important;
 }
 #buddypress .standard-form input[type="email"]{
     width: 90% !important;
     min-width: 280px !important;
+    max-width: 500px !important;
     border-radius: 10px !important;
 }
 #buddypress .standard-form #basic-details-section input[type="password"]{
     width: 90% !important;
     min-width: 280px !important;
+    max-width: 500px !important;
     border-radius: 10px !important;
 }
 #field_1{
     width: 100% !important;
     min-width: 280px !important;
+    max-width: 500px !important;
     border-radius: 10px !important;
+}
+/* lost password------------------------------------------------------------ */
+#user_login{
+    width: 90% !important;
+    min-width: 280px !important;
+    max-width: 500px !important;
+    border-radius: 10px !important;
+}
+.woocommerce-Button{
+    background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
