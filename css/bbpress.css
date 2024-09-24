@@ -182,6 +182,15 @@ textarea.bbp-the-content{
     padding: 10px 20px !important;
     cursor: pointer !important;
 }
+.unfav{
+    border: none !important;
+	background-color: #0c6980 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
 #buddypress a.delete-activity{
 	border: none !important;
 	background-color: #893e43 !important;
@@ -190,6 +199,24 @@ textarea.bbp-the-content{
     border-radius: 45px !important;
     padding: 10px 20px !important;
     cursor: pointer !important;
+}
+@media screen and (max-width: 480px) {
+    #buddypress a.bp-primary-action span{
+        display: inline-block !important;
+        margin-bottom: 15px !important;
+    }
+    #buddypress a.fav{
+        display: block !important;
+        margin-bottom: 5px !important;
+    }
+    #buddypress a.delete-activity{
+        display: block !important;
+        margin-bottom: 5px !important;
+    }
+    .unfav{
+        display: block !important;
+        margin-bottom: 5px !important;
+    }
 }
 #invite-groups-li{
 	display: none !important; 
@@ -212,4 +239,19 @@ textarea.bbp-the-content{
     margin-bottom: 10px !important;
     padding: 5px 10px !important;
     border-radius: 10px !important;
+    min-width: 200px !important;
+}
+#buddypress form#whats-new-form #whats-new-options select{
+    padding: 10px !important;
+    border-radius: 20px !important;
+    margin-bottom: 10px !important;
+}
+#whats-new-submit{
+    margin-left: 10px !important;
+}
+#buddypress #whats-new-options{
+    display: flex !important;
+    flex-wrap: wrap-reverse !important;
+    flex-direction: row-reverse !important;
+    margin-top: 10px !important;
 }
