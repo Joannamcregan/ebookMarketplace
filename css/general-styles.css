@@ -702,9 +702,13 @@ span.bbp-admin-links a{
 }
 /*images-----------------------------------------------------------------------*/
 .circle-bio-pic{
-    width: 300px;
+    width: 200px;
     height: auto;
     border-radius: 50%;
+    border-top: solid #0c6980 5px;
+    border-right: solid #0c6980 20px;
+    border-bottom: solid #0c6980 15px;
+    border-left: solid #0c6980 10px;
 }
 /*text-------------------------------------------------------------------------*/
 .prewrap{

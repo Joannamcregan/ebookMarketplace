@@ -725,3 +725,9 @@
     padding: 5px 10px;
     cursor: pointer;
 }
+/* my account orders------------------------------------------------------------ */
+.woocommerce-message .woocommerce-Button{
+    display: block !important;
+    width: fit-content !important;
+    margin-bottom: 10px !important;
+}
