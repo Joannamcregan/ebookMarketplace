@@ -318,8 +318,8 @@ span.bbp-admin-links a{
 .banner-heading-50{
     font-size: 50;
 }
-.banner-heading-44{
-    font-size: 44;
+.banner-heading-46{
+    font-size: 46;
 }
 .banner-heading-40{
     font-size: 40;
@@ -504,22 +504,22 @@ span.bbp-admin-links a{
 }
 .tomc-circle-p-1{
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 30%;
-    font-size: 50;
+    font-size: 38 !important;
 }
 .tomc-circle-p-1-padded-x{
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 30%;
-    font-size: 50;
+    font-size: 38 !important;
     padding-left: 40px;
 }
 .tomc-circle-p-1-padded-2x{
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 30%;
-    font-size: 50;
+    font-size: 36 !important;
     padding-left: 60px;
 }
 .tomc-circle-p-2{
@@ -527,6 +527,7 @@ span.bbp-admin-links a{
     bottom: 0px;
     text-align: center;
     width: 100%;
+    margin-top: 0px;
 }
 @media screen and (max-width: 720px) {
     .tomc-circle-container img{
@@ -538,7 +539,10 @@ span.bbp-admin-links a{
 }
 @media screen and (max-width: 540px) {
     .tomc-circle-container{
-        min-height: 400px;
+        min-height: 360px;
+    }
+    .tomc-circle-container-long-text{
+        min-height: 400px !important;
     }
     .tomc-circle-container img{
         left: 15%;
@@ -550,24 +554,30 @@ span.bbp-admin-links a{
 }
 @media screen and (max-width: 460px) {
     .tomc-circle-container{
-        min-height: 400px;
+        min-height: 360px;
+    }
+    .tomc-circle-container-long-text{
+        min-height: 400px !important;
     }
     .tomc-circle-container img{
         left: 5%;
-        top: 60px;
+        top: 20px;
     }
     .tomc-circle-p-1, .tomc-circle-p-1-padded-x, .tomc-circle-p-1-padded-2x{
         left: 5%;
-        top: 120px;
+        top: 100px;
     }
 }
 @media screen and (max-width: 400px) {
     .tomc-circle-container{
-        min-height: 440px;
+        min-height: 360px;
+    }
+    .tomc-circle-container-long-text{
+        min-height: 400px !important;
     }
     .tomc-circle-container img{
         right: 20px;
-        top: 80px;
+        top: 40px;
         max-width: 250px;
     }
     .tomc-circle-p-1{
