@@ -1,7 +1,7 @@
 <?php get_header();
 
 ?><main>
-    <div class="banner semi-large-heading"><h1 class="centered-text">Cooperative Resources</h1></div>
+    <div class="banner semi-large-heading"><h1 class="centered-text banner-heading-36">Co-op Resources</h1></div>
     <br>
     <br>
     <div class="generic-wrapper-2">

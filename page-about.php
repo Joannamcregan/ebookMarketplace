@@ -1,7 +1,7 @@
 <?php get_header();
 
 ?><main>
-    <div class="banner"><h1 class="centered-text"><?php echo get_the_title(); ?></div>
+    <div class="banner"><h1 class="centered-text banner-heading-54"><?php echo get_the_title(); ?></div>
     <br>
     <div class="generic-content two-thirds-screen">
         <h2 class="right-text-no-margin red-brown-text tankindred-text yellow-shadow-heading larger-header">Self-Publishing is a $1.25B industry. Authors take home less than half of that amount. And are subjected to unfair terms & conditions.</h2>
@@ -20,7 +20,7 @@
         <p>Sounds like something you want to be a part of? <a href="<?php echo esc_url(site_url('/own'));?>">Join us!</a><p>
         <div class="red-orange-line-break"></div>
         <h2 class="large-heading red-brown-text yellow-shadow-heading">Our Team</h2>
-        <img class="circle-bio-pic" alt="Black woman expressing joy" src="<?php echo get_theme_file_uri('/images/zia.jpg'); ?>" />
+        <img class="circle-bio-pic" alt="Black woman expressing joy" src="<?php echo get_theme_file_uri('/images/Zia.jpg'); ?>" />
         <h3 class="centered-text red-brown-text">Zia M Dione</h3>
         <p class="centered-text">Founder. Operations Lead.</p>
         <p>Trunk of My Car Cooperative is inspired by a conversation Zia had with a famous author who shared how he started selling books from the trunk of his car. An emerging writer, she is focused on healing intergenerational trauma & building/supporting solidarity & sustainable economies. Zia is certified in permaculture design, has a law degree from the University of Baltimore & is currently pursuing an MFA in Creative Nonfiction at Pacific University. Yes, she changed her name.</p>

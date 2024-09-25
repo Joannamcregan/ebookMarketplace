@@ -1,7 +1,7 @@
 <?php get_header();
 
 ?><main>
-    <div class="banner"><h1 class="centered-text">Readers' Circle</h1></div>
+    <div class="banner"><h1 class="centered-text banner-heading-40">Readers' Circle</h1></div>
     <br>
     <br>
     <?php if (is_user_logged_in()){

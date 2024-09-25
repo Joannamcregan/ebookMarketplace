@@ -1,7 +1,7 @@
 <?php get_header();
 
 ?><main>
-    <div class="banner"><h1 class="centered-text">beep beep!</h1></div>
+    <div class="banner"><h1 class="centered-text banner-heading-50">beep beep!</h1></div>
     <br>
     <br>
     <div class="generic-wrapper-2">

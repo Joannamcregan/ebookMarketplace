@@ -1,7 +1,7 @@
 <?php get_header();
 
 ?><main>
-    <div class="banner"><h1 class="centered-text">My Events</h1></div>
+    <div class="banner"><h1 class="centered-text banner-heading-32">Governance</h1></div>
     <br>
     <br>
     <div class="generic-wrapper-2">
