@@ -56,7 +56,8 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			<p class="woocommerce-LostPassword lost_password centered-text">
 				<a class="blue-text" href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
 			</p>
-			<p id="tomc-show-registration" class="blue-text underlined-text centered-text">New around here? Register and roll with us!</p>
+			<p id="tomc-show-registration" class="blue-text underlined-text centered-text"><a href="<?php echo esc_url(site_url('/register'));?>">New around here? Register and roll with us!</a></p>
+			<p>Registering for the site is free and allows you to keep track of download links for any ebooks and/or audiobooks you purchase. Once you register, you'll also have the option to join the cooperative, which involves paying monthly membership dues.</p>
 
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 
