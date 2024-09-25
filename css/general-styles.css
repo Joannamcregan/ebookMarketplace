@@ -5,7 +5,7 @@
   }
 /*body---------------------------------------------------------------------------------*/
 body{
-    background: #eee2d4;
+    background: #eee2d4 !important;
     /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     font-family: Nunito Sans, sans-serif;
     /* font-family: Urbanist, sans-serif; */
