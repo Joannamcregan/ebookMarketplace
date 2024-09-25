@@ -31,6 +31,7 @@ function marketplace_files(){
     wp_enqueue_style('woo-styles', get_stylesheet_directory_uri() . '/css/woo-page-styles.css', false, '', 'all');
     wp_enqueue_style('forminator-styles', get_stylesheet_directory_uri() . '/css/forminator-styles.css', false, '', 'all');
     wp_enqueue_style('icon-styles', get_stylesheet_directory_uri() . '/css/icon-styles.css', false, '', 'all');
+    wp_enqueue_style('animation-styles', get_stylesheet_directory_uri() . '/css/animation-styles.css', false, '', 'all');
 
     wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
         'root_url' => get_site_url(),        
@@ -115,12 +116,13 @@ add_action('after_setup_theme', 'marketplace_features');
 function ebook_marketplace_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-        background-image: url(<?php echo get_theme_file_uri('/images/TOMC logo.jpg'); ?>);
-        height:100px;
-        width:300px;
-        background-size: 300px 100px;
+        background-image: url(<?php echo get_theme_file_uri('/images/TOMC_logo.jpg'); ?>) !important;
+        height:150px;
+        width:150px;
+        background-size: 150px 150px;
         background-repeat: no-repeat;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
+        border-radius: 15px;
         }
     </style>
 <?php }

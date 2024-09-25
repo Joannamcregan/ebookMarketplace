@@ -38,14 +38,25 @@
             </div>
         </div>
         <div class="sub-leaf-section not-displayed">
-            <div class="sub-leaf-wrapper">
+        <?php $user = wp_get_current_user();
+        if (is_user_logged_in() && in_array( 'dc_vendor', (array) $user->roles )){
+            ?><div class="sub-leaf-wrapper">
                 <a href="<?php echo esc_url(site_url('/dashboard')); ?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Creator Dashboard</p>
                 </div>
                 </a>
             </div>
-            <div class="sub-leaf-wrapper">
+        <?php } else {
+            ?><div class="sub-leaf-wrapper">
+                <a href="<?php echo esc_url(site_url('/dashboard')); ?>">
+                <div class="sub-leaf blue-leaf">
+                    <p>Creating within a Co-op</p>
+                </div>
+                </a>
+            </div>
+        <?php }
+            ?><div class="sub-leaf-wrapper">
                 <a href="<?php echo esc_url(site_url('/services'));?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Creator Services</p>

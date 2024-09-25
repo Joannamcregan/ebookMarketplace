@@ -19,6 +19,7 @@
                   <?php }                  
                   ?>
                   <li class="privacy-policy-li"><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li>
+                  <li><a href="<?php echo esc_url(site_url('/terms-and-conditions'));?>">Terms and Conditions</a></li>
                   <li><a href="<?php echo esc_url(site_url('/contact'));?>">Contact Us</a></li> 
             </ul>
       </div>
