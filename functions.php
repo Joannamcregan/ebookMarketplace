@@ -123,6 +123,7 @@ function ebook_marketplace_login_logo() { ?>
         background-repeat: no-repeat;
         padding-bottom: 0px;
         border-radius: 15px;
+        display: none;
         }
     </style>
 <?php }
