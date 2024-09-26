@@ -49,7 +49,7 @@
       <?php if (is_user_logged_in()){
         $user = wp_get_current_user();
         if (in_array( 'dc_vendor', (array) $user->roles )){
-          ?><a href="<?php echo esc_url(site_url('/dashboard'));?>">Vendor Portal</a>
+          ?><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a>
         <?php }
         // $tomc_user = get_userdata(get_current_user_id());
         $user = wp_get_current_user();

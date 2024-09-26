@@ -43,7 +43,7 @@
                   ?><li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a></li>
                   <?php $user = wp_get_current_user();
                   if (in_array( 'dc_vendor', (array) $user->roles )){
-                  ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">Vendor Portal</a></li>
+                  ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a></li>
                   <?php }
                   // $tomc_user = get_userdata(get_current_user_id());
                   $user = wp_get_current_user();
@@ -64,9 +64,7 @@
                         ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add Book Info</a>
                         <li><a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a></li>
                   <?php }
-                  ?><li><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">
-                  My Profile
-                  </a></li>
+                  ?><li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Book Downloads</a></li>
             <?php } ?>          
             <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
             <li><a href="<?php echo esc_url(site_url('/services'));?>">Creative Services</a></li>
