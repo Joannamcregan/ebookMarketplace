@@ -4,6 +4,9 @@
     margin-top: none !important;
     color: black !important;
 }
+body #buddypress div{
+    max-width: 95% !important;
+}
 .buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links){
     box-shadow: none !important;
     border: none !important;
@@ -20,8 +23,20 @@
     border: solid 3px #4c0548 !important;
     border-radius: 0px 10px 0px 10px;
 }
+#buddypress div#item-header-cover-image h2{
+    text-shadow: 1px 1px 15px #4c0548, -1px -1px 15px #4c0548, 1px 1px 10px #4c0548, -1px -1px 10px #4c0548, 1px 1px 10px #4c0548, -1px -1px 10px #4c0548, 1px 1px 5px #4c0548, -1px -1px 5px #4c0548, 1px 1px 5px #4c0548, -1px -1px 5px #4c0548;
+    color: white !important;
+}
+.bp-navs li{
+    background: none !important;
+    margin-top: 5px !important;
+}
 .buddypress-wrap form{
     border: none !important;
+}
+.single-headers .activity{
+    color: black !important;
+    font-size: 14px !important;
 }
 .buddypress-wrap .select-wrap{
     border: none !important;
@@ -36,11 +51,50 @@
 }
 #header-cover-image{
     background-color: #0c6980 !important;
-    margin-left: -30px !important;
+    margin-left: -10px !important;
+    /* width: 100vw !important; */
     border-radius: 0 0 55px 25px !important;
+}
+#buddypress #header-cover-image{
+    background-position: top center !important;
+    padding: 10px !important;
+    border: solid 5px #0c6980 !important
 }
 /* .buddypress-wrap .main-navs:not(.dir-navs) li.current a{
     color: black !important;
     background: none !important;
     border: solid 3px #4c0548 !important;
 } */
+.buddypress-wrap .bp-feedback{
+    color: black !important;
+    box-shadow: none !important;
+}
+.buddypress-wrap .bp-feedback:not(.custom-homepage-info){
+    border: solid 3px #0c6980 !important;
+    border-radius: 0px 10px 0px 10px !important;
+    max-width: 80% !important;
+}
+#ts{
+    margin-bottom: 5px !important;
+    min-width: 250px !important;
+    height: 25px !important;
+    border: solid 3px #4c0548 !important;
+    border-radius: 10px !important
+}
+#bbpress-forums div.bbp-search-form{
+    float: none !important;
+}
+.buddypress-wrap .profile.public .profile-group-title{
+    display: none !important;
+}
+.buddypress-wrap table.profile-fields{
+    margin: 0px auto !important;
+    border-radius: 0px 10px 0px 10px !important;
+    border: solid #f7c340 5px;
+}
+.buddypress-wrap{
+    font-size: 14px !important;
+}
+.buddypress-wrap .profile-fields td{
+    font-size: 14px !important;
+}
