@@ -51,6 +51,7 @@ body #buddypress div{
 }
 #header-cover-image{
     background-color: #0c6980 !important;
+    border: none !important;
     margin-left: -10px !important;
     /* width: 100vw !important; */
     border-radius: 0 0 55px 25px !important;
@@ -97,4 +98,222 @@ body #buddypress div{
 }
 .buddypress-wrap .profile-fields td{
     font-size: 14px !important;
+}
+.activity-update-form{
+    border: solid 3px #0c6980 !important;
+    border-radius: 50px 20px 20px 20px !important;
+    box-shadow: none !important;
+    padding: 10px !important;
+}
+#buddypress div.item-list-tabs ul li.last select{
+	border-radius: 10px !important;
+	padding: 5px !important;
+}
+#buddypress form#whats-new-form textarea{
+	border: solid black 2px !important;
+	border-radius: 15px !important;
+    min-width: 250px !important;
+    margin: auto !important;
+}
+#buddypress span.activity{
+	padding: 10px 20px !important;
+}
+.avatar{
+	border-radius: 50% !important;
+	border: solid #f7c340 5px !important;
+}
+#buddypress .activity-list li.mini .activity-avatar img.avatar{
+	width: 50px !important;
+	height: 50px !important;
+	margin-left: 0px !important;
+}
+#buddypress .activity-list .activity-avatar{
+	width: fit-content !important;
+}
+.activity-list .activity-item.mini .activity-avatar img.avatar{
+	max-width: 50px !important;
+	max-height: 50px !important;
+}
+#buddypress ul.item-list{
+	border-top: 1px solid #f7c340 !important;
+}
+#buddypress ul.item-list li{
+	border-bottom: 1px solid #f7c340 !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+#buddypress input[type="submit"]{
+	background-color: #4c0548 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+    display: block !important;
+}
+#buddypress .activity-list .activity-content .activity-inner{
+	border: solid #e44e2d 5px !important;
+}
+#buddypress .activity-list .activity-content .activity-header{
+	font-size: 16px !important;
+	color: black !important;
+}
+.activity-list .activity-item.mini{
+	font-size: 16px !important;
+}
+.activity-list .activity-item .activity-header .time-since{
+	font-size: 16px !important;
+	color: black !important;
+}
+#buddypress .activity-list .activity-content{
+	margin: 0 !important;
+}
+#buddypress a.button-primary{
+	border: none !important;
+	background-color: #0c6980 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
+#buddypress div.activity-meta{
+	width: fit-content !important;
+	margin: 20px 0px 20px 90px !important;
+}
+#buddypress a.bp-primary-action{
+	border: none !important;
+	background-color: #4c0548 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
+.activity-list .activity-item .activity-meta.action .button span{
+    color: white !important;
+}
+.bp-navs ul li .count{
+    background: #e44e2d !important;
+    border: none !important;
+    color: white !important;
+}
+#buddypress a.bp-primary-action span{
+	background: #4c0548 !important;
+}
+#buddypress a.fav{
+	border: none !important;
+	background-color: #0c6980 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
+.unfav{
+    border: none !important;
+	background-color: #0c6980 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
+#buddypress a.delete-activity{
+	border: none !important;
+	background-color: #893e43 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
+@media screen and (max-width: 480px) {
+    #buddypress a.bp-primary-action span{
+        display: inline-block !important;
+        margin-bottom: 15px !important;
+    }
+    #buddypress a.fav{
+        display: block !important;
+        margin-bottom: 5px !important;
+    }
+    #buddypress a.delete-activity{
+        display: block !important;
+        margin-bottom: 5px !important;
+    }
+    .unfav{
+        display: block !important;
+        margin-bottom: 5px !important;
+    }
+}
+#invite-groups-li{
+	display: none !important; 
+}
+#buddypress div.item-list-tabs ul li.selected a, #buddypress div.item-list-tabs ul li.current a{
+	color: black !important;
+}
+#buddypress li.groups-members-search input[type="text"]{
+	margin: 10px 0px !important;
+	padding: 10px !important;
+	border-radius: 10px !important;
+}
+#buddypress div#message p{
+	background: none !important;
+	width: fit-content !important;
+	border: solid #f7c340 5px;
+	border-radius: 0px 15px 0px 15px !important;
+}
+#buddypress div.dir-search input[type="text"]{
+    margin-bottom: 10px !important;
+    padding: 5px 10px !important;
+    border-radius: 10px !important;
+    min-width: 200px !important;
+}
+#buddypress form#whats-new-form #whats-new-options select{
+    padding: 10px !important;
+    border-radius: 20px !important;
+    margin-bottom: 10px !important;
+}
+#whats-new-submit{
+    margin-left: 10px !important;
+}
+#buddypress #whats-new-options{
+    display: flex !important;
+    flex-wrap: wrap-reverse !important;
+    flex-direction: row-reverse !important;
+    margin-top: 10px !important;
+}
+.activity-list.bp-list{
+    background: none !important;
+    border: none !important;
+}
+.activity-list .activity-item .activity-meta.action{
+    background: none !important;
+}
+#wp-message_content-editor-container{
+    border: none !important;
+}
+/* #buddypress .wp-editor-container{
+	border: solid #0c6980 5px !important;
+	border-radius: 15px !important;
+	width: 90% !important;
+} */
+#bp-messages-send{
+    border: solid 3px #4c0548 !important;
+    color: black !important;
+    background: none !important;
+}
+#bp-messages-reset{
+    border: solid 3px #893e43 !important;
+    color: black !important;
+    background: none !important;
+}
+#mceu_17{
+    min-width: 250px !important;
+}
+div.mce-toolbar-grp{
+    background: none !important;
 }
