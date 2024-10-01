@@ -361,3 +361,9 @@ div.mce-toolbar-grp{
 #buddypress .generic-button{
     max-width: fit-content !important;
 }
+#mceu_6-button{
+    display: none !important; /*button for adding images which doesnt work right now*/
+}
+.message-action-unstar:before{
+    color: #e44e2d !important;
+}
