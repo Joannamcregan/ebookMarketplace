@@ -5,7 +5,7 @@
     color: black !important;
 }
 body #buddypress div{
-    max-width: 95% !important;
+    max-width: 99% !important;
 }
 .buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links){
     box-shadow: none !important;
@@ -156,7 +156,9 @@ body #buddypress div{
     display: block !important;
 }
 #buddypress .activity-list .activity-content .activity-inner{
-	border: solid #e44e2d 5px !important;
+	border: none !important;
+    background: white !important;
+    border-radius: 20px !important;
 }
 #buddypress .activity-list .activity-content .activity-header{
 	font-size: 16px !important;
@@ -180,10 +182,6 @@ body #buddypress div{
     border-radius: 45px !important;
     padding: 10px 20px !important;
     cursor: pointer !important;
-}
-#buddypress div.activity-meta{
-	width: fit-content !important;
-	margin: 20px 0px 20px 90px !important;
 }
 #buddypress a.bp-primary-action{
 	border: none !important;
@@ -303,18 +301,63 @@ body #buddypress div{
 	width: 90% !important;
 } */
 #bp-messages-send{
-    border: solid 3px #4c0548 !important;
-    color: black !important;
-    background: none !important;
+    background-color: #4c0548 !important;
+    color: white !important;
+    font-size: 16 !important;
+    border-radius: 45px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+    display: block !important;
+    width: fit-content !important;
+    margin: auto !important;
 }
 #bp-messages-reset{
-    border: solid 3px #893e43 !important;
-    color: black !important;
-    background: none !important;
-}
-#mceu_17{
-    min-width: 250px !important;
+    display: none !important; /*this button causes problems*/
 }
 div.mce-toolbar-grp{
     background: none !important;
+}
+.bp-messages-content #thread-preview h2:first-child{
+    background: none !important;
+}
+.message-action-delete:before{
+    color: #893e43 !important;
+}
+.message-action-star:before{
+    color: #e44e2d !important;
+}
+#message-threads li{
+    background-color: none !important;
+    border: solid #0c6980 3px !important;
+}
+#message-threads li.selected{
+    background-color: none !important;
+    border: solid #0c6980 3px !important;
+}
+#bp-message-content{
+    width: 100% !important;
+}
+#wp-message_content-wrap{
+    width: 100% !important;
+}
+#wp-message_content-editor-container{
+    width: 100% !important;
+}
+#mceu_17{
+    width: 100% !important;
+}
+#mceu_17-body{
+    width: 100% !important;
+}
+#mceu_24{
+    width: 100% !important;
+}
+#message_content{
+    width: 100% !important;
+}
+.buddypress-wrap .standard-form input{
+    width: 95% !important;
+}
+#buddypress .generic-button{
+    max-width: fit-content !important;
 }
