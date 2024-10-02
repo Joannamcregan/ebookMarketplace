@@ -367,3 +367,6 @@ div.mce-toolbar-grp{
 .message-action-unstar:before{
     color: #e44e2d !important;
 }
+.bp-messages-content #bp-message-thread-list .message-metadata time{
+    color: black !important;
+}
