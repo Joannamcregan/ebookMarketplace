@@ -370,3 +370,6 @@ div.mce-toolbar-grp{
 .bp-messages-content #bp-message-thread-list .message-metadata time{
     color: black !important;
 }
+#message-threads li .thread-content .excerpt{
+    color: black !important;
+}
