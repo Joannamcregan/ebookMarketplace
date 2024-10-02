@@ -379,3 +379,6 @@ div.mce-toolbar-grp{
 #invites-personal-li{
     display: none !important; /*we don't do invites so hiding this button*/
 }
+#groups-list li{
+    display: block !important; /*overriding hidden class*/
+}
