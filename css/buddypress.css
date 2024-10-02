@@ -373,3 +373,6 @@ div.mce-toolbar-grp{
 #message-threads li .thread-content .excerpt{
     color: black !important;
 }
+#message-threads li.selected .thread-subject .subject{
+    color: #0c6980 !important;
+}
