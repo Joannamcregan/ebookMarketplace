@@ -408,3 +408,6 @@ div.bbp-search-form input[type='text']{
     border: solid 3px #4c0548 !important;
     border-radius: 10px !important
 }
+.buddypress-wrap .groups-list li .group-desc{
+    color: black !important;
+}
