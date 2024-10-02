@@ -382,3 +382,7 @@ div.mce-toolbar-grp{
 #groups-list li{
     display: block !important; /*overriding hidden class*/
 }
+.buddypress-wrap .groups-list li .group-desc{
+    color: black !important;
+    border: none !important;
+}
