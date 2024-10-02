@@ -386,3 +386,25 @@ div.mce-toolbar-grp{
     color: black !important;
     border: none !important;
 }
+.bbp-topics ul.sticky{
+    font-size: 14px !important;
+}
+#bbpress-forums p.bbp-topic-meta{
+    font-size: 14px !important;
+}
+#bbp-user-topics-started .bbp-topic-voice-count{
+    display: none !important;
+}
+#bbp-user-topics-started .bbp-topic-reply-count{
+    display: none !important;
+}
+#bbp-user-topics-started .bbp-topic-freshness{
+    display: none !important;
+}
+div.bbp-search-form input[type='text']{
+    margin-bottom: 5px !important;
+    min-width: 250px !important;
+    height: 25px !important;
+    border: solid 3px #4c0548 !important;
+    border-radius: 10px !important
+}
