@@ -345,12 +345,19 @@ div.mce-toolbar-grp{
 }
 #mceu_17{
     width: 100% !important;
+    background: #faefe3 !important;
+    border-top: 10px solid #faefe3 !important;
+    border-left: 10px solid #faefe3 !important;
+    border-bottom: 10px solid #faefe3 !important;
+    border-right: 2px solid #faefe3 !important;
 }
 #mceu_17-body{
     width: 100% !important;
+    background: #faefe3 !important;
 }
 #mceu_24{
     width: 100% !important;
+    border: none !important;
 }
 #message_content{
     width: 100% !important;
@@ -410,4 +417,20 @@ div.bbp-search-form input[type='text']{
 }
 .buddypress-wrap .groups-list li .group-desc{
     color: black !important;
+}
+.bbp-topic-form{
+    padding: 5px !important;
+}
+div.bbp-template-notice{
+    margin: 5px !important;
+}
+#bbpress-forums div.wp-editor-container{
+    width: 90% !important;
+    margin: auto !important;
+}
+@media screen and (max-width: 600px){
+    #bbpress-forums div.wp-editor-container{
+        width: 96% !important;
+        margin: auto !important;
+    }
 }
