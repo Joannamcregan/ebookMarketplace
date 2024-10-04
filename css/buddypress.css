@@ -474,3 +474,17 @@ div.bbp-template-notice{
 .bp-messages-content #thread-preview .preview-content .preview-message{
     border: solid 5px #0c6980 !important;
 }
+.bp-messages-content #bp-message-thread-header h2:first-child{
+    background: white !important;
+    border: solid 5px #0c6980 !important;
+}
+.bp-messages-content .single-message-thread-header{
+    border: none !important;
+}
+.bp-messages-content #bp-message-thread-list{
+    border: none !important;
+}
+.bp-messages-content #bp-message-thread-list .message-metadata{
+    border: none !important;
+    box-shadow: none !important;
+}
