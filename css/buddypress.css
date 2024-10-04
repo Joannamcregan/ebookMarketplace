@@ -317,6 +317,21 @@ body #buddypress div{
 div.mce-toolbar-grp{
     background: none !important;
 }
+#send_message_form{
+    margin: auto !important;
+    width: 90% !important;
+}
+@media screen and (max-width: 600px){
+    #send_message_form{
+        width: 100% !important;
+    }
+}
+#send_message_form #send-to-input{
+    border-radius: 15px !important;
+}
+#send_message_form #subject{
+    border-radius: 15px !important;
+}
 .bp-messages-content #thread-preview h2:first-child{
     background: none !important;
 }
@@ -327,11 +342,11 @@ div.mce-toolbar-grp{
     color: #e44e2d !important;
 }
 #message-threads li{
-    background-color: none !important;
+    background: white !important;
     border: solid #0c6980 3px !important;
 }
 #message-threads li.selected{
-    background-color: none !important;
+    background: white !important;
     border: solid #0c6980 3px !important;
 }
 #bp-message-content{
@@ -343,21 +358,17 @@ div.mce-toolbar-grp{
 #wp-message_content-editor-container{
     width: 100% !important;
 }
-#mceu_17{
+.mce-panel{
     width: 100% !important;
     background: #faefe3 !important;
-    border-top: 10px solid #faefe3 !important;
-    border-left: 10px solid #faefe3 !important;
-    border-bottom: 10px solid #faefe3 !important;
-    border-right: 2px solid #faefe3 !important;
+    border: 5px solid #faefe3 !important;
 }
-#mceu_17-body{
+#mce-container-body{
     width: 100% !important;
     background: #faefe3 !important;
 }
-#mceu_24{
-    width: 100% !important;
-    border: none !important;
+.mce-btn[aria-label="Insert/edit image (Shift+Alt+M)"]{
+    display: none !important;
 }
 #message_content{
     width: 100% !important;
@@ -367,9 +378,6 @@ div.mce-toolbar-grp{
 }
 #buddypress .generic-button{
     max-width: fit-content !important;
-}
-#mceu_6-button{
-    display: none !important; /*button for adding images which doesnt work right now*/
 }
 .message-action-unstar:before{
     color: #e44e2d !important;
@@ -399,13 +407,13 @@ div.mce-toolbar-grp{
 #bbpress-forums p.bbp-topic-meta{
     font-size: 14px !important;
 }
-#bbp-user-topics-started .bbp-topic-voice-count{
+.bbp-topic-voice-count{
     display: none !important;
 }
-#bbp-user-topics-started .bbp-topic-reply-count{
+.bbp-topic-reply-count{
     display: none !important;
 }
-#bbp-user-topics-started .bbp-topic-freshness{
+.bbp-topic-freshness{
     display: none !important;
 }
 div.bbp-search-form input[type='text']{
@@ -433,4 +441,36 @@ div.bbp-template-notice{
         width: 96% !important;
         margin: auto !important;
     }
+}
+#engagements-personal-li{
+    display: none !important;
+}
+#subscriptions-personal-li{
+    display: none !important;
+}
+.buddypress-wrap .subnav-filters .user-messages-bulk-actions label{
+    display: inline !important;
+}
+.user-messages-bulk-actions input[type="checkbox"]{
+    display: inline !important;
+}
+.bp-user [data-bp-search] form input[type=search]{
+    border: solid 5px #4c0548 !important;
+    border-radius: 25px !important;
+    color: black !important;
+    background: white !important;
+    padding: 0px 5px !important;
+}
+#message-threads{
+    border: solid 5px #602f32 !important;
+    border-radius: 25px !important;
+}
+.bp-messages-content #thread-preview{
+    border: none !important;
+}
+.bp-messages-content .preview-pane-header{
+    border-bottom: none !important;
+}
+.bp-messages-content #thread-preview .preview-content .preview-message{
+    border: solid 5px #0c6980 !important;
 }
