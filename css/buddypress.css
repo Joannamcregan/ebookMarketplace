@@ -488,3 +488,8 @@ div.bbp-template-notice{
     border: none !important;
     box-shadow: none !important;
 }
+#bp-message-thread-list .message-content{
+    padding: 5px !important;
+    border: solid 5px #0c6980 !important;
+    background: white !important;
+}
