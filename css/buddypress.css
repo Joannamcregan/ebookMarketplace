@@ -183,7 +183,7 @@ body #buddypress div{
     padding: 10px 20px !important;
     cursor: pointer !important;
 }
-#buddypress a.bp-primary-action{
+#buddypress div.generic-button  a.bp-primary-action{
 	border: none !important;
 	background-color: #4c0548 !important;
     color: white !important;
@@ -200,10 +200,11 @@ body #buddypress div{
     border: none !important;
     color: white !important;
 }
-#buddypress a.bp-primary-action span{
+#buddypress div.generic-button  a.bp-primary-action span{
 	background: #4c0548 !important;
+    display: inline-block !important;
 }
-#buddypress a.fav{
+#buddypress div.generic-button  a.fav{
 	border: none !important;
 	background-color: #0c6980 !important;
     color: white !important;
@@ -211,8 +212,9 @@ body #buddypress div{
     border-radius: 45px !important;
     padding: 10px 20px !important;
     cursor: pointer !important;
+    display: inline-block !important;
 }
-.unfav{
+#buddypress div.generic-button .unfav{
     border: none !important;
 	background-color: #0c6980 !important;
     color: white !important;
@@ -220,8 +222,9 @@ body #buddypress div{
     border-radius: 45px !important;
     padding: 10px 20px !important;
     cursor: pointer !important;
+    display: inline-block !important;
 }
-#buddypress a.delete-activity{
+#buddypress div.generic-button a.delete-activity{
 	border: none !important;
 	background-color: #893e43 !important;
     color: white !important;
@@ -229,8 +232,9 @@ body #buddypress div{
     border-radius: 45px !important;
     padding: 10px 20px !important;
     cursor: pointer !important;
+    display: inline-block !important;
 }
-#buddypress a.spam-activity.bp-tooltip{
+#buddypress div.generic-button a.spam-activity.bp-tooltip{
 	border: none !important;
 	background-color: #e44e2d !important;
     color: white !important;
@@ -238,10 +242,12 @@ body #buddypress div{
     border-radius: 45px !important;
     padding: 10px 20px !important;
     cursor: pointer !important;
+    display: inline-block !important;
 }
 .activity-list .activity-item .activity-meta.action .button{
-    display: none !important;
+    font-size: 0 !important;
 }
+
 @media screen and (max-width: 480px) {
     #buddypress a.bp-primary-action span{
         display: inline-block !important;
