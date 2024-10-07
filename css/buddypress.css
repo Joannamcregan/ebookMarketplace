@@ -230,7 +230,7 @@ body #buddypress div{
     padding: 10px 20px !important;
     cursor: pointer !important;
 }
-#buddypress a.spam-activity{
+#buddypress a.spam-activity.bp-tooltip{
 	border: none !important;
 	background-color: #e44e2d !important;
     color: white !important;
