@@ -239,6 +239,9 @@ body #buddypress div{
     padding: 10px 20px !important;
     cursor: pointer !important;
 }
+.activity-list .activity-item .activity-meta.action .button{
+    display: none !important;
+}
 @media screen and (max-width: 480px) {
     #buddypress a.bp-primary-action span{
         display: inline-block !important;
