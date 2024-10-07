@@ -707,12 +707,11 @@
     max-width: 500px !important;
     border-radius: 10px !important;
 }
-#field_1{
-    width: 100% !important;
+/* #field_1{
     min-width: 280px !important;
     max-width: 500px !important;
     border-radius: 10px !important;
-}
+} */
 /* lost password------------------------------------------------------------ */
 #user_login{
     width: 90% !important;
