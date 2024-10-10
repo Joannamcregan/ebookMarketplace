@@ -154,6 +154,7 @@ body #buddypress div{
     padding: 10px 20px !important;
     cursor: pointer !important;
     display: block !important;
+    width: fit-content !important;
 }
 #buddypress .activity-list .activity-content .activity-inner{
 	border: none !important;
@@ -510,4 +511,7 @@ div.bbp-template-notice{
     padding: 5px !important;
     border: solid 5px #0c6980 !important;
     background: white !important;
+}
+.buddypress-wrap table.profile-settings th.title{
+    width: 60% !important;
 }
