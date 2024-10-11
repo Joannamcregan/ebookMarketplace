@@ -515,3 +515,22 @@ div.bbp-template-notice{
 .buddypress-wrap table.profile-settings th.title{
     width: 60% !important;
 }
+.buddypress .buddypress-wrap .generic-button a{
+    padding: 10px !important;
+    border: solid 5px #0c6980 !important;
+    color: black !important;
+}
+.member-header-actions{
+    padding-top: 20px !important;
+}
+.member-header-actions #post-mention{
+    margin: 10px auto 5px auto !important;
+}
+.member-header-actions #send-private-message{
+    margin: 10px auto 5px auto !important;
+}
+@media screen and (min-width: 46.8em) {
+    .single-headers a.button, .single-headers div.generic-button, .single-headers li.generic-button {
+        float: none !important;
+    }
+}
