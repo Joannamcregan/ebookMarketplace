@@ -13,13 +13,13 @@ body #buddypress div{
 }
 .buddypress-wrap .bp-navs li a{
     color: black !important;
-    background: none !important;
+    background: #faefe3 !important;
     border: solid 3px #e44e2d !important;
     border-radius: 0px 10px 0px 10px;
 }
 .buddypress-wrap .bp-navs li.selected a{
     color: black !important;
-    background: none !important;
+    background: #fdf8f2 !important;
     border: solid 3px #4c0548 !important;
     border-radius: 0px 10px 0px 10px;
 }
