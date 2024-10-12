@@ -145,6 +145,7 @@ body #buddypress div{
     border-right: none !important;
     box-shadow: none !important;
     background: none !important;
+    padding-bottom: 10px !important;
 }
 #buddypress input[type="submit"]{
 	background-color: #4c0548 !important;
@@ -310,6 +311,7 @@ body #buddypress div{
 }
 .activity-list .activity-item .activity-meta.action{
     background: none !important;
+    margin-bottom: 10px !important;
 }
 #wp-message_content-editor-container{
     border: none !important;
@@ -567,6 +569,19 @@ form.ac-form .ac-reply-content{
 .buddypress-wrap .activity-comments ul{
     overflow-y: scroll !important;
     max-height: 150px !important;
+    background: #faefe3 !important;
+    padding-left: 5px !important;
+    border-top: solid #4c0548 7px !important;
+    border-left: solid #4c0548 7px !important;
+    border-right: solid #4c0548 5px !important;
+    border-bottom: solid #4c0548 5px !important;
+    margin-top: 0px !important;
+}
+.acomment-content p{
+    background: white !important;
+    border-right: solid white 3px !important;
+    border-left: solid white 5px !important;
+    border-radius: 5px !important;
 }
 .buddypress-wrap .activity-comments ul li{
     padding: 10px 0px 10px 0px !important;
