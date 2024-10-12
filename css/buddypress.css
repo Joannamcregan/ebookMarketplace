@@ -534,3 +534,40 @@ div.bbp-template-notice{
         float: none !important;
     }
 }
+form.ac-form .ac-reply-content .ac-textarea textarea{
+    background: white !important;
+    border: solid 3px #0c6980 !important;
+    border-radius: 0px 20px 20px 20px !important;
+    padding-left: 5px !important;
+}
+.ac-textarea{    
+    display: block !important;
+    width: fit-content !important;
+    padding: none !important;
+}
+.buddypress-wrap .activity-comments{
+    margin: 0 5px !important;
+}
+form.ac-form .ac-reply-content .ac-textarea{
+    padding: 20px 0 0 5px !important;
+}
+form.ac-form{
+    padding: 5px !important;
+}
+form.ac-form .ac-reply-content{
+    color: black !important;
+    padding-left: 5px !important;
+}
+.activity-list .activity-item{
+    padding: 5px !important;
+}
+.activity-list .activity-item.has-comments{
+    height: fit-content !important;
+}
+.buddypress-wrap .activity-comments ul{
+    overflow-y: scroll !important;
+    max-height: 150px !important;
+}
+.buddypress-wrap .activity-comments ul li{
+    padding: 10px 0px 10px 0px !important;
+}
