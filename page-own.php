@@ -18,7 +18,7 @@
             <p class="tomc-circle-p-2">Folks who believe in shared ownership and community and are also here for the perks!</p>
         </div>
         <div class="red-orange-line-break-60"></div>
-        <div class="tomc-circle-container">
+        <div class="tomc-circle-container tomc-circle-container-long-text">
             <img src="<?php echo get_theme_file_uri('/images/circle-background-2.jpg'); ?>" role="presentation" />
             <p class="tomc-circle-p-0">This circle is for those who run all the things behind the scenes, keeping Trunk of My Car on the road.</p>
             <p class="orange-shadow-heading tankindred-text tomc-circle-p-1-padded-x"><strong>Worker</strong></p>
