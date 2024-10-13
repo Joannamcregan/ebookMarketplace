@@ -11,3 +11,7 @@
     display: block !important;
     margin: 20px auto !important;
 }
+.forminator-description{
+    color: black !important;
+    font-size: 14px !important;
+}
