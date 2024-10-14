@@ -97,3 +97,27 @@ textarea.bbp-the-content{
 #bbpress-forums ul.bbp-replies{
 	font-size: 14px !important;
 }
+#item-header-content{
+    padding-top: 20px !important;
+}
+@media screen and (min-width: 783px) {
+    dl.moderators-lists{
+        padding-top: 20px !important;
+    }
+}
+.groups-header .desc-wrap{
+    background: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: solid 5px #f7c340 !important;
+    border-radius: 10px !important;
+}
+.groups-header .desc-wrap .group-description{
+    padding: 5px !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+#bbpress-forums fieldset.bbp-form input[type=text]{
+    border-radius: 15px !important;
+}
