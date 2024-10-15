@@ -175,3 +175,14 @@
     width: fit-content;
     margin: 0px auto;
 }
+.white-background-wrapper{
+    padding: 5px 10px;
+    border-top: solid #e44e2d 5px;
+    border-left: solid #4c0548 5px;
+    border-bottom: solid #4c0548 5px;
+    border-right: solid #e44e2d 5px;
+    border-radius: 5px 30px 5px 30px;
+    width: fit-content;
+    margin: 0px auto;
+    background: white;
+}
