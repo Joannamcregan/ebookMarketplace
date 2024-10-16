@@ -71,7 +71,75 @@
                         </li>
                     </o>
                 </li>
+                <li>C. Termination of membership shall proceed as follows: 
+                    <ol type="1">
+                        <li>The Board will send notice to the email address on file for such member stating
+                        the reason for the proposed termination and outline specific incidences of
+                        violation of policies or Bylaws. The letter must be sent at least seven days prior
+                        to the vote to terminate membership. </li>
+                        <li>The member will be invited to the Board meeting to be heard. 
+                        </li>
+                        <li>The decision of the Board is final. </li>
+                    </ol>
+                </li>
             </ol>
+            <p>SECTION 8. WORKER MEMBER TERMINATION. When a Worker Member voluntarily or
+            involuntarily ends their work in the Cooperative, their membership automatically ends, and the
+            membership share shall be deemed transferred back to the Cooperative. Any such outstanding
+            Patronage Dividend shall inure to the Worker Member through the termination date and shall be
+            paid in accordance with the next scheduled Patronage Dividend payment date. Should the
+            Cooperative’s financials reflect a negative balance or loss at the end of the Patronage Dividend
+            period, any amount allocated to such terminated Worker Member shall be absorbed by the
+            Cooperative and no amount shall be due from the terminated Worker Member. 
+            </p>
+            <p>SECTION 9. TRANSFERABILITY OF SHARES. No member shall sell, assign any interest in,
+            or otherwise transfer their membership share during the period of membership in the Cooperative. 
+            </p>
+            <p>SECTION 10. MEMBER RIGHTS AND RESPONSIBILITIES 
+            </p>
+            <ol type="A">
+                <li>SECTION 10. MEMBER RIGHTS AND RESPONSIBILITIES 
+                    <ol type="1">
+                        <li>Be eligible for Patronage Dividends (see, Article VI, Section 3). </li>
+                        <li>Participate in annual and special membership meetings. </li>
+                        <li>Vote in elections for the Board or on ballots. </li>
+                        <li>Be eligible to serve on the Board of Directors or on committees. </li>
+                    </ol>
+                </li>
+                <li>MEMBERSHIP RESPONSIBILITIES. Members are expected to participate in the
+                activities of the Cooperative, including, but not limited to the following: 
+                    <ol type="1">
+                        <li>Contribute to the Cooperative by purchasing a monthly or annual
+                        membership, if capable. </li>
+                        <li>Patronize the Cooperative, when possible. </li>
+                        <li>Know and understand the criteria for participation, standards, Bylaws, and
+                        policies of the Cooperative. 
+                        </li>
+                        <li>Participate in community building and assistance as outlined in the
+                        membership agreement. 
+                        </li>
+                        <li>Keep current on the activities and actions of the Cooperative, attend annual
+                        and special member meetings, vote in elections, and respond to surveys. </li>
+                        <li>Participate in committee work, in accordance with said Member’s ability. </li>
+                        <li>Share experience and provide member-to-member education, as capable. </li>
+                        <li>Assist in the development of new products or product uses. 
+                        </li>
+                        <li>Promote the Cooperative and encourage others to become members. </li>
+                    </ol>
+                </li>
+            </ol>
+            <p>SECTION 11. WORKER MEMBER RIGHTS AND RESPONSIBILITIES. In addition to the
+            member Rights and Responsibilities outlined in Section 10 of this Article, Worker Members are
+            expected to perform their employee obligations to the Cooperative objectively, mindfully, and
+            accountably. Worker Members shall comply with the terms and conditions of Cooperative
+            employment policy, understanding their role and the impact it may have on their colleagues and
+            the greater Cooperative. Worker Members terminating their employment with the Cooperative are
+            asked to provide a minimum two (2) weeks’ notice to the Cooperative and shall diligently continue
+            their assigned responsibilities until their last date of employment. 
+            </p>
+            <p>SECTION 12. We are an inclusive organization. The Cooperative shall not discriminate against
+            acceptance of members on the basis of race, gender, religion, income, marital status, or nationality. 
+            </p>
         </div>
       </div>
 </main>
