@@ -336,6 +336,9 @@ span.bbp-admin-links a{
 .banner-heading-22{
     font-size: 22;
 }
+.banner-heading-18{
+    font-size: 18;
+}
 .banner h2{
     color: #eee2d4;
     text-shadow: 2px 2px #0c6980;
@@ -1106,6 +1109,13 @@ a {
 .blog-title h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+}
+.inline{
+    display: inline;
+}
+.margin-auto-block{
+    margin: auto;
+    display: block;
 }
 .margin-20{
     padding: 20px;

@@ -186,3 +186,18 @@
     margin: 0px auto;
     background: white;
 }
+.left-gentle-bracket-orange{
+    border-left: solid orange 5px;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+.left-gentle-bracket-purple{
+    border-left: solid #4c0548 5px;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+.left-gentle-bracket-blue{
+    border-left: solid #0c6980 5px;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
