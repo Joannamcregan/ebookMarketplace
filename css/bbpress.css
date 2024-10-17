@@ -121,3 +121,9 @@ textarea.bbp-the-content{
 #bbpress-forums fieldset.bbp-form input[type=text]{
     border-radius: 15px !important;
 }
+.leave-group-button{
+    border: solid 3px #0c6980;
+    border-radius: 0px 15px 15px 15px !important;
+    padding: 0px 10px 10px 10px !important;
+    background-color: white !important;
+}
