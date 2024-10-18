@@ -187,7 +187,7 @@
     background: white;
 }
 .left-gentle-bracket-orange{
-    border-left: solid orange 5px;
+    border-left: solid #e44e2d 5px;
     padding: 5px 20px;
     border-radius: 20px;
 }
@@ -198,6 +198,11 @@
 }
 .left-gentle-bracket-blue{
     border-left: solid #0c6980 5px;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+.left-gentle-bracket-yellow{
+    border-left: solid #f7c340 5px;
     padding: 5px 20px;
     border-radius: 20px;
 }
