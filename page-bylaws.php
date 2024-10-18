@@ -216,6 +216,78 @@
             <p>SECTION 11. Within a specified period of time, any action taken by the Board of Directors must be referred to members for approval or disapproval if demanded by petition by at least five percent (5%) or two hundred fifty (250) members, whichever is less, or by majority vote of the Board of Directors, provided that rights of third parties which have vested between the time of action by the Board of Directors and approval or disapproval by the members shall not be impaired.</p>
         </div>
         <h2 class="centered-text banner-heading-18">ARTICLE VI FINANCE</h2>
+        <div class="left-gentle-bracket-purple">
+            <p>SECTION 1. FINANCIAL OPERATION. The Cooperative operates on a Cooperative basis and allocates earnings and losses to members on the basis of the business done with or for such members. Thus, in accordance with Subchapter T of the Internal Revenue Code, the Cooperative may declare a patronage dividend to be distributed among the members in accordance with the total amount of patronage made by each such member during the preceding fiscal year. For Worker Members, patronage is defined as the number of hours worked; Creator Members, patronage is based on the total amount of sales; Consumer Members, patronage is defined as the total amount of purchases; for Investor Members, patronage is defined as the amount of investment.</p>
+            <p>SECTION 2. APPORTIONMENT OF LOSSES. All or any part of the net proceeds may be applied to losses incurred in prior years. In the best interests of the Cooperative, the Board may apportion losses.</p>
+            <p>SECTION 3. PATRONAGE REFUNDS TO MEMBERS. In the event that the Board decides to distribute all or part of net proceeds as patronage refunds to members, the following shall be distributed and paid to members, in accordance with the ratio of their patronage (hours worked, amount of sales, purchases, or amount of investment) to the total patronage (hours worked, amount of sales, purchases, or amount of investment by all members of the same circle), as follows:</p>
+            <ol type="A">
+                <li>Reserves (retained equity). The Board may create reasonable reserves for necessary purposes to retain a portion of net proceeds in the Cooperative to help keep operations on a sound financial basis. The retained portion of the patronage refund is allocated to the member’s equity account and paid out at a later date.</li>
+                <li>Patronage refunds. All remaining funds shall be distributed and paid to members.</li>
+            </ol>
+            <p>SECTION 4. REGULAR REDEMPTION. If at any time the Board of Directors determines that the financial condition of the Cooperative will not be impaired by a redemption, equity credited to members’ accounts may be redeemed in full or in part. Any such redemption of equity shall be made in order of priority according to the year in which the equity was furnished and credited, the equity first received by the Cooperative being the first redeemed.</p>
+            <p>SECTION 5. DISCRETIONARY SPECIAL REDEMPTIONS. Notwithstanding any other provision of these Bylaws, the Board, at its absolute discretion, shall have the power to retire any equity credited to members’ accounts on such terms and conditions as may be agreed upon by the parties in any instance in which the interests of the Cooperative and its members are deemed to be furthered thereby and funds are determined by the Board to be available for such purposes.</p>
+            <p>SECTION 6. RESERVE FUND. A portion of the Cooperative’s net worth shall be maintained as a Reserve Fund that will serve to protect members and creditors from any operating losses that the Cooperative might incur. The Board of Directors will from time to time determine the proportion of the Cooperative’s surplus or deficit that will be allocated to the Reserve Fund, with the remainder of the surplus or loss to be allocated to individual members. The proportion of patronage allocations to be paid in cash and the proportion to be paid as a non-cash allocation to internal accounts shall be as periodically set by the Board of Directors.</p>
+            <p>SECTION 7. CONSENT TO TAKE PATRONAGE DISTRIBUTIONS INTO INCOME. Each person who hereafter applies for and is accepted into membership in this Cooperative and each member of this Cooperative as of the effective date of this bylaw who continues as a member after such date shall, by such act alone, consents that the amount of any distributions with respect to her or his patronage which are made in written notices of allocation (as defined in 26 U.S.C. §1388) and which are received by the member from this Cooperative, will be taken into account by the member at their stated dollar amount in the manner provided in 26 U.S.C. §1385(a) in the taxable year in which the written notices of allocation are received by the member.</p>
+            <p>SECTION 8. EQUITY RECORDS. The records of the Cooperative will be kept in such a manner that the patronage refunds and any retained equity (allocated or unallocated) of each member of the Cooperative may be determined at any time. Within eight and one half (8.5) months after the close of the Cooperative’s tax year, each member will receive a “written notice of allocation” which reports each member’s patronage refund and equity retained for the year.</p>
+            <ol type="A">
+                <li>Equity redemption for terminating members. When a member terminates membership, the equity held within the Cooperative will be refunded, upon written request to the Board, in accordance with Board policy on equity redemption.</li>
+                <li>Equity retirement for deceased members. Upon the death of a member, that member’s heirs or legal representative may request, in writing, the retirement of the deceased member’s equity account. The equity account will be redeemed in accordance with Board policy.</li>
+                <li>Unclaimed equity. Any equity or Patronage Dividends which remain unclaimed five (5) years after the date authorized for redemption or retirement will be paid or distributed according to Hawai’i statutes in effect at that time for the disposition of unclaimed funds.</li>
+                <li>Events of Forfeiture of Patronage. If the Cooperative distributes a Patronage Dividend to a member who (a) does not consent to include the Patronage Dividend in income as provided in Section 7 of this Article; or (b) is unable to receive distribution; or (c) cannot be located for redemption of such Patronage Dividend, such patronage shall revert back to the Cooperative and be applied to the Reserve Fund, as set forth in Section 6 of this Article.</li>
+            </ol>
+            <p>SECTION 9. FINANCIAL REVIEW. The Cooperative’s financial accounts will be reviewed and reported on at least once per year by an independent auditor selected by the Board. An annual report including accounting information or appropriate summaries shall be available to the membership.</p>
+        </div>
+        <h2 class="centered-text banner-heading-18">ARTICLE VII COOPERATIVE RECORDS AND REPORTS</h2>
+        <div class="left-gentle-bracket-blue">
+            <p>SECTION 1. RECORDS REQUIRED TO BE KEPT. The Cooperative shall keep in its principal data storage location:</p>
+            <ol type="A">
+                <li>The original or a copy of its Articles and Bylaws as amended to date;</li>
+                <li>Adequate and correct books and records of account;</li>
+                <li>Minutes of the proceedings of its members, Board, and committees of the Board; and</li>
+                <li>A record of its members, providing their names and addresses.</li>
+            </ol>
+            <p>Minutes and other books and records shall be kept either in written form or in any other form capable of being converted into clearly legible tangible form or in any combination of the foregoing.</p>
+            <p>SECTION 2. INSPECTION RIGHTS.</p>
+            <ol type="A">
+                <li>The Cooperative’s Bylaws and Articles shall be open to inspection by the members at all times.</li>
+                <li>Any such inspection shall be digitally.</li>
+                <li>The accounting books and records and minutes of proceedings of the members and the Board and committees of the Board shall be open to inspection upon the written demand on the Cooperative of any member at any reasonable time, for a purpose reasonably related to such person’s interests as a member.</li>
+                <li>Every Director shall have the absolute right at any reasonable time to inspect and copy all books, records and documents of every kind and to inspect the physical properties of the Cooperative.</li>
+                <li>Other existing or developing Cooperative organizations may gain access to technological and organizational documents by applying to the Board of Directors, whose approval or denial shall be based on examination of the organization’s purpose and need.</li>
+            </ol>
+            <p>SECTION 3. ANNUAL REPORT.</p>
+            <ol type="A">
+                <li>The annual report shall be prepared no later than one hundred twenty (120) days after the close of the Cooperative’s fiscal year and shall be posted for public inspection and distributed to members at or before their next meeting.</li>
+                <li>The annual report shall contain in appropriate detail:
+                    <ol type="1">
+                        <li>A balance sheet as of the end of the fiscal year;</li>
+                        <li>An income statement;</li>
+                        <li>A cash flow statement of the fiscal year;</li>
+                        <li>A statement of where the names and addresses of current members are located; and</li>
+                        <li>An annual statement of transactions and indemnifications to “interested persons” as defined by law.</li>
+                    </ol>
+                </li>
+                <li>For fiscal years in which the Cooperative has (at any given time) over twenty-five (25) members, the Cooperative shall notify each member of his/her right to receive an annual financial report.</li>
+                <li>The annual report shall be accompanied by any pertinent report by independent accountants.</li>
+                <li>If there is no such report from an independent accountant, an authorized Officer of the Cooperative shall certify that the annual report was prepared from the books and records of the Cooperative, without audit.</li>
+            </ol>
+        </div>
+        <h2 class="centered-text banner-heading-18">ARTICLE VIII AMENDMENT</h2>
+        <div class="left-gentle-bracket-yellow">
+            <p>SECTION 1. The initial Bylaws of the Cooperative shall be adopted by a three quarters (3/4) vote of the initial Board of Directors. After initial adoption, the Bylaws shall be reviewed by the Board of Directors on a bi-annual basis, to ensure that these Bylaws conform with the Cooperatives values and ideologies. Should amendment be necessary, the rules set forth herein shall apply.</p>
+            <p>SECTION 2. The Bylaws of the Cooperative may be amended by a three quarters (3/4) majority vote of members at any membership meeting of the Cooperative, except as provided in Section 3 below, provided that the amendment has been submitted by the Board of Directors or submitted to the Board and signed by five members of the Cooperative, and then included in writing in the notice of the member Meeting.</p>
+            <p>SECTION 3. All decisions to amend the Articles of Incorporation or these Bylaws shall be communicated to members at least thirty (30) days in advance electronically to the email address on file for each member.</p>
+        </div>
+        <h2 class="centered-text banner-heading-18">ARTICLE IX DISSOLUTION</h2>
+        <div class="left-gentle-bracket-orange">
+            <p>SECTION 1. VOLUNTARY DISSOLUTION. At any member meeting held for the purpose of dissolving the Cooperative, the members may adopt a resolution of dissolution by the affirmative vote of not less than two-thirds (2/3rds) of the members votes cast on the proposal. Notice of the meeting shall be given to all members.</p>
+            <p>SECTION 2. INVOLUNTARY DISSOLUTION. The Board of Directors may adopt a resolution of dissolution in the following cases:</p>
+            <p>Section 2.1 When the Cooperative has been adjudged bankrupt or has made a general assignment for the benefit of creditors;</p>
+            <p>Section 2.2 By leave of the court, when a receiver has been appointed in a general creditors’ suit or in any suit in which the affairs of the Cooperative are to be wound up;</p>
+            <p>Section 2.3 When the Articles of Incorporation have been canceled for failing to file annual franchise or excise tax returns or to pay franchise and excise taxes and the Cooperative has not been nor desires to be reinstated; or</p>
+            <p>Section 2.4 When substantially all of the assets have been sold at judicial sale or otherwise. The Board of Directors shall be responsible for seeing the appropriate state filings are made and notices given.</p>
+            <p>SECTION 3. DISBURSEMENT OF ASSETS. Upon dissolution, the Board of Directors shall disburse the Cooperative’s assets in the following order; first, to pay the Cooperative’s debts and liabilities; second, to retire all equity furnished through patronage (member equity accounts) without priority on a pro rata basis; and third, to distribute the remaining property and assets of the Cooperative among the then existing members in the proportion in which the aggregate patronage of each member bears to the total patronage of all such members insofar as practical, unless otherwise provided by law.</p>
+        </div>
     </div>
 </main>
 
