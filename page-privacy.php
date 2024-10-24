@@ -63,7 +63,7 @@
     </div>
     <h2 class="banner-heading-18 centered-text">Choices You Have Regarding Your Information</h2>
     <div class="left-gentle-bracket-orange">
-      <p>All users can see, edit, or delete their personal information at any time (except you cannot change your username). If you’d like the Cooperative to remove your personal information, please write to us at info@trunkofmycar.org. We will remove your personal information within two (2) business days, and in the event you are eligible to receive a year end patronage, we will remove applicable payment details within seven (7) business days of the day we send your patronage.</p>
+      <p>All users can see, edit, or delete their personal information at any time (except you cannot change your username). If you’d like the Cooperative to remove your personal information, please write to us at <a href="mailto:info@trunkofmycar.org">info@trunkofmycar.org</a>. We will remove your personal information within two (2) business days, and in the event you are eligible to receive a year end patronage, we will remove applicable payment details within seven (7) business days of the day we send your patronage.</p>
     </div>
     <h2 class="banner-heading-18 centered-text">Changes to this Policy</h2>
     <div class="left-gentle-bracket-purple">

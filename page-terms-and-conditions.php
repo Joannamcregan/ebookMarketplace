@@ -59,7 +59,7 @@
     </div>
     <h2 class="banner-heading-18 centered-text">Governance</h2>
     <div class="left-gentle-bracket-blue">
-      <p>These Terms shall be governed by, and construed in accordance with, the laws of the State of Hawaii.</p>
+      <p>These Terms shall be governed by, and construed in accordance with, the laws of the State of Hawai`i.</p>
     </div>
     <h2 class="banner-heading-18 centered-text">Severability</h2>
     <div class="left-gentle-bracket-purple">
