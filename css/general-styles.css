@@ -1113,6 +1113,9 @@ a {
 .inline{
     display: inline;
 }
+.break-word{
+    word-wrap: break-word;
+}
 .margin-auto-block{
     margin: auto;
     display: block;
