@@ -28,6 +28,10 @@
         <h3 class="centered-text red-brown-text">Joanna Cregan</h3>
         <p class="centered-text">Founding Member. Developer.</p>
         <p>Joanna is a reader, writer, and web developer from Northeast Ohio who believes cooperative ownership can help bring about a healthier world.</p>
+        <div class="red-orange-line-break"></div>
+        <h2 class="large-heading red-brown-text yellow-shadow-heading">Our Governance</h2>
+        <p>Learn more about how our platform is run by checking out our <a href="<?php echo esc_url(site_url('/bylaws'));?>">bylaws</a>.</p>
+        <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
 	</div>
     <div class="generic-content">
         <div class="generic-wrapper-2">
