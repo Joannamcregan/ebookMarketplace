@@ -23,5 +23,5 @@
     background: #faefe3;
 }
 .mvx-profile-imgcls{
-    border: 5px solid #faefe3;
+    border: 5px solid #faefe3 !important;
 }
