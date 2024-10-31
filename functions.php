@@ -29,6 +29,7 @@ function marketplace_files(){
     wp_enqueue_style('comment-styles', get_stylesheet_directory_uri() . '/css/comment-styles.css', false, '', 'all');
     wp_enqueue_style('seventies-styles', get_stylesheet_directory_uri() . '/css/seventies-style.css', false, '', 'all');
     wp_enqueue_style('woo-styles', get_stylesheet_directory_uri() . '/css/woo-page-styles.css', false, '', 'all');
+    wp_enqueue_style('mvx-styles', get_stylesheet_directory_uri() . '/css/mvx-page-styles.css', false, '', 'all');
     wp_enqueue_style('forminator-styles', get_stylesheet_directory_uri() . '/css/forminator-styles.css', false, '', 'all');
     wp_enqueue_style('icon-styles', get_stylesheet_directory_uri() . '/css/icon-styles.css', false, '', 'all');
     wp_enqueue_style('animation-styles', get_stylesheet_directory_uri() . '/css/animation-styles.css', false, '', 'all');
@@ -425,4 +426,13 @@ function tomc_maintenance_mode() {
 }
     
 add_action('get_header', 'tomc_maintenance_mode');
+
+// restrict wp-admin access to admin only---------------------------------------------------------
+function tomc_restrict_admin(){
+    //if not administrator, kill WordPress execution and provide a message
+    if ( ! current_user_can( 'manage_options' ) ) {
+        wp_die( __('You are not allowed to access this part of the site') );
+    }
+}
+add_action( 'admin_init', 'tomc_restrict_admin', 1 );
 
