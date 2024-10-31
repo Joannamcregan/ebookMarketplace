@@ -19,3 +19,6 @@
 .mvx-middle-sec .mvx-tab-header{
     display: none !important;
 }
+.mvx_bannersec_start .mvx-banner-wrap{
+    background: #faefe3;
+}
