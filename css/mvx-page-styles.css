@@ -22,3 +22,6 @@
 .mvx_bannersec_start .mvx-banner-wrap{
     background: #faefe3;
 }
+.mvx-profile-imgcls{
+    border: 5px solid #faefe3;
+}
