@@ -16,3 +16,6 @@
         padding: 0px !important;
     }
 }
+.mvx-middle-sec .mvx-tab-header{
+    display: none !important;
+}
