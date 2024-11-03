@@ -428,11 +428,11 @@ function tomc_maintenance_mode() {
 add_action('get_header', 'tomc_maintenance_mode');
 
 // restrict wp-admin access to admin only---------------------------------------------------------
-function tomc_restrict_admin(){
-    //if not administrator, kill WordPress execution and provide a message
-    if ( ! current_user_can( 'manage_options' ) ) {
-        wp_die( __('You are not allowed to access this part of the site') );
-    }
-}
-add_action( 'admin_init', 'tomc_restrict_admin', 1 );
+// function tomc_restrict_admin(){
+//     //if not administrator, kill WordPress execution and provide a message
+//     if ( ! current_user_can( 'manage_options' ) ) {
+//         wp_die( __('You are not allowed to access this part of the site') );
+//     }
+// }
+// add_action( 'admin_init', 'tomc_restrict_admin', 1 );
 
