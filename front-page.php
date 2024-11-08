@@ -31,6 +31,8 @@
             </div>
         </div>
     </div>
+    <br>
+    <p class="centered-text"><img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="inline" /><em>buy books</em><img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /></p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf expandable-leaf">
@@ -49,7 +51,7 @@
             </div>
         <?php } else {
             ?><div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/dashboard')); ?>">
+                <a href="<?php echo esc_url(site_url('/coop')); ?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Creating within a Co-op</p>
                 </div>
@@ -65,6 +67,9 @@
             </div>
         </div>
     </div>
+    <br>
+    <p class="centered-text"><img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /><em>publish books and/or offer services</em><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" /></p>
+    <p class="centered-text"><a href="#">how to publish books</a></p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <a href="<?php echo esc_url(site_url('/own'));?>"  class="no-decoration">
@@ -74,6 +79,8 @@
             </a>
         </div>
     </div>
+    <br>
+    <p class="centered-text"><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" /><em>become a member</em><img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="inline" /></p>
 </main>
 
 <?php get_footer(); ?>
