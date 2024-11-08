@@ -51,7 +51,7 @@
             </div>
         <?php } else {
             ?><div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/coop')); ?>">
+                <a href="<?php echo esc_url(site_url('/about')); ?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Creating within a Co-op</p>
                 </div>
