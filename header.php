@@ -4,7 +4,7 @@
     <meta charset='<?php bloginfo('charset'); ?>'>
     <meta name = "viewport" content = "width=device-width", initial-scale=1>
     <script src="https://kit.fontawesome.com/9d40013081.js" crossorigin="anonymous"></script>
-    <title>Trunk of My Car</title>
+    <title><?php wp_title('|', true, 'right'); ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
