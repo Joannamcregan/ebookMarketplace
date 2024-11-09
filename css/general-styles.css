@@ -1120,9 +1120,42 @@ a {
     margin: auto;
     display: block;
 }
-.margin-20{
-    padding: 20px;
+.padding-5{
+    padding: 5px;
 }
+.reading-width{
+    display: block;
+    margin: auto;
+    width: 98%;
+}
+@media screen and (min-width: 510px) {
+    .reading-width{
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+} 
+@media screen and (min-width: 720px) {
+    .reading-width{
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+} 
+@media screen and (min-width: 900px) {
+    .reading-width{
+        display: block;
+        margin: auto;
+        width: 70%;
+    }
+} 
+@media screen and (min-width: 1500px) {
+    .reading-width{
+        display: block;
+        margin: auto;
+        width: 60%;
+    }
+} 
 .generic-content{
     text-align: left;
     margin-top: 1rem;

@@ -206,3 +206,17 @@
     padding: 5px 20px;
     border-radius: 20px;
 }
+.left-bottom-purple{
+    border-left: solid #4c0548 5px;
+    border-bottom: solid #4c0548 3px;
+    border-radius: 10px 0px 0px 25px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.left-bottom-yellow{
+    border-left: solid #f7c340 5px;
+    border-bottom: solid #f7c340 3px;
+    border-radius: 5px 0px 0px 20px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
