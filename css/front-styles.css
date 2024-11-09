@@ -108,7 +108,12 @@
     cursor: pointer;
     text-decoration: underline;
 }
-
+#instructions-non-leaf{
+    width: 100%;
+    color: black;
+    background: #f6ece1;
+    border-radius: 30px 30px 10px 10px;
+}
 @media screen and (max-width: 1000px){
     .leaf-wrapper{
         width: 65vw;

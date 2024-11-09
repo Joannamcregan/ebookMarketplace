@@ -70,7 +70,7 @@
                 </div>
                 </a>
             </div>
-            <p class="centered-text"><a href="#">how to publish books</a></p>
+            <p class="centered-text" id="instructions-non-leaf">Check out our <a href="#">vendor roadmap</a> for a quick guide to offering books and services.</p>
         </div>
     </div>
     <div class="leaf-section">
