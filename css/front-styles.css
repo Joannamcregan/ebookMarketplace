@@ -29,12 +29,25 @@
     color: #602f32;
     font-size: 22;
 }
+.leaf-text-large{
+    width: 100%;
+    font-size: 32px;
+    display: block;
+    margin: 2px;
+    text-decoration: underline;
+}
+.leaf-text-small{
+    width: 100%;
+    font-size: 16px;
+    display: block;
+    margin: 2px;
+}
 @media screen and (max-width: 330px) {
 }
 .leaf-section{
     min-height: fit-content;    
     color: #f6ece1;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 .leaf-wrapper{
     width: 52vw;
@@ -50,6 +63,7 @@
     border-radius: 50% 0;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     color: white;

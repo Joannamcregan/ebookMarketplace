@@ -11,7 +11,10 @@
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf expandable-leaf">
-                <p>Read</p>
+                <div>
+                    <p class="leaf-text-large">Read</p>
+                    <p class="leaf-text-small"><em class="no-decoration">buy books</em></p>
+                </div>
             </div>
         </div>
         <div class="sub-leaf-section not-displayed">
@@ -31,12 +34,14 @@
             </div>
         </div>
     </div>
-    <br>
-    <p class="centered-text"><img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="inline" /><em>buy books</em><img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /></p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf expandable-leaf">
-                <p>Create</p>
+                <div>
+                    <p class="leaf-text-large">Create</p>
+                    <p class="leaf-text-small"><em class="no-decoration">publish books</em></p>
+                    <p class="leaf-text-small"><em class="no-decoration">offer services</em></p>
+                </div>
             </div>
         </div>
         <div class="sub-leaf-section not-displayed">
@@ -65,22 +70,21 @@
                 </div>
                 </a>
             </div>
+            <p class="centered-text"><a href="#">how to publish books</a></p>
         </div>
     </div>
-    <br>
-    <p class="centered-text"><img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /><em>publish books and/or offer services</em><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" /></p>
-    <p class="centered-text"><a href="#">how to publish books</a></p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <a href="<?php echo esc_url(site_url('/own'));?>"  class="no-decoration">
             <div class="leaf orange-leaf">
-                <p>Own</p>
+                <div>
+                    <p class="leaf-text-large">Own</p>
+                    <p class="leaf-text-small"><em class="no-decoration">become a member</em></p>
+                </div>
             </div>
             </a>
         </div>
     </div>
-    <br>
-    <p class="centered-text"><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" /><em>become a member</em><img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="inline" /></p>
 </main>
 
 <?php get_footer(); ?>
