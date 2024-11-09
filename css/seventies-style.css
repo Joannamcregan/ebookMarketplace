@@ -17,7 +17,7 @@
     border-left: solid #3c7f72 15px;
     border-radius: 30px 5px 30px 5px;
     background: rgba(60, 127, 114, 0.2);
-    padding: 20px 50px;
+    padding: 10px 20px 20px 20px;
 }
 .background-stripe-1{
     border-top: solid #992800 7px;
@@ -26,7 +26,7 @@
     border-left: solid #992800 15px;
     border-radius: 30px 5px 30px 5px;
     background: rgba(153, 40, 0, 0.2);
-    padding: 10px 50px 20px 50px;
+    padding: 10px 20px 20px 20px;
 }
 .background-stripe-2{
     border-top: solid #d34a24 7px;
@@ -35,7 +35,7 @@
     border-left: solid #d34a24 15px;
     border-radius: 30px 5px 30px 5px;
     background: rgba(211, 74, 36, 0.2);
-    padding: 10px 50px 20px 50px;
+    padding: 10px 20px 20px 20px;
 }
 .background-stripe-3{
     border-top: solid #d38124 7px;
@@ -44,7 +44,7 @@
     border-left: solid #d38124 15px;
     border-radius: 30px 5px 30px 5px;
     background: rgba(211, 129, 36, 0.2);
-    padding: 10px 50px 20px 50px;
+    padding: 10px 20px 20px 20px;
 }
 .background-stripe-4{
     border-top: solid #ffaf00 7px;
@@ -53,7 +53,7 @@
     border-left: solid #ffaf00 15px;
     border-radius: 30px 5px 30px 5px;
     background: rgba(255, 175, 0, 0.2);
-    padding: 10px 50px 20px 50px;
+    padding: 10px 20px 20px 20px;
 }
 .background-stripe-5{
     border-top: solid #969200 7px;
@@ -62,7 +62,7 @@
     border-left: solid #969200 15px;
     border-radius: 30px 5px 30px 5px;
     background: rgba(150, 146, 0, 0.2);
-    padding: 10px 50px 20px 50px;
+    padding: 10px 20px 20px 20px;
 }
 .background-container-1{
     border-top: solid #992800 7px;
