@@ -43,10 +43,7 @@ if ($default_types && !empty($default_types)) {
     <form id="mvx-edit-product-form" class="woocommerce form-horizontal" method="post">
         <?php do_action( 'mvx_add_product_form_start' ); ?>
         <!-- Top product highlight -->
-        <div class="tomc--special-instructions col-md-12">
-            <!-- product-level short descriptions removed from groups because we have similarly named fields at the book level -->
-        </div>
-        <br><br>
+        <!-- product-level short descriptions removed from groups because we have similarly named fields at the book level -->
         <?php
         $MVX->template->get_template( 'vendor-dashboard/product-manager/views/html-product-highlights.php', array( 'self' => $self, 'product_object' => $product_object, 'post' => $post, 'is_update' => $is_update ) );
         $image_size = apply_filters('mvx_product_uploaded_image_size', 'medium');
