@@ -52,3 +52,13 @@
         display: block;
     }
 }
+.orange-bordered-img{
+    display: block;
+    margin: auto;
+    border: solid #e44e2d 5px;
+}
+.yellow-bordered-img{
+    display: block;
+    margin: auto;
+    border: solid #f7c340 5px;
+}
