@@ -44,12 +44,6 @@ if ($default_types && !empty($default_types)) {
         <?php do_action( 'mvx_add_product_form_start' ); ?>
         <!-- Top product highlight -->
         <div class="tomc--special-instructions col-md-12">
-            <p><strong>First time rolling out a book with us? Here's a mini roadmap...</strong></p>
-            <p><strong>Want to add your ISBN?</strong> <strong>If you already obtained an ISBN elsewhere, </strong>select ISBN from the GTIN dropdown menu, then paste your number into the textbox to the left of it. <strong>If you would like to obtain an ISBN through our ISBN registration service, </strong>first upload your product, leaving the ISBN field blank for now. After uploading your book, exit the vendor portal and visit the "add book info" link in the main menu to enter information that will help readers discover your work. Then, go to the "ISBNs" page to purchase our ISBN registration service, which comes with a free ISBN.</p>
-            <p><strong>Want to add a description or excerpt for your product?</strong> Once you've uploaded your ebook and/or audiobook product files, you can link them to a searchable book and add an excerpt, description, character identities, trigger warnings, and more details that will help the right readers discover your book! From the main menu, just choose "add book info" to create a new searchable book, or go to "books by me" to add details to an existing searchable book. <em>Note: if you offer the same book in multiple formats, we suggest putting the word "ebook" or "audiobook" in the product title to differentiate them.</em></p>
-            <p><strong>Want to offer a preview for your audiobook?</strong> Add your file to the product gallery.</p>
-            <p><strong>Wondering how to add your book cover?</strong> Use the "click to upload image" option.</p>
-            <p><strong>Wondering where to add your ebook or audiobook file?</strong> Check the box next to the word "downloadable" in the Product Type section of this page. An "add file" button will appear below the pricing fields.</p>
             <!-- product-level short descriptions removed from groups because we have similarly named fields at the book level -->
         </div>
         <br><br>
