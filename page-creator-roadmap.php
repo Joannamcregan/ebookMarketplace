@@ -1,20 +1,26 @@
 <?php get_header();
 
 ?><main>
-    <div class="banner"><h1 class="centered-text banner-heading-36">Creator Roadmap</h1></div>
-    <div class="reading-width">
-        <h2 class="centered-text padding-5">How to Sell Books with Us</h2>
-        <div class="left-bottom-purple">
-            <div class="left-bottom-yellow">
-                <p><strong>Step 1. Upload your products.</strong></p>
-                <p>Use the <a href="<?php echo esc_url(site_url('/dashboard'));?>">Vendor Portal</a> to upload your e-book or audiobook file, upload your cover art, and set your product price. If you offer the same book in both e-book and audiobook formats, upload each as a separate product.</p>
-                <p>Through the Vendor Portal, you can also replace product files, adjust prices, set sales prices for certain dates, and monitor your product sales.</p>
-            </div>
+    <div class="banner"><h1 class="centered-text banner-heading-38">Creator Roadmap</h1></div>
+    <br>
+    <span class="purple-span" id="sell-books-span">How to Sell Books</span>
+    <div class="centered-90vw">
+        <div class="left-gentle-bracket-orange">
+            <p>Step 1. Add product(s) in the <strong>creator dashboard</strong></p>
+            <ul>
+                <li>If you're selling the same book in multiple formats (such as e-book, audiobook, and paperback) add a separate product for each format.</li>
+            </ul>
+            <span class="orange-rectangle-span">How to add an e-book</span>
+            <span class="blue-rectangle-span">How to add an audiobook</span>
+            <span class="purple-rectangle-span">How to add a physical book</span>
         </div>
-        <p><strong>Step 2. Enter information about your book.</strong></p>
-        <p>Use the <a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add Book Info</a> page to enter information that will help readers discover your book. You do not need to enter this information twice if you sell your book in both e-book and audiobook format.</p>
-        <p>To edit book information, use the <a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a> page.</p>
     </div>
+    <div class="centered-90vw">
+        <div class="left-gentle-bracket-purple">
+            <p>Step 2. <strong>Add book info</strong> to help readers find your book</p>
+        </div>
+    </div>
+    <span class="blue-span" id="sell-products-span">How to Sell Services</span>
 </main>
 
 <?php get_footer();

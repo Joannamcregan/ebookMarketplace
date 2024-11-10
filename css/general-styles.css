@@ -324,6 +324,9 @@ span.bbp-admin-links a{
 .banner-heading-40{
     font-size: 40;
 }
+.banner-heading-38{
+    font-size: 38;
+}
 .banner-heading-36{
     font-size: 36;
 }
@@ -1123,10 +1126,10 @@ a {
 .padding-5{
     padding: 5px;
 }
-.reading-width{
+.centered-90vw{
     display: block;
     margin: auto;
-    width: 98%;
+    width: 90vw;
 }
 @media screen and (min-width: 510px) {
     .reading-width{
@@ -1294,6 +1297,37 @@ a {
     margin: 30px auto;
     cursor: pointer;
     display: block;
+}
+.orange-rectangle-span{
+    background-color: #e44e2d;
+    color: white;
+    font-size: 16;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 10px;
+}
+.purple-rectangle-span{
+    background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 10px;
+}
+.blue-rectangle-span{
+    background-color: #0c698e;
+    text-shadow: 0px 0px 1px black;
+    color: white;
+    font-size: 16;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 10px;
 }
 .purple-span{
     background-color: #4c0548;
