@@ -62,3 +62,27 @@
     margin: auto;
     border: solid #f7c340 5px;
 }
+.blue-bordered-img{
+    display: block;
+    margin: auto;
+    border: solid #0c6980 5px;
+}
+.purple-bordered-img{
+    display: block;
+    margin: auto;
+    border: solid #4c0548 5px;
+}
+@media screen and (max-width: 365px) {
+    .orange-bordered-img{
+        max-width: 260px;
+    }
+    .yellow-bordered-img{
+        max-width: 260px;
+    }
+    .blue-bordered-img{
+        max-width: 260px;
+    }
+    .purple-bordered-img{
+        max-width: 260px;
+    }
+} 
