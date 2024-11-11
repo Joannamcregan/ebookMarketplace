@@ -223,7 +223,8 @@ if ($default_types && !empty($default_types)) {
         </div>
 
         <div class="row">
-            <div class="col-md-8">
+            <!-- <div class="col-md-8"> -->
+            <div>
                 <?php do_action( 'mvx_after_product_excerpt_metabox_panel', $post->ID ); ?>
                 <?php do_action( 'mvx_frontend_dashboard_after_product_excerpt_metabox_panel', $post->ID ); ?>
                 
@@ -278,15 +279,14 @@ if ($default_types && !empty($default_types)) {
                 <?php do_action( 'mvx_after_product_note_metabox_panel', $post->ID ); ?>
                 <?php } ?>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4"> -->
+            <div>
                 <?php if( get_mvx_vendor_settings('category_pyramid_guide', 'settings_general') == false ) :
                 $product_categories = mvx_get_product_terms_HTML( 'product_cat', $post->ID, apply_filters( 'mvx_vendor_can_add_product_category', false, get_current_user_id() ) ); ?>
                 <?php if ( $product_categories ) : ?>
                     <div class="panel panel-default pannel-outer-heading">
-                        <div class="panel-heading d-flex">
-                            <h3 class="pull-left"><?php esc_html_e( 'Product Types (please select only one per product)', 'multivendorx' ); ?></h3>
-                        </div>
                         <div class="panel-body panel-content-padding form-group-wrapper"> 
+                            <h3><?php esc_html_e( 'Product Types (please select only one per product)', 'multivendorx' ); ?></h3>
                             <?php
                             echo $product_categories;
                             ?>

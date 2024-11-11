@@ -126,7 +126,7 @@ global $MVX;
                         </div>  
                     </div>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label class="control-label col-sm-3 col-md-3" for="_download_limit">
                         <?php esc_html_e( 'Download limit', 'multivendorx' ); ?>
                         <span class="img_tip" data-desc="<?php esc_attr_e( 'Leave blank for unlimited re-downloads.', 'multivendorx' ) ?>"></span>
@@ -143,7 +143,7 @@ global $MVX;
                     <div class="col-md-6 col-sm-9">
                         <input class="form-control" type="text" placeholder="<?php esc_attr_e( 'Never', 'multivendorx' ); ?>" id="_download_expiry" name="_download_expiry" value="<?php echo -1 === $product_object->get_download_expiry( 'edit' ) ? '' : (isset($_POST['_download_expiry']) ? wc_clean($_POST['_download_expiry']) : $product_object->get_download_expiry( 'edit' )); ?>" />
                     </div>
-                </div> 
+                </div>  -->
                 <?php do_action( 'mvx_frontend_dashboard_product_options_download', $post->ID, $product_object, $post ); ?>
             </div>
         <?php endif; ?>

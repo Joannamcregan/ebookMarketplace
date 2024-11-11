@@ -986,7 +986,7 @@ a {
     display: block;
 }
 .flex{
-    display: flex;
+    display: flex !important;
 }
 .justify-content-center{
     justify-content: center;

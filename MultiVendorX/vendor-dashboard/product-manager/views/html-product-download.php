@@ -10,7 +10,7 @@
  */
 defined( 'ABSPATH' ) || exit;
 ?>
-<tr>
+<tr class="turned-over-table">
 	<!-- <td class="sort"><span class="sortable-icon"></span></td> -->
 	<td class="file_name">
 		<input type="text" class="input_text form-control" placeholder="<?php esc_attr_e( 'File name', 'multivendorx' ); ?>" name="_wc_file_names[]" value="<?php echo esc_attr( $file['name'] ); ?>" />
