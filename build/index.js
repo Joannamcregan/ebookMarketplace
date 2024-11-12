@@ -72,6 +72,69 @@ class FrontDisplay {
 
 /***/ }),
 
+/***/ "./src/modules/InstructionsDisplay.js":
+/*!********************************************!*\
+  !*** ./src/modules/InstructionsDisplay.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class Instructions {
+  constructor() {
+    this.sellBooksSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#sellBooksSpan');
+    this.sellServicesSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#sellServicesSpan');
+    this.sellBooksSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#sellBooksSection');
+    this.sellServicesSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#sellServicesSection');
+    this.ebookProductsSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#ebookProductsSpan');
+    this.ebookProductsSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#ebookProductsSection');
+    this.audiobookProductsSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#audiobookProductsSpan');
+    this.audiobookProductsSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#audiobookProductsSection');
+    this.physicalBookProductSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#physicalBookProductSpan');
+    this.physicalBookProductSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#physicalBookProductSection');
+    this.events();
+  }
+  events() {
+    this.sellBooksSpan.on('click', this.toggleSellBooks.bind(this));
+    this.sellServicesSpan.on('click', this.toggleSellServices.bind(this));
+    this.ebookProductsSpan.one('click', this.toggleEbookProducts.bind(this));
+    this.audiobookProductsSpan.one('click', this.toggleAudiobookProducts.bind(this));
+    this.physicalBookProductSpan.one('click', this.togglePhysicalBookProducts.bind(this));
+  }
+  toggleSellBooks() {
+    this.sellBooksSection.toggleClass('hidden');
+    this.sellBooksSpan.toggleClass('purple-span');
+    this.sellBooksSpan.toggleClass('hollow-purple-span');
+  }
+  toggleSellServices() {
+    this.sellServicesSection.toggleClass('hidden');
+    this.sellServicesSpan.toggleClass('blue-span');
+    this.sellServicesSpan.toggleClass('hollow-blue-span');
+  }
+  toggleEbookProducts() {
+    this.ebookProductsSection.toggleClass('hidden');
+    this.ebookProductsSpan.toggleClass('hollow-orange-button');
+  }
+  toggleAudiobookProducts() {
+    this.audiobookProductsSection.toggleClass('hidden');
+    this.audiobookProductsSpan.toggleClass('blue-button');
+    this.audiobookProductsSpan.toggleClass('hollow-blue-button');
+  }
+  togglePhysicalBookProducts() {
+    this.physicalBookProductSection.toggleClass('hidden');
+    this.physicalBookProductSpan.toggleClass('purple-button');
+    this.physicalBookProductSpan.toggleClass('hollow-purple-button');
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Instructions);
+
+/***/ }),
+
 /***/ "./src/modules/LoginPage.js":
 /*!**********************************!*\
   !*** ./src/modules/LoginPage.js ***!
@@ -714,7 +777,7 @@ module.exports = window["jQuery"];
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -726,6 +789,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_FrontDisplay__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/FrontDisplay */ "./src/modules/FrontDisplay.js");
 /* harmony import */ var _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ReaderSettings */ "./src/modules/ReaderSettings.js");
 /* harmony import */ var _modules_LoginPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/LoginPage */ "./src/modules/LoginPage.js");
+/* harmony import */ var _modules_InstructionsDisplay__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/InstructionsDisplay */ "./src/modules/InstructionsDisplay.js");
+
 
 
 
@@ -738,6 +803,7 @@ const categoryDisplay = new _modules_CategoryDisplay__WEBPACK_IMPORTED_MODULE_2_
 const frontDisplay = new _modules_FrontDisplay__WEBPACK_IMPORTED_MODULE_3__["default"]();
 const readerSettings = new _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__["default"]();
 const loginPage = new _modules_LoginPage__WEBPACK_IMPORTED_MODULE_5__["default"]();
+const instructions = new _modules_InstructionsDisplay__WEBPACK_IMPORTED_MODULE_6__["default"]();
 })();
 
 /******/ })()
