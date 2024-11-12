@@ -98,13 +98,16 @@ class Instructions {
     this.physicalBookProductSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#physicalBookProductSpan');
     this.physicalBookProductSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#physicalBookProductSection');
     this.events();
+    this.ebookSectionShowing = false;
+    this.audiobookSectionShowing = false;
+    this.physicalBookSectionShowing = false;
   }
   events() {
     this.sellBooksSpan.on('click', this.toggleSellBooks.bind(this));
     this.sellServicesSpan.on('click', this.toggleSellServices.bind(this));
-    this.ebookProductsSpan.one('click', this.toggleEbookProducts.bind(this));
-    this.audiobookProductsSpan.one('click', this.toggleAudiobookProducts.bind(this));
-    this.physicalBookProductSpan.one('click', this.togglePhysicalBookProducts.bind(this));
+    this.ebookProductsSpan.on('click', this.toggleEbookProducts.bind(this));
+    this.audiobookProductsSpan.on('click', this.toggleAudiobookProducts.bind(this));
+    this.physicalBookProductSpan.on('click', this.togglePhysicalBookProducts.bind(this));
   }
   toggleSellBooks() {
     this.sellBooksSection.toggleClass('hidden');
@@ -118,6 +121,7 @@ class Instructions {
   }
   toggleEbookProducts() {
     this.ebookProductsSection.toggleClass('hidden');
+    this.ebookProductsSpan.toggleClass('orange-button');
     this.ebookProductsSpan.toggleClass('hollow-orange-button');
   }
   toggleAudiobookProducts() {

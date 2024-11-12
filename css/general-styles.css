@@ -1278,9 +1278,31 @@ a {
     cursor: pointer;
     display: block;
 }
+.hollow-blue-button{
+    background-color: white;
+    color: #0c6980;
+    border: solid #0c6980 5px;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    margin: 30px auto;
+    cursor: pointer;
+    display: block;
+}
 .purple-button{
     background-color: #4c0548;
     color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    margin: 30px auto;
+    cursor: pointer;
+    display: block;
+}
+.hollow-purple-button{
+    background-color: white;
+    color: #4c0548;
+    border: solid #4c0548 5px;
     font-size: 16;
     border-radius: 45px;
     padding: 15px 30px;
@@ -1298,7 +1320,18 @@ a {
     cursor: pointer;
     display: block;
 }
-.orange-rectangle-span{
+.hollow-orange-button{
+    background-color: white;
+    color: #e44e2d;
+    border: solid #e44e2d 5px;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    margin: 30px auto;
+    cursor: pointer;
+    display: block;
+}
+/* .orange-rectangle-span{
     background-color: #e44e2d;
     color: white;
     font-size: 16;
@@ -1329,6 +1362,39 @@ a {
     width: fit-content;
     margin: 10px;
 }
+.hollow-orange-rectangle-span{
+    background: white;
+    border: solid #e44e2d 5px;
+    color: #e44e2d;
+    font-size: 16;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 10px;
+}
+.hollow-purple-rectangle-span{
+    background: white;
+    border: solid #4c0548 5px;
+    color: #4c0548;
+    font-size: 16;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 10px;
+}
+.hollow-blue-rectangle-span{
+    background: white;
+    border: solid #0c698e 5px;
+    color: #0c698e;
+    font-size: 16;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 10px;
+} */
 .purple-span{
     background-color: #4c0548;
     color: white;
