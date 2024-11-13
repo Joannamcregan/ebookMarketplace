@@ -4,20 +4,20 @@
     <div class="banner"><h1 class="centered-text banner-heading-54"><?php echo get_the_title(); ?></div>
     <br>
     <div class="generic-content two-thirds-screen">
-        <h2 class="right-text-no-margin red-brown-text tankindred-text yellow-shadow-heading larger-header">Self-Publishing is a $1.25B industry. Authors take home less than half of that amount. And are subjected to unfair terms & conditions.</h2>
-        <h2 class="right-text-no-margin red-brown-text tankindred-text yellow-shadow-heading larger-header">We exist to change that.</h2>
-        <div class="orange-line-break"></div>
-        <p><a href="https://wordsrated.com/self-published-book-sales-statistics/" target="_blank">Since 2021, self-published authors have generated over a billion dollars in sales per year, while taking home less than a fair share of those dollars.</a> Exploitation stories don't end there. There's the one about <a href="https://goodereader.com/blog/kindle/new-kindle-ebook-return-policy-to-take-effect-at-the-end-of-january" target="_blank">digital returns</a>... Which, they’ve admittedly updated, but eBooks are the only digital items that the behemoth allows. But there’s also that in order to gain the highest return on publication, self-publishers <a href="https://authorlink.com/writing-insights/if-you-self-publish-amazon-who-owns-copyright-2021/" target="_blank">must contract their right to sell elsewhere away</a>… And even though there are now “limits” on the number of books posted per day on that one site… AI is something we’re a bit concerned about. Not just for generated material. But also for <a href="https://www.plagiarismtoday.com/2023/08/09/amazon-and-the-problem-of-reverse-plagiarism/" target="_blank">plagiarism</a>. We are sure there are many more ways self-publishing writers are being exploited. And are committed to doing something about it…</p>
-        <p>We believe the time has come for creators - writers, digital cover designers, editors, and small presses to join together with readers to build a community marketplace that we own. When we own, we set the terms for how we are paid. We determine if and how works can be returned. We decide if we want to limit our ability to publish our works elsewhere. Our voices matter. It’s time we bring them together. We are building a cooperative enterprise that serves to move us away from exploitative corporations to community supported publishing.</p>
-        <p>Trunk of My Car is a nod to the indie authors who came before us. Pre-internet warriors. The ones who loaded up their cars and posted up outside grocery stores and shopping malls. Those who kept their sales revenue in their communities. We are because they were.</p>
+        
+        <p>TOMC cooperative is a nod to pre-internet authors who drove from city to city and posted up in front of grocery stores and shopping centers and sold books from the trunks of their cars. Choosing an alternative to big publishing houses, these independent authors kept the bulk of what they earned in their communities and more often than not, relied on these communities to edit, create covers, print and market their work. There’s no doubt that the internet has changed how we both buy and publish books, especially self-published works. Several platforms owned by behemoth corporations exist to bring all of the car trunks filled with books written by independent authors directly to you, wherever you are; which we admit, is a much better situation for the planet. And because of those platforms, self-publishing has been a $1.25 billion dollar industry since 2021. But authors have received less than half of that, many employees of these behemoth corporations are paid less than living wages and are being replaced by AI, and readers, well readers really have no say in any of it, despite being a necessary component of the industry.</p>
+        <p><strong>We exist to change that.</strong></p>
+        <p>Combining spiritual wisdom, natural law and business know-how, we are transforming the soul of self-publishing, turning self-publishing into community-publishing; by redistributing resources from those who take to those who actually create – both the books and the industry. We offer ownership to the authors and the creators who make the art, to the workers who keep the machine running, and to the readers who make the game what it is – all of us. We are confident that collective action and shared ownership is how we retrieve power from a rigged system created to take more than it gives.</p>
         <p><strong>We are the ones we’ve been writing for.</strong></p>
-        <div class="red-orange-line-break"></div>
+        <div class="orange-line-break"></div>
+
         <h2 class="large-heading red-brown-text yellow-shadow-heading">Why a Cooperative?</h2>
         <p>The cooperative business model is one that is rooted in community. It’s where we, the people, come together for a common cause and work together to be a solution. Cooperatives exist in every industry. Retail stores, utilities, even restaurants and other services are applying this model that gives the people who use or operate it a say in how they do what they do. We believe that cooperatives are a step away from a capitalistic system that exploits and oppresses individuals, communities, and ultimately, the planet. Want to learn more about cooperatives? Check out <a href="https://ncbaclusa.coop/resources/what-is-a-co-op/" target="_blank">this page</a> the good folks at NCBA put together that breaks this business model down.</p>
         <div class="red-orange-line-break"></div>
         <h2 class="large-heading red-brown-text yellow-shadow-heading">What's In It for We?</h2>
         <p>Shared ownership. Democratic decision making. Collective support. When we move cooperatively, we exchange ‘me’ for ‘we.’ Trunk of My Car Cooperative is a Hawai`i registered multi-stakeholder platform cooperative owned by creators, consumers, and workers. We are not just a marketplace to sell books. We are building sustainable community. We are working together to share knowledge, tools, craft, and space to make all of us better writers, readers, and humans. We will share workshops, craft talks, knowledge based offerings, book clubs, and book swaps - whatever you, our member-owners want to share in community. </p>
         <p>Sounds like something you want to be a part of? <a href="<?php echo esc_url(site_url('/own'));?>">Join us!</a><p>
+        
         <div class="red-orange-line-break"></div>
         <h2 class="large-heading red-brown-text yellow-shadow-heading">Our Team</h2>
         <img class="circle-bio-pic" alt="Black woman expressing joy" src="<?php echo get_theme_file_uri('/images/Zia.jpg'); ?>" />
@@ -29,18 +29,10 @@
         <p class="centered-text">Founding Member. Developer.</p>
         <p>Joanna is a reader, writer, and web developer from Northeast Ohio who believes cooperative ownership can help bring about a healthier world.</p>
         <div class="red-orange-line-break"></div>
-        <h2 class="large-heading red-brown-text yellow-shadow-heading">Our Governance</h2>
-        <p>Learn more about how our platform is run by checking out our <a href="<?php echo esc_url(site_url('/bylaws'));?>">bylaws</a>.</p>
-        <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
-	</div>
-    <div class="generic-content">
-        <div class="generic-wrapper-2">
-            <div class="generic-wrapper-1">
-                <div class="generic-wrapper-0">
-                    <p>In solidarity with our Palestinian family, we’ve applied <a href="https://bdsmovement.net/" target="_blank">Boycott Divestment & Sanctions</a> principles in the building of our platform, meaning: we’ve done our best to ensure that we are not using technology or other services owned and/or operated by individuals and/or organizations that are located in or that publicly support the apartheid state of Israel. Additionally, our cooperative supports human and natural rights for all living creatures of the planet and is committed to sustainable practices that honor such rights and seek to end oppression and exploitation of the same. This means we encourage use of refurbished e-readers and other electronics to reduce/eliminate exploitative mining of precious resources from the African continent and all of its nations and we also encourage barter and trade among our members to reduce waste. We invite you to join us where you are and with what you can.</p>
-                </div>
-            </div>
-        </div>
+                    
+        <p>In solidarity with our Palestinian family, we’ve applied <a href="https://bdsmovement.net/" target="_blank">Boycott Divestment & Sanctions</a> principles in the building of our platform, meaning: we’ve done our best to ensure that we are not using technology or other services owned and/or operated by individuals and/or organizations that are located in or that publicly support the apartheid state of Israel.</p>
+        <p>Additionally, TOMC Cooperative honors and values the natural rights of all living creatures, including the planet Earth. We incorporate sustainable business practices that align with these values, such as encouraging the use of used and refurbished e-readers and other electronics instead of buying new, and recycling those that cannot be refurbished or resold. We believe that planetary resources are sacred and should be honored as such; actions such as recycling and reusing can help to reduce exploitative mining, the source of which has contributed to centuries of unspeakable horrors and conflicts across the African continent. We also encourage bartering and trade of all items between members to reduce waste and will operate an ongoing Offers & Needs Market here on our platform. We invite you to join us where you are with what you are able.</p>
+
     </div>
 </main>
 
