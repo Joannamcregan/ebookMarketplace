@@ -1716,11 +1716,9 @@ a {
     text-align: center;
 }
 
-/* Bumper Sticker Styles----------------------------------------------------------------------------------*/
-.bumper-stickers {
-    display: flex;
-    margin: 20px 40px;
+.opacity-100{
+    opacity: 1 !important;
 }
-.rectangle-sticker {
-    width: 200px;
+.opacity-30{
+    opacity: 0.3 !important;
 }

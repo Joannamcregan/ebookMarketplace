@@ -37,7 +37,7 @@
   <i class="fa fa-window-close menu-overlay__close" aria-label="close overlay"></i>
   <nav aria-label="mobile navigation bar">
       <ul class="menu-overlay-list">
-            <li><a href="<?php echo esc_url(site_url('/newly-added-books'));?>">New Books</a></li>
+            <li><a href="<?php echo esc_url(site_url('/newly-added-books'));?>">Bookshop</a></li>
             <li><a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Browse Genres</a></li>
             <?php if (is_user_logged_in()){
                   ?><li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a></li>
