@@ -92,6 +92,14 @@
     margin-right: 10vw;
     padding: 20px;
 } */
+.woocommerce-product-gallery--with-images{
+    margin-right: 5px;
+    background: #fcf8f3;
+    border-right: solid #faefe3 5px;
+    border-bottom: solid #faefe3 15px;
+    border-radius: 0 0 55px 25px;
+    padding: 20px 15px 20px 20px;
+}
 .product-page-content .woocommerce-product-gallery__wrapper img{
     width: 300px;
     height: auto;
