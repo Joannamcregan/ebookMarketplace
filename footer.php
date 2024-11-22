@@ -62,7 +62,7 @@
                   $tomc_username = $tomc_user->user_login;
                   if (in_array( 'dc_vendor', (array) $user->roles )){
                         ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add Book Info</a>
-                        <li><a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a></li>
+                        <li><a href="<?php echo esc_url(site_url('/my-books'));?>">Edit Book Info</a></li>
                   <?php }
                   ?><li><a href="<?php echo esc_url(site_url('/my-account/downloads'));?>">My Book Downloads</a></li>
             <?php } ?>          

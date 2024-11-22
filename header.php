@@ -35,7 +35,7 @@
         <?php $user = wp_get_current_user();
         if (in_array( 'dc_vendor', (array) $user->roles )){
           ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add Book Info</a>
-          <a href="<?php echo esc_url(site_url('/my-books'));?>">Books By Me</a>
+          <a href="<?php echo esc_url(site_url('/my-books'));?>">Edit Book Info</a>
         <?php }
       } else {
         ?><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a>
