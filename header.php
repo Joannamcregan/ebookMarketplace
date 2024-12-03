@@ -27,7 +27,7 @@
 <div class="header--main">      
   <nav class="main-nav" aria-label="main navigation bar top row">  
     <div class="nav-container site-header__menu group">    
-      <a href="<?php echo esc_url(site_url('/newly-added-books'));?>">Shop</a>
+      <a href="<?php echo esc_url(site_url('/coop-shop'));?>">Shop</a>
       <a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Genres</a> 
       <?php if (is_user_logged_in()){ 
         ?><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a>
@@ -46,24 +46,20 @@
 <div class="header--sub">      
   <nav class="main-nav" aria-label="main navigation bar bottom row">  
     <div class="nav-container site-header__menu group">   
+      <a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a>
+      <a href="<?php echo esc_url(site_url('/services'));?>">Services</a>
       <?php if (is_user_logged_in()){
-        $user = wp_get_current_user();
-        if (in_array( 'dc_vendor', (array) $user->roles )){
-          ?><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a>
-        <?php }
-        // $tomc_user = get_userdata(get_current_user_id());
         $user = wp_get_current_user();
         $tomc_user = get_userdata($user->ID);
         $tomc_username = $tomc_user->user_login;
-        ?><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">
-          My Profile
-        </a>
-      <?php }
-      ?><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a>
-      <a href="<?php echo esc_url(site_url('/services'));?>">Creative Services</a>
-      <?php if (is_user_logged_in()){ ?><a href="<?php echo esc_url(site_url('/discussions')); ?>">Discussions</a><?php } ?>
-      <!-- <a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a> -->
-    </div>
+        ?><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">My Profile</a>
+        <a href="<?php echo esc_url(site_url('/discussions')); ?>">Discussions</a>
+        <?php if (in_array( 'dc_vendor', (array) $user->roles )){
+          ?><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a>
+          <a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>">Add a Product</a>
+        <?php }
+      }
+    ?></div>
   </nav>
 </div>
 

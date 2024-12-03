@@ -37,20 +37,21 @@
   <i class="fa fa-window-close menu-overlay__close" aria-label="close overlay"></i>
   <nav aria-label="mobile navigation bar">
       <ul class="menu-overlay-list">
-            <li><a href="<?php echo esc_url(site_url('/newly-added-books'));?>">Shop</a></li>
+            <li><a href="<?php echo esc_url(site_url('/coop-shop'));?>">Shop</a></li>
             <li><a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Browse Genres</a></li>
             <?php if (is_user_logged_in()){
                   ?><li><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a></li>
                   <?php $user = wp_get_current_user();
-                  if (in_array( 'dc_vendor', (array) $user->roles )){
-                  ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a></li>
-                  <?php }
                   // $tomc_user = get_userdata(get_current_user_id());
                   $user = wp_get_current_user();
                   $tomc_user = get_userdata($user->ID);
                   $tomc_username = $tomc_user->user_login;
                   ?><li><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">My Profile</a></li>
-            <?php } else {
+                  <?php if (in_array( 'dc_vendor', (array) $user->roles )){
+                        ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a></li>
+                        <li><a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>">Add a Product</a></li>
+                  <?php }
+            } else {
                   ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
             <?php }
       ?></ul>
