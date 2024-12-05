@@ -552,7 +552,7 @@ class Search {
               this.resultsDiv.html("");
               for (let i = 0; i < response.length; i++) {
                 if (response[i]['resulttype'] === 'author') {
-                  let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-book-organization--new-book-1').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                  let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                   let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text small-heading');
                   let newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').html('Author ');
                   newTitle.append(newSpan);
@@ -562,7 +562,7 @@ class Search {
                   this.resultsDiv.append(newDiv);
                 } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default().inArray(response[i]['id'], alreadyAddedIds) > -1) {
                   let newLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name']);
+                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name'].slice(0, -1));
                   newLink.append(newFormat);
                   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-browse-genres--results--book-' + response[i]['id']).children('.tomc-browse--search-result-bottom-section').append(newLink);
                 } else if (response[i]['resulttype'] === 'book') {
@@ -576,7 +576,7 @@ class Search {
                   newBottomSection.append(newDescription);
                   newBottomSection.append('<h4 class="centered-text">available in</h4>');
                   let newLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name']);
+                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name'].slice(0, -1));
                   newLink.append(newFormat);
                   newBottomSection.append(newLink);
                   newDiv.append(newBottomSection);
@@ -595,7 +595,7 @@ class Search {
                   newBottomSection.append(newDescription);
                   newBottomSection.append('<h4 class="centered-text">available in</h4>');
                   let newLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name']);
+                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name'].slice(0, -1));
                   newLink.append(newFormat);
                   newBottomSection.append(newLink);
                   newDiv.append(newBottomSection);
@@ -614,7 +614,7 @@ class Search {
                   newBottomSection.append(newDescription);
                   newBottomSection.append('<h4 class="centered-text">available in</h4>');
                   let newLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name']);
+                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name'].slice(0, -1));
                   newLink.append(newFormat);
                   newBottomSection.append(newLink);
                   newDiv.append(newBottomSection);
@@ -633,7 +633,7 @@ class Search {
                   newBottomSection.append(newDescription);
                   newBottomSection.append('<h4 class="centered-text">available in</h4>');
                   let newLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name']);
+                  let newFormat = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['type_name'].slice(0, -1));
                   newLink.append(newFormat);
                   newBottomSection.append(newLink);
                   newDiv.append(newBottomSection);

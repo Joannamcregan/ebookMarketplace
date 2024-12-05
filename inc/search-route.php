@@ -43,7 +43,8 @@ function marketplaceSearchResults($data) {
         and b.title like %s
         and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
         and b.islive = 1
-        order by b.createdate desc';
+        order by b.createdate desc
+        limit 200';
         $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, '%' . $wpdb->esc_like($searchTerm) . '%', $book_warnings_table), ARRAY_A);
     } else {
         $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
@@ -57,7 +58,8 @@ function marketplaceSearchResults($data) {
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
         and b.title like %s
         and b.islive = 1
-        order by b.createdate desc';
+        order by b.createdate desc
+        limit 200';
         $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, '%' . $wpdb->esc_like($searchTerm) . '%'), ARRAY_A);
     }
     for($index = 0; $index < count($booksResults); $index++){
@@ -69,7 +71,8 @@ function marketplaceSearchResults($data) {
     from %i post
     where post.post_title like %s
     and post.post_status = "publish"
-    and post.post_type = "author-profile"';
+    and post.post_type = "author-profile"
+    limit 100';
     $authorResults = $wpdb->get_results($wpdb->prepare($query, $posts_table, '%' . $wpdb->esc_like($searchTerm) . '%'), ARRAY_A);
     for($index = 0; $index < count($authorResults); $index++){
         $authorResults[$index]['author_url'] = get_permalink($authorResults[$index]['author_url']);

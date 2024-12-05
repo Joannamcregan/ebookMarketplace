@@ -10,8 +10,8 @@ $books_table = $wpdb->prefix .  "tomc_books";
 // $book_genres_table = $wpdb->prefix . "tomc_book_genres";
 // $users_table = $wpdb->prefix . "users";
 // $posts_table = $wpdb->prefix . "posts";
-$userid = get_current_user_id();
 $user = wp_get_current_user();
+$userId = $user->ID;
 
 get_header();
 if (is_user_logged_in()){

@@ -127,9 +127,10 @@ class Search {
         this.chosenWarnings = [];
         this.searchOverlay.removeClass("search-overlay--active");
     }
-    getResults() {
+    getResults(e) {
         if (this.chosenLanguages.length > 0){
             if (this.searchField.val()){
+                $(e.target).addClass('contracting');
                 $('#tomc-search--no-search-term').addClass('hidden');
                 $.ajax({
                     beforeSend: (xhr) => {
@@ -144,6 +145,7 @@ class Search {
                         'languages' : JSON.stringify(this.chosenLanguages)
                     },
                     success: (response) => {
+                        $(e.target).removeClass('contracting');
                         let alreadyAddedIds = [];
                         if(response.length < 1){
                             this.resultsDiv.html("<p class='centered-text'>Sorry! We couldn't find any matching results.</p>");
@@ -151,7 +153,7 @@ class Search {
                             this.resultsDiv.html("");
                             for(let i = 0; i < response.length; i++){
                                 if (response[i]['resulttype'] === 'author'){
-                                    let newDiv = $('<div />').addClass('tomc-book-organization--new-book-1').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                                    let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newTitle = $('<h1 />').addClass('centered-text small-heading');
                                     let newSpan = $('<span />').html('Author ');
                                     newTitle.append(newSpan);
@@ -161,7 +163,7 @@ class Search {
                                     this.resultsDiv.append(newDiv);
                                 } else if ($.inArray(response[i]['id'], alreadyAddedIds) > -1){
                                     let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                                    let newFormat = $('<p />').html(response[i]['type_name']);
+                                    let newFormat = $('<p />').html(response[i]['type_name'].slice(0, -1));
                                     newLink.append(newFormat);
                                     $('#tomc-browse-genres--results--book-' + response[i]['id']).children('.tomc-browse--search-result-bottom-section').append(newLink);
                                 } else if (response[i]['resulttype'] === 'book') {
@@ -175,7 +177,7 @@ class Search {
                                     newBottomSection.append(newDescription);
                                     newBottomSection.append('<h4 class="centered-text">available in</h4>');
                                     let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                                    let newFormat = $('<p />').html(response[i]['type_name']);
+                                    let newFormat = $('<p />').html(response[i]['type_name'].slice(0, -1));
                                     newLink.append(newFormat);
                                     newBottomSection.append(newLink);
                                     newDiv.append(newBottomSection);
@@ -194,7 +196,7 @@ class Search {
                                     newBottomSection.append(newDescription);
                                     newBottomSection.append('<h4 class="centered-text">available in</h4>');
                                     let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                                    let newFormat = $('<p />').html(response[i]['type_name']);
+                                    let newFormat = $('<p />').html(response[i]['type_name'].slice(0, -1));
                                     newLink.append(newFormat);
                                     newBottomSection.append(newLink);
                                     newDiv.append(newBottomSection);
@@ -213,7 +215,7 @@ class Search {
                                     newBottomSection.append(newDescription);
                                     newBottomSection.append('<h4 class="centered-text">available in</h4>');
                                     let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                                    let newFormat = $('<p />').html(response[i]['type_name']);
+                                    let newFormat = $('<p />').html(response[i]['type_name'].slice(0, -1));
                                     newLink.append(newFormat);
                                     newBottomSection.append(newLink);
                                     newDiv.append(newBottomSection);
@@ -232,7 +234,7 @@ class Search {
                                     newBottomSection.append(newDescription);
                                     newBottomSection.append('<h4 class="centered-text">available in</h4>');
                                     let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                                    let newFormat = $('<p />').html(response[i]['type_name']);
+                                    let newFormat = $('<p />').html(response[i]['type_name'].slice(0, -1));
                                     newLink.append(newFormat);
                                     newBottomSection.append(newLink);
                                     newDiv.append(newBottomSection);

@@ -31,12 +31,12 @@ function getReaderSettings(){
     SELECT a.id, a.warning_name, b.triggerid, "trigger" as "settingtype"
     FROM %i a
     LEFT JOIN cte b ON a.id = b.triggerid';
-    $triggerResults = $wpdb->get_results($wpdb->prepare($triggerQuery, $reader_triggers_table, $userid, $cw_table), ARRAY_A);
+    $triggerResults = $wpdb->get_results($wpdb->prepare($triggerQuery, $reader_triggers_table, $userId, $cw_table), ARRAY_A);
     $languageQuery = 'WITH cte AS (SELECT languageid FROM %i WHERE readerid = %d)
     SELECT a.id, a.language_name, b.languageid, "language" as "settingtype"
     FROM %i a
     LEFT JOIN cte b ON a.id = b.languageid';
-    $languageResults = $wpdb->get_results($wpdb->prepare($languageQuery, $reader_languages_table, $userid, $languages_table), ARRAY_A);
+    $languageResults = $wpdb->get_results($wpdb->prepare($languageQuery, $reader_languages_table, $userId, $languages_table), ARRAY_A);
     return array_merge($triggerResults, $languageResults);
 }
 

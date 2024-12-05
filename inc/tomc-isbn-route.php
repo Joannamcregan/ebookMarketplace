@@ -25,7 +25,8 @@ function markRecordFiled($data){
     $recordId = sanitize_text_field($data['recordId']);
     $user = wp_get_current_user();
     if (is_user_logged_in() && (in_array( 'administrator', (array) $user->roles ) )){
-        $userId = get_current_user_id();
+        $user = wp_get_current_user();
+        $userId = $user->ID;
         global $wpdb;
         $isbn_records_table = $wpdb->prefix . "tomc_isbn_records";
         $query = '';
