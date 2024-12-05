@@ -1,0 +1,30 @@
+#search-overlay__results{
+    width: 900px;
+    margin: 0px auto;
+}
+.tomc-search-result{
+    background: #fefcf9;
+    width: 80%;
+    border-radius: 25px 0;
+    margin: 20px auto 30px auto;
+    padding: 10px;
+    display: block;
+}
+@media screen and (max-width: 940px){
+    #search-overlay__results{
+        width: 80%;
+        margin: 0px auto;
+    }
+}
+@media screen and (max-width: 720px){
+    #search-overlay__results{
+        width: 90%;
+        margin: 0px auto;
+    }
+}
+@media screen and (max-width: 500px){
+    #search-overlay__results{
+        width: auto;
+        margin: 20px auto;
+    }
+}

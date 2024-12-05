@@ -407,6 +407,12 @@ span.bbp-admin-links a{
     height: 5px;
     margin: 30px 0;
 }
+.orange-yellow-line-straight{
+    border-top: solid #e44e2d 5px;
+    border-bottom: solid #f7c340 5px;
+    height: 5px;
+    margin: 30px 5px;
+}
 .tomc-about-text-graphic{
     width: 98%;
     padding-top: 10px;
@@ -674,6 +680,12 @@ span.bbp-admin-links a{
     padding-left: 20px;
     padding-right: 20px;
 }
+.page-accent-alt-thin{
+    margin: 30px 0 0 0;
+    padding: 1px 10px;
+    background: #f6ece1;
+    border-radius: 25px;
+}
 /* .page-accent{
     margin: 2em 0 0 0;
     padding: 0.5em 0 0 0;
@@ -683,12 +695,6 @@ span.bbp-admin-links a{
     margin: 2em 0 0 0;
     padding: 0.5em 0 0 0;
     background: #f6ece1;
-}
-.page-accent-alt-thin{
-    margin: 30px 0 0 0;
-    padding: 1px 10px;
-    background: #f6ece1;
-    border-radius: 25px;
 }
 .page-accent-alt-1{
     margin: 2em 0 0 0;
@@ -1244,6 +1250,17 @@ a {
     background-color: transparent;
     color: #eee2d4;
     line-height: 0.7;
+}
+.purple-width-fit-button{
+    background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    margin: 20px auto;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
 }
 .small-red-button{
     background-color: #893e43;
