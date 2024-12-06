@@ -34,13 +34,47 @@ $query = 'select distinct b.id, b.title, b.product_image_id, b.book_description,
         and d.type_name = %s
         order by b.createdate desc
         limit 200';
-$booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $pennameid, 'e-books'), ARRAY_A);
+$ebookResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $pennameid, 'e-books'), ARRAY_A);
+for($index = 0; $index < count($ebookResults); $index++){
+    $ebookResults[$index]['product_image_id'] = get_the_post_thumbnail_url($ebookResults[$index]['product_image_id']);
+    $ebookResults[$index]['product_url'] = get_permalink($ebookResults[$index]['product_url']);
+}
+if (count($ebookResults) > 0){
+    ?><h2 class="centered-text">Ebooks by <?php echo $penname; ?></h2>
+    <div class="tomc-book-org--columns-container">
+        <?php for ($i = 0; $i < count($ebookResults); $i++){
+            ?><div id="<?php echo 'tomc-penname-books-' . $pennameid . '-' . $ebookResults[$i]['id']; ?>" class="tomc-bookorg--all-columns">
+                <h3 class="centered-text small-heading"><a href="<?php echo $ebookResults[$i]['product_url']; ?>"><?php echo $ebookResults[$i]['title']; ?></a></h3>
+                <img src="<?php echo $ebookResults[$i]['product_image_id']; ?>" alt="<?php echo 'book cover for ' . $ebookResults[$i]['title']; ?>" />
+                <p class="prewrap"><?php echo $ebookResults[$i]['book_description']; ?></p>
+            </div>
+        <?php }
+    ?></div>
+<?php }
+$audiobookResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $pennameid, 'audiobooks'), ARRAY_A);
+for($index = 0; $index < count($audiobookResults); $index++){
+    $audiobookResults[$index]['product_image_id'] = get_the_post_thumbnail_url($audiobookResults[$index]['product_image_id']);
+    $audiobookResults[$index]['product_url'] = get_permalink($audiobookResults[$index]['product_url']);
+}
+if (count($audiobookResults) > 0){
+    ?><h2 class="centered-text">Audiobooks by <?php echo $penname; ?></h2>
+    <div class="tomc-book-org--columns-container">
+        <?php for ($i = 0; $i < count($audiobookResults); $i++){
+            ?><div id="<?php echo 'tomc-penname-books-' . $pennameid . '-' . $audiobookResults[$i]['id']; ?>" class="tomc-bookorg--all-columns">
+                <h3 class="centered-text small-heading"><a href="<?php echo $audiobookResults[$i]['product_url']; ?>"><?php echo $audiobookResults[$i]['title']; ?></a></h3>
+                <img src="<?php echo $audiobookResults[$i]['product_image_id']; ?>" alt="<?php echo 'book cover for ' . $audiobookResults[$i]['title']; ?>" />
+                <p class="prewrap"><?php echo $audiobookResults[$i]['book_description']; ?></p>
+            </div>
+        <?php }
+    ?></div>
+<?php }
+$booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $pennameid, 'paperback books'), ARRAY_A);
 for($index = 0; $index < count($booksResults); $index++){
     $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
     $booksResults[$index]['product_url'] = get_permalink($booksResults[$index]['product_url']);
 }
 if (count($booksResults) > 0){
-    ?><h2 class="centered-text">Ebooks by <?php echo $penname; ?></h2>
+    ?><h2 class="centered-text">Paperback Books by <?php echo $penname; ?></h2>
     <div class="tomc-book-org--columns-container">
         <?php for ($i = 0; $i < count($booksResults); $i++){
             ?><div id="<?php echo 'tomc-penname-books-' . $pennameid . '-' . $booksResults[$i]['id']; ?>" class="tomc-bookorg--all-columns">
@@ -51,12 +85,13 @@ if (count($booksResults) > 0){
         <?php }
     ?></div>
 <?php }
-$booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $pennameid, 'audiobooks'), ARRAY_A);
+$booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $pennameid, 'hardcover books'), ARRAY_A);
 for($index = 0; $index < count($booksResults); $index++){
     $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
+    $booksResults[$index]['product_url'] = get_permalink($booksResults[$index]['product_url']);
 }
 if (count($booksResults) > 0){
-    ?><h2 class="centered-text">Audiobooks by <?php echo $penname; ?></h2>
+    ?><h2 class="centered-text">Hardcover Books by <?php echo $penname; ?></h2>
     <div class="tomc-book-org--columns-container">
         <?php for ($i = 0; $i < count($booksResults); $i++){
             ?><div id="<?php echo 'tomc-penname-books-' . $pennameid . '-' . $booksResults[$i]['id']; ?>" class="tomc-bookorg--all-columns">
