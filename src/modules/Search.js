@@ -153,7 +153,7 @@ class Search {
                             this.resultsDiv.html("");
                             for(let i = 0; i < response.length; i++){
                                 if (response[i]['resulttype'] === 'author'){
-                                    let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                                    let newDiv = $('<div />').addClass('tomc-search-result--author').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newTitle = $('<h1 />').addClass('centered-text small-heading');
                                     let newSpan = $('<span />').html('Author ');
                                     newTitle.append(newSpan);

@@ -1072,6 +1072,11 @@ a {
     border-radius: 5px;
 } */
 /*additional containers-----------------------------------------------------------------*/
+.fit-width-text{
+    max-width: 900px;
+    width: fit-content;
+    margin: 10px auto;
+}
 .centered-container {
     margin: 0 15vw 0 15vw;
 }

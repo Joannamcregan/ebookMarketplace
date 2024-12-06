@@ -10,6 +10,14 @@
     padding: 10px;
     display: block;
 }
+.tomc-search-result--author{
+    background: #fefcf9;
+    width: 80%;
+    border-radius: 15px 0;
+    margin: 20px auto 30px auto;
+    padding: 5px 10px;
+    display: block;
+}
 @media screen and (max-width: 940px){
     #search-overlay__results{
         width: 80%;

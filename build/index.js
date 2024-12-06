@@ -528,9 +528,10 @@ class Search {
     this.chosenWarnings = [];
     this.searchOverlay.removeClass("search-overlay--active");
   }
-  getResults() {
+  getResults(e) {
     if (this.chosenLanguages.length > 0) {
       if (this.searchField.val()) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('contracting');
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-search--no-search-term').addClass('hidden');
         jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
           beforeSend: xhr => {
@@ -545,6 +546,7 @@ class Search {
             'languages': JSON.stringify(this.chosenLanguages)
           },
           success: response => {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('contracting');
             let alreadyAddedIds = [];
             if (response.length < 1) {
               this.resultsDiv.html("<p class='centered-text'>Sorry! We couldn't find any matching results.</p>");
@@ -552,7 +554,7 @@ class Search {
               this.resultsDiv.html("");
               for (let i = 0; i < response.length; i++) {
                 if (response[i]['resulttype'] === 'author') {
-                  let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                  let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-search-result--author').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                   let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text small-heading');
                   let newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').html('Author ');
                   newTitle.append(newSpan);
