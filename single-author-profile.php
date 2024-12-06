@@ -2,7 +2,6 @@
 
 $pennameid = get_the_id();
 $penname = get_the_title();
-$displayedBooks = [];
 
 global $wpdb;
 $books_table = $wpdb->prefix . "tomc_books";
@@ -17,13 +16,13 @@ while(have_posts()){
     ?>
     <div class="third-screen">
         <h1 class="centered-text"><?php echo $penname; ?></h1>
-        <div class="generic-content">
-            <?php the_content(); ?>
+        <div class="fit-width-text">
+            <?php echo strlen(get_the_content()) < 1 ? "This author hasn't shared a bio yet." : the_content(); ?>
         </div>
     </div>        
 <?php }
 
-$query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
+$query = 'select distinct b.id, b.title, b.product_image_id, b.book_description, b.createdate, g.id as product_url
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
@@ -32,21 +31,40 @@ $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen
         join %i g on c.productid = g.id
         where b.islive = 1
         and f.id = %d
+        and d.type_name = %s
         order by b.createdate desc
         limit 200';
-        $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $pennameid), ARRAY_A);
+$booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $pennameid, 'e-books'), ARRAY_A);
+for($index = 0; $index < count($booksResults); $index++){
+    $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
+    $booksResults[$index]['product_url'] = get_permalink($booksResults[$index]['product_url']);
+}
 if (count($booksResults) > 0){
-    ?><h2 class="centered-text">Books by <?php echo $penname; ?></h2>
+    ?><h2 class="centered-text">Ebooks by <?php echo $penname; ?></h2>
     <div class="tomc-book-org--columns-container">
         <?php for ($i = 0; $i < count($booksResults); $i++){
-            if (in_array($booksResults[$i]['title'], $displayedBooks)){
-                echo '<p>already displayed</p>';
-            } else {
-                ?><div id="<?php echo 'tomc-penname-books-' . $pennameid . '-' . $booksResults[$i]['id']; ?>" class="tomc-bookorg--all-columns">
-                    <h3 class="centered-text small-heading"><?php echo $booksResults[$i]['title']; ?></h3>
-                </div>
-            <?php }
-        }
+            ?><div id="<?php echo 'tomc-penname-books-' . $pennameid . '-' . $booksResults[$i]['id']; ?>" class="tomc-bookorg--all-columns">
+                <h3 class="centered-text small-heading"><a href="<?php echo $booksResults[$i]['product_url']; ?>"><?php echo $booksResults[$i]['title']; ?></a></h3>
+                <img src="<?php echo $booksResults[$i]['product_image_id']; ?>" alt="<?php echo 'book cover for ' . $booksResults[$i]['title']; ?>" />
+                <p class="prewrap"><?php echo $booksResults[$i]['book_description']; ?></p>
+            </div>
+        <?php }
+    ?></div>
+<?php }
+$booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $pennameid, 'audiobooks'), ARRAY_A);
+for($index = 0; $index < count($booksResults); $index++){
+    $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
+}
+if (count($booksResults) > 0){
+    ?><h2 class="centered-text">Audiobooks by <?php echo $penname; ?></h2>
+    <div class="tomc-book-org--columns-container">
+        <?php for ($i = 0; $i < count($booksResults); $i++){
+            ?><div id="<?php echo 'tomc-penname-books-' . $pennameid . '-' . $booksResults[$i]['id']; ?>" class="tomc-bookorg--all-columns">
+                <h3 class="centered-text small-heading"><a href="<?php echo $booksResults[$i]['product_url']; ?>"><?php echo $booksResults[$i]['title']; ?></a></h3>
+                <img src="<?php echo $booksResults[$i]['product_image_id']; ?>" alt="<?php echo 'book cover for ' . $booksResults[$i]['title']; ?>" />
+                <p class="prewrap"><?php echo $booksResults[$i]['book_description']; ?></p>
+            </div>
+        <?php }
     ?></div>
 <?php }
 
