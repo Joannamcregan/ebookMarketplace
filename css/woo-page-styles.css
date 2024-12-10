@@ -92,6 +92,20 @@
     margin-right: 10vw;
     padding: 20px;
 } */
+ .product span.onsale{
+    z-index: 2000;
+    background: #e44e2d;
+    color: white !important;
+    position: absolute !important;
+    left: 20px !important;
+    padding: 30px !important;
+    border-top: solid 5px #f7c340;
+    border-right: solid 10px #f7c340;
+    border-bottom: solid 10px #f7c340;
+    border-left: solid 5px #f7c340;
+    border-radius: 0px 50px 50px 50px !important;
+    rotate: 345deg;
+ }
 .woocommerce-product-gallery--with-images{
     /* margin-right: 15px;
     margin-left: 15px; */
