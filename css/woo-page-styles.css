@@ -93,7 +93,7 @@
     padding: 20px;
 } */
  .product span.onsale{
-    z-index: 2000;
+    z-index: 900;
     background: #e44e2d;
     color: white !important;
     position: absolute !important;
@@ -175,6 +175,9 @@
     padding: 20px 30px;
     background: #f6ece1;
     width: fit-content;
+}
+.tomc-product-preview-section .wp-audio-shortcode{
+    min-width: 200px;
 }
 .tomc-single-book-description{
     border-top: solid #f7c340 5px;

@@ -63,7 +63,7 @@ function marketplace_features(){
             'max_columns' => 5
         )
     ));
-    add_theme_support('wc_product_gallery_slider');
+    // add_theme_support('wc_product_gallery_slider');
 }
 
 add_action('after_setup_theme', 'marketplace_features');
@@ -261,23 +261,12 @@ function ebook_marketplace_remove_product_tabs( $tabs ) {
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_remove_product_tabs', 98 );
 
 function tomc_get_gallery_files() {
-    global $product, $wpdb;
-    $productid = $product->get_id();
-    $posts_table = $wpdb->prefix . "posts";
-    $query = 'select id, guid, post_name, post_mime_type from %i where post_type = "attachment" and post_mime_type in ("audio/ogg", "audio/mpeg") and post_parent = %d';
-    $results = $wpdb->get_results($wpdb->prepare($query, $posts_table, $productid));
-    if ($results){
+    global $post;
+    if (strlen(get_the_content() > 0)){
         echo '<div class="tomc-product-preview-section-wrapper"><div class="tomc-product-preview-section"><h2 class="centered-text">Preview</h2>';
-        foreach($results as $result){
-            // echo '<p class="centered-text">' . $result->post_name . '</p>';
-            if ($result->post_mime_type = "audio/ogg"){
-                echo '<audio controls><source src="' . $result->guid . '" type="audio/ogg">Sorry! Your browser does not support the audio element.</audio>';
-            } else {
-                echo '<audio controls><source src="' . $result->guid . '" type="audio/mpeg">Sorry! Your browser does not support the audio element.</audio>';
-            }
-        }
+        echo do_shortcode(get_post_field('post_content', $post->id));
         echo '</div></div>';
-    } 
+    }
 }
 add_action( 'woocommerce_after_single_product_summary', 'tomc_get_gallery_files', 20 );
 
