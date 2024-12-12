@@ -11,20 +11,32 @@
                 <ul>
                     <li>If you're selling the same book in multiple formats (such as e-book, audiobook, and paperback) add a separate product for each format.</li>
                 </ul>
-                <p>Before you can add any products, you must choose how you'd like to be paid.</p>
-                <img class="orange-bordered-img" src="<?php echo get_theme_file_uri('/images/add-billing-info.jpg'); ?>" alt="a cropped screenshot of the Trunk of My Car creator dashboard highlighting the Store Settings --Billing menu item." />
-                <p>You can now navigate to Product Manager --Add Product in the side menu.</p>
-                <img class="yellow-bordered-img" src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="a cropped screenshot of the Trunk of My Car creator dashboard highlighting the Product Manager --Add Product menu item." />
-                <p>Add your book's title and cover.</p>
-                <img class="blue-bordered-img" src="<?php echo get_theme_file_uri('/images/product-title.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the Product Title field." />
-                <br>
-                <img class="purple-bordered-img" src="<?php echo get_theme_file_uri('/images/upload-image.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the Upload Image field." />
-                <p>If you already have an ISBN, you can add it now. You can also obtain a free ISBN by purchasing our ISBN registration service after you've added your product.</p>
-                <img class="orange-bordered-img" src="<?php echo get_theme_file_uri('/images/gtin.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the GTIN field." />
-                <p>Add your book's price. If you'd like to set a limited-time sale price, you can do that as well.</p>
-                <img class="yellow-bordered-img" src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the pricing fields." />
-                <p>Be sure to indicate which book format you're uploading.</p>
-                <img class="blue-bordered-img" src="<?php echo get_theme_file_uri('/images/product-format.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the product format checkboxes." />
+                <div class="tomc-map--blue-section">
+                    <p>Before you can add any products, you must choose how you'd like to be paid.</p>
+                    <img class="orange-bordered-img" src="<?php echo get_theme_file_uri('/images/add-billing-info.jpg'); ?>" alt="a cropped screenshot of the Trunk of My Car creator dashboard highlighting the Store Settings --Billing menu item." />
+                </div>
+                <div class="tomc-map--orange-section">
+                    <p>You can now navigate to Product Manager --Add Product in the side menu.</p>
+                    <img class="yellow-bordered-img" src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="a cropped screenshot of the Trunk of My Car creator dashboard highlighting the Product Manager --Add Product menu item." />
+                </div>
+                <div class="tomc-map--yellow-section">
+                    <p>Add your book's title and cover.</p>
+                    <img class="blue-bordered-img" src="<?php echo get_theme_file_uri('/images/product-title.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the Product Title field." />
+                    <br>
+                    <img class="purple-bordered-img" src="<?php echo get_theme_file_uri('/images/upload-image.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the Upload Image field." />
+                </div>
+                <div class="tomc-map--purple-section">
+                    <p>If you already have an ISBN, you can add it now. You can also obtain a free ISBN by purchasing our ISBN registration service after you've added your product.</p>
+                    <img class="orange-bordered-img" src="<?php echo get_theme_file_uri('/images/gtin.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the GTIN field." />
+                </div>
+                <div class="tomc-map--blue-section">
+                    <p>Add your book's price. If you'd like to set a limited-time sale price, you can do that as well.</p>
+                    <img class="yellow-bordered-img" src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the pricing fields." />
+                </div>
+                <div class="tomc-map--orange-section">
+                    <p>Be sure to indicate which book format you're uploading.</p>
+                    <img class="blue-bordered-img" src="<?php echo get_theme_file_uri('/images/product-format.jpg'); ?>" alt="a cropped screenshot of the Add Product page in the Trunk of My Car creator dashboard highlighting the product format checkboxes." />
+                </div>
                 <p><strong>You'll need to complete other fields depending on the format you're uploading.</strong></p>
                 <span id="ebookProductsSpan" class="orange-button">E-book products</span>
                 <div id="ebookProductsSection" class="hidden">
