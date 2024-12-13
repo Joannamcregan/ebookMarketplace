@@ -1365,6 +1365,7 @@ a {
 .orange-button{
     background-color: #e44e2d;
     color: white;
+    text-shadow: 0px 0px 1px #941c01;
     font-size: 16;
     border-radius: 45px;
     padding: 15px 30px;

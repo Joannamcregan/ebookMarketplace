@@ -1,6 +1,7 @@
-/* .woocommerce{
-    padding: 20px !important;
-} */
+.woocommerce{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
 /* shop page-------------------------------------------------------------------------------------------- */
 .woocommerce-loop-product__title{
     font-family: Arial, Helvetica, sans-serif;
