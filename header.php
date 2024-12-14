@@ -27,7 +27,7 @@
 <div class="header--main">      
   <nav class="main-nav" aria-label="main navigation bar top row">  
     <div class="nav-container site-header__menu group">    
-      <a href="<?php echo esc_url(site_url('/coop-shop'));?>">Shop</a>
+      <a href="<?php echo esc_url(site_url('/shop'));?>">Shop</a>
       <a href="<?php echo esc_url(site_url('/browse-by-genre'));?>">Genres</a> 
       <?php if (is_user_logged_in()){ 
         ?><a href="<?php echo esc_url(site_url('/my-bookshelves')); ?>">My Bookshelves</a>

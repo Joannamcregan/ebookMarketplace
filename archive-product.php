@@ -7,7 +7,7 @@ $posts_table = $wpdb->prefix . "posts";
 $product_types_table = $wpdb->prefix . "tomc_product_types";
 $pen_names_table = $wpdb->prefix . "tomc_pen_names_books";
 
-$query = 'select distinct b.id, b.title,f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url
+$query = 'select distinct b.id, b.product_image_id, b.title,f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
@@ -19,6 +19,10 @@ $query = 'select distinct b.id, b.title,f.post_title as pen_name, b.book_descrip
         order by b.createdate asc
         limit 12';
 $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, 'e-books'), ARRAY_A);
+for($index = 0; $index < count($results); $index++){
+    $results[$index]['product_url'] = get_permalink($results[$index]['product_url']);
+    $results[$index]['product_image_id'] = get_the_post_thumbnail_url($results[$index]['product_image_id']);
+}
 
 ?><main class="half-screen">
     <div class="banner"><h1 class="centered-text banner-heading-46">Books By Our Authors</h1></div>
@@ -36,24 +40,8 @@ $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_product
                 </div>
                 <div class="tomc-book-org--columns-container">
                 <?php for($index = 0; $index < count($results); $index++){
-                    ?><div class="tomc-bookorg--all-columns
-                        <?php if ($index % 3 == 0){
-                            echo ' tomc-book-org--three-of-three';
-                        } else if ($index % 2 == 0){
-                            echo ' tomc-book-org--two-of-three';
-                        } else {
-                            echo ' tomc-book-org--one-of-three';
-                        }
-                        if ($index % 4 == 0){
-                            echo ' tomc-book-org--four-of-four';
-                        } else if ($index % 3 == 0){
-                            echo ' tomc-book-org--three-of-four';
-                        } else if ($index % 2 == 0){
-                            echo ' tomc-book-org--two-of-four';
-                        } else {
-                            echo ' tomc-book-org--one-of-four';
-                        }
-                        ?>">
+                    ?><div class="tomc-bookorg--all-columns">
+                        <img src="<?php echo $results[$index]['product_image_id']; ?>" alt="<?php echo 'cover for ' . $results[$index]['title']; ?>" />
                         <a class="centered-text" href="<?php echo get_permalink($results[$index]['product_url']); ?>">
                             <h3><?php echo $results[$index]['title']; ?></h3>
                         </a>
@@ -72,7 +60,7 @@ $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_product
         </div>
     </div>
 
-    <?php $query = 'select distinct b.id, b.title, f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url
+    <?php $query = 'select distinct b.id, b.product_image_id, b.title, f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
@@ -84,6 +72,10 @@ $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_product
         order by b.createdate asc
         limit 12';
     $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, 'audiobooks'), ARRAY_A);
+    for($index = 0; $index < count($results); $index++){
+        $results[$index]['product_url'] = get_permalink($results[$index]['product_url']);
+        $results[$index]['product_image_id'] = get_the_post_thumbnail_url($results[$index]['product_image_id']);
+    }
 
     ?><div class="tomc-shop-books--format-section">
         <div class="sub-banner--slim">
@@ -99,24 +91,8 @@ $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_product
                 </div>
                 <div class="tomc-book-org--columns-container">
                 <?php for($index = 0; $index < count($results); $index++){
-                    ?><div class="tomc-bookorg--all-columns
-                        <?php if ($index % 3 == 0){
-                            echo ' tomc-book-org--three-of-three';
-                        } else if ($index % 2 == 0){
-                            echo ' tomc-book-org--two-of-three';
-                        } else {
-                            echo ' tomc-book-org--one-of-three';
-                        }
-                        if ($index % 4 == 0){
-                            echo ' tomc-book-org--four-of-four';
-                        } else if ($index % 3 == 0){
-                            echo ' tomc-book-org--three-of-four';
-                        } else if ($index % 2 == 0){
-                            echo ' tomc-book-org--two-of-four';
-                        } else {
-                            echo ' tomc-book-org--one-of-four';
-                        }
-                    ?>">
+                    ?><div class="tomc-bookorg--all-columns">
+                        <img src="<?php echo $results[$index]['product_image_id']; ?>" alt="<?php echo 'cover for ' . $results[$index]['title']; ?>" />
                         <a class="centered-text" href="<?php echo get_permalink($results[$index]['product_url']); ?>">
                             <h3><?php echo $results[$index]['title']; ?></h3>
                         </a>
@@ -135,7 +111,7 @@ $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_product
         </div>
     </div>
 
-    <?php $query = 'select distinct b.id, b.title, f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url
+    <?php $query = 'select distinct b.id, b.product_image_id, b.title, f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
@@ -147,6 +123,10 @@ $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_product
         order by b.createdate asc
         limit 12';
     $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, 'paperbacks', 'hardcovers'), ARRAY_A);
+    for($index = 0; $index < count($results); $index++){
+        $results[$index]['product_url'] = get_permalink($results[$index]['product_url']);
+        $results[$index]['product_image_id'] = get_the_post_thumbnail_url($results[$index]['product_image_id']);
+    }
 
     ?><div class="tomc-shop-books--format-section">
         <div class="sub-banner--slim">
@@ -162,24 +142,8 @@ $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_product
                 </div>
                 <div class="tomc-book-org--columns-container">
                 <?php for($index = 0; $index < count($results); $index++){
-                    ?><div class="tomc-bookorg--all-columns
-                        <?php if ($index % 3 == 0){
-                            echo ' tomc-book-org--three-of-three';
-                        } else if ($index % 2 == 0){
-                            echo ' tomc-book-org--two-of-three';
-                        } else {
-                            echo ' tomc-book-org--one-of-three';
-                        }
-                        if ($index % 4 == 0){
-                            echo ' tomc-book-org--four-of-four';
-                        } else if ($index % 3 == 0){
-                            echo ' tomc-book-org--three-of-four';
-                        } else if ($index % 2 == 0){
-                            echo ' tomc-book-org--two-of-four';
-                        } else {
-                            echo ' tomc-book-org--one-of-four';
-                        }
-                    ?>">
+                    ?><div class="tomc-bookorg--all-columns">
+                        <img src="<?php echo $results[$index]['product_image_id']; ?>" alt="<?php echo 'cover for ' . $results[$index]['title']; ?>" />
                         <a class="centered-text" href="<?php echo get_permalink($results[$index]['product_url']); ?>">
                             <h3><?php echo $results[$index]['title']; ?></h3>
                         </a>

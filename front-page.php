@@ -19,7 +19,7 @@
         </div>
         <div class="sub-leaf-section not-displayed">
             <div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/newly-added-books'));?>">
+                <a href="<?php echo esc_url(site_url('/shop'));?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Browse New Books</p>
                 </div>
