@@ -1,0 +1,52 @@
+.roadmap--purple-span{
+    background-color: #4c0548;
+    color: white;
+    font-size: 16;
+    border-radius: 10px;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto 0px auto;
+    width: 90vw;
+    text-align: center;
+}
+.roadmap--blue-span{
+    background-color: #0c698e;
+    color: white;
+    font-size: 16;
+    border-radius: 10px;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto 0px auto;
+    width: 90vw;
+    text-align: center;
+}
+.roadmap-container{
+    width: 90vw;
+    margin: 0px auto 0px auto;
+    border: solid palevioletred 2px;
+}
+.roadmap-section--bottom-right--wrap-0{
+    background: #333;
+    border-radius: 0px 0px 50px 0px;
+    margin: 0px;
+    padding: 0px 20px 20px 0px;
+}
+.roadmap-section--bottom-right--wrap-1{
+    border-right: double #f7c340 10px;
+    border-bottom: double #f7c340 10px;
+    border-radius: 0px 0px 50px 0px;
+    padding: 0px 20px 20px 0px;
+    margin: 0px;
+}
+.roadmap-section--bottom-right--wrap-2{
+    background: #faefe3;
+    border-radius: 0px 0px 30px 0px;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+.roadmap-section--bottom-right h2{
+    margin: 0px;
+}
