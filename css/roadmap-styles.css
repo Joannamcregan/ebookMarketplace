@@ -25,7 +25,16 @@
 .roadmap-container{
     width: 90vw;
     margin: 0px auto 0px auto;
-    border: solid palevioletred 2px;
+}
+.roadmap-section{
+    position: relative;
+    display: block;
+    padding-bottom: 100;
+}
+.roadmap-img--bottom-left{
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 .roadmap-section--bottom-right--wrap-0{
     background: #333;
@@ -36,15 +45,15 @@
 .roadmap-section--bottom-right--wrap-1{
     border-right: double #f7c340 10px;
     border-bottom: double #f7c340 10px;
-    border-radius: 0px 0px 50px 0px;
+    border-radius: 0px 0px 45px 0px;
     padding: 0px 20px 20px 0px;
     margin: 0px;
 }
 .roadmap-section--bottom-right--wrap-2{
-    background: #faefe3;
+    background: #eee2d4;
     border-radius: 0px 0px 30px 0px;
-    margin: 0px;
-    padding-bottom: 20px;
+    margin: 0px 0px 0px -3px;
+    padding: 20px 10px 10px 10px;
 }
 
 .roadmap-section--bottom-right h2{
