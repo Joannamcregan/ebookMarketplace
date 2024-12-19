@@ -16,20 +16,24 @@
                     </div>
                 </div>
             </div>
-            <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="test image" class="roadmap-img--bottom-left"/>
+            <div class="roadmap-img--bottom-left orange-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="test image"/>
+            </div>
         </div>
         <div class="roadmap-section">
             <div class="roadmap-section--bottom-left--wrap-0">
                 <div class="roadmap-section--bottom-left--wrap-1">
                     <div class="roadmap-section--bottom-left--wrap-2">
                         <div class="roadmap-section--bottom-left">
-                            <h2>Add Title and Cover</h2>
-                            <p>Already have an ISBN? Enter it here! Need one? TOMC has ISBNs available for a small registration fee here.</p>
+                            <h2 class="right-text-no-margin">Add Title and Cover</h2>
+                            <p class="right-text-no-margin">Already have an ISBN? Enter it here! Need one? TOMC has ISBNs available for a small registration fee here.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="test image" class="roadmap-img--bottom-right"/>
+            <div class="roadmap-img--bottom-right purple-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="test image" />
+            </div>
         </div>
     <span class="roadmap--blue-span" id="sellServicesSpan">How to Sell Services</span>
     <div id="sellServicesSection" class="hidden">
