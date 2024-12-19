@@ -25,10 +25,12 @@
 .roadmap-container{
     width: 90vw;
     margin: 0px auto 0px auto;
+    background: #eee2d4;
 }
 .roadmap-section{
     position: relative;
     display: block;
+    margin: 0px;
 }
 .roadmap-img--bottom-left{
     position: absolute;
@@ -82,10 +84,12 @@
     border-radius: 0px 10px 160px 0px;
     margin: 0px;
     padding: 0px 20px 20px 0px;
+    border: solid #eee2d4 3px;
 }
 .roadmap-section--bottom-right--wrap-1{
     border-right: double #f7c340 10px;
     border-bottom: double #f7c340 10px;
+    border-top: transparent;
     border-radius: 0px 5px 155px 0px;
     padding: 0px 20px 20px 0px;
     margin: 0px;
@@ -95,16 +99,19 @@
     border-radius: 0px 5px 140px 0px;
     margin: 0px 0px 0px -3px;
     padding: 60px 20px 140px 10px;
+    border: solid #eee2d4 3px;
 }
 .roadmap-section--bottom-left--wrap-0{
     background: #333;
     border-radius: 50px 0px 0px 160px;
     margin: 0px;
     padding: 0px 0px 20px 20px;
+    border: solid #eee2d4 3px;
 }
 .roadmap-section--bottom-left--wrap-1{
     border-left: double #f7c340 10px;
     border-bottom: double #f7c340 10px;
+    border-top: transparent;
     border-radius: 45px 0px 0px 155px;
     padding: 0px 0px 20px 20px;
 }
@@ -113,6 +120,31 @@
     border-radius: 30px 0px 0px 140px;
     margin: 0px -3px 0px 0px;
     padding: 60px 20px 140px 20px;
+    border: solid #eee2d4 3px;
+}
+.roadmap-section--bottom-last--wrap-0{
+    background: #333;
+    margin: 0px;
+    padding: 0px 20px 0px 0px;
+    border: solid #eee2d4 3px;
+    margin-right: 100px;
+}
+.roadmap-section--bottom-last--wrap-1{
+    border-right: double #f7c340 10px;
+    border-top: transparent;
+    padding: 0px 20px 0px 0px;
+    margin: 0px;
+}
+.roadmap-section--bottom-last--wrap-2{
+    background: #eee2d4;
+    margin: 0px 0px 0px -3px;
+    padding: 60px 20px 140px 10px;
+    border: solid #eee2d4 3px;
+}
+.roadmap-img--bottom{
+    position: absolute;
+    right: 42px;
+    bottom: 0;
 }
 .roadmap-container h2{
     margin: 0px;

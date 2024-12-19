@@ -91,12 +91,22 @@
                     </div>
                 </div>
             </div>
-            <div class="roadmap-img--bottom-right purple-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="test image" />
+            <div class="roadmap-img--bottom-right yellow-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="test image"/>
             </div>
         </div>
-        <div class="roadmap-section--final">
-
+        <div class="roadmap-section">
+            <div class="roadmap-section--bottom-last--wrap-0">
+                <div class="roadmap-section--bottom-last--wrap-1">
+                    <div class="roadmap-section--bottom-last--wrap-2">
+                        <div class="roadmap-section--bottom-last">
+                            <h2>Next Steps</h2>
+                            <p>Select the format uploaded and continue to add details about your book!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" alt="test image" class="roadmap-img--bottom"/>
         </div>
         <br>
     </div>
