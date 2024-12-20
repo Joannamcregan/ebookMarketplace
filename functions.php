@@ -263,10 +263,22 @@ add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_remove_product_tabs',
 
 function tomc_get_gallery_files() {
     global $post;
-    if (strlen(get_the_content() > 0)){
-        echo '<div class="tomc-product-preview-section-wrapper"><div class="tomc-product-preview-section"><h2 class="centered-text">Preview</h2>';
-        echo do_shortcode(get_post_field('post_content', $post->id));
-        echo '</div></div>';
+    if (is_product()) {
+        $terms = get_the_terms( $post->ID, 'product_cat' );
+        $isAudiobook = false;
+        foreach ($terms as $term) {
+            if ($term->name == 'Audiobooks'){
+                $isAudiobook = true;
+                break;
+            }
+        }
+        if ($isAudiobook){
+            if (strlen(get_the_content() > 0)){
+                echo '<div class="tomc-product-preview-section-wrapper"><div class="tomc-product-preview-section"><h2 class="centered-text">Preview</h2>';
+                echo do_shortcode(get_post_field('post_content', $post->id));
+                echo '</div></div>';
+            }
+        }
     }
 }
 add_action( 'woocommerce_after_single_product_summary', 'tomc_get_gallery_files', 20 );
