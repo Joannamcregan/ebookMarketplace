@@ -42,7 +42,7 @@ for($index = 0; $index < count($results); $index++){
                 <?php for($index = 0; $index < count($results); $index++){
                     ?><div class="tomc-bookorg--all-columns">
                         <img src="<?php echo $results[$index]['product_image_id']; ?>" alt="<?php echo 'cover for ' . $results[$index]['title']; ?>" />
-                        <a class="centered-text" href="<?php echo get_permalink($results[$index]['product_url']); ?>">
+                        <a class="centered-text" href="<?php echo $results[$index]['product_url']; ?>">
                             <h3><?php echo $results[$index]['title']; ?></h3>
                         </a>
                         <p class="centered-text"><strong><?php echo $results[$index]['pen_name'] ? 'by ' . $results[$index]['pen_name'] : 'by unknown or anonymous author'; ?></strong></p>
@@ -93,7 +93,7 @@ for($index = 0; $index < count($results); $index++){
                 <?php for($index = 0; $index < count($results); $index++){
                     ?><div class="tomc-bookorg--all-columns">
                         <img src="<?php echo $results[$index]['product_image_id']; ?>" alt="<?php echo 'cover for ' . $results[$index]['title']; ?>" />
-                        <a class="centered-text" href="<?php echo get_permalink($results[$index]['product_url']); ?>">
+                        <a class="centered-text" href="<?php echo $results[$index]['product_url']; ?>">
                             <h3><?php echo $results[$index]['title']; ?></h3>
                         </a>
                         <p class="centered-text"><strong><?php echo $results[$index]['pen_name'] ? 'by ' . $results[$index]['pen_name'] : 'by unknown or anonymous author'; ?></strong></p>
@@ -144,7 +144,7 @@ for($index = 0; $index < count($results); $index++){
                 <?php for($index = 0; $index < count($results); $index++){
                     ?><div class="tomc-bookorg--all-columns">
                         <img src="<?php echo $results[$index]['product_image_id']; ?>" alt="<?php echo 'cover for ' . $results[$index]['title']; ?>" />
-                        <a class="centered-text" href="<?php echo get_permalink($results[$index]['product_url']); ?>">
+                        <a class="centered-text" href="<?php echo $results[$index]['product_url']; ?>">
                             <h3><?php echo $results[$index]['title']; ?></h3>
                         </a>
                         <p class="centered-text"><strong><?php echo $results[$index]['pen_name'] ? 'by ' . $results[$index]['pen_name'] : 'by unknown or anonymous author'; ?></strong></p>
