@@ -5,7 +5,7 @@
                   <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
                   <?php if (is_user_logged_in()){                        
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
-                        <li><a href="<?php echo esc_url(site_url('/my-events'));?>">My Events</a></li>
+                        <!-- <li><a href="<?php echo esc_url(site_url('/my-events'));?>">My Events</a></li> -->
                         <?php $user = wp_get_current_user();
                         if (in_array( 'administrator', (array) $user->roles )){
                               ?><li><a href="<?php echo esc_url(site_url('/wp-admin'));?>">Admin Board</a></li>
