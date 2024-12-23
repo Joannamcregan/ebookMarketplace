@@ -609,7 +609,11 @@
     padding: 10px;
 }
 .woocommerce .page-accent-alt-1{
-    padding: 0px 10px;
+    padding: 10px 20px;
+    max-width: 700px;
+    margin: 0px auto 20px auto;
+    background: #faefe3;
+    border-radius: 20px;
 }
 /* hidden */
 .tomc-hidden-content {
