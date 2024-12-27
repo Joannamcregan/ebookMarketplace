@@ -34,7 +34,7 @@
             ?> <div class="red-orange-line-break-60"></div>
             <div class="tomc-circle-container tomc-circle-container-long-text">
                 <img src="<?php echo get_theme_file_uri('/images/circle-background-2.jpg'); ?>" role="presentation" />
-                <p class="orange-shadow-heading tankindred-text tomc-circle-p-1-padded-2x"><a href="<?php echo esc_url(site_url('/forums/forum/general-discussions'));?>"><strong>Whatever</strong></a></p>
+                <p class="orange-shadow-heading tankindred-text tomc-circle-p-1-padded-2x"><a href="<?php echo esc_url(site_url('/forums/forum/general'));?>"><strong>Whatever</strong></a></p>
                 <p class="tomc-circle-p-2">Let's get to know each other better and talk about whatever comes to mind! This forum is for anyone who is interested in the Trunk of My Car journey and/or cooperatives in general.</p>
             </div>
         <?php } else {
