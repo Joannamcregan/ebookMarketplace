@@ -31,6 +31,7 @@ button#bbp_topic_submit, button#bbp_reply_submit{
     overflow: visible !important;
     width: 100% !important;
 	font-size: 14px !important;
+    padding: 20px !important;
 }
 #bbpress-forums fieldset.bbp-form legend{
 	font-size: 18px !important;
