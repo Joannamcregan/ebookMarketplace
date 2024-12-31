@@ -985,7 +985,7 @@ a {
     margin-left: 2em;
 }
 .left-text-no-margin{
-    text-align: left;
+    text-align: left !important;
 }
 .center-left-text{
     text-align: left;
