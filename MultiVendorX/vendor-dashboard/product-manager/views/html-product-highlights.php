@@ -81,9 +81,7 @@ global $MVX;
                             } 
                         echo ' is published! </span>' 
                         ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add details to help readers find it</a> or <a href="<?php echo esc_url(site_url('/my-books'));?>">link it to a book you've already published in another format. </a></p>
-                    <?php } else {
-                        echo $terms[0];
-                    }
+                    <?php }
                     // give option to set default terms hierarchy
                     if( $nos_hierarchy > 1 && ( get_mvx_vendor_settings('category_pyramid_guide', 'settings_general') ) ){ ?>
                     <p class="pull-right multiple-cat-hierarchy"><?php esc_html_e( 'Select a different category :', 'multivendorx' );?>
