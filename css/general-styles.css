@@ -984,6 +984,9 @@ a {
     text-align: left;
     margin-left: 2em;
 }
+.left-text-no-margin{
+    text-align: left;
+}
 .center-left-text{
     text-align: left;
     margin-left: 5vw;
