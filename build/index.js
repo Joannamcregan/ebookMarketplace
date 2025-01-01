@@ -219,6 +219,42 @@ class MobileMenu {
 
 /***/ }),
 
+/***/ "./src/modules/ProductDisplay.js":
+/*!***************************************!*\
+  !*** ./src/modules/ProductDisplay.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class ProductDisplay {
+  constructor() {
+    this.warningMessage = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.tomc-product-view-warnings');
+    this.warningList = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.tomc-product-content-warnings');
+    this.events();
+  }
+  events() {
+    this.warningMessage.on('click', this.toggleWarningList.bind(this));
+  }
+  toggleWarningList() {
+    if (this.warningList.hasClass('hidden')) {
+      this.warningList.removeClass('hidden');
+      this.warningMessage.text('hide trigger warnings');
+    } else {
+      this.warningList.addClass('hidden');
+      this.warningMessage.text('show trigger warnings');
+    }
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProductDisplay);
+
+/***/ }),
+
 /***/ "./src/modules/ReaderSettings.js":
 /*!***************************************!*\
   !*** ./src/modules/ReaderSettings.js ***!
@@ -759,6 +795,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ReaderSettings */ "./src/modules/ReaderSettings.js");
 /* harmony import */ var _modules_LoginPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/LoginPage */ "./src/modules/LoginPage.js");
 /* harmony import */ var _modules_InstructionsDisplay__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/InstructionsDisplay */ "./src/modules/InstructionsDisplay.js");
+/* harmony import */ var _modules_ProductDisplay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/ProductDisplay */ "./src/modules/ProductDisplay.js");
+
 
 
 
@@ -773,6 +811,7 @@ const frontDisplay = new _modules_FrontDisplay__WEBPACK_IMPORTED_MODULE_3__["def
 const readerSettings = new _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__["default"]();
 const loginPage = new _modules_LoginPage__WEBPACK_IMPORTED_MODULE_5__["default"]();
 const instructions = new _modules_InstructionsDisplay__WEBPACK_IMPORTED_MODULE_6__["default"]();
+const productDisplay = new _modules_ProductDisplay__WEBPACK_IMPORTED_MODULE_7__["default"]();
 })();
 
 /******/ })()

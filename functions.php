@@ -270,15 +270,15 @@ function ebook_marketplace_single_product_additional_info() {
     $results = $wpdb->get_results($wpdb->prepare($query, $content_warnings_table, $book_warnings_table, $book_products_table, $reader_triggers_table, $userid, $productid), ARRAY_A);
     if ($results){
         if ($results[0]['readerid'] != ''){
-            echo '<div class="tomc-product-warning-div red-product-warning"><p class="tomc-product-view-warnings centered-text">view trigger warnings</p>';
+            echo '<div class="tomc-product-warning-div red-product-warning"><p class="tomc-product-view-warnings centered-text">show trigger warnings</p>';
         } else {
-            echo '<div class="tomc-product-warning-div black-product-warning"><p class="tomc-product-view-warnings centered-text">view trigger warnings</p>';
+            echo '<div class="tomc-product-warning-div black-product-warning"><p class="tomc-product-view-warnings centered-text">show trigger warnings</p>';
         }
-        echo '<div class="tomc-product-content-warnings"></div>';
+        echo '<div class="tomc-product-content-warnings hidden">';
         for ($i = 0; $i < count($results); $i++){
             echo '<p class="centered-text"><em>' . $results[$i]['warning_name'] . '</em></p>';
         }
-        echo '</div>';
+        echo '</div></div>';
     }
 }
 add_action( 'woocommerce_single_product_summary', 'ebook_marketplace_single_product_additional_info', 13 );
