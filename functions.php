@@ -235,6 +235,8 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 
 function ebook_marketplace_single_product_additional_info() {  
     global $MVX, $product, $wpdb;
+    $user = wp_get_current_user();
+    $userid = $user->ID;
     $productid = $product->get_id();
     $books_pennames_table = $wpdb->prefix . "tomc_pen_names_books";
     $posts_table = $wpdb->prefix . "posts";
@@ -242,6 +244,7 @@ function ebook_marketplace_single_product_additional_info() {
     $product_types_table = $wpdb->prefix . "tomc_product_types";
     $content_warnings_table = $wpdb->prefix . "tomc_content_warnings";
     $book_warnings_table = $wpdb->prefix . "tomc_book_warnings";
+    $reader_triggers_table = $wpdb->prefix . "tomc_reader_triggers";
     $query = 'select p.post_title, pt.type_name
     from %i bp
     join %i bpn on bp.bookid = bpn.bookid
@@ -256,22 +259,32 @@ function ebook_marketplace_single_product_additional_info() {
         }
         echo '<h2>by ' . $results[0]['post_title'] . '</h2>';
     }
-    $query = 'select distinct cw.warning_name
+    $query = 'select distinct cw.warning_name, rt.readerid
     from %i cw
     join %i bw on cw.id = bw.warningid
     join %i bp on bw.bookid = bp.bookid
-    where bp.productid = %d';
-    $results = $wpdb->get_results($wpdb->prepare($query, $content_warnings_table, $book_warnings_table, $book_products_table, $productid), ARRAY_A);
+    left join %i rt on cw.id = rt.triggerid
+    and rt.readerid = %d
+    where bp.productid = %d
+    order by rt.readerid desc';
+    $results = $wpdb->get_results($wpdb->prepare($query, $content_warnings_table, $book_warnings_table, $book_products_table, $reader_triggers_table, $userid, $productid), ARRAY_A);
     if ($results){
-        for ($i = 0; $i < count($results); $i++){
-            echo $results[$i]['warning_name'];
+        if ($results[0]['readerid'] != ''){
+            echo '<div class="tomc-product-warning-div red-product-warning"><p class="tomc-product-view-warnings centered-text">view trigger warnings</p>';
+        } else {
+            echo '<div class="tomc-product-warning-div black-product-warning"><p class="tomc-product-view-warnings centered-text">view trigger warnings</p>';
         }
+        echo '<div class="tomc-product-content-warnings"></div>';
+        for ($i = 0; $i < count($results); $i++){
+            echo '<p class="centered-text"><em>' . $results[$i]['warning_name'] . '</em></p>';
+        }
+        echo '</div>';
     }
 }
 add_action( 'woocommerce_single_product_summary', 'ebook_marketplace_single_product_additional_info', 13 );
 
 function ebook_marketplace_remove_product_tabs( $tabs ) {
-    unset( $tabs['additional_information'] ); 
+    unset($tabs['additional_information']); 
     unset($tabs['description']);
     unset($tabs['reviews']);
     unset($tabs['vendor']);

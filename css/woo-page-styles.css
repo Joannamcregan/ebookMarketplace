@@ -93,27 +93,38 @@
     margin-right: 10vw;
     padding: 20px;
 } */
- .product span.onsale{
-    z-index: 900;
-    background: #e44e2d;
-    color: white !important;
-    position: absolute !important;
-    left: 20px !important;
-    padding: 30px !important;
-    border-top: solid 5px #f7c340;
-    border-right: solid 10px #f7c340;
-    border-bottom: solid 10px #f7c340;
-    border-left: solid 5px #f7c340;
-    border-radius: 0px 50px 50px 50px !important;
-    rotate: 345deg;
+ .tomc-product-warning-div p{
+    margin: 5px;
  }
- .product-page-content .product{
-    width: fit-content;
-    margin: 30px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
- }
+.red-product-warning{
+border: solid #893e43 2px;
+color: #893e43;
+}
+.black-product-warning{
+border: solid #333 1px;
+color: #333;
+}
+.product span.onsale{
+z-index: 900;
+background: #e44e2d;
+color: white !important;
+position: absolute !important;
+left: 20px !important;
+padding: 30px !important;
+border-top: solid 5px #f7c340;
+border-right: solid 10px #f7c340;
+border-bottom: solid 10px #f7c340;
+border-left: solid 5px #f7c340;
+border-radius: 0px 50px 50px 50px !important;
+rotate: 345deg;
+}
+.product-page-content .product{
+width: fit-content;
+margin: 30px auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
 .woocommerce-product-gallery--with-images{
     /* width: 80%;
     margin: auto;
@@ -144,6 +155,9 @@
 .entry-summary p.product-type{
     margin-bottom: 0px !important;
     margin-top: 0px !important;
+}
+.entry-summary h1{
+    margin-bottom: 0px !important;
 }
 .entry-summary h2{
     margin-top: 0px !important;
