@@ -46,7 +46,7 @@ function saveReaderTriggers($data){
     // $user = wp_get_current_user();
     // $userid = get_current_user_id();
     $user = wp_get_current_user();
-    $userId = $user->ID;
+    $userid = $user->ID;
     global $wpdb;
     $reader_triggers_table = $wpdb->prefix . "tomc_reader_triggers";
     if (is_user_logged_in()){
