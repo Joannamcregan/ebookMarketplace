@@ -239,15 +239,33 @@ function ebook_marketplace_single_product_additional_info() {
     $books_pennames_table = $wpdb->prefix . "tomc_pen_names_books";
     $posts_table = $wpdb->prefix . "posts";
     $book_products_table = $wpdb->prefix . "tomc_book_products";
-    $query = 'select p.post_title 
+    $product_types_table = $wpdb->prefix . "tomc_product_types";
+    $content_warnings_table = $wpdb->prefix . "tomc_content_warnings";
+    $book_warnings_table = $wpdb->prefix . "tomc_book_warnings";
+    $query = 'select p.post_title, pt.type_name
     from %i bp
     join %i bpn on bp.bookid = bpn.bookid
     and bp.productid = %d 
     join %i p on bpn.pennameid = p.id
+    left join %i pt on bp.typeid = pt.id
     limit 1';
-    $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_pennames_table, $productid, $posts_table), ARRAY_A);
+    $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_pennames_table, $productid, $posts_table, $product_types_table), ARRAY_A);
     if ($results){
+        if ($results[0]['type_name'] != null){
+            echo '<p class="product-type">an ' . rtrim($results[0]['type_name'], 's') . '</p>';
+        }
         echo '<h2>by ' . $results[0]['post_title'] . '</h2>';
+    }
+    $query = 'select distinct cw.warning_name
+    from %i cw
+    join %i bw on cw.id = bw.warningid
+    join %i bp on bw.bookid = bp.bookid
+    where bp.productid = %d';
+    $results = $wpdb->get_results($wpdb->prepare($query, $content_warnings_table, $book_warnings_table, $book_products_table, $productid), ARRAY_A);
+    if ($results){
+        for ($i = 0; $i < count($results); $i++){
+            echo $results[$i]['warning_name'];
+        }
     }
 }
 add_action( 'woocommerce_single_product_summary', 'ebook_marketplace_single_product_additional_info', 13 );
@@ -284,7 +302,6 @@ function tomc_get_gallery_files() {
 add_action( 'woocommerce_after_single_product_summary', 'tomc_get_gallery_files', 20 );
 
 function tomc_get_book_info() {
-    // global $MVX, $product, $wpdb;
     global $product, $wpdb;
     $productid = $product->get_id();
     $books_table = $wpdb->prefix . "tomc_books";

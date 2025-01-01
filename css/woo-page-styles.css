@@ -124,7 +124,7 @@
     border-radius: 0 0 75px 75px;
     padding: 20px; */
     width: fit-content;
-    padding: 0px 20px !important;
+    padding: 20px !important;
 }
 .product-page-content .woocommerce-product-gallery__wrapper img{
     width: 250px;
@@ -140,6 +140,13 @@
     padding: 0px 20px;
     margin: 0 !important;
     min-width: 200px !important;
+}
+.entry-summary p.product-type{
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+.entry-summary h2{
+    margin-top: 0px !important;
 }
 @media screen and (max-width: 530px) {
     /* .woocommerce-product-gallery--with-images{
@@ -264,7 +271,7 @@
     margin-left: 20%;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: fit-content;
+    width: 85%;
     margin-bottom: 5px;
 }
 .single-product-review-section{
