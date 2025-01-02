@@ -74,11 +74,10 @@ class Settings {
     //     <h2 class="centered-text">My Favorite Topics</h2>
     //     <div id="settings-overlay--genres-3-container"></div>
     // </div>
-    openSettingsOverlay(){
+    openSettingsOverlay(e){
         if (! this.isOverlayOpen){            
             this.isOverlayOpen = true;
-            this.openButton.addClass('spinningIcon');
-            setTimeout(()=> this.openButton.removeClass('spinningIcon'), 3000);
+            $(e.target).addClass('spinningIcon');
             $.ajax({
                 beforeSend: (xhr) => {
                     xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
@@ -86,7 +85,7 @@ class Settings {
                 url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getReaderSettings',
                 type: 'GET',
                 success: (response) => {
-                    console.log(response);
+                    $(e.target).removeClass('spinningIcon')
                     for(let i = 0; i < response.length; i++){
                         if (response[i]['settingtype']=='trigger'){
                             if (response[i]['triggerid']){

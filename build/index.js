@@ -340,11 +340,10 @@ class Settings {
   //     <h2 class="centered-text">My Favorite Topics</h2>
   //     <div id="settings-overlay--genres-3-container"></div>
   // </div>
-  openSettingsOverlay() {
+  openSettingsOverlay(e) {
     if (!this.isOverlayOpen) {
       this.isOverlayOpen = true;
-      this.openButton.addClass('spinningIcon');
-      setTimeout(() => this.openButton.removeClass('spinningIcon'), 3000);
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('spinningIcon');
       jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
         beforeSend: xhr => {
           xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
@@ -352,7 +351,7 @@ class Settings {
         url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getReaderSettings',
         type: 'GET',
         success: response => {
-          console.log(response);
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('spinningIcon');
           for (let i = 0; i < response.length; i++) {
             if (response[i]['settingtype'] == 'trigger') {
               if (response[i]['triggerid']) {
@@ -497,12 +496,11 @@ class Search {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()("#tomc-search--no-languages-selected").removeClass('hidden');
     }
   }
-  openSearchOverlay() {
+  openSearchOverlay(e) {
     if (!this.isOverlayOpen) {
       // this.addSearchHTML();      
       this.isOverlayOpen = true;
-      this.openButton.addClass('spinningIcon');
-      setTimeout(() => this.openButton.removeClass('spinningIcon'), 3000);
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('spinningIcon');
       jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
         beforeSend: xhr => {
           xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
@@ -510,6 +508,7 @@ class Search {
         url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getReaderSettings',
         type: 'GET',
         success: response => {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('spinningIcon');
           for (let i = 0; i < response.length; i++) {
             if (response[i]['settingtype'] == 'trigger') {
               if (response[i]['triggerid']) {
@@ -542,7 +541,7 @@ class Search {
           console.log('error getting triggers');
         }
       });
-      return false;
+      // return false;
     }
   }
   closeOverlay() {

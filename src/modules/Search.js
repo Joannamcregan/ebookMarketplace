@@ -60,12 +60,11 @@ class Search {
             $("#tomc-search--no-languages-selected").removeClass('hidden');
         }        
     }
-    openSearchOverlay(){
+    openSearchOverlay(e){
         if (! this.isOverlayOpen){      
             // this.addSearchHTML();      
             this.isOverlayOpen = true;
-            this.openButton.addClass('spinningIcon');
-            setTimeout(()=> this.openButton.removeClass('spinningIcon'), 3000);
+            $(e.target).addClass('spinningIcon');
             $.ajax({
                 beforeSend: (xhr) => {
                     xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
@@ -73,6 +72,7 @@ class Search {
                 url: tomcBookorgData.root_url + '/wp-json/tomcReaderSettings/v1/getReaderSettings',
                 type: 'GET',
                 success: (response) => {
+                    $(e.target).removeClass('spinningIcon');
                     for(let i = 0; i < response.length; i++){
                         if (response[i]['settingtype']=='trigger'){
                             if (response[i]['triggerid']){
@@ -105,7 +105,7 @@ class Search {
                     console.log('error getting triggers');
                 }
             })
-            return false;
+            // return false;
         }
     }
     closeOverlay(){
