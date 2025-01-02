@@ -11,16 +11,19 @@
 .fa-search{
     padding-right: 10px;
     font-size: 20px;
+    cursor: pointer;
 }
 .fa-gear{
     padding-right: 10px;
     font-size: 20px;
+    cursor: pointer;
 }
 .fa-bars{
     padding-left: 20px;
     padding-top: 10px;
     font-size: 20px;
     visibility: hidden;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {
