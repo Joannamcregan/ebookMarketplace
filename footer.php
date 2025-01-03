@@ -12,7 +12,6 @@
                         <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
                               ?><li><a href="<?php echo esc_url(site_url('/my-isbns'));?>">My ISBNs</a></li>
                         <?php }
-                        //<p><em>Only $5 for members and $15 for non-members</em></p>
                         ?><li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
@@ -78,29 +77,33 @@
 <div class="search-overlay" id="tomc-search-overlay">
       <div class="search-overlay__top">
             <div class="overlay-main-container"> 
-            <i class="fa fa-window-close search-overlay__close" aria-label="close overlay"></i>
-            <div class="overlay-input-container">
-            <i class="fa fa-search search-overlay__icon" aria-label="close overlay"></i>
-            <input type="text" class="search-term" id = "search-term">
-            </div>
+                  <i class="fa fa-window-close search-overlay__close" aria-label="close overlay"></i>
+                  <div class="overlay-input-container">
+                        <!-- <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i> -->
+                        <input type="text" class="search-term" id = "search-term">                  
+                        <button class="medium-purple-button" id="tomc-search--roll-results">let's roll!</button>
+                  </div>
             </div>
       </div>
+      <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-search-term">
+            <p>Enter a search term.</p>
+      </div>
       <div class="container">
-            <div id="search-overlay__results">
+            <div class="" id="search-overlay__warnings-section">
                   <h1 class="centered-text small-heading">Content Warnings</h1>
                   <p class="centered-text">Select any triggers you want to avoid. We'll exclude books that have been tagged with corresponding content warnings from your search results.</p>
                   <div id="search-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
+            </div>
+            <div class="" id="search-overlay__languages-section">
                   <h1 class="centered-text small-heading">Languages</h1>
                   <p class="centered-text">Select any languages you read</p>
                   <div id="search-overlay--languages-container" class="tomc-book-organization--options-container"></div>
                   <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-languages-selected">
                         <p>Choose as least one language to ensure your book shows up in search results.</p>
                   </div>
-                  <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-search-term">
-                        <p>Enter a search term.</p>
-                  </div>
             </div>
-            <button class="purple-button" id="tomc-search--roll-results">let's roll!</button>
+            <div id="search-overlay__results">
+            </div>
       </div>
 </div>
 <div class="tomc-settings-overlay">
