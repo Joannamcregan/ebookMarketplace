@@ -35,6 +35,12 @@
     }
 }
 
+#search-overlay__toggle-filters-section{
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
 /* spinning icons----------------------------------------------------------------------- */
 
 @keyframes spin {
@@ -43,5 +49,5 @@
 }
 
 .spinningIcon {
-    animation: spin 1s 3;
+    animation: spin 1s infinite;
 }

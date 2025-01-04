@@ -16,9 +16,9 @@
     <span class="site-header__menu-trigger fa fa-bars" aria-label="menu" tabindex="-1"><i aria-label="close overlay"></i></span>
     <a href="<?php echo esc_url(site_url()) ?>"><img class="logo-image" src="<?php echo get_theme_file_uri('/images/logo.jpg'); ?>" alt="Trunk of My Car Cooperative" /></a>
     <div class="top-nav-section" id="top-nav-right">
-      <span class="js-search-trigger" aria-label="search"><i class="fa fa-search" aria-label="search"></i></span>
+      <span class="js-search-trigger"><i class="fa fa-search" aria-label="search"></i></span>
       <?php if (is_user_logged_in()){
-        ?><span class="js-settings-trigger" aria-label="settings"><i class="fa-solid fa-gear" aria-label="settings"></i></span>
+        ?><span class="js-settings-trigger"><i class="fa-solid fa-gear" aria-label="settings"></i></span>
       <?php } ?>
       <a class="glowing-text" href="<?php echo wc_get_cart_url(); ?>" aria-label="shopping cart"><i class="fa-solid fa-cart-shopping" aria-label="cart"></i></a>
     </div>

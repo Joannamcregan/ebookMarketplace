@@ -12,12 +12,16 @@ class Search {
         this.languagesSection = $("#search-overlay__languages-section");
         this.triggersContainer = $("#search-overlay--triggers-container");
         this.languagesContainer = $("#search-overlay--languages-container");
-        this.triggersCheckbox = $('#search-overlay__filter-out-warnings');
-        this.languagesCheckbox = $('#search-overlay__filter-languages');
+        this.filtersSection = $('#search-overlay__filters-section');
+        this.triggersFilterOption = $('#search-overlay__filter-out-warnings');
+        this.languagesFilterOption = $('#search-overlay__filter-languages');
+        this.filtersSectionToggle = $('#search-overlay__toggle-filters-section');
         this.events();
         this.isOverlayOpen = false;
         this.chosenWarnings = [];
         this.chosenLanguages = [];
+        this.filterTriggers = false;
+        this.filterLanguages = false;
     }
 
     events(){
@@ -25,14 +29,64 @@ class Search {
         this.closeButton.on("click", this.closeOverlay.bind(this));
         $(document).on("keydown", this.keyPressDispatcher.bind(this));
         this.rollResults.on('click', this.getResults.bind(this));
-        this.triggersCheckbox.on('change', this.toggleTriggersSection.bind(this));
+        this.triggersFilterOption.on('click', this.toggleTriggersOption.bind(this));
+        this.languagesFilterOption.on('click', this.toggleLanguagesOption.bind(this));
+        this.filtersSectionToggle.on('click', this.toggleFiltersSection.bind(this));
     }
 
-    toggleTriggersSection(){
-        if (this.triggersCheckbox.is(":checked")){
-            this.triggersSection.removeClass('hidden');
+    toggleFiltersSection(e) {
+        if ($(e.target).hasClass('fa-caret-down')) {
+            $(e.target).removeClass('fa-caret-down');
+            $(e.target).addClass('fa-caret-up');
+            this.filtersSection.removeClass('hidden');
         } else {
+            $(e.target).removeClass('fa-caret-up');
+            $(e.target).addClass('fa-caret-down');
+            this.filtersSection.addClass('hidden');
+        }
+    }
+
+    toggleTriggersOption(){
+        if (this.filterTriggers == false){
+            this.filterTriggers = true;
+            this.triggersFilterOption.text("don't filter out triggering books");
+            this.filtersSection.removeClass('hidden');
+            this.triggersSection.removeClass('hidden');
+            this.filtersSectionToggle.removeClass('hidden');
+            this.filtersSectionToggle.addClass('inline');
+        } else {
+            this.filterTriggers = false;
+            this.triggersFilterOption.text('filter out triggering books');
             this.triggersSection.addClass('hidden');
+            if (this.filterLanguages == false){
+                this.filtersSectionToggle.addClass('hidden');
+                this.filtersSectionToggle.removeClass('inline');
+                this.filtersSectionToggle.addClass('fa-caret-up');
+                this.filtersSectionToggle.removeClass('fa-caret-down');
+                this.filtersSection.addClass('hidden');
+            }
+        }
+    }
+
+    toggleLanguagesOption() {
+        if (this.filterLanguages == false){
+            this.filterLanguages = true;
+            this.languagesFilterOption.text("don't filter books by language");
+            this.filtersSection.removeClass('hidden');
+            this.languagesSection.removeClass('hidden');
+            this.filtersSectionToggle.removeClass('hidden');
+            this.filtersSectionToggle.addClass('inline');
+        } else {
+            this.filterLanguages = false;
+            this.languagesFilterOption.text('filter books by language');
+            this.languagesSection.addClass('hidden');
+            if (this.filterTriggers == false){
+                this.filtersSectionToggle.addClass('hidden');
+                this.filtersSectionToggle.removeClass('inline');
+                this.filtersSectionToggle.addClass('fa-caret-up');
+                this.filtersSectionToggle.removeClass('fa-caret-down');
+                this.filtersSection.addClass('hidden');
+            }
         }
     }
 
