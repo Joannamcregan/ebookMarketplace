@@ -64,6 +64,7 @@ function marketplaceSearchResults($data) {
     }
     for($index = 0; $index < count($booksResults); $index++){
         $booksResults[$index]['product_url'] = get_permalink($booksResults[$index]['product_url']);
+        $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
     }
     array_push($resultsArr, ...$booksResults);
 
@@ -117,6 +118,7 @@ function marketplaceSearchResults($data) {
     }
     for($index = 0; $index < count($genreResults); $index++){
         $genreResults[$index]['product_url'] = get_permalink($genreResults[$index]['product_url']);
+        $genreResults[$index]['product_image_id'] = get_the_post_thumbnail_url($genreResults[$index]['product_image_id']);
     }
     array_push($resultsArr, ...$genreResults);
 
@@ -158,6 +160,7 @@ function marketplaceSearchResults($data) {
     }
     for($index = 0; $index < count($identityResults); $index++){
         $identityResults[$index]['product_url'] = get_permalink($identityResults[$index]['product_url']);
+        $identityResults[$index]['product_image_id'] = get_the_post_thumbnail_url($identityResults[$index]['product_image_id']);
     }
     array_push($resultsArr, ...$identityResults);
 
@@ -197,6 +200,7 @@ function marketplaceSearchResults($data) {
     }
     for($index = 0; $index < count($readalikeResults); $index++){
         $readalikeResults[$index]['product_url'] = get_permalink($readalikeResults[$index]['product_url']);
+        $readalikeResults[$index]['product_image_id'] = get_the_post_thumbnail_url($readalikeResults[$index]['product_image_id']);
     }
     array_push($resultsArr, ...$readalikeResults);
 
