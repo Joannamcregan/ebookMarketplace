@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 class Search {
-// 1. describe and create/initiate object
     constructor() {
         this.resultsDiv = $("#search-overlay__results");
         this.openButton = $(".js-search-trigger");
@@ -9,20 +8,34 @@ class Search {
         this.searchOverlay = $(".search-overlay");
         this.searchField = $("#search-term");
         this.rollResults = $("#tomc-search--roll-results");
+        this.triggersSection = $("#search-overlay__warnings-section");
+        this.languagesSection = $("#search-overlay__languages-section");
+        this.triggersContainer = $("#search-overlay--triggers-container");
+        this.languagesContainer = $("#search-overlay--languages-container");
+        this.triggersCheckbox = $('#search-overlay__filter-out-warnings');
+        this.languagesCheckbox = $('#search-overlay__filter-languages');
         this.events();
         this.isOverlayOpen = false;
         this.chosenWarnings = [];
         this.chosenLanguages = [];
     }
-// 2. events
+
     events(){
         this.openButton.on("click", this.openSearchOverlay.bind(this));
         this.closeButton.on("click", this.closeOverlay.bind(this));
         $(document).on("keydown", this.keyPressDispatcher.bind(this));
         this.rollResults.on('click', this.getResults.bind(this));
+        this.triggersCheckbox.on('change', this.toggleTriggersSection.bind(this));
     }
 
-// 3. methods (functions, actions...)
+    toggleTriggersSection(){
+        if (this.triggersCheckbox.is(":checked")){
+            this.triggersSection.removeClass('hidden');
+        } else {
+            this.triggersSection.addClass('hidden');
+        }
+    }
+
     toggleWarningSelection(e){
         let labelName = $(e.target).text();
         if ($(e.target).hasClass('tomc-book-organization--option-selected')){
@@ -60,9 +73,9 @@ class Search {
             $("#tomc-search--no-languages-selected").removeClass('hidden');
         }        
     }
+
     openSearchOverlay(e){
-        if (! this.isOverlayOpen){      
-            // this.addSearchHTML();      
+        if (! this.isOverlayOpen){       
             this.isOverlayOpen = true;
             $(e.target).addClass('spinningIcon');
             $.ajax({
@@ -81,7 +94,7 @@ class Search {
                             } else {
                                 this.newSpan = $('<span />').addClass('tomc-book-organization--option-span').attr('data-warning-id', response[i]['id']).attr('aria-label', response[i]['warning_name'] + ' is not selected').html(response[i]['warning_name']).on('click', this.toggleWarningSelection.bind(this));
                             }
-                            $("#search-overlay--triggers-container").append(this.newSpan);
+                            this.triggersContainer.append(this.newSpan);
                         } else if (response[i]['settingtype']=='language'){
                             if (response[i]['languageid']){
                                 this.newSpan = $('<span />').addClass('tomc-book-organization--option-span tomc-book-organization--option-selected').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is selected').attr('id', 'search-overlay-language-option-' + response[i]['language_name']).html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
@@ -89,7 +102,7 @@ class Search {
                             } else {
                                 this.newSpan = $('<span />').addClass('tomc-book-organization--option-span').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is not selected').attr('id', 'search-overlay-language-option-' + response[i]['language_name']).html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
                             }
-                            $("#search-overlay--languages-container").append(this.newSpan);
+                            this.languagesContainer.append(this.newSpan);
                         }
                     }
                     if (this.chosenLanguages < 1){
@@ -108,25 +121,17 @@ class Search {
             // return false;
         }
     }
+
     closeOverlay(){
-        this.resultsDiv.html(`<h1 class="centered-text small-heading">Content Warnings</h1>
-        <p class="centered-text">Select any triggers you want to avoid. We'll exclude books that have been tagged with corresponding content warnings from your search results.</p>
-        <div id="search-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
-        <h1 class="centered-text small-heading">Languages</h1>
-        <p class="centered-text">Select any languages you read</p>
-        <div id="search-overlay--languages-container" class="tomc-book-organization--options-container"></div>
-        <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-languages-selected">
-            <p>Choose as least one language to ensure your book shows up in search results.</p>
-        </div>
-        <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-search-term">
-            <p>Enter a search term.</p>
-        </div>`);
+        this.triggersContainer.html('');
+        this.languagesContainer.html('');
         $("body").removeClass("body-no-scroll");
         this.isOverlayOpen = false;
         this.chosenLanguages = [];
         this.chosenWarnings = [];
         this.searchOverlay.removeClass("search-overlay--active");
     }
+
     getResults(e) {
         if (this.chosenLanguages.length > 0){
             if (this.searchField.val()){
@@ -253,6 +258,7 @@ class Search {
             }            
         }
     }
+
     keyPressDispatcher(e) {
         if(e.keyCode == 83 && !this.isOverlayOpen && !$("input, textarea").is(':focus')) {
             this.openOverlay()

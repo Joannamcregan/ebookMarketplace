@@ -82,6 +82,31 @@
                         <!-- <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i> -->
                         <input type="text" class="search-term" id = "search-term">                  
                         <button class="medium-purple-button" id="tomc-search--roll-results">let's roll!</button>
+                  </div>                  
+                  <div id="search-overlay__options">
+                        <div>
+                              <input type="checkbox" id="search-overlay__filter-out-warnings" name="search-overlay__filter-out-warnings">
+                              <label for="search-overlay__filter-out-warnings">Filter results with content warnings</label>
+                        </div>
+                        <div>
+                              <input type="checkbox" id="search-overlay__filter-languages" name="search-overlay__filter-languages">
+                              <label for="search-overlay__filter-languages">Filter results by language</label>
+                        </div>
+                  </div>
+                  <div class="hidden" id="search-overlay__warnings-section">
+                        <h1 class="centered-text small-heading">Content Warnings</h1>
+                        <p class="centered-text">Select any triggers you want to avoid. We'll exclude books that have been tagged with corresponding content warnings from your search results.</p>
+                        <div id="search-overlay--triggers-container" class="tomc-book-organization--options-container">
+                        </div>
+                  </div>
+                  <div class="hidden" id="search-overlay__languages-section">
+                        <h1 class="centered-text small-heading">Languages</h1>
+                        <p class="centered-text">Select any languages you read</p>
+                        <div id="search-overlay--languages-container" class="tomc-book-organization--options-container">
+                        </div>
+                        <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-languages-selected">
+                              <p>Choose as least one language, or uncheck the "Filter results by languages" box to include all languages.</p>
+                        </div>
                   </div>
             </div>
       </div>
@@ -89,19 +114,6 @@
             <p>Enter a search term.</p>
       </div>
       <div class="container">
-            <div class="" id="search-overlay__warnings-section">
-                  <h1 class="centered-text small-heading">Content Warnings</h1>
-                  <p class="centered-text">Select any triggers you want to avoid. We'll exclude books that have been tagged with corresponding content warnings from your search results.</p>
-                  <div id="search-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
-            </div>
-            <div class="" id="search-overlay__languages-section">
-                  <h1 class="centered-text small-heading">Languages</h1>
-                  <p class="centered-text">Select any languages you read</p>
-                  <div id="search-overlay--languages-container" class="tomc-book-organization--options-container"></div>
-                  <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-languages-selected">
-                        <p>Choose as least one language to ensure your book shows up in search results.</p>
-                  </div>
-            </div>
             <div id="search-overlay__results">
             </div>
       </div>
