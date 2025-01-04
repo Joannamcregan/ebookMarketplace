@@ -61,6 +61,7 @@
     height: auto;
     margin: 10px;
     display: inline-block;
+    box-shadow: 0 0 15px 0px #444;
 }
 .tomc-search-result-cover-description .bottomSection-description{
     width: 60%;
