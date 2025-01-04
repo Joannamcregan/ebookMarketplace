@@ -47,6 +47,7 @@ class Search {
     }
 
     toggleTriggersOption(){
+        console.log('called it');
         if (this.filterTriggers == false){
             this.filterTriggers = true;
             this.triggersFilterOption.text("don't filter out triggering books");

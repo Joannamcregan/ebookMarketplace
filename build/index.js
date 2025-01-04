@@ -437,7 +437,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 class Search {
-  // 1. describe and create/initiate object
   constructor() {
     this.resultsDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay__results");
     this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-search-trigger");
@@ -445,20 +444,84 @@ class Search {
     this.searchOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay");
     this.searchField = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-term");
     this.rollResults = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#tomc-search--roll-results");
+    this.triggersSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay__warnings-section");
+    this.languagesSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay__languages-section");
+    this.triggersContainer = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay--triggers-container");
+    this.languagesContainer = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay--languages-container");
+    this.filtersSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#search-overlay__filters-section');
+    this.triggersFilterOption = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#search-overlay__filter-out-warnings');
+    this.languagesFilterOption = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#search-overlay__filter-languages');
+    this.filtersSectionToggle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#search-overlay__toggle-filters-section');
     this.events();
     this.isOverlayOpen = false;
     this.chosenWarnings = [];
     this.chosenLanguages = [];
+    this.filterTriggers = false;
+    this.filterLanguages = false;
   }
-  // 2. events
   events() {
     this.openButton.on("click", this.openSearchOverlay.bind(this));
     this.closeButton.on("click", this.closeOverlay.bind(this));
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("keydown", this.keyPressDispatcher.bind(this));
     this.rollResults.on('click', this.getResults.bind(this));
+    this.triggersFilterOption.on('click', this.toggleTriggersOption.bind(this));
+    this.languagesFilterOption.on('click', this.toggleLanguagesOption.bind(this));
+    this.filtersSectionToggle.on('click', this.toggleFiltersSection.bind(this));
   }
-
-  // 3. methods (functions, actions...)
+  toggleFiltersSection(e) {
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).hasClass('fa-caret-down')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('fa-caret-down');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('fa-caret-up');
+      this.filtersSection.removeClass('hidden');
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('fa-caret-up');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('fa-caret-down');
+      this.filtersSection.addClass('hidden');
+    }
+  }
+  toggleTriggersOption() {
+    console.log('called it');
+    if (this.filterTriggers == false) {
+      this.filterTriggers = true;
+      this.triggersFilterOption.text("don't filter out triggering books");
+      this.filtersSection.removeClass('hidden');
+      this.triggersSection.removeClass('hidden');
+      this.filtersSectionToggle.removeClass('hidden');
+      this.filtersSectionToggle.addClass('inline');
+    } else {
+      this.filterTriggers = false;
+      this.triggersFilterOption.text('filter out triggering books');
+      this.triggersSection.addClass('hidden');
+      if (this.filterLanguages == false) {
+        this.filtersSectionToggle.addClass('hidden');
+        this.filtersSectionToggle.removeClass('inline');
+        this.filtersSectionToggle.addClass('fa-caret-up');
+        this.filtersSectionToggle.removeClass('fa-caret-down');
+        this.filtersSection.addClass('hidden');
+      }
+    }
+  }
+  toggleLanguagesOption() {
+    if (this.filterLanguages == false) {
+      this.filterLanguages = true;
+      this.languagesFilterOption.text("don't filter books by language");
+      this.filtersSection.removeClass('hidden');
+      this.languagesSection.removeClass('hidden');
+      this.filtersSectionToggle.removeClass('hidden');
+      this.filtersSectionToggle.addClass('inline');
+    } else {
+      this.filterLanguages = false;
+      this.languagesFilterOption.text('filter books by language');
+      this.languagesSection.addClass('hidden');
+      if (this.filterTriggers == false) {
+        this.filtersSectionToggle.addClass('hidden');
+        this.filtersSectionToggle.removeClass('inline');
+        this.filtersSectionToggle.addClass('fa-caret-up');
+        this.filtersSectionToggle.removeClass('fa-caret-down');
+        this.filtersSection.addClass('hidden');
+      }
+    }
+  }
   toggleWarningSelection(e) {
     let labelName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).text();
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).hasClass('tomc-book-organization--option-selected')) {
@@ -498,7 +561,6 @@ class Search {
   }
   openSearchOverlay(e) {
     if (!this.isOverlayOpen) {
-      // this.addSearchHTML();      
       this.isOverlayOpen = true;
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('spinningIcon');
       jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
@@ -517,7 +579,7 @@ class Search {
               } else {
                 this.newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').addClass('tomc-book-organization--option-span').attr('data-warning-id', response[i]['id']).attr('aria-label', response[i]['warning_name'] + ' is not selected').html(response[i]['warning_name']).on('click', this.toggleWarningSelection.bind(this));
               }
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay--triggers-container").append(this.newSpan);
+              this.triggersContainer.append(this.newSpan);
             } else if (response[i]['settingtype'] == 'language') {
               if (response[i]['languageid']) {
                 this.newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').addClass('tomc-book-organization--option-span tomc-book-organization--option-selected').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is selected').attr('id', 'search-overlay-language-option-' + response[i]['language_name']).html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
@@ -525,7 +587,7 @@ class Search {
               } else {
                 this.newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').addClass('tomc-book-organization--option-span').attr('data-language-id', response[i]['id']).attr('aria-label', response[i]['language_name'] + ' is not selected').attr('id', 'search-overlay-language-option-' + response[i]['language_name']).html(response[i]['language_name']).on('click', this.toggleLanguageSelection.bind(this));
               }
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay--languages-container").append(this.newSpan);
+              this.languagesContainer.append(this.newSpan);
             }
           }
           if (this.chosenLanguages < 1) {
@@ -545,18 +607,8 @@ class Search {
     }
   }
   closeOverlay() {
-    this.resultsDiv.html(`<h1 class="centered-text small-heading">Content Warnings</h1>
-        <p class="centered-text">Select any triggers you want to avoid. We'll exclude books that have been tagged with corresponding content warnings from your search results.</p>
-        <div id="search-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
-        <h1 class="centered-text small-heading">Languages</h1>
-        <p class="centered-text">Select any languages you read</p>
-        <div id="search-overlay--languages-container" class="tomc-book-organization--options-container"></div>
-        <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-languages-selected">
-            <p>Choose as least one language to ensure your book shows up in search results.</p>
-        </div>
-        <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-search-term">
-            <p>Enter a search term.</p>
-        </div>`);
+    this.triggersContainer.html('');
+    this.languagesContainer.html('');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("body-no-scroll");
     this.isOverlayOpen = false;
     this.chosenLanguages = [];
