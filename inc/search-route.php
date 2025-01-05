@@ -30,6 +30,47 @@ function marketplaceSearchResults($data) {
     $identities_table = $wpdb->prefix . "tomc_character_identities";
     $readalikes_table = $wpdb->prefix . "tomc_book_readalikes";
 
+    //first, if the search term contains "by", check for a book with title and author name
+    if (str_contains(strtoupper($searchTerm), 'BY')){
+        if ($hasTriggers == 'yes'){
+            $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
+            from %i b
+            join %i c on b.id = c.bookid
+            join %i d on c.typeid = d.id
+            join %i e on b.id = e.bookid
+            join %i f on e.pennameid = f.id
+            join %i g on c.productid = g.id
+            join %i h on b.id = h.bookid
+            where h.languageid in (' . join(', ', $selectedLanguages) . ')
+            and concat(b.title, " by ", f.post_title) like %s
+            and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
+            and b.islive = 1
+            order by b.createdate desc
+            limit 200';
+            $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, '%' . $wpdb->esc_like($searchTerm) . '%', $book_warnings_table), ARRAY_A);
+        } else {
+            $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
+            from %i b
+            join %i c on b.id = c.bookid
+            join %i d on c.typeid = d.id
+            join %i e on b.id = e.bookid
+            join %i f on e.pennameid = f.id
+            join %i g on c.productid = g.id
+            join %i h on b.id = h.bookid
+            where h.languageid in (' . join(', ', $selectedLanguages) . ')
+            and concat(b.title, " by ", f.post_title) like %s
+            and b.islive = 1
+            order by b.createdate desc
+            limit 200';
+            $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, '%' . $wpdb->esc_like($searchTerm) . '%'), ARRAY_A);
+        }
+        for($index = 0; $index < count($booksResults); $index++){
+            $booksResults[$index]['product_url'] = get_permalink($booksResults[$index]['product_url']);
+            $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
+        }
+        array_push($resultsArr, ...$booksResults);
+    }
+    //checking for title
     if ($hasTriggers == 'yes'){
         $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
         from %i b
@@ -67,21 +108,55 @@ function marketplaceSearchResults($data) {
         $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
     }
     array_push($resultsArr, ...$booksResults);
+    // //check again for books where the database title record is contained in the search term
+    // $fuzzyTitle = 'concat("%", b.title, "%")';
+    // if ($hasTriggers == 'yes'){
+    //     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
+    //     from %i b
+    //     join %i c on b.id = c.bookid
+    //     join %i d on c.typeid = d.id
+    //     join %i e on b.id = e.bookid
+    //     join %i f on e.pennameid = f.id
+    //     join %i g on c.productid = g.id
+    //     join %i h on b.id = h.bookid
+    //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
+    //     and %s like concat("%%", b.title, "%%")
+    //     and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
+    //     and b.islive = 1
+    //     order by b.createdate desc
+    //     limit 200';
+    //     $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $searchTerm, $book_warnings_table), ARRAY_A);
+    // } else {
+    //     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
+    //     from %i b
+    //     join %i c on b.id = c.bookid
+    //     join %i d on c.typeid = d.id
+    //     join %i e on b.id = e.bookid
+    //     join %i f on e.pennameid = f.id
+    //     join %i g on c.productid = g.id
+    //     join %i h on b.id = h.bookid
+    //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
+    //     and %s like concat("%%", b.title, "%%")
+    //     and b.islive = 1
+    //     order by b.createdate desc
+    //     limit 200';
+    //     $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $searchTerm), ARRAY_A);
+    // }
+    // for($index = 0; $index < count($booksResults); $index++){
+    //     $booksResults[$index]['product_url'] = get_permalink($booksResults[$index]['product_url']);
+    //     $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
+    // }
+    // array_push($resultsArr, ...$booksResults);
 
-    $query = 'select distinct post.id, post.post_title as pen_name, post.id as author_url, "author" as "resulttype"
-    from %i post
-    where post.post_title like %s
-    and post.post_status = "publish"
-    and post.post_type = "author-profile"
-    limit 100';
-    $authorResults = $wpdb->get_results($wpdb->prepare($query, $posts_table, '%' . $wpdb->esc_like($searchTerm) . '%'), ARRAY_A);
-    for($index = 0; $index < count($authorResults); $index++){
-        $authorResults[$index]['author_url'] = get_permalink($authorResults[$index]['author_url']);
-    }
-    array_push($resultsArr, ...$authorResults);
-
+    //check for title matching search term - format names
+    $shortenedSearchTerm = str_ireplace(" audiobooks", "", $searchTerm);
+    $shortenedSearchTerm = str_ireplace(" audiobook", "", $shortenedSearchTerm);
+    $shortenedSearchTerm = str_ireplace(" ebooks", "", $shortenedSearchTerm);
+    $shortenedSearchTerm = str_ireplace(" ebook", "", $shortenedSearchTerm);
+    $shortenedSearchTerm = str_ireplace(" e-books", "", $shortenedSearchTerm);
+    $shortenedSearchTerm = str_ireplace(" e-book", "", $shortenedSearchTerm);
     if ($hasTriggers == 'yes'){
-        $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "genrebooks" as "resulttype"
+        $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
@@ -89,17 +164,15 @@ function marketplaceSearchResults($data) {
         join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
-        join %i k on b.id = k.bookid
-        join %i l on k.genreid = l.id
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
-        and l.genre_name = %s
+        and b.title like %s
         and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
         and b.islive = 1
         order by b.createdate desc
-        limit 20';
-        $genreResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_genres_table, $genres_table, $searchTerm, $book_warnings_table), ARRAY_A);
+        limit 200';
+        $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, '%' . $wpdb->esc_like($shortenedSearchTerm) . '%', $book_warnings_table), ARRAY_A);
     } else {
-        $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "genrebooks" as "resulttype"
+        $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
@@ -107,103 +180,163 @@ function marketplaceSearchResults($data) {
         join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
-        join %i k on b.id = k.bookid
-        join %i l on k.genreid = l.id
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
-        and l.genre_name = %s
+        and b.title like %s
         and b.islive = 1
         order by b.createdate desc
-        limit 20';
-        $genreResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_genres_table, $genres_table, $searchTerm), ARRAY_A);
+        limit 200';
+        $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, '%' . $wpdb->esc_like($shortenedSearchTerm) . '%'), ARRAY_A);
     }
-    for($index = 0; $index < count($genreResults); $index++){
-        $genreResults[$index]['product_url'] = get_permalink($genreResults[$index]['product_url']);
-        $genreResults[$index]['product_image_id'] = get_the_post_thumbnail_url($genreResults[$index]['product_image_id']);
+    for($index = 0; $index < count($booksResults); $index++){
+        $booksResults[$index]['product_url'] = get_permalink($booksResults[$index]['product_url']);
+        $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
     }
-    array_push($resultsArr, ...$genreResults);
+    array_push($resultsArr, ...$booksResults);
 
-    if ($hasTriggers == 'yes'){
-        $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "identitybooks" as "resulttype"
-        from %i b
-        join %i c on b.id = c.bookid
-        join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
-        join %i g on c.productid = g.id
-        join %i h on b.id = h.bookid
-        join %i k on b.id = k.bookid
-        join %i l on k.identityid = l.id
-        where h.languageid in (' . join(', ', $selectedLanguages) . ')
-        and l.identity_name = %s
-        and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
-        and b.islive = 1
-        order by b.createdate desc
-        limit 20';
-        $identityResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_identities_table, $identities_table, $searchTerm, $book_warnings_table), ARRAY_A);
-    } else {
-        $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "identitybooks" as "resulttype"
-        from %i b
-        join %i c on b.id = c.bookid
-        join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
-        join %i g on c.productid = g.id
-        join %i h on b.id = h.bookid
-        join %i k on b.id = k.bookid
-        join %i l on k.identityid = l.id
-        where h.languageid in (' . join(', ', $selectedLanguages) . ')
-        and l.identity_name = %s
-        and b.islive = 1
-        order by b.createdate desc
-        limit 20';
-        $identityResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_identities_table, $identities_table, $searchTerm), ARRAY_A);
-    }
-    for($index = 0; $index < count($identityResults); $index++){
-        $identityResults[$index]['product_url'] = get_permalink($identityResults[$index]['product_url']);
-        $identityResults[$index]['product_image_id'] = get_the_post_thumbnail_url($identityResults[$index]['product_image_id']);
-    }
-    array_push($resultsArr, ...$identityResults);
+    // //then check for books where the search term appears in the description
 
-    if ($hasTriggers == 'yes'){
-        $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "readalikebooks" as "resulttype", k.readalike_author
-        from %i b
-        join %i c on b.id = c.bookid
-        join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
-        join %i g on c.productid = g.id
-        join %i h on b.id = h.bookid
-        join %i k on b.id = k.bookid
-        where h.languageid in (' . join(', ', $selectedLanguages) . ')
-        and k.readalike_title = %s
-        and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
-        and b.islive = 1
-        order by b.createdate desc
-        limit 10';
-        $readalikeResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $readalikes_table, $searchTerm, $book_warnings_table), ARRAY_A);
-    } else {
-        $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "readalikebooks" as "resulttype", k.readalike_author
-        from %i b
-        join %i c on b.id = c.bookid
-        join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
-        join %i g on c.productid = g.id
-        join %i h on b.id = h.bookid
-        join %i k on b.id = k.bookid
-        where h.languageid in (' . join(', ', $selectedLanguages) . ')
-        and k.readalike_title = %s
-        and b.islive = 1
-        order by b.createdate desc
-        limit 10';
-        $readalikeResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $readalikes_table, $searchTerm), ARRAY_A);
-    }
-    for($index = 0; $index < count($readalikeResults); $index++){
-        $readalikeResults[$index]['product_url'] = get_permalink($readalikeResults[$index]['product_url']);
-        $readalikeResults[$index]['product_image_id'] = get_the_post_thumbnail_url($readalikeResults[$index]['product_image_id']);
-    }
-    array_push($resultsArr, ...$readalikeResults);
+    // //then check for books where the search term appears in the excerpt
+
+    // $query = 'select distinct post.id, post.post_title as pen_name, post.id as author_url, "author" as "resulttype"
+    // from %i post
+    // where post.post_title like %s
+    // and post.post_status = "publish"
+    // and post.post_type = "author-profile"
+    // limit 100';
+    // $authorResults = $wpdb->get_results($wpdb->prepare($query, $posts_table, '%' . $wpdb->esc_like($searchTerm) . '%'), ARRAY_A);
+    // for($index = 0; $index < count($authorResults); $index++){
+    //     $authorResults[$index]['author_url'] = get_permalink($authorResults[$index]['author_url']);
+    // }
+    // array_push($resultsArr, ...$authorResults);
+
+    // //check again for author name where search term is like database pen name record
+    // //and add JS to check for already-included authors
+
+    // if ($hasTriggers == 'yes'){
+    //     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "genrebooks" as "resulttype"
+    //     from %i b
+    //     join %i c on b.id = c.bookid
+    //     join %i d on c.typeid = d.id
+    //     join %i e on b.id = e.bookid
+    //     join %i f on e.pennameid = f.id
+    //     join %i g on c.productid = g.id
+    //     join %i h on b.id = h.bookid
+    //     join %i k on b.id = k.bookid
+    //     join %i l on k.genreid = l.id
+    //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
+    //     and l.genre_name = %s
+    //     and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
+    //     and b.islive = 1
+    //     order by b.createdate desc
+    //     limit 20';
+    //     $genreResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_genres_table, $genres_table, $searchTerm, $book_warnings_table), ARRAY_A);
+    // } else {
+    //     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "genrebooks" as "resulttype"
+    //     from %i b
+    //     join %i c on b.id = c.bookid
+    //     join %i d on c.typeid = d.id
+    //     join %i e on b.id = e.bookid
+    //     join %i f on e.pennameid = f.id
+    //     join %i g on c.productid = g.id
+    //     join %i h on b.id = h.bookid
+    //     join %i k on b.id = k.bookid
+    //     join %i l on k.genreid = l.id
+    //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
+    //     and l.genre_name = %s
+    //     and b.islive = 1
+    //     order by b.createdate desc
+    //     limit 20';
+    //     $genreResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_genres_table, $genres_table, $searchTerm), ARRAY_A);
+    // }
+    // for($index = 0; $index < count($genreResults); $index++){
+    //     $genreResults[$index]['product_url'] = get_permalink($genreResults[$index]['product_url']);
+    //     $genreResults[$index]['product_image_id'] = get_the_post_thumbnail_url($genreResults[$index]['product_image_id']);
+    // }
+    // array_push($resultsArr, ...$genreResults);
+
+    // if ($hasTriggers == 'yes'){
+    //     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "identitybooks" as "resulttype"
+    //     from %i b
+    //     join %i c on b.id = c.bookid
+    //     join %i d on c.typeid = d.id
+    //     join %i e on b.id = e.bookid
+    //     join %i f on e.pennameid = f.id
+    //     join %i g on c.productid = g.id
+    //     join %i h on b.id = h.bookid
+    //     join %i k on b.id = k.bookid
+    //     join %i l on k.identityid = l.id
+    //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
+    //     and l.identity_name = %s
+    //     and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
+    //     and b.islive = 1
+    //     order by b.createdate desc
+    //     limit 20';
+    //     $identityResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_identities_table, $identities_table, $searchTerm, $book_warnings_table), ARRAY_A);
+    // } else {
+    //     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "identitybooks" as "resulttype"
+    //     from %i b
+    //     join %i c on b.id = c.bookid
+    //     join %i d on c.typeid = d.id
+    //     join %i e on b.id = e.bookid
+    //     join %i f on e.pennameid = f.id
+    //     join %i g on c.productid = g.id
+    //     join %i h on b.id = h.bookid
+    //     join %i k on b.id = k.bookid
+    //     join %i l on k.identityid = l.id
+    //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
+    //     and l.identity_name = %s
+    //     and b.islive = 1
+    //     order by b.createdate desc
+    //     limit 20';
+    //     $identityResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $book_identities_table, $identities_table, $searchTerm), ARRAY_A);
+    // }
+    // for($index = 0; $index < count($identityResults); $index++){
+    //     $identityResults[$index]['product_url'] = get_permalink($identityResults[$index]['product_url']);
+    //     $identityResults[$index]['product_image_id'] = get_the_post_thumbnail_url($identityResults[$index]['product_image_id']);
+    // }
+    // array_push($resultsArr, ...$identityResults);
+
+    // if ($hasTriggers == 'yes'){
+    //     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "readalikebooks" as "resulttype", k.readalike_author
+    //     from %i b
+    //     join %i c on b.id = c.bookid
+    //     join %i d on c.typeid = d.id
+    //     join %i e on b.id = e.bookid
+    //     join %i f on e.pennameid = f.id
+    //     join %i g on c.productid = g.id
+    //     join %i h on b.id = h.bookid
+    //     join %i k on b.id = k.bookid
+    //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
+    //     and k.readalike_title = %s
+    //     and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
+    //     and b.islive = 1
+    //     order by b.createdate desc
+    //     limit 10';
+    //     $readalikeResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $readalikes_table, $searchTerm, $book_warnings_table), ARRAY_A);
+    // } else {
+    //     $query = 'select distinct b.id, b.title, b.product_image_id, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "readalikebooks" as "resulttype", k.readalike_author
+    //     from %i b
+    //     join %i c on b.id = c.bookid
+    //     join %i d on c.typeid = d.id
+    //     join %i e on b.id = e.bookid
+    //     join %i f on e.pennameid = f.id
+    //     join %i g on c.productid = g.id
+    //     join %i h on b.id = h.bookid
+    //     join %i k on b.id = k.bookid
+    //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
+    //     and k.readalike_title = %s
+    //     and b.islive = 1
+    //     order by b.createdate desc
+    //     limit 10';
+    //     $readalikeResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $readalikes_table, $searchTerm), ARRAY_A);
+    // }
+    // for($index = 0; $index < count($readalikeResults); $index++){
+    //     $readalikeResults[$index]['product_url'] = get_permalink($readalikeResults[$index]['product_url']);
+    //     $readalikeResults[$index]['product_image_id'] = get_the_post_thumbnail_url($readalikeResults[$index]['product_image_id']);
+    // }
+    // array_push($resultsArr, ...$readalikeResults);
+    // //include a readalike check with title and author name split if the search term contains "by"
 
     return $resultsArr;
-    // return $wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, '%' . $wpdb->esc_like($searchTerm) . '%');
+    // return $wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, '%' . $wpdb->esc_like($shortenedSearchTerm) . '%', $book_warnings_table);
 }
