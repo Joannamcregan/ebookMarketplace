@@ -179,6 +179,7 @@ class Search {
     closeOverlay(){
         this.triggersContainer.html('');
         this.languagesContainer.html('');
+        this.resultsDiv.html('');
         $("body").removeClass("body-no-scroll");
         this.isOverlayOpen = false;
         this.chosenLanguages = [];
@@ -187,8 +188,8 @@ class Search {
     }
 
     getResults(e) {
-        if (this.chosenLanguages.length > 0){
-            if (this.searchField.val()){
+        if ((this.chosenLanguages.length > 0) || (this.filterLanguages == false)){
+            if (this.searchField.val().length > 2){
                 $(e.target).addClass('contracting');
                 $('#tomc-search--no-search-term').addClass('hidden');
                 $.ajax({
@@ -204,8 +205,10 @@ class Search {
                         'languages' : JSON.stringify(this.chosenLanguages)
                     },
                     success: (response) => {
+                        console.log(response);
                         $(e.target).removeClass('contracting');
-                        let alreadyAddedIds = [];
+                        let alreadyAddedBookIds = [];
+                        let alreadyAddedProductIds = [];
                         if(response.length < 1){
                             this.resultsDiv.html("<p class='centered-text'>Sorry! We couldn't find any matching results.</p>");
                         } else {
@@ -221,13 +224,16 @@ class Search {
                                     newDiv.append(newTitle);
                                     this.resultsDiv.append(newDiv);
                                     newDiv.fadeIn();
-                                } else if ($.inArray(response[i]['id'], alreadyAddedIds) > -1){
-                                    let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
-                                    let newFormat = $('<p />').html(response[i]['type_name'].slice(0, -1));
-                                    newLink.append(newFormat);
-                                    // $('#tomc-browse-genres--results--book-' + response[i]['id']).children('.tomc-browse--search-result-bottom-section').append(newLink);
-                                    this.resultsDiv.append(newLink);
-                                    newLink.fadeIn();
+                                } else if ($.inArray(response[i]['id'], alreadyAddedBookIds) > -1){
+                                    if ($.inArray(response[i]['productid'], alreadyAddedProductIds) == -1){
+                                        let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
+                                        let newFormat = $('<p />').html(response[i]['type_name'].slice(0, -1));
+                                        newLink.append(newFormat);
+                                        $('#tomc-browse-genres--results--book-' + response[i]['id']).children('.tomc-browse--search-result-bottom-section').append(newLink);
+                                        alreadyAddedProductIds.push(response[i]['productid']);
+                                        console.log(alreadyAddedProductIds);
+                                        newLink.fadeIn();
+                                    }
                                 } else if (response[i]['resulttype'] === 'book') {
                                     let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
@@ -249,7 +255,8 @@ class Search {
                                     newDiv.append(newBottomSection);
                                     this.resultsDiv.append(newDiv);
                                     newDiv.fadeIn();
-                                    alreadyAddedIds.push(response[i]['id']);
+                                    alreadyAddedBookIds.push(response[i]['id']);
+                                    alreadyAddedProductIds.push(response[i]['productid']);
                                 } else if (response[i]['resulttype'] === 'genrebooks') {
                                     let newDiv = $('<div />').addClass('tomc-book-organization--new-book-3').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newEm = $('<em />').html('new in ' + this.searchField.val());
@@ -273,7 +280,8 @@ class Search {
                                     newDiv.append(newBottomSection);
                                     this.resultsDiv.append(newDiv);                                    
                                     newDiv.fadeIn();
-                                    alreadyAddedIds.push(response[i]['id']);
+                                    alreadyAddedBookIds.push(response[i]['id']);
+                                    alreadyAddedProductIds.push(response[i]['productid']);
                                 } else if (response[i]['resulttype'] === 'identitybooks') {
                                     let newDiv = $('<div />').addClass('tomc-book-organization--new-book-3').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newEm = $('<em />').html('new with main characters who are ' + this.searchField.val());
@@ -297,7 +305,8 @@ class Search {
                                     newDiv.append(newBottomSection);
                                     this.resultsDiv.append(newDiv);
                                     newDiv.fadeIn();
-                                    alreadyAddedIds.push(response[i]['id']);
+                                    alreadyAddedBookIds.push(response[i]['id']);
+                                    alreadyAddedProductIds.push(response[i]['productid']);
                                 } else if (response[i]['resulttype'] === 'readalikebooks') {
                                     let newDiv = $('<div />').addClass('tomc-book-organization--new-book-1').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newEm = $('<em />').html('If you loved ' + this.searchField.val() + ' by ' + response[i]['readalike_author'] + ', you might love this book, too.');
@@ -321,7 +330,8 @@ class Search {
                                     newDiv.append(newBottomSection);
                                     this.resultsDiv.append(newDiv);
                                     newDiv.fadeIn();
-                                    alreadyAddedIds.push(response[i]['id']);
+                                    alreadyAddedBookIds.push(response[i]['id']);
+                                    alreadyAddedProductIds.push(response[i]['productid']);
                                 }
                             }
                         }
@@ -333,6 +343,8 @@ class Search {
             } else {
                 $('#tomc-search--no-search-term').removeClass('hidden');
             }            
+        } else {
+            //version with all languages route
         }
     }
 
