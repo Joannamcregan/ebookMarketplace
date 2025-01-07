@@ -332,6 +332,31 @@ class Search {
                                     newDiv.fadeIn();
                                     alreadyAddedBookIds.push(response[i]['id']);
                                     alreadyAddedProductIds.push(response[i]['productid']);
+                                } else if (response[i]['resulttype'] === 'genreIdentity'){
+                                    let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                                    let newEm = $('<em />').html('new in ' + response[i]['genre_name'] + ' about ' + response[i]['identity_name']);
+                                    newDiv.append(newEm);
+                                    let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
+                                    newDiv.append(newTitle);
+                                    let newAuthor = $('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
+                                    newDiv.append(newAuthor);
+                                    let newBottomSection = $('<div />').addClass('tomc-browse--search-result-bottom-section');
+                                    let newCoverDescription = $('<div />').addClass('tomc-search-result-cover-description');
+                                    let newImage = $('<img />').attr('src', response[i]['product_image_id']).attr('alt', 'the cover for ' + response[i]['title']);
+                                    newCoverDescription.append(newImage);
+                                    let newDescription = $('<p />').addClass('bottomSection-description').html(response[i]['book_description'].substring(0, 500) + '...');
+                                    newCoverDescription.append(newDescription);
+                                    newBottomSection.append(newCoverDescription);
+                                    newBottomSection.append('<h4 class="centered-text">available in</h4>');
+                                    let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
+                                    let newFormat = $('<p />').html(response[i]['type_name'].slice(0, -1));
+                                    newLink.append(newFormat);
+                                    newBottomSection.append(newLink);
+                                    newDiv.append(newBottomSection);
+                                    this.resultsDiv.append(newDiv);                                    
+                                    newDiv.fadeIn();
+                                    alreadyAddedBookIds.push(response[i]['id']);
+                                    alreadyAddedProductIds.push(response[i]['productid']);
                                 }
                             }
                         }
