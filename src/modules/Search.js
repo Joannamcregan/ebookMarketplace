@@ -258,7 +258,7 @@ class Search {
                                     alreadyAddedBookIds.push(response[i]['id']);
                                     alreadyAddedProductIds.push(response[i]['productid']);
                                 } else if (response[i]['resulttype'] === 'genrebooks') {
-                                    let newDiv = $('<div />').addClass('tomc-book-organization--new-book-3').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                                    let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newEm = $('<em />').html('new in ' + this.searchField.val());
                                     newDiv.append(newEm);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
@@ -283,7 +283,7 @@ class Search {
                                     alreadyAddedBookIds.push(response[i]['id']);
                                     alreadyAddedProductIds.push(response[i]['productid']);
                                 } else if (response[i]['resulttype'] === 'identitybooks') {
-                                    let newDiv = $('<div />').addClass('tomc-book-organization--new-book-3').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                                    let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newEm = $('<em />').html('new with main characters who are ' + this.searchField.val());
                                     newDiv.append(newEm);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
@@ -308,7 +308,7 @@ class Search {
                                     alreadyAddedBookIds.push(response[i]['id']);
                                     alreadyAddedProductIds.push(response[i]['productid']);
                                 } else if (response[i]['resulttype'] === 'readalikebooks') {
-                                    let newDiv = $('<div />').addClass('tomc-book-organization--new-book-1').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                                    let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newEm = $('<em />').html('If you loved ' + this.searchField.val() + ' by ' + response[i]['readalike_author'] + ', you might love this book, too.');
                                     newDiv.append(newEm);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
