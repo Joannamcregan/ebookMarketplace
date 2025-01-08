@@ -284,7 +284,7 @@ class Search {
                                     alreadyAddedProductIds.push(response[i]['productid']);
                                 } else if (response[i]['resulttype'] === 'identitybooks') {
                                     let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
-                                    let newEm = $('<em />').html('new with main characters who are ' + this.searchField.val());
+                                    let newEm = $('<em />').html('new with main characters who are ' + response[i]['identity_name']);
                                     newDiv.append(newEm);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
                                     newDiv.append(newTitle);
@@ -309,7 +309,7 @@ class Search {
                                     alreadyAddedProductIds.push(response[i]['productid']);
                                 } else if (response[i]['resulttype'] === 'readalikebooks') {
                                     let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
-                                    let newEm = $('<em />').html('If you loved ' + this.searchField.val() + ' by ' + response[i]['readalike_author'] + ', you might love this book, too.');
+                                    let newEm = $('<em />').html('If you loved ' + response[i]['readalike_title'] + ' by ' + (response[i]['readalike_author'] != null ? response[i]['readalike_author'] : 'unknown or anonymous') + ', you might love this book, too.');
                                     newDiv.append(newEm);
                                     let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
                                     newDiv.append(newTitle);
