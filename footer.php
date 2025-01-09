@@ -108,7 +108,7 @@
             </div>
       </div>
       <div class="centered-text hidden tomc-book-organization--red-text" id="tomc-search--no-search-term">
-            <p>Enter a search term.</p>
+            <p>Enter a search term with at least 3 letters.</p>
       </div>
       <div class="container">
             <div id="search-overlay__results">
