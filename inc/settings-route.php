@@ -23,8 +23,6 @@ function getReaderSettings(){
     $reader_triggers_table = $wpdb->prefix . "tomc_reader_triggers";
     $languages_table = $wpdb->prefix .  "tomc_publication_languages";
     $reader_languages_table = $wpdb->prefix . "tomc_reader_languages";
-    // $user = wp_get_current_user();
-    // $userid = get_current_user_id();
     $user = wp_get_current_user();
     $userId = $user->ID;
     $triggerQuery = 'WITH cte AS (SELECT triggerid FROM %i WHERE readerid = %d)
@@ -43,8 +41,6 @@ function getReaderSettings(){
 function saveReaderTriggers($data){
     $triggers = explode(',', trim(sanitize_text_field($data['triggers']), '[]'));
     $now = date('Y-m-d H:i:s');
-    // $user = wp_get_current_user();
-    // $userid = get_current_user_id();
     $user = wp_get_current_user();
     $userid = $user->ID;
     global $wpdb;
@@ -74,8 +70,6 @@ function saveReaderTriggers($data){
 function saveReaderLanguages($data){
     $languages = explode(',', trim(sanitize_text_field($data['languages']), '[]'));
     $now = date('Y-m-d H:i:s');
-    // $user = wp_get_current_user();
-    // $userid = get_current_user_id();
     $user = wp_get_current_user();
     $userId = $user->ID;
     global $wpdb;
@@ -83,13 +77,13 @@ function saveReaderLanguages($data){
     if (is_user_logged_in()){
         $wpdb->delete(
             $reader_languages_table,
-            array('readerid' => $userid));
+            array('readerid' => $userId));
         $query = 'insert into ' . $reader_languages_table . '(readerid, languageid, createdate) values ';
         for($i = 0; $i < count($languages); $i++){
             if($i == 0){
-                $values = '(' . $userid . ', ' . $languages[$i] . ', "' . $now . '")';                        
+                $values = '(' . $userId . ', ' . $languages[$i] . ', "' . $now . '")';                        
             }else{
-                $values = ', (' . $userid . ', ' . $languages[$i] . ', "' . $now . '")';  
+                $values = ', (' . $userId . ', ' . $languages[$i] . ', "' . $now . '")';  
             }
             $query .= $values;
         }
