@@ -15,6 +15,13 @@ body{
     margin-right: 0px;
     overflow-x: hidden;
 }
+/* visibility----------------------------------------------------------------------- */
+.hidden{
+    display: none;
+}
+.invisible{
+    visibility: hidden;
+}
 /*screen-sizing--------------------------------------------------------------*/
 .full-screen{
     min-height: 80vh;
