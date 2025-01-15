@@ -85,6 +85,43 @@ function marketplaceSearchResults($data) {
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
+        and b.title = %s
+        and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
+        and b.islive = 1
+        order by b.createdate desc
+        limit 200';
+        $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $searchTerm, $book_warnings_table), ARRAY_A);
+    } else {
+        $query = 'select distinct b.id, b.title, b.product_image_id, c.productid, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
+        from %i b
+        join %i c on b.id = c.bookid
+        join %i d on c.typeid = d.id
+        join %i e on b.id = e.bookid
+        join %i f on e.pennameid = f.id
+        join %i g on c.productid = g.id
+        join %i h on b.id = h.bookid
+        where h.languageid in (' . join(', ', $selectedLanguages) . ')
+        and b.title = %s
+        and b.islive = 1
+        order by b.createdate desc
+        limit 200';
+        $booksResults = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $searchTerm), ARRAY_A);
+    }
+    for($index = 0; $index < count($booksResults); $index++){
+        $booksResults[$index]['product_url'] = get_permalink($booksResults[$index]['product_url']);
+        $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
+    }
+    array_push($resultsArr, ...$booksResults);
+    if ($hasTriggers == 'yes'){
+        $query = 'select distinct b.id, b.title, b.product_image_id, c.productid, f.post_title as pen_name, b.book_description, b.createdate, d.type_name, g.id as product_url, "book" as "resulttype"
+        from %i b
+        join %i c on b.id = c.bookid
+        join %i d on c.typeid = d.id
+        join %i e on b.id = e.bookid
+        join %i f on e.pennameid = f.id
+        join %i g on c.productid = g.id
+        join %i h on b.id = h.bookid
+        where h.languageid in (' . join(', ', $selectedLanguages) . ')
         and b.title like %s
         and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
         and b.islive = 1
