@@ -4,6 +4,7 @@
     overflow-x:scroll;
     padding: 1em 1em 0em 1em;
     width: auto;
+    min-height: 100px;
     align-content: center;
     background: #f6ece1;
     border-bottom: solid 10px #e3caab;
@@ -111,7 +112,6 @@
     overflow-x:hidden;
     padding: 1em 1em 0em 1em;
     width: auto;
-    min-height: 100px;
 }
 .book-cover--small-1 {
     max-width: 150px;
