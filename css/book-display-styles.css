@@ -111,6 +111,7 @@
     overflow-x:hidden;
     padding: 1em 1em 0em 1em;
     width: auto;
+    min-height: 100px;
 }
 .book-cover--small-1 {
     max-width: 150px;
