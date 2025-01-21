@@ -121,7 +121,7 @@ textarea.bbp-the-content{
 }
 #bbpress-forums fieldset.bbp-form input[type=text]{
     border-radius: 15px !important;
-    padding: 5px;
+    padding: 5px !important;
 }
 .leave-group{
     border: solid 3px #0c6980 !important;
