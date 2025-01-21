@@ -19,7 +19,7 @@
             <?php }
             ?><div class="red-orange-line-break-60"></div>
             <?php if (in_array( 'reader-member', (array) $user->roles )){
-                ?><div class="tomc-circle-container">
+                ?><div class="tomc-circle-container tomc-circle-container-long-text">
                     <img src="<?php echo get_theme_file_uri('/images/circle-background-1.jpg'); ?>" role="presentation" />
                     <p class="orange-shadow-heading tankindred-text tomc-circle-p-1-padded-2x"><a href="<?php echo esc_url(site_url('/groups/reader-members/forum/'));?>"><strong>Reading</strong></a></p>
                     <p class="tomc-circle-p-2">Let's talk about books we're reading, books we've read, books we want to read, and reading itself! This forum is for co-op members who are part of our Readers' Circle.</p>
