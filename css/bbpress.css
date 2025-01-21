@@ -97,6 +97,7 @@ textarea.bbp-the-content{
 }
 #bbpress-forums ul.bbp-replies{
 	font-size: 14px !important;
+    max-width: 90% !important;
 }
 #item-header-content{
     padding-top: 20px !important;
@@ -129,7 +130,4 @@ textarea.bbp-the-content{
     padding: 10px !important;
     background: #faefe3 !important;
     color: black !important;
-}
-ul.bbp-replies{
-    width: 90% !important;
 }
