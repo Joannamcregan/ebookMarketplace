@@ -429,7 +429,7 @@ function assignReaderMemberRole($form_id, $response) {
         $user = wp_get_current_user();
         $userId = $user->ID;
         $user->add_role( 'reader-member' );
-        tomcAddUserToGroup(3 /*reader-members group*/, $userId);
+        tomcAddUserToGroup(4430 /*reader-members group*/, $userId);
     }
 }
 
@@ -439,7 +439,7 @@ function assignCreatorMemberRole($form_id, $response) {
         $userId = $user->ID;
         $user->add_role( 'creator-member' );
         $user->add_role( 'dc_vendor' );
-        tomcAddUserToGroup(2 /*creator-members group*/, $userId);
+        tomcAddUserToGroup(4429 /*creator-members group*/, $userId);
     }
 } 
 
@@ -454,7 +454,7 @@ function tomcAddUserToGroup( $group_id, $user_id ) {
 // maintenance mode-----------------------------------------------------------------------
 function tomc_maintenance_mode() {
     if (!is_user_logged_in()) {    
-        wp_die("<h1 style='color: #0c6980; text-align: center'>Coming Soon!</h1><p style='text-align: center'>The Trunk of My Car Cooperative Marketplace is launching Summer 2024. Our current member-owners are uploading works and conducting final tests before making the platform widely available in the coming days. You can learn more about the cooperative community we're building <a href='https://www.trunkofmycar.org/'>here</a>. </p>");    
+        wp_die("<h1 style='color: #0c6980; text-align: center'>Coming Soon!</h1><p style='text-align: center'>The Trunk of My Car Cooperative Marketplace is launching early 2025. Our current member-owners are uploading works and conducting final tests before making the platform widely available in the coming days. You can learn more about the cooperative community we're building <a href='https://www.trunkofmycar.org/'>here</a>. </p>");    
     }    
 }
     
