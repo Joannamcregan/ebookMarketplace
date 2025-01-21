@@ -130,6 +130,6 @@ textarea.bbp-the-content{
     background: #faefe3 !important;
     color: black !important;
 }
-ul.bbp-replies-list li{
-    width: 90% !important;
+ul.bbp-replies li{
+    width: 95% !important;
 }
