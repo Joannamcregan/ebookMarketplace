@@ -1,5 +1,5 @@
 .contracting {
-    animation: contract 1s 2;
+    animation: contract 1s 30;
 }
 @keyframes contract {
     0% {scale: 1;}

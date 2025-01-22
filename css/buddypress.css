@@ -394,7 +394,7 @@ div.mce-toolbar-grp{
 #message_content{
     width: 100% !important;
 }
-.buddypress-wrap .standard-form input{
+.buddypress-wrap .standard-form input[type="text"]{
     width: 95% !important;
 }
 #buddypress .generic-button{
