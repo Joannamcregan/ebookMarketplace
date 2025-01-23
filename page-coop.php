@@ -2,7 +2,7 @@
 
 ?><main class="leaves">
     <h1 class='caprasimo-text special-display-text'>Trunk of My Car</h1>
-    <p class="leaves-p centered-text"><strong>Our Cooperatively Owned</strong> Book Marketplace</p>
+    <p class="leaves-p centered-text"><strong>A Cooperatively Owned Self-Publishing Marketplace</strong></p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
             <div class="leaf orange-leaf expandable-leaf">
