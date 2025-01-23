@@ -14,7 +14,7 @@
                         <?php }
                         ?><li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
-                        ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
+                        ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login/Register</a></li>
                   <?php }                  
                   ?>
                   <li class="privacy-policy-li"><a href="<?php echo esc_url(site_url('/privacy'));?>">Privacy Policy</a></li>
@@ -51,7 +51,7 @@
                         <li><a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>">Add a Product</a></li>
                   <?php }
             } else {
-                  ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></li>
+                  ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login/Register</a></li>
             <?php }
       ?></ul>
       <ul class="menu-overlay-list-1">

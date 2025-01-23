@@ -38,7 +38,7 @@
           <a href="<?php echo esc_url(site_url('/my-books'));?>">Edit Book Info</a>
         <?php }
       } else {
-        ?><a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a>
+        ?><a href="<?php echo esc_url(site_url('/my-account'));?>">Login/Register</a>
       <?php }
     ?></div>
   </nav>
