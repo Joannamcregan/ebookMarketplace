@@ -592,4 +592,5 @@ form.ac-form .ac-reply-content{
 #register-page form#signup-form::before{
     content: 'Self-publishing (r)evolution begins here. Fill in the fields below.';
     text-align: center;
+    font-size: 18px;
 }
