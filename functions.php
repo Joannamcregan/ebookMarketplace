@@ -462,8 +462,25 @@ function tomcAddUserToGroup( $group_id, $user_id ) {
 
 add_filter( 'password_hint', function( $hint )
 {
-  return __( "Don't forget to lock up your trunk! A strong password should be at least twelve characters long and include uppercase and lowercase letters, numbers, and symbols like ! ? $ % ^ & ." );
+  return __( "Don't forget to lock your trunk! A strong password should be at least twelve characters long and include uppercase and lowercase letters, numbers, and symbols like ! ? $ % ^ & ." );
 } );
+
+add_filter( 'registration_redirect', 'tomc_redirect_home' );
+function tomc_redirect_home( $registration_redirect ) {
+	return home_url();
+}
+
+add_filter( 'wp_new_user_notification_email', function( $wp_new_user_notification_email, $user, $blogname ) {
+
+    $message = 'Thank you for rolling with us.';
+
+    $wp_new_user_notification_email['subject'] = sprintf( 'Welcome to %s.', $blogname );
+    $wp_new_user_notification_email['headers'] = array('Content-Type: text/html; charset=UTF-8');
+    $wp_new_user_notification_email['message'] = $message;
+
+    return $wp_new_user_notification_email;
+    
+}, $priority = 10, $accepted_args = 3 );
 
 // restrict wp-admin access to admin only---------------------------------------------------------
 // function tomc_restrict_admin(){
