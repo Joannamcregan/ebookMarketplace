@@ -460,6 +460,11 @@ function tomcAddUserToGroup( $group_id, $user_id ) {
     
 // add_action('get_header', 'tomc_maintenance_mode');
 
+add_filter( 'password_hint', function( $hint )
+{
+  return __( "Don't forget to lock up your trunk! A strong password should be at least twelve characters long and include uppercase and lowercase letters, numbers, and symbols like ! ? $ % ^ & ." );
+} );
+
 // restrict wp-admin access to admin only---------------------------------------------------------
 // function tomc_restrict_admin(){
 //     //if not administrator, kill WordPress execution and provide a message

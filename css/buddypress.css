@@ -586,3 +586,10 @@ form.ac-form .ac-reply-content{
 .buddypress-wrap .activity-comments ul li{
     padding: 10px 0px 10px 0px !important;
 }
+#register-page aside{
+    display: none !important;
+}
+#register-page form#signup-form::before{
+    content: 'Self-publishing (r)evolution begins here. Fill in the fields below.';
+    text-align: center;
+}
