@@ -469,6 +469,7 @@ add_filter( 'password_hint', function( $hint )
 
 
 // restrict wp-admin access to admin only---------------------------------------------------------
+////----don't do this because it makes it so vendors can't upload products, need MVX pro first---  
 // function tomc_restrict_admin(){
 //     //if not administrator, kill WordPress execution and provide a message
 //     if ( ! current_user_can( 'manage_options' ) ) {
@@ -477,3 +478,46 @@ add_filter( 'password_hint', function( $hint )
 // }
 // add_action( 'admin_init', 'tomc_restrict_admin', 1 );
 
+// Disable activation email from BuddyPress
+function tomc_disable_activation_email() {
+    remove_action( 'bp_core_signup_send_validation_email', 'bp_core_signup_send_validation_email' );
+    error_log( "Activation email disabled." );
+}
+add_action( 'bp_init', 'tomc_disable_activation_email' );
+
+// Automatically activate user signups
+function tomc_auto_activate_user( $user_login ) {
+    global $wpdb;
+
+    // Get the signup entry using BP_Signup class
+    $signup_data = BP_Signup::get(
+        array(
+            'user_login' => $user_login,
+            'active'     => 0, // Only look for inactive users
+        )
+    );
+
+    // Check if the signup exists
+    if ( ! empty( $signup_data['signups'] ) ) {
+        $signup = $signup_data['signups'][0]; // Assuming the first result is correct
+
+        // Activate the signup using BuddyPress' activation method
+        $activation_result = BP_Signup::activate( array( $signup->signup_id ) );
+
+        if ( isset( $activation_result['activated'] ) && ! empty( $activation_result['activated'] ) ) {
+            $activated_user = $activation_result['activated'][0];
+
+            // Log the successful activation
+            error_log( "User successfully activated: " . $activated_user->ID );
+        } else {
+            error_log( "Error activating user: " . $signup->user_login );
+        }
+    } else {
+        error_log( "User signup not found or already activated: " . $user_login );
+    }
+}
+
+// Hook into the registration process
+add_action( 'bp_core_signup_user', function( $user_id, $user_login, $user_password, $user_email, $usermeta ) {
+    tomc_auto_activate_user( $user_login );
+}, 10, 5 );
