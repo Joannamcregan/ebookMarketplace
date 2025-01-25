@@ -56,6 +56,12 @@ $allowed_html = array(
 	);
 	?>
 </p>
+<?php if (is_user_logged_in()){
+	$user = wp_get_current_user();
+	if (!(in_array( 'creator-member', (array) $user->roles )) && !(in_array( 'reader-member', (array) $user->roles ))){
+		?><p>Learn about <a href="<?php echo esc_url(site_url('/own'));?>">joining our cooperative</a>.</p>
+	<?php }
+} ?>
 
 
 <!-- ------------------------------------------------------ -->
@@ -73,7 +79,7 @@ $allowed_html = array(
 	 *
 	 * @deprecated 2.6.0
 	 */
-	do_action( 'woocommerce_before_my_account' );
+	// do_action( 'woocommerce_before_my_account' );
 
 	/**
 	 * Deprecated woocommerce_after_my_account action.
