@@ -336,7 +336,7 @@ function tomc_get_book_info() {
     limit 1';
     $results = $wpdb->get_results($wpdb->prepare($query, $products_table, $book_products_table, $books_table, $term_relationships_table, $term_taxonomy_table, $terms_table, $productid), ARRAY_A);
     if ($results){
-        if (($results[0]['name'] == 'Services') || ($results[0]['post_title'] == 'ISBN') || $results[0]['name'] == 'Event Tickets'){
+        if (($results[0]['name'] == 'Services') || ($results[0]['post_title'] == 'ISBN Registration') || $results[0]['name'] == 'Event Tickets'){
             echo '<div class="tomc-single-book-description-wrapper"><div class="tomc-single-book-description"><h2>Description</h2><p style="white-space: pre-line">' . $results[0]['post_content'] . '</p></div></div>';
         } else {
             echo '<div class="tomc-single-book-description-wrapper"><div class="tomc-single-book-description"><h2>Description</h2><p style="white-space: pre-line">' . $results[0]['book_description'] . '</p></div></div>';
