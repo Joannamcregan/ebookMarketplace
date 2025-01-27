@@ -40,6 +40,10 @@
             <button class="blue-button">Join as a Creator-Member</button>
             <button class="purple-button">Sell work with joining</button>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="tomc-road-text">
             <div class="tomc-road-text--top">
                 <p class="centered-text">Learn how to list your work</p>
