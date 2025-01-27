@@ -501,6 +501,20 @@ span.bbp-admin-links a{
         display: block;
     }
 }
+.tomc-road-text{
+    background: #333;
+    color: white;
+}
+.tomc-road-text--top{
+    border-bottom: solid 5px #f7c340;
+    padding-top: 5px;
+    margin-bottom: 2px;
+}
+.tomc-road-text--bottom{
+    border-top: solid 5px #f7c340;
+    padding-bottom: 5px;
+    margin-top: 2px;
+}
 .tomc-circle-container{
     width: 80%;
     min-height: 360px;
@@ -1110,6 +1124,9 @@ a {
     border-radius: 5px;
 } */
 /*additional containers-----------------------------------------------------------------*/
+.fit-content{
+    width: fit-content;
+}
 .fit-width-text{
     max-width: 900px;
     width: fit-content;
@@ -1799,4 +1816,27 @@ a {
 }
 .opacity-30{
     opacity: 0.3 !important;
+}
+.tomc-blue-purple-table th, td {
+    border: 3px solid #f7c340;
+    padding: 5px;
+    text-align: center;
+  }
+.tomc-blue-purple-table{
+    margin: 20px auto;
+    border: 5px solid #f7c340;
+    border-collapse: collapse;
+}
+.tomc-blue-cells{
+    background: #0c6980;
+    color: white;
+    text-shadow: 0px 1px 1px black;
+}
+.tomc-purple-cells{
+    background: #4c0548;
+    color: white;
+    text-shadow: 0px 1px 1px black;
+}
+.tomc-lighter-cells{
+    background: #faefe3;
 }

@@ -590,7 +590,7 @@ form.ac-form .ac-reply-content{
     display: none !important;
 }
 #register-page form#signup-form::before{
-    content: 'Self-publishing (r)evolution begins here. Fill in the fields below.';
+    content: 'Self-publishing (r)evolution begins here.';
     text-align: center;
     font-size: 18px;
 }
