@@ -975,6 +975,9 @@ a {
 .gray-link{
     color: #145566;
 }
+.white-link{
+    color: white;
+}
 .light-link{
     color: #afe8f6;
 }

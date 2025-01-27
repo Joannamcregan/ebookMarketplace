@@ -35,7 +35,7 @@
                         <td>Pay nothing out of pocket</td>
                     </tr>
                 </table>
-                <p class="right-text-no-margin">*Exclusive of Stripe transaction fees, currently at 30cents + 2.9%.</p>
+                <p>*Exclusive of Stripe transaction fees, currently at 30cents + 2.9%.</p>
             </div>
             <button class="blue-button">Join as a Creator-Member</button>
             <button class="purple-button">Sell work with joining</button>
@@ -49,7 +49,7 @@
                 <p class="centered-text">Learn how to list your work</p>
             </div>
             <div class="tomc-road-text--bottom">
-                <p class="centered-text">with our <a href="<?php echo esc_url(site_url('/creator-roadmap')); ?>" class="light-link">Creator Roadmap</a>.</p>
+                <p class="centered-text">with our <a href="<?php echo esc_url(site_url('/creator-roadmap')); ?>" class="white-link">Creator Roadmap</a>.</p>
             </div>
         </div>
     </div>
