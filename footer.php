@@ -7,11 +7,9 @@
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
                         <!-- <li><a href="<?php echo esc_url(site_url('/my-events'));?>">My Events</a></li> -->
                         <?php $user = wp_get_current_user();
-                        if (in_array( 'administrator', (array) $user->roles )){
-                              ?><li><a href="<?php echo esc_url(site_url('/wp-admin'));?>">Admin Board</a></li>
-                        <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
-                              ?><li><a href="<?php echo esc_url(site_url('/my-isbns'));?>">My ISBNs</a></li>
-                        <?php }
+                        if (in_array( 'dc_vendor', (array) $user->roles )){
+                              ?><li><a href="<?php echo esc_url(site_url('/my-isbn-registrations'));?>">My ISBN Registrations</a></li>
+                        <?php } 
                         ?><li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login/Register</a></li>
