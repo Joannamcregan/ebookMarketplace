@@ -10,7 +10,7 @@
         <?php echo do_shortcode('[forminator_form id="4212"]'); ?>
     </div>
     <?php } else {
-        ?><p>Interested in becoming a Creator-Member? First, register for our community or <a href="<?php echo esc_url(site_url('/my-account'));?>">login</a>.</p>
+        ?><p class="padding-x-20">Interested in becoming a Creator-Member? First, register for our community or <a href="<?php echo esc_url(site_url('/my-account'));?>">login</a>.</p>
     <?php }
 ?></main>
 
