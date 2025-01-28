@@ -10,7 +10,7 @@
         <?php echo do_shortcode('[forminator_form id="2372"]'); ?> 
     </div>
     <?php } else {
-        ?><div class="padding-x-20">
+        ?><div class="padding-x-20 centered-text">
             <p>Interested in becoming a Reader-Member? First, register for our community or <a href="<?php echo esc_url(site_url('/my-account'));?>">login</a>.</p>
         </div>
     <?php }
