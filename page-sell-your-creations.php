@@ -37,9 +37,21 @@
                 </table>
                 <p>*Exclusive of Stripe transaction fees, currently at 30cents + 2.9%.</p>
             </div>
-            <button class="blue-button">Join as a Creator-Member</button>
-            <button class="purple-button">Sell work with joining</button>
-        </div>
+            <?php if (is_user_logged_in()){
+                $user = wp_get_current_user();
+                if (in_array( 'creator-member', (array) $user->roles )){
+                    ?><p class="padding-x-20 centered-text"><em>Thank you for being a Creator-Member.</em></p>
+                <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
+                    ?><p class="padding-x-20 centered-text"><em>You are currently a vendor.</em></p>
+                    <a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>"><button class="blue-button">Join as a Creator-Member</button></a>
+                <?php } else {
+                    ?><a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>"><button class="blue-button">Join as a Creator-Member</button></a>
+                    <button class="purple-button" id="sell-as-vendor-button">Sell work without joining</button>
+                <?php }
+            } else {
+                ?><p class="padding-x-20 centered-text">Before you can become a vendor or Creator-Member, you must <a href="<?php echo esc_url(site_url('/my-account'));?>">login</a>.</p>
+            <?php }
+        ?></div>
         <br>
         <br>
         <br>

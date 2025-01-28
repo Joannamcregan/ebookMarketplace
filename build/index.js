@@ -423,6 +423,49 @@ class Settings {
 
 /***/ }),
 
+/***/ "./src/modules/VendorInfo.js":
+/*!***********************************!*\
+  !*** ./src/modules/VendorInfo.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class VendorInfo {
+  constructor() {
+    this.sellAsVendorButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#sell-as-vendor-button');
+    this.events();
+  }
+  events() {
+    this.sellAsVendorButton.on('click', this.getVendorRoleAssignment.bind(this));
+  }
+  getVendorRoleAssignment() {
+    console.log('pushed the button');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
+      beforeSend: xhr => {
+        xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
+      },
+      url: tomcBookorgData.root_url + '/wp-json/tomcVendor/v1/assignVendorRole',
+      type: 'POST',
+      success: response => {
+        console.log(response);
+        location.reload(true);
+      },
+      error: response => {
+        console.log(response);
+      }
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VendorInfo);
+
+/***/ }),
+
 /***/ "./src/modules/search.js":
 /*!*******************************!*\
   !*** ./src/modules/search.js ***!
@@ -915,6 +958,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_LoginPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/LoginPage */ "./src/modules/LoginPage.js");
 /* harmony import */ var _modules_InstructionsDisplay__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/InstructionsDisplay */ "./src/modules/InstructionsDisplay.js");
 /* harmony import */ var _modules_ProductDisplay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/ProductDisplay */ "./src/modules/ProductDisplay.js");
+/* harmony import */ var _modules_VendorInfo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/VendorInfo */ "./src/modules/VendorInfo.js");
+
 
 
 
@@ -931,6 +976,7 @@ const readerSettings = new _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__[
 const loginPage = new _modules_LoginPage__WEBPACK_IMPORTED_MODULE_5__["default"]();
 const instructions = new _modules_InstructionsDisplay__WEBPACK_IMPORTED_MODULE_6__["default"]();
 const productDisplay = new _modules_ProductDisplay__WEBPACK_IMPORTED_MODULE_7__["default"]();
+const vendorInfo = new _modules_VendorInfo__WEBPACK_IMPORTED_MODULE_8__["default"]();
 })();
 
 /******/ })()

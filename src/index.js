@@ -6,6 +6,7 @@ import Settings from './modules/ReaderSettings'
 import LoginPage from './modules/LoginPage'
 import Instructions from './modules/InstructionsDisplay'
 import ProductDisplay from './modules/ProductDisplay'
+import VendorInfo from './modules/VendorInfo'
 
 const mobileMenu = new MobileMenu()
 const marketplaceSearch = new Search()
@@ -15,3 +16,4 @@ const readerSettings = new Settings()
 const loginPage = new LoginPage()
 const instructions = new Instructions()
 const productDisplay = new ProductDisplay()
+const vendorInfo = new VendorInfo()

@@ -5,6 +5,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 //require files
 require get_theme_file_path('/inc/search-route.php');
 require get_theme_file_path('/inc/settings-route.php');
+require get_theme_file_path('/inc/vendor-route.php');
 
 // function marketplace_custom_rest() {
 //     register_rest_field('post', 'authorName', array(
