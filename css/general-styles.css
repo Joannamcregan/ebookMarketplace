@@ -340,6 +340,9 @@ span.bbp-admin-links a{
 .banner-heading-32{
     font-size: 32;
 }
+.banner-heading-30{
+    font-size: 30;
+}
 .banner-heading-28{
     font-size: 28;
 }
@@ -521,6 +524,17 @@ span.bbp-admin-links a{
 }
 .tomc-road-text--bottom p{
     margin-top: 2px;
+}
+.flex-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media screen and (max-width: 1090px) {
+    .flex-text{
+        display: inline-block;
+        text-align: center;
+    }
 }
 .tomc-circle-container{
     width: 80%;
@@ -1203,6 +1217,12 @@ a {
 }
 .padding-x-20{
     padding: 0 20px;
+}
+.padding-x-60{
+    padding: 0 60px;
+}
+.padding-t-20{
+    padding-top: 20px;
 }
 .centered-90vw{
     display: block;
