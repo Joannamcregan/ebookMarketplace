@@ -56,7 +56,7 @@
             </div>
         <?php } else {
             ?><div class="sub-leaf-wrapper">
-                <a href="<?php echo esc_url(site_url('/sell-your-creations')); ?>">
+                <a href="<?php echo esc_url(site_url('/options-to-offer-your-work')); ?>">
                 <div class="sub-leaf blue-leaf">
                     <p>Selling Your Work</p>
                 </div>
