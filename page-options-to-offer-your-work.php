@@ -3,9 +3,10 @@
     <div class="two-thirds-screen">
         <div class="banner"><h1 class="centered-text banner-heading-30">Options to Offer Your Work</h1></div>
         <div>
-            <div class="padding-x-60 padding-t-20 flex-text">
-                <span>Are you an author? A creative individual with services to offer? We invite you to offer your work(s) through Trunk of My Car Cooperative,</span>
-                <span> whether you're interested in joining the cooperative or not (but we hope you'll consider joining!)</span>
+            <div class="padding-x-60 padding-t-20">
+                <p class="centered-text">Are you an author? A creative individual with services to offer?</p>
+                <p class="centered-text">We invite you to offer your work(s) through Trunk of My Car Cooperative, whether you're interested in joining the cooperative or not.</p>
+                <p class="centered-text">(But we hope you'll consider joining!)</p>
             </div>
             <p class="centered-text padding-x-60">Learn about the differences between operating as a creator-member and as a vendor below.</p>
             <div class="fit-content margin-auto-block">
