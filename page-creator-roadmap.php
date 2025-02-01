@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-left blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add Product button under the Downloadable Files section on the vendor dashboard"/>
+                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add Product button under the Downloadable Files section on the Vendor Dashboard"/>
             </div>
         </div>
         <div class="roadmap-section">
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-right purple-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="test image" />
+                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
             </div>
         </div>
         <div class="roadmap-section">
@@ -92,7 +92,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-right orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-billing-info.jpg'); ?>" alt="test image"/>
+                <img src="<?php echo get_theme_file_uri('/images/add-billing-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard"/>
             </div>
         </div>
         <div class="roadmap-section">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" alt="test image" class="roadmap-img--bottom"/>
+            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
         </div>
         <div>
             <p class="right-text">
@@ -139,7 +139,7 @@
                     <div class="roadmap-section--bottom-right--wrap-2">
                         <div class="roadmap-section--bottom-right">
                             <h2 class="left-text-no-margin">Add a Title, Image, and Description</h2>
-                            <p class="left-text-no-margin">Be sure let buyers know how they can contact you. If you're offering editing, proofreading, beta reading, etc., specify a word limit for each instance of your service so that authors can buy as many instances as they need, depending on the length of their book.</p>
+                            <p class="left-text-no-margin">Be sure to let buyers know how they can contact you. If you're offering editing, proofreading, beta reading, etc., specify a word limit for each instance of your service so that authors can buy as many instances as they need, depending on the length of their book.</p>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-right blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="test image" />
+                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
             </div>
         </div>
         <div class="roadmap-section">
@@ -174,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" alt="test image" class="roadmap-img--bottom"/>
+            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
         </div>
         <p class="right-text">That's it! Once published, your service will appear in our <a href="<?php echo esc_url(site_url('/services'));?>">directory</a>.</p>
     </div>
