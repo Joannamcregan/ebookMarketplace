@@ -54,7 +54,7 @@
         $tomc_username = $tomc_user->user_login;
         ?><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">My Profile</a>
         <a href="<?php echo esc_url(site_url('/discussions')); ?>">Discussions</a>
-        <?php if (in_array( 'dc_vendor', (array) $user->roles )){
+        <?php if (in_array( 'creator-member', (array) $user->roles )){
           ?><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a>
           <a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>">Add a Product</a>
         <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
