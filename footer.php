@@ -44,8 +44,11 @@
                   $tomc_user = get_userdata($user->ID);
                   $tomc_username = $tomc_user->user_login;
                   ?><li><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">My Profile</a></li>
-                  <?php if (in_array( 'dc_vendor', (array) $user->roles )){
+                  <?php if (in_array( 'creator-member', (array) $user->roles )){
                         ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a></li>
+                        <li><a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>">Add a Product</a></li>
+                  <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
+                        ?><li><a href="<?php echo esc_url(site_url('/dashboard'));?>">Vendor Dashboard</a></li>
                         <li><a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>">Add a Product</a></li>
                   <?php }
             } else {

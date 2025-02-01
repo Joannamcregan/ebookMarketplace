@@ -57,6 +57,9 @@
         <?php if (in_array( 'dc_vendor', (array) $user->roles )){
           ?><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a>
           <a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>">Add a Product</a>
+        <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
+          ?><a href="<?php echo esc_url(site_url('/dashboard'));?>">Vendor Dashboard</a>
+          <a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>">Add a Product</a>
         <?php }
       }
     ?></div>
