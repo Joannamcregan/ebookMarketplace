@@ -423,6 +423,44 @@ class Settings {
 
 /***/ }),
 
+/***/ "./src/modules/Roadmap.js":
+/*!********************************!*\
+  !*** ./src/modules/Roadmap.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class Roadmap {
+  constructor() {
+    this.sellBooksSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellBooksSpan");
+    this.sellProductsSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellProductsSection");
+    this.sellServicesSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellServicesSpan");
+    this.sellServicesSection = "#sellServicesSection";
+    this.events();
+  }
+  events() {
+    this.sellBooksSpan.on('click', () => {
+      this.sellBooksSpan.toggleClass('roadmap--purple-span');
+      this.sellBooksSpan.toggleClass('roadmap--hollow-purple-span');
+      this.sellProductsSection.toggleClass('hidden');
+    });
+    this.sellServicesSpan.on('click', () => {
+      this.sellServicesSpan.toggleClass('roadmap--blue-span');
+      this.sellServicesSpan.toggleClass('roadmap--hollow-blue-span');
+      this.sellServicesSection.toggleClass('hidden');
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Roadmap);
+
+/***/ }),
+
 /***/ "./src/modules/VendorInfo.js":
 /*!***********************************!*\
   !*** ./src/modules/VendorInfo.js ***!
@@ -959,6 +997,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_InstructionsDisplay__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/InstructionsDisplay */ "./src/modules/InstructionsDisplay.js");
 /* harmony import */ var _modules_ProductDisplay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/ProductDisplay */ "./src/modules/ProductDisplay.js");
 /* harmony import */ var _modules_VendorInfo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/VendorInfo */ "./src/modules/VendorInfo.js");
+/* harmony import */ var _modules_Roadmap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/Roadmap */ "./src/modules/Roadmap.js");
+
 
 
 
@@ -977,6 +1017,7 @@ const loginPage = new _modules_LoginPage__WEBPACK_IMPORTED_MODULE_5__["default"]
 const instructions = new _modules_InstructionsDisplay__WEBPACK_IMPORTED_MODULE_6__["default"]();
 const productDisplay = new _modules_ProductDisplay__WEBPACK_IMPORTED_MODULE_7__["default"]();
 const vendorInfo = new _modules_VendorInfo__WEBPACK_IMPORTED_MODULE_8__["default"]();
+const roadmap = new _modules_Roadmap__WEBPACK_IMPORTED_MODULE_9__["default"]();
 })();
 
 /******/ })()

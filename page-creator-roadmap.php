@@ -4,7 +4,7 @@
     <div class="banner"><h1 class="centered-text banner-heading-38">Creator Roadmap</h1></div>
     <br>
     <span class="roadmap--purple-span" id="sellBooksSpan">How to Sell Books</span>
-    <div id="sellProductsSection" class="roadmap-container">
+    <div id="sellProductsSection" class="roadmap-container hidden">
         <div class="roadmap-section">
             <div class="roadmap-section--bottom-right--wrap-0">
                 <div class="roadmap-section--bottom-right--wrap-1">
@@ -117,7 +117,7 @@
         <br>
     </div>
     <span class="roadmap--blue-span" id="sellServicesSpan">How to Sell Services</span>
-    <div id="sellServicesSection" class="roadmap-container">
+    <div id="sellServicesSection" class="roadmap-container hidden">
         <div class="roadmap-section">
             <div class="roadmap-section--bottom-left--wrap-0">
                 <div class="roadmap-section--bottom-left--wrap-1">

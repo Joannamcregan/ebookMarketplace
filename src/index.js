@@ -7,6 +7,7 @@ import LoginPage from './modules/LoginPage'
 import Instructions from './modules/InstructionsDisplay'
 import ProductDisplay from './modules/ProductDisplay'
 import VendorInfo from './modules/VendorInfo'
+import Roadmap from './modules/Roadmap'
 
 const mobileMenu = new MobileMenu()
 const marketplaceSearch = new Search()
@@ -17,3 +18,4 @@ const loginPage = new LoginPage()
 const instructions = new Instructions()
 const productDisplay = new ProductDisplay()
 const vendorInfo = new VendorInfo()
+const roadmap = new Roadmap()

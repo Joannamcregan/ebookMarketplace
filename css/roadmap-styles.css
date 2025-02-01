@@ -10,9 +10,35 @@
     width: 90vw;
     text-align: center;
 }
+.roadmap--hollow-purple-span{
+    border: solid 5px #4c0548;
+    background: #eee2d4;
+    color: #4c0548;
+    font-size: 16;
+    border-radius: 10px;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto 0px auto;
+    width: 90vw;
+    text-align: center;
+}
 .roadmap--blue-span{
     background-color: #0c6980;
     color: white;
+    font-size: 16;
+    border-radius: 10px;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto 0px auto;
+    width: 90vw;
+    text-align: center;
+}
+.roadmap--hollow-blue-span{
+    border: solid 5px #0c6980;
+    background: #eee2d4;
+    color: #0c6980;
     font-size: 16;
     border-radius: 10px;
     padding: 15px 10px;
