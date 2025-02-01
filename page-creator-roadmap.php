@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-left orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="test image"/>
+                <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="part of a screenshot showing the Add Product option in the Product Manager drop down on the vendor dashboard."/>
             </div>
         </div>
         <div class="roadmap-section">
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-right purple-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/product-title.jpg'); ?>" alt="test image" />
+                <img src="<?php echo get_theme_file_uri('/images/product-title-and-gtin.jpg'); ?>" alt="part of a screenshot showing the title field and ISBN option in the GTIN dropdown on the vendor dashboard" />
             </div>
         </div>
         <div class="roadmap-section">
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-left blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="test image"/>
+                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add Product button under the Downloadable Files section on the vendor dashboard"/>
             </div>
         </div>
         <div class="roadmap-section">
@@ -77,7 +77,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-left blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="test image"/>
+                <img src="<?php echo get_theme_file_uri('/images/product-format.jpg'); ?>" alt="part of a screenshot showing the Product Types option checkboxes on the vendor dashboard."/>
             </div>
         </div>
         <div class="roadmap-section">
@@ -130,7 +130,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-right orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="test image"/>
+                <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="part of a screenshot showing the Add Product option in the Product Manager drop down on the vendor dashboard."/>
             </div>
         </div>
         <div class="roadmap-section">
@@ -145,7 +145,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-left purple-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/product-title.jpg'); ?>" alt="test image" />
+                <img src="<?php echo get_theme_file_uri('/images/product-title.jpg'); ?>" alt="part of a screenshot showing the title field on the vendor dashboard" />
             </div>
         </div>
         <div class="roadmap-section">
