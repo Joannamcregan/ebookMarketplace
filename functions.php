@@ -293,6 +293,14 @@ function ebook_marketplace_remove_product_tabs( $tabs ) {
 }
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_remove_product_tabs', 98 );
 
+function tomc_block_guest_isbn_registration() {
+    global $product;
+    if ((4334 == $product->get_id()) && (!is_user_logged_in())) {
+        remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
+        remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+    }
+}
+
 function tomc_get_gallery_files() {
     global $post;
     if (is_product()) {
@@ -461,7 +469,7 @@ function tomc_maintenance_mode() {
     }    
 }
     
-add_action('get_header', 'tomc_maintenance_mode');
+// add_action('get_header', 'tomc_maintenance_mode');
 
 add_filter( 'password_hint', function( $hint )
 {
@@ -522,3 +530,63 @@ function tomc_auto_activate_user( $user_login ) {
 add_action( 'bp_core_signup_user', function( $user_id, $user_login, $user_password, $user_email, $usermeta ) {
     tomc_auto_activate_user( $user_login );
 }, 10, 5 );
+
+//emails
+
+add_filter('wp_mail_from_name', 'new_mail_from_name');
+
+//Here is where the new sender name goes:
+function new_mail_from_name($old) {
+	return 'New Sender Name';
+}
+
+add_filter( 'wpmu_signup_user_notification_subject', 'my_activation_subject', 10, 4 );
+
+function my_activation_subject( $text ) {
+
+//Here is where to input the new subject for the activation email:
+	return 'Customize me: Your account needs activation.';
+}
+
+add_filter('wp_mail', 'my_custom_email_message', 10, 1);
+
+function my_custom_email_message($args){
+    if( strpos( $args['message'], 'To activate your user' ) !== false ){
+        
+        //using html instead of plain text
+        $headers = $args['headers'];
+    	if ( !empty($headers) && is_string($headers) ) {
+    		$args['headers'] = str_replace('text/plain', 'text/html', $headers);
+    	}
+        
+        $activation_link_css = '
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        border: solid 1px #20538D;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+        background: #4479BA;
+        color: #FFF;
+        padding: 8px 12px;
+        text-decoration: none;
+        ';
+
+        $activation_link_text = 'activate'; // activation link text
+
+        $text_before_the_link = 'Part 1'; // text before the activation link
+        
+        $text_after_the_link = 'Part 2'; // text after the activation link
+        
+         
+        $args['message'] = str_replace('To activate your user, please click the following link:', $text_before_the_link.'<a style="'.$activation_link_css.'" href="',
+        
+        $args['message']);
+        
+        $args['message'] = str_replace('After you activate, you will receive *another email* with your login.', '">'.$activation_link_text.'</a>'.$text_after_the_link, $args['message']);
+    }
+    
+    return $args;
+}

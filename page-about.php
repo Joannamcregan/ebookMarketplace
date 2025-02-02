@@ -22,11 +22,11 @@
         <h2 class="large-heading red-brown-text yellow-shadow-heading">Our Team</h2>
         <img class="circle-bio-pic" alt="Black woman expressing joy" src="<?php echo get_theme_file_uri('/images/Zia.jpg'); ?>" />
         <h3 class="centered-text red-brown-text">Zia M Dione</h3>
-        <p class="centered-text">Founder. Operations Lead.</p>
+        <p>Founder. Operations Lead.</p>
         <p>Trunk of My Car Cooperative is inspired by a conversation Zia had with a famous author who shared how he started selling books from the trunk of his car. An emerging writer, she is focused on healing intergenerational trauma & building/supporting solidarity & sustainable economies. Zia is certified in permaculture design, has a law degree from the University of Baltimore & is currently pursuing an MFA in Creative Nonfiction at Pacific University. Yes, she changed her name.</p>
         <img class="circle-bio-pic" alt="White woman with glasses stands in an art museum" src="<?php echo get_theme_file_uri('/images/joanna.jpg'); ?>" />
         <h3 class="centered-text red-brown-text">Joanna Cregan</h3>
-        <p class="centered-text">Founding Member. Developer.</p>
+        <p>Founding Member. Developer.</p>
         <p>Joanna is a reader, writer, and web developer from Northeast Ohio who believes cooperative ownership can help bring about a healthier world.</p>
         <div class="red-orange-line-break"></div>
                     
