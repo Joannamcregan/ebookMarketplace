@@ -293,15 +293,14 @@ function ebook_marketplace_remove_product_tabs( $tabs ) {
 }
 add_filter( 'woocommerce_product_tabs', 'ebook_marketplace_remove_product_tabs', 98 );
 
-function tomc_block_guest_isbn_registration() {
+function disable_add_to_cart_button( $is_purchasable ) {
     global $product;
-    if ((4334 == $product->get_id()) && (!is_user_logged_in())) {
-        remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
-        remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+    if (($product->get_id()) == 4334 /*ISBN Registration*/ && (!is_user_logged_in())) {
+        return false; // return false disables the 'Add to Cart' button
     }
 }
 
-add_action( 'woocommerce_after_shop_loop_item', 'tomc_block_guest_isbn_registration', 10 );
+add_filter( 'woocommerce_is_purchasable', 'disable_add_to_cart_button' );
 
 function tomc_get_gallery_files() {
     global $post;
