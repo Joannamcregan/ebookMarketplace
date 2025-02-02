@@ -301,6 +301,8 @@ function tomc_block_guest_isbn_registration() {
     }
 }
 
+add_action( 'woocommerce_after_shop_loop_item', 'tomc_block_guest_isbn_registration', 10 );
+
 function tomc_get_gallery_files() {
     global $post;
     if (is_product()) {
