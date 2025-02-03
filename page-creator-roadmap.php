@@ -26,8 +26,12 @@
                     <div class="roadmap-section--bottom-left--wrap-2">
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Add Title, Cover, and Optional ISBN</h2>
-                            <p class="right-text-no-margin">Already have an ISBN? Enter it here! Need one? TOMC has ISBNs available for a small registration fee <a href="<?php echo esc_url(site_url('/product/isbn-registration'));?>">here</a>.</p>
-                        </div>
+                            <?php if (is_user_logged_in()){
+                                ?><p class="right-text-no-margin">Already have an ISBN? Enter it here! Need one? TOMC has ISBNs available for a small registration fee <a href="<?php echo esc_url(site_url('/product/isbn-registration'));?>">here</a>.</p>
+                            <?php } else {
+                                ?><p class="right-text-no-margin">Already have an ISBN? Enter it here! Need one? TOMC has ISBNs available for a small registration fee (but you have to <a href="<?php echo esc_url(site_url('/my-account'));?>">login</a> first).</p>
+                            <?php }                           
+                        ?></div>
                     </div>
                 </div>
             </div>
