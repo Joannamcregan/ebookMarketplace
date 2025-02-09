@@ -32,7 +32,7 @@ do_action( 'woocommerce_before_account_navigation' );
 			</li>
 		<?php endforeach; ?>
         <?php if (is_user_logged_in()){
-            ?><li><a href="<?php echo esc_url(site_url('/my-isbn-registrations'));?>">My ISBN Registrations</a></li>
+            ?><li><a href="<?php echo esc_url(site_url('/my-isbn-registrations'));?>">ISBN Registrations</a></li>
         <?php }
 	?></ul>
 </nav>
