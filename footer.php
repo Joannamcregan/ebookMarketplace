@@ -7,6 +7,7 @@
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">My Account</a></li>
                         <!-- <li><a href="<?php echo esc_url(site_url('/my-events'));?>">My Events</a></li> -->
                         <li><a href="<?php echo esc_url(site_url('/my-isbn-registrations'));?>">My ISBN Registrations</a></li>
+                        <li><a href="<?php echo esc_url(site_url('/my-account/orders'));?>">My Orders</a></li>
                         <li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {
                         ?><li><a href="<?php echo esc_url(site_url('/my-account'));?>">Login/Register</a></li>

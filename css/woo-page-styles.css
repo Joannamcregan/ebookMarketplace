@@ -670,7 +670,7 @@ justify-content: center;
     }
 }
 .woocommerce-order-downloads{
-    width: fit-content;
+    max-width: fit-content;
     margin: 0px auto 20px auto;
     padding: 10px;
     border-top: solid #e44e2d 2px;
@@ -679,6 +679,24 @@ justify-content: center;
     border-left: solid #e44e2d 5px;
     border-radius: 20px 0px;
     background: #faefe3;
+}
+.woocommerce-table--order-downloads{
+    max-width: 95vw !important;
+    border-spacing: 0px !important;
+}
+.woocommerce-table--order-downloads th, td{
+    max-width: fit-content !important;
+    border-width: 1px !important;
+}
+@media screen and (max-width: 630px) {
+    .woocommerce-table--order-downloads{
+        font-size: 14 !important;
+    }
+}
+@media screen and (max-width: 630px) {
+    .woocommerce-table--order-downloads{
+        font-size: 12 !important;
+    }
 }
 .woocommerce-order-details{
     width: fit-content;
