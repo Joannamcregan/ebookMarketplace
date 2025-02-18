@@ -962,7 +962,10 @@ td.woocommerce-orders-table__cell-order-total{
     margin-bottom: 20px;
 }
 .tomc-single-book-description h2{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+.tomc-single-book-description p[style="white-space: pre-line"]{
+    margin: 0px !important;
 }
 /*proceed to checkout page---------------------------------------------------------------------------------------------------*/
 .wc-block-cart__submit-container{
