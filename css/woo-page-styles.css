@@ -958,6 +958,9 @@ td.woocommerce-orders-table__cell-order-total{
     max-width: 300px !important;
     text-align: left !important;
 }
+.tomc-single-book-description div{
+    margin-bottom: 20px;
+}
 /*proceed to checkout page---------------------------------------------------------------------------------------------------*/
 .wc-block-cart__submit-container{
     border: solid #0c6980 5px;
