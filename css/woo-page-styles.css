@@ -953,6 +953,11 @@ td.woocommerce-orders-table__cell-order-total{
     padding-inline-start: 0px !important;
     padding-inline-end: 40px !important;
 }
+/* add on styles for single product page--------------------------------------------------------- */
+.wc-pao-addon-container{
+    max-width: 300px !important;
+    text-align: left !important;
+}
 /*proceed to checkout page---------------------------------------------------------------------------------------------------*/
 .wc-block-cart__submit-container{
     border: solid #0c6980 5px;
