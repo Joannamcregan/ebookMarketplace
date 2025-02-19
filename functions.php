@@ -467,7 +467,7 @@ function my_woocommerce_is_purchasable($is_purchasable, $product) {
             $userId = $user->ID;
             $numbers_table = $wpdb->prefix . 'tomc_isbn_numbers';
             $records_table = $wpdb->prefix . 'tomc_isbn_records';
-            $query = 'select isbn from %i';
+            $query = 'select isbn from %i where assignedto is null';
             $results = $wpdb->get_results($wpdb->prepare($query, $numbers_table), ARRAY_A);
             if (count($results) < 1){
                 $hide_purchase = true;
@@ -478,7 +478,7 @@ function my_woocommerce_is_purchasable($is_purchasable, $product) {
                 where numbers.assignedto = %d
                 and records.submitteddate is null';
                 $results = $wpdb->get_results($wpdb->prepare($query, $numbers_table, $records_table, $userId), ARRAY_A);
-                if (count($results) > 5){
+                if (count($results) >= 5){
                     $hide_purchase = true;
                     add_action( 'woocommerce_single_product_summary', 'tomc_ISBN_limit', 40 );
                 }
