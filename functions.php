@@ -453,17 +453,47 @@ function tomcAddUserToGroup( $group_id, $user_id ) {
     groups_join_group( $group_id, $user_id );
 }
 
-//restrict ISBN Registration purchases to logged-in users--------------------------------
+//restrict ISBN Registration purchases to logged-in users, prevent ISBN Registration purchase when less than 1 ISBN numbers in database, and prevent ISBN Registration purchase for people with >5 unsubmitted ISBNs--------------------------------
 add_filter('woocommerce_is_purchasable', 'my_woocommerce_is_purchasable', 10, 2);
 
 function my_woocommerce_is_purchasable($is_purchasable, $product) {
     $hide_purchase = false;
-    if (!is_user_logged_in()){
-        if ($product->id == 4334){
+    if ($product->id == 4334){ //4334 prod, 229 local
+        if (!is_user_logged_in()){
             $hide_purchase = true;
+        } else {
+            global $wpdb;
+            $user = wp_get_current_user();
+            $userId = $user->ID;
+            $numbers_table = $wpdb->prefix . 'tomc_isbn_numbers';
+            $records_table = $wpdb->prefix . 'tomc_isbn_records';
+            $query = 'select isbn from %i';
+            $results = $wpdb->get_results($wpdb->prepare($query, $numbers_table), ARRAY_A);
+            if (count($results) < 1){
+                $hide_purchase = true;
+                add_action( 'woocommerce_single_product_summary', 'tomc_unavailable_service', 40 );
+            } else {
+                $query = 'select isbn from %i numbers
+                join %i records on numbers.id = records.isbnid
+                where numbers.assignedto = %d
+                and records.submitteddate is null';
+                $results = $wpdb->get_results($wpdb->prepare($query, $numbers_table, $records_table, $userId), ARRAY_A);
+                if (count($results) > 5){
+                    $hide_purchase = true;
+                    add_action( 'woocommerce_single_product_summary', 'tomc_ISBN_limit', 40 );
+                }
+            }
         }
     }
     return ($hide_purchase ? false : $is_purchasable);
+}
+
+function tomc_unavailable_service(){
+    echo '<p>This servace is unavailable.</p><p>Check back soon!</p>';
+}
+
+function tomc_ISBN_limit(){
+    echo '<p>You cannot purchase another ISBN registration right now because you have 5 or more unsubmitted registrations.</p>';
 }
 
 
