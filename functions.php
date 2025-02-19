@@ -489,11 +489,11 @@ function my_woocommerce_is_purchasable($is_purchasable, $product) {
 }
 
 function tomc_unavailable_service(){
-    echo '<p>This servace is unavailable.</p><p>Check back soon!</p>';
+    echo '<p>This servace is currently unavailable.</p><p>Check back soon!</p>';
 }
 
 function tomc_ISBN_limit(){
-    echo '<p>You cannot purchase another ISBN registration right now because you have 5 or more unsubmitted registrations.</p>';
+    echo '<p>This account has 5 ISBN registrations that have not been submitted. Please complete registration for prior purchases in order to purchase another. Thank you.</p>';
 }
 
 
