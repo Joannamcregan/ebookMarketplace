@@ -93,7 +93,6 @@ class Search {
                         }
                     }
                     if (this.chosenLanguages < 1){
-                        console.log('no language settings');
                         $('#search-overlay-language-option-English').addClass('tomc-book-organization--option-span tomc-book-organization--option-selected').attr('aria-label', 'English is selected');
                         this.chosenLanguages.push($('#search-overlay-language-option-English').data('language-id'));
                     }
@@ -103,15 +102,13 @@ class Search {
                     setTimeout(() => this.searchField.focus(), 301);
                 },
                 error: (response) => {
-                    console.log('error getting triggers');
-                    console.log(response);
+                    // console.log(response);
                 }
             })
             return false;
         }
     }
     closeOverlay(){
-        console.log('close it');
         this.resultsDiv.html(`<h1 class="centered-text small-heading">Content Warnings</h1>
         <p class="centered-text">Select any triggers you want to avoid. We'll exclude books that have been tagged with corresponding content warnings from your search results.</p>
         <div id="search-overlay--triggers-container" class="tomc-book-organization--options-container"></div>
@@ -147,7 +144,6 @@ class Search {
                         'languages' : JSON.stringify(this.chosenLanguages)
                     },
                     success: (response) => {
-                        console.log(response);
                         let alreadyAddedIds = [];
                         if(response.length < 1){
                             this.resultsDiv.html("<p class='centered-text'>Sorry! We couldn't find any matching results.</p>");
@@ -279,8 +275,7 @@ class Search {
                         }
                     },
                     error: (response) => {
-                        console.log('fail');
-                        console.log(response);
+                        // console.log(response);
                     }
                 });
             } else {

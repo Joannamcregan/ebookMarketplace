@@ -10,7 +10,6 @@ class VendorInfo {
         this.sellAsVendorButton.on('click', this.getVendorRoleAssignment.bind(this));
     }
     getVendorRoleAssignment(){
-        console.log('pushed the button');
         $.ajax({
             beforeSend: (xhr) => {
                 xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
@@ -18,11 +17,11 @@ class VendorInfo {
             url: tomcBookorgData.root_url + '/wp-json/tomcVendor/v1/assignVendorRole',
             type: 'POST',
             success: (response) => {
-                console.log(response);
+                // console.log(response);
                 location.reload(true);
             },
             error: (response) => {
-                console.log(response);
+                // console.log(response);
             }
         })
     }

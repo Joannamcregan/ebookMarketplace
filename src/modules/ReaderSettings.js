@@ -109,8 +109,7 @@ class Settings {
                     $("body").addClass("body-no-scroll");
                 },
                 error: (response) => {
-                    console.log('error getting triggers');
-                    console.log(response);
+                    // console.log(response);
                 }
             })
         }
@@ -127,11 +126,11 @@ class Settings {
                 'languages': JSON.stringify(this.chosenLanguages)
             },
             success: (response) => {
-                console.log(response);
+                // console.log(response);
                 $("#tomc-reader-settings-language-settings-saved-message").fadeIn().delay(3000).fadeOut();
             },
             error: (response) => {
-                console.log(response);
+                // console.log(response);
             }
         })
     }
@@ -150,7 +149,7 @@ class Settings {
                 $("#tomc-reader-settings-trigger-settings-saved-message").fadeIn().delay(3000).fadeOut();
             },
             error: (response) => {
-                console.log(response);
+                // console.log(response);
             }
         })
     }

@@ -116,7 +116,7 @@ class ISBNRecords{
                 this.getUnfiled.removeClass('block');
             },
             error: (response) => {
-                console.log(response);
+                // console.log(response);
             }
         })
     }
@@ -194,7 +194,7 @@ class ISBNRecords{
                 this.getFiled.removeClass('block');
             },
             error: (response) => {
-                console.log(response);
+                // console.log(response);
             }
         })
     }
