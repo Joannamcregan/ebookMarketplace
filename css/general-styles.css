@@ -23,6 +23,10 @@ body{
     visibility: hidden;
 }
 /*screen-sizing--------------------------------------------------------------*/
+.max-1000-screen{
+    max-width: 1000px;
+    margin: auto;
+}
 .full-screen{
     min-height: 80vh;
 }
