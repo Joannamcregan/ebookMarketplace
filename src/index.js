@@ -8,6 +8,7 @@ import Instructions from './modules/InstructionsDisplay'
 import ProductDisplay from './modules/ProductDisplay'
 import VendorInfo from './modules/VendorInfo'
 import Roadmap from './modules/Roadmap'
+import FAQDisplay from './modules/FAQDisplay'
 
 const mobileMenu = new MobileMenu()
 const marketplaceSearch = new Search()
@@ -19,3 +20,4 @@ const instructions = new Instructions()
 const productDisplay = new ProductDisplay()
 const vendorInfo = new VendorInfo()
 const roadmap = new Roadmap()
+const faqDisplay = new FAQDisplay()

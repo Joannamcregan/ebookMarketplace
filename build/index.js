@@ -39,6 +39,33 @@ class CategoryDisplay {
 
 /***/ }),
 
+/***/ "./src/modules/FAQDisplay.js":
+/*!***********************************!*\
+  !*** ./src/modules/FAQDisplay.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class FAQDisplay {
+  constructor() {
+    this.questions = document.querySelectorAll('.tomc-faq-section h2');
+    this.events();
+  }
+  events() {
+    this.questions.forEach(question => {
+      question.addEventListener('click', e => {
+        question.closest('.tomc-faq-section').querySelector('.tomc-faq-a').classList.toggle('hidden');
+      });
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FAQDisplay);
+
+/***/ }),
+
 /***/ "./src/modules/FrontDisplay.js":
 /*!*************************************!*\
   !*** ./src/modules/FrontDisplay.js ***!
@@ -906,6 +933,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_ProductDisplay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/ProductDisplay */ "./src/modules/ProductDisplay.js");
 /* harmony import */ var _modules_VendorInfo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/VendorInfo */ "./src/modules/VendorInfo.js");
 /* harmony import */ var _modules_Roadmap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/Roadmap */ "./src/modules/Roadmap.js");
+/* harmony import */ var _modules_FAQDisplay__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/FAQDisplay */ "./src/modules/FAQDisplay.js");
+
 
 
 
@@ -926,6 +955,7 @@ const instructions = new _modules_InstructionsDisplay__WEBPACK_IMPORTED_MODULE_6
 const productDisplay = new _modules_ProductDisplay__WEBPACK_IMPORTED_MODULE_7__["default"]();
 const vendorInfo = new _modules_VendorInfo__WEBPACK_IMPORTED_MODULE_8__["default"]();
 const roadmap = new _modules_Roadmap__WEBPACK_IMPORTED_MODULE_9__["default"]();
+const faqDisplay = new _modules_FAQDisplay__WEBPACK_IMPORTED_MODULE_10__["default"]();
 })();
 
 /******/ })()
