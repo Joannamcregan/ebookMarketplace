@@ -8,7 +8,8 @@
                         <!-- <li><a href="<?php echo esc_url(site_url('/my-events'));?>">My Events</a></li> -->
                         <li><a href="<?php echo esc_url(site_url('/my-isbn-registrations'));?>">My ISBN Registrations</a></li>
                         <li><a href="<?php echo esc_url(site_url('/my-account/orders'));?>">My Orders</a></li>
-                        <?php if (in_array( 'creator-member', (array) $user->roles ) ||  in_array( 'administrator', (array) $user->roles )){
+                        <?php $user = wp_get_current_user();
+                        if (in_array( 'creator-member', (array) $user->roles ) ||  in_array( 'administrator', (array) $user->roles )){
                               ?><li><a href="<?php echo esc_url(site_url('/creator-resources'));?>">Creator Resources</a></li>
                         <?php }
                         ?><li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
