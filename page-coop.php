@@ -37,11 +37,37 @@
     </div>
     <div class="leaf-section">
         <div class="leaf-wrapper">
-            <a class="no-decoration" href="<?php echo esc_url(site_url('/members'));?>">
-            <div class="leaf orange-leaf">
+            <div class="leaf orange-leaf expandable-leaf">
                 <p>Connect</p>
             </div>
-            </a>
+        </div>
+        <div class="sub-leaf-section not-displayed">
+        <?php if (is_user_logged_in()){
+            $user = wp_get_current_user();
+            if (in_array( 'creator-member', (array) $user->roles ) || in_array( 'reader-member', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles )){
+                ?><div class="sub-leaf-wrapper">
+                    <a href="<?php echo esc_url(site_url('/groups/reader-members/forum/'));?>">
+                    <div class="sub-leaf blue-leaf">
+                        <p>Reading Forum</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="sub-leaf-wrapper">
+                    <a href="<?php echo esc_url(site_url('groups/creator-members/forum/')); ?>">
+                    <div class="sub-leaf blue-leaf">
+                        <p>Creating Forum</p>
+                    </div>
+                    </a>
+                </div>
+            <?php }
+        }
+            ?><div class="sub-leaf-wrapper">
+                <a href="<?php echo esc_url(site_url('/forums/forum/general/')); ?>">
+                <div class="sub-leaf blue-leaf">
+                    <p>General Forum</p>
+                </div>
+                </a>
+            </div>
         </div>
     </div>
     
