@@ -122,7 +122,7 @@ for($index = 0; $index < count($results); $index++){
         and b.islive = 1
         order by b.createdate asc
         limit 12';
-    $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, 'paperbacks', 'hardcovers'), ARRAY_A);
+    $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, 'paperback books', 'hardcover books'), ARRAY_A);
     for($index = 0; $index < count($results); $index++){
         $results[$index]['product_url'] = get_permalink($results[$index]['product_url']);
         $results[$index]['product_image_id'] = get_the_post_thumbnail_url($results[$index]['product_image_id']);
@@ -151,6 +151,7 @@ for($index = 0; $index < count($results); $index++){
                         <div class="tomc-browse--search-result-bottom-section">
                             <p><?php echo $results[$index]['book_description'].substr(0, 500) . '...'; ?></p>
                         </div>
+                    </div>
                 <?php }
                 ?></div>
                 <p class="centered-text"><a href="<?php echo esc_url(site_url('/physical-books'));?>">shop all physical books</a></p>
