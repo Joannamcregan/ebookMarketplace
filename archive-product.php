@@ -11,7 +11,7 @@ $query = 'select distinct b.id, b.product_image_id, b.title,f.post_title as pen_
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
+        left join %i e on b.id = e.bookid
         left join %i f on e.pennameid = f.id
         left join %i g on c.productid = g.id
         where d.type_name = %s
@@ -64,7 +64,7 @@ for($index = 0; $index < count($results); $index++){
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
+        left join %i e on b.id = e.bookid
         left join %i f on e.pennameid = f.id
         left join %i g on c.productid = g.id
         where d.type_name = %s
@@ -115,7 +115,7 @@ for($index = 0; $index < count($results); $index++){
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
+        left join %i e on b.id = e.bookid
         left join %i f on e.pennameid = f.id
         left join %i g on c.productid = g.id
         where d.type_name in (%s, %s)
@@ -161,16 +161,5 @@ for($index = 0; $index < count($results); $index++){
         </div>
     </div>
 </main>
-<?php $query = 'select distinct b.title, d.type_name
-        from %i b
-        join %i c on b.id = c.bookid
-        join %i d on c.typeid = d.id
-        left join %i e on b.id = e.bookid
-        left join %i f on e.pennameid = f.id
-        left join %i g on c.productid = g.id
-        where b.islive = 1
-        order by b.createdate asc';
-    $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table), ARRAY_A); 
-    echo var_dump($results); ?>
 
 <?php get_footer(); ?>
