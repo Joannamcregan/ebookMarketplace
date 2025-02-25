@@ -25,7 +25,7 @@ for($index = 0; $index < count($results); $index++){
 }
 
 ?><main class="half-screen">
-    <div class="banner"><h1 class="centered-text banner-heading-46">Books By Our awesome Authors</h1></div>
+    <div class="banner"><h1 class="centered-text banner-heading-46">Books By Our Authors</h1></div>
     <div class="tomc-shop-books--format-section">
         <div class="sub-banner--slim">
             <h2 class="centered-text large-heading yellow-shadow-text georgia-text">ebooks</h2>
@@ -161,5 +161,16 @@ for($index = 0; $index < count($results); $index++){
         </div>
     </div>
 </main>
+<?php $query = 'select distinct b.id, b.product_image_id, b.title, f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url, d.type_name
+        from %i b
+        join %i c on b.id = c.bookid
+        join %i d on c.typeid = d.id
+        join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
+        join %i g on c.productid = g.id
+        where b.islive = 1
+        order by b.createdate asc';
+    $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table), ARRAY_A); 
+    echo var_dump($results); ?>
 
 <?php get_footer(); ?>
