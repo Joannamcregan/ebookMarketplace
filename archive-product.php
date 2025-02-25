@@ -161,11 +161,11 @@ for($index = 0; $index < count($results); $index++){
         </div>
     </div>
 </main>
-<?php $query = 'select distinct b.id, b.title, d.type_name
+<?php $query = 'select distinct b.title, d.type_name
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
+        left join %i e on b.id = e.bookid
         left join %i f on e.pennameid = f.id
         left join %i g on c.productid = g.id
         where b.islive = 1
