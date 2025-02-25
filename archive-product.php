@@ -25,7 +25,7 @@ for($index = 0; $index < count($results); $index++){
 }
 
 ?><main class="half-screen">
-    <div class="banner"><h1 class="centered-text banner-heading-46">Books By Our Authors</h1></div>
+    <div class="banner"><h1 class="centered-text banner-heading-46">Books By Our awesome Authors</h1></div>
     <div class="tomc-shop-books--format-section">
         <div class="sub-banner--slim">
             <h2 class="centered-text large-heading yellow-shadow-text georgia-text">ebooks</h2>
@@ -116,7 +116,7 @@ for($index = 0; $index < count($results); $index++){
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
         join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         where d.type_name in (%s, %s)
         and b.islive = 1
