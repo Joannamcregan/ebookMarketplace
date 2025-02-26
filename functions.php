@@ -246,20 +246,35 @@ function ebook_marketplace_single_product_additional_info() {
     $content_warnings_table = $wpdb->prefix . "tomc_content_warnings";
     $book_warnings_table = $wpdb->prefix . "tomc_book_warnings";
     $reader_triggers_table = $wpdb->prefix . "tomc_reader_triggers";
-    $query = 'select p.post_title, pt.type_name
+    $term_relationships_table = $wpdb->prefix . "term_relationships";
+    $term_taxonomy_table = $wpdb->prefix . "term_taxonomy";
+    $terms_table = $wpdb->prefix . "terms";
+
+    $query = 'select terms.name
+    from %i tr 
+    join %i tt on tr.term_taxonomy_id = tt.term_taxonomy_id
+    join %i terms on tt.term_id = terms.term_id
+    and tt.taxonomy = "product_cat"
+    where tr.object_id = %d';
+    $results = $wpdb->get_results($wpdb->prepare($query, $term_relationships_table, $term_taxonomy_table, $terms_table, $productid), ARRAY_A);
+    if ($results){
+        if ($results[0]['name'] != null){
+            echo '<p class="product-type">' . rtrim($results[0]['name'], 's') . '</p>';
+        }
+    }
+
+    $query = 'select p.post_title
     from %i bp
     join %i bpn on bp.bookid = bpn.bookid
-    and bp.productid = %d 
-    join %i p on bpn.pennameid = p.id
-    left join %i pt on bp.typeid = pt.id
+    left join %i p on bpn.pennameid = p.id
+    where bp.productid = %d 
     limit 1';
-    $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_pennames_table, $productid, $posts_table, $product_types_table), ARRAY_A);
+    $results = $wpdb->get_results($wpdb->prepare($query, $book_products_table, $books_pennames_table, $posts_table, $productid), ARRAY_A);
     if ($results){
-        if ($results[0]['type_name'] != null){
-            echo '<p class="product-type">an ' . rtrim($results[0]['type_name'], 's') . '</p>';
-        }
         echo '<h2>by ' . $results[0]['post_title'] . '</h2>';
     }
+    
+
     $query = 'select distinct cw.warning_name, rt.readerid
     from %i cw
     join %i bw on cw.id = bw.warningid
