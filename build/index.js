@@ -487,9 +487,9 @@ class Roadmap {
 
 /***/ }),
 
-/***/ "./src/modules/VendorInfo.js":
+/***/ "./src/modules/SiteSearch.js":
 /*!***********************************!*\
-  !*** ./src/modules/VendorInfo.js ***!
+  !*** ./src/modules/SiteSearch.js ***!
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -500,49 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-class VendorInfo {
-  constructor() {
-    this.sellAsVendorButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#sell-as-vendor-button');
-    this.events();
-  }
-  events() {
-    this.sellAsVendorButton.on('click', this.getVendorRoleAssignment.bind(this));
-  }
-  getVendorRoleAssignment() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
-      beforeSend: xhr => {
-        xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
-      },
-      url: tomcBookorgData.root_url + '/wp-json/tomcVendor/v1/assignVendorRole',
-      type: 'POST',
-      success: response => {
-        // console.log(response);
-        location.reload(true);
-      },
-      error: response => {
-        // console.log(response);
-      }
-    });
-  }
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VendorInfo);
-
-/***/ }),
-
-/***/ "./src/modules/search.js":
-/*!*******************************!*\
-  !*** ./src/modules/search.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-
-class Search {
+class SiteSearch {
   constructor() {
     this.resultsDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay__results");
     this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-search-trigger");
@@ -924,7 +882,49 @@ class Search {
     }
   }
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Search);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SiteSearch);
+
+/***/ }),
+
+/***/ "./src/modules/VendorInfo.js":
+/*!***********************************!*\
+  !*** ./src/modules/VendorInfo.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class VendorInfo {
+  constructor() {
+    this.sellAsVendorButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#sell-as-vendor-button');
+    this.events();
+  }
+  events() {
+    this.sellAsVendorButton.on('click', this.getVendorRoleAssignment.bind(this));
+  }
+  getVendorRoleAssignment() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
+      beforeSend: xhr => {
+        xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
+      },
+      url: tomcBookorgData.root_url + '/wp-json/tomcVendor/v1/assignVendorRole',
+      type: 'POST',
+      success: response => {
+        // console.log(response);
+        location.reload(true);
+      },
+      error: response => {
+        // console.log(response);
+      }
+    });
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VendorInfo);
 
 /***/ }),
 
@@ -1013,7 +1013,7 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_SiteSearch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/SiteSearch */ "./src/modules/SiteSearch.js");
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
 /* harmony import */ var _modules_CategoryDisplay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/CategoryDisplay */ "./src/modules/CategoryDisplay.js");
 /* harmony import */ var _modules_FrontDisplay__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/FrontDisplay */ "./src/modules/FrontDisplay.js");
@@ -1036,7 +1036,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
-const marketplaceSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_0__["default"]();
+const marketplaceSearch = new _modules_SiteSearch__WEBPACK_IMPORTED_MODULE_0__["default"]();
 const categoryDisplay = new _modules_CategoryDisplay__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const frontDisplay = new _modules_FrontDisplay__WEBPACK_IMPORTED_MODULE_3__["default"]();
 const readerSettings = new _modules_ReaderSettings__WEBPACK_IMPORTED_MODULE_4__["default"]();

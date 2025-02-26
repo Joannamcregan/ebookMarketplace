@@ -1,4 +1,4 @@
-import Search from './modules/search'
+import SiteSearch from './modules/SiteSearch'
 import MobileMenu from './modules/MobileMenu'
 import CategoryDisplay from './modules/CategoryDisplay'
 import FrontDisplay from './modules/FrontDisplay'
@@ -11,7 +11,7 @@ import Roadmap from './modules/Roadmap'
 import FAQDisplay from './modules/FAQDisplay'
 
 const mobileMenu = new MobileMenu()
-const marketplaceSearch = new Search()
+const marketplaceSearch = new SiteSearch()
 const categoryDisplay = new CategoryDisplay()
 const frontDisplay = new FrontDisplay()
 const readerSettings = new Settings()
