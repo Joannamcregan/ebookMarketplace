@@ -222,6 +222,7 @@ class SiteSearch {
                 type: 'GET',
                 data: routeData,
                 success: (response) => {
+                    console.log(response);
                     $(e.target).removeClass('contracting');
                     let alreadyAddedBookIds = [];
                     let alreadyAddedProductIds = [];
@@ -377,6 +378,7 @@ class SiteSearch {
                     }
                 },
                 error: (response) => {
+                    console.log(response);
                     // console.log('fail');
                 }
             });

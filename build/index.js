@@ -714,6 +714,7 @@ class SiteSearch {
         type: 'GET',
         data: routeData,
         success: response => {
+          console.log(response);
           jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('contracting');
           let alreadyAddedBookIds = [];
           let alreadyAddedProductIds = [];
@@ -869,6 +870,7 @@ class SiteSearch {
           }
         },
         error: response => {
+          console.log(response);
           // console.log('fail');
         }
       });
