@@ -41,8 +41,8 @@ function marketplaceSearchResults($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             join %i h on b.id = h.bookid
             where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -57,8 +57,8 @@ function marketplaceSearchResults($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             join %i h on b.id = h.bookid
             where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -80,8 +80,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -96,8 +96,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -117,8 +117,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -133,8 +133,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -156,8 +156,8 @@ function marketplaceSearchResults($data) {
     //     from %i b
     //     join %i c on b.id = c.bookid
     //     join %i d on c.typeid = d.id
-    //     join %i e on b.id = e.bookid
-    //     join %i f on e.pennameid = f.id
+    //     left join %i e on b.id = e.bookid
+    //     left join %i f on e.pennameid = f.id
     //     join %i g on c.productid = g.id
     //     join %i h on b.id = h.bookid
     //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -172,8 +172,8 @@ function marketplaceSearchResults($data) {
     //     from %i b
     //     join %i c on b.id = c.bookid
     //     join %i d on c.typeid = d.id
-    //     join %i e on b.id = e.bookid
-    //     join %i f on e.pennameid = f.id
+    //     left join %i e on b.id = e.bookid
+    //     left join %i f on e.pennameid = f.id
     //     join %i g on c.productid = g.id
     //     join %i h on b.id = h.bookid
     //     where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -201,8 +201,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -217,8 +217,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -239,8 +239,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -255,8 +255,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -277,8 +277,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -293,8 +293,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         where h.languageid in (' . join(', ', $selectedLanguages) . ')
@@ -332,8 +332,8 @@ function marketplaceSearchResults($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             join %i h on b.id = h.bookid
             join %i z on b.id = z.bookid
@@ -352,8 +352,8 @@ function marketplaceSearchResults($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             join %i h on b.id = h.bookid            
             join %i z on b.id = z.bookid
@@ -379,8 +379,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         join %i k on b.id = k.bookid
@@ -397,8 +397,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         join %i k on b.id = k.bookid
@@ -421,8 +421,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         join %i k on b.id = k.bookid
@@ -439,8 +439,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         join %i k on b.id = k.bookid
@@ -463,8 +463,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         join %i k on b.id = k.bookid
@@ -481,8 +481,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         join %i k on b.id = k.bookid
@@ -505,8 +505,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         join %i k on b.id = k.bookid
@@ -522,8 +522,8 @@ function marketplaceSearchResults($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i h on b.id = h.bookid
         join %i k on b.id = k.bookid
@@ -546,8 +546,8 @@ function marketplaceSearchResults($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             join %i h on b.id = h.bookid
             join %i k on b.id = k.bookid
@@ -563,8 +563,8 @@ function marketplaceSearchResults($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             join %i h on b.id = h.bookid         
             join %i k on b.id = k.bookid
@@ -612,8 +612,8 @@ function searchWithoutLanguages($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             where concat(b.title, " by ", f.post_title) like %s
             and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
@@ -626,8 +626,8 @@ function searchWithoutLanguages($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             where concat(b.title, " by ", f.post_title) like %s
             and b.islive = 1
@@ -647,8 +647,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         where b.title like %s
         and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
@@ -661,8 +661,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         where b.title like %s
         and b.islive = 1
@@ -682,8 +682,8 @@ function searchWithoutLanguages($data) {
     //     from %i b
     //     join %i c on b.id = c.bookid
     //     join %i d on c.typeid = d.id
-    //     join %i e on b.id = e.bookid
-    //     join %i f on e.pennameid = f.id
+    //     left join %i e on b.id = e.bookid
+    //     left join %i f on e.pennameid = f.id
     //     join %i g on c.productid = g.id
     //     where %s like concat("%%", b.title, "%%")
     //     and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
@@ -696,8 +696,8 @@ function searchWithoutLanguages($data) {
     //     from %i b
     //     join %i c on b.id = c.bookid
     //     join %i d on c.typeid = d.id
-    //     join %i e on b.id = e.bookid
-    //     join %i f on e.pennameid = f.id
+    //     left join %i e on b.id = e.bookid
+    //     left join %i f on e.pennameid = f.id
     //     join %i g on c.productid = g.id
     //     where %s like concat("%%", b.title, "%%")
     //     and b.islive = 1
@@ -723,8 +723,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         where b.title like %s
         and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
@@ -737,8 +737,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         where b.title like %s
         and b.islive = 1
@@ -757,8 +757,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         where b.book_description like %s
         and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
@@ -771,8 +771,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         where b.book_description like %s
         and b.islive = 1
@@ -791,8 +791,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         where b.book_excerpt like %s
         and b.id not in (select j.bookid from %i j where j.warningid in (' . join(', ', $selectedTriggers) . '))
@@ -805,8 +805,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         where b.book_excerpt like %s
         and b.islive = 1
@@ -842,8 +842,8 @@ function searchWithoutLanguages($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             join %i z on b.id = z.bookid
             join %i zz on z.identityid = zz.id
@@ -860,8 +860,8 @@ function searchWithoutLanguages($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id        
             join %i z on b.id = z.bookid
             join %i zz on z.identityid = zz.id
@@ -885,8 +885,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i k on b.id = k.bookid
         join %i l on k.genreid = l.id
@@ -901,8 +901,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i k on b.id = k.bookid
         join %i l on k.genreid = l.id
@@ -923,8 +923,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i k on b.id = k.bookid
         join %i l on k.identityid = l.id
@@ -939,8 +939,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i k on b.id = k.bookid
         join %i l on k.identityid = l.id
@@ -961,8 +961,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i k on b.id = k.bookid
         join %i l on k.identityid = l.id
@@ -977,8 +977,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i k on b.id = k.bookid
         join %i l on k.identityid = l.id
@@ -999,8 +999,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i k on b.id = k.bookid
         where k.readalike_title like %s
@@ -1014,8 +1014,8 @@ function searchWithoutLanguages($data) {
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
-        join %i e on b.id = e.bookid
-        join %i f on e.pennameid = f.id
+        left join %i e on b.id = e.bookid
+        left join %i f on e.pennameid = f.id
         join %i g on c.productid = g.id
         join %i k on b.id = k.bookid
         where k.readalike_title like %s
@@ -1036,8 +1036,8 @@ function searchWithoutLanguages($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id
             join %i k on b.id = k.bookid
             where concat(k.readalike_title, " by ", k.readalike_author) like %s
@@ -1051,8 +1051,8 @@ function searchWithoutLanguages($data) {
             from %i b
             join %i c on b.id = c.bookid
             join %i d on c.typeid = d.id
-            join %i e on b.id = e.bookid
-            join %i f on e.pennameid = f.id
+            left join %i e on b.id = e.bookid
+            left join %i f on e.pennameid = f.id
             join %i g on c.productid = g.id      
             join %i k on b.id = k.bookid
             where concat(k.readalike_title, " by ", k.readalike_author) like %s

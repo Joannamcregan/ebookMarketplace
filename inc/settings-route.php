@@ -89,7 +89,8 @@ function saveReaderLanguages($data){
         }
         $query .= ';';
         $wpdb->query($wpdb->prepare($query));
-        return $query;
+        // return $query;
+        return 'success';
     } else {
         wp_safe_redirect(site_url('/my-account'));
         return 'fail';
