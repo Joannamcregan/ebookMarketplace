@@ -684,7 +684,7 @@ class SiteSearch {
   getResults(e) {
     let routeEnding;
     let routeData;
-    if (this.chosenLanguages.length > 0 || this.filterLanguages == false) {
+    if (this.chosenLanguages.length > 0 && this.filterLanguages) {
       routeEnding = 'search';
       routeData = {
         'searchterm': this.searchField.val().substring(0, 300),
@@ -700,6 +700,9 @@ class SiteSearch {
         'hasTriggers': this.chosenWarnings > 0 ? 'yes' : 'no'
       };
     }
+    console.log(this.filterLanguages);
+    console.log(this.chosenLanguages.length);
+    console.log(routeEnding);
     if (this.searchField.val().length > 2) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('contracting');
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-search--no-search-term').addClass('hidden');
