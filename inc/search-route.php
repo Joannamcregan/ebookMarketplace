@@ -19,7 +19,6 @@ function marketplaceSearchResults($data) {
     $selectedLanguages = explode(',', trim(sanitize_text_field($data['languages']), '[]'));
     $selectedTriggers = explode(',', trim(sanitize_text_field($data['triggers']), '[]'));
     $hasTriggers = sanitize_text_field($data['hasTriggers']);
-    $user = wp_get_current_user();
     global $wpdb;
     $books_table = $wpdb->prefix . "tomc_books";
     $book_genres_table = $wpdb->prefix .  "tomc_book_genres";
@@ -590,7 +589,6 @@ function searchWithoutLanguages($data) {
     $searchTerm = sanitize_text_field($data['searchterm']);
     $selectedTriggers = explode(',', trim(sanitize_text_field($data['triggers']), '[]'));
     $hasTriggers = sanitize_text_field($data['hasTriggers']);
-    $user = wp_get_current_user();
     global $wpdb;
     $books_table = $wpdb->prefix . "tomc_books";
     $book_genres_table = $wpdb->prefix .  "tomc_book_genres";
