@@ -95,9 +95,15 @@ div.bbp-template-notice.info{
 }
 #bbpress-forums ul.topic{
     border: none !important;
-    background-color: #faefe3 !important;
     border-radius: 15px !important;
     font-size: 18px !important;
+    margin-bottom: 10px !important;
+}
+#bbpress-forums ul.odd{
+    background-color: #faefe3 !important;
+}
+#bbpress-forums ul.even{
+    background-color: #f4ede5 !important;
 }
 div.bbp-template-notice{
     /* background-color: #faefe3 !important; */
