@@ -72,7 +72,12 @@
             <?php } ?>          
             <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
             <li><a href="<?php echo esc_url(site_url('/services'));?>">Creative Services</a></li>
-            <?php if (is_user_logged_in()){ ?><li><a href="<?php echo esc_url(site_url('/discussions')); ?>">Discussions</a></li><?php } ?>
+            <?php $user = wp_get_current_user();
+            if ((in_array( 'reader-member', (array) $user->roles )) || (in_array( 'creator-member', (array) $user->roles ))){
+            ?><li><a href="<?php echo esc_url(site_url('/discussions')); ?>">Discussions</a></li>
+            <?php } else {
+            ?><li><a href="<?php echo esc_url(site_url('/groups/co-op-members/forum/'));?>">Discussions</a></li>
+            <?php } ?>
             <!-- <li><a href="<?php echo esc_url(get_post_type_archive_link('event')); ?>">Events</a></li> -->
       </ul>
   </nav>

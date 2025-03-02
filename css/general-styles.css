@@ -541,14 +541,14 @@ span.bbp-admin-links a{
     width: 80%;
     min-height: 360px;
     padding: 10px 0px;
-    margin: 50px auto;
+    margin: 10px auto;
     position: relative;
 }
 .tomc-circle-container img{
     max-width: 300px;
     height: auto;
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: 35%;
 }
 .tomc-circle-p-0{
@@ -561,18 +561,18 @@ span.bbp-admin-links a{
     position: absolute;
     top: 120px;
     left: 30%;
-    font-size: 38 !important;
+    font-size: 30 !important;
 }
 .tomc-circle-p-1-padded-x{
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 30%;
-    font-size: 38 !important;
+    font-size: 30 !important;
     padding-left: 40px;
 }
 .tomc-circle-p-1-padded-2x{
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 30%;
     font-size: 36 !important;
     padding-left: 60px;
@@ -593,12 +593,6 @@ span.bbp-admin-links a{
     }
 }
 @media screen and (max-width: 540px) {
-    .tomc-circle-container{
-        min-height: 360px;
-    }
-    .tomc-circle-container-long-text{
-        min-height: 400px !important;
-    }
     .tomc-circle-container img{
         left: 15%;
         padding-top: 10px;
@@ -608,12 +602,6 @@ span.bbp-admin-links a{
     }
 }
 @media screen and (max-width: 460px) {
-    .tomc-circle-container{
-        min-height: 380px;
-    }
-    .tomc-circle-container-long-text{
-        min-height: 400px !important;
-    }
     .tomc-circle-container img{
         left: 5%;
         top: 40px;
@@ -624,12 +612,6 @@ span.bbp-admin-links a{
     }
 }
 @media screen and (max-width: 400px) {
-    .tomc-circle-container{
-        min-height: 360px;
-    }
-    .tomc-circle-container-long-text{
-        min-height: 400px !important;
-    }
     .tomc-circle-container img{
         right: 20px;
         top: 60px;
@@ -638,28 +620,22 @@ span.bbp-admin-links a{
     .tomc-circle-p-1{
         right: 20px;
         top: 120px;
-        font-size: 46;
+        font-size: 30;
     }
     .tomc-circle-p-1-padded-x{
         right: 20px;
         top: 110px;
-        font-size: 46;
+        font-size: 30;
         padding-left: 10px;
     }
     .tomc-circle-p-1-padded-2x{
         right: 20px;
         top: 110px;
-        font-size: 46;
+        font-size: 30;
         padding-left: 20px;
     }
 }
 @media screen and (max-width: 380px) {
-    .tomc-circle-container{
-        min-height: 380px;
-    }
-    .tomc-circle-container-long-text{
-        min-height: 420px !important;
-    }
     .tomc-circle-container img{
         right: 20px;
         top: 70px;
@@ -668,18 +644,18 @@ span.bbp-admin-links a{
     .tomc-circle-p-1{
         right: 20px;
         top: 130px;
-        font-size: 46;
+        font-size: 26;
     }
     .tomc-circle-p-1-padded-x{
         right: 20px;
         top: 130px;
-        font-size: 46;
+        font-size: 30;
         padding-left: 10px;
     }
     .tomc-circle-p-1-padded-2x{
         right: 20px;
         top: 130px;
-        font-size: 46;
+        font-size: 26;
         padding-left: 20px;
     }
 }
@@ -689,24 +665,21 @@ span.bbp-admin-links a{
     }
     .tomc-circle-container img{
         right: 20px;
-        top: 80px;
+        top: 40px;
         max-width: 250px;
     }
     .tomc-circle-p-1{
         right: 20px;
-        top: 140px;
-        font-size: 46;
+        top: 100px;
     }
     .tomc-circle-p-1-padded-x{
         right: 20px;
-        top: 140px;
-        font-size: 46;
+        top: 80px;
         padding-left: 10px;
     }
     .tomc-circle-p-1-padded-2x{
         right: 20px;
-        top: 130px;
-        font-size: 46;
+        top: 100px;
         padding-left: 20px;
     }
 }

@@ -49,12 +49,16 @@
       <a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a>
       <a href="<?php echo esc_url(site_url('/services'));?>">Services</a>
       <?php if (is_user_logged_in()){
-        $user = wp_get_current_user();
         $tomc_user = get_userdata($user->ID);
         $tomc_username = $tomc_user->user_login;
         ?><a href="<?php echo esc_url(site_url('/members') . '/' . str_replace(' ', '-', $tomc_username)); ?>">My Profile</a>
-        <a href="<?php echo esc_url(site_url('/discussions')); ?>">Discussions</a>
-        <?php if (in_array( 'creator-member', (array) $user->roles )){
+        <?php $user = wp_get_current_user();
+        if ((in_array( 'reader-member', (array) $user->roles )) || (in_array( 'creator-member', (array) $user->roles ))){
+          ?><a href="<?php echo esc_url(site_url('/discussions')); ?>">Discussions</a>
+        <?php } else {
+          ?><a href="<?php echo esc_url(site_url('/groups/co-op-members/forum/'));?>">Discussions</a>
+        <?php }
+        if (in_array( 'creator-member', (array) $user->roles )){
           ?><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a>
           <a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>">Add a Product</a>
         <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
