@@ -56,7 +56,7 @@
         if ((in_array( 'reader-member', (array) $user->roles )) || (in_array( 'creator-member', (array) $user->roles ))){
           ?><a href="<?php echo esc_url(site_url('/discussions')); ?>">Discussions</a>
         <?php } else {
-          ?><a href="<?php echo esc_url(site_url('/groups/co-op-members/forum/'));?>">Discussions</a>
+          ?><a href="<?php echo esc_url(site_url('/forums/forum/general/'));?>">Discussions</a>
         <?php }
         if (in_array( 'creator-member', (array) $user->roles )){
           ?><a href="<?php echo esc_url(site_url('/dashboard'));?>">Creator Dashboard</a>
