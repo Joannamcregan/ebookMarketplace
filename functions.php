@@ -447,6 +447,7 @@ function assignReaderMemberRole($form_id, $response) {
         $user->add_role( 'reader-member' );
         tomcAddUserToGroup(4430 /*reader-members group*/, $userId);
         tomcAddUserToGroup(4429 /*creator-members group*/, $userId);
+        tomcAddUserToGroup(5001 /*all members group*/, $userId);
     }
 }
 
@@ -458,6 +459,7 @@ function assignCreatorMemberRole($form_id, $response) {
         $user->add_role( 'dc_vendor' );
         tomcAddUserToGroup(4429 /*creator-members group*/, $userId);
         tomcAddUserToGroup(4430 /*reader-members group*/, $userId);
+        tomcAddUserToGroup(5001 /*all members group*/, $userId);
     }
 } 
 
@@ -469,9 +471,9 @@ function tomcAddUserToGroup( $group_id, $user_id ) {
 }
 
 //restrict ISBN Registration purchases to logged-in users, prevent ISBN Registration purchase when less than 1 ISBN numbers in database, and prevent ISBN Registration purchase for people with >5 unsubmitted ISBNs--------------------------------
-add_filter('woocommerce_is_purchasable', 'my_woocommerce_is_purchasable', 10, 2);
+add_filter('woocommerce_is_purchasable', 'tomc_woocommerce_is_purchasable', 10, 2);
 
-function my_woocommerce_is_purchasable($is_purchasable, $product) {
+function tomc_woocommerce_is_purchasable($is_purchasable, $product) {
     $hide_purchase = false;
     if ($product->id == 4334){ //4334 prod, 229 local
         if (!is_user_logged_in()){
@@ -503,12 +505,46 @@ function my_woocommerce_is_purchasable($is_purchasable, $product) {
     return ($hide_purchase ? false : $is_purchasable);
 }
 
+//restrict ISBN Registration Update Service to logged-in users who have at least one filed ISBN
+add_filter('woocommerce_is_purchasable', 'tomc_woocommerce_is_update_purchasable', 10, 2);
+
+function tomc_woocommerce_is_update_purchasable($is_purchasable, $product) {
+    $hide_purchase = false;
+    if ($product->id == 1069){ //5005 prod, 1069 local
+        if (!is_user_logged_in()){
+            $hide_purchase = true;
+        } else {
+            global $wpdb;
+            $user = wp_get_current_user();
+            $userId = $user->ID;
+            $numbers_table = $wpdb->prefix . 'tomc_isbn_numbers';
+            $records_table = $wpdb->prefix . 'tomc_isbn_records';
+            $query = 'select isbn from %i where assignedto is null';
+            $results = $wpdb->get_results($wpdb->prepare($query, $numbers_table), ARRAY_A);
+            $query = 'select isbn from %i numbers
+            join %i records on numbers.id = records.isbnid
+            where numbers.assignedto = %d
+            and records.processeddate is not null';
+            $results = $wpdb->get_results($wpdb->prepare($query, $numbers_table, $records_table, $userId), ARRAY_A);
+            if (count($results) < 1){
+                $hide_purchase = true;
+                add_action( 'woocommerce_single_product_summary', 'tomc_ISBN_update_unavailable', 40 );
+            } 
+        }
+    }
+    return ($hide_purchase ? false : $is_purchasable);
+}
+
 function tomc_unavailable_service(){
     echo '<p>This servace is currently unavailable.</p><p>Check back soon!</p>';
 }
 
 function tomc_ISBN_limit(){
     echo '<p>This account has 5 ISBN registrations that have not been submitted. Please complete registration for prior purchases in order to purchase another. Thank you.</p>';
+}
+
+function tomc_ISBN_update_unavailable(){
+    echo "<p>This service is only available to users who have at least one ISBN Registration that has been filed with Bowker.</p>";
 }
 
 
