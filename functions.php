@@ -505,36 +505,6 @@ function tomc_woocommerce_is_purchasable($is_purchasable, $product) {
     return ($hide_purchase ? false : $is_purchasable);
 }
 
-//restrict ISBN Registration Update Service to logged-in users who have at least one filed ISBN
-add_filter('woocommerce_is_purchasable', 'tomc_woocommerce_is_update_purchasable', 10, 2);
-
-function tomc_woocommerce_is_update_purchasable($is_purchasable, $product) {
-    $hide_purchase = false;
-    if ($product->id == 1069){ //5005 prod, 1069 local
-        if (!is_user_logged_in()){
-            $hide_purchase = true;
-        } else {
-            global $wpdb;
-            $user = wp_get_current_user();
-            $userId = $user->ID;
-            $numbers_table = $wpdb->prefix . 'tomc_isbn_numbers';
-            $records_table = $wpdb->prefix . 'tomc_isbn_records';
-            $query = 'select isbn from %i where assignedto is null';
-            $results = $wpdb->get_results($wpdb->prepare($query, $numbers_table), ARRAY_A);
-            $query = 'select isbn from %i numbers
-            join %i records on numbers.id = records.isbnid
-            where numbers.assignedto = %d
-            and records.processeddate is not null';
-            $results = $wpdb->get_results($wpdb->prepare($query, $numbers_table, $records_table, $userId), ARRAY_A);
-            if (count($results) < 1){
-                $hide_purchase = true;
-                add_action( 'woocommerce_single_product_summary', 'tomc_ISBN_update_unavailable', 40 );
-            } 
-        }
-    }
-    return ($hide_purchase ? false : $is_purchasable);
-}
-
 function tomc_unavailable_service(){
     echo '<p>This servace is currently unavailable.</p><p>Check back soon!</p>';
 }
@@ -543,9 +513,6 @@ function tomc_ISBN_limit(){
     echo '<p>This account has 5 ISBN registrations that have not been submitted. Please complete registration for prior purchases in order to purchase another. Thank you.</p>';
 }
 
-function tomc_ISBN_update_unavailable(){
-    echo "<p>This service is only available to users who have at least one ISBN Registration that has been filed with Bowker.</p>";
-}
 
 
 // maintenance mode-----------------------------------------------------------------------
@@ -617,3 +584,11 @@ add_action( 'bp_core_signup_user', function( $user_id, $user_login, $user_passwo
     tomc_auto_activate_user( $user_login );
 }, 10, 5 );
 
+//file types------------------------------------------------------------------------------
+function tomc_mime_types($mime_types){
+    $mime_types['epub'] = 'application/epub+zip'; 
+    unset($mime_types['png']); 
+    return $mime_types;
+}
+
+add_filter('upload_mimes', 'tomc_mime_types', 1, 1);
