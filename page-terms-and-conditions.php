@@ -53,7 +53,9 @@
       <p>ISBNs are numbers assigned to books to make them more discoverable. ISBNs are available through Bowker. The Cooperative buys blocks of ISBNs for Users to register their books with. ISBNs are recommended but not required for books sold on the Platform.</p>
       <p>One book format per ISBN registration. If You choose to register Your book with an ISBN, note that You must register a separate ISBN for each format – for example, if You register an ebook and an audiobook, each format must have its own ISBN.</p>
       <p>The Cooperative does not sell nor charge for Cooperative issued ISBNs; however, we do charge an administrative fee of $5.00 for member Users and $15 for non-member Users to register each ISBN with Bowker. Note that books imprinted with Cooperative issued ISBNs will list the Cooperative as the publisher. Users have the option to purchase ISBNs individually directly from Bowker in order to be listed as publisher.</p>
-      <p>The Cooperative does not prohibit the use of Cooperative issued ISBNs from being utilized on any other site where You publish Your work.</p>
+      <p>The Cooperative does not prohibit the use of Cooperative issued ISBNs from being utilized on any other site where You publish Your work.
+
+Bowker offers UPC codes for physical works (physical books, CDs, DVDs, cassette tapes…) for $25.00. To attach a UPC to an ISBN registered via the Cooperative, select the service on the ISBN registration page. We do not charge fees for obtaining UPC codes for members or non-member users. Upon receiving payment, we will process and return your UPC code within 24 hours.</p>
     </div>
     <h2 class="banner-heading-18 centered-text">Digital Rights Management</h2>
     <div class="left-gentle-bracket-orange">
