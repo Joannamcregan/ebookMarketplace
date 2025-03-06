@@ -592,3 +592,8 @@ function tomc_mime_types($mime_types){
 }
 
 add_filter('upload_mimes', 'tomc_mime_types', 1, 1);
+
+//disable brands-------------------------------------------------------------------------------
+add_action( 'init', function() {
+    update_option( 'wc_feature_woocommerce_brands_enabled', 'no' );
+} );
