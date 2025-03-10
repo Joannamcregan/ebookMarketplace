@@ -580,6 +580,11 @@ function marketplaceSearchResults($data) {
         }
         array_push($resultsArr, ...$booksResults);
     }
+    for ($index = 0; $index < count($resultsArr); $index++){
+        if (is_null($resultsArr[$index]['pen_name'])){
+            $resultsArr[$index]['pen_name'] == 'Unknown or Anonymous Author';
+        }
+    }
     return $resultsArr;
     // return $wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $readalikes_table, '%' . $wpdb->esc_like($searchTerm) . '%', $book_warnings_table);
 }
@@ -1064,6 +1069,11 @@ function searchWithoutLanguages($data) {
             $booksResults[$index]['product_image_id'] = get_the_post_thumbnail_url($booksResults[$index]['product_image_id']);
         }
         array_push($resultsArr, ...$booksResults);
+    }
+    for ($index = 0; $index < count($resultsArr); $index++){
+        if (is_null($resultsArr[$index]['pen_name'])){
+            $resultsArr[$index]['pen_name'] == 'Unknown or Anonymous Author';
+        }
     }
     return $resultsArr;
     // return $wpdb->prepare($query, $books_table, $book_products_table, $product_types_table, $pen_names_table, $posts_table, $posts_table, $book_languages_table, $readalikes_table, '%' . $wpdb->esc_like($searchTerm) . '%', $book_warnings_table);

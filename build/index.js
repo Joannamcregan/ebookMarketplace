@@ -700,9 +700,9 @@ class SiteSearch {
         'hasTriggers': this.chosenWarnings > 0 ? 'yes' : 'no'
       };
     }
-    console.log(this.filterLanguages);
-    console.log(this.chosenLanguages.length);
-    console.log(routeEnding);
+    // console.log(this.filterLanguages);
+    // console.log(this.chosenLanguages.length);
+    // console.log(routeEnding);
     if (this.searchField.val().length > 2) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).addClass('contracting');
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-search--no-search-term').addClass('hidden');
@@ -714,7 +714,7 @@ class SiteSearch {
         type: 'GET',
         data: routeData,
         success: response => {
-          console.log(response);
+          // console.log(response);
           jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('contracting');
           let alreadyAddedBookIds = [];
           let alreadyAddedProductIds = [];
@@ -746,8 +746,10 @@ class SiteSearch {
                 let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                 let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
                 newDiv.append(newTitle);
-                let newAuthor = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
-                newDiv.append(newAuthor);
+                if (response[i]['pen_name'] != null) {
+                  let newAuthor = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<p />').html('by ' + response[i]['pen_name']);
+                  newDiv.append(newAuthor);
+                }
                 let newBottomSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-browse--search-result-bottom-section');
                 let newCoverDescription = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-search-result-cover-description');
                 let newImage = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<img />').attr('src', response[i]['product_image_id']).attr('alt', 'the cover for ' + response[i]['title']);
@@ -870,7 +872,6 @@ class SiteSearch {
           }
         },
         error: response => {
-          console.log(response);
           // console.log('fail');
         }
       });
