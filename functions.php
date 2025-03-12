@@ -484,6 +484,7 @@ function tomc_woocommerce_is_purchasable($is_purchasable, $product) {
             $userId = $user->ID;
             $numbers_table = $wpdb->prefix . 'tomc_isbn_numbers';
             $records_table = $wpdb->prefix . 'tomc_isbn_records';
+            $books_table = $wpdb->prefix . 'tomc_books';
             $query = 'select isbn from %i where assignedto is null';
             $results = $wpdb->get_results($wpdb->prepare($query, $numbers_table), ARRAY_A);
             if (count($results) < 1){
@@ -498,6 +499,21 @@ function tomc_woocommerce_is_purchasable($is_purchasable, $product) {
                 if (count($results) >= 5){
                     $hide_purchase = true;
                     add_action( 'woocommerce_single_product_summary', 'tomc_ISBN_limit', 40 );
+                } else {
+                    $quwey = 'select *
+                    from %i
+                    where is_live = 1
+                    and createdby = %d';
+                    $results = $wpdb->get_results($wpdb->prepare($query, $books_table, $userId), ARRAY_A);
+                    if ($results){
+                        if (count($results) < 1 || !(in_array( 'creator-member', (array) $user->roles ))){
+                            $hide_purchase = true;
+                            add_action( 'woocommerce_single_product_summary', 'tomc_ISBN_no_products', 40 );
+                        }
+                    } else if (!(in_array( 'creator-member', (array) $user->roles ))){
+                        $hide_purchase = true;
+                        add_action( 'woocommerce_single_product_summary', 'tomc_ISBN_no_products', 40 );
+                    }
                 }
             }
         }
@@ -513,6 +529,9 @@ function tomc_ISBN_limit(){
     echo '<p>This account has 5 ISBN registrations that have not been submitted. Please complete registration for prior purchases in order to purchase another. Thank you.</p>';
 }
 
+function tomc_ISBN_no_products(){
+    echo '<p>This service is only available to creator-members and authors with at least one book available on the TOMC platform.</p>';
+}
 
 
 // maintenance mode-----------------------------------------------------------------------
