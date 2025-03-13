@@ -93,7 +93,7 @@
                         <button class="medium-purple-button" id="tomc-search--roll-results">let's roll!</button>
                   </div>                  
                   <div id="search-overlay__options">
-                        <p class="centered-text" id="search-overlay__filter-out-warnings">filter out triggering books</p>
+                        <p class="centered-text" id="search-overlay__filter-out-warnings">filter out by triggers</p>
                         <p class="centered-text search-overlay__filter-languages" id="search-overlay__filter-languages">filter books by language</p>
                         <i id="search-overlay__toggle-filters-section" class="fa fa-caret-up hidden" aria-label="hide the filter section"></i>
                   </div>
