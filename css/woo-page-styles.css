@@ -315,7 +315,7 @@ justify-content: center;
     margin-left: 20%;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 85%;
+    min-width: fit-content;
     margin-bottom: 5px;
 }
 .single-product-review-section{
