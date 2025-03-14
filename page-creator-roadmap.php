@@ -61,6 +61,7 @@
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Name Your Price</h2>
                             <p class="right-text-no-margin">Set your book’s regular price and/or schedule a sale.</p>
+                            <p class="right-text-no-margin"><strong>Note: </strong>If your product is a paperback or hardcover, be sure to factor the cost of shipping into your price. Information on USPS domestic shipping rates can be found <a href="https://postcalc.usps.com/" target="_blank">here</a>.</p>
                         </div>
                     </div>
                 </div>
