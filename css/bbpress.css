@@ -53,7 +53,11 @@ button#bbp_topic_submit, button#bbp_reply_submit{
     margin: 0px 0px 0px 5% !important;
 }
 #bbp_topic_subscription{
-    margin: 0px 0px 0px 5% !important;
+    /* margin: 0px 0px 0px 5% !important; */
+    display: none !important;
+}
+label[for="#bbp_topic_subscription"]{
+    display: none !important;
 }
 #bbpress-forums fieldset.bbp-form label[for="bbp_topic_subscription"]{
     border-radius: 15px !important;
