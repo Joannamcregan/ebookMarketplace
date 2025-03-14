@@ -1,7 +1,7 @@
 <?php get_header();
 ?><main>
     <div class="two-thirds-screen">
-        <div class="banner"><h1 class="centered-text banner-heading-36">Space</h1></div>
+        <div class="banner"><h1 class="centered-text banner-heading-36">Spaces</h1></div>
         <?php if (is_user_logged_in()){
             $user = wp_get_current_user();
             if ((in_array( 'reader-member', (array) $user->roles )) || (in_array( 'creator-member', (array) $user->roles ))){
