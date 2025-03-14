@@ -612,6 +612,9 @@ justify-content: center;
 }
 
 /* Woocommerce my account styles---------------------------------------------------------------------------- */
+div.woocommerce-MyAccount-content{
+    padding-top: 20px;
+}
 .woocommerce-MyAccount-content p{
     padding: 10px 20px;
     text-align: center;
