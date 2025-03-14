@@ -613,7 +613,7 @@ justify-content: center;
 
 /* Woocommerce my account styles---------------------------------------------------------------------------- */
 div.woocommerce-MyAccount-content{
-    padding-top: 20px;
+    padding-top: 20px !important;
 }
 .woocommerce-MyAccount-content p{
     padding: 10px 20px;
