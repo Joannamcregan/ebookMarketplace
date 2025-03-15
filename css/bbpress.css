@@ -59,11 +59,11 @@ button#bbp_topic_submit, button#bbp_reply_submit{
 label[for="#bbp_topic_subscription"]{
     display: none !important;
 }
-#bbpress-forums fieldset.bbp-form label[for="bbp_topic_subscription"]{
+/* #bbpress-forums fieldset.bbp-form label[for="bbp_topic_subscription"]{
     border-radius: 15px !important;
 	width: fit-content !important;
     margin: 0px !important;
-}
+} */
 #bbpress-forums fieldset.bbp-form input[type="checkbox"]{
     width: 20px !important;
     height: 20px !important;
