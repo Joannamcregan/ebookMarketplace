@@ -58,6 +58,7 @@ button#bbp_topic_submit, button#bbp_reply_submit{
 }
 label[for="bbp_topic_subscription"]{
     display: none !important;
+    visibility: hidden !important;
 }
 /* #bbpress-forums fieldset.bbp-form label[for="bbp_topic_subscription"]{
     border-radius: 15px !important;
