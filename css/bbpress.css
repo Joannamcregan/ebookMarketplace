@@ -34,7 +34,7 @@ button#bbp_topic_submit, button#bbp_reply_submit{
     overflow: visible !important;
     /* width: 100% !important; */
 	font-size: 14px !important;
-    padding: 20px !important;
+    padding: 20px;
 }
 #bbpress-forums fieldset.bbp-form legend{
 	font-size: 18px !important;
@@ -50,7 +50,26 @@ button#bbp_topic_submit, button#bbp_reply_submit{
 #bbpress-forums fieldset.bbp-form label[for="bbp_topic_tags"]{
     border-radius: 15px !important;
 	width: fit-content !important;
-    margin: 0px 0px 0px 5% !important;
+    margin: 20px auto -10px auto !important;
+    display: block;
+}
+label[for="bbp_stick_topic"]{
+    margin: 10px auto -10px auto !important;
+    width: fit-content;
+    display: block !important;
+}
+select[name="bbp_stick_topic"]{
+    display: block;
+    margin: 0px auto 20px auto !important;
+}
+label[for="bbp_topic_status"]{
+    margin: 10px auto -10px auto !important;
+    width: fit-content;
+    display: block !important;
+}
+select[name="bbp_topic_status"]{
+    display: block;
+    margin: 0px auto 20px auto !important;
 }
 #bbp_topic_subscription{
     /* margin: 0px 0px 0px 5% !important; */
@@ -130,6 +149,13 @@ div.bbp-template-notice{
     /* border: solid #4c0548 5px !important; */
     padding: 10px !important;
     font-size: 18px !important;
+    margin: -10px auto 20px auto !important;
+    display: block !important;
+}
+label[for="bbp_topic_title"]{
+    margin: 20px auto 0px auto !important;
+    display: block !important;
+    text-align: center !important;
 }
 .bbp-body div.type-topic{
     background: #faefe3 !important;
@@ -185,6 +211,7 @@ textarea.bbp-the-content{
 #bbpress-forums fieldset.bbp-form input[type=text]{
     border-radius: 15px !important;
     padding: 5px !important;
+    width: 300px !important;
 }
 .leave-group{
     border: solid 3px #0c6980 !important;
