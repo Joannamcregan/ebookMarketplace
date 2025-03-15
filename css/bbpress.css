@@ -161,6 +161,9 @@ textarea.bbp-the-content{
 #item-header-content{
     padding-top: 20px !important;
 }
+#item-header-content p.group-status{
+    visibility: hidden;
+}
 @media screen and (min-width: 783px) {
     dl.moderators-lists{
         padding-top: 20px !important;
