@@ -464,7 +464,7 @@ div.bbp-template-notice{
 }
 @media screen and (max-width: 380px){
     #bbpress-forums div.wp-editor-container{
-        width: 300px !important;
+        min-width: 300px !important;
     }
     #bbpress-forums{
         padding: 5px !important;
