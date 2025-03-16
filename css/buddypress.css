@@ -422,49 +422,8 @@ div.mce-toolbar-grp{
     color: black !important;
     border: none !important;
 }
-.bbp-topics ul.sticky{
-    font-size: 14px !important;
-}
-#bbpress-forums p.bbp-topic-meta{
-    font-size: 14px !important;
-}
-.bbp-topic-voice-count{
-    display: none !important;
-}
-.bbp-topic-reply-count{
-    display: none !important;
-}
-.bbp-topic-freshness{
-    display: none !important;
-}
-div.bbp-search-form input[type='text']{
-    margin-bottom: 5px !important;
-    min-width: 250px !important;
-    height: 25px !important;
-    border: solid 3px #4c0548 !important;
-    border-radius: 10px !important
-}
 .buddypress-wrap .groups-list li .group-desc{
     color: black !important;
-}
-.bbp-topic-form{
-    padding: 5px !important;
-}
-div.bbp-template-notice{
-    margin: 5px !important;
-}
-#bbpress-forums div.wp-editor-container{
-    width: 90% !important;
-    margin: auto !important;
-}
-@media screen and (max-width: 600px){
-    #bbpress-forums div.wp-editor-container{
-        width: 96% !important;
-        min-width: 300px !important;
-    }
-    #bbpress-forums{
-        padding: 5px !important;
-    }
 }
 #engagements-personal-li{
     display: none !important;
