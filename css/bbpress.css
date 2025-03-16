@@ -270,7 +270,7 @@ div.bbp-template-notice{
         padding: 5px !important;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
     #bbpress-forums div.wp-editor-container{
         min-width: 340px !important;
     }
