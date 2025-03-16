@@ -462,8 +462,6 @@ div.bbp-template-notice{
         width: 96% !important;
         min-width: 300px !important;
     }
-}
-@media screen and (max-width: 380px){
     #bbpress-forums{
         padding: 5px !important;
     }
