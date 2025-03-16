@@ -464,9 +464,9 @@ function assignCreatorMemberRole($form_id, $response) {
 } 
 
 function tomcAddUserToGroup( $group_id, $user_id ) { 
-    if ( ! function_exists( 'groups_join_group' ) ) {
-        return ;
-    } 
+    // if ( ! function_exists( 'groups_join_group' ) ) {
+    //     return ;
+    // } 
     groups_join_group( $group_id, $user_id );
 }
 
