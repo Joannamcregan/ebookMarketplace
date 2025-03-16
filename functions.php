@@ -447,7 +447,7 @@ function assignReaderMemberRole($form_id, $response) {
         $user->add_role( 'reader-member' );
         tomcAddUserToGroup(4430 /*reader-members group*/, $userId);
         tomcAddUserToGroup(4429 /*creator-members group*/, $userId);
-        tomcAddUserToGroup(5077 /*all members group*/, $userId);
+        tomcAddUserToGroup(5177 /*all members group*/, $userId);
     }
 }
 
