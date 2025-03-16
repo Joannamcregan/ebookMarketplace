@@ -264,9 +264,19 @@ div.bbp-template-notice{
 }
 @media screen and (max-width: 600px){
     #bbpress-forums div.wp-editor-container{
-        min-width: 300px !important;
+        min-width: 400px !important;
     }
     #bbpress-forums{
         padding: 5px !important;
+    }
+}
+@media screen and (max-width: 400px){
+    #bbpress-forums div.wp-editor-container{
+        min-width: 340px !important;
+    }
+}
+@media screen and (max-width: 350px){
+    #bbpress-forums div.wp-editor-container{
+        min-width: 300px !important;
     }
 }
