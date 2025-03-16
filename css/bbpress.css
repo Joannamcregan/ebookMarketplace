@@ -211,7 +211,7 @@ textarea.bbp-the-content{
 #bbpress-forums fieldset.bbp-form input[type=text]{
     border-radius: 15px !important;
     padding: 5px !important;
-    width: 290px !important;
+    width: 300px !important;
 }
 .leave-group{
     border: solid 3px #0c6980 !important;
@@ -259,12 +259,12 @@ div.bbp-template-notice{
     margin: 5px !important;
 }
 #bbpress-forums div.wp-editor-container{
-    width: 96% !important;
+    width: 99% !important;
     margin: auto !important;
 }
 @media screen and (max-width: 600px){
     #bbpress-forums div.wp-editor-container{
-        min-width: 290px !important;
+        min-width: 300px !important;
     }
     #bbpress-forums{
         padding: 5px !important;
