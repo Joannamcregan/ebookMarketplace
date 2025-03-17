@@ -7,7 +7,7 @@
             if ((in_array( 'reader-member', (array) $user->roles )) || (in_array( 'creator-member', (array) $user->roles ))){
                 ?><div class="tomc-circle-container">
                     <img src="<?php echo get_theme_file_uri('/images/circle-background-0.jpg'); ?>" role="presentation" />
-                    <p class="orange-shadow-heading tankindred-text tomc-circle-p-1"><a href="<?php echo esc_url(site_url('/groups/cooperative-members/forum/'));?>"><strong>Members-Only</strong></a></p>
+                    <p class="orange-shadow-heading tankindred-text tomc-circle-p-1"><a href="<?php echo esc_url(site_url('/forums/forum/members-only-space/'));?>"><strong>Members-Only</strong></a></p>
                     <p class="tomc-circle-p-2">A Space to Discuss All Things Cooperative</p>
                 </div>
                 <div class="red-orange-line-break-60"></div>
