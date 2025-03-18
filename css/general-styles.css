@@ -630,10 +630,9 @@ span.bbp-admin-links a{
     }
     .tomc-circle-p-1-padded-2x{
         right: 20px;
-        top: 110px;
+        top: 130px;
         font-size: 30;
         padding-left: 20px;
-        padding-top: 20px;
     }
 }
 @media screen and (max-width: 380px) {
