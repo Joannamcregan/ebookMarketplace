@@ -633,6 +633,7 @@ span.bbp-admin-links a{
         top: 110px;
         font-size: 30;
         padding-left: 20px;
+        padding-top: 20px;
     }
 }
 @media screen and (max-width: 380px) {
