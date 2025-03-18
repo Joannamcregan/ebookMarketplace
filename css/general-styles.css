@@ -661,11 +661,11 @@ span.bbp-admin-links a{
 }
 @media screen and (max-width: 340px) {
     .tomc-circle-container{
-        min-height: 400px;
+        min-height: 420px;
     }
     .tomc-circle-container img{
         right: 20px;
-        top: 40px;
+        top: 60px;
         max-width: 250px;
     }
     .tomc-circle-p-1{
