@@ -5,7 +5,7 @@
         <div class="tomc-circle-container">
             <img src="<?php echo get_theme_file_uri('/images/circle-background-0.jpg'); ?>" role="presentation" />
             <p class="tomc-circle-p-0">This circle is for all our creatives out there. Those who write, design cover art, edit all the words, and/or are indie presses.</p>
-            <p class="orange-shadow-heading tankindred-text tomc-circle-p-1"><a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>"><strong>Creator</strong></a></p>
+            <p class="orange-shadow-heading tankindred-text tomc-circle-p-1-padded-2x"><a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>"><strong>Creator</strong></a></p>
             <br><br>
             <p class="tomc-circle-p-2">Those who want to upload their work, collaborate with other members, and be in community, while reaping the benefits of ownership.</p>
         </div>
