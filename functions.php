@@ -249,6 +249,7 @@ function ebook_marketplace_single_product_additional_info() {
     $term_relationships_table = $wpdb->prefix . "term_relationships";
     $term_taxonomy_table = $wpdb->prefix . "term_taxonomy";
     $terms_table = $wpdb->prefix . "terms";
+    $lookup_table = $wpdb->prefix . "wc_order_product_lookup";
 
     $query = 'select terms.name
     from %i tr 
@@ -295,6 +296,28 @@ function ebook_marketplace_single_product_additional_info() {
             echo '<p class="centered-text"><em>' . $results[$i]['warning_name'] . '</em></p>';
         }
         echo '</div></div>';
+    }
+
+    if ($productid != 4334 /*ISBN Registration*/){
+        $query = 'select p.post_title, terms.name
+        from %i l
+        join %i p on l.product_id = p.id
+        join %i tr on p.id = tr.object_id
+        join %i terms on tr.term_taxonomy_id = terms.term_id
+        join %i tt on tr.term_taxonomy_id = tt.term_taxonomy_id
+        and tt.taxonomy = "product_cat"
+        where l.customer_id = %d
+        and l.product_id = %d';
+        $existingBookPurchase = $wpdb->get_results($wpdb->prepare($query, $lookup_table, $posts_table, $term_relationships_table, $terms_table, $term_taxonomy_table, $userid, $productid), ARRAY_A);
+        if (($existingBookPurchase) && count($existingBookPurchase) > 0){
+            $format = $existingBookPurchase[0]['name'];
+            $product = $existingBookPurchase[0]['post_title'];
+            if ($format == 'event tickets'){
+                echo '<div><p><em>Our records indicate you have already purchased ' . $product . '.</em></p></div>';
+            } else {
+                echo '<div><p><em>Our records indicate you have already purchased ' . $product . ' in ' . substr_replace($format, "",-1) . ' format.</em></p></div>';
+            }
+        }
     }
 }
 add_action( 'woocommerce_single_product_summary', 'ebook_marketplace_single_product_additional_info', 13 );
