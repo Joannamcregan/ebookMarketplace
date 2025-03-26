@@ -1,7 +1,7 @@
 <?php get_header();
 
 ?><main class="leaves">
-    <h1 class='caprasimo-text special-display-text'>Trunk of My Car Cooperative</h1>
+    <h1 class='caprasimo-text'><span class="special-display-text">Trunk of My Car</span><span class="special-display-text-sub"> Cooperative</span></h1>
     <p class="leaves-p centered-text"><strong>A Cooperatively Owned Self-Publishing Marketplace</strong></p>
     <div class="leaf-section">
         <div class="leaf-wrapper">
