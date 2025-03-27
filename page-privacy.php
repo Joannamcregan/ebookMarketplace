@@ -7,7 +7,7 @@
     <p>This notice lays out your rights, as they relate to use of the Cooperative’s online platform (the “Platform”) at www.trunkofmycar.org. Continued use of the Platform constitutes agreement with this notice. If you do not agree with any aspect of this Privacy Notice, we ask that you not use the Platform.</p>
     <h2 class="banner-heading-18 centered-text">What We Collect</h2>
     <div class="left-gentle-bracket-orange">
-      <p>Personal Information. We only store or use the information that you provide - this includes, but is not limited to, your account information:</p>
+      <p><strong>Personal Information.</strong> We only store or use the information that you provide - this includes, but is not limited to, your account information:</p>
       <ul>
         <li>Your name</li>
         <li>Email address</li>
@@ -18,14 +18,14 @@
         <li>Any comments you make on the Platform</li>
       </ul>
       <p>All information provided is anonymized and kept secure.</p>
-      <p>Sensitive Information. We do not collect, store, or use any sensitive information, except for collections of your words for sale in our bookstore.</p>
-      <p>Cookies. The Platform uses cookies and similar technologies, which are small files or pieces of text that download to a device when a visitor accesses a website or app. As your personal information is anonymized, cookies are not linked to your personal information.</p>
-      <p>Comments/ Suggestions/ Reviews. Should you leave a comment, suggestion, review, and/or posting of any kind on the Platform, we collect data shared from the posting form that includes your IP address and browser user agent string to assist with spam detection.</p>
-      <p>Login. Upon visiting our login or landing page, we will set up a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p>
+      <p><strong>Sensitive Information.</strong> We do not collect, store, or use any sensitive information, except for collections of your words for sale in our bookstore.</p>
+      <p><strong>Cookies.</strong> The Platform uses cookies and similar technologies, which are small files or pieces of text that download to a device when a visitor accesses a website or app. As your personal information is anonymized, cookies are not linked to your personal information.</p>
+      <p><strong>Comments/ Suggestions/ Reviews.</strong> Should you leave a comment, suggestion, review, and/or posting of any kind on the Platform, we collect data shared from the posting form that includes your IP address and browser user agent string to assist with spam detection.</p>
+      <p><strong>Login.</strong> Upon visiting our login or landing page, we will set up a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p>
       <p>Upon login, we will also set up several cookies to save your login information and your screen display choices. Login cookies expire after two (2) days. Screen option cookies expire after one (1) year.</p>
       <p>If you select "Remember Me", your login will remain open for two (2) weeks. If you log out of your account, the login cookies will be removed.</p>
-      <p>Publishing. If you edit or publish an article, create a book, upload product information, or post information about services, events, offers, or needs, an additional cookie will be saved in your browser to track and respond to your submissions. This cookie includes no personal data and simply indicates the post ID of the article you just edited; it expires after twenty-four (24) hours.</p>
-      <p>Payment. When you make a purchase or submit a payment on the Platform, we collect personal information from you to process your payment. We may collect information like your:</p>
+      <p><strong>Publishing.</strong> If you edit or publish an article, create a book, upload product information, or post information about services, events, offers, or needs, an additional cookie will be saved in your browser to track and respond to your submissions. This cookie includes no personal data and simply indicates the post ID of the article you just edited; it expires after twenty-four (24) hours.</p>
+      <p><strong>Payment.</strong> When you make a purchase or submit a payment on the Platform, we collect personal information from you to process your payment. We may collect information like your:</p>
       <ul>
         <li>Billing and shipping address</li>
         <li>Details relating to your purchase</li>
@@ -33,7 +33,7 @@
         <li>Name</li>
         <li>Phone number</li>
       </ul>
-      <p>Our payment processor Stripe will also collect payment information from you. You can read their privacy policy here.</p>
+      <p>Our payment processor, WooCommerce, will also collect payment information from you. You can read their privacy policy <a href="https://automattic.com/privacy/" target="_blank">here</a>.</p>
     </div>
     <h2 class="banner-heading-18 centered-text">How Long We Keep It</h2>
     <div class="left-gentle-bracket-purple">
@@ -42,7 +42,7 @@
     </div>
     <h2 class="banner-heading-18 centered-text">How We Use Your Information/Who We Share It With</h2>
     <div class="left-gentle-bracket-blue">
-      <p>We share applicable personal information with federal, state, and local regulatory agencies to ensure compliance to the extent required.</p>
+      <p>We share applicable personal information with federal, state, and local regulatory agencies to ensure compliance, but only to the extent we are required by law.</p>
       <p>We may email you with messages about your order or account activity. For example, we may email you to tell you that:</p>
       <ul>
         <li>You’ve created a customer account</li>
