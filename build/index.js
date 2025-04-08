@@ -39,6 +39,62 @@ class CategoryDisplay {
 
 /***/ }),
 
+/***/ "./src/modules/CheckoutDisplay.js":
+/*!****************************************!*\
+  !*** ./src/modules/CheckoutDisplay.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class CheckoutDisplay {
+  constructor() {
+    this.zipCode = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#billing_postcode');
+    this.billingCounty = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#billing_county');
+    this.countyField = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#billing_county_field');
+    this.events();
+  }
+  events() {
+    this.zipCode.on('change', this.populate.bind(this));
+  }
+  populate() {
+    if (this.zipCode.val().trim() == '43068') {
+      this.billingCounty.html('');
+      let option = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<option/>').val('franklin_ohio').html('Franklin');
+      this.billingCounty.append(option);
+      option = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<option/>').val('fairfield_ohio').html('Fairfield');
+      this.billingCounty.append(option);
+      option = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<option/>').val('licking_ohio').html('Licking');
+      this.billingCounty.append(option);
+      this.countyField.removeClass('hidden');
+    } else if (this.zipCode.val().trim() == '43064') {
+      this.billingCounty.html('');
+      let option = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<option/>').val('madison_ohio').html('Madison');
+      this.billingCounty.append(option);
+      option = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<option/>').val('delaware_ohio').html('Delaware');
+      this.billingCounty.append(option);
+      option = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<option/>').val('franklin_ohio').html('Franklin');
+      this.billingCounty.append(option);
+      option = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<option/>').val('union_ohio').html('Union');
+      this.billingCounty.append(option);
+      this.countyField.removeClass('hidden');
+    } else {
+      this.billingCounty.html('');
+      let option = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<option/>').val('default').html('N/A');
+      this.billingCounty.append(option);
+      this.countyField.addClass('hidden');
+    }
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CheckoutDisplay);
+
+/***/ }),
+
 /***/ "./src/modules/FAQDisplay.js":
 /*!***********************************!*\
   !*** ./src/modules/FAQDisplay.js ***!
@@ -1030,6 +1086,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_VendorInfo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/VendorInfo */ "./src/modules/VendorInfo.js");
 /* harmony import */ var _modules_Roadmap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/Roadmap */ "./src/modules/Roadmap.js");
 /* harmony import */ var _modules_FAQDisplay__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/FAQDisplay */ "./src/modules/FAQDisplay.js");
+/* harmony import */ var _modules_CheckoutDisplay__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/CheckoutDisplay */ "./src/modules/CheckoutDisplay.js");
+
 
 
 
@@ -1052,6 +1110,7 @@ const productDisplay = new _modules_ProductDisplay__WEBPACK_IMPORTED_MODULE_7__[
 const vendorInfo = new _modules_VendorInfo__WEBPACK_IMPORTED_MODULE_8__["default"]();
 const roadmap = new _modules_Roadmap__WEBPACK_IMPORTED_MODULE_9__["default"]();
 const faqDisplay = new _modules_FAQDisplay__WEBPACK_IMPORTED_MODULE_10__["default"]();
+const checkoutDisplay = new _modules_CheckoutDisplay__WEBPACK_IMPORTED_MODULE_11__["default"]();
 })();
 
 /******/ })()

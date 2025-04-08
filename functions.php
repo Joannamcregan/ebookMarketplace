@@ -633,3 +633,21 @@ add_filter('upload_mimes', 'tomc_mime_types', 1, 1);
 add_action( 'init', function() {
     update_option( 'wc_feature_woocommerce_brands_enabled', 'no' );
 } );
+
+//add county checkout field---------------------------------------------------------------------
+add_filter( 'woocommerce_checkout_fields' , 'tomc_checkout_fields' );
+
+function tomc_checkout_fields( $fields ) {
+     $fields['billing']['billing_county'] = array(
+        'label'       => __( 'County', 'woocommerce' ),
+        'required'    => true,
+        'class'       => array( 'hidden' ),
+        'clear'       => true,
+        'type' => 'select',
+        'options'     => array(
+        'default' => __('N/A', 'woocommerce' )
+        )
+     );
+
+     return $fields;
+}
