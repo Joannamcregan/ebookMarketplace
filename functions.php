@@ -651,3 +651,9 @@ function tomc_checkout_fields( $fields ) {
 
      return $fields;
 }
+
+add_action( 'woocommerce_admin_order_data_after_shipping_address', 'tomc_county_display_admin_order_meta', 10, 1 );
+
+function tomc_county_display_admin_order_meta($order){
+    echo '<p><strong>'. esc_html__( 'County From Checkout Form' ) . ':</strong> ' . esc_html( $order->get_meta( '_billing_county', true ) ) . '</p>';
+}
