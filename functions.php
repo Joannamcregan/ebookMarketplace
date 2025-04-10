@@ -651,3 +651,20 @@ function tomc_checkout_fields( $fields ) {
 
      return $fields;
 }
+
+//send email to Zia when ISBN Registration product purchased----------------------------------
+add_filter( 'woocommerce_email_recipient_new_order', 'conditional_recipient_new_email_notification', 15, 2 );
+function conditional_recipient_new_email_notification( $recipient, $order ) {
+    if( is_admin() ) return $recipient; //Mandatory to avoid backend errors
+    $targeted_id = 4334; // ISBN Registration product id: 113 in dev 4334 production
+    $addr_email  = 'zia@trunkofmycar.org';
+
+    // Loop through orders items
+    foreach ($order->get_items() as $item_id => $item ) {
+        if( $item->get_product_id() == $targeted_id ){
+            $recipient .= ', ' . $addr_email; 
+            break; // Found and added - We stop the loop
+        }
+    }
+    return $recipient;
+}
