@@ -2,7 +2,7 @@
 <main>
   <div class="generic-content full-screen">
     <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
-    <h1 class="centered-text banner-heading-22">PRIVACY NOTICE<br><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" /> Last updated 4/30/2024 <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /></h1>
+    <h1 class="centered-text banner-heading-22">PRIVACY NOTICE<br><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" /> Last updated 4/11/2025 <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /></h1>
     <p>Trunk of My Car Cooperative (the “Cooperative”) has compiled this Privacy Notice to describe when, where, how, what, and why we might store and/or use your information when you use the Cooperative’s platform to buy and/or sell books in various formats, offer creative and publishing assistance, participate in community forums, including, but not limited to, offers and needs markets, book clubs, workshop, and/or those related to Cooperative governance.</p>
     <p>This notice lays out your rights, as they relate to use of the Cooperative’s online platform (the “Platform”) at www.trunkofmycar.org. Continued use of the Platform constitutes agreement with this notice. If you do not agree with any aspect of this Privacy Notice, we ask that you not use the Platform.</p>
     <h2 class="banner-heading-18 centered-text">What We Collect</h2>
@@ -34,6 +34,7 @@
         <li>Phone number</li>
       </ul>
       <p>Our payment processor, WooCommerce, will also collect payment information from you. You can read their privacy policy <a href="https://automattic.com/privacy/" target="_blank">here</a>.</p>
+      <p>If you are a vendor, you will be redirected to Stripe in order to provide details on how we are to pay you. Stripe’s privacy policy can be found <a href="https://stripe.com/privacy" target="_blank">here</a>.</p>
     </div>
     <h2 class="banner-heading-18 centered-text">How Long We Keep It</h2>
     <div class="left-gentle-bracket-purple">
