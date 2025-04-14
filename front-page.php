@@ -85,6 +85,7 @@
             </a>
         </div>
     </div>
+    <?php echo do_shortcode('[forminator_form id="5381"]'); ?>
 </main>
 
 <?php get_footer(); ?>
