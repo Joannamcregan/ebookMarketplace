@@ -554,7 +554,7 @@ function tomc_ISBN_no_products(){
 // maintenance mode-----------------------------------------------------------------------
 function tomc_maintenance_mode() {
     if (!is_user_logged_in()) {    
-        wp_die("<h1 style='color: #0c6980; text-align: center'>Coming Soon!</h1><p style='text-align: center'>The Trunk of My Car Cooperative Marketplace is launching early 2025. Our current member-owners are uploading works and conducting final tests before making the platform widely available in the coming days. You can learn more about the cooperative community we're building <a href='https://www.trunkofmycar.org/'>here</a>. </p>");    
+        wp_die("<h1 style='color: #0c6980; text-align: center'>Coming Soon!</h1><p style='text-align: center'>The Trunk of My Car Cooperative Marketplace is launching early 2025. Our current member-owners are uploading works and conducting final tests before making the platform widely available in the coming days.</p>");    
     }    
 }
     
