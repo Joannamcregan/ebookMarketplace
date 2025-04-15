@@ -27,7 +27,7 @@
             <a href="https://ko-fi.com/trunkofcarcoop" target="_blank">Buy Us a Coffee!</a>
       </div>
       <div id="social-links">
-            <a href="https://www.threads.net/@trunkofcarcoop" target="_blank"><img src="<?php echo get_theme_file_uri('/images/threads-icon.svg'); ?>" alt="threads logo" /></a>
+            <a href="https://bsky.app/profile/trunkofcarcoop.bsky.social" target="_blank"><img src="<?php echo get_theme_file_uri('/images/bluesky_icon.svg'); ?>" alt="bluesky logo" /></a>
       </div>
 </footer>
 
