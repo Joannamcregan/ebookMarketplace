@@ -28,8 +28,6 @@
       </div>
       <div id="social-links">
             <a href="https://www.threads.net/@trunkofcarcoop" target="_blank"><img src="<?php echo get_theme_file_uri('/images/threads-icon.svg'); ?>" alt="threads logo" /></a>
-            <a href="https://www.facebook.com/trunkofmycarcoop" target="_blank"><img src="<?php echo get_theme_file_uri('/images/fb-icon.svg'); ?>" alt="facebook logo" /></a>
-            <a href="https://www.instagram.com/trunkofcarcoop/" target="_blank"><img src="<?php echo get_theme_file_uri('/images/ig-icon.svg'); ?>" alt="instagram logo" /></a>
       </div>
 </footer>
 
