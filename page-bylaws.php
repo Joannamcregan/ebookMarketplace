@@ -16,7 +16,7 @@
         </div>
         <h2 class="centered-text banner-heading-18">ARTICLE III: MEMBERSHIP</h2>
         <div class="left-gentle-bracket-blue">
-            <p>SECTION 1. The Cooperative shall have four (4) circles of membership, with the designation, qualifications, requirements, methods of acceptance and incidents of each circle of membership as set forth below. The Cooperative shall operate on a one (1) person, one (1) vote basis and no member shall possess greater ownership or control than any other member. Circle(s) as used herein denotes traditionally termed “classes” of membership.  
+            <p>SECTION 1. The Cooperative shall have four (4) circles<em>original<sup><a href="#tomc-bylaws--footnote1" id="tomc-bylaws--reference1">1</a></sup></em> of membership, with the designation, qualifications, requirements, methods of acceptance and incidents of each circle of membership as set forth below. The Cooperative shall operate on a one (1) person, one (1) vote basis and no member shall possess greater ownership or control than any other member. Circle(s) as used herein denotes traditionally termed “classes” of membership.  
             </p>
             <p>SECTION 2. WORKER MEMBERS: Any wage or contract employee of the Cooperative shall be eligible for membership as a “Worker Member” for as long as that person is employed by the Cooperative and after meeting the minimum employment eligibility requirement of the Cooperative as determined by the Board of Directors from time to time. Worker Members represent the element of Air and vote on behalf of our impact on air quality.
             </p>
@@ -256,6 +256,9 @@
             <p>Section 2.3 When the Articles of Incorporation have been canceled for failing to file annual franchise or excise tax returns or to pay franchise and excise taxes and the Cooperative has not been nor desires to be reinstated; or</p>
             <p>Section 2.4 When substantially all of the assets have been sold at judicial sale or otherwise. The Board of Directors shall be responsible for seeing the appropriate state filings are made and notices given.</p>
             <p>SECTION 3. DISBURSEMENT OF ASSETS. Upon dissolution, the Board of Directors shall disburse the Cooperative’s assets in the following order; first, to pay the Cooperative’s debts and liabilities; second, to retire all equity furnished through patronage (member equity accounts) without priority on a pro rata basis; and third, to distribute the remaining property and assets of the Cooperative among the then existing members in the proportion in which the aggregate patronage of each member bears to the total patronage of all such members insofar as practical, unless otherwise provided by law.</p>
+        </div>
+        <div class="left-accent-wrapper-yellow">
+            <p><span>[<a href="#tomc-bylaws--reference1">1</a>]</span><span id="tomc-bylaws--footnote1">“Circle(s)” as used herein denotes traditionally termed “classes” of membership.</span></p>
         </div>
     </div>
 </main>
