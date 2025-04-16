@@ -46,16 +46,9 @@
             $user = wp_get_current_user();
             if (in_array( 'creator-member', (array) $user->roles ) || in_array( 'reader-member', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles )){
                 ?><div class="sub-leaf-wrapper">
-                    <a href="<?php echo esc_url(site_url('/groups/reader-members/forum/'));?>">
+                    <a href="<?php echo esc_url(site_url('/forums/forum/members-only-space/'));?>">
                     <div class="sub-leaf blue-leaf">
-                        <p>Reading Forum</p>
-                    </div>
-                    </a>
-                </div>
-                <div class="sub-leaf-wrapper">
-                    <a href="<?php echo esc_url(site_url('groups/creator-members/forum/')); ?>">
-                    <div class="sub-leaf blue-leaf">
-                        <p>Creating Forum</p>
+                        <p>Members Only Forum</p>
                     </div>
                     </a>
                 </div>
