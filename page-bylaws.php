@@ -6,74 +6,43 @@
         <h1 class="centered-text banner-heading-22">TRUNK OF MY CAR COOPERATIVE<br><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" /> BYLAWS <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /></h1>
         <h2 class="centered-text banner-heading-18">ARTICLE I: PURPOSE</h2>
         <div class="left-gentle-bracket-orange">
-            <p>The purpose of the Trunk of My Car Cooperative (the “Cooperative”) is to nurture and embody
-            collective organizational values within a community of writers and readers and to redistribute
-            monetary resources earned via publishing to the creators and supporters of such works. 
+            <p>The purpose of the Trunk of My Car Cooperative (the “Cooperative”) is to nurture and embody collective organizational values within a community of writers and readers and to redistribute monetary resources earned via publishing to the creators and supporters of such works. 
             </p>
         </div>
         <h2 class="centered-text banner-heading-18">ARTICLE II: MISSION</h2>
         <div class="left-gentle-bracket-purple">
-            <p>Our mission is to cooperatively redirect publishing resources from those who take to those who
-            create. 
+            <p>Our mission is to cooperatively redirect publishing resources from those who take to those who create.
             </p>
         </div>
         <h2 class="centered-text banner-heading-18">ARTICLE III: MEMBERSHIP</h2>
         <div class="left-gentle-bracket-blue">
-            <p>SECTION 1. The Cooperative shall have four (4) circles1
-            of membership, with the designation,
-            qualifications, requirements, methods of acceptance and incidents of each circle of membership as
-            set forth below. The Cooperative shall operate on a one (1) person, one (1) vote basis and no
-            member shall possess greater ownership or control than any other member.  
+            <p>SECTION 1. The Cooperative shall have four (4) circles of membership, with the designation, qualifications, requirements, methods of acceptance and incidents of each circle of membership as set forth below. The Cooperative shall operate on a one (1) person, one (1) vote basis and no member shall possess greater ownership or control than any other member. Circle(s) as used herein denotes traditionally termed “classes” of membership.  
             </p>
-            <p>SECTION 2. WORKER MEMBERS: Any wage or contract employee of the Cooperative shall be
-            eligible for membership as a “Worker Member” for as long as that person is employed by the
-            Cooperative and after meeting the minimum employment eligibility requirement of the
-            Cooperative as determined by the Board of Directors from time to time. 
+            <p>SECTION 2. WORKER MEMBERS: Any wage or contract employee of the Cooperative shall be eligible for membership as a “Worker Member” for as long as that person is employed by the Cooperative and after meeting the minimum employment eligibility requirement of the Cooperative as determined by the Board of Directors from time to time. Worker Members represent the element of Air and vote on behalf of our impact on air quality.
             </p>
-            <p>SECTION 3. CREATOR MEMBERS: Any person shall be eligible for membership as a “Creator
-            Member” provided that that person is actively selling products through the Cooperative’s platform
-            and after complying with all equity requirements of the Cooperative as determined by the Board
-            of Directors from time to time.</p>
-            <p>SECTION 4. CONSUMER MEMBERS: Any person or entity shall be eligible for membership as
-            a “Consumer Member” provided that that person is actively purchasing products from the
-            Cooperative and after complying with all equity requirements of the Cooperative as determined
-            by the Board of Directors from time to time. 
+            <p>SECTION 3. CREATOR MEMBERS: Any person shall be eligible for membership as a “Creator Member” provided that that person is actively selling products through the Cooperative’s platform and after complying with all equity requirements of the Cooperative as determined by the Board of Directors from time to time. Creator Members represent the element of Fire and vote on behalf of energy resources.</p>
+            <p>SECTION 4. READER MEMBERS: Any person or entity shall be eligible for membership as a “Reader Member” provided that that person is actively purchasing products from the Cooperative and after complying with all equity requirements of the Cooperative as determined by the Board of Directors from time to time. Reader Members represent the element of Water and vote on behalf of water resources.
             </p>
-            <p>SECTION 5. INVESTOR MEMBERS: Any person or entity shall be eligible for membership as
-            an “Investor Member” provided that that person is an investor in the Cooperative and after
-            complying with all legal and equity requirements of the Cooperative as determined by the Board
-            of Directors from time to time. </p>
-            <p>SECTION 6. FORFEITURE OF MEMBERSHIP: Any member shall forfeit membership in the
-            event that the member fails to meet the requirements of membership, as determined by the Board
-            of Directors after notice to the member and an opportunity to rebut any allegations before the
-            Board. 
+            <p>SECTION 5. SEED MEMBERS: Any person or entity shall be eligible for membership as a “Seed Member” provided that that person has invested in the Cooperative through acts of service or financial support and after complying with all legal and equity requirements of the Cooperative as determined by the Board of Directors from time to time. Seed Members represent the element of Earth and vote on behalf of planetary resources.
             </p>
-            <p>
-            SECTION 7. TERMINATION OF MEMBERSHIP
+            <p>SECTION 6. FORFEITURE OF MEMBERSHIP: Any member shall forfeit membership in the event that the member fails to meet the requirements of membership, as determined by the Board of Directors after notice to the member and an opportunity to rebut any allegations before the Board.
+            </p>
+            <p>SECTION 7. TERMINATION OF MEMBERSHIP
             </p>
             <ol type="A">
-                <li>RESIGNATION. Members wishing to leave the Cooperative must provide notice to the
-                Cooperative through the Cooperative’s platform. Resigning members are responsible for
-                fulfilling any/all outstanding obligations. 
+                <li>RESIGNATION. Members wishing to leave the Cooperative must provide notice to the Cooperative through the Cooperative’s platform. Resigning members are responsible for fulfilling any/all outstanding obligations. 
                 </li>
-                <li>INVOLUNTARY TERMINATION. The Board of Directors may terminate an individual
-                or organization’s membership for one of the following reasons: 
+                <li>INVOLUNTARY TERMINATION. The Board of Directors may terminate an individual or organization’s membership for one of the following reasons: 
                     <ol type="1">
-                        <li>Failing to participate in the Cooperative for one year or more in accordance
-                        with the rules and regulations associated with such membership circle.</li>
-                        <li>Violating terms of Cooperative policy, Board policy, community standards, or
-                        these Bylaws. </li>
-                        <li>Acting contrary to the best interests of the Cooperative. Members may be
-                        expelled for cause from the Cooperative by a majority vote of the Board of
-                        Directors, in accordance with the Cooperative’s accountability policy. </li>
+                        <li>Failing to participate in the Cooperative for one year or more in accordance with the rules and regulations associated with such membership circle.</li>
+                        <li>Violating terms of Cooperative policy, Board policy, community standards, or these Bylaws.</li>
+                        <li>Acting contrary to the best interests of the Cooperative. Members may be expelled for cause from the Cooperative by a majority vote of the Board of Directors, in accordance with the Cooperative’s accountability policy.</li>
                     </ol>
                 </li>
                 <li>Termination of membership shall proceed as follows: 
                     <ol type="1">
-                        <li>The Board will send notice to the email address on file for such member stating
-                        the reason for the proposed termination and outline specific incidences of
-                        violation of policies or Bylaws. The letter must be sent at least seven days prior
-                        to the vote to terminate membership. </li>
+                        <li>The Board will send notice to the email address on file for such member stating the reason for the proposed termination and outline specific incidences of violation of policies or Bylaws. The letter must be sent at least seven days prior to the vote to terminate membership.
+                        </li>
                         <li>The member will be invited to the Board meeting to be heard. 
                         </li>
                         <li>The decision of the Board is final. </li>
@@ -158,8 +127,8 @@
                     <ol type="1">
                         <li>Worker Representative - elected by Worker Members. </li>
                         <li>Creator Representative - elected by Creator Members.</li>
-                        <li>Consumer Representative - elected by Consumer Members.</li>
-                        <li>Investor Representative – elected by Investor Members.</li>
+                        <li>Reader Representative - elected by Reader Members.</li>
+                        <li>Seed Representative – elected by Seed Members.</li>
                     </ol>
                 </li>
                 <li>The final at-large Director will be elected by the entire membership.</li>
@@ -177,7 +146,7 @@
                     <ol type="1">
                         <li>If a Director fails to attend two (2) consecutive Board meetings without an excused absence, the Board has the option to remove that Director and fill the vacancy. </li>
                         <li>If a Director acts contrary to the best interests of the Cooperative, the Board has the option to remove that Director and fill the vacancy.</li>
-                        <li>If the resulting vacancy is a representative of a membership circle (Worker, Creator, Consumer, or Investor), the Board will appoint another member of that same membership circle.</li>
+                        <li>If the resulting vacancy is a representative of a membership circle (Worker, Creator, Reader, or Seed), the Board will appoint another member of that same membership circle.</li>
                     </ol>
                 </li>
                 <li>Membership Removal
@@ -217,7 +186,7 @@
         </div>
         <h2 class="centered-text banner-heading-18">ARTICLE VI FINANCE</h2>
         <div class="left-gentle-bracket-purple">
-            <p>SECTION 1. FINANCIAL OPERATION. The Cooperative operates on a Cooperative basis and allocates earnings and losses to members on the basis of the business done with or for such members. Thus, in accordance with Subchapter T of the Internal Revenue Code, the Cooperative may declare a patronage dividend to be distributed among the members in accordance with the total amount of patronage made by each such member during the preceding fiscal year. For Worker Members, patronage is defined as the number of hours worked; Creator Members, patronage is based on the total amount of sales; Consumer Members, patronage is defined as the total amount of purchases; for Investor Members, patronage is defined as the amount of investment.</p>
+            <p>SECTION 1. FINANCIAL OPERATION. The Cooperative operates on a Cooperative basis and allocates earnings and losses to members on the basis of the business done with or for such members. Thus, in accordance with Subchapter T of the Internal Revenue Code, the Cooperative may declare a patronage dividend to be distributed among the members in accordance with the total amount of patronage made by each such member during the preceding fiscal year. For Worker Members, patronage is defined as the number of hours worked; Creator Members, patronage is based on the total amount of sales; Reader Members, patronage is defined as the total amount of purchases; for Seed Members, patronage is defined as the amount of investment.</p>
             <p>SECTION 2. APPORTIONMENT OF LOSSES. All or any part of the net proceeds may be applied to losses incurred in prior years. In the best interests of the Cooperative, the Board may apportion losses.</p>
             <p>SECTION 3. PATRONAGE REFUNDS TO MEMBERS. In the event that the Board decides to distribute all or part of net proceeds as patronage refunds to members, the following shall be distributed and paid to members, in accordance with the ratio of their patronage (hours worked, amount of sales, purchases, or amount of investment) to the total patronage (hours worked, amount of sales, purchases, or amount of investment by all members of the same circle), as follows:</p>
             <ol type="A">
