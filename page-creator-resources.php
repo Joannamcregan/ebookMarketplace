@@ -15,7 +15,7 @@
                             <a href="<?php echo esc_url(site_url('/creator-roadmap'));?>">Creator Roadmap</a>
                         </p>
                         <p class="centered-text">
-                            <a href="<?php echo esc_url(site_url('/options-to-offer-your-work'));?>">Offer Your Work</a>
+                            <a href="<?php echo esc_url(site_url('/options-to-offer-your-work'));?>">Options to Offer Your Work</a>
                         </p>
                         <p class="centered-text">
                             <a href="<?php echo esc_url(site_url('/copyright-primer'));?>">Copyright Primer</a>
