@@ -257,8 +257,10 @@
             <p>Section 2.4 When substantially all of the assets have been sold at judicial sale or otherwise. The Board of Directors shall be responsible for seeing the appropriate state filings are made and notices given.</p>
             <p>SECTION 3. DISBURSEMENT OF ASSETS. Upon dissolution, the Board of Directors shall disburse the Cooperative’s assets in the following order; first, to pay the Cooperative’s debts and liabilities; second, to retire all equity furnished through patronage (member equity accounts) without priority on a pro rata basis; and third, to distribute the remaining property and assets of the Cooperative among the then existing members in the proportion in which the aggregate patronage of each member bears to the total patronage of all such members insofar as practical, unless otherwise provided by law.</p>
         </div>
-        <div class="left-accent-wrapper-yellow">
-            <p><span>[<a href="#tomc-bylaws--reference1">1</a>]</span><span id="tomc-bylaws--footnote1">“Circle(s)” as used herein denotes traditionally termed “classes” of membership.</span></p>
+        <div class="left-gentle-bracket-yellow">
+            <div class="left-accent-wrapper-yellow">
+                <p><span>[<a href="#tomc-bylaws--reference1">1</a>]</span><span id="tomc-bylaws--footnote1">“Circle(s)” as used herein denotes traditionally termed “classes” of membership.</span></p>
+            </div>
         </div>
     </div>
 </main>
