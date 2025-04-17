@@ -25,6 +25,6 @@
 .ui-datepicker{
     background: white !important;
 }
-.ui-datepicker.forminator-calendar--default{
+#ui-datepicker-div{
     background-color: white !important;
 }
