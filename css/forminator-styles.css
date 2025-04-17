@@ -21,3 +21,10 @@
     min-width: 300px;
     margin: 100px auto 40px auto !important;
 }
+
+.ui-datepicker{
+    background: white !important;
+}
+.forminator-checkbox-box{
+    background: white !important;
+}
