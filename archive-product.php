@@ -54,7 +54,7 @@ for($index = 0; $index < count($results); $index++){
                 ?></div>
                 <p class="centered-text"><a href="<?php echo esc_url(site_url('/ebooks'));?>">shop all ebooks</a></p>
             <?php } else {
-                ?><p class="centered-text padded-paragraph-20-x">No ebooks have been added yet. Check back soon!</p>
+                ?><p class="centered-text  padding-x-20">No ebooks have been added yet. Check back soon!</p>
             <?php } ?>
             <!-- </div>  tomc-book-organization--newly-added-continued-ebooks -->
         </div>
@@ -105,7 +105,7 @@ for($index = 0; $index < count($results); $index++){
                 ?></div>
                 <p class="centered-text"><a href="<?php echo esc_url(site_url('/audiobooks'));?>">shop all audiobooks</a></p>
             <?php } else {
-                ?><p class="centered-text">No audiobooks have been added yet. Check back soon!</p>
+                ?><p class="centered-text padding-x-20">No audiobooks have been added yet. Check back soon!</p>
             <?php } ?>
             <!-- </div>  tomc-book-organization--newly-added-continued-audiobooks -->
         </div>
@@ -156,7 +156,7 @@ for($index = 0; $index < count($results); $index++){
                 ?></div>
                 <p class="centered-text"><a href="<?php echo esc_url(site_url('/physical-books'));?>">shop all physical books</a></p>
             <?php } else {
-                ?><p class="centered-text">No physical books have been added yet. Check back soon!</p>
+                ?><p class="centered-text  padding-x-20">No physical books have been added yet. Check back soon!</p>
             <?php } ?>
         </div>
     </div>
