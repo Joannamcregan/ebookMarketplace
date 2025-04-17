@@ -473,16 +473,17 @@ function assignReaderMemberRole($form_id, $response) {
 
 function assignCreatorMemberRole($form_id, $response) {
     if( $response['success']  && $form_id ==4212 /* Creator-Member Signup */){
+        global $wpdb;
         $usermeta_table = $wpdb->prefix . "usermeta";
         $user = wp_get_current_user();
         $userId = $user->ID;
         $user->add_role( 'creator-member' );
         $user->add_role( 'dc_vendor' );
-        //assign default 90% commission CAREFUL
-        // $deleteQuery = 'delete from %i where meta_key = "_vendor_commission" and user_id = %d;';
-        // $wpdb->query($wpdb->prepare($deleteQuery, $usermeta_table, $userId));
-        // $insertQuery = 'insert into %i (user_id, meta_key, meta_value) values (%d, "_vendor_commission", "90");'
-        // $wpdb->query($wpdb->prepare($insertQuery, $usermeta_table, $userId));
+        //assign default 90% commission
+        $deleteQuery = 'delete from %i where meta_key = "_vendor_commission" and user_id = %d;';
+        $wpdb->query($wpdb->prepare($deleteQuery, $usermeta_table, $userId));
+        $insertQuery = 'insert into %i (user_id, meta_key, meta_value) values (%d, "_vendor_commission", "90");';
+        $wpdb->query($wpdb->prepare($insertQuery, $usermeta_table, $userId));
     }
 } 
 
