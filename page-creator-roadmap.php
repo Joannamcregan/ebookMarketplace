@@ -2,6 +2,52 @@
 
 ?><main>
     <div class="banner"><h1 class="centered-text banner-heading-38">Creator Roadmap</h1></div>
+    <div class="roadmap-container">
+        <div class="roadmap-section">
+            <div class="roadmap-section--bottom-right--wrap-0">
+                <div class="roadmap-section--bottom-right--wrap-1">
+                    <div class="roadmap-section--bottom-right--wrap-2">
+                        <div class="roadmap-section--bottom-right">
+                            <h2>Become a Creator-Member or Sell Your Work Without a Membership</h2>
+                            <p>Learn more about these options <a href="<?php echo esc_url(site_url('/product/options-to-offer-your-work'));?>">here</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap-img--bottom-left orange-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/selling-options.jpg'); ?>" alt="part of a screenshot showing the 'Join as a Creator-Member' and 'Offer work without a membership' buttons on the 'Options to Offer Your Work' page."/>
+            </div>
+        </div>
+        <div class="roadmap-section">
+            <div class="roadmap-section--bottom-left--wrap-0">
+                <div class="roadmap-section--bottom-left--wrap-1">
+                    <div class="roadmap-section--bottom-left--wrap-2">
+                        <div class="roadmap-section--bottom-left">
+                            <h2 class="right-text-no-margin">Set Up Your Store</h2>
+                            <p>Be sure to enter a Store Name and Slug Name in the General section of the Storefront tab.</p>          
+                            <p>Click the Connect with Stripe button on the Billing tab.</p>               
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap-img--bottom-right yellow-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/store-settings.jpg'); ?>" alt="part of a screenshot showing the Store Settings, Storefront, and Billing links on the vendor dashboard" />
+            </div>
+        </div>
+        <div class="roadmap-section">
+            <div class="roadmap-section--bottom-last--wrap-0">
+                <div class="roadmap-section--bottom-last--wrap-1">
+                    <div class="roadmap-section--bottom-last--wrap-2">
+                        <div class="roadmap-section--bottom-last">
+                            <h2>Now You're Ready to Add a Product</h2>
+                            <p>E-Books, Audiobooks, physical books, and services must all be added as products.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+        </div>
+    </div>
     <br>
     <span class="roadmap--purple-span" id="sellBooksSpan">How to Sell Books</span>
     <div id="sellProductsSection" class="roadmap-container hidden">
