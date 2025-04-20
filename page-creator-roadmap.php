@@ -57,7 +57,7 @@
                     <div class="roadmap-section--bottom-right--wrap-2">
                         <div class="roadmap-section--bottom-right">
                             <h2>Add Product From Creator Dashboard</h2>
-                            <p>Selling the same book in multiple formats(e-book, audiobook, hardcopy)? Add a separate product for each format.</p>
+                            <p>Selling the same book in multiple formats (e-book, audiobook, hardcopy)? Add a separate product for each format.</p>
                         </div>
                     </div>
                 </div>
@@ -90,14 +90,15 @@
                 <div class="roadmap-section--bottom-right--wrap-1">
                     <div class="roadmap-section--bottom-right--wrap-2">
                         <div class="roadmap-section--bottom-right">
-                            <h2>Upload Digital File</h2>
-                            <p>E-book or audiobook format? Upload your file <a href="<?php echo esc_url(site_url('/dashboard/edit-product'));?>" target="_blank">here</a>.</p>
+                        <h2 class="left-text-no-margin">Name Your Price</h2>
+                            <p class="left-text-no-margin">Set your book’s regular price and/or schedule a sale.</p>
+                            <p class="left-text-no-margin"><strong>Note: </strong>If your product is a paperback or hardcover, be sure to factor the cost of shipping into your price. Information on USPS domestic shipping rates can be found <a href="https://postcalc.usps.com/" target="_blank">here</a>.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="roadmap-img--bottom-left blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add Product button under the Downloadable Files section on the Vendor Dashboard"/>
+            <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
             </div>
         </div>
         <div class="roadmap-section">
@@ -105,45 +106,14 @@
                 <div class="roadmap-section--bottom-left--wrap-1">
                     <div class="roadmap-section--bottom-left--wrap-2">
                         <div class="roadmap-section--bottom-left">
-                            <h2 class="right-text-no-margin">Name Your Price</h2>
-                            <p class="right-text-no-margin">Set your book’s regular price and/or schedule a sale.</p>
-                            <p class="right-text-no-margin"><strong>Note: </strong>If your product is a paperback or hardcover, be sure to factor the cost of shipping into your price. Information on USPS domestic shipping rates can be found <a href="https://postcalc.usps.com/" target="_blank">here</a>.</p>
+                            <h2 class="right-text-no-margin">Select Book Format</h2>
+                            <p class="right-text-no-margin">One per product. Multiple formats require multiple products.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="roadmap-img--bottom-right purple-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
-            </div>
-        </div>
-        <div class="roadmap-section">
-            <div class="roadmap-section--bottom-right--wrap-0">
-                <div class="roadmap-section--bottom-right--wrap-1">
-                    <div class="roadmap-section--bottom-right--wrap-2">
-                        <div class="roadmap-section--bottom-right">
-                            <h2>Select Book Format</h2>
-                            <p>One per product. Multiple formats require multiple products.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="roadmap-img--bottom-left blue-rounded-rhombus">
                 <img src="<?php echo get_theme_file_uri('/images/product-format.jpg'); ?>" alt="part of a screenshot showing the Product Types option checkboxes on the vendor dashboard."/>
-            </div>
-        </div>
-        <div class="roadmap-section">
-            <div class="roadmap-section--bottom-left--wrap-0">
-                <div class="roadmap-section--bottom-left--wrap-1">
-                    <div class="roadmap-section--bottom-left--wrap-2">
-                        <div class="roadmap-section--bottom-left">
-                            <h2 class="right-text-no-margin">Choose How You Will Be Paid</h2>
-                            <p class="right-text-no-margin">Select 'Billing' under Store Settings on the Creator Dashboard and add your secure payment information.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="roadmap-img--bottom-right orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-billing-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard"/>
             </div>
         </div>
         <div class="roadmap-section">
@@ -152,7 +122,20 @@
                     <div class="roadmap-section--bottom-last--wrap-2">
                         <div class="roadmap-section--bottom-last">
                             <h2>Next Steps</h2>
-                            <p>Select the format uploaded and continue to add details about your book!</p>
+                            <p>Depending on your books format, you will need to complete additional fields.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+        </div>
+        <div class="roadmap-section">
+            <div class="roadmap-section--bottom-last--wrap-0">
+                <div class="roadmap-section--bottom-last--wrap-1">
+                    <div class="roadmap-section--bottom-last--wrap-2">
+                        <div class="roadmap-section--bottom-last">
+                            <h2>Link Your Books and Help People Find Them</h2>
+                            <p>If your book is available in multiple formats, you'll need to create a product for each one. Next, you will link the formats and add general details about your book.</p>
                         </div>
                     </div>
                 </div>
