@@ -4,7 +4,7 @@
   <div class="generic-content full-screen">
     <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
     <h1 class="centered-text banner-heading-22"><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" />Terms and Conditions <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /></h1>
-    <h2 class="banner-heading-18 centered-text">Last Updated March 27, 2025</h2>
+    <h2 class="banner-heading-18 centered-text">Last Updated April 19, 2025</h2>
     <p>This website and any other communication portal (the “Platform”) are all provided by Trunk of My Car Cooperative, a Hawai`i multi-stakeholder cooperative (the “Cooperative”). All interactions with the Platform are governed by these Terms and Conditions (these “Terms”). </p>
     <p>The Platform includes communications between You and the Cooperative, any of its members or users, including, but not limited to, email communications, Platform comment and/or feedback forums, community governance forums, event participation, and other communications conducted through the Platform. </p>
     <p>These Terms incorporate the Privacy Policy and any other applicable agreement between You and the Cooperative.</p>
@@ -30,8 +30,8 @@
     </div>
     <h2 class="banner-heading-18 centered-text">Payment Methods</h2>
     <div class="left-gentle-bracket-yellow">
-      <p>We use WooCommerce to process payments to and from the Cooperative and/or Platform. While we cannot guarantee that every transaction will run smoothly, we can provide support, to the extent that we are able, with any payment issue that arises with WooCommerce. While we can provide transaction documentation related to a dispute, the Cooperative is not responsible for advocating on Your behalf, nor are we responsible for any payment issues not caused by our actions.</p>
-      <p>Non-members who use the Platform to sell books (e-books, audiobooks, physical books shipped directly by the Creator) agree to receive a royalty rate of 80% for books. Non-members who offer services agree to pay 5% of the transaction service fee to the Cooperative. Non-members should not offer, nor accept payment for work generated from the Platform outside of the Platform. The Cooperative reserves the right to ban Users from access for violation of this policy. All sales are subject to WooCommerce transaction fees (as of 3/27/2025 .30 + 2.9%).</p>
+      <p>We use Stripe to process payments to and from the Cooperative and/or Platform. While we cannot guarantee that every transaction will run smoothly, we can provide support, to the extent that we are able, with any payment issue that arises with Stripe. While we can provide transaction documentation related to a dispute, the Cooperative is not responsible for advocating on Your behalf, nor are we responsible for any payment issues not caused by our actions.</p>
+      <p>Non-members who use the Platform to sell books (e-books, audiobooks, physical books shipped directly by the Creator) agree to receive a royalty rate of 80% for books. Non-members who offer services agree to pay 5% of the transaction service fee to the Cooperative. Non-members should not offer, nor accept payment for work generated from the Platform outside of the Platform. The Cooperative reserves the right to ban Users from access for violation of this policy. All sales are subject to Stripe transaction fees (as of 3/27/2025 .30 + 2.9%).</p>
     </div>
     <h2 class="banner-heading-18 centered-text">Rules of Engagement</h2>
     <div class="left-gentle-bracket-orange">
