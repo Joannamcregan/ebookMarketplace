@@ -105,6 +105,10 @@
     max-width: fit-content;
     padding: 10px;
 }
+.roadmap-image--center-wide{
+    margin: auto;
+    padding: 10px;
+}
 .roadmap-img--bottom-left img{
     height: 100%;
     width: auto;
@@ -117,6 +121,11 @@
 }
 .roadmap-image--center img{
     max-width: 250px;
+}
+.roadmap-image--center-wide img{
+    max-width: 250px;
+    margin: auto;
+    display: block;
 }
 .purple-rounded-rhombus{
     border: solid #4c0548 5px;
