@@ -25,7 +25,7 @@
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Set Up Your Store</h2>
                             <p>Be sure to enter a Store Name and Slug Name in the General section of the Storefront tab.</p>          
-                            <p>Click the Connect with Stripe button on the Billing tab. if you don't have a legal business entity established for your self-publishing business, use your legal name as your business name with Stripe.</p>               
+                            <p>Click the Connect with Stripe button on the Billing tab. If you don't have a legal business entity established for your self-publishing business, use your legal name as your business name with Stripe.</p>               
                         </div>
                     </div>
                 </div>
