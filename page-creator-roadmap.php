@@ -107,7 +107,7 @@
                     <div class="roadmap-section--bottom-left--wrap-2">
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Select Book Format</h2>
-                            <p class="right-text-no-margin">One per product. Multiple formats require multiple products.</p>
+                            <p class="right-text-no-margin">At the bottom of the page, check the box for your book's format. Books in different formats must be entered as separate products, please check only one box.</p>
                         </div>
                     </div>
                 </div>
@@ -243,8 +243,15 @@
                 <div class="roadmap-section--bottom-last--wrap-1">
                     <div class="roadmap-section--bottom-last--wrap-2">
                         <div class="roadmap-section--bottom-last">
-                            <h2 class="left-text-no-margin">Choose How You Will Be Paid</h2>
-                            <p class="left-text-no-margin">Select 'Billing' under Store Settings on the Creator Dashboard and add your secure payment information.</p>
+                            <h2 class="left-text-no-margin">Select Virtual Product Type</h2>
+                            <p class="left-text-no-margin">Check the box beside "Virtual (for services)" in the Product Type section.</p>
+                            <div class="roadmap-image--center yellow-rounded-rhombus">
+                                <img src="<?php echo get_theme_file_uri('/images/product-type-virtual.jpg'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" />
+                            </div>
+                            <p class="left-text-no-margin">At the bottom of the page, check the box beside Services.</p>
+                            <div class="roadmap-image--center orange-rounded-rhombus">
+                                <img src="<?php echo get_theme_file_uri('/images/product-categories-services.jpg'); ?>" alt="part of a screenshot showing the product categories checkboxes with 'services' checked on the vendor dashboard" />
+                            </div>
                         </div>
                     </div>
                 </div>
