@@ -25,7 +25,7 @@
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Set Up Your Store</h2>
                             <p>Be sure to enter a Store Name and Slug Name in the General section of the Storefront tab.</p>          
-                            <p>Click the Connect with Stripe button on the Billing tab.</p>               
+                            <p>Click the Connect with Stripe button on the Billing tab. if you don't have a legal business entity established for your self-publishing business, use your legal name as your business name with Stripe.</p>               
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-left blue-rounded-rhombus">
-            <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
             </div>
         </div>
         <div class="roadmap-section">
@@ -145,9 +145,31 @@
             </div>
         </div>
         <span class="roadmap--purple-span" id="sellAudiobooksSpan">How to Sell Audiobooks</span>
-        <div id="sellAudiobooksSection" class="roadmap-container hidden"></div>
+        <div id="sellAudiobooksSection" class="roadmap-container hidden">
+        <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks and audiobooks)."</p>
+            <div class="roadmap-image--center yellow-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+            </div>
+            <p class="centered-text padding-x-20">Click the "Add File" button.</p>
+            <div class="roadmap-image--center blue-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+            </div>
+            <p class="centered-text padding-x-20">Click the upload icon and upload your e-book file (preferably in epub format.)</p>
+            <div class="roadmap-image--center orange-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" />
+            </div>
+            <p class="centered-text padding-x-20">If you want to add a preview file, click the Add Media button in the Product Description section.</p>
+            <div class="roadmap-image--center purple-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/add-media.jpg'); ?>" alt="part of a screenshot showing the Add Media button on the vendor dashboard" />
+            </div>
+        </div>
         <span class="roadmap--orange-span" id="sellPhysicalBooksSpan">How to Sell Physical Books</span>
-        <div id="sellPhysicalBooksSection" class="roadmap-container hidden"></div>
+        <div id="sellPhysicalBooksSection" class="roadmap-container hidden">
+            <p class="centered-text padding-x-20">Check the Manage Stock checkbox on the Inventory tab, then enter a stock quantity.</p>
+            <div class="roadmap-image--center-wide blue-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
+            </div>
+        </div>
         <div class="roadmap-section">
             <div class="roadmap-section--bottom-last--wrap-0">
                 <div class="roadmap-section--bottom-last--wrap-1">
