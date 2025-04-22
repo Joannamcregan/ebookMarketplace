@@ -565,7 +565,7 @@ function tomc_maintenance_mode() {
     }    
 }
     
-add_action('get_header', 'tomc_maintenance_mode');
+// add_action('get_header', 'tomc_maintenance_mode');
 
 add_filter( 'password_hint', function( $hint )
 {
