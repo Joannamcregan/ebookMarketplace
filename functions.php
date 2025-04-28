@@ -675,3 +675,25 @@ function conditional_recipient_new_email_notification( $recipient, $order ) {
     }
     return $recipient;
 }
+//restrict backend access-------------------------------------------------------------------------------------------
+function block_wp_admin() {
+    if ( is_admin() && ! current_user_can( 'administrator' ) && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
+        wp_safe_redirect( home_url() );
+        exit;
+    }
+}
+add_action( 'admin_init', 'block_wp_admin' );
+//restrict sub-order email-------------------------------------------------------------------------------------------------------
+add_filter( 'woocommerce_email_recipient_customer_on_hold_order', 'customer_email_recipient_change', 10, 2 );
+add_filter( 'woocommerce_email_recipient_customer_processing_order', 'customer_email_recipient_change', 10, 2 );
+
+function customer_email_recipient_change( $recipient_email, $order ) {
+    $parent_order_id = $order->get_parent_id();
+    
+    if ( $parent_order_id == 0 ) {
+        return $recipient_email;
+    } else {
+        return ''; // Return an empty string to stop the email from being sent
+    }
+}
+
