@@ -85,7 +85,9 @@
             </a>
         </div>
     </div>
-    <?php echo do_shortcode('[forminator_form id="5381"]'); ?>
+    <div id="tomc-newsletter-signup-form">
+        <?php echo do_shortcode('[forminator_form id="5381"]'); ?>
+    </div>
 </main>
 
 <?php get_footer(); ?>
