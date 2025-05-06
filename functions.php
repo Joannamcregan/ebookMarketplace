@@ -696,4 +696,12 @@ function customer_email_recipient_change( $recipient_email, $order ) {
         return ''; // Return an empty string to stop the email from being sent
     }
 }
-
+//featured image screenshot-------------------------------------------------------------------------------------------
+function tomc_featured_image( $html ) {
+    if ( '' == $html ) {
+        return '<img src="' . get_template_directory_uri() . '/images/screenshot.png" width="150px" height="100px" class="image-size-name" />';
+    }
+    // Else, return the post thumbnail
+    return $html;
+}
+add_filter( 'post_thumbnail_html', 'tomc_featured_image' );
