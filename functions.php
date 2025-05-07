@@ -705,3 +705,15 @@ function tomc_featured_image( $html ) {
     return $html;
 }
 add_filter( 'post_thumbnail_html', 'tomc_featured_image' );
+
+function fb_home_image( $tags ) {
+    if ( is_home() || is_front_page() ) {
+        // Remove the default blank image added by Jetpack
+        unset( $tags['og:image'] );
+ 
+        $fb_home_img = get_template_directory_uri() . '/images/screenshot.png';
+        $tags['og:image'] = esc_url( $fb_home_img );
+    }
+    return $tags;
+}
+add_filter( 'jetpack_open_graph_tags', 'fb_home_image' );
