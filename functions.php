@@ -700,7 +700,7 @@ function customer_email_recipient_change( $recipient_email, $order ) {
 add_theme_support( 'post-thumbnails' );
 function tomc_featured_image( $html ) {
     if ( '' == $html ) {
-        return '<img src="' . get_theme_file_uri('/images/screenshot.png') . '" />';
+        return '<img src="' . get_template_directory_uri() . '/images/screenshot.png" />';
     }
     return $html;
 }
