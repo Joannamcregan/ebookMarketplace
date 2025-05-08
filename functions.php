@@ -697,11 +697,28 @@ function customer_email_recipient_change( $recipient_email, $order ) {
     }
 }
 //featured image screenshot-------------------------------------------------------------------------------------------
-add_theme_support( 'post-thumbnails' );
-function tomc_featured_image( $html ) {
-    if ( '' == $html ) {
-        return '<img src="' . get_template_directory_uri() . '/images/screenshot.png" />';
+function fb_opengraph() {
+    global $post;
+ 
+    if(is_single()) {
+        if(has_post_thumbnail($post->ID)) {
+            $img_src = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'medium');
+        } else {
+            $img_src = get_stylesheet_directory_uri() . '/images/screenshot.png';
+        }
+        if($excerpt = $post->post_excerpt) {
+            $excerpt = strip_tags($post->post_excerpt);
+            $excerpt = str_replace("", "'", $excerpt);
+        } else {
+            $excerpt = get_bloginfo('description');
+        }
+        ?>
+ 
+    <meta property="og:image" content="<?php echo $img_src; ?>"/>
+ 
+<?php
+    } else {
+        return;
     }
-    return $html;
 }
-add_filter( 'post_thumbnail_html', 'tomc_featured_image' );
+add_action('wp_head', 'fb_opengraph', 5);
