@@ -24,7 +24,8 @@
                     <div class="roadmap-section--bottom-left--wrap-2">
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Set Up Your Store</h2>
-                            <p>Be sure to enter a Store Name and Slug Name in the General section of the Storefront tab.</p>          
+                            <img src="<?php echo get_theme_file_uri('/images/stop_sign.jpg'); ?>" alt="a stop sign" class="block padding-b-20 padding-x-60"/>
+                            <p class="inline"><strong>Be sure to enter a Store Name and Slug Name in the General section of the Storefront tab.</strong> (If you skip this step, your books won't appear in your store or dashboard.)</p>      
                             <p>Click the Connect with Stripe button on the Billing tab. If you don't have a legal business entity established for your self-publishing business, use your legal name as your business name with Stripe.</p>               
                         </div>
                     </div>
