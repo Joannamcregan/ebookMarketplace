@@ -132,7 +132,7 @@
         </div>
         <span class="roadmap--blue-span" id="sellEbooksSpan">How to Sell E-Books</span>
         <div id="sellEbooksSection" class="roadmap-container hidden">
-            <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks and audiobooks)."</p>
+            <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
             <div class="roadmap-image--center yellow-rounded-rhombus">
                 <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
             </div>
@@ -147,7 +147,7 @@
         </div>
         <span class="roadmap--purple-span" id="sellAudiobooksSpan">How to Sell Audiobooks</span>
         <div id="sellAudiobooksSection" class="roadmap-container hidden">
-        <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks and audiobooks)."</p>
+        <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
             <div class="roadmap-image--center yellow-rounded-rhombus">
                 <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
             </div>
@@ -166,6 +166,28 @@
         </div>
         <span class="roadmap--orange-span" id="sellPhysicalBooksSpan">How to Sell Physical Books</span>
         <div id="sellPhysicalBooksSection" class="roadmap-container hidden">
+            <p class="centered-text padding-x-20">Check the Manage Stock checkbox on the Inventory tab, then enter a stock quantity.</p>
+            <div class="roadmap-image--center-wide blue-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
+            </div>
+        </div>
+        <span class="roadmap--blue-span" id="sellDigitalZinesSpan">How to Sell Digital Zines</span>
+        <div id="sellDigitalZinesSection" class="roadmap-container hidden">
+            <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
+            <div class="roadmap-image--center yellow-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+            </div>
+            <p class="centered-text padding-x-20">Click the "Add File" button.</p>
+            <div class="roadmap-image--center blue-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+            </div>
+            <p class="centered-text padding-x-20">Click the upload icon and upload your zine file.</p>
+            <div class="roadmap-image--center orange-rounded-rhombus">
+                <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
+            </div>
+        </div>
+        <span class="roadmap--purple-span" id="sellPhysicalZinesSpan">How to Sell Physical Zines</span>
+        <div id="sellPhysicalZinesSection" class="roadmap-container hidden">
             <p class="centered-text padding-x-20">Check the Manage Stock checkbox on the Inventory tab, then enter a stock quantity.</p>
             <div class="roadmap-image--center-wide blue-rounded-rhombus">
                 <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />

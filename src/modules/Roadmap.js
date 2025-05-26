@@ -12,6 +12,10 @@ class Roadmap {
         this.sellAudiobooksSection = $("#sellAudiobooksSection");
         this.sellPhysicalBooksSpan = $("#sellPhysicalBooksSpan");
         this.sellPhysicalBooksSection = $("#sellPhysicalBooksSection");
+        this.sellDigitalZinesSpan = $("#sellDigitalZinesSpan");
+        this.sellDigitalZinesSection = $("#sellDigitalZinesSection");
+        this.sellPhysicalZinesSpan = $("#sellPhysicalZinesSpan");
+        this.sellPhysicalZinesSection = $("#sellPhysicalZinesSection");
         this.events();
     }
 
@@ -40,6 +44,16 @@ class Roadmap {
             this.sellPhysicalBooksSpan.toggleClass('roadmap--orange-span');
             this.sellPhysicalBooksSpan.toggleClass('roadmap--hollow-orange-span');
             this.sellPhysicalBooksSection.toggleClass('hidden');
+        });
+        this.sellDigitalZinesSpan.on('click', ()=>{
+            this.sellDigitalZinesSpan.toggleClass('roadmap--blue-span');
+            this.sellDigitalZinesSpan.toggleClass('roadmap--hollow-blue-span');
+            this.sellDigitalZinesSection.toggleClass('hidden');
+        });
+        this.sellPhysicalZinesSpan.on('click', ()=>{
+            this.sellPhysicalZinesSpan.toggleClass('roadmap--purple-span');
+            this.sellPhysicalZinesSpan.toggleClass('roadmap--hollow-purple-span');
+            this.sellPhysicalZinesSection.toggleClass('hidden');
         });
     }
 

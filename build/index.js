@@ -530,6 +530,10 @@ class Roadmap {
     this.sellAudiobooksSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellAudiobooksSection");
     this.sellPhysicalBooksSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellPhysicalBooksSpan");
     this.sellPhysicalBooksSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellPhysicalBooksSection");
+    this.sellDigitalZinesSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellDigitalZinesSpan");
+    this.sellDigitalZinesSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellDigitalZinesSection");
+    this.sellPhysicalZinesSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellPhysicalZinesSpan");
+    this.sellPhysicalZinesSection = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#sellPhysicalZinesSection");
     this.events();
   }
   events() {
@@ -557,6 +561,16 @@ class Roadmap {
       this.sellPhysicalBooksSpan.toggleClass('roadmap--orange-span');
       this.sellPhysicalBooksSpan.toggleClass('roadmap--hollow-orange-span');
       this.sellPhysicalBooksSection.toggleClass('hidden');
+    });
+    this.sellDigitalZinesSpan.on('click', () => {
+      this.sellDigitalZinesSpan.toggleClass('roadmap--blue-span');
+      this.sellDigitalZinesSpan.toggleClass('roadmap--hollow-blue-span');
+      this.sellDigitalZinesSection.toggleClass('hidden');
+    });
+    this.sellPhysicalZinesSpan.on('click', () => {
+      this.sellPhysicalZinesSpan.toggleClass('roadmap--purple-span');
+      this.sellPhysicalZinesSpan.toggleClass('roadmap--hollow-purple-span');
+      this.sellPhysicalZinesSection.toggleClass('hidden');
     });
   }
 }
