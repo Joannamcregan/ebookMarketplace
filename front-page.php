@@ -2,9 +2,9 @@
 
 ?><main class="leaves">
     <div class='logo-image-large-container'>
-        <picture class="logo-image-large" >
-            <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/logo-large-alt.webp'); ?>" alt="Trunk of My Car Cooperative" >
-            <img src="<?php echo get_theme_file_uri('/images/logo-large-alt.jpg'); ?>" alt="Trunk of My Car Cooperative" />
+        <picture class="logo-image-picture">
+            <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/logo-large-alt.webp'); ?>" alt="Trunk of My Car Cooperative" class="logo-image-large" >
+            <img src="<?php echo get_theme_file_uri('/images/logo-large-alt.jpg'); ?>" alt="Trunk of My Car Cooperative" class="logo-image-large" />
         </picture>
     </div>
     <div class="logo-image-large-container">
