@@ -2,13 +2,16 @@
 .logo-image-large-container{
     display: flex;
 }
+.logo-image-picture{
+    margin: 10px auto;
+    display: block;
+}
 .logo-image-large{
     margin: 50px auto 0 auto;
     max-width: 700px;
 }
 .sub-logo{
     max-width: 700px;
-    margin: 10px auto;
 }
 .sub-logo-2{
     max-width: 700px;

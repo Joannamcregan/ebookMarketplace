@@ -2,10 +2,17 @@
 
 ?><main class="leaves">
     <div class='logo-image-large-container'>
-        <img class="logo-image-large" src="<?php echo get_theme_file_uri('/images/logo-large-alt.png'); ?>" alt="Trunk of My Car Cooperative" />
+        <picture class="logo-image-large" >
+            <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/logo-large-alt.webp'); ?>" alt="Trunk of My Car Cooperative" >
+            <img src="<?php echo get_theme_file_uri('/images/logo-large-alt.jpg'); ?>" alt="Trunk of My Car Cooperative" />
+        </picture>
     </div>
     <div class="logo-image-large-container">
-        <img class="sub-logo" src="<?php echo get_theme_file_uri('/images/sub-logo.png'); ?>" alt="self-publishing evolution/revolution" />
+        <picture class="logo-image-picture">
+            <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/sub-logo.webp'); ?>" alt="self-publishing evolution/revolution" class="sub-logo" >
+            <img src="<?php echo get_theme_file_uri('/images/sub-logo.jpg'); ?>" alt="self-publishing evolution/revolution" class="sub-logo" />
+        </picture>
+        <!-- <img src="<?php echo get_theme_file_uri('/images/sub-logo.jpg'); ?>" alt="self-publishing evolution/revolution" class="sub-logo" /> -->
     </div>
     <p class="leaves-p centered-text">We're on a mission to collectively redistribute resources from those who take to those who create with a self-publishing platform <strong>owned by a community of people who love and create books.</strong></p>
     <div class="leaf-section">
