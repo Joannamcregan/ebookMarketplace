@@ -16,7 +16,12 @@
 <header class="header--top">
   <div class="top-nav-container">
     <span class="site-header__menu-trigger fa fa-bars" aria-label="menu" tabindex="-1"><i aria-label="close overlay"></i></span>
-    <a href="<?php echo esc_url(site_url()) ?>"><img class="logo-image" src="<?php echo get_theme_file_uri('/images/logo.jpg'); ?>" alt="Trunk of My Car Cooperative" /></a>
+    <a href="<?php echo esc_url(site_url()) ?>">
+      <picture>
+        <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/logo.webp'); ?>"  alt="Trunk of My Car Cooperative" class="logo-image" >
+        <img src="<?php echo get_theme_file_uri('/images/logo.jpg'); ?>" alt="Trunk of My Car Cooperative" class="logo-image" />
+      </picture>
+    </a>
     <div class="top-nav-section" id="top-nav-right">
       <span class="js-search-trigger"><i class="fa fa-search" aria-label="search"></i></span>
       <?php if (is_user_logged_in()){
