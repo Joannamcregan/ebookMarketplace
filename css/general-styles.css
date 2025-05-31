@@ -97,6 +97,9 @@ header a:hover{
 .woocommerce-products-header a:hover{
     color: #0c698e;
 }
+img{
+    font-style: italic;
+}
 .logo-image{
     max-width: 120px;
     margin-left: 20px;
@@ -229,7 +232,7 @@ header a:hover{
     border: solid #ecd0b1 2px;
     border-radius: 10px;
     position: absolute;
-    bottom: 130px;
+    bottom: 140px;
     right: 25px;
     width: fit-content;
     padding: 5px;
@@ -242,7 +245,7 @@ header a:hover{
     flex-direction: row;
     flex-wrap: nowrap;
     position: absolute;
-    bottom: 170px;
+    bottom: 180px;
     right: 25px;
 }
 #social-links img{

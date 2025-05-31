@@ -1,5 +1,9 @@
 <footer class="footer--main">
-      <img src="<?php echo get_theme_file_uri('/images/yellow-logo.jpg'); ?>" alt="Funky letters spell out Trunk of My Car over a yellow background" id="footer-logo" />
+      <picture>
+            <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/yellow-logo.webp'); ?>" alt="Funky letters spell out Trunk of My Car over a yellow background" id="footer-logo">
+            <img src="<?php echo get_theme_file_uri('/images/yellow-logo.jpg'); ?>" alt="Funky letters spell out Trunk of My Car over a yellow background" id="footer-logo" />
+      </picture>
+      <!-- <img src="<?php echo get_theme_file_uri('/images/yellow-logo.jpg'); ?>" alt="Funky letters spell out Trunk of My Car over a yellow background" id="footer-logo" /> -->
       <div class="footer-list">
             <ul>                 
                   <li><a href="<?php echo esc_url(site_url('/coop'));?>">The Co-op</a></li>
@@ -30,7 +34,11 @@
             <a href="https://ko-fi.com/trunkofcarcoop" target="_blank">Buy Us a Coffee!</a>
       </div>
       <div id="social-links">
-            <a href="https://bsky.app/profile/trunkofcarcoop.bsky.social" target="_blank"><img src="<?php echo get_theme_file_uri('/images/bluesky_icon.jpg'); ?>" alt="bluesky logo" /></a>
+            <picture>
+                  <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/bluesky_icon.webp'); ?>"  alt="bluesky logo">
+                  <img src="<?php echo get_theme_file_uri('/images/bluesky_icon.jpg'); ?>" alt="bluesky logo" />
+            </picture>
+            <!-- <a href="https://bsky.app/profile/trunkofcarcoop.bsky.social" target="_blank"><img src="<?php echo get_theme_file_uri('/images/bluesky_icon.jpg'); ?>" alt="bluesky logo" /></a> -->
       </div>
 </footer>
 
