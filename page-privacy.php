@@ -1,8 +1,23 @@
 <?php get_header(); ?>
 <main>
   <div class="generic-content full-screen">
-    <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
-    <h1 class="centered-text banner-heading-22">PRIVACY NOTICE<br><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" /> Last updated 4/19/2025 <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /></h1>
+    <picture>
+        <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/corner-stars-0.webp'); ?>" role="presentation" class="margin-auto-block" >
+        <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
+    </picture>
+    <h1 class="centered-text banner-heading-22">
+      PRIVACY NOTICE
+      <br>
+      <picture>
+          <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/corner-stars-2.webp'); ?>" role="presentation" class="inline">
+          <img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" />
+      </picture>
+       Last updated 4/19/2025 
+      <picture>
+          <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/corner-stars-1.webp'); ?>" role="presentation" class="inline">
+          <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" />
+      </picture>
+    </h1>
     <p>Trunk of My Car Cooperative (the “Cooperative”) has compiled this Privacy Notice to describe when, where, how, what, and why we might store and/or use your information when you use the Cooperative’s platform to buy and/or sell books in various formats, offer creative and publishing assistance, participate in community forums, including, but not limited to, offers and needs markets, book clubs, workshop, and/or those related to Cooperative governance.</p>
     <p>This notice lays out your rights, as they relate to use of the Cooperative’s online platform (the “Platform”) at www.trunkofmycar.org. Continued use of the Platform constitutes agreement with this notice. If you do not agree with any aspect of this Privacy Notice, we ask that you not use the Platform.</p>
     <h2 class="banner-heading-18 centered-text">What We Collect</h2>
