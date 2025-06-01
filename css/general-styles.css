@@ -826,14 +826,23 @@ span.bbp-admin-links a{
     width: auto;
 } */
 /*images-----------------------------------------------------------------------*/
-.circle-bio-pic{
+.circle-bio-pic-wrapper{
     width: 200px;
-    height: auto;
+    height: 200px;
     border-radius: 50%;
     border-top: solid #0c6980 5px;
     border-right: solid #0c6980 20px;
     border-bottom: solid #0c6980 15px;
     border-left: solid #0c6980 10px;
+    background: #0c6980;
+    padding: 0px;
+}
+.circle-bio-pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0px;
 }
 /*text-------------------------------------------------------------------------*/
 .prewrap{
