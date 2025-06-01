@@ -2,8 +2,22 @@
 
 ?><main>
     <div class="generic-content full-screen">
-        <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
-        <h1 class="centered-text banner-heading-22">TRUNK OF MY CAR COOPERATIVE<br><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" /> BYLAWS <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /></h1>
+        <picture>
+            <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/corner-stars-0.webp'); ?>" role="presentation" class="margin-auto-block" >
+            <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
+        </picture>
+        <h1 class="centered-text banner-heading-22">TRUNK OF MY CAR COOPERATIVE
+            <br>
+            <picture>
+                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/corner-stars-2.webp'); ?>" role="presentation" class="inline">
+                <img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" />
+            </picture>            
+             BYLAWS 
+            <picture>
+                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/corner-stars-1.webp'); ?>" role="presentation" class="inline">
+                <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" />
+            </picture>
+        </h1>
         <h2 class="centered-text banner-heading-18">ARTICLE I: PURPOSE</h2>
         <div class="left-gentle-bracket-orange">
             <p>The purpose of the Trunk of My Car Cooperative (the “Cooperative”) is to nurture and embody collective organizational values within a community of writers and readers and to redistribute monetary resources earned via publishing to the creators and supporters of such works. 
