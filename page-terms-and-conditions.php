@@ -2,8 +2,21 @@
 
 ?><main>
   <div class="generic-content full-screen">
-    <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
-    <h1 class="centered-text banner-heading-22"><img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" />Terms and Conditions <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" /></h1>
+    <picture>
+        <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/corner-stars-0.webp'); ?>" role="presentation" class="margin-auto-block" >
+        <img src="<?php echo get_theme_file_uri('/images/corner-stars-0.jpg'); ?>" role="presentation" class="margin-auto-block" />
+    </picture>
+    <h1 class="centered-text banner-heading-22">
+      <picture>
+          <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/corner-stars-2.webp'); ?>" role="presentation" class="inline">
+          <img src="<?php echo get_theme_file_uri('/images/corner-stars-2.jpg'); ?>" role="presentation" class="inline" />
+      </picture>
+      Terms and Conditions
+      <picture>
+          <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/corner-stars-1.webp'); ?>" role="presentation" class="inline">
+          <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" />
+      </picture>
+    </h1>
     <h2 class="banner-heading-18 centered-text">Last Updated April 19, 2025</h2>
     <p>This website and any other communication portal (the “Platform”) are all provided by Trunk of My Car Cooperative, a Hawai`i multi-stakeholder cooperative (the “Cooperative”). All interactions with the Platform are governed by these Terms and Conditions (these “Terms”). </p>
     <p>The Platform includes communications between You and the Cooperative, any of its members or users, including, but not limited to, email communications, Platform comment and/or feedback forums, community governance forums, event participation, and other communications conducted through the Platform. </p>
