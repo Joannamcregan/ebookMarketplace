@@ -92,14 +92,23 @@
                     <div class="roadmap-section--bottom-right--wrap-2">
                         <div class="roadmap-section--bottom-right">
                         <h2 class="left-text-no-margin">Name Your Price</h2>
-                            <p class="left-text-no-margin">Set your book’s regular price and/or schedule a sale.</p>
-                            <p class="left-text-no-margin"><strong>Note: </strong>If your product is a paperback or hardcover, be sure to factor the cost of shipping into your price. Information on USPS domestic shipping rates can be found <a href="https://postcalc.usps.com/" target="_blank">here</a>.</p>
+                            <p class="left-text-no-margin">Use the "General" tab to set your book’s regular price and/or schedule a sale.</p>
+                            <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" class="margin-auto-block blue-rounded-border" />
+                            <p class="left-text-no-margin">Next, go to the "Shipping" tab and check the box to enable per-product shipping cost.</p>
+                            <img src="<?php echo get_theme_file_uri('/images/per-product.jpg'); ?>" alt="part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." class="block yellow-rounded-border"/>
+                            <p class="left-text-no-margin">Click the "Insert row" button to add a default shipping rule that will apply to the whole Unites States. Enter the abbreviation 'US' into the first box. Enter '*'' into the next two boxes. In the fourth box, enter the default amount you would like to charge for US shipping.</p>
+                            <p class="left-text-no-margin"><strong>Note: for ebooks, audiobooks, and digital zines, enter 0 in the fourth box.</strong> </p>
+                            <img src="<?php echo get_theme_file_uri('/images/per-product-default.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 10." class="margin-auto-block purple-rounded-border"/>
+                            <p class="left-text-no-margin">To set a different shipping cost for a particular state, insert another row. Enter 'US' in the first box and the two letter abbreviation for the state in the second box. Put a * in the third box and in the fourth box put the default shipping amount for the state.</p>
+                            <img src="<?php echo get_theme_file_uri('/images/per-product-state.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by a text box containing the abbreviation 'OH'. A third text box contains an asterisk and a fourth text box containing 7." class="block orange-rounded-border"/>
+                            <p class="left-text-no-margin">To set a different shipping cost for a particular zipcode within a state, insert a row with 'US' in the first box, the state's abbreviation in the second box, and the zipcode in the third box. In the fourth box put the amount you would like to charge for shipping to this zipcode.</p>
+                            <img src="<?php echo get_theme_file_uri('/images/per-product-state-zip.jpg'); ?>" alt="part of a screenshot showing four rows of per-product shipping date with four text boxes in each row. In the top row, the first text box says 'US,' the second text box says 'PA', the third box contains an asterisk, and the fourth box says '8.' In the second row from the tox, the first box says 'US,' the second box says 'OH,' the third box says '44111,' and the fourth box says '5.' In the third row from the top, the first box says 'US,' the second box says 'OH,' the third box contains an asterisk, and the fourth box says '7.' In the bottom row, the first box says 'US,' the second and third boxes both contain asterisks, and the fourth box says '10'." class="margin-auto-block yellow-rounded-border"/>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="roadmap-img--bottom-left blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                <img src="<?php echo get_theme_file_uri('/images/per-product-multiple.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
             </div>
         </div>
         <div class="roadmap-section">
@@ -166,10 +175,8 @@
         </div>
         <span class="roadmap--orange-span" id="sellPhysicalBooksSpan">How to Sell Physical Books</span>
         <div id="sellPhysicalBooksSection" class="roadmap-container hidden">
-            <p class="centered-text padding-x-20">Check the Manage Stock checkbox on the Inventory tab, then enter a stock quantity.</p>
-            <div class="roadmap-image--center-wide blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
-            </div>
+            <p class="centered-text padding-x-20">Check the "Manage Stock" checkbox on the Inventory tab, then enter a stock quantity.</p>
+            <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" class="margin-auto-block blue-rounded-border" />
         </div>
         <span class="roadmap--blue-span" id="sellDigitalZinesSpan">How to Sell Digital Zines</span>
         <div id="sellDigitalZinesSection" class="roadmap-container hidden">
@@ -188,10 +195,8 @@
         </div>
         <span class="roadmap--purple-span" id="sellPhysicalZinesSpan">How to Sell Physical Zines</span>
         <div id="sellPhysicalZinesSection" class="roadmap-container hidden">
-            <p class="centered-text padding-x-20">Check the Manage Stock checkbox on the Inventory tab, then enter a stock quantity.</p>
-            <div class="roadmap-image--center-wide blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
-            </div>
+            <p class="centered-text padding-x-20">Check the "Manage Stock" checkbox on the Inventory tab, then enter a stock quantity.</p>
+            <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" class="margin-auto-block blue-rounded-border" />
         </div>
         <div class="roadmap-section">
             <div class="roadmap-section--bottom-last--wrap-0">
