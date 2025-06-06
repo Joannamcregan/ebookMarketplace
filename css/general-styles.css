@@ -1198,6 +1198,10 @@ a {
     margin: auto;
     display: block;
 }
+.margin-x-60{
+    margin-left: 60px;
+    margin-right: 60px;
+}
 .padding-5{
     padding: 5px;
 }

@@ -110,12 +110,12 @@
     padding: 10px;
 }
 .roadmap-img--bottom-left img{
-    height: 100%;
+    max-height: 100%;
     width: auto;
     display: block;
 }
 .roadmap-img--bottom-right img{
-    height: 100%;
+    max-height: 100%;
     width: auto;
     display: block;
 }
@@ -126,6 +126,22 @@
     max-width: 250px;
     margin: auto;
     display: block;
+}
+.yellow-rounded-border{
+    border: solid #f7c340 20px;
+    border-radius: 10px;
+}
+.orange-rounded-border{
+    border: solid #e44e2d 20px;
+    border-radius: 10px;
+}
+.blue-rounded-border{
+    border: solid #0c6980 20px;
+    border-radius: 10px;
+}
+.purple-rounded-border{
+    border: solid #4c0548 20px;
+    border-radius: 10px;
 }
 .purple-rounded-rhombus{
     border: solid #4c0548 5px;
