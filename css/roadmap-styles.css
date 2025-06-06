@@ -97,6 +97,7 @@
     bottom: -40px;
     right: -10px;
     z-index: 800;
+    padding: 20px;
     height: 170px;
     width: fit-content;
 }
@@ -128,19 +129,19 @@
     display: block;
 }
 .yellow-rounded-border{
-    border: solid #f7c340 20px;
+    border: solid #f7c340 10px;
     border-radius: 10px;
 }
 .orange-rounded-border{
-    border: solid #e44e2d 20px;
+    border: solid #e44e2d 10px;
     border-radius: 10px;
 }
 .blue-rounded-border{
-    border: solid #0c6980 20px;
+    border: solid #0c6980 10px;
     border-radius: 10px;
 }
 .purple-rounded-border{
-    border: solid #4c0548 20px;
+    border: solid #4c0548 10px;
     border-radius: 10px;
 }
 .purple-rounded-rhombus{
@@ -232,4 +233,18 @@
 }
 .roadmap-container h2{
     margin: 0px;
+}
+@media screen and (max-width: 360px) {
+    .yellow-rounded-border{
+        width: 200px;
+    }
+    .orange-rounded-border{
+        width: 200px;
+    }
+    .blue-rounded-border{
+        width: 200px;
+    }
+    .purple-rounded-border{
+        width: 200px;
+    }
 }
