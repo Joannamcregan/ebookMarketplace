@@ -257,7 +257,12 @@
                     <div class="roadmap-section--bottom-left--wrap-2">
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Name Your Price</h2>
-                            <p class="right-text-no-margin">Set your product’s regular price and/or schedule a sale.</p>
+                            <p class="right-text-no-margin">Set your service's regular price and/or schedule a sale.</p>
+                            <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" class="margin-auto-block blue-rounded-border" />
+                            <p class="right-text-no-margin">Next, go to the "Shipping" tab and check the box to enable per-product shipping cost.</p>
+                            <img src="<?php echo get_theme_file_uri('/images/per-product.jpg'); ?>" alt="part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." class="block yellow-rounded-border"/>
+                            <p class="right-text-no-margin">Click the "Insert row" button. In the first text box, enter the abbreviation 'US.' In the second and third boxes, enter asterisks. In the fourth box, enter 0.</p>
+                            <img src="<?php echo get_theme_file_uri('/images/per-product-service.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 0." class="margin-auto-block purple-rounded-border"/>
                         </div>
                     </div>
                 </div>
@@ -273,13 +278,9 @@
                         <div class="roadmap-section--bottom-last">
                             <h2 class="left-text-no-margin">Select Virtual Product Type</h2>
                             <p class="left-text-no-margin">Check the box beside "Virtual (for services)" in the Product Type section.</p>
-                            <div class="roadmap-image--center yellow-rounded-rhombus">
-                                <img src="<?php echo get_theme_file_uri('/images/product-type-virtual.jpg'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" />
-                            </div>
+                            <img src="<?php echo get_theme_file_uri('/images/product-type-virtual.jpg'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" class="yellow-rounded-border block" />
                             <p class="left-text-no-margin">At the bottom of the page, check the box beside Services.</p>
-                            <div class="roadmap-image--center orange-rounded-rhombus">
-                                <img src="<?php echo get_theme_file_uri('/images/product-categories-services.jpg'); ?>" alt="part of a screenshot showing the product categories checkboxes with 'services' checked on the vendor dashboard" />
-                            </div>
+                            <img src="<?php echo get_theme_file_uri('/images/product-categories-services.jpg'); ?>" alt="part of a screenshot showing the product categories checkboxes with 'services' checked on the vendor dashboard" class="blue-rounded-border margin-auto-block" />
                         </div>
                     </div>
                 </div>
