@@ -131,18 +131,22 @@
 .yellow-rounded-border{
     border: solid #f7c340 10px;
     border-radius: 10px;
+    width: fit-content;
 }
 .orange-rounded-border{
     border: solid #e44e2d 10px;
     border-radius: 10px;
+    width: fit-content;
 }
 .blue-rounded-border{
     border: solid #0c6980 10px;
     border-radius: 10px;
+    width: fit-content;
 }
 .purple-rounded-border{
     border: solid #4c0548 10px;
     border-radius: 10px;
+    width: fit-content;
 }
 .purple-rounded-rhombus{
     border: solid #4c0548 5px;
@@ -235,16 +239,16 @@
     margin: 0px;
 }
 @media screen and (max-width: 360px) {
-    .yellow-rounded-border{
+    .yellow-rounded-border img, source{
         width: 200px;
     }
-    .orange-rounded-border{
+    .orange-rounded-border img, source{
         width: 200px;
     }
-    .blue-rounded-border{
+    .blue-rounded-border img, source{
         width: 200px;
     }
-    .purple-rounded-border{
+    .purple-rounded-border img, source{
         width: 200px;
     }
 }
