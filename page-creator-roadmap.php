@@ -15,7 +15,10 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-left orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/selling-options.jpg'); ?>" alt="part of a screenshot showing the 'Join as a Creator-Member' and 'Offer work without a membership' buttons on the 'Options to Offer Your Work' page."/>
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/selling-options.webp'); ?>" alt="part of a screenshot showing the 'Join as a Creator-Member' and 'Offer work without a membership' buttons on the 'Options to Offer Your Work' page." >
+                    <img src="<?php echo get_theme_file_uri('/images/selling-options.jpg'); ?>" alt="part of a screenshot showing the 'Join as a Creator-Member' and 'Offer work without a membership' buttons on the 'Options to Offer Your Work' page."/>
+                </picture>
             </div>
         </div>
         <div class="roadmap-section">
@@ -24,7 +27,10 @@
                     <div class="roadmap-section--bottom-left--wrap-2">
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Set Up Your Store</h2>
-                            <img src="<?php echo get_theme_file_uri('/images/stop_sign.jpg'); ?>" alt="a stop sign" class="block padding-b-20 padding-x-60"/>
+                            <picture>
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/stop_sign.webp'); ?>" alt="a stop sign" class="block padding-b-20" >
+                                <img src="<?php echo get_theme_file_uri('/images/stop_sign.jpg'); ?>" alt="a stop sign" class="block padding-b-20"/>
+                            </picture>
                             <p class="inline"><strong>Be sure to enter a Store Name and Slug Name in the General section of the Storefront tab.</strong> (If you skip this step, your books won't appear in your store or dashboard.)</p>      
                             <p>Click the Connect with Stripe button on the Billing tab. If you don't have a legal business entity established for your self-publishing business, use your legal name as your business name with Stripe.</p>               
                         </div>
@@ -32,7 +38,10 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-right yellow-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/store-settings.jpg'); ?>" alt="part of a screenshot showing the Store Settings, Storefront, and Billing links on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/store-settings.webp'); ?>" alt="part of a screenshot showing the Store Settings, Storefront, and Billing links on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/store-settings.jpg'); ?>" alt="part of a screenshot showing the Store Settings, Storefront, and Billing links on the vendor dashboard" />
+                </picture>
             </div>
         </div>
         <div class="roadmap-section">
@@ -46,7 +55,10 @@
                     </div>
                 </div>
             </div>
-            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+            <picture>
+                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/street_triangle.webp'); ?>" aria-hidden="true" class="roadmap-img--bottom" >
+                <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+            </picture>            
         </div>
     </div>
     <br>
@@ -64,7 +76,10 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-left orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="part of a screenshot showing the Add Product option in the Product Manager drop down on the vendor dashboard."/>
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-product.webp'); ?>" alt="part of a screenshot showing the Add Product option in the Product Manager drop down on the vendor dashboard." >
+                    <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="part of a screenshot showing the Add Product option in the Product Manager drop down on the vendor dashboard."/>
+                </picture>
             </div>
         </div>
         <div class="roadmap-section">
@@ -83,7 +98,10 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-right purple-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/product-title-and-gtin.jpg'); ?>" alt="part of a screenshot showing the title field and ISBN option in the GTIN dropdown on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-title-and-gtin.webp'); ?>" alt="part of a screenshot showing the title field and ISBN option in the GTIN dropdown on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/product-title-and-gtin.jpg'); ?>" alt="part of a screenshot showing the title field and ISBN option in the GTIN dropdown on the vendor dashboard" />
+                </picture>
             </div>
         </div>
         <div class="roadmap-section">
@@ -93,22 +111,40 @@
                         <div class="roadmap-section--bottom-right">
                         <h2 class="left-text-no-margin">Name Your Price</h2>
                             <p class="left-text-no-margin">Use the "General" tab to set your book’s regular price and/or schedule a sale.</p>
-                            <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" class="margin-auto-block blue-rounded-border" />
+                            <picture class="margin-auto-block blue-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                            </picture>
                             <p class="left-text-no-margin">Next, go to the "Shipping" tab and check the box to enable per-product shipping cost.</p>
-                            <img src="<?php echo get_theme_file_uri('/images/per-product.jpg'); ?>" alt="part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." class="block yellow-rounded-border"/>
+                            <picture class="block yellow-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product.webp'); ?>" alt="Part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." >
+                                <img src="<?php echo get_theme_file_uri('/images/per-product.jpg'); ?>" alt="Part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." />
+                            </picture>
                             <p class="left-text-no-margin">Click the "Insert row" button to add a default shipping rule that will apply to the whole Unites States. Enter the abbreviation 'US' into the first box. Enter '*'' into the next two boxes. In the fourth box, enter the default amount you would like to charge for US shipping.</p>
                             <p class="left-text-no-margin"><strong>Note: for ebooks, audiobooks, and digital zines, enter 0 in the fourth box.</strong> </p>
-                            <img src="<?php echo get_theme_file_uri('/images/per-product-default.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 10." class="margin-auto-block purple-rounded-border"/>
+                            <picture class="margin-auto-block purple-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-default.webp'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 10." >
+                                <img src="<?php echo get_theme_file_uri('/images/per-product-default.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 10." />
+                            </picture>
                             <p class="left-text-no-margin">To set a different shipping cost for a particular state, insert another row. Enter 'US' in the first box and the two letter abbreviation for the state in the second box. Put a * in the third box and in the fourth box put the default shipping amount for the state.</p>
-                            <img src="<?php echo get_theme_file_uri('/images/per-product-state.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by a text box containing the abbreviation 'OH'. A third text box contains an asterisk and a fourth text box containing 7." class="block orange-rounded-border"/>
+                            <picture class="block orange-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-state.webp'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by a text box containing the abbreviation 'OH'. A third text box contains an asterisk and a fourth text box containing 7." >
+                                <img src="<?php echo get_theme_file_uri('/images/per-product-state.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by a text box containing the abbreviation 'OH'. A third text box contains an asterisk and a fourth text box containing 7." />
+                            </picture>
                             <p class="left-text-no-margin">To set a different shipping cost for a particular zipcode within a state, insert a row with 'US' in the first box, the state's abbreviation in the second box, and the zipcode in the third box. In the fourth box put the amount you would like to charge for shipping to this zipcode.</p>
-                            <img src="<?php echo get_theme_file_uri('/images/per-product-state-zip.jpg'); ?>" alt="part of a screenshot showing four rows of per-product shipping date with four text boxes in each row. In the top row, the first text box says 'US,' the second text box says 'PA', the third box contains an asterisk, and the fourth box says '8.' In the second row from the tox, the first box says 'US,' the second box says 'OH,' the third box says '44111,' and the fourth box says '5.' In the third row from the top, the first box says 'US,' the second box says 'OH,' the third box contains an asterisk, and the fourth box says '7.' In the bottom row, the first box says 'US,' the second and third boxes both contain asterisks, and the fourth box says '10'." class="margin-auto-block yellow-rounded-border"/>
+                            <picture class="margin-auto-block yellow-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-state-zip.webp'); ?>" alt="part of a screenshot showing four rows of per-product shipping date with four text boxes in each row. In the top row, the first text box says 'US,' the second text box says 'PA', the third box contains an asterisk, and the fourth box says '8.' In the second row from the tox, the first box says 'US,' the second box says 'OH,' the third box says '44111,' and the fourth box says '5.' In the third row from the top, the first box says 'US,' the second box says 'OH,' the third box contains an asterisk, and the fourth box says '7.' In the bottom row, the first box says 'US,' the second and third boxes both contain asterisks, and the fourth box says '10'." >
+                                <img src="<?php echo get_theme_file_uri('/images/per-product-state-zip.jpg'); ?>" alt="part of a screenshot showing four rows of per-product shipping date with four text boxes in each row. In the top row, the first text box says 'US,' the second text box says 'PA', the third box contains an asterisk, and the fourth box says '8.' In the second row from the tox, the first box says 'US,' the second box says 'OH,' the third box says '44111,' and the fourth box says '5.' In the third row from the top, the first box says 'US,' the second box says 'OH,' the third box contains an asterisk, and the fourth box says '7.' In the bottom row, the first box says 'US,' the second and third boxes both contain asterisks, and the fourth box says '10'." />
+                            </picture>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="roadmap-img--bottom-left blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/per-product-multiple.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-multiple.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/per-product-multiple.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                </picture>
             </div>
         </div>
         <div class="roadmap-section">
@@ -123,7 +159,10 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-right purple-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/product-format.jpg'); ?>" alt="part of a screenshot showing the Product Types option checkboxes on the vendor dashboard."/>
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-format.webp'); ?>" alt="part of a screenshot showing the Product Types option checkboxes on the vendor dashboard." >
+                    <img src="<?php echo get_theme_file_uri('/images/product-format.jpg'); ?>" alt="part of a screenshot showing the Product Types option checkboxes on the vendor dashboard."/>
+                </picture>
             </div>
         </div>
         <div class="roadmap-section">
@@ -137,66 +176,105 @@
                     </div>
                 </div>
             </div>
-            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+            <picture>
+                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/street_triangle.webp'); ?>" aria-hidden="true" class="roadmap-img--bottom" >
+                <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+            </picture>
         </div>
         <span class="roadmap--blue-span" id="sellEbooksSpan">How to Sell E-Books</span>
         <div id="sellEbooksSection" class="roadmap-container hidden">
             <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
             <div class="roadmap-image--center yellow-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                </picture>
             </div>
             <p class="centered-text padding-x-20">Click the "Add File" button.</p>
             <div class="roadmap-image--center blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+                </picture>
             </div>
             <p class="centered-text padding-x-20">Click the upload icon and upload your e-book file (preferably in epub format.)</p>
             <div class="roadmap-image--center orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
+                </picture>
             </div>
         </div>
         <span class="roadmap--purple-span" id="sellAudiobooksSpan">How to Sell Audiobooks</span>
         <div id="sellAudiobooksSection" class="roadmap-container hidden">
         <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
             <div class="roadmap-image--center yellow-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                </picture>
             </div>
             <p class="centered-text padding-x-20">Click the "Add File" button.</p>
             <div class="roadmap-image--center blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+                </picture>
             </div>
             <p class="centered-text padding-x-20">Click the upload icon and upload your e-book file (preferably in epub format.)</p>
             <div class="roadmap-image--center orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" />
+                </picture>
             </div>
             <p class="centered-text padding-x-20">If you want to add a preview file, click the Add Media button in the Product Description section.</p>
             <div class="roadmap-image--center purple-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-media.jpg'); ?>" alt="part of a screenshot showing the Add Media button on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-media.webp'); ?>" alt="part of a screenshot showing the Add Media button on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/add-media.jpg'); ?>" alt="part of a screenshot showing the Add Media button on the vendor dashboard" />
+                </picture>
             </div>
         </div>
         <span class="roadmap--orange-span" id="sellPhysicalBooksSpan">How to Sell Physical Books</span>
         <div id="sellPhysicalBooksSection" class="roadmap-container hidden">
             <p class="centered-text padding-x-20">Check the "Manage Stock" checkbox on the Inventory tab, then enter a stock quantity.</p>
-            <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" class="margin-auto-block blue-rounded-border" />
+            <picture class="margin-auto-block blue-rounded-border">
+                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/stock.webp'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" >
+                <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
+            </picture>
         </div>
         <span class="roadmap--blue-span" id="sellDigitalZinesSpan">How to Sell Digital Zines</span>
         <div id="sellDigitalZinesSection" class="roadmap-container hidden">
             <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
             <div class="roadmap-image--center yellow-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                </picture>
             </div>
             <p class="centered-text padding-x-20">Click the "Add File" button.</p>
             <div class="roadmap-image--center blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+                </picture>
             </div>
             <p class="centered-text padding-x-20">Click the upload icon and upload your zine file.</p>
             <div class="roadmap-image--center orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
+                </picture>
             </div>
         </div>
         <span class="roadmap--purple-span" id="sellPhysicalZinesSpan">How to Sell Physical Zines</span>
         <div id="sellPhysicalZinesSection" class="roadmap-container hidden">
             <p class="centered-text padding-x-20">Check the "Manage Stock" checkbox on the Inventory tab, then enter a stock quantity.</p>
-            <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" class="margin-auto-block blue-rounded-border" />
+            <picture class="margin-auto-block blue-rounded-border">
+                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/stock.webp'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" >
+                <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
+            </picture>
         </div>
         <div class="roadmap-section">
             <div class="roadmap-section--bottom-last--wrap-0">
@@ -209,7 +287,10 @@
                     </div>
                 </div>
             </div>
-            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+            <picture>
+                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/street_triangle.webp'); ?>" aria-hidden="true" class="roadmap-img--bottom" >
+                <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+            </picture>
         </div>
         <div>
             <p class="right-text">
@@ -233,7 +314,10 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-right orange-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="part of a screenshot showing the Add Product option in the Product Manager drop down on the vendor dashboard."/>
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="part of a screenshot showing the Add Product option in the Product Manager drop down on the vendor dashboard." >
+                    <img src="<?php echo get_theme_file_uri('/images/add-product.jpg'); ?>" alt="part of a screenshot showing the Add Product option in the Product Manager drop down on the vendor dashboard."/>
+                </picture>
             </div>
         </div>
         <div class="roadmap-section">
@@ -248,7 +332,10 @@
                 </div>
             </div>
             <div class="roadmap-img--bottom-left purple-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/product-title.jpg'); ?>" alt="part of a screenshot showing the title field on the vendor dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-title.jpg'); ?>" alt="part of a screenshot showing the title field on the vendor dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/product-title.jpg'); ?>" alt="part of a screenshot showing the title field on the vendor dashboard" />
+                </picture>
             </div>
         </div>
         <div class="roadmap-section">
@@ -258,17 +345,29 @@
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Name Your Price</h2>
                             <p class="right-text-no-margin">Set your service's regular price and/or schedule a sale.</p>
-                            <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" class="margin-auto-block blue-rounded-border" />
+                            <picture class="margin-auto-block blue-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                            </picture>
                             <p class="right-text-no-margin">Next, go to the "Shipping" tab and check the box to enable per-product shipping cost.</p>
-                            <img src="<?php echo get_theme_file_uri('/images/per-product.jpg'); ?>" alt="part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." class="block yellow-rounded-border"/>
+                            <picture class="block yellow-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product.webp'); ?>" alt="part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." >
+                                <img src="<?php echo get_theme_file_uri('/images/per-product.jpg'); ?>" alt="part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." />
+                            </picture>
                             <p class="right-text-no-margin">Click the "Insert row" button. In the first text box, enter the abbreviation 'US.' In the second and third boxes, enter asterisks. In the fourth box, enter 0.</p>
-                            <img src="<?php echo get_theme_file_uri('/images/per-product-service.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 0." class="margin-auto-block purple-rounded-border"/>
+                            <picture class="margin-auto-block purple-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-service.webp'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 0." >
+                                <img src="<?php echo get_theme_file_uri('/images/per-product-service.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 0." />
+                            </picture>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="roadmap-img--bottom-right blue-rounded-rhombus">
-                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                </picture>
             </div>
         </div>
         <div class="roadmap-section">
@@ -278,14 +377,23 @@
                         <div class="roadmap-section--bottom-last">
                             <h2 class="left-text-no-margin">Select Virtual Product Type</h2>
                             <p class="left-text-no-margin">Check the box beside "Virtual (for services)" in the Product Type section.</p>
-                            <img src="<?php echo get_theme_file_uri('/images/product-type-virtual.jpg'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" class="yellow-rounded-border block" />
+                            <picture class="yellow-rounded-border block">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-virtual.webp'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/product-type-virtual.jpg'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" />
+                            </picture>
                             <p class="left-text-no-margin">At the bottom of the page, check the box beside Services.</p>
-                            <img src="<?php echo get_theme_file_uri('/images/product-categories-services.jpg'); ?>" alt="part of a screenshot showing the product categories checkboxes with 'services' checked on the vendor dashboard" class="blue-rounded-border margin-auto-block" />
+                            <picture class="blue-rounded-border margin-auto-block">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-categories-services.webp'); ?>" alt="part of a screenshot showing the product categories checkboxes with 'services' checked on the vendor dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/product-categories-services.jpg'); ?>" alt="part of a screenshot showing the product categories checkboxes with 'services' checked on the vendor dashboard" />
+                            </picture>
                         </div>
                     </div>
                 </div>
             </div>
-            <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+            <picture>
+                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/street_triangle.webp'); ?>" aria-hidden="true" class="roadmap-img--bottom" >
+                <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+            </picture>
         </div>
         <p class="right-text">That's it! Once published, your service will appear in our <a href="<?php echo esc_url(site_url('/services'));?>">directory</a>.</p>
     </div>
