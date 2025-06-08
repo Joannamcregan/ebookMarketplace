@@ -7,7 +7,7 @@
     cursor: pointer;
     display: block;
     margin: 40px auto 0px auto;
-    width: 90vw;
+    width: 85vw;
     text-align: center;
 }
 .roadmap--hollow-purple-span{
@@ -20,7 +20,7 @@
     cursor: pointer;
     display: block;
     margin: 40px auto 0px auto;
-    width: 90vw;
+    width: 85vw;
     text-align: center;
 }
 .roadmap--orange-span{
@@ -32,7 +32,7 @@
     cursor: pointer;
     display: block;
     margin: 40px auto 0px auto;
-    width: 90vw;
+    width: 85vw;
     text-align: center;
 }
 .roadmap--hollow-orange-span{
@@ -45,7 +45,7 @@
     cursor: pointer;
     display: block;
     margin: 40px auto 0px auto;
-    width: 90vw;
+    width: 85vw;
     text-align: center;
 }
 .roadmap--blue-span{
@@ -57,7 +57,7 @@
     cursor: pointer;
     display: block;
     margin: 40px auto 0px auto;
-    width: 90vw;
+    width: 85vw;
     text-align: center;
 }
 .roadmap--hollow-blue-span{
@@ -70,7 +70,7 @@
     cursor: pointer;
     display: block;
     margin: 40px auto 0px auto;
-    width: 90vw;
+    width: 85vw;
     text-align: center;
 }
 .roadmap-container{
@@ -240,15 +240,15 @@
 }
 @media screen and (max-width: 360px) {
     .yellow-rounded-border img, source{
-        width: 200px;
+        max-width: 200px;
     }
     .orange-rounded-border img, source{
-        width: 200px;
+        max-width: 200px;
     }
     .blue-rounded-border img, source{
-        width: 200px;
+        max-width: 200px;
     }
     .purple-rounded-border img, source{
-        width: 200px;
+        max-width: 200px;
     }
 }

@@ -183,98 +183,148 @@
         </div>
         <span class="roadmap--blue-span" id="sellEbooksSpan">How to Sell E-Books</span>
         <div id="sellEbooksSection" class="roadmap-container hidden">
-            <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
-            <div class="roadmap-image--center yellow-rounded-rhombus">
+            <div class="roadmap-section">
+                <div class="roadmap-section--bottom-last--wrap-0">
+                    <div class="roadmap-section--bottom-last--wrap-1">
+                        <div class="roadmap-section--bottom-last--wrap-2">
+                            <div class="roadmap-section--bottom-right">
+                                <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
+                                <picture class="block yellow-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                                </picture>
+                                <p class="centered-text padding-x-20">Click the "Add File" button.</p>
+                                <picture class="margin-auto-block blue-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+                                </picture>
+                                <p class="centered-text padding-x-20">Click the upload icon and upload your e-book file (preferably in epub format.)</p>
+                                <picture class="block orange-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
-                </picture>
-            </div>
-            <p class="centered-text padding-x-20">Click the "Add File" button.</p>
-            <div class="roadmap-image--center blue-rounded-rhombus">
-                <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
-                </picture>
-            </div>
-            <p class="centered-text padding-x-20">Click the upload icon and upload your e-book file (preferably in epub format.)</p>
-            <div class="roadmap-image--center orange-rounded-rhombus">
-                <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/street_triangle.webp'); ?>" aria-hidden="true" class="roadmap-img--bottom" >
+                    <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
                 </picture>
             </div>
         </div>
         <span class="roadmap--purple-span" id="sellAudiobooksSpan">How to Sell Audiobooks</span>
         <div id="sellAudiobooksSection" class="roadmap-container hidden">
-        <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
-            <div class="roadmap-image--center yellow-rounded-rhombus">
+            <div class="roadmap-section">
+                <div class="roadmap-section--bottom-last--wrap-0">
+                    <div class="roadmap-section--bottom-last--wrap-1">
+                        <div class="roadmap-section--bottom-last--wrap-2">
+                            <div class="roadmap-section--bottom-right">
+                                <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
+                                <picture class="block yellow-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                                </picture>
+                                <p class="centered-text padding-x-20">Click the "Add File" button.</p>
+                                <picture class="margin-auto-block blue-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+                                </picture>
+                                <p class="centered-text padding-x-20">Click the upload icon and upload your e-book file (preferably in epub format.)</p>
+                                <picture class="block orange-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" />
+                                </picture>
+                                <p class="centered-text padding-x-20">If you want to add a preview file, click the Add Media button in the Product Description section.</p>
+                                <picture class="margin-auto-block purple-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-media.webp'); ?>" alt="part of a screenshot showing the Add Media button on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/add-media.jpg'); ?>" alt="part of a screenshot showing the Add Media button on the vendor dashboard" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
-                </picture>
-            </div>
-            <p class="centered-text padding-x-20">Click the "Add File" button.</p>
-            <div class="roadmap-image--center blue-rounded-rhombus">
-                <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
-                </picture>
-            </div>
-            <p class="centered-text padding-x-20">Click the upload icon and upload your e-book file (preferably in epub format.)</p>
-            <div class="roadmap-image--center orange-rounded-rhombus">
-                <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" />
-                </picture>
-            </div>
-            <p class="centered-text padding-x-20">If you want to add a preview file, click the Add Media button in the Product Description section.</p>
-            <div class="roadmap-image--center purple-rounded-rhombus">
-                <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-media.webp'); ?>" alt="part of a screenshot showing the Add Media button on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/add-media.jpg'); ?>" alt="part of a screenshot showing the Add Media button on the vendor dashboard" />
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/street_triangle.webp'); ?>" aria-hidden="true" class="roadmap-img--bottom" >
+                    <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
                 </picture>
             </div>
         </div>
         <span class="roadmap--orange-span" id="sellPhysicalBooksSpan">How to Sell Physical Books</span>
         <div id="sellPhysicalBooksSection" class="roadmap-container hidden">
-            <p class="centered-text padding-x-20">Check the "Manage Stock" checkbox on the Inventory tab, then enter a stock quantity.</p>
-            <picture class="margin-auto-block blue-rounded-border">
-                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/stock.webp'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" >
-                <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
-            </picture>
+            <div class="roadmap-section">
+                <div class="roadmap-section--bottom-last--wrap-0">
+                    <div class="roadmap-section--bottom-last--wrap-1">
+                        <div class="roadmap-section--bottom-last--wrap-2">
+                            <div class="roadmap-section--bottom-right">
+                                <p class="centered-text padding-x-20">Check the "Manage Stock" checkbox on the Inventory tab, then enter a stock quantity.</p>
+                                <picture class="margin-auto-block blue-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/stock.webp'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/street_triangle.webp'); ?>" aria-hidden="true" class="roadmap-img--bottom" >
+                    <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+                </picture>
+            </div>
         </div>
         <span class="roadmap--blue-span" id="sellDigitalZinesSpan">How to Sell Digital Zines</span>
         <div id="sellDigitalZinesSection" class="roadmap-container hidden">
-            <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
-            <div class="roadmap-image--center yellow-rounded-rhombus">
+            <div class="roadmap-section">
+                <div class="roadmap-section--bottom-last--wrap-0">
+                    <div class="roadmap-section--bottom-last--wrap-1">
+                        <div class="roadmap-section--bottom-last--wrap-2">
+                            <div class="roadmap-section--bottom-right">
+                                <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
+                                <picture class="block yellow-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                                </picture>
+                                <p class="centered-text padding-x-20">Click the "Add File" button.</p>
+                                <picture class="margin-auto-block blue-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
+                                </picture>
+                                <p class="centered-text padding-x-20">Click the upload icon and upload your zine file.</p>
+                                <picture class="block orange-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
-                </picture>
-            </div>
-            <p class="centered-text padding-x-20">Click the "Add File" button.</p>
-            <div class="roadmap-image--center blue-rounded-rhombus">
-                <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
-                </picture>
-            </div>
-            <p class="centered-text padding-x-20">Click the upload icon and upload your zine file.</p>
-            <div class="roadmap-image--center orange-rounded-rhombus">
-                <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/street_triangle.webp'); ?>" aria-hidden="true" class="roadmap-img--bottom" >
+                    <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
                 </picture>
             </div>
         </div>
         <span class="roadmap--purple-span" id="sellPhysicalZinesSpan">How to Sell Physical Zines</span>
         <div id="sellPhysicalZinesSection" class="roadmap-container hidden">
-            <p class="centered-text padding-x-20">Check the "Manage Stock" checkbox on the Inventory tab, then enter a stock quantity.</p>
-            <picture class="margin-auto-block blue-rounded-border">
-                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/stock.webp'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" >
-                <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
-            </picture>
+            <div class="roadmap-section">
+                <div class="roadmap-section--bottom-last--wrap-0">
+                    <div class="roadmap-section--bottom-last--wrap-1">
+                        <div class="roadmap-section--bottom-last--wrap-2">
+                            <div class="roadmap-section--bottom-right">
+                                <p class="centered-text padding-x-20">Check the "Manage Stock" checkbox on the Inventory tab, then enter a stock quantity.</p>
+                                <picture class="margin-auto-block blue-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/stock.webp'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/street_triangle.webp'); ?>" aria-hidden="true" class="roadmap-img--bottom" >
+                    <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
+                </picture>
+            </div>
         </div>
         <div class="roadmap-section">
             <div class="roadmap-section--bottom-last--wrap-0">
