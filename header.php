@@ -6,7 +6,16 @@
     <meta property="og:image" content="<?php echo get_theme_file_uri('/images/screenshot.png'); ?>" />
     <meta name="twitter:image" content="<?php echo get_theme_file_uri('/images/screenshot.png'); ?>">
     <script src="https://kit.fontawesome.com/9d40013081.js" crossorigin="anonymous"></script>
-    <title><?php wp_title('|', true, 'right'); ?></title>
+    <title><?php
+            if (is_front_page()) {
+                echo 'Home | ';
+                bloginfo('name');
+            }
+            else {
+                wp_title(' | ', true, 'right');
+                bloginfo('name');
+            }
+        ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
