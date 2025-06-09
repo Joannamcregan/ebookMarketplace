@@ -731,3 +731,18 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 	}
 	add_action( 'wp_head', 'theme_slug_render_title' );
 }
+//meta tags-----------------------------------------------------------------------------------------------
+function tomc_custom_meta_tags() {
+    global $post;
+    if ($post->ID == 20){
+        echo '<meta name="description" content="We are making self-publishing better for authors, readers, and the planet through a platform cooperative. Join us!">';
+        echo '<meta name="keywords" content="self-publishing co-op, self-publishing platform co-op, self-publishing cooperative, cooperative self-publishing">';
+    } else if ($post->ID == 20){
+        echo '<meta name="description" content="Shop self-published books on a cooperatively-owned platform, where more of the money you spend goes to authors.">';
+        echo '<meta name="keywords" content="shop self-published books, where to buy self-published books, where to buy indie books">';
+    } else {
+        echo '<meta name="description" content="Join the self publishing (r)evolution and help redistribute resources from those who take to those who create.">';
+        echo '<meta name="keywords" content="self-publishing revolution, self-publishing evolution">';
+    }
+}
+add_action('wp_head', 'tomc_custom_meta_tags');
