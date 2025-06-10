@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>>
 <header class="header--top">
   <div class="top-nav-container">
-    <span class="site-header__menu-trigger" aria-label="menu" tabindex="-1">
+    <span class="site-header__menu-trigger" tabindex="-1">
       <!-- <i aria-label="close overlay"></i> -->
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="40" viewBox="0 0 40 40">
         <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAS9JREFUWEftVjsKwkAQfROwtPLTqRfQygt4ibRW4sWsxEt4AO0sxUJL0cZOMCOjbkxkA4sTwcAshG3mzee94W0If37oz/uDNahVyBg0BrUMaPHpDvJqVcPwwsCRgTghIvYlZ2YCFhHQIqzr7x0e7hIgZiJKippi5ghYRnmc1BxJPS8uLXDeb67Aw3bki163t0cAkkwGyA7hMHIXHcE5rItx9VJcwjxu9gYzCcg26GVMK9E3+Mo2eEmn5Zd0lJNQBH3vHHleoSKcJHbYAByDp43uYJ6T+HTYTL6R4xeYG7Bsd/rbXIO/KFRGTnvqtCyaUX8waEatXakgfNFLYkYdRB8AM+pQpkLiqvOS2B/1U08z6pC9VseYUWspNKPWMpjFV8eoy5y6zFzGoJZNY1DL4B0/K/Ypsaft3wAAAABJRU5ErkJggg==" x="0" y="0" width="30" height="40" alt="mobile menu icon" />

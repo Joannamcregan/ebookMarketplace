@@ -1326,17 +1326,6 @@ a {
 .menu-overlay-list a, .menu-overlay-list-1 a{
     color: #eee2d4;
 }
-.menu-overlay__close{
-    /* position: absolute;
-    top: 13px;
-    right: 16px; */
-    font-size: 2.1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    background-color: transparent;
-    color: #eee2d4;
-    line-height: 0.7;
-}
 .purple-width-fit-button{
     background-color: #4c0548;
     color: white;
@@ -1623,18 +1612,6 @@ a {
     background: transparent;
     border: solid transparent 2px;
   }
-
-.search-overlay__close{
-    position: absolute;
-    top: 13px;
-    right: 16px;
-    font-size: 2.1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    background-color: transparent;
-    color: #b41414;
-    line-height: 0.7;
-}
 
 .overlay-input-container{
     max-width: 1300px;
