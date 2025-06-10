@@ -1,33 +1,15 @@
-.icon::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-  }
-
-.fa-cart-shopping{
-    padding-right: 20px;
-    font-size: 24px;
-}
-.fa-search{
+.tomc-icon-span{
     padding-right: 10px;
-    font-size: 20px;
     cursor: pointer;
 }
-.fa-gear{
-    padding-right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-.fa-bars{
+.site-header__menu-trigger{
     padding-left: 20px;
-    padding-top: 10px;
-    font-size: 20px;
     visibility: hidden;
     cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {
-    .fa-bars{
+    .site-header__menu-trigger{
         visibility: visible;
         cursor: pointer;
         position: absolute;
@@ -50,4 +32,5 @@
 
 .spinningIcon {
     animation: spin 1s infinite;
+    transform-origin: center;
 }
