@@ -5,7 +5,6 @@
     <meta name = "viewport" content = "width=device-width", initial-scale=1>
     <meta property="og:image" content="<?php echo get_theme_file_uri('/images/screenshot.png'); ?>" />
     <meta name="twitter:image" content="<?php echo get_theme_file_uri('/images/screenshot.png'); ?>">
-    <script src="https://kit.fontawesome.com/9d40013081.js" crossorigin="anonymous"></script>
     <title><?php
             if (is_front_page()) {
                 echo 'Home | ';
