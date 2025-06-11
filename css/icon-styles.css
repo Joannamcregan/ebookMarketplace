@@ -1,6 +1,9 @@
 .tomc-icon-span{
-    padding-right: 10px;
+    padding-right: 7px;
     cursor: pointer;
+}
+.tomc-cart-icon{
+    margin-right: 20px;
 }
 .site-header__menu-trigger{
     padding-left: 20px;
@@ -32,6 +35,16 @@
         cursor: pointer;
         position: absolute;
         z-index: 1000;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .tomc-icon-span{
+    padding-right: 3px;
+    cursor: pointer;
+    }
+    .tomc-cart-icon{
+    margin-right: 10px;
     }
 }
 

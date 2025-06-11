@@ -1043,9 +1043,6 @@ a {
 .text-margin{
     margin: 0.25rem;
 }
-.glowing-text{
-    text-shadow: 0 0 10px #fff;
-}
 .nowrap{
     white-space: nowrap;
 }
