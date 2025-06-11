@@ -11,7 +11,7 @@
                 echo get_author_name() . ' is a part of our community.';
             }
             if (get_the_author_meta('user_url', get_the_author_id())) {
-                ?><p><a href="<?php echo get_the_author_meta('user_url', get_the_author_id()); ?>"><i class="fa-solid fa-link"></i><?php echo ' ' . get_author_name() . "'s link" ?></a></p>
+                ?><p><a href="<?php echo get_the_author_meta('user_url', get_the_author_id()); ?>"><?php echo ' ' . get_author_name() . "'s link" ?></a></p>
             <?php } ?>
         </div>
     </div>
