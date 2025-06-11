@@ -20,14 +20,12 @@
     font-size: 16px;
 } */
 
-.fa-caret-down{
-    color: #411919;
+#search-overlay__toggle-filters-section__down{
     margin-left: 20px;
     cursor: pointer;
 }
 
-.fa-caret-up{
-    color: #411919;
+#search-overlay__toggle-filters-section__up{
     margin-left: 20px;
     cursor: pointer;
 }
