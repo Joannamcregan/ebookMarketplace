@@ -1616,8 +1616,8 @@ a {
     margin: 80px auto 40px auto;
     padding: 0 auto 0 auto;
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     justify-content: center;
 }
 
