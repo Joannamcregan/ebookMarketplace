@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class SiteSearch {
+class Search {
     constructor() {
         this.resultsDiv = $("#search-overlay__results");
         this.openButton = $(".js-search-trigger");
@@ -15,7 +15,8 @@ class SiteSearch {
         this.filtersSection = $('#search-overlay__filters-section');
         this.triggersFilterOption = $('#search-overlay__filter-out-warnings');
         this.languagesFilterOption = $('#search-overlay__filter-languages');
-        this.filtersSectionToggle = $('#search-overlay__toggle-filters-section');
+        this.upArrow = $('#search-overlay__toggle-filters-section__up');
+        this.downArrow = $('#search-overlay__toggle-filters-section__down');
         this.events();
         this.isOverlayOpen = false;
         this.chosenWarnings = [];
@@ -31,39 +32,33 @@ class SiteSearch {
         this.rollResults.on('click', this.getResults.bind(this));
         this.triggersFilterOption.on('click', this.toggleTriggersOption.bind(this));
         this.languagesFilterOption.on('click', this.toggleLanguagesOption.bind(this));
-        this.filtersSectionToggle.on('click', this.toggleFiltersSection.bind(this));
+        this.upArrow.on('click', this.toggleFiltersSection.bind(this));
+        this.downArrow.on('click', this.toggleFiltersSection.bind(this));
     }
 
-    toggleFiltersSection(e) {
-        if ($(e.target).hasClass('fa-caret-down')) {
-            $(e.target).removeClass('fa-caret-down');
-            $(e.target).addClass('fa-caret-up');
-            this.filtersSection.removeClass('hidden');
-        } else {
-            $(e.target).removeClass('fa-caret-up');
-            $(e.target).addClass('fa-caret-down');
-            this.filtersSection.addClass('hidden');
-        }
+    toggleFiltersSection() {
+        this.upArrow.toggleClass('hidden');
+        this.downArrow.toggleClass('hidden');
+        this.filtersSection.toggleClass('hidden');
     }
 
     toggleTriggersOption(e){
         if (this.filterTriggers == false){
+            console.log('filter by triggers was false, now true');
             this.filterTriggers = true;
             this.triggersFilterOption.text("don't filter out triggering books");
             this.filtersSection.removeClass('hidden');
             this.triggersSection.removeClass('hidden');
-            this.filtersSectionToggle.removeClass('hidden');
-            this.filtersSectionToggle.addClass('inline');
+            this.upArrow.removeClass('hidden');
         } else {
             this.filterTriggers = false;
+            console.log('filter by triggers was true, now false');
             this.triggersFilterOption.text('filter out triggering books');
             this.triggersSection.addClass('hidden');
             $('.tomc-book-organization--option-span--trigger').removeClass('tomc-book-organization--option-selected');
             if (this.filterLanguages == false){
-                this.filtersSectionToggle.addClass('hidden');
-                this.filtersSectionToggle.removeClass('inline');
-                this.filtersSectionToggle.addClass('fa-caret-up');
-                this.filtersSectionToggle.removeClass('fa-caret-down');
+                this.upArrow.addClass('hidden');
+                this.downArrow.addClass('hidden');
                 this.filtersSection.addClass('hidden');
             }
         }
@@ -75,18 +70,15 @@ class SiteSearch {
             this.languagesFilterOption.text("don't filter books by language");
             this.filtersSection.removeClass('hidden');
             this.languagesSection.removeClass('hidden');
-            this.filtersSectionToggle.removeClass('hidden');
-            this.filtersSectionToggle.addClass('inline');
+            this.upArrow.removeClass('hidden');
         } else {
             this.filterLanguages = false;
             this.languagesFilterOption.text('filter books by language');
             this.languagesSection.addClass('hidden');
             $('.tomc-book-organization--option-span--language').removeClass('tomc-book-organization--option-selected');
             if (this.filterTriggers == false){
-                this.filtersSectionToggle.addClass('hidden');
-                this.filtersSectionToggle.removeClass('inline');
-                this.filtersSectionToggle.addClass('fa-caret-up');
-                this.filtersSectionToggle.removeClass('fa-caret-down');
+                this.upArrow.addClass('hidden');
+                this.downArrow.addClass('hidden');
                 this.filtersSection.addClass('hidden');
             }
         }
@@ -192,7 +184,7 @@ class SiteSearch {
     getResults(e) {
         let routeEnding;
         let routeData;
-        if ((this.chosenLanguages.length > 0) && (this.filterLanguages)){
+        if ((this.chosenLanguages.length > 0) || (this.filterLanguages == false)){
             routeEnding = 'search';
             routeData = {
                 'searchterm' : this.searchField.val().substring(0, 300),
@@ -208,9 +200,6 @@ class SiteSearch {
                 'hasTriggers' : this.chosenWarnings > 0 ? 'yes' : 'no'
             }
         }
-        // console.log(this.filterLanguages);
-        // console.log(this.chosenLanguages.length);
-        // console.log(routeEnding);
         if (this.searchField.val().length > 2){
             $(e.target).addClass('contracting');
             $('#tomc-search--no-search-term').addClass('hidden');
@@ -222,7 +211,6 @@ class SiteSearch {
                 type: 'GET',
                 data: routeData,
                 success: (response) => {
-                    // console.log(response);
                     $(e.target).removeClass('contracting');
                     let alreadyAddedBookIds = [];
                     let alreadyAddedProductIds = [];
@@ -254,11 +242,8 @@ class SiteSearch {
                                 let newDiv = $('<div />').addClass('tomc-search-result').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                 let newTitle = $('<h1 />').addClass('centered-text, small-heading').html(response[i]['title']);
                                 newDiv.append(newTitle);
-
-                                if (response[i]['pen_name'] != null){
-                                    let newAuthor = $('<p />').html('by ' + response[i]['pen_name']);
-                                    newDiv.append(newAuthor);
-                                }
+                                let newAuthor = $('<p />').html(response[i]['pen_name'].length > 0 ? 'by ' + response[i]['pen_name'] : 'by unknown or anonymous author');
+                                newDiv.append(newAuthor);
                                 let newBottomSection = $('<div />').addClass('tomc-browse--search-result-bottom-section');
                                 let newCoverDescription = $('<div />').addClass('tomc-search-result-cover-description');
                                 let newImage = $('<img />').attr('src', response[i]['product_image_id']).attr('alt', 'the cover for ' + response[i]['title']);
@@ -399,4 +384,4 @@ class SiteSearch {
     }
 }
 
-export default SiteSearch;
+export default Search;
