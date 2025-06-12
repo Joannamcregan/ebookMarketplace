@@ -111,7 +111,6 @@
                         <div class="roadmap-section--bottom-right">
                         <h2 class="left-text-no-margin">Name Your Price</h2>
                             <p class="left-text-no-margin">Use the "General" tab to set your book’s regular price and/or schedule a sale.</p>
-                            <p class="left-text-no-margin"><strong>Note: </strong> remember to factor shipping cost into your product price if selling a physical product.</p>
                         </div>
                     </div>
                 </div>
