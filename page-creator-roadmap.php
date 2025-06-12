@@ -111,39 +111,15 @@
                         <div class="roadmap-section--bottom-right">
                         <h2 class="left-text-no-margin">Name Your Price</h2>
                             <p class="left-text-no-margin">Use the "General" tab to set your book’s regular price and/or schedule a sale.</p>
-                            <picture class="margin-auto-block blue-rounded-border">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
-                                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
-                            </picture>
-                            <p class="left-text-no-margin">Next, go to the "Shipping" tab and check the box to enable per-product shipping cost.</p>
-                            <picture class="block yellow-rounded-border">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product.webp'); ?>" alt="Part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." >
-                                <img src="<?php echo get_theme_file_uri('/images/per-product.jpg'); ?>" alt="Part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." />
-                            </picture>
-                            <p class="left-text-no-margin">Click the "Insert row" button to add a default shipping rule that will apply to the whole Unites States. Enter the abbreviation 'US' into the first box. Enter '*'' into the next two boxes. In the fourth box, enter the default amount you would like to charge for US shipping.</p>
-                            <p class="left-text-no-margin"><strong>Note: for ebooks, audiobooks, and digital zines, enter 0 in the fourth box.</strong> </p>
-                            <picture class="margin-auto-block purple-rounded-border">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-default.webp'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 10." >
-                                <img src="<?php echo get_theme_file_uri('/images/per-product-default.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 10." />
-                            </picture>
-                            <p class="left-text-no-margin">To set a different shipping cost for a particular state, insert another row. Enter 'US' in the first box and the two letter abbreviation for the state in the second box. Put a * in the third box and in the fourth box put the default shipping amount for the state.</p>
-                            <picture class="block orange-rounded-border">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-state.webp'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by a text box containing the abbreviation 'OH'. A third text box contains an asterisk and a fourth text box containing 7." >
-                                <img src="<?php echo get_theme_file_uri('/images/per-product-state.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by a text box containing the abbreviation 'OH'. A third text box contains an asterisk and a fourth text box containing 7." />
-                            </picture>
-                            <p class="left-text-no-margin">To set a different shipping cost for a particular zipcode within a state, insert a row with 'US' in the first box, the state's abbreviation in the second box, and the zipcode in the third box. In the fourth box put the amount you would like to charge for shipping to this zipcode.</p>
-                            <picture class="margin-auto-block yellow-rounded-border">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-state-zip.webp'); ?>" alt="part of a screenshot showing four rows of per-product shipping date with four text boxes in each row. In the top row, the first text box says 'US,' the second text box says 'PA', the third box contains an asterisk, and the fourth box says '8.' In the second row from the tox, the first box says 'US,' the second box says 'OH,' the third box says '44111,' and the fourth box says '5.' In the third row from the top, the first box says 'US,' the second box says 'OH,' the third box contains an asterisk, and the fourth box says '7.' In the bottom row, the first box says 'US,' the second and third boxes both contain asterisks, and the fourth box says '10'." >
-                                <img src="<?php echo get_theme_file_uri('/images/per-product-state-zip.jpg'); ?>" alt="part of a screenshot showing four rows of per-product shipping date with four text boxes in each row. In the top row, the first text box says 'US,' the second text box says 'PA', the third box contains an asterisk, and the fourth box says '8.' In the second row from the tox, the first box says 'US,' the second box says 'OH,' the third box says '44111,' and the fourth box says '5.' In the third row from the top, the first box says 'US,' the second box says 'OH,' the third box contains an asterisk, and the fourth box says '7.' In the bottom row, the first box says 'US,' the second and third boxes both contain asterisks, and the fourth box says '10'." />
-                            </picture>
+                            <p class="left-text-no-margin"><strong>Note: </strong> remember to factor shipping cost into your product price if selling a physical product.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="roadmap-img--bottom-left blue-rounded-rhombus">
-                <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-multiple.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/per-product-multiple.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                <picture class="margin-auto-block blue-rounded-border">
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
                 </picture>
             </div>
         </div>
@@ -395,20 +371,6 @@
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Name Your Price</h2>
                             <p class="right-text-no-margin">Set your service's regular price and/or schedule a sale.</p>
-                            <picture class="margin-auto-block blue-rounded-border">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
-                                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
-                            </picture>
-                            <p class="right-text-no-margin">Next, go to the "Shipping" tab and check the box to enable per-product shipping cost.</p>
-                            <picture class="block yellow-rounded-border">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product.webp'); ?>" alt="part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." >
-                                <img src="<?php echo get_theme_file_uri('/images/per-product.jpg'); ?>" alt="part of a screenshot showing a checked checkbox with the words 'Enable per-product shipping cost'." />
-                            </picture>
-                            <p class="right-text-no-margin">Click the "Insert row" button. In the first text box, enter the abbreviation 'US.' In the second and third boxes, enter asterisks. In the fourth box, enter 0.</p>
-                            <picture class="margin-auto-block purple-rounded-border">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/per-product-service.webp'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 0." >
-                                <img src="<?php echo get_theme_file_uri('/images/per-product-service.jpg'); ?>" alt="part of a screenshot showing a text box containing the abbreviation 'US', followed by two text boxes containing asterisks and a fourth text box containing 0." />
-                            </picture>
                         </div>
                     </div>
                 </div>
