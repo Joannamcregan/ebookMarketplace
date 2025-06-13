@@ -1047,7 +1047,7 @@ a {
     white-space: nowrap;
 }
 .block{
-    display: block;
+    display: block !important;
 }
 .flex{
     display: flex !important;
