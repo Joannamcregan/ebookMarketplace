@@ -2,12 +2,16 @@
 @font-face {
     font-family: "tankindred";
     src: url("../fonts/TAN-KINDRED.woff") format('woff');
-  }
+}
+@font-face {
+    font-family: "nunito-sans";
+    src: url("../fonts/NunitoSans-Regular.ttf") format('truetype');
+}
 /*body---------------------------------------------------------------------------------*/
 body{
     background: #eee2d4 !important;
     /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-    font-family: Nunito Sans, sans-serif;
+    font-family: nunito-sans, sans-serif;
     /* font-family: Urbanist, sans-serif; */
     /* padding-top: 0.5rem; */
     font-size: 16;
@@ -66,12 +70,14 @@ header a:hover{
 .header--main a{
     color: #eee2d4 !important;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: nunito-sans, sans-serif;
 }
 .header--sub a{
     color: #eee2d4 !important;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: nunito-sans, sans-serif;
 }
 .product-section .button{
     margin: 10px auto;
@@ -105,7 +111,8 @@ img{
     margin-left: 20px;
 }
 .detail-text{
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: nunito-sans, sans-serif;
     font-size: 16;
     color: #ecd0b1 ;
 }
@@ -199,7 +206,8 @@ img{
     background: #893e43;
     color: #eee2d4;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: nunito-sans, sans-serif;
     padding: 20px;
     margin: 3em -5px -100px -5px;
     position: relative;
@@ -864,7 +872,7 @@ span.bbp-admin-links a{
     font-family: 'tahoma', sans-serif;
 } */
 h1, h2, h3{
-    font-family: Nunito Sans, sans-serif;
+    font-family: nunito-sans, sans-serif;
 }
 /* h1, h2, h3{
     font-family: Urbanist, sans-serif;
@@ -956,7 +964,8 @@ a {
     color: #0c698e;
     text-shadow: 1px 1px white, 3px 5px #f4b10e;
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: nunito-sans, sans-serif;
     line-height: 100%;
 }
 .special-display-text-small-sans{
@@ -964,7 +973,8 @@ a {
     color: #0c698e;
     text-shadow: 1px 1px white, 3px 5px #f4b10e;
     font-weight: 700;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: nunito-sans, sans-serif;
     line-height: 100%;
 }
 .georgia-text{
@@ -974,7 +984,8 @@ a {
     font-family: tankindred, serif;
 }
 .sans-text{
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: nunito-sans, sans-serif;
 }
 .light-text{
     color: #eee2d4;
@@ -993,11 +1004,13 @@ a {
     width: fit-content;
 }
 .extra-large-text{
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: nunito-sans, sans-serif;
     font-size: 4rem;
 }
 .large-text{
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: nunito-sans, sans-serif;
     font-size: 24;
 }
 .small-text{
