@@ -1,3 +1,25 @@
+
+.tomc-road-text{
+    background: #333;
+    color: white;
+}
+.tomc-road-text--top{
+    border-bottom: solid 5px #f7c340;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 4px;
+}
+.tomc-road-text--top p{
+    margin-bottom: 2px;
+}
+.tomc-road-text--bottom{
+    border-top: solid 5px #f7c340;
+    padding-bottom: 5px;
+    margin-top: 4px;
+}
+.tomc-road-text--bottom p{
+    margin-top: 2px;
+}
 .roadmap--purple-span{
     background-color: #4c0548;
     color: white;
