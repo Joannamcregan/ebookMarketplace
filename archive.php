@@ -5,7 +5,7 @@
     ?><div class="two-thirds-screen">
         <?php while(have_posts()){
             the_post(); ?>
-                <div class="page-accent-alt">                    
+                <div class="margin-x-20">                    
                     <div class="archive-item">
                         <h2><a class="gray-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <?php the_excerpt(); ?>

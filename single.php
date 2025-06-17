@@ -18,7 +18,7 @@
     <div class="right-text by-line">
         <a href="<?php echo esc_url(site_url('/blog'));?>">See all blog posts</a>
     </div>
-    <div class="page-accent-alt-2">
+    <div class="margin-x-20">
         <h2 class="centered-text">Comments</h2>
         <?php get_template_part('template-parts/comments'); ?>
     </div>
