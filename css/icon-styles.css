@@ -11,9 +11,6 @@
     cursor: pointer;
 }
 .menu-overlay__close{
-    /* position: absolute;
-    top: 13px;
-    right: 16px; */
     font-size: 2.1rem;
     cursor: pointer;
     transition: all 0.3s;
@@ -37,7 +34,6 @@
         z-index: 1000;
     }
 }
-
 @media screen and (max-width: 350px) {
     .tomc-icon-span{
     padding-right: 3px;
@@ -47,28 +43,23 @@
     margin-right: 10px;
     }
 }
-
 #search-overlay__toggle-filters-section__up{
     cursor: pointer;
     margin: 0 10px;
     width: 15px;
     height: auto;
 }
-
 #search-overlay__toggle-filters-section__down{
     cursor: pointer;
     margin: 0 10px;
     width: 15px;
     height: auto;
 }
-
 /* spinning icons----------------------------------------------------------------------- */
-
 @keyframes spin {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
-
 .spinningIcon {
     animation: spin 1s infinite;
     transform-origin: center;
