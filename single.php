@@ -7,7 +7,7 @@
         ?><div class="right-text by-line">
             <span>Posted by <?php echo get_the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?></span>
         </div>
-        <div class="blog-title">
+        <div class="padding-x-20">
             <h1><?php the_title(); ?></h1>
         </div>
         <div class="generic-content">
@@ -18,7 +18,7 @@
     <div class="right-text by-line">
         <a href="<?php echo esc_url(site_url('/blog'));?>">See all blog posts</a>
     </div>
-    <div class="margin-x-20">
+    <div class="padding-x-20">
         <h2 class="centered-text">Comments</h2>
         <?php get_template_part('template-parts/comments'); ?>
     </div>

@@ -28,7 +28,7 @@
     $contributorCurations = get_posts($args);
 
     if ($contributorCurations) {
-        ?><div class="margin-x-20">
+        ?><div class="padding-x-20">
             <h3 class="centered-text">Bookshelves Curated by <?php echo get_author_name() ?></h3>
             <?php foreach ($contributorCurations as $curation) {
                 ?><div class="contributor-curation">

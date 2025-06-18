@@ -15,7 +15,7 @@
         $result = new WP_Query( $args );
         if ( $result-> have_posts() ) : ?>
         <?php while ( $result->have_posts() ) : $result->the_post(); ?>
-        <div class="genre-category subcategory page-accent-alt-1">
+        <div class="genre-category subcategory padding-x-20">
             <a href='<?php echo get_the_permalink(); ?>'>
             <?php the_title(); ?>  
             </a> 
