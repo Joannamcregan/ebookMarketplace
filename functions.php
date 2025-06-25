@@ -763,8 +763,6 @@ function filter_cart_needs_shipping_callback( $needs_shipping ){
         } else if ( str_contains(wc_get_product_category_list($product->get_id()), 'Services') ) {
             $needs_shipping = false;
             break;
-        } else {
-            echo wc_get_product_category_list($product->get_id());
         }
     }
     return $needs_shipping;
