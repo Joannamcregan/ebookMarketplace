@@ -746,3 +746,24 @@ function tomc_custom_meta_tags() {
     }
 }
 add_action('wp_head', 'tomc_custom_meta_tags');
+//don't require shipping for digital products----------------------------------------------------------------------
+add_filter( 'woocommerce_cart_needs_shipping', 'filter_cart_needs_shipping_callback' );
+function filter_cart_needs_shipping_callback( $needs_shipping ){
+    foreach ( WC()->cart->get_cart() as $item ) {
+        $product = $item['data'];
+        if ( str_contains(wc_get_product_category_list($product->get_id()), 'E-Books') ) {
+            $needs_shipping = false;
+            break;
+        } else if ( str_contains(wc_get_product_category_list($product->get_id()), 'Audiobooks') ) {
+            $needs_shipping = false;
+            break;
+        } else if ( str_contains(wc_get_product_category_list($product->get_id()), 'Digital Zines') ) {
+            $needs_shipping = false;
+            break;
+        } else if ( str_contains(wc_get_product_category_list($product->get_id()), 'Services') ) {
+            $needs_shipping = false;
+            break;
+        }
+    }
+    return $needs_shipping;
+}
