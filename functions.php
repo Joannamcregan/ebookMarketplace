@@ -747,22 +747,20 @@ function tomc_custom_meta_tags() {
 }
 add_action('wp_head', 'tomc_custom_meta_tags');
 //don't require shipping for digital products----------------------------------------------------------------------
-add_filter( 'woocommerce_cart_needs_shipping', 'filter_cart_needs_shipping_callback' );
-function filter_cart_needs_shipping_callback( $needs_shipping ){
+// add_filter( 'woocommerce_product_needs_shipping', 'filter_product_needs_shipping_callback' );
+//note: instead, filter function to apply same logic that excludes virtual products from requiring shipping to digital products as well
+function filter_product_needs_shipping_callback( $needs_shipping ){
+    
     foreach ( WC()->cart->get_cart() as $item ) {
         $product = $item['data'];
-        if ( str_contains(wc_get_product_category_list($product->get_id()), 'E-Books') ) {
+        if ( str_contains(wc_get_product_category_list($product->get_id()), 'Hardcover Books') ) {
+            $needs_shipping = true;
+        } else if ( str_contains(wc_get_product_category_list($product->get_id()), 'Paperback Books') ) {
+            $needs_shipping = true;
+        } else if ( str_contains(wc_get_product_category_list($product->get_id()), 'Physical Zines') ) {
+            $needs_shipping = true;
+        } else {
             $needs_shipping = false;
-            break;
-        } else if ( str_contains(wc_get_product_category_list($product->get_id()), 'Audiobooks') ) {
-            $needs_shipping = false;
-            break;
-        } else if ( str_contains(wc_get_product_category_list($product->get_id()), 'Digital Zines') ) {
-            $needs_shipping = false;
-            break;
-        } else if ( str_contains(wc_get_product_category_list($product->get_id()), 'Services') ) {
-            $needs_shipping = false;
-            break;
         }
     }
     return $needs_shipping;
