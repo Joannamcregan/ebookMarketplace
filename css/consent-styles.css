@@ -1,0 +1,20 @@
+#gdpr-cookie-consent-bar{
+    background: #4c0548 !important;
+}
+#gdpr-cookie-consent-bar a{
+    color: white !important;
+    text-decoration: underline !important;
+}
+#cookie_action_reject, #cookie_action_settings{
+    background: none !important;
+}
+#cookie_action_accept_all{
+    background: #0c6980 !important;
+    border: solid #0c6980 3px !important;
+}
+#cookie-banner-cancle-img{
+    color: white !important;
+}
+#gdpr-cookie-consent-bar .powered-by-credits{
+    display: none !important;
+}

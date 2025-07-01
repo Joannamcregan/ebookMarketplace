@@ -36,6 +36,7 @@ function marketplace_files(){
     wp_enqueue_style('animation-styles', get_stylesheet_directory_uri() . '/css/animation-styles.css', false, '', 'all');
     wp_enqueue_style('search-styles', get_stylesheet_directory_uri() . '/css/search-styles.css', false, '', 'all');
     wp_enqueue_style('roadmap-styles', get_stylesheet_directory_uri() . '/css/roadmap-styles.css', false, '', 'all');
+    wp_enqueue_style('consent-styles', get_stylesheet_directory_uri() . '/css/consent-styles.css', false, '', 'all');
 
     wp_localize_script('main-ebook-marketplace-js', 'marketplaceData', array(
         'root_url' => get_site_url(),        
