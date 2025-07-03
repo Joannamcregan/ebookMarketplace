@@ -1,20 +1,17 @@
-#gdpr-cookie-consent-bar{
-    background: #4c0548 !important;
-}
-#gdpr-cookie-consent-bar a{
-    color: white !important;
-    text-decoration: underline !important;
-}
-#cookie_action_reject, #cookie_action_settings{
+#gdpr-cookie-consent-show-again{
+    position: relative !important;
+    bottom: -30px !important;
+    right: 0px !important;
     background: none !important;
+    box-shadow: none !important;
+    font-size: 16 !important;
+    color: #eee2d4 !important;
+    margin: 0px !important;    
+    padding-bottom: 0px !important;
 }
-#cookie_action_accept_all{
-    background: #0c6980 !important;
-    border: solid #0c6980 3px !important;
+#gdpr-cookie-consent-show-again span{
+    margin: 40px 20px 0px 35px !important;
 }
 #cookie-banner-cancle-img{
     color: white !important;
-}
-#gdpr-cookie-consent-bar .powered-by-credits{
-    display: none !important;
 }
