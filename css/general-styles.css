@@ -247,7 +247,7 @@ img{
 }
 #gdpr-cookie-consent-show-again{
     position: relative !important;
-    bottom: -30px !important;
+    bottom: -20px !important;
     right: 0px !important;
     background: none !important;
     box-shadow: none !important;
@@ -274,7 +274,7 @@ img{
         padding: 0px !important;
     }
     #gdpr-cookie-consent-show-again span{
-        margin: 0px !important;
+        margin: 30px 0px 0px 35px !important;
     }
 }
 /*special sections-----------------------------------------------------------------------*/
