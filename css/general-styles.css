@@ -262,6 +262,12 @@ img{
 #cookie-banner-cancle-img{
     color: white !important;
 }
+.gdprmodal-header button.close{
+    color: #eee2d4 !important;
+}
+.toggle-group .always-active{
+    color: #eee2d4 !important;
+}
 @media screen and (max-width: 480px){
     .footer--main{
         padding: 30px 5px 40px 5px;
