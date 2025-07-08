@@ -268,6 +268,20 @@ img{
 .toggle-group .always-active{
     color: #eee2d4 !important;
 }
+#gdpr-cookie-consent-bar h3{
+    font-size: 18 !important;
+}
+.gdpr span{
+    display: none !important;
+}
+.gdpr a{
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+.ccpa a{
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
 @media screen and (max-width: 480px){
     .footer--main{
         padding: 30px 5px 40px 5px;
