@@ -245,6 +245,9 @@ img{
     display: block;
     /* margin: 10px; */
 }
+#gdpr-cookie-consent-bar{
+    background: transparent !important;
+}
 #gdpr-cookie-consent-show-again{
     position: relative !important;
     bottom: -20px !important;
