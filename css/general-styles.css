@@ -247,6 +247,7 @@ img{
 }
 #gdpr-cookie-consent-bar{
     background: transparent !important;
+    box-shadow: none !important;
 }
 #gdpr-cookie-consent-show-again{
     position: relative !important;
@@ -264,7 +265,11 @@ img{
     margin: 40px 20px 0px 35px !important;
 }
 #cookie-banner-cancle-img{
-    color: white !important;
+    color: #eee2d4 !important;
+    text-align: right !important;
+}
+#cookie-banner-cancle-img svg{
+    display: none !important;
 }
 .gdprmodal-header button.close{
     color: #eee2d4 !important;
