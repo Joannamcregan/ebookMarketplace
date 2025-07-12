@@ -258,6 +258,7 @@ img{
     color: #eee2d4 !important;
     margin: 0px !important;    
     padding-bottom: 0px !important;
+    box-shadow: none !important;
 }
 #gdpr-cookie-consent-show-again span{
     margin: 40px 20px 0px 35px !important;
