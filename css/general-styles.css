@@ -249,8 +249,10 @@ img{
     background: transparent !important;
     box-shadow: none !important;
 }
-#gdpr-cookie-consent-bar .gdpr-notice-content-body{
+#gdpr-cookie-consent-bar .gdpr-notice-content-body p{
     text-align: right !important;
+    text-decoration: none !important;
+    color: #eee2d4 !important;
 }
 #gdpr-cookie-consent-show-again{
     position: relative !important;
