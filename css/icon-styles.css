@@ -26,6 +26,28 @@
     background-color: transparent;
     line-height: 0.7;
 }
+.values-overlay__close{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    cursor: pointer;
+    background-color: #893e43;
+    border: solid #4c0548 5px;
+    line-height: 0.7;
+    border-radius: 20px;
+    padding: 5px;
+    opacity: 0;
+    animation: reveal 2s forwards;
+    animation-delay: 10s;
+}
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 @media screen and (max-width: 960px) {
     .site-header__menu-trigger{
         visibility: visible;
