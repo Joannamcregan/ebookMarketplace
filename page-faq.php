@@ -57,7 +57,7 @@
             <div class="tomc-faq-section">
                 <h2>What kind of books can I sell/buy?</h2>
                 <div class="tomc-faq-a hidden">
-                    <p>Right now, we are equipped to sell ebooks and audiobooks. As opportunities present, we will work with small, sustainable presses to print books both on demand and in bulk to provide such services for registered users. Creators are more than welcome to offer physical books/cds/cassettes for sale on the TOMC platform; however, physical works are the responsibility of the creator - that means printing, inventory and shipping are the creator's responsibility.</p>
+                    <p>Right now, we are equipped to sell ebooks and audiobooks. As opportunities present, we will work with small, sustainable presses to print books both on demand and in bulk to provide such services for registered users. We've decided to hold off on enabling physical product shipping for now, and <a href="<?php echo esc_url(site_url('/on-shipping-capability'));?>">this blog post</a> explains why.</p>
                 </div>
             </div>
             <div class="tomc-faq-section">
