@@ -28,8 +28,8 @@
 }
 .values-overlay__close{
     position: absolute;
-    top: -20px;
-    right: -20px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
     background-color: #893e43;
     border: solid #4c0548 5px;
@@ -39,6 +39,7 @@
     opacity: 0;
     animation: reveal 2s forwards;
     animation-delay: 10s;
+    z-index: 3000;
 }
 @keyframes reveal {
     0% {
