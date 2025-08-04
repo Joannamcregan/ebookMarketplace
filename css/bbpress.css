@@ -180,47 +180,9 @@ textarea.bbp-the-content{
     border-bottom: solid #4c0548 2px !important;
     border-right: solid #4c0548 2px !important;
 }
-div.bbp-breadcrumb{
-    display: none !important;
-}
-span#subscription-toggle{
-    display: none !important;
-}
-span#favorite-toggle{
-    display: none !important;
-}
-span.bbp-admin-links{
-    display: block !important;
-}
-#bbpress-forums fieldset.bbp-form{
-    border: none !important;
-    width: 100%;
-    padding: 0px !important;
-    margin: 0px !important;
-}
-.bbp-pagination{
-    width: 95% !important;
-}
-#bbpress-forums div.bbp-topic-tags{
-    font-size: 14px !important;
-}
-#bbpress-forums li.bbp-header, #bbpress-forums li.bbp-footer{
-    display: none !important;
-}
-#bbpress-forums div.bbp-reply-header{
-    background-color: #faefe3 !important;
-    font-size: 14px !important;
-}
-#bbpress-forums div.even{
-    background: none !important
-}
-span.bbp-admin-links a{
-    color: #893e43;
-    font-size: 12px !important;
-}
 #bbpress-forums ul.bbp-replies{
 	font-size: 14px !important;
-    border: solid #e44e2d 5px;
+    /* max-width: 90% !important; */
 }
 #item-header-content{
     padding-top: 20px !important;

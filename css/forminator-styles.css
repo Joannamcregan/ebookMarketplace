@@ -7,7 +7,6 @@
 }
 .forminator-button{
     background: #0c698e !important;
-    color: white !important;
     border-radius: 25px !important;
     display: block !important;
     margin: 20px auto !important;
@@ -15,17 +14,4 @@
 .forminator-description{
     color: black !important;
     font-size: 14px !important;
-}
-
-#forminator-module-5381{
-    max-width: 500px;
-    min-width: 300px;
-    margin: 100px auto 40px auto !important;
-}
-
-.ui-datepicker{
-    background: white !important;
-}
-#ui-datepicker-div{
-    background-color: white !important;
 }
