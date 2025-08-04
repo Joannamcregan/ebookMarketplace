@@ -1,12 +1,3 @@
-.tomc-blue-purple-tie-dye{
-    background: radial-gradient(circle at 120% 50%, transparent 20%, #71abb7 31%,
-    #71abb7 25%, transparent 35%, transparent),
-    radial-gradient(circle at 100% 50%, transparent 20%, #71abb7 31%,
-    #71abb7 5%, transparent 99%, transparent);
-    background-color: #8d698b;
-    background-size: 150px 50px;
-    margin-bottom: -50px;
-}
 #tomc-isbn-unfiled-records-section{
     padding-bottom: 50px;
 }

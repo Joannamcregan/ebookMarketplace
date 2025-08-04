@@ -1,53 +1,89 @@
-.icon::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-  }
-
-.fa-cart-shopping{
-    padding-right: 20px;
-    font-size: 24px;
-}
-.fa-search{
-    padding-right: 10px;
-    font-size: 20px;
+.tomc-icon-span{
+    padding-right: 7px;
     cursor: pointer;
 }
-.fa-gear{
-    padding-right: 10px;
-    font-size: 20px;
-    cursor: pointer;
+.tomc-cart-icon{
+    margin-right: 20px;
 }
-.fa-bars{
+.site-header__menu-trigger{
     padding-left: 20px;
-    padding-top: 10px;
-    font-size: 20px;
     visibility: hidden;
     cursor: pointer;
 }
-
+.menu-overlay__close{
+    font-size: 2.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: transparent;
+    line-height: 0.7;
+}
+.search-overlay__close{
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: transparent;
+    line-height: 0.7;
+}
+.values-overlay__close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #893e43;
+    border: solid #4c0548 5px;
+    line-height: 0.7;
+    border-radius: 20px;
+    padding: 5px;
+    opacity: 0;
+    animation: reveal 2s forwards;
+    animation-delay: 10s;
+    z-index: 3000;
+}
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 @media screen and (max-width: 960px) {
-    .fa-bars{
+    .site-header__menu-trigger{
         visibility: visible;
         cursor: pointer;
         position: absolute;
         z-index: 1000;
     }
 }
-
-#search-overlay__toggle-filters-section{
-    font-size: 20px;
+@media screen and (max-width: 350px) {
+    .tomc-icon-span{
+    padding-right: 3px;
     cursor: pointer;
-    margin: 0 20px;
+    }
+    .tomc-cart-icon{
+    margin-right: 10px;
+    }
 }
-
+#search-overlay__toggle-filters-section__up{
+    cursor: pointer;
+    margin: 0 10px;
+    width: 15px;
+    height: auto;
+}
+#search-overlay__toggle-filters-section__down{
+    cursor: pointer;
+    margin: 0 10px;
+    width: 15px;
+    height: auto;
+}
 /* spinning icons----------------------------------------------------------------------- */
-
 @keyframes spin {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
-
 .spinningIcon {
     animation: spin 1s infinite;
+    transform-origin: center;
 }
