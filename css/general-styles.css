@@ -200,7 +200,7 @@ img{
 }
 #footer-logo{
     position: absolute;
-    top: 100px;
+    top: 140px;
     right: 20px;
     width: 100px;
     border-radius: 20px;
@@ -225,7 +225,7 @@ img{
     border: solid #ecd0b1 2px;
     border-radius: 10px;
     position: absolute;
-    top: 60px;
+    top: 40px;
     right: 25px;
     width: fit-content;
     padding: 5px;
@@ -246,7 +246,8 @@ img{
     /* margin: 10px; */
 }
 #gdpr-cookie-consent-bar{
-    background: #893e43 !important;
+    /* background: #893e43 !important; */
+    background: transparent !important;
     box-shadow: none !important;
     z-index: 1002 !important;
 }
