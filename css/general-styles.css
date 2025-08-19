@@ -225,7 +225,7 @@ img{
     border: solid #ecd0b1 2px;
     border-radius: 10px;
     position: absolute;
-    top: 100px;
+    top: 110px;
     right: 25px;
     width: fit-content;
     padding: 5px;
@@ -250,6 +250,9 @@ img{
     background: transparent !important;
     box-shadow: none !important;
     z-index: 1002 !important;
+}
+#gdpr-cookie-consent-bar div.row_spaced{
+    background: #893e43 !important;
 }
 /* #gdpr-cookie-consent-bar.gdpr-banner{
     z-index: 1002;
@@ -280,8 +283,9 @@ img{
     margin: 40px 20px 0px 35px !important;
 }
 #cookie-banner-cancle-img{
-    color: #eee2d4 !important;
-    text-align: right !important;
+    /* color: #eee2d4 !important;
+    text-align: right !important; */
+    display: none !important;
 }
 #cookie-banner-cancle-img svg{
     display: none !important;
