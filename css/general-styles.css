@@ -246,9 +246,8 @@ img{
     /* margin: 10px; */
 }
 #gdpr-cookie-consent-bar{
-    /* background: #893e43 !important; */
     background: transparent !important;
-    border: solid #e44e2d 10px;
+    border: solid #e44e2d 10px !important;
     box-shadow: none !important;
     z-index: 1002 !important;
     gap: 0px !important;
@@ -286,6 +285,7 @@ img{
     padding-bottom: 0px !important;
     box-shadow: none !important;
     display: block !important;
+    z-index: 999 !important;
 }
 #gdpr-cookie-consent-show-again span{
     margin: 40px 20px 0px 35px !important;
