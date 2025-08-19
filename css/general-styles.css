@@ -225,7 +225,7 @@ img{
     border: solid #ecd0b1 2px;
     border-radius: 10px;
     position: absolute;
-    top: 80px;
+    top: 100px;
     right: 25px;
     width: fit-content;
     padding: 5px;
@@ -246,8 +246,8 @@ img{
     /* margin: 10px; */
 }
 #gdpr-cookie-consent-bar{
-    background: #893e43 !important;
-    /* background: transparent !important; */
+    /* background: #893e43 !important; */
+    background: transparent !important;
     box-shadow: none !important;
     z-index: 1002 !important;
 }
@@ -294,6 +294,10 @@ img{
 }
 #gdpr-cookie-consent-bar h3{
     font-size: 18 !important;
+    background: #893e43 !important;
+}
+#gdpr-cookie-consent-bar span{
+    background: #893e43 !important;
 }
 .gdpr span{
     display: none !important;
