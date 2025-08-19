@@ -284,10 +284,11 @@ img{
     padding-bottom: 0px !important;
     box-shadow: none !important;
     display: block !important;
-    /* z-index: 999 !important; */
+    z-index: 999 !important;
 }
 #gdpr-cookie-consent-show-again span{
     margin: 40px 20px 0px 35px !important;
+    margin-top: -2px !important;
 }
 #cookie-banner-cancle-img{
     /* color: #eee2d4 !important;
