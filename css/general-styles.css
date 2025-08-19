@@ -249,9 +249,9 @@ img{
     background: #893e43 !important;
     box-shadow: none !important;
 }
-#gdpr-cookie-consent-bar.gdpr-banner{
+/* #gdpr-cookie-consent-bar.gdpr-banner{
     display: none !important;
-}
+} */
 #cookie_action_reject{
     background: #893e43 !important;
 }
