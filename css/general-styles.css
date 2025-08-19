@@ -193,7 +193,7 @@ img{
     text-decoration: none;
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: nunito-sans, sans-serif;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 50px 20px;
     margin: 3em -5px -100px -5px;
     position: relative;
     min-height: 200px;
@@ -247,11 +247,12 @@ img{
 }
 #gdpr-cookie-consent-bar{
     background: #893e43 !important;
-    box-shadow: none !important;
+    /* box-shadow: none !important; */
+    z-index: 1002 !important;
 }
-#gdpr-cookie-consent-bar.gdpr-banner{
+/* #gdpr-cookie-consent-bar.gdpr-banner{
     z-index: 1002;
-}
+} */
 #cookie_action_reject{
     background: #893e43 !important;
 }
