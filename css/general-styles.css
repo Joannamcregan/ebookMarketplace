@@ -248,6 +248,7 @@ img{
 #gdpr-cookie-consent-bar{
     /* background: #893e43 !important; */
     background: transparent !important;
+    border: solid #e44e2d 10px;
     box-shadow: none !important;
     z-index: 1002 !important;
     gap: 0px !important;
