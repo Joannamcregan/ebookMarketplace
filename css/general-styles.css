@@ -256,11 +256,10 @@ img{
     background: #893e43 !important;
     padding: 20px !important;
 }
-/* #gdpr-cookie-consent-bar p.gdpr, #gdpr-cookie-consent-bar div.gdpr{
+#gdpr-cookie-consent-bar div.row_spaced{
     background: #893e43 !important;
-    padding: 20px !important;
-} */
-#gdpr-cookie-consent-bar div.gdpr-notice-content-body{
+}
+#gdpr-cookie-consent-bar p.gdpr, #gdpr-cookie-consent-bar div.gdpr{
     background: #893e43 !important;
     padding: 20px !important;
 }
