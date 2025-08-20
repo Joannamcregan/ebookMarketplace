@@ -259,7 +259,7 @@ img{
 #gdpr-cookie-consent-bar div.row_spaced{
     background: #893e43 !important;
 }
-#gdpr-cookie-notice-buttons .cookie_notice_buttons{
+#gdpr-cookie-consent-bar .cookie_notice_buttons{
     max-width: 90% !important;
 }
 #gdpr-cookie-consent-bar p.gdpr{
