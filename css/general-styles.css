@@ -259,6 +259,9 @@ img{
 #gdpr-cookie-consent-bar div.row_spaced{
     background: #893e43 !important;
 }
+#gdpr-cookie-notice-buttons .cookie_notice_buttons{
+    max-width: 90% !important;
+}
 #gdpr-cookie-consent-bar p.gdpr{
     background: #893e43 !important;
     padding: 20px !important;
