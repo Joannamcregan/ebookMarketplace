@@ -261,7 +261,6 @@ img{
 }
 #gdpr-cookie-consent-bar .cookie_notice_buttons{
     max-width: 90% !important;
-    justify-content: center !important;
     margin: 0px auto;
 }
 #gdpr-cookie-consent-bar p.gdpr{
