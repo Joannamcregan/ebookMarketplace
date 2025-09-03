@@ -16,7 +16,7 @@
                         <th class="tomc-purple-cells">Vendors</th>
                     </tr>
                     <tr>
-                        <td class="tomc-lighter-cells">Earn 90% royalties on book sales*</td>
+                        <td class="tomc-lighter-cells">Earn 100% royalties on book sales*</td>
                         <td class="tomc-lighter-cells">Earn 80% royalties on book sales*</td>
                     </tr>
                     <tr>
