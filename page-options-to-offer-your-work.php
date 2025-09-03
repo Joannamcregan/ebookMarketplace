@@ -20,7 +20,7 @@
                         <td class="tomc-lighter-cells">Earn 80% royalties on book sales*</td>
                     </tr>
                     <tr>
-                        <td>2.5% fee on Service Offerings*</td>
+                        <td>-</td>
                         <td>5% fee on Service Offerings*</td>
                     </tr>
                     <tr>
