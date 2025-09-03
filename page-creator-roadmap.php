@@ -9,7 +9,7 @@
                     <div class="roadmap-section--bottom-right--wrap-2">
                         <div class="roadmap-section--bottom-right">
                             <h2>Become a Creator-Member or Sell Your Work Without a Membership</h2>
-                            <p>Learn more about these options <a href="<?php echo esc_url(site_url('/product/options-to-offer-your-work'));?>">here</a>.</p>
+                            <p>Learn more about these options <a href="<?php echo esc_url(site_url('/options-to-offer-your-work'));?>">here</a>.</p>
                         </div>
                     </div>
                 </div>
