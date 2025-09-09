@@ -110,15 +110,20 @@
                     <div class="roadmap-section--bottom-right--wrap-2">
                         <div class="roadmap-section--bottom-right">
                         <h2 class="left-text-no-margin">Name Your Price</h2>
+                            <picture class="yellow-rounded-border block">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                            </picture>
                             <p class="left-text-no-margin">Use the "General" tab to set your book’s regular price and/or schedule a sale.</p>
+                            <p><em>Optional: if you would like to offer a coupon code, you can create one.</em></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="roadmap-img--bottom-left blue-rounded-rhombus">
                 <picture class="margin-auto-block blue-rounded-border">
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-coupon.webp'); ?>" alt="part of a screenshot showing the Add Coupon link under the Coupons link on the navigation panel of the Vendor Dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/add-coupon.jpg'); ?>" alt="part of a screenshot showing the Add Coupon link under the Coupons link on the navigation panel of the Vendor Dashboard" />
                 </picture>
             </div>
         </div>
@@ -369,15 +374,20 @@
                     <div class="roadmap-section--bottom-left--wrap-2">
                         <div class="roadmap-section--bottom-left">
                             <h2 class="right-text-no-margin">Name Your Price</h2>
+                            <picture class="yellow-rounded-border block">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                            </picture>
                             <p class="right-text-no-margin">Set your service's regular price and/or schedule a sale.</p>
+                            <p class="right-text-no-margin"><em>Optional: if you would like to offer a coupon code, you can create one. To share your coupon code with other members, post it in <a href="<?php echo esc_url(site_url('/forums/topic/discounted-services/'));?>" target="_blank">this forum thread</a>.</em></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="roadmap-img--bottom-right blue-rounded-rhombus">
                 <picture>
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/price-info.webp'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-coupon.webp'); ?>" alt="part of a screenshot showing the Add Coupon link under the Coupons link on the navigation panel of the Vendor Dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/add-coupon.jpg'); ?>" alt="part of a screenshot showing the Add Coupon link under the Coupons link on the navigation panel of the Vendor Dashboard" />
                 </picture>
             </div>
         </div>
