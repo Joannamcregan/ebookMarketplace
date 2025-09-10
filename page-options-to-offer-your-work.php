@@ -8,7 +8,7 @@
                 <p class="centered-text">We invite you to offer your work(s) through Trunk of My Car Cooperative, whether you're interested in joining the cooperative or not.</p>
                 <p class="centered-text">(But we hope you'll consider joining!)</p>
             </div>
-            <p class="centered-text padding-x-60">Learn about the differences between operating as a creator-member and as a vendor below.</p>
+            <p class="centered-text padding-x-60">Learn about the differences between operating as a Creator-Member and as a Vendor below.</p>
             <div class="fit-content margin-auto-block">
                 <table class="tomc-blue-purple-table">
                     <tr>
@@ -40,7 +40,7 @@
                         <td>Pay nothing out of pocket</td>
                     </tr>
                 </table>
-                <p>*Exclusive of Stripe transaction fees, currently at 30cents + 2.9%.</p>
+                <p class="padding-x-20 centered-text">*Exclusive of Stripe transaction fees, currently at 30cents + 2.9%.</p>
             </div>
             <?php if (is_user_logged_in()){
                 $user = wp_get_current_user();
@@ -54,7 +54,7 @@
                     <button class="purple-button" id="sell-as-vendor-button">Offer work without a membership</button>
                 <?php }
             } else {
-                ?><p class="padding-x-20 centered-text">Before you can become a vendor or Creator-Member, you must <a href="<?php echo esc_url(site_url('/my-account'));?>">login</a>.</p>
+                ?><p class="padding-x-20 centered-text">Before you can become a Vendor or Creator-Member, you must <a href="<?php echo esc_url(site_url('/my-account'));?>">login</a>.</p>
             <?php }
         ?></div>
         <br>

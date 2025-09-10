@@ -741,7 +741,7 @@ function tomc_custom_meta_tags() {
         echo '<meta name="description" content="Shop self-published books on a cooperatively-owned platform, where more of the money you spend goes to authors.">';
         echo '<meta name="keywords" content="shop self-published books, where to buy self-published books, where to buy indie books">';
     } else {
-        echo '<meta name="description" content="Join the self publishing (r)evolution and help redistribute resources from those who take to those who create.">';
+        echo '<meta name="description" content="Become self-publishing (r)evolution - redistribute publishing resources from those who take, to those who create!">';
         echo '<meta name="keywords" content="self-publishing revolution, self-publishing evolution">';
     }
 }
