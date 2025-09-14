@@ -36,7 +36,7 @@
             <div class="tomc-faq-section">
                 <h2>What’s in it for me?</h2>
                 <div class="tomc-faq-a hidden">
-                    <p>Readers receive a 15% discount. On everything. Immediately. Creators retain 90% of royalties. On everything. Immediately. And also 15% discount on books purchased.</p>
+                    <p>Readers receive a 15% discount. On everything. Immediately. Creators retain 100% of royalties. On everything. Immediately. And also 15% discount on books purchased.</p>
                     <p>Both circles gain access to each other – beta and ARC readers; book clubs; Offers & Needs; other Creators; other Readers.</p>
                     <p>All circles are eligible to participate in the governance of Trunk of My Car after 3 months of continuous paid membership dues.</p>
                     <p>And profit-sharing. All circles are eligible for profit-sharing based on their participation on the platform.</p>
