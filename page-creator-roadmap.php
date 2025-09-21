@@ -168,10 +168,10 @@
                     <div class="roadmap-section--bottom-last--wrap-1">
                         <div class="roadmap-section--bottom-last--wrap-2">
                             <div class="roadmap-section--bottom-right">
-                                <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
+                                <p class="centered-text padding-x-20">Check the boxes beside "Virtual (for services AND ebooks, audiobooks, and digital zines)" and "Downloadable (for ebooks, audiobooks, and digital zines ONLY)."</p>
                                 <picture class="block yellow-rounded-border">
-                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
-                                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.webp'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.jpg'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" />
                                 </picture>
                                 <p class="centered-text padding-x-20">Click the "Add File" button.</p>
                                 <picture class="margin-auto-block blue-rounded-border">
@@ -200,10 +200,10 @@
                     <div class="roadmap-section--bottom-last--wrap-1">
                         <div class="roadmap-section--bottom-last--wrap-2">
                             <div class="roadmap-section--bottom-right">
-                                <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
+                                <p class="centered-text padding-x-20">Check the boxes beside "Virtual (for services AND ebooks, audiobooks, and digital zines)" and "Downloadable (for ebooks, audiobooks, and digital zines ONLY)."</p>
                                 <picture class="block yellow-rounded-border">
-                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
-                                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.webp'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.jpg'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" />
                                 </picture>
                                 <p class="centered-text padding-x-20">Click the "Add File" button.</p>
                                 <picture class="margin-auto-block blue-rounded-border">
@@ -242,6 +242,16 @@
                                     <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/stock.webp'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" >
                                     <img src="<?php echo get_theme_file_uri('/images/stock.jpg'); ?>" alt="part of a screenshot showing the Inventory tab on the Vendor Dashboard" />
                                 </picture>
+                                <p class="centered-text padding-x-20">Add your book's weight to the Shipping tab to add the corresponding USPS Media Mail shipping cost. Please don't include stickers, bookmarks, or any other extras with your book, or your package might not qualify for Media Mail shipping.</p>
+                                <picture class="margin-auto-block yellow-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product_weight.webp'); ?>" alt="part of a screenshot showing the Weight field on the Shipping tab of the Vendor Dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/product_weight.jpg'); ?>" alt="part of a screenshot showing the Weight field on the Shipping tab of the Vendor Dashboard" />
+                                </picture>
+                                <p class="centered-text padding-x-20">If you're selling a box set that weighs more than 15 lbs, you will need to look up the <a href="https://pe.usps.com/text/dmm300/Notice123.htm#_c059" target="_blank">shipping cost</a> and type it into the Item Cost field manually. Leave asterisks in the Country Code, State/County Code, and Zip/Postal Code fields.</p>
+                                <picture class="margin-auto-block orange-rounded-border">
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/item_shipping_cost.webp'); ?>" alt="part of a screenshot showing the Item Cost field on the Shipping tab of the Vendor Dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/item_shipping_cost.jpg'); ?>" alt="part of a screenshot showing the Item Cost field on the Shipping tab of the Vendor Dashboard" />
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -259,10 +269,10 @@
                     <div class="roadmap-section--bottom-last--wrap-1">
                         <div class="roadmap-section--bottom-last--wrap-2">
                             <div class="roadmap-section--bottom-right">
-                                <p class="centered-text padding-x-20">Check the box beside "Downloadable (for ebooks, audiobooks, and digital zines)."</p>
+                                <p class="centered-text padding-x-20">Check the boxes beside "Virtual (for services AND ebooks, audiobooks, and digital zines)" and "Downloadable (for ebooks, audiobooks, and digital zines ONLY)."</p>
                                 <picture class="block yellow-rounded-border">
-                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-downloadable.webp'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" >
-                                    <img src="<?php echo get_theme_file_uri('/images/product-type-downloadable.jpg'); ?>" alt="part of a screenshot showing the Downloadable checkbox on the vendor dashboard" />
+                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.webp'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" >
+                                    <img src="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.jpg'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" />
                                 </picture>
                                 <p class="centered-text padding-x-20">Click the "Add File" button.</p>
                                 <picture class="margin-auto-block blue-rounded-border">
@@ -397,10 +407,10 @@
                     <div class="roadmap-section--bottom-last--wrap-2">
                         <div class="roadmap-section--bottom-last">
                             <h2 class="left-text-no-margin">Select Virtual Product Type</h2>
-                            <p class="left-text-no-margin">Check the box beside "Virtual (for services)" in the Product Type section.</p>
+                            <p class="left-text-no-margin">Check the box beside "Virtual (for services AND ebooks, audiobooks, and digital zines)" in the Product Type section.</p>
                             <picture class="yellow-rounded-border block">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-type-virtual.webp'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" >
-                                <img src="<?php echo get_theme_file_uri('/images/product-type-virtual.jpg'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" />
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/virtual_only.webp'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/virtual_only.jpg'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" />
                             </picture>
                             <p class="left-text-no-margin">At the bottom of the page, check the box beside Services.</p>
                             <picture class="blue-rounded-border margin-auto-block">

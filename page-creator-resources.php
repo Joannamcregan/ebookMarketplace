@@ -12,7 +12,7 @@
                 <div class="generic-wrapper-1">
                     <div class="generic-wrapper-0">
                         <p class="centered-text">
-                            <a href="<?php echo esc_url(site_url('/creator-roadmap'));?>">Creator Roadmap</a>
+                            <a href="<?php echo esc_url(site_url('/creator-roadmap'));?>" target="_blank">Creator Roadmap</a>
                         </p>
                         <p class="centered-text">
                             <a href="<?php echo esc_url(site_url('/options-to-offer-your-work'));?>">Options to Offer Your Work</a>

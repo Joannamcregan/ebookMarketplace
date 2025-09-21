@@ -15,7 +15,7 @@
                         if (in_array( 'creator-member', (array) $user->roles ) ||  in_array( 'administrator', (array) $user->roles )){
                               ?><li><a href="<?php echo esc_url(site_url('/creator-resources'));?>">Creator Resources</a></li>
                         <?php } else {
-                              ?><li><a href="<?php echo esc_url(site_url('/creator-roadmap'));?>">Creator Roadmap</a></li>
+                              ?><li><a href="<?php echo esc_url(site_url('/creator-roadmap'));?>" target="_blank">Creator Roadmap</a></li>
                         <?php }
                         ?><li><a href="<?php echo esc_url( wc_logout_url() ); ?>">Logout</a></li>
                   <?php } else {

@@ -66,7 +66,7 @@
                 <p class="centered-text">Learn how to list your work</p>
             </div>
             <div class="tomc-road-text--bottom">
-                <p class="centered-text">with our <a href="<?php echo esc_url(site_url('/creator-roadmap')); ?>" class="white-link">Creator Roadmap</a>.</p>
+                <p class="centered-text">with our <a href="<?php echo esc_url(site_url('/creator-roadmap')); ?>" target="_blank" class="white-link">Creator Roadmap</a>.</p>
             </div>
         </div>
     </div>
