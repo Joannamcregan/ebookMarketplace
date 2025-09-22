@@ -923,6 +923,9 @@ td.woocommerce-orders-table__cell-order-total{
 .woocommerce-privacy-policy-text{
     margin-left: 20px;
 }
+.wp-block-button{
+    height: fit-content !important;
+}
 .woocommerce-checkout button[type="submit"]{
     background-color: #4c0548;
     color: white;
