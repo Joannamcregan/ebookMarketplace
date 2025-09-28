@@ -3,14 +3,15 @@
 ?><main>
     <div class="banner"><h1 class="centered-text">Blog Posts</h1></div>
     <br>
-    <br>
     <div class="third-screen generic-content">
-    <?php if (is_user_logged_in()){
+    <?php $user = wp_get_current_user();
+    if (is_user_logged_in()){
         if ((in_array( 'creator-member', (array) $user->roles )) || (in_array( 'administrator', (array) $user->roles ))){
             ?><p class="centered-text"><a href="<?php echo esc_url(site_url('/add-blog-post'));?>">publish a new blog post</a></p>
         <?php }
     }
-    $args = array(
+    ?><br>
+    <?php $args = array(
         'post_type'=> 'post',
         'orderby'    => 'ID',
         'post_status' => 'publish',
