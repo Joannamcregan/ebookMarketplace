@@ -25,6 +25,11 @@
     </div>
 
     <?php echo paginate_links();
+    if (is_user_logged_in()){
+        if ((in_array( 'creator-member', (array) $user->roles )) || (in_array( 'administrator', (array) $user->roles ))){
+            ?><p class="centered-text"><a href="<?php echo esc_url(site_url('/add-blog-post'));?>">publish a new blog post</a></p>
+        <?php }
+    }
 ?></main>
 
 <?php get_footer(); ?>
