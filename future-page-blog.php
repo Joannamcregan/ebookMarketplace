@@ -4,13 +4,19 @@
     <div class="banner"><h1 class="centered-text">Blog Posts</h1></div>
     <br>
     <div class="third-screen generic-content">
-    <br>
+    <?php $user = wp_get_current_user();
+    if (is_user_logged_in()){
+        if ((in_array( 'creator-member', (array) $user->roles )) || (in_array( 'administrator', (array) $user->roles ))){
+            ?><p class="centered-text"><a href="<?php echo esc_url(site_url('/add-blog-post'));?>">publish a new blog post</a></p>
+        <?php }
+    }
+    ?><br>
     <?php $args = array(
         'post_type'=> 'post',
         'orderby'    => 'ID',
         'post_status' => 'publish',
         'order'    => 'DESC',
-        'posts_per_page' => -1 // this will retrieve all the post that is published 
+        'posts_per_page' => -1 // this will retrive all the post that is published 
         );
         $result = new WP_Query( $args );
         if ( $result-> have_posts() ) : ?>
