@@ -17,13 +17,13 @@
           <img src="<?php echo get_theme_file_uri('/images/corner-stars-1.jpg'); ?>" role="presentation" class="inline" />
       </picture>
     </h1>
-    <h2 class="banner-heading-18 centered-text">Last Updated April 19, 2025</h2>
+    <h2 class="banner-heading-18 centered-text">Last Updated October 8, 2025</h2>
     <p>This website and any other communication portal (the “Platform”) are all provided by Trunk of My Car Cooperative, a Hawai`i multi-stakeholder cooperative (the “Cooperative”). All interactions with the Platform are governed by these Terms and Conditions (these “Terms”). </p>
     <p>The Platform includes communications between You and the Cooperative, any of its members or users, including, but not limited to, email communications, Platform comment and/or feedback forums, community governance forums, event participation, and other communications conducted through the Platform. </p>
     <p>These Terms incorporate the Privacy Policy and any other applicable agreement between You and the Cooperative.</p>
     <h2 class="banner-heading-18 centered-text">Your Acceptance of These Terms/ Updates</h2>
     <div class="left-gentle-bracket-orange">
-      <p>Your use of the Platform constitutes your acceptance of these Terms and Your agreement to comply with them. If You do not agree to these terms, You must not use the Platform. Your use of the Platform does not in any way create an employer/employee relationship between You and the Cooperative.</p>
+      <p>Your use of the Platform constitutes your acceptance of these Terms and Your agreement to comply with them. If You do not agree to these terms, You must not use the Platform. Your use of the Platform does not in any way create and employer/employee relationship between You and the Cooperative.</p>
       <p>We may amend these Terms from time to time and shall notify users whose current email addresses we have on file via email. We highly recommend that You revisit these Terms each time You use the Platform.</p>
       <p>Your continued use of the Platform shall indicate Your acceptance of the most current version of the Terms.</p>
     </div>
@@ -44,7 +44,7 @@
     <h2 class="banner-heading-18 centered-text">Payment Methods</h2>
     <div class="left-gentle-bracket-yellow">
       <p>We use Stripe to process payments to and from the Cooperative and/or Platform. While we cannot guarantee that every transaction will run smoothly, we can provide support, to the extent that we are able, with any payment issue that arises with Stripe. While we can provide transaction documentation related to a dispute, the Cooperative is not responsible for advocating on Your behalf, nor are we responsible for any payment issues not caused by our actions.</p>
-      <p>Non-members who use the Platform to sell books (e-books, audiobooks, physical books shipped directly by the Creator) agree to receive a royalty rate of 80% for books. Non-members who offer services agree to pay 5% of the transaction service fee to the Cooperative. Non-members should not offer, nor accept payment for work generated from the Platform outside of the Platform. The Cooperative reserves the right to ban Users from access for violation of this policy. All sales are subject to Stripe transaction fees (as of 3/27/2025 .30 + 2.9%).</p>
+      <p>Non-members who use the Platform to sell books (e-books, audiobooks, physical books shipped directly by the Creator) agree to receive a royalty rate of 80% for books. Non-members who offer Services agree to pay 5% of the transaction service fee to the Cooperative. Non-members should not offer, nor accept payment for Services generated from the Platform outside of the Platform. The Cooperative reserves the right to ban Users from access for violation of this policy. All sales are subject to Stripe transaction fees (as of 3/27/2025 .30 + 2.9%).</p>
     </div>
     <h2 class="banner-heading-18 centered-text">Rules of Engagement</h2>
     <div class="left-gentle-bracket-orange">
@@ -63,7 +63,7 @@
     </div>
     <h2 class="banner-heading-18 centered-text">ISBN Registration</h2>
     <div class="left-gentle-bracket-yellow">
-      <p>ISBNs are numbers assigned to books to make them more discoverable. ISBNs are available through Bowker. The Cooperative buys blocks of ISBNs for Users to register their books with. ISBNs are recommended but not required for books sold on the Platform.</p>
+      <p>ISBNs are numbers assigned to books to make them more discoverable. ISBNs are issued by Bowker, the official ISBN broker for the United States. The Cooperative buys blocks of ISBNs so that Users can register their books, if desired, without the huge independent expense. ISBNs are recommended, but not required, for books sold on the Platform.</p>
       <p>One book format per ISBN registration. If You choose to register Your book with an ISBN, note that You must register a separate ISBN for each format – for example, if You register an ebook and an audiobook, each format must have its own ISBN.</p>
       <p>The Cooperative does not sell nor charge for Cooperative issued ISBNs; however, we do charge an administrative fee of $5.00 for member Users and $15 for non-member Users to register each ISBN with Bowker. Note that books imprinted with Cooperative issued ISBNs will list the Cooperative as the publisher. Users have the option to purchase ISBNs individually directly from Bowker in order to be listed as publisher.</p>
       <p>The Cooperative does not prohibit the use of Cooperative issued ISBNs from being utilized on any other site where You publish Your work.
