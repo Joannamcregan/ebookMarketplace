@@ -804,18 +804,18 @@ class Search {
             this.resultsDiv.html("");
             for (let i = 0; i < response.length; i++) {
               if (response[i]['resulttype'] === 'author') {
-                // if ($.inArray(response[i]['id'], alreadyAddedAuthors) > -1){
-                let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-search-result--author').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
-                let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text small-heading');
-                let newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').html('Author ');
-                newTitle.append(newSpan);
-                let newLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a />').attr('href', response[i]['author_url']).html(response[i]['pen_name']);
-                newTitle.append(newLink);
-                newDiv.append(newTitle);
-                this.resultsDiv.append(newDiv);
-                alreadyAddedAuthors.push(response[i]['id']);
-                newDiv.fadeIn();
-                // }
+                if (jquery__WEBPACK_IMPORTED_MODULE_0___default().inArray(response[i]['id'], alreadyAddedAuthors) == -1) {
+                  let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-search-result--author').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                  let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text small-heading');
+                  let newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').html('Author ');
+                  newTitle.append(newSpan);
+                  let newLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a />').attr('href', response[i]['author_url']).html(response[i]['pen_name']);
+                  newTitle.append(newLink);
+                  newDiv.append(newTitle);
+                  this.resultsDiv.append(newDiv);
+                  alreadyAddedAuthors.push(response[i]['id']);
+                  newDiv.fadeIn();
+                }
               } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default().inArray(response[i]['id'], alreadyAddedBookIds) > -1) {
                 if (jquery__WEBPACK_IMPORTED_MODULE_0___default().inArray(response[i]['productid'], alreadyAddedProductIds) == -1) {
                   let newLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a />').addClass('centered-text').attr('href', response[i]['product_url']);

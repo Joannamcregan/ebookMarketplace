@@ -221,7 +221,7 @@ class Search {
                         this.resultsDiv.html("");
                         for(let i = 0; i < response.length; i++){
                             if (response[i]['resulttype'] === 'author'){
-                                // if ($.inArray(response[i]['id'], alreadyAddedAuthors) > -1){
+                                if ($.inArray(response[i]['id'], alreadyAddedAuthors) == -1){
                                     let newDiv = $('<div />').addClass('tomc-search-result--author').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                                     let newTitle = $('<h1 />').addClass('centered-text small-heading');
                                     let newSpan = $('<span />').html('Author ');
@@ -232,7 +232,7 @@ class Search {
                                     this.resultsDiv.append(newDiv);
                                     alreadyAddedAuthors.push(response[i]['id']);
                                     newDiv.fadeIn();
-                                // }
+                                }
                             } else if ($.inArray(response[i]['id'], alreadyAddedBookIds) > -1){
                                 if ($.inArray(response[i]['productid'], alreadyAddedProductIds) == -1){
                                     let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
