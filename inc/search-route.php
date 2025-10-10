@@ -321,8 +321,22 @@ function marketplaceSearchResults($data) {
     }
     array_push($resultsArr, ...$authorResults);
 
-    // //check again for author name where search term is like database pen name record
-    // //and add JS to check for already-included authors
+    //check again for author name where search term is like database pen name record
+    if (strpos($searchTerm, ' ') !== false){
+        $termArray = explode(' ', $searchTerm, 2);
+        $query = 'select distinct post.id, post.post_title as pen_name, post.id as author_url, "author" as "resulttype"
+        from %i post
+        where post.post_title like %s
+        and post.post_title like %s
+        and post.post_status = "publish"
+        and post.post_type = "author-profile"
+        limit 100';
+        $authorResults = $wpdb->get_results($wpdb->prepare($query, $posts_table, '%' . $wpdb->esc_like($termArray[0]) . '%', '%' . $wpdb->esc_like($termArray[1]) . '%'), ARRAY_A);
+        for($index = 0; $index < count($authorResults); $index++){
+            $authorResults[$index]['author_url'] = get_permalink($authorResults[$index]['author_url']);
+        }
+        array_push($resultsArr, ...$authorResults);
+    }
 
     //first check for genre books about identity?
     if (str_contains(strtoupper($searchTerm), 'ABOUT')){

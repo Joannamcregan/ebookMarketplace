@@ -214,21 +214,25 @@ class Search {
                     $(e.target).removeClass('contracting');
                     let alreadyAddedBookIds = [];
                     let alreadyAddedProductIds = [];
+                    let alreadyAddedAuthors = [];
                     if(response.length < 1){
                         this.resultsDiv.html("<p class='centered-text'>Sorry! We couldn't find any matching results.</p>");
                     } else {
                         this.resultsDiv.html("");
                         for(let i = 0; i < response.length; i++){
                             if (response[i]['resulttype'] === 'author'){
-                                let newDiv = $('<div />').addClass('tomc-search-result--author').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
-                                let newTitle = $('<h1 />').addClass('centered-text small-heading');
-                                let newSpan = $('<span />').html('Author ');
-                                newTitle.append(newSpan);
-                                let newLink = $('<a />').attr('href', response[i]['author_url']).html(response[i]['pen_name']);
-                                newTitle.append(newLink);
-                                newDiv.append(newTitle);
-                                this.resultsDiv.append(newDiv);
-                                newDiv.fadeIn();
+                                // if ($.inArray(response[i]['id'], alreadyAddedAuthors) > -1){
+                                    let newDiv = $('<div />').addClass('tomc-search-result--author').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
+                                    let newTitle = $('<h1 />').addClass('centered-text small-heading');
+                                    let newSpan = $('<span />').html('Author ');
+                                    newTitle.append(newSpan);
+                                    let newLink = $('<a />').attr('href', response[i]['author_url']).html(response[i]['pen_name']);
+                                    newTitle.append(newLink);
+                                    newDiv.append(newTitle);
+                                    this.resultsDiv.append(newDiv);
+                                    alreadyAddedAuthors.push(response[i]['id']);
+                                    newDiv.fadeIn();
+                                // }
                             } else if ($.inArray(response[i]['id'], alreadyAddedBookIds) > -1){
                                 if ($.inArray(response[i]['productid'], alreadyAddedProductIds) == -1){
                                     let newLink = $('<a />').addClass('centered-text').attr('href', response[i]['product_url']);

@@ -10,6 +10,7 @@ import VendorInfo from './modules/VendorInfo'
 import Roadmap from './modules/Roadmap'
 import FAQDisplay from './modules/FAQDisplay'
 import CheckoutDisplay from './modules/CheckoutDisplay'
+import ValuesDisplay from './modules/ValuesDisplay'
 
 const mobileMenu = new MobileMenu()
 const marketplaceSearch = new SiteSearch()
@@ -23,3 +24,4 @@ const vendorInfo = new VendorInfo()
 const roadmap = new Roadmap()
 const faqDisplay = new FAQDisplay()
 const checkoutDisplay = new CheckoutDisplay()
+const valuesDisplay = new ValuesDisplay()

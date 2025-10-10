@@ -797,12 +797,14 @@ class Search {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).removeClass('contracting');
           let alreadyAddedBookIds = [];
           let alreadyAddedProductIds = [];
+          let alreadyAddedAuthors = [];
           if (response.length < 1) {
             this.resultsDiv.html("<p class='centered-text'>Sorry! We couldn't find any matching results.</p>");
           } else {
             this.resultsDiv.html("");
             for (let i = 0; i < response.length; i++) {
               if (response[i]['resulttype'] === 'author') {
+                // if ($.inArray(response[i]['id'], alreadyAddedAuthors) > -1){
                 let newDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div />').addClass('tomc-search-result--author').attr('id', 'tomc-browse-genres--results--book-' + response[i]['id']);
                 let newTitle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<h1 />').addClass('centered-text small-heading');
                 let newSpan = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<span />').html('Author ');
@@ -811,7 +813,9 @@ class Search {
                 newTitle.append(newLink);
                 newDiv.append(newTitle);
                 this.resultsDiv.append(newDiv);
+                alreadyAddedAuthors.push(response[i]['id']);
                 newDiv.fadeIn();
+                // }
               } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default().inArray(response[i]['id'], alreadyAddedBookIds) > -1) {
                 if (jquery__WEBPACK_IMPORTED_MODULE_0___default().inArray(response[i]['productid'], alreadyAddedProductIds) == -1) {
                   let newLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a />').addClass('centered-text').attr('href', response[i]['product_url']);
@@ -969,6 +973,37 @@ class Search {
 
 /***/ }),
 
+/***/ "./src/modules/ValuesDisplay.js":
+/*!**************************************!*\
+  !*** ./src/modules/ValuesDisplay.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class ValuesDisplay {
+  constructor() {
+    this.valuesOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tomc-values-overlay');
+    this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".values-overlay__close");
+    this.events();
+  }
+  events() {
+    this.closeButton.on("click", this.closeOverlay.bind(this));
+  }
+  closeOverlay() {
+    this.valuesOverlay.addClass('hidden');
+    this.valuesOverlay.removeClass('tomc-values-overlay');
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ValuesDisplay);
+
+/***/ }),
+
 /***/ "./src/modules/VendorInfo.js":
 /*!***********************************!*\
   !*** ./src/modules/VendorInfo.js ***!
@@ -1108,6 +1143,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Roadmap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/Roadmap */ "./src/modules/Roadmap.js");
 /* harmony import */ var _modules_FAQDisplay__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/FAQDisplay */ "./src/modules/FAQDisplay.js");
 /* harmony import */ var _modules_CheckoutDisplay__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/CheckoutDisplay */ "./src/modules/CheckoutDisplay.js");
+/* harmony import */ var _modules_ValuesDisplay__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/ValuesDisplay */ "./src/modules/ValuesDisplay.js");
+
 
 
 
@@ -1132,6 +1169,7 @@ const vendorInfo = new _modules_VendorInfo__WEBPACK_IMPORTED_MODULE_8__["default
 const roadmap = new _modules_Roadmap__WEBPACK_IMPORTED_MODULE_9__["default"]();
 const faqDisplay = new _modules_FAQDisplay__WEBPACK_IMPORTED_MODULE_10__["default"]();
 const checkoutDisplay = new _modules_CheckoutDisplay__WEBPACK_IMPORTED_MODULE_11__["default"]();
+const valuesDisplay = new _modules_ValuesDisplay__WEBPACK_IMPORTED_MODULE_12__["default"]();
 })();
 
 /******/ })()
