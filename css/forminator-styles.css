@@ -29,3 +29,38 @@
 #ui-datepicker-div{
     background-color: white !important;
 }
+
+.forminator-field li table{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+@media screen and (max-width: 420px){
+    .forminator-field li table{
+        margin-left: -20px !important;
+        margin-right: 0px !important;
+    }
+}
+@media screen and (max-width: 400px){
+    .forminator-field li table{
+        margin-left: -40px !important;
+        margin-right: 0px !important;
+    }
+}
+@media screen and (max-width: 380px){
+    .forminator-field li table{
+        margin-left: -60px !important;
+        margin-right: 0px !important;
+    }
+}
+@media screen and (max-width: 360px){
+    .forminator-field li table{
+        margin-left: -80px !important;
+        margin-right: 0px !important;
+    }
+}
+@media screen and (max-width: 330px){
+    .forminator-field li table{
+        margin-left: -90px !important;
+        margin-right: 0px !important;
+    }
+}
