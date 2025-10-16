@@ -437,6 +437,22 @@ img{
     width: 60%;
     margin: 0 auto;
 }
+.blue-purple-line-break-60{
+    border-top: solid #0c6980 5px;
+    border-bottom: solid #4c0548 5px;
+    border-radius: 25px;
+    height: 3px;
+    width: 60%;
+    margin: 0 auto;
+}
+.purple-blue-line-break-60{
+    border-top: solid #4c0548 5px;
+    border-bottom: solid #0c6980 5px;
+    border-radius: 25px;
+    height: 3px;
+    width: 60%;
+    margin: 0 auto;
+}
 .orange-line-break{
     border-bottom: solid #e44e2d 3px;
     border-top: none;
@@ -1150,4 +1166,33 @@ a {
 }
 .tomc-lighter-cells{
     background: #faefe3;
+}
+/* comments--------------------------------------------------------------------------------------------------------- */
+textarea#comment{
+    width: 90%;
+    max-width: 800px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.single-comment{
+    border-bottom: double 5px #f7c340;
+    border-radius: 20px 0px 0px 0px;
+    width: 80%;
+    max-width: 750px;
+    margin: auto;
+    padding: 20px;
+}
+.single-comment h3{
+    margin-bottom: 0px;
+}
+.single-comment p{
+    margin-top: 0px;
+}
+div#comment-respond{
+    border-top: double 5px #f7c340;
+    border-radius: 0px 20px 0px 0px;
+    width: 80%;
+    max-width: 750px;
+    margin: auto;
+    padding: 20px;
 }
