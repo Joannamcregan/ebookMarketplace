@@ -1188,8 +1188,7 @@ textarea#comment{
 .single-comment p{
     margin-top: 0px;
 }
-div#comment-respond{
-    border-top: double 5px #f7c340;
+div.comment-respond{
     border-radius: 0px 20px 0px 0px;
     width: 80%;
     max-width: 750px;
