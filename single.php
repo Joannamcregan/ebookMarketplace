@@ -42,7 +42,7 @@
             ?><p class="centered-text padding-x-20"><a href="<?php echo $results[0]['value'] ?>" target="_blank">Signup for <?php echo get_the_author(); ?>'s newlsetter</a></p>
         <?php }
         if ($penResults){
-            ?><p class="centered-text padding-x-20"><?php echo get_the_author(); ?> publishes under the following name<?php echo count($penResults) > 1 ? 's' : '' ?></p>
+            ?><p class="centered-text padding-x-20"><?php echo get_the_author(); ?> publishes under the following name:<?php echo count($penResults) > 1 ? 's' : '' ?></p>
             <?php for ($i = 0; $i < count($penResults); $i++){
                 ?><p class="centered-text padding-x-20"><a href="<?php echo esc_url(site_url('/pen-name' . '/' . str_replace(" ", "-", $penResults[$i]['post_title'])));?>"><?php echo $penResults[$i]['post_title']; ?></a></p>
             <?php }
