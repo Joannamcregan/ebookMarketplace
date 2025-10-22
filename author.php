@@ -31,7 +31,8 @@
             where pennames.userid = %d';
         $penResults = $wpdb->get_results($wpdb->prepare($penQuery, $posts_table, $pen_names_table, $author_id), ARRAY_A);
         if ($results || $penResults){
-            ?><div class="purple-blue-line-break-60"></div>
+            ?><br>
+            <div class="purple-blue-line-break-60"></div>
         <?php }
         ?><h2 class="centered-text padding-x-20"><?php echo get_the_author(); ?> is an author</h2>
         <?php if ($results){
