@@ -815,6 +815,9 @@ a {
 .flex{
     display: flex !important;
 }
+.flex-wrap{
+    flex-wrap: wrap;
+}
 .justify-content-center{
     justify-content: center;
 }
