@@ -276,9 +276,6 @@ img{
 /* #gdpr-cookie-consent-bar.gdpr-banner{
     z-index: 1002;
 } */
-#cookie_action_accept_all{
-    text-shadow: 0px 0px 1px black;
-}
 #cookie_action_reject{
     background: #893e43 !important;
 }
@@ -305,6 +302,11 @@ img{
 #gdpr-cookie-consent-show-again span{
     margin: 40px 20px 0px 35px !important;
     margin-top: -2px !important;
+}
+#cookie_action_accept_all{
+    background: #0c6980 !important;
+    border-color: #0c6980 !important;
+    text-shadow: 0px 0px 2px black !important;
 }
 #cookie-banner-cancle-img{
     /* color: #eee2d4 !important;
