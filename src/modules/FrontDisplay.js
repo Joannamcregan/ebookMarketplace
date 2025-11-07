@@ -2,6 +2,8 @@ class FrontDisplay {
 
     constructor() {
         this.leaves = document.querySelectorAll('.expandable-leaf');
+        this.introOverlay = document.getElementById('intro-overlay');
+        this.closeOverlayButton = document.getElementById('values-overlay__close');
         this.events();
     }
 
@@ -16,6 +18,10 @@ class FrontDisplay {
                     parentSection.classList.add('not-displayed');
                 }
             })
+        });
+        this.closeOverlayButton.addEventListener('click', ()=>{
+            this.introOverlay.classList.remove('flex');
+            this.introOverlay.classList.add('hidden');
         })
     }
 }
