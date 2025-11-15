@@ -136,7 +136,8 @@ class FrontDisplay {
   constructor() {
     this.leaves = document.querySelectorAll('.expandable-leaf');
     this.introOverlay = document.getElementById('intro-overlay');
-    this.closeOverlayButton = document.getElementById('values-overlay__close');
+    this.closeValuesOverlayButtons = document.querySelectorAll('#values-overlay__close');
+    this.closeValuesOverlayButton = document.getElementById('values-overlay__close');
     this.events();
   }
   events() {
@@ -151,9 +152,11 @@ class FrontDisplay {
         }
       });
     });
-    this.closeOverlayButton.addEventListener('click', () => {
-      this.introOverlay.classList.remove('flex');
-      this.introOverlay.classList.add('hidden');
+    this.closeValuesOverlayButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        this.introOverlay.classList.remove('flex');
+        this.introOverlay.classList.add('hidden');
+      });
     });
   }
 }
