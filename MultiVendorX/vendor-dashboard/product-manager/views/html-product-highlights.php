@@ -66,17 +66,26 @@ global $MVX;
                         ?><br><p>
                             <?php echo '<span>Your ';
                             switch($terms[0]){
-                                case 52:
+                                case 84:
                                     echo 'paperback';
                                     break;
-                                case 59: //51:
+                                case 85: 
                                     echo 'hardcover';
                                     break;
-                                case 51: //49:
+                                case 49: 
                                     echo 'ebook';
                                     break;
                                 case 50:
                                     echo 'audiobook';
+                                    break;
+                                case 75:
+                                    echo 'digital zine';
+                                    break;
+                                case 76:
+                                    echo 'zine';
+                                    break;
+                                default:
+                                    echo 'creation';
                                     break;
                             } 
                         echo ' is published! </span>' 
