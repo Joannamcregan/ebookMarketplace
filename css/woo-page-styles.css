@@ -663,6 +663,9 @@ div.woocommerce-MyAccount-content{
 .woocommerce-MyAccount-navigation-link--edit-account{
     display: none !important;
 }
+.woocommerce-MyAccount-navigation-link--payment-method{
+    display: none !important;
+}
 @media screen and (max-width: 768px) {
     .woocommerce-MyAccount-navigation{
         padding: 10px;
