@@ -109,7 +109,6 @@ for($index = 0; $index < count($results); $index++){
             <?php } ?>
             <!-- </div>  tomc-book-organization--newly-added-continued-audiobooks -->
         </div>
-    </div>
 
     <?php $query = 'select distinct b.id, b.product_image_id, b.title, f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url
         from %i b
@@ -128,7 +127,40 @@ for($index = 0; $index < count($results); $index++){
         $results[$index]['product_image_id'] = get_the_post_thumbnail_url($results[$index]['product_image_id']);
     }
 
-    $query = 'select distinct b.id, b.product_image_id, b.title,f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url
+    ?><div class="tomc-shop-books--format-section">
+        <div class="sub-banner--slim">
+            <h2 class="centered-text large-heading yellow-shadow-text georgia-text">physical books</h2>
+        </div>
+        <div>
+            <?php if ($results) {
+                ?><div class="tomc-shop-books-sort-by-section" data-format="physical">
+                    <span>sort by</span>
+                    <span aria-label="This option is selected" class="tomc-shop-books-sort-options tomc-shop-books-sort-options-selected tomc-shop-books-oldest" data-order='asc'>oldest</span>
+                    <span aria-label="This option is not selected" class="tomc-shop-books-sort-options tomc-shop-books-newest" data-order="desc">newest</span>
+                    <span aria-label="This option is not selected" class="tomc-shop-books-sort-options tomc-shop-books-random">random</span>
+                </div>
+                <div class="tomc-book-org--columns-container">
+                <?php for($index = 0; $index < count($results); $index++){
+                    ?><div class="tomc-bookorg--all-columns">
+                        <img src="<?php echo $results[$index]['product_image_id']; ?>" alt="<?php echo 'cover for ' . $results[$index]['title']; ?>" />
+                        <a class="centered-text" href="<?php echo $results[$index]['product_url']; ?>">
+                            <h3><?php echo $results[$index]['title']; ?></h3>
+                        </a>
+                        <p class="centered-text"><strong><?php echo $results[$index]['pen_name'] ? 'by ' . $results[$index]['pen_name'] : 'by unknown or anonymous author'; ?></strong></p>
+                        <div class="tomc-browse--search-result-bottom-section">
+                            <p><?php echo $results[$index]['book_description'].substr(0, 500) . '...'; ?></p>
+                        </div>
+                    </div>
+                <?php }
+                ?></div>
+                <p class="centered-text"><a href="<?php echo esc_url(site_url('/physical-books'));?>">shop all physical books</a></p>
+            <?php } else {
+                ?><p class="centered-text  padding-x-20">No physical books have been added yet. Check back soon!</p>
+            <?php } ?>
+        </div>
+    </div>
+
+    <?php $query = 'select distinct b.id, b.product_image_id, b.title,f.post_title as pen_name, b.book_description, b.createdate, g.id as product_url
         from %i b
         join %i c on b.id = c.bookid
         join %i d on c.typeid = d.id
