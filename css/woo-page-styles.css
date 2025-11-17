@@ -663,7 +663,7 @@ div.woocommerce-MyAccount-content{
 .woocommerce-MyAccount-navigation-link--edit-account{
     display: none !important;
 }
-.woocommerce-MyAccount-navigation-link--payment-method{
+.woocommerce-MyAccount-navigation-link--payment-methods{
     display: none !important;
 }
 @media screen and (max-width: 768px) {
