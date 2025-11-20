@@ -168,18 +168,13 @@
                     <div class="roadmap-section--bottom-last--wrap-1">
                         <div class="roadmap-section--bottom-last--wrap-2">
                             <div class="roadmap-section--bottom-right">
-                                <p class="centered-text padding-x-20">Check the boxes beside "Virtual (for services AND ebooks, audiobooks, and digital zines)" and "Downloadable (for ebooks, audiobooks, and digital zines ONLY)."</p>
-                                <picture class="block yellow-rounded-border">
-                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.webp'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" >
-                                    <img src="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.jpg'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" />
-                                </picture>
                                 <p class="centered-text padding-x-20">Click the "Add File" button.</p>
                                 <picture class="margin-auto-block blue-rounded-border">
                                     <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
                                     <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
                                 </picture>
                                 <p class="centered-text padding-x-20">Click the upload icon and upload your e-book or zine file (preferably in epub format.)</p>
-                                <picture class="block orange-rounded-border">
+                                <picture class="margin-auto-block orange-rounded-border">
                                     <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" >
                                     <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
                                 </picture>
@@ -200,18 +195,13 @@
                     <div class="roadmap-section--bottom-last--wrap-1">
                         <div class="roadmap-section--bottom-last--wrap-2">
                             <div class="roadmap-section--bottom-right">
-                                <p class="centered-text padding-x-20">Check the boxes beside "Virtual (for services AND ebooks, audiobooks, and digital zines)" and "Downloadable (for ebooks, audiobooks, and digital zines ONLY)."</p>
-                                <picture class="block yellow-rounded-border">
-                                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.webp'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" >
-                                    <img src="<?php echo get_theme_file_uri('/images/virtual_and_downloadable.jpg'); ?>" alt="part of a screenshot showing the checked Virtual and Downloadable checkboxes on the vendor dashboard" />
-                                </picture>
                                 <p class="centered-text padding-x-20">Click the "Add File" button.</p>
                                 <picture class="margin-auto-block blue-rounded-border">
                                     <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
                                     <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
                                 </picture>
                                 <p class="centered-text padding-x-20">Click the upload icon and upload your audiobook file.</p>
-                                <picture class="block orange-rounded-border">
+                                <picture class="margin-auto-block orange-rounded-border">
                                     <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" >
                                     <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload icon on the vendor dashboard" />
                                 </picture>
@@ -353,11 +343,6 @@
                     <div class="roadmap-section--bottom-last--wrap-2">
                         <div class="roadmap-section--bottom-last">
                             <h2 class="left-text-no-margin">Select Virtual Product Type</h2>
-                            <p class="left-text-no-margin">Check the box beside "Virtual (for services AND ebooks, audiobooks, and digital zines)" in the Product Type section.</p>
-                            <picture class="yellow-rounded-border block">
-                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/virtual_only.webp'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" >
-                                <img src="<?php echo get_theme_file_uri('/images/virtual_only.jpg'); ?>" alt="part of a screenshot showing the Virtual checkbox on the vendor dashboard" />
-                            </picture>
                             <p class="left-text-no-margin">At the bottom of the page, check the box beside Services.</p>
                             <picture class="blue-rounded-border margin-auto-block">
                                 <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product-categories-services.webp'); ?>" alt="part of a screenshot showing the product categories checkboxes with 'services' checked on the vendor dashboard" >
