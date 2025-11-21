@@ -69,7 +69,7 @@
             <div class="tomc-faq-section">
                 <h2>Y’all sell ISBNs?</h2>
                 <div class="tomc-faq-a hidden">
-                    <p>No. We do not sell ISBNs. We do have ISBNs available for registered users on the platform and we do charge a small administrative fee for registering said ISBNs. Members pay $5 per ISBN registration and non-members pay $15. You do not need to have an ISBN to sell your books on our platform. Here are a few reasons why you might want one. Note, ISBNs received through the platform will list Trunk of My Car Cooperative as the publisher. And yes, you can use TOMC registered ISBNs on other platforms. And you can only use one ISBN per each type of book, so if you have an ebook and an audiobook, each version will require its own ISBN.</p>
+                    <p>No. We do not sell ISBNs. We do have ISBNs available for registered users on the platform and we do charge a small administrative fee for registering said ISBNs. Members pay $5 per ISBN registration and non-members pay $15. You do not need to have an ISBN to sell your books on our platform. <a href="https://www.editage.com/book-editing-services-articles/10-faqs-on-isbn-every-self-publishing-author-must-know" target="_blank">Here are a few reasons why you might want one.</a> Note, ISBNs received through the platform will list Trunk of My Car Cooperative as the publisher. And yes, you can use TOMC registered ISBNs on other platforms. And you can only use one ISBN per each type of book, so if you have an ebook and an audiobook, each version will require its own ISBN.</p>
                 </div>
             </div>
             <div class="tomc-faq-section">
