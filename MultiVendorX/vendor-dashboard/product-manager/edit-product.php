@@ -373,8 +373,8 @@ if ($default_types && !empty($default_types)) {
                     }
                 }
                 ?>
-                <input type="submit" class="btn btn-default hidden" name="submit-data" value="<?php echo esc_attr( $primary_action ); ?>" id="mvx_frontend_dashboard_product_submit" />
-                <!-- <input type="submit" class="btn btn-default" name="presubmit-check-product-data" value="check product" id="tomc_mvx_frontend_dashboard_product_check" /> -->
+                <input type="submit" class="btn btn-default hidden" name="submit-data" value="Submit" id="mvx_frontend_dashboard_product_submit" />
+                <span class="btn btn-default" id="tomc_mvx_frontend_dashboard_product_check">Review</span>
                 <input type="submit" class="btn btn-default" name="draft-data" value="<?php esc_attr_e( 'Draft', 'multivendorx' ); ?>" id="mvx_frontend_dashboard_product_draft" />
                 <input type="hidden" name="status" value="<?php echo esc_attr( get_post_status( $post ) ); ?>">
                 <?php wp_nonce_field( 'mvx-product', 'mvx_product_nonce' ); ?>

@@ -257,6 +257,18 @@
                 <div class="roadmap-section--bottom-last--wrap-1">
                     <div class="roadmap-section--bottom-last--wrap-2">
                         <div class="roadmap-section--bottom-last">
+                            <h2>Review and Submit Your Product</h2>
+                            <p>Click the 'review' button. If everything is okay, the 'submit' button will appear.</p>
+                            <picture class="margin-auto-block blue-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/review_button.webp'); ?>" alt="part of a screenshot showing the review button on the Vendor Dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/review_button.jpg'); ?>" alt="part of a screenshot showing the review button on the Vendor Dashboard" />
+                            </picture>
+                            <br>
+                            <picture class="margin-auto-block purple-rounded-border">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/submit_button.webp'); ?>" alt="part of a screenshot showing the submit button on the Vendor Dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/submit_button.jpg'); ?>" alt="part of a screenshot showing the submit button on the Vendor Dashboard" />
+                            </picture>
+                            <br>
                             <h2>Link Your Books and Help People Find Them</h2>
                             <p>If your book is available in multiple formats, you'll need to create a product for each one. Next, you will link the formats and add general details about your book.</p>
                         </div>
@@ -357,6 +369,18 @@
                 <img src="<?php echo get_theme_file_uri('/images/street_triangle.jpg'); ?>" aria-hidden="true" class="roadmap-img--bottom"/>
             </picture>
         </div>
+        <h2 class="centered-text">Review and Submit Your Service</h2>
+        <p class="centered-text">Click the 'review' button. If everything is okay, the 'submit' button will appear.</p>
+        <picture class="margin-auto-block blue-rounded-border">
+            <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/review_button.webp'); ?>" alt="part of a screenshot showing the review button on the Vendor Dashboard" >
+            <img src="<?php echo get_theme_file_uri('/images/review_button.jpg'); ?>" alt="part of a screenshot showing the review button on the Vendor Dashboard" />
+        </picture>
+        <br>
+        <picture class="margin-auto-block purple-rounded-border">
+            <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/submit_button.webp'); ?>" alt="part of a screenshot showing the submit button on the Vendor Dashboard" >
+            <img src="<?php echo get_theme_file_uri('/images/submit_button.jpg'); ?>" alt="part of a screenshot showing the submit button on the Vendor Dashboard" />
+        </picture>
+        <br>
         <p class="right-text">That's it! Once published, your service will appear in our <a href="<?php echo esc_url(site_url('/services'));?>">directory</a>.</p>
     </div>
 </main>
