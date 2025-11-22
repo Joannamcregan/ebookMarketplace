@@ -64,33 +64,32 @@ global $MVX;
                     // link to Add Book Info
                     if ($terms[0] != 53 /*services*/){
                         ?><br><p>
-                            <?php echo '<span>Your ';
+                            <?php echo '<span>Thank you for submitting your ';
                             switch($terms[0]){
-                                case 84:
-                                    echo 'paperback';
+                                case 84: //51 for dev, 84 for prod
+                                    echo 'paperback! ' . '<a href="' . esc_url(site_url('/add-a-book')) . '">' . 'Add details to help readers find it' . '</a>' . ' or ' . '<a href="' . esc_url(site_url('/my-books')) . '">' . "link it to a book you've already published in another format. " . '</a>';
                                     break;
-                                case 85: 
-                                    echo 'hardcover';
+                                case 85: //50 for dev, 85 for prod
+                                    echo 'hardcover! ' . '<a href="' . esc_url(site_url('/add-a-book')) . '">' . 'Add details to help readers find it' . '</a>' . ' or ' . '<a href="' . esc_url(site_url('/my-books')) . '">' . "link it to a book you've already published in another format. " . '</a>';
                                     break;
-                                case 49: 
-                                    echo 'ebook';
+                                case 49: //48 for dev, 49 for prod
+                                    echo 'ebook! ' . '<a href="' . esc_url(site_url('/add-a-book')) . '">' . 'Add details to help readers find it' . '</a>' . ' or ' . '<a href="' . esc_url(site_url('/my-books')) . '">' . "link it to a book you've already published in another format. " . '</a>';
                                     break;
-                                case 50:
-                                    echo 'audiobook';
+                                case 50: //49 for dev, 50 for prod
+                                    echo 'audiobook! ' . '<a href="' . esc_url(site_url('/add-a-book')) . '">' . 'Add details to help readers find it' . '</a>' . ' or ' . '<a href="' . esc_url(site_url('/my-books')) . '">' . "link it to a book you've already published in another format. " . '</a>';
                                     break;
-                                case 75:
-                                    echo 'digital zine';
+                                case 75: //56 for dev, 75 for prod
+                                    echo 'digital zine! ' . '<a href="' . esc_url(site_url('/add-a-book')) . '">' . 'Add details to help readers find it' . '</a>' . ' or ' . '<a href="' . esc_url(site_url('/my-books')) . '">' . "link it to a book you've already published in another format. " . '</a>';
                                     break;
-                                case 76:
-                                    echo 'zine';
+                                case 86: //55 for dev, 86 for prod
+                                    echo 'zine! ' . '<a href="' . esc_url(site_url('/add-a-book')) . '">' . 'Add details to help readers find it' . '</a>' . ' or ' . '<a href="' . esc_url(site_url('/my-books')) . '">' . "link it to a book you've already published in another format. " . '</a>';
                                     break;
                                 default:
-                                    echo 'creation';
+                                    echo 'creation! ' . '<a href="' . esc_url(site_url('/add-a-book')) . '">' . 'Add details to help readers find it' . '</a>' . ' or ' . '<a href="' . esc_url(site_url('/my-books')) . '">' . "link it to a book you've already published in another format. " . '</a>';
                                     break;
                             } 
-                        echo ' is published! </span>' 
-                        ?><a href="<?php echo esc_url(site_url('/add-a-book'));?>">Add details to help readers find it</a> or <a href="<?php echo esc_url(site_url('/my-books'));?>">link it to a book you've already published in another format. </a></p>
-                    <?php }
+                        echo '</span>';
+                    }
                     // give option to set default terms hierarchy
                     if( $nos_hierarchy > 1 && ( get_mvx_vendor_settings('category_pyramid_guide', 'settings_general') ) ){ ?>
                     <p class="pull-right multiple-cat-hierarchy"><?php esc_html_e( 'Select a different category :', 'multivendorx' );?>
