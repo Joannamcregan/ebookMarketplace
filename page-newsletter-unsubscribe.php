@@ -8,8 +8,8 @@
         <?php while ( have_posts() ) :
             the_post();
             wp_reset_postdata();
-            the_content(); 
             echo do_shortcode('[mailpoet_page]');
+            the_content(); 
         endwhile;        
     ?></div>
 </main>
