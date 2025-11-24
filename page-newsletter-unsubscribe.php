@@ -5,9 +5,12 @@
     <br>
     <br>
     <div class="padding-x-20 centered-text half-screen">
-        <?php wp_reset_postdata();
-        the_content(); 
-        echo apply_filters('the_content', '[mailpoet_page]');
+        <?php while ( have_posts() ) :
+            the_post();
+            wp_reset_postdata();
+            the_content(); 
+            echo do_shortcode('[mailpoet_page]');
+        endwhile;        
     ?></div>
 </main>
 
