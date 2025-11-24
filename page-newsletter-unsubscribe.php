@@ -5,8 +5,10 @@
     <br>
     <br>
     <div class="padding-x-20 centered-text half-screen">
-        <?php echo do_shortcode('[mailpoet_page]'); ?>
-    </div>
+        <?php wp_reset_postdata();
+        the_content(); 
+        echo do_shortcode('[mailpoet_page]');
+    ?></div>
 </main>
 
 <?php get_footer();
