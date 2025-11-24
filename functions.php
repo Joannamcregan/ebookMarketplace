@@ -765,3 +765,11 @@ function filter_product_needs_shipping_callback( $needs_shipping ){
     }
     return $needs_shipping;
 }
+// change message on unsubscribe page-------------------------------------------------------------------------
+add_filter( 'mailpoet_unsubscribe_confirmation_page', 'mp_modify_unsubscribe_confirmation_page', 10, 2);
+function mp_modify_unsubscribe_confirmation_page( $HTML, $unsubscribeUrl ) {
+	$HTML = '<hr>';
+ 	$HTML .= '<center>You can <a href="'.$unsubscribeUrl.'">click here</a> to unsubscribe.</center>';
+ 	$HTML .= '<hr>';
+    return $HTML;
+}
