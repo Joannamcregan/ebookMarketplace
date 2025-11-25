@@ -93,7 +93,8 @@
                             <?php } else {
                                 ?><p class="right-text-no-margin">Already have an ISBN? Enter it here! Need one? TOMC has ISBNs available for a small registration fee (but you have to <a href="<?php echo esc_url(site_url('/my-account'));?>">login</a> first).</p>
                             <?php }                           
-                        ?></div>
+                            ?><p class="right-text-no-margin">Upload your cover art in JPG format.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -173,7 +174,7 @@
                                     <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-file.webp'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" >
                                     <img src="<?php echo get_theme_file_uri('/images/add-file.jpg'); ?>" alt="part of a screenshot showing the Add File button on the vendor dashboard" />
                                 </picture>
-                                <p class="centered-text padding-x-20">Click the upload icon and upload your e-book or zine file (preferably in epub format.)</p>
+                                <p class="centered-text padding-x-20">Click the upload icon and upload your e-book or zine file. To ensure the best experience for readers, we recommend using the epub format for e-book files.</p>
                                 <picture class="margin-auto-block orange-rounded-border">
                                     <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/upload-icon.webp'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" >
                                     <img src="<?php echo get_theme_file_uri('/images/upload-icon.jpg'); ?>" alt="part of a screenshot showing the upload on the vendor dashboard" />
