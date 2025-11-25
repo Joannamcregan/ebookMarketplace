@@ -7,7 +7,7 @@
     <div class="padding-x-20 centered-text half-screen">
         <?php if ( have_posts() ) :
             while ( have_posts() ) : the_post();
-                echo do_shortcode('[mailpoet_page]');
+                do_shortcode('[mailpoet_page]');
                 echo the_content();
             endwhile;
         endif;    
