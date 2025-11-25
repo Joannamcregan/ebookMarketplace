@@ -1201,6 +1201,9 @@ div.comment-respond{
     padding: 20px;
 }
 /* MailPoet--------------------------------------------------------------------------------------- */
-.mailpoet_page-template-default p.post-by-line, .mailpoet_page-template-default hr, .mailpoet_page-template-default div.red-orange-line-break-60{
+.mailpoet_page-template-default p.post-by-line, .mailpoet_page-template-default hr, .mailpoet_page-template-default div.red-orange-line-break-60, .mailpoet_page-template-default div.purple-blue-line-break-60, .mailpoet_page-template-default h2, .mailpoet_page-template-default p.see-all-blog-posts, .mailpoet_page-template-default p.author-newsletter-link, .mailpoet_page-template-default p.publishes-under-line, .mailpoet_page-template-default p.post-author-pen-name{
     display: none !important;
+}
+p.mailpoet_unsubscribed_content{
+    text-align: center !important;
 }
