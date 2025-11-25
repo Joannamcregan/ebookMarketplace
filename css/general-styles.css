@@ -1201,6 +1201,6 @@ div.comment-respond{
     padding: 20px;
 }
 /* MailPoet--------------------------------------------------------------------------------------- */
-.mailpoet_page-template-default p.post-by-line{
+.mailpoet_page-template-default p.post-by-line, .mailpoet_page-template-default hr, .mailpoet_page-template-default div.red-orange-line-break-60{
     display: none !important;
 }
