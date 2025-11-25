@@ -19,7 +19,7 @@ if ( $comments ) {
         echo '</div>';
 	}
 } else {
-	echo 'No comments found.';
+	echo '<p class="centered-text">No comments found.</p>';
 }
 
 // Form
