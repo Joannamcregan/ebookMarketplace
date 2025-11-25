@@ -1200,3 +1200,7 @@ div.comment-respond{
     margin: auto;
     padding: 20px;
 }
+/* MailPoet--------------------------------------------------------------------------------------- */
+.mailpoet_page-template-default p.post-by-line{
+    display: none !important;
+}
