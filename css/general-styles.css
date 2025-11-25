@@ -1214,3 +1214,18 @@ form.mailpoet-manage-subscription{
     width: fit-content !important;
     margin: 20px auto !important;
 }
+form.mailpoet-manage-subscription input[type="submit"]{
+    background-color: #0c6980;
+    color: white;
+    font-size: 16;
+    border-radius: 45px;
+    padding: 15px 30px;
+    margin: 20px auto;
+    cursor: pointer;
+    display: block;
+}
+select.mailpoet_select{
+    width: 260px;
+    padding: 20px;
+    border-radius: 10px !important;
+}
