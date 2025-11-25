@@ -1207,3 +1207,10 @@ div.comment-respond{
 p.mailpoet_unsubscribed_content{
     text-align: center !important;
 }
+.mailpoet_paragraph{
+    width: fit-content !important;
+}
+form.mailpoet-manage-subscription{
+    width: fit-content !important;
+    margin: 20px auto !important;
+}
