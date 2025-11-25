@@ -23,7 +23,7 @@
         <?php while ( $result->have_posts() ) : $result->the_post(); ?>
         <div class="genre-category subcategory padding-x-20">
             <p><a href='<?php echo get_the_permalink(); ?>'><?php the_title(); ?></a></p>     
-            <p><?php echo 'posted by ' . get_the_author() . ' on ' . get_the_date(); ?></p>
+            <p class="post-by-line"><?php echo 'posted by ' . get_the_author() . ' on ' . get_the_date(); ?></p>
             <div class="orange-yellow-line-break"></div>
         </div>
         <?php endwhile; ?>
