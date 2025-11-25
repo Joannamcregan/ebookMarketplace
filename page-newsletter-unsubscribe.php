@@ -5,12 +5,11 @@
     <br>
     <br>
     <div class="padding-x-20 centered-text half-screen">
-        <?php while ( have_posts() ) :
-            the_post();
-            wp_reset_postdata();
-            echo do_shortcode('[mailpoet_page]');
-            the_content(); 
-        endwhile;        
+        <?php if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+                echo do_shortcode('[mailpoet_page]');
+            endwhile;
+        endif;    
     ?></div>
 </main>
 
