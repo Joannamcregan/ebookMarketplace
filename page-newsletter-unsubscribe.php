@@ -9,7 +9,6 @@
             while ( have_posts() ) : the_post();
                 echo do_shortcode('[mailpoet_page]');
                 echo the_content();
-                echo 'test';
             endwhile;
         endif;    
     ?></div>
