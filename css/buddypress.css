@@ -337,6 +337,7 @@ body #buddypress div{
 }
 div.mce-toolbar-grp{
     background: none !important;
+    width: fit-content !important;
 }
 #send_message_form{
     margin: auto !important;
