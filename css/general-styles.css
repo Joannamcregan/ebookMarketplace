@@ -846,6 +846,9 @@ a {
     margin: auto;
     display: block;
 }
+.max-width-800{
+    max-width: 800px;
+}
 .padding-5{
     padding: 5px;
 }
