@@ -392,13 +392,18 @@ if ($default_types && !empty($default_types)) {
     <h1>Let Readers Name Their Own Price</h1>
     <p>If you enable the Name Your Price option, readers will be able to choose how much they pay for your book, within a price range you set. If you want to enable Name Your Price, but don't want to set a minimum and/or maximum price, leave these fields blank.</p>
     <div id="tomc-mvx-nyp-enable--input-section">
-        <label for="tomc-mvx-nyp-min-price">min. price</label>
+        <label for="tomc-mvx-nyp-min-price">min. price $</label>
         <input id="tomc-mvx-nyp-min-price">
         <br>
-        <label for="tomc-mvx-nyp-max-price">max. price</label>
+        <label for="tomc-mvx-nyp-max-price">max. price $</label>
         <input id="tomc-mvx-nyp-max-price">
     </div>
     <br>
+    <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--no-min-error">You must set a minimum price to cover the cost of shipping your book.</p>
+    <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--low-min-warning">Make sure the minimum price you select covers the cost of shipping your book.</p>
+    <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--negative-min-error">The minimum price cannot be a negative number.</p>
+    <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--lower-max-error">The maximum price cannot be less than or equal to the minimum price.</p>
+    <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--zero-max-error">The maximum price cannot be 0. If you don't want to set a maximum price, leave the field blank.</p>
     <span id="tomc-mvx-nyp-enable-button">enable these settings</span>
     <br>
     <span id="tomc-mvx-nyp-cancel-button">cancel</span>

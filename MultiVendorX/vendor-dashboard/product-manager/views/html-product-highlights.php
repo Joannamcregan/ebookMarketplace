@@ -93,23 +93,23 @@ global $MVX;
                         $postmeta_table =  $wpdb->prefix . "postmeta";
                         $query = 'select nyp_status.post_id, nyp_status.meta_value as "nyp_status", nyp_min.meta_value as "nyp_min", nyp_max.meta_value as "nyp_max"
                         from %i nyp_status
-                        join %i nyp_min
+                        left join %i nyp_min
                         on nyp_status.post_id = nyp_min.post_id
-                        and nyp_status.meta_key = "_woonp_status"
                         and nyp_min.meta_key = "_woonp_min"
-                        join %i nyp_max
+                        left join %i nyp_max
                         on nyp_status.post_id = nyp_max.post_id
                         and nyp_max.meta_key = "_woonp_max"
-                        where nyp_status.post_id = %d';
+                        where nyp_status.post_id = %d
+                        and nyp_status.meta_key = "_woonp_status"';
                         $results = $wpdb->get_results($wpdb->prepare($query, $postmeta_table, $postmeta_table, $postmeta_table, $post->ID ), ARRAY_A);
                         if ($results){
-                            // if ($results[0]['nyp_status'] != 'overwrite'){
+                            if ($results[0]['nyp_status'] != 'overwrite'){
                                 echo '<p>If you want to let readers decide how much to pay for your book, you can set a minimum and maximum price <span id="tomc-name-price-open-overlay" class="tomc-name-price-link" data-min="' . $results[0]['nyp_min'] . '" data-max="' . $results[0]['nyp_max'] . '" data-id="' . $results[0]['post_id'] . '" data-category="' . $terms[0] . '">here.</span></p>';
-                            // } else {
-                                echo '<p>You are currently letting readers decide how much they pay for your book. You can <span class="tomc-name-price-link">manage Name Your Price settings</span> or <span class="tomc-name-price-link">disable the Name Your Price option</span>.</p>';
-                            // }
+                            } else {
+                                echo '<p>You are currently letting readers decide how much they pay for your book. You can <span id="tomc-name-price-manage-overlay" class="tomc-name-price-link" data-min="' . $results[0]['nyp_min'] . '" data-max="' . $results[0]['nyp_max'] . '" data-id="' . $results[0]['post_id'] . '" data-category="' . $terms[0] . '">manage Name Your Price settings</span> or <span class="tomc-name-price-link">disable the Name Your Price option</span>.</p>';
+                            }
                         } else {
-                            echo '<p>If you want to let readers decide how much to pay for your book, you can set a minimum and maximum price <span id="tomc-name-price-open-overlay">here</span>.</p>';
+                            echo '<p>If you want to let readers decide how much to pay for your book, you can set a minimum and maximum price <span id="tomc-name-price-open-overlay" class="tomc-name-price-link" data-min="" data-max="" data-id="' . $post->ID . '" data-category="' . $terms[0] . '">here</span>.</p>';
                         }
                     }
                     // give option to set default terms hierarchy
