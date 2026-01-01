@@ -135,14 +135,28 @@
                                 <img src="<?php echo get_theme_file_uri('/images/price-info.jpg'); ?>" alt="part of a screenshot showing the Regular Price, Sale Price, Sale Price Dates fields on the General tab of the Vendor Dashboard" />
                             </picture>
                             <p class="right-text-no-margin"><em>Optional: if you would like to offer a coupon code, you can create one.</em></p>
+                            <picture class="orange-rounded-border margin-auto-block">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-coupon.webp'); ?>" alt="part of a screenshot showing the Add Coupon link under the Coupons link on the navigation panel of the Vendor Dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/add-coupon.jpg'); ?>" alt="part of a screenshot showing the Add Coupon link under the Coupons link on the navigation panel of the Vendor Dashboard" />
+                            </picture>
+                            <br>
+                            <h2 class="right-text-no-margin">Want to Let Readers Name Their Own Price?</h2>
+                            <p class="right-text-no-margin">After you complete the rest of the steps in this roadmap and click Submit, you will see a link to enable the Name Your Price option.</p>
+                            <p class="right-text-no-margin">Clicking this link opens an overlay where you can enter a minimum and maximum price. You can leave either field blank if you don't want to set an upper and/or lower limit on what customers can choose to pay. However, if you are selling a physical book or zine, you must set a minimum price that covers at least the cost of shipping.</p>
+                            <picture class="yellow-rounded-border margin-auto-block">
+                                <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/NYP_min_max.webp'); ?>" alt="part of a screenshot showing the Enable Name Your Price Settings overlay on the Edit Product page of the Vendor Dashboard" >
+                                <img src="<?php echo get_theme_file_uri('/images/NYP_min_max.jpg'); ?>" alt="part of a screenshot showing the Enable Name Your Price Settings overlay on the Edit Product page of the Vendor Dashboard" />
+                            </picture>
+                            <h3 class="right-text-no-margin">Want to change the minimum/maximum price or switch back to fixed pricing?</h3>
+                            <p class="right-text-no-margin">Click the "All Products" link under "Product Manager" in the Vendor Dashboard. Select the product you want to update. You'll see links to manage Name Your Price settings or disable the Name Your Price option.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="roadmap-img--bottom-right purple-rounded-rhombus">
                 <picture class="margin-auto-block blue-rounded-border">
-                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/add-coupon.webp'); ?>" alt="part of a screenshot showing the Add Coupon link under the Coupons link on the navigation panel of the Vendor Dashboard" >
-                    <img src="<?php echo get_theme_file_uri('/images/add-coupon.jpg'); ?>" alt="part of a screenshot showing the Add Coupon link under the Coupons link on the navigation panel of the Vendor Dashboard" />
+                    <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/product_manager-all_products.webp'); ?>" alt="part of a screenshot showing the All Products link under the Product Manager link on the navigation panel of the Vendor Dashboard" >
+                    <img src="<?php echo get_theme_file_uri('/images/product_manager-all_products.jpg'); ?>" alt="part of a screenshot showing the All Products link under the Product Manager link on the navigation panel of the Vendor Dashboard" />
                 </picture>
             </div>
         </div>
