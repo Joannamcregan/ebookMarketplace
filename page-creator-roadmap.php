@@ -142,7 +142,7 @@
                             <br>
                             <h2 class="right-text-no-margin">Want to Let Readers Name Their Own Price?</h2>
                             <p class="right-text-no-margin">After you complete the rest of the steps in this roadmap and click Submit, you will see a link to enable the Name Your Price option.</p>
-                            <p class="right-text-no-margin">Clicking this link opens an overlay where you can enter a minimum and maximum price. You can leave either field blank if you don't want to set an upper and/or lower limit on what customers can choose to pay. However, if you are selling a physical book or zine, you must set a minimum price that covers at least the cost of shipping.</p>
+                            <p class="right-text-no-margin">Clicking this link opens an overlay where you can enter a minimum and maximum price. You can leave either field blank if you don't want to set an upper and/or lower limit on what customers can choose to pay.</p>
                             <picture class="yellow-rounded-border margin-auto-block">
                                 <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/NYP_min_max.webp'); ?>" alt="part of a screenshot showing the Enable Name Your Price Settings overlay on the Edit Product page of the Vendor Dashboard" >
                                 <img src="<?php echo get_theme_file_uri('/images/NYP_min_max.jpg'); ?>" alt="part of a screenshot showing the Enable Name Your Price Settings overlay on the Edit Product page of the Vendor Dashboard" />
