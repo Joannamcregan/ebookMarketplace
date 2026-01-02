@@ -36,7 +36,7 @@
                         <td class="tomc-lighter-cells">-</td>
                     </tr>
                     <tr>
-                        <td>Pay dues of $20 monthly</td>
+                        <td>Pay dues of $15 monthly</td>
                         <td>Pay nothing out of pocket</td>
                     </tr>
                 </table>
