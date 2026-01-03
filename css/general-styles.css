@@ -621,7 +621,15 @@ img{
         padding-left: 20px;
     }
 }
+@media screen and (max-width: 635px) {
+    .tomc-circle-container-xl{
+        min-height: 440px !important;
+    }
+}
 @media screen and (max-width: 340px) {
+    .tomc-circle-container-xl{
+        min-height: 460px !important;
+    }
     .tomc-circle-container{
         min-height: 420px;
     }

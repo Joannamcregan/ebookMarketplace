@@ -2,7 +2,7 @@
 ?><main>
     <div class="two-thirds-screen">
         <div class="banner"><h1 class="centered-text banner-heading-40">Become a Member</h1></div>
-        <div class="tomc-circle-container">
+        <div class="tomc-circle-container tomc-circle-container-xl">
             <picture>
                 <source type="image/webp" srcset="<?php echo get_theme_file_uri('/images/circle-background-0.webp'); ?>" role="presentation">
                 <img src="<?php echo get_theme_file_uri('/images/circle-background-0.jpg'); ?>" role="presentation" />
