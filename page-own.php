@@ -12,7 +12,7 @@
             <br><br>
             <div class="tomc-circle-p-2">
                 <p class="centered-text">Those who want to upload their work, collaborate with other members, and be in community, while reaping the benefits of ownership.</p>
-                <p class="centered-text"><strong>Join as an <a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>">individual</a> or <a>organization</a>.</strong></p>
+                <p class="centered-text"><strong>Join as an <a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>">individual</a> or <a href="<?php echo esc_url(site_url('/creators-circle-membership-for-organizations'));?>">organization</a>.</strong></p>
             </div>
         </div>
         <div class="red-orange-line-break-60"></div>
