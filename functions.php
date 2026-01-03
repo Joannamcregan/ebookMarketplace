@@ -472,7 +472,7 @@ function assignReaderMemberRole($form_id, $response) {
 }
 
 function assignCreatorMemberRole($form_id, $response) {
-    if( $response['success']  && $form_id ==4212 /* Creator-Member Signup */){
+    if( $response['success']  && ($form_id ==4212 /* Creator-Member Signup */ || $form_id ==6297 /* creator-membership for organizations*/)){
         global $wpdb;
         $usermeta_table = $wpdb->prefix . "usermeta";
         $user = wp_get_current_user();
