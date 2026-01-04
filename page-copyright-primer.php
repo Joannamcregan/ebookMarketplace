@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 <?php } else {
-                    ?><p class="centered-text padding-x-20">To view the Copyright Primer, join our Cooperative as a <a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>">Creator-Member</a>.</p>
+                    ?><p class="centered-text padding-x-20">To view the Copyright Primer, <a href="<?php echo esc_url(site_url('/own'));?>">join our Cooperative</a> as a Creator-Member.</p>
                 <?php }
             } else {
                 ?><p class="centered-text padding-x-20">Only logged in Creator-Members can view the Copyright Primer. <a href="<?php echo esc_url(site_url('/my-account'));?>">Login</a></p>
