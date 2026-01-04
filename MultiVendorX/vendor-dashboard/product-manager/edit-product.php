@@ -399,8 +399,7 @@ if ($default_types && !empty($default_types)) {
         <input id="tomc-mvx-nyp-max-price">
     </div>
     <br>
-    <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--no-min-error">You must set a minimum price to cover the cost of shipping your book.</p>
-    <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--low-min-warning">Make sure the minimum price you select covers the cost of shipping your book.</p>
+    <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--low-min-warning">Offering a physical book or zine? Consider the cost of printing...</p>
     <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--negative-min-error">The minimum price cannot be a negative number.</p>
     <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--lower-max-error">The maximum price cannot be less than or equal to the minimum price.</p>
     <p class="tomc-mvx-nyp-enable--message hidden" id="tomc-mvx-nyp-enable--zero-max-error">The maximum price cannot be 0. If you don't want to set a maximum price, leave the field blank.</p>
