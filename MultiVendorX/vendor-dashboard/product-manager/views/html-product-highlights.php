@@ -109,7 +109,7 @@ global $MVX;
                                 echo '<p>You are currently letting readers decide how much they pay for your book. You can <span id="tomc-name-price-manage-overlay" class="tomc-name-price-link" data-min="' . $results[0]['nyp_min'] . '" data-max="' . $results[0]['nyp_max'] . '" data-id="' . $results[0]['post_id'] . '" data-category="' . $terms[0] . '">manage Name Your Price settings</span> or <span id="tomc-name-price-disable-overlay-link" class="tomc-name-price-link" data-id="' . $post->ID . '">disable the Name Your Price option</span>.</p>';
                             }
                         } else {
-                            echo '<p>If you want to let readers decide how much to pay for your book, you can set a minimum and maximum price <span id="tomc-name-price-open-overlay" class="tomc-name-price-link" data-min="" data-max="" data-id="' . $post->ID . '" data-category="' . $terms[0] . '">here</span>.</p>';
+                            echo '<p>If you want to let readers decide how much to pay for your book, you can <span id="tomc-name-price-open-overlay" class="tomc-name-price-link" data-min="" data-max="" data-id="' . $post->ID . '" data-category="' . $terms[0] . '">enable the Name Your Price option.</span></p>';
                         }
                     }
                     // give option to set default terms hierarchy
