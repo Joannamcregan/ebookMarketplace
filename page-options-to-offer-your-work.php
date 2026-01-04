@@ -48,9 +48,9 @@
                     ?><p class="padding-x-20 centered-text"><em>Thank you for being a Creator-Member.</em></p>
                 <?php } else if (in_array( 'dc_vendor', (array) $user->roles )){
                     ?><p class="padding-x-20 centered-text"><em>You are currently a vendor and have access to the <a href="<?php echo esc_url(site_url('/dashboard'));?>">vendor dashboard</a>.</em></p>
-                    <a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>"><button class="blue-button">Join as a Creator-Member</button></a>
+                    <a href="<?php echo esc_url(site_url('/own'));?>"><button class="blue-button">Join as a Creator-Member</button></a>
                 <?php } else {
-                    ?><a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>"><button class="blue-button">Join as a Creator-Member</button></a>
+                    ?><a href="<?php echo esc_url(site_url('/own'));?>"><button class="blue-button">Join as a Creator-Member</button></a>
                     <button class="purple-button" id="sell-as-vendor-button">Offer work without a membership</button>
                 <?php }
             } else {
