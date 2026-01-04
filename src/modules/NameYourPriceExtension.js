@@ -82,6 +82,7 @@ class NYPExtension {
         })
     }
     enableSettings(e){
+        console.log('trying to open');
         $.ajax({
             beforeSend: (xhr) => {
                 xhr.setRequestHeader('X-WP-Nonce', marketplaceData.nonce);
