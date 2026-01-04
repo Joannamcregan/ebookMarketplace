@@ -6,6 +6,8 @@ if ( !defined( 'ABSPATH' ) ) exit;
 require get_theme_file_path('/inc/search-route.php');
 require get_theme_file_path('/inc/settings-route.php');
 require get_theme_file_path('/inc/vendor-route.php');
+require get_theme_file_path('/inc/mvxtend-nyp-route.php');
+require get_theme_file_path('/inc/mvxtend-isbn-route.php');
 
 // function marketplace_custom_rest() {
 //     register_rest_field('post', 'authorName', array(
@@ -472,7 +474,7 @@ function assignReaderMemberRole($form_id, $response) {
 }
 
 function assignCreatorMemberRole($form_id, $response) {
-    if( $response['success']  && ($form_id ==4212 /* Creator-Member Signup */ || $form_id ==6297 /* creator-membership for organizations*/)){
+    if( $response['success']  && ($form_id ==4212 /* Creator-Member Signup */ || $form_id ==6297 /*6297 creator-membership for organizations*/)){
         global $wpdb;
         $usermeta_table = $wpdb->prefix . "usermeta";
         $user = wp_get_current_user();
