@@ -15,7 +15,7 @@
                         <p>Last thing, copyright registration is not required to send a DMCA takedown notice. This isn’t litigation. But, if this turns into a battle, check out our Copyright Primer, which shares a bit about registration and protection.</p>
                     </div>
                 <?php } else {
-                    ?><p class="centered-text">To view the DMCA Primer, join our Cooperative as a <a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>">Creator-Member</a>.</p>
+                    ?><p class="centered-text">To view the DMCA Primer, <a href="<?php echo esc_url(site_url('/own'));?>">join our Cooperative</a> as a Creator-Member.</p>
                 <?php }
             }
         ?></div>
