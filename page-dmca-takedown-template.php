@@ -28,7 +28,7 @@
                         <p>[your name]</p>
                     </div>
                 <?php } else {
-                    ?><p class="centered-text">To view the DMCA Takedown Template, join our Cooperative as a <a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>">Creator-Member</a>.</p>
+                    ?><p class="centered-text">To view the DMCA Takedown Template, <a href="<?php echo esc_url(site_url('/own'));?>">join our Cooperative</a> as a Creator-Member.</p>
                 <?php }
             }
         ?></div>
