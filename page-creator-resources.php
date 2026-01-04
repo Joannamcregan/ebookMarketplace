@@ -30,7 +30,7 @@
                 </div>
             </div>
         <?php } else {
-            ?><p class="centered-text">To view the Creator Resources, join our Cooperative as a <a href="<?php echo esc_url(site_url('/creators-circle-membership'));?>">Creator-Member</a>.</p>
+            ?><p class="centered-text">To view the Creator Resources, <a href="<?php echo esc_url(site_url('/own'));?>">join our Cooperative</a> as a Creator-Member.</p>
         <?php }
     }
 ?></main>
