@@ -37,8 +37,8 @@ if ($default_types && !empty($default_types)) {
     unset($get_product_data_tabs['general'], $get_product_data_tabs['inventory'], $get_product_data_tabs['linked_product'], $get_product_data_tabs['attribute'], $get_product_data_tabs['advanced']);
 }
 
-?> 
-                    
+?>
+<?php get_header(); ?>                  
 <div class="col-md-12 add-product-wrapper">
     <?php do_action( 'mvx_before_add_product_form' ); ?>
     <form id="mvx-edit-product-form" class="woocommerce form-horizontal" method="post">
