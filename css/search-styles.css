@@ -13,6 +13,7 @@
     transform: scale(1.09);
     transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
     box-sizing: border-box;
+    padding-bottom: 200px;
 }  
 .search-overlay--active{
     visibility: visible;
