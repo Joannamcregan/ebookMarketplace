@@ -292,6 +292,7 @@ img{
 }
 #gdpr-cookie-consent-bar div.row_spaced{
     background: #893e43 !important;
+    border: solid #893e43 5px !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 15px !important;
