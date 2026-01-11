@@ -247,23 +247,26 @@ img{
 }
 /* cookie consent------------------------------------------ */
 #gdpr-cookie-consent-bar.gdpr-banner{
-    position: fixed !important;
-    flex-direction: column !important;
-    border-radius: 0px !important;
-    left: 0px !important;
-    bottom: 0px !important;
-    color: rgb(250, 239, 227) !important;
+    position: fixed;
+    flex-direction: column;
+    border-radius: 0px;
+    left: 0px;
+    bottom: 0px;
+    color: rgb(250, 239, 227);
     border-style: none;
     border-color: rgb(255, 255, 255);
     border-width: 1px;
     font-family: Arial;
     width: 100vw;
     padding: 40px 120px;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     margin: 0;
-    display: flex !important;
+    display: flex;
     box-sizing: border-box;
+}
+.powered-by-credits{
+    display: none !important;
 }
 @media (min-width: 1229px) {
     #gdpr-cookie-consent-bar #cookie-banner-cancle-img {
@@ -337,8 +340,8 @@ img{
     text-shadow: 0px 0px 2px black !important;
 }
 #cookie-banner-cancle-img{
-    /* color: #eee2d4 !important;
-    text-align: right !important; */
+    /* color: #eee2d4 !important; */
+    /* text-align: right !important; */
     display: none !important;
 }
 #cookie-banner-cancle-img svg{
