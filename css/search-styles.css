@@ -1,7 +1,7 @@
 .search-overlay, .tomc-settings-overlay{
     overflow-y: auto;
     overflow-x: hidden;
-    z-index: 1110;
+    z-index: 2110;
     position: fixed;
     top: 0;
     left: 0;
@@ -126,7 +126,6 @@
 #search-overlay__results{
     width: 900px;
     margin: 0px auto;
-    padding-bottom: 200px;
 }
 .tomc-search-result{
     background: #fefcf9;
