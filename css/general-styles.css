@@ -246,6 +246,19 @@ img{
     /* margin: 10px; */
 }
 /* cookie consent------------------------------------------ */
+@media (max-width: 768px) {
+    #gdpr-cookie-consent-bar.gdpr-banner {
+        padding: 20px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 1228px) {
+    #gdpr-cookie-consent-bar.gdpr-banner {
+        padding: 35px 56px;
+    }
+}
+
 #gdpr-cookie-consent-bar.gdpr-banner{
     position: fixed;
     flex-direction: column;
@@ -309,6 +322,9 @@ img{
         justify-content: center;
         flex-wrap: wrap !important;
         width: 100%;
+    }
+    #gdpr-cookie-consent-bar h3{
+        font-size: 12 !important;
     }
 }
 #gdpr-cookie-consent-bar p.gdpr{
