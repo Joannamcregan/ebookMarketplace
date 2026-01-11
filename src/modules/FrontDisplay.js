@@ -21,11 +21,14 @@ class FrontDisplay {
             })
         });
         this.closeValuesOverlayButtons.forEach(button => {
-            button.addEventListener('click', ()=>{
-                this.introOverlay.classList.remove('flex');
-                this.introOverlay.classList.add('hidden');
-            })
+            button.addEventListener('click', this.closeValuesOverlay.bind(this));
         });
+    }
+
+    closeValuesOverlay(){
+        this.introOverlay.classList.remove('flex');
+        this.introOverlay.classList.add('hidden');
+        event.preventDefault();
     }
 }
 
