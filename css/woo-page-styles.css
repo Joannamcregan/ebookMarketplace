@@ -414,35 +414,35 @@ justify-content: center;
 .tomc-product-single-review-stars-1:before {
     content: '';
     display: inline-block;
-    background: url('../images/one_orange_star.svg');
+    background: url('../images/One_Orange_Star.svg');
     width: 30px;
     height: 20px;
 }
 .tomc-product-single-review-stars-2:before {
     content: '';
     display: inline-block;
-    background: url('../images/two_orange_stars.svg');
+    background: url('../images/Two_Orange_Stars.svg');
     width: 50px;
     height: 20px;
 }
 .tomc-product-single-review-stars-3:before {
     content: '';
     display: inline-block;
-    background: url('../images/three_orange_stars.svg');
+    background: url('../images/Three_Orange_Stars.svg');
     width: 70px;
     height: 20px;
 }
 .tomc-product-single-review-stars-4:before {
     content: '';
     display: inline-block;
-    background: url('../images/four_orange_stars.svg');
+    background: url('../images/Four_Orange_Stars.svg');
     width: 90px;
     height: 20px;
 }
 .tomc-product-single-review-stars-5:before {
     content: '';
     display: inline-block;
-    background: url('../images/five_orange_stars.svg');
+    background: url('../images/Five_Orange_Stars.svg');
     width: 110px;
     height: 20px;
 }
