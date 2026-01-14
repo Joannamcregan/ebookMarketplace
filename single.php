@@ -34,9 +34,9 @@
         $penResults = $wpdb->get_results($wpdb->prepare($penQuery, $posts_table, $author_id), ARRAY_A);
         if ((count($results) > 0) || (count($penResults) > 0)){
             ?><div class="purple-blue-line-break-60"></div>
+            <h2 class="centered-text padding-x-20">More from this author</h2>
         <?php }
-        ?><h2 class="centered-text padding-x-20">More from this author</h2>
-        <?php if ($results){
+        if ($results){
             ?><p class="centered-text padding-x-20 author-newsletter-link"><a href="<?php echo $results[0]['value'] ?>" target="_blank">Signup for <?php echo get_the_author(); ?>'s newlsetter</a></p>
         <?php }
         if ($penResults){
