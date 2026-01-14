@@ -40,13 +40,11 @@
             ?><p class="centered-text padding-x-20 author-newsletter-link"><a href="<?php echo $results[0]['value'] ?>" target="_blank">Signup for <?php echo get_the_author(); ?>'s newlsetter</a></p>
         <?php }
         if ($penResults){
-            ?><p class="centered-text padding-x-20 publishes-under-line"><?php echo get_the_author(); ?> publishes under the following name:<?php echo count($penResults) > 1 ? 's' : '' ?></p>
+            ?><p class="centered-text padding-x-20 publishes-under-line"><?php echo get_the_author(); ?> publishes under the following name<?php echo count($penResults) > 1 ? 's:' : ':' ?></p>
             <?php for ($i = 0; $i < count($penResults); $i++){
                 ?><p class="centered-text padding-x-20 post-author-pen-name"><a href="<?php echo esc_url(site_url('/written-by' . '/' . str_replace(" ", "-", $penResults[$i]['post_title'])));?>"><?php echo $penResults[$i]['post_title']; ?></a></p>
             <?php }
-        } else {
-                echo var_dump($penResults);
-            }
+        }
     ?><div class="blue-purple-line-break-60"></div>
     <div class="padding-x-20">
         <h2 class="centered-text">Comments</h2>
