@@ -22,35 +22,31 @@
         $data_table = $wpdb->prefix . "bp_xprofile_data";
         $fields_table = $wpdb->prefix . "bp_xprofile_fields";
         $posts_table = $wpdb->prefix . "posts";
-        $pen_names_table = $wpdb->prefix . "tomc_user_pen_names";
         $query = 'select data.value from %i data join %i fields
             on data.field_id = fields.id
             and data.user_id = %d
             and fields.name = %s';
         $results = $wpdb->get_results($wpdb->prepare($query, $data_table, $fields_table, $author_id, 'Newsletter Signup Link'), ARRAY_A);
         $penQuery = 'select posts.post_title
-            from %i posts join %i pennames
-            on posts.id = pennames.pennameid
-            and posts.post_type = "author-profile"
-            where pennames.userid = %d';
-        $penResults = $wpdb->get_results($wpdb->prepare($penQuery, $posts_table, $pen_names_table, $author_id), ARRAY_A);
-        if ($results || $penResults){
+            from %i posts
+            where posts.post_type = "author-profile"
+            and posts.post_author = %d';
+        $penResults = $wpdb->get_results($wpdb->prepare($penQuery, $posts_table, $author_id), ARRAY_A);
+        if ((count($results) > 0) || (count($penResults) > 0)){
             ?><div class="purple-blue-line-break-60"></div>
         <?php }
         ?><h2 class="centered-text padding-x-20">More from this author</h2>
         <?php if ($results){
             ?><p class="centered-text padding-x-20 author-newsletter-link"><a href="<?php echo $results[0]['value'] ?>" target="_blank">Signup for <?php echo get_the_author(); ?>'s newlsetter</a></p>
-        <?php } else {
-            echo '<p class="centered-text">About ' . get_the_author_posts_link() . '</p>';
-        }
+        <?php }
         if ($penResults){
             ?><p class="centered-text padding-x-20 publishes-under-line"><?php echo get_the_author(); ?> publishes under the following name:<?php echo count($penResults) > 1 ? 's' : '' ?></p>
             <?php for ($i = 0; $i < count($penResults); $i++){
-                ?><p class="centered-text padding-x-20 post-author-pen-name"><a href="<?php echo esc_url(site_url('/pen-name' . '/' . str_replace(" ", "-", $penResults[$i]['post_title'])));?>"><?php echo $penResults[$i]['post_title']; ?></a></p>
+                ?><p class="centered-text padding-x-20 post-author-pen-name"><a href="<?php echo esc_url(site_url('/written-by' . '/' . str_replace(" ", "-", $penResults[$i]['post_title'])));?>"><?php echo $penResults[$i]['post_title']; ?></a></p>
             <?php }
         } else {
-            echo '<p class="centered-text">about ' . get_the_author_posts_link() . '</p>';
-        }
+                echo var_dump($penResults);
+            }
     ?><div class="blue-purple-line-break-60"></div>
     <div class="padding-x-20">
         <h2 class="centered-text">Comments</h2>
