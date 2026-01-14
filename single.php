@@ -40,12 +40,16 @@
         ?><h2 class="centered-text padding-x-20">More from this author</h2>
         <?php if ($results){
             ?><p class="centered-text padding-x-20 author-newsletter-link"><a href="<?php echo $results[0]['value'] ?>" target="_blank">Signup for <?php echo get_the_author(); ?>'s newlsetter</a></p>
-        <?php }
+        <?php } else {
+            echo '<p class="centered-text">About ' . get_the_author_posts_link() . '</p>';
+        }
         if ($penResults){
             ?><p class="centered-text padding-x-20 publishes-under-line"><?php echo get_the_author(); ?> publishes under the following name:<?php echo count($penResults) > 1 ? 's' : '' ?></p>
             <?php for ($i = 0; $i < count($penResults); $i++){
                 ?><p class="centered-text padding-x-20 post-author-pen-name"><a href="<?php echo esc_url(site_url('/pen-name' . '/' . str_replace(" ", "-", $penResults[$i]['post_title'])));?>"><?php echo $penResults[$i]['post_title']; ?></a></p>
             <?php }
+        } else {
+            echo '<p class="centered-text">about ' . get_the_author_posts_link() . '</p>';
         }
     ?><div class="blue-purple-line-break-60"></div>
     <div class="padding-x-20">
