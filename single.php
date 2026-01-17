@@ -4,15 +4,12 @@
     <div class="two-thirds-screen">
     <?php while(have_posts()){
         the_post(); 
-        ?><div class="right-text by-line">
-            
-        </div>
-        <div class="padding-x-20">
+        ?><div class="padding-x-20">
             <h1 class="centered-text"><?php the_title(); ?></h1>
             <p class="centered-text post-by-line">Posted by <?php echo get_the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?></p>
         </div>
         <div class="red-orange-line-break-60"></div>
-        <div class="generic-content">
+        <div class="reading-view">
             <?php the_content(); ?>
         </div>
     <?php }
