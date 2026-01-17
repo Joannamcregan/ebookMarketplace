@@ -920,6 +920,17 @@ a {
     display: block;
     margin: 0px auto;
 }
+@media screen and (max-width: 700px) {
+    .reading-view{
+        width: 80%;
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .reading-view{
+        width: 85%;
+    }
+}
 .padding-5{
     padding: 5px;
 }
