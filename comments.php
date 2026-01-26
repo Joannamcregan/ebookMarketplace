@@ -7,6 +7,16 @@ $args = array(
 
 // The comment Query
 $comments_query = new WP_Comment_Query();
+$paged             = get_query_var( 'page' ) ? get_query_var( 'page' ) : 1;
+$args              = array(
+	'post_id' => get_the_ID(), // Fetch comments for the current post dynamically
+    'orderby' => 'comment_date',
+    'order'   => 'DESC',
+    'status'  => 'approve', // Only approved comments
+    'number'    => get_option( 'comments_per_page' ),
+    'paged'     => $paged,
+    'parent'    => 0,
+);
 $comments       = $comments_query->query( $args );
 
 // Comment Loop
